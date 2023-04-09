@@ -1,0 +1,15 @@
+{% extends "grid.html" %}
+
+{% block title %}
+{{flow}}
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector(".message").innerHTML = 
+    'Chatbot <em>{{flow}}</em> není k nalezení, zkuste do URL adresy zadat jméno jiného chatbota.'
+    document.querySelector(".center").style.justifyContent = 'center'
+})
+</script>
+{% endblock %}

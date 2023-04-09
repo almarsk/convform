@@ -1,0 +1,52 @@
+{% extends "grid.html" %}
+
+{% block title %}
+{{flow}}
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+    const MAX_NICK_LENGTH = 13
+    document.addEventListener("DOMContentLoaded", ()=>{
+
+        document.querySelector(".message").innerHTML = 
+            'Díky, že se účastníte vývoje chatbota jménem <em>{{flow}}</em>.<br>' +
+            'Zde prosím vyplňte libovolnou <strong>přezdívku</strong>:'
+        document.querySelector(".avatar.user").classList.remove("hide")
+        document.querySelector(".user-input").classList.remove("hide")
+        document.querySelector(".user-input").name = "nick"
+        document.querySelector(".confirm").classList.remove("hide")
+
+        shouldSubmit = false
+        document.querySelector(".confirm").addEventListener("click", e=>{
+            e.preventDefault()
+
+            if (shouldSubmit){
+                event.target.form.submit();
+            } else {
+                if(
+                    !!document.querySelector(".user-input").value && 
+                    document.querySelector(".user-input").value.length > MAX_NICK_LENGTH
+                  ) {
+                    document.querySelector(".warning").classList.remove("hide")
+                    document.querySelector(".warning").innerHTML = "prosím zvolte přezdívku kratší než <strong>"+MAX_NICK_LENGTH+"<strong> znaků"
+                  } else if (
+                    !document.querySelector(".user-input").value
+                  ) {
+                    document.querySelector(".warning").classList.remove("hide")
+                    document.querySelector(".warning").innerHTML = "prosím zvolte si <strong>přezdívku</strong>"
+                  } else {
+                      shouldSubmit = true
+                      document.querySelector(".message").innerHTML = 
+                      "Můžeme začít.<br> Pokud bude robot říkat nesmysly, ukončete ho červeným tlačítkem."
+                      document.querySelector(".avatar.user").classList.add("hide")
+                      document.querySelector(".user-input").classList.add("hide")
+                      document.querySelector(".warning").classList.add("hide")
+                  }
+            }
+        })
+    })
+
+</script>
+
+{% endblock %}
