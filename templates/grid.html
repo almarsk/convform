@@ -151,7 +151,7 @@
             <p class="avatar user hide">&#128100; :</p>
         </div>
         <div class="box middle center">
-            <input type="text" name=nick class="user-input hide" autofocus>
+            <input type="text" name=nick class="user-input hide" autocomplete="off" autofocus>
             <textarea name=ratingVerbal class="user-input user-eval hide" autofocus></textarea>
         </div>
         <div class="box middle right">
@@ -173,6 +173,7 @@
         </div>
         <div class="box bottom right"></div>
         <input id=reaction-ms name=reaction-ms type=hidden>
+        <input id=aborted type=hidden>
     </form>
 
     {% block js %}

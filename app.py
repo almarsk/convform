@@ -146,12 +146,9 @@ def chat():
 
 
 def outro():
-    message = "Jak konverzace proběhla?"
-    if session.get('abort', None):
-        message = "Proč jste konverzaci ukončili?"
 
     if request.method == "GET":
-        return render_template("outro.html", message=message)
+        return render_template("outro.html", aborted=session.get('abort', None))
 
     elif request.method == "POST":
         rating_verbal = request.form.get("ratingVerbal")
