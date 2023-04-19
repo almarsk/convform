@@ -56,7 +56,7 @@ def main(query=''):
             abort = lambda val: "Aborted" if val == 1 else "Did not abort"
 
             print(
-                f"\n\nUser {user[1].capitalize()} (no.{user[0]})\n" +
+                f"\n\nUser {user[1].capitalize()} (id {user[0]})\n" +
                 f"Talked to {user[2].capitalize()} " +
                 f"on {time_date.group(1)}\n" +
                 f"from {time_date.group(2)} " +
