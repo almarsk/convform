@@ -16,7 +16,6 @@ def main(query=''):
     users = cursor_users.fetchall()
     # Prepare replies table
     user_ids = [user[0] for user in users.__iter__()]
-
     if len(user_ids) == 0:
         user_ids = ""
     elif len(user_ids) == 1:
@@ -40,7 +39,6 @@ def main(query=''):
                 return f"{user[2].capitalize()}:\t\t\t"
 
         # print info of user - TODO make it a return
-
         if not user[4]:
             time_date = re.search('(.{10}).(.{8})', user[3])
             print(
