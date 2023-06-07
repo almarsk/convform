@@ -22,8 +22,7 @@ db_path = Path(__file__).parent / "chatbot.db"
 app.config.update(
     TEMPLATES_AUTO_RELOAD=True,
     SECRET_KEY=secret_key,
-    SESSION_COOKIE_HTTPONLY = False,
-    SESSION_COOKIE_SAMESITE="None",
+    SESSION_COOKIE_SAMESITE="Lax",
     SQLALCHEMY_DATABASE_URI=f"sqlite:///{db_path}",
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
     REPLY_DELAY_MS=int(os.environ.get("CHATBOT_REPLY_DELAY_MS", 1600)),
