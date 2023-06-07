@@ -22,6 +22,7 @@ db_path = Path(__file__).parent / "chatbot.db"
 app.config.update(
     TEMPLATES_AUTO_RELOAD=True,
     SECRET_KEY=secret_key,
+    SESSION_COOKIE_HTTPONLY = False,
     SESSION_COOKIE_SAMESITE="None",
     SQLALCHEMY_DATABASE_URI=f"sqlite:///{db_path}",
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
@@ -152,7 +153,7 @@ def outro():
 
     elif request.method == "POST":
         rating_verbal = request.form.get("ratingVerbal")
-        rating_num = request.form.get("ratingNum")
+        rating_num = request.form.get("ratingNum") or 0
 
         user = User.query.filter_by(id=session["user_id"]).first()
         user.end_date = datetime.utcnow()
