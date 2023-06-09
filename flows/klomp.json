@@ -1,0 +1,58 @@
+{
+  "state_intro": {
+    "fallback": [
+      "počkej, teď jsem tě nějak nechytil, cože?",
+      "promiň, cožeto?"
+    ],
+    "intents": {
+      "pozdrav": {
+        "iteration": 1,
+        "keywords": [
+          "ahoj",
+          "čawík",
+          "nazd[áaó]rek",
+          "čusík"
+        ],
+        "answer": [
+          "čuzzíque",
+          "čawík",
+          "nazdárek bazárek"
+        ],
+        "over_iterated_answers": [
+          "no maúcta, ale už jsme se přeci pozdravili"
+        ]
+      },
+      "jak se máš": {
+        "iteration": 1,
+        "keywords": [
+          "jak je",
+          "jak se máš"
+        ],
+        "answer": [
+          "mám se prima, díky za optání, co ty?",
+          "uplně báječně a ty?"
+        ],
+        "over_iterated_answers": [
+          "jo, mám se prima, ale to už jsme si přeci řekli"
+        ]
+      },
+      "představení": {
+        "iteration": 1,
+        "keywords": [
+          "jak se jmenuje",
+          "kdo js",
+          "představ",
+          "s kým mluvím",
+          "s kým mám tu čest"
+        ],
+        "answer": [
+          "moc rád tě poznávám, jsem klomp",
+          "jmenuji se klomp, těší mě"
+        ],
+        "over_iterated_answers": [
+          "klomp, to už jsem přeci řekl :)"
+        ]
+      }
+    }
+  }
+}

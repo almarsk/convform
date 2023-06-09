@@ -47,8 +47,7 @@ class Reply(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     content = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    # chatbot replies have a NULL reaction_ms
-    reaction_ms = db.Column(db.Integer)
+    reaction_ms = db.Column(db.Integer) # chatbot replies have a NULL reaction_ms
 
 
 if not db_path.is_file():
@@ -128,9 +127,9 @@ def chat():
                 reaction_ms=request.form.get("reaction-ms"),
             )
         )
-    cs = session.setdefault("cs", {})  # conversation state
+    cState = session.setdefault("state", {})  # conversation state
     flow = import_module("flows."+session["flow"])
-    bot_reply = flow.reply(user_reply, cs)
+    bot_reply = flow.reply(user_reply, cState)
     session.modified = True
     if bot_reply is None:
         session["page"] = "outro"
@@ -138,7 +137,7 @@ def chat():
     else:
         db.session.add(Reply(user_id=user.id, content=str(bot_reply)))
         response = render_template(
-            "chat.html", bot_reply=bot_reply, flow=flow.__name__.capitalize()
+            "chat.html", bot_reply=bot_reply, flow=flow.__name__.split(".")[1].capitalize()
         )
 
     db.session.commit()
