@@ -7,48 +7,81 @@ def reply(user_reply, cState):
     cState.setdefault("state", "state_intro")
     cState.setdefault("global_turn", 0)
     cState.setdefault("intent_iterations", {})
-    print(cState)
 
     if cState["global_turn"] == 0:
         cState["global_turn"] += 1
         return "brejdn"
     else:
-        with open("flows/klomp.json", "r") as k:
-            flow = json.load(k)
-            current_state = flow[cState["state"]]
+        try:
+            with open("flows/klomp.json", "r") as k:
+                    flow = json.load(k)
+        except FileNotFoundError:
+            print("File not found")
+            return "ajaj, ta moje hlava děravá, jsem nějaký rozbitý"
+        except json.JSONDecodeError as e:
+            print("Error decoding JSON:", str(e))
+            return "ajaj, nějak nevím, co jsem to chtěl říct, jsem nějaký rozbitý"
+        except Exception as e:
+            print("An error occurred:", str(e))
+            return "ajaj něco se nepovedlo, jsem nějaký rozbitý"
 
-            for intent in current_state["intents"]:
-                current_intent = current_state["intents"][intent]
+        current_state = flow[cState["state"]]
+        matched_intents = []
 
-                for item in current_intent["keywords"]:
-                    if re.search(item, user_reply):
-                        answers = current_state["intents"][intent]["answer"]
-                        cState["intent_iterations"].setdefault(intent, 0)
-                        cState["intent_iterations"][intent] += 1
+        for intent in current_state["intents"]:
+            current_intent = current_state["intents"][intent]
 
-                        if cState["intent_iterations"][intent] <= current_intent["iteration"]:
-                            return answers[random.randint(0, len(answers)-1)] # throw in a pool of possibilities
-                        elif cState["intent_iterations"][intent] > current_intent["iteration"]:
-                            over_iterated_answers = current_intent["over_iterated_answers"]
-                            return over_iterated_answers[random.randint(0, len(over_iterated_answers)-1)]
+            for item in current_intent["keywords"]:
+                if re.search(item.lower(), user_reply.lower()):
+                    cState["intent_iterations"].setdefault(intent, 0)
+                    print(cState)
+                    matched_intents.append(intent)
 
+
+        # sorting intents by priority
+        if len(matched_intents):
+            matched_intents.sort(key=lambda intent: current_state["intents"][intent]["priority"], reverse=True)
+            print("matched intents after sorting: ",matched_intents)
+            iterating_intents = []
+
+            # over-iterated intents are taken out of the list
+            for possible_intent in matched_intents:
+                current_possible_intent = current_state["intents"][possible_intent]
+                if cState["intent_iterations"][possible_intent] > current_possible_intent["iteration"]:
+                    print("iteration alert")
+                    iterating_intents.append(matched_intents.pop(matched_intents.index(possible_intent)))
+
+            # over-iterated intents are moved to the end of the list
+            if len(iterating_intents):
+                for intent in iterating_intents:
+                    matched_intents.append(intent)
+            print("matched intents after shifting iterated ones: ",matched_intents)
+
+            # returning a random realization of the chosen intent answer
+            if len(matched_intents):
+                final_picked_intent = matched_intents[0]
+                final_picked_answer_list = current_state["intents"][final_picked_intent]["answer"]
+                return final_picked_answer_list[random.randint(0, len(final_picked_answer_list)-1)]
+
+        # if there are no matches
+        else:
             fallback = current_state["fallback"]
             return fallback[random.randint(0, len(fallback)-1)]
 
 
-        # fallbacks missing
-        # error handling - loading json, reading json
-        # regex
-        # instead of returning answer directly, throw in a pool and compare priorities
 
-        # changing states
-loc_test = False
+    # changing states
+    # actual ai and such
+
+# TESTING SECTION
+loc_test = True
 if loc_test:
-
     cState = {
-        "global_turn":1
+        'global_turn': 1,
+        'state': 'state_intro',
+        'intent_iterations': {
+            'pozdrav': 2,
+            'jak se máš': 0
         }
-
-    print(reply("čawík", cState))
-    print(reply("nazdárek", cState))
-    print(reply("jak se máš ty darebo", cState))
+    }
+    print(reply("čawík, jak je", cState))

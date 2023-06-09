@@ -6,6 +6,7 @@
     ],
     "intents": {
       "pozdrav": {
+        "priority": 10,
         "iteration": 1,
         "keywords": [
           "ahoj",
@@ -23,6 +24,7 @@
         ]
       },
       "jak se máš": {
+        "priority": 8,
         "iteration": 1,
         "keywords": [
           "jak je",
@@ -37,6 +39,7 @@
         ]
       },
       "představení": {
+        "priority": 9,
         "iteration": 1,
         "keywords": [
           "jak se jmenuje",
