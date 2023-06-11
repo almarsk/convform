@@ -27,7 +27,7 @@
         ]
       },
       "jak se máš": {
-        "priority": 8,
+        "priority": 11,
         "iteration": 1,
         "keywords": [
           "jak je",
@@ -42,7 +42,7 @@
         ]
       },
       "představení": {
-        "priority": 11,
+        "priority": 12,
         "iteration": 1,
         "keywords": [
           "jak se jmenuje",

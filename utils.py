@@ -27,11 +27,13 @@ def sort_intents_priority(matched_intents, state_intents):
 def extract_overiterated(matched_intents, state_intents, intent_iterations) -> Tuple[list, list]:
     iterating_intents = []
     # over-iterated intents are taken out of the list
-    for possible_intent in matched_intents:
-        print(intent_iterations[possible_intent])
-        print(state_intents[possible_intent]["iteration"])
+    print("matched: "+str(matched_intents))
+    for possible_intent in list(matched_intents):
+        print(possible_intent+" "+str(intent_iterations[possible_intent]))
+        print(possible_intent+" "+str(state_intents[possible_intent]["iteration"]))
         if intent_iterations[possible_intent] > state_intents[possible_intent]["iteration"]:
             iterating_intents.append(matched_intents.pop(matched_intents.index(possible_intent)))
+            print("non_over: "+str(matched_intents)+ " over: "+str(iterating_intents))
     return (matched_intents, iterating_intents)
 
 def annotated_intents_dict(matched_intents, iterating_intents):

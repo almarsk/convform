@@ -67,7 +67,7 @@ def reply(user_reply, cState):
     #
 
 # TESTING SECTION
-loc_test = True
+loc_test = False
 if loc_test:
     cState = {
         'global_turn': 1,
