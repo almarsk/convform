@@ -85,7 +85,7 @@ def dispatcher():
                 return render_template("json_issue.html", flow=session["flow"].capitalize()), 500
         else:
             session["page"] = "not_found"
-            return render_template("not_found.html", flow=url_flow), 404
+            return render_template("not_found.html", flow=url_flow.capitalize()), 404
         return redirect(url_for("dispatcher"))
     elif session.get("flow") is None:
         # starting a conversation without setting a flow is forbidden -> 403 error

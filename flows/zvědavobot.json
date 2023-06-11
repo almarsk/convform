@@ -15,7 +15,9 @@
           "ahoj",
           "čawík",
           "nazd[áaó]rek",
-          "čusík"
+          "čusík",
+          "čau",
+          "čus"
         ],
         "answers": [
           "čuzzíque",
@@ -52,11 +54,11 @@
           "s kým mám tu čest"
         ],
         "answers": [
-          "moc rád tě poznávám, jsem klomp",
-          "jmenuji se klomp, těší mě"
+          "moc rád tě poznávám, jsem Zvědavobot",
+          "jmenuji se Zvědavobot, těší mě"
         ],
         "over_iterated_answers": [
-          "klomp, to už jsem přeci řekl :)"
+          "Zvědavobot, to už jsem přeci řekl :)"
         ]
       }
     }
