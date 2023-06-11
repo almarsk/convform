@@ -3,6 +3,8 @@ import secrets
 from pathlib import Path
 from importlib import import_module
 from datetime import datetime
+import json
+from bot_reply import reply
 
 from flask import (
     Flask,
@@ -70,16 +72,20 @@ if not db_path.is_file():
 @app.route("/", methods=("GET", "POST"))
 def dispatcher():
     url_flow = request.args.get("flow") or None
-    # print(session)
 
     if url_flow is not None:
         # a flow was set via the URL's query string -> start a new conversation
         session.clear()
-        session["flow"] = url_flow
-        try:
-            import_module("flows."+url_flow)
-        except ImportError:
+        if os.path.exists(f"flows/{url_flow}.json"):
+            session["flow"] = url_flow
+            try:
+                with open(f"flows/{session['flow']}.json", "r") as file:
+                    json.load(file)
+            except ValueError:
+                return render_template("json_issue.html", flow=session["flow"].capitalize()), 500
+        else:
             session["page"] = "not_found"
+            return render_template("not_found.html", flow=url_flow), 404
         return redirect(url_for("dispatcher"))
     elif session.get("flow") is None:
         # starting a conversation without setting a flow is forbidden -> 403 error
@@ -128,8 +134,7 @@ def chat():
             )
         )
     cState = session.setdefault("state", {"flow" : session["flow"]})  # conversation state
-    flow = import_module("flows."+session["flow"])
-    bot_reply = flow.reply(user_reply, cState)
+    bot_reply = reply(user_reply, cState)
     session.modified = True
     if bot_reply is None:
         session["page"] = "outro"

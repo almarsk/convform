@@ -1,6 +1,4 @@
 from utils import *
-import random
-import re
 import pprint
 
 
@@ -19,16 +17,7 @@ def reply(user_reply, cState):
         state_intents = current_state["intents"]
         state_iterations = cState["intent_iterations"]
         fallback = current_state["fallback"]
-
-        matched_intents = []
-        for intent in state_intents:
-            current_intent = state_intents[intent]
-
-            for item in current_intent["keywords"]:
-                if re.search(item.lower(), user_reply.lower()):
-                    state_iterations.setdefault(intent, 0)
-                    state_iterations[intent] += 1
-                    matched_intents.append(intent)
+        matched_intents = find_matches(state_intents, state_iterations, user_reply)
 
         if len(matched_intents):
             sort_intents_priority(matched_intents, current_state["intents"])
@@ -43,6 +32,8 @@ def reply(user_reply, cState):
 
     # TODO
     #______________________________________________________________________________________________________________
+    # refactor              -   matching should be done in a utils func instead of klomp
+    #
     # reactivity            -   see all the matched intents and compose an answer based on priority
     #                       -   leave the over-iterated ones out (if there are any un-overiterated)
     #                       -   in case of only overiterating steering the convo

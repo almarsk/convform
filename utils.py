@@ -1,5 +1,6 @@
 import json
 import random
+import re
 from typing import Tuple, Any
 
 
@@ -17,6 +18,18 @@ def get_flow_json(flow_name) -> dict:
     except Exception as e:
         print("An error occurred:", str(e))
         return {Exception: "ajaj něco se nepovedlo, jsem nějaký rozbitý"}
+
+def find_matches(state_intents, state_iterations, user_reply):
+    matched_intents = []
+    for intent in state_intents:
+        current_intent = state_intents[intent]
+
+        for item in current_intent["keywords"]:
+            if re.search(item.lower(), user_reply.lower()):
+                state_iterations.setdefault(intent, 0)
+                state_iterations[intent] += 1
+                matched_intents.append(intent)
+    return matched_intents
 
 
 def sort_intents_priority(matched_intents, state_intents):
@@ -36,8 +49,10 @@ def extract_overiterated(matched_intents, state_intents, intent_iterations) -> T
             print("non_over: "+str(matched_intents)+ " over: "+str(iterating_intents))
     return (matched_intents, iterating_intents)
 
+
 def annotated_intents_dict(matched_intents, iterating_intents):
     pass
+
 
 def append_answers(intents_group: list, final_picked_answer_list: list, state_intents, over_iterated: bool):
     if len(intents_group):
