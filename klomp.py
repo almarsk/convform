@@ -41,9 +41,30 @@ def reply(user_reply, cState):
         else:
             return fallback_response(fallback)
 
-    # steering the convo
-    # changing states
-    # actual ai and such
+    # TODO
+    #______________________________________________________________________________________________________________
+    # reactivity            -   see all the matched intents and compose an answer based on priority
+    #                       -   leave the over-iterated ones out (if there are any un-overiterated)
+    #                       -   in case of only overiterating steering the convo
+    #                       TODO:
+    #                           list of annotated intents
+    #                           compose answer based on matched intents, priority and over-iteration
+    #                           edge-cases: all over-iterated   - over-iterated answer + steering the conversation
+    #                                       no matches          -
+    #
+    # steering the convo    -   next possible state in case theres not iniciative to react to
+    #                       -   have AI determine whether there is no iniciative to react to
+    #                               - if there is no iniciative - easy going phrase/steering the convo
+    #                       -   or whether there is an uncaught intent - automate suggesting edits to the flow JSON
+    #
+    # over-iteration behavior - next state? steering the convo?
+    #
+    # have AI manage            1) fallbacks 2) establishing topics (later, vec dbs)
+    #
+    #                           fallback-   look for intent based on names of intents
+    #                                   -   create an answer trying to steer the person back
+    #                                       to general overview of convo defined in state_start (TODO)
+    #
 
 # TESTING SECTION
 loc_test = True

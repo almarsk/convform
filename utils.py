@@ -34,6 +34,8 @@ def extract_overiterated(matched_intents, state_intents, intent_iterations) -> T
             iterating_intents.append(matched_intents.pop(matched_intents.index(possible_intent)))
     return (matched_intents, iterating_intents)
 
+def annotated_intents_dict(matched_intents, iterating_intents):
+    pass
 
 def append_answers(intents_group: list, final_picked_answer_list: list, state_intents, over_iterated: bool):
     if len(intents_group):
