@@ -1,4 +1,7 @@
 {
+  "state_start": {
+    "greet": "ahoj"
+  },
   "state_intro": {
     "fallback": [
       "počkej, teď jsem tě nějak nechytil, cože?",
@@ -14,7 +17,7 @@
           "nazd[áaó]rek",
           "čusík"
         ],
-        "answer": [
+        "answers": [
           "čuzzíque",
           "čawík",
           "nazdárek bazárek"
@@ -30,7 +33,7 @@
           "jak je",
           "jak se máš"
         ],
-        "answer": [
+        "answers": [
           "mám se prima, díky za optání, co ty?",
           "uplně báječně a ty?"
         ],
@@ -48,7 +51,7 @@
           "s kým mluvím",
           "s kým mám tu čest"
         ],
-        "answer": [
+        "answers": [
           "moc rád tě poznávám, jsem klomp",
           "jmenuji se klomp, těší mě"
         ],

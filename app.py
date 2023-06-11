@@ -127,7 +127,7 @@ def chat():
                 reaction_ms=request.form.get("reaction-ms"),
             )
         )
-    cState = session.setdefault("state", {})  # conversation state
+    cState = session.setdefault("state", {"flow" : session["flow"]})  # conversation state
     flow = import_module("flows."+session["flow"])
     bot_reply = flow.reply(user_reply, cState)
     session.modified = True
@@ -137,7 +137,7 @@ def chat():
     else:
         db.session.add(Reply(user_id=user.id, content=str(bot_reply)))
         response = render_template(
-            "chat.html", bot_reply=bot_reply, flow=flow.__name__.split(".")[1].capitalize()
+            "chat.html", bot_reply=bot_reply, flow=session["flow"].capitalize()
         )
 
     db.session.commit()
