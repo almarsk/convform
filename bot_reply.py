@@ -6,7 +6,7 @@ def reply(user_reply, cState):
     cState.setdefault("state", "state_start")
     cState.setdefault("global_turn", 0)
     cState.setdefault("intent_iterations", {})
-    flow: dict = get_flow_json("klomp")
+    flow: dict = get_flow_json(cState["flow"])
 
     if cState["global_turn"] == 0:
         cState["global_turn"] += 1
@@ -21,8 +21,9 @@ def reply(user_reply, cState):
 
         if len(matched_intents):
             sort_intents_priority(matched_intents, current_state["intents"])
-            print(cState)
-            final_answer = get_answer(extract_overiterated(matched_intents, state_intents, state_iterations), state_intents)
+            assorted_intents: Tuple[list,list] = extract_overiterated(matched_intents, state_intents, state_iterations)
+            print(annotated_intents(assorted_intents))
+            final_answer = get_answer(assorted_intents, state_intents)
             if final_answer:
                 return final_answer
             else:
@@ -31,17 +32,21 @@ def reply(user_reply, cState):
             return fallback_response(fallback)
 
     # TODO
-    #______________________________________________________________________________________________________________
-    # refactor              -   matching should be done in a utils func instead of klomp
+    #                           add intents to be able to test multi intent answer composition
+    #                           compose answer based on matched intents, priority and over-iteration
+    #                           edge-cases: all over-iterated   - over-iterated answer + steering the conversation
+    #                                       no matches          - AI fallback management
+    #                           come up with another state to be able to test steering the convo as a fallback
+    #                           make sure the robot speech is loaded async, right now theres a hardcoded timeout
     #
+    #
+    #
+    #
+    #
+    #______________________________________________________________________________________________________________
     # reactivity            -   see all the matched intents and compose an answer based on priority
     #                       -   leave the over-iterated ones out (if there are any un-overiterated)
     #                       -   in case of only overiterating steering the convo
-    #                       TODO:
-    #                           list of annotated intents
-    #                           compose answer based on matched intents, priority and over-iteration
-    #                           edge-cases: all over-iterated   - over-iterated answer + steering the conversation
-    #                                       no matches          -
     #
     # steering the convo    -   next possible state in case theres not iniciative to react to
     #                       -   have AI determine whether there is no iniciative to react to
@@ -51,23 +56,48 @@ def reply(user_reply, cState):
     # over-iteration behavior - next state? steering the convo?
     #
     # have AI manage            1) fallbacks 2) establishing topics (later, vec dbs)
-    #
     #                           fallback-   look for intent based on names of intents
     #                                   -   create an answer trying to steer the person back
     #                                       to general overview of convo defined in state_start (TODO)
     #
 
+
 # TESTING SECTION
 loc_test = False
 if loc_test:
-    cState = {
-        'global_turn': 1,
+    cState0 = {
+        "flow" : "zvědavobot",
+    }
+    cState1 = {
+        "flow" : "zvědavobot",
+        'global_turn': 2,
+        'state': 'state_intro',
+        'intent_iterations': {
+            'pozdrav': 0,
+            'jak se máš': 0
+        }
+    }
+    cState2 = {
+        "flow" : "zvědavobot",
+        'global_turn': 3,
         'state': 'state_intro',
         'intent_iterations': {
             'pozdrav': 1,
             'jak se máš': 0
         }
+    }
+    cState3 = {
+        "flow" : "zvědavobot",
+        'global_turn': 3,
+        'state': 'state_intro',
+        'intent_iterations': {
+            'pozdrav': 2,
+            'jak se máš': 1
         }
-    print("bot: "+reply("", {}))
+    }
+
+    print("bot: "+reply("", cState0))
     print("usr: "+"ahoj")
-    print("bot: "+reply("ahoj", cState))
+    print("bot: "+reply("ahoj", cState1))
+    print("bot: "+reply("ahoj jak se máš", cState2))
+    print("bot: "+reply("ahoj jak se máš", cState3))
