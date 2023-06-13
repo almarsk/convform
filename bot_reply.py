@@ -1,8 +1,8 @@
 from utils import *
-import pprint
+import fire
 
 
-def reply(user_reply, cState):
+def reply(user_reply, cState) -> str:
     cState.setdefault("state", "state_start")
     cState.setdefault("global_turn", 0)
     cState.setdefault("intent_iterations", {})
@@ -11,7 +11,8 @@ def reply(user_reply, cState):
     if cState["global_turn"] == 0:
         cState["global_turn"] += 1
         cState["state"] = "state_intro"
-        return flow["state_start"]["greet"]
+        init_greeting: str = flow["state_start"]["greet"]
+        return init_greeting
     else:
         current_state: dict = flow[cState["state"]]
         state_intents = current_state["intents"]
@@ -23,25 +24,20 @@ def reply(user_reply, cState):
             sort_intents_priority(matched_intents, current_state["intents"])
             assorted_intents: Tuple[list,list] = extract_overiterated(matched_intents, state_intents, state_iterations)
             print(annotated_intents(assorted_intents))
-            final_answer = get_answer(assorted_intents, state_intents)
+            # final_answer: str = get_answer(assorted_intents, state_intents)
+            final_answer: str = compose_answer(assorted_intents, state_intents)
             if final_answer:
                 return final_answer
-            else:
-                return fallback_response(fallback)
         else:
             return fallback_response(fallback)
 
     # TODO
-    #                           add intents to be able to test multi intent answer composition
+    #                           order of composed answer based on priority
     #                           compose answer based on matched intents, priority and over-iteration
     #                           edge-cases: all over-iterated   - over-iterated answer + steering the conversation
-    #                                       no matches          - AI fallback management
+    #                                        no matches          - AI fallback management
     #                           come up with another state to be able to test steering the convo as a fallback
     #                           make sure the robot speech is loaded async, right now theres a hardcoded timeout
-    #
-    #
-    #
-    #
     #
     #______________________________________________________________________________________________________________
     # reactivity            -   see all the matched intents and compose an answer based on priority
@@ -63,8 +59,8 @@ def reply(user_reply, cState):
 
 
 # TESTING SECTION
-loc_test = False
-if loc_test:
+
+def test():
     cState0 = {
         "flow" : "zvědavobot",
     }
@@ -101,3 +97,7 @@ if loc_test:
     print("bot: "+reply("ahoj", cState1))
     print("bot: "+reply("ahoj jak se máš", cState2))
     print("bot: "+reply("ahoj jak se máš", cState3))
+
+
+if __name__ == '__main__':
+  fire.Fire(test)

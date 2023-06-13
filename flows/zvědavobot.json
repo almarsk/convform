@@ -9,7 +9,7 @@
     ],
     "intents": {
       "pozdrav": {
-        "priority": 10,
+        "priority": 13,
         "iteration": 1,
         "keywords": [
           "ahoj",
@@ -60,6 +60,35 @@
         ],
         "over_iterated_answers": [
           "Zvědavobot, to už jsem přeci řekl :)"
+        ]
+      },
+      "co umíš": {
+        "priority": 8,
+        "iteration": 1,
+        "keywords": [
+          "co umíš",
+          "co děláš"
+        ],
+        "answers": [
+          "umím třeba odpovídat na otázky nebo vůbec si tak nějak povídat"
+        ],
+        "over_iterated_answers": [
+          "nic moc dalšího než jsem řekl už vlastně neumím"
+        ]
+      },
+      "co si myslíš o vorvaních": {
+        "priority": 8,
+        "iteration": 3,
+        "keywords": [
+          "vorva[ňn]"
+        ],
+        "answers": [
+          "miluju je",
+          "zbožňuju je",
+          "nejlepší stvoření"
+        ],
+        "over_iterated_answers": [
+          "jak říkám, jsou fakt nejbožštější"
         ]
       }
     }

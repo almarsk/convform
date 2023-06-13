@@ -64,13 +64,18 @@ def append_answers(intents_group: list, final_picked_answer_list: list, state_in
             answer_list = state_intents[intent][source_text]
             final_picked_answer_list.append(answer_list[random.randint(0, len(answer_list)-1)])
 
+def append_answers_short(intents_group: list, final_picked_answer_list: list, state_intents, over_iterated: bool):
+    return
 
-def get_answer(matched_iterating_intents, state_intents):
+def get_answer(matched_iterating_intents, state_intents) -> str:
     final_picked_answer_list = []
     append_answers(matched_iterating_intents[0], final_picked_answer_list, state_intents, over_iterated = False)
     append_answers(matched_iterating_intents[1], final_picked_answer_list, state_intents, over_iterated = True)
     return final_picked_answer_list[0]
 
+def compose_answer(assorted_intents, state_intents) -> str:
+    return ' '.join([state_intents[intent]["answers"][random.randint(0, len(state_intents[intent]["answers"])-1)] for intent in assorted_intents[0]]) or ""
 
-def fallback_response(fallback):
+
+def fallback_response(fallback) -> str:
     return fallback[random.randint(0, len(fallback)-1)]
