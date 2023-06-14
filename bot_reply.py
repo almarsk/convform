@@ -14,22 +14,8 @@ def reply(user_reply, cState) -> str:
         init_greeting: str = flow["state_start"]["greet"]
         return init_greeting
     else:
-        current_state: dict = flow[cState["state"]]
-        state_intents = current_state["intents"]
-        state_iterations = cState["intent_iterations"]
-        fallback = current_state["fallback"]
-        matched_intents = find_matches(state_intents, state_iterations, user_reply)
+        return state_answer(flow, cState, user_reply)
 
-        if len(matched_intents):
-            sort_intents_priority(matched_intents, current_state["intents"])
-            assorted_intents: Tuple[list,list] = extract_overiterated(matched_intents, state_intents, state_iterations)
-            print(annotated_intents(assorted_intents))
-            # final_answer: str = get_answer(assorted_intents, state_intents)
-            final_answer: str = compose_answer(assorted_intents, state_intents)
-            if final_answer:
-                return final_answer
-        else:
-            return fallback_response(fallback)
 
     # TODO
     #                           order of composed answer based on priority

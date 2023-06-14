@@ -64,18 +64,36 @@ def append_answers(intents_group: list, final_picked_answer_list: list, state_in
             answer_list = state_intents[intent][source_text]
             final_picked_answer_list.append(answer_list[random.randint(0, len(answer_list)-1)])
 
-def append_answers_short(intents_group: list, final_picked_answer_list: list, state_intents, over_iterated: bool):
-    return
-
-def get_answer(matched_iterating_intents, state_intents) -> str:
-    final_picked_answer_list = []
-    append_answers(matched_iterating_intents[0], final_picked_answer_list, state_intents, over_iterated = False)
-    append_answers(matched_iterating_intents[1], final_picked_answer_list, state_intents, over_iterated = True)
-    return final_picked_answer_list[0]
 
 def compose_answer(assorted_intents, state_intents) -> str:
-    return ' '.join([state_intents[intent]["answers"][random.randint(0, len(state_intents[intent]["answers"])-1)] for intent in assorted_intents[0]]) or ""
+    if not len(assorted_intents[0]) and len(assorted_intents[1]):
+        answer_list = state_intents[assorted_intents[1][0]]["over_iterated_answers"]
+        random_answer = answer_list[random.randint(0, len(answer_list)-1)]
+        return random_answer
+
+    composed_answer = list()
+    for intent in assorted_intents[0]:
+        answer_list = state_intents[intent]["answers"]
+        random_answer = answer_list[random.randint(0, len(answer_list)-1)]
+        composed_answer.append(random_answer)
+    return ' '.join(composed_answer) or ""
 
 
 def fallback_response(fallback) -> str:
     return fallback[random.randint(0, len(fallback)-1)]
+
+
+def state_answer(flow, cState, user_reply):
+    # names
+    current_state: dict = flow[cState["state"]]
+    state_intents = current_state["intents"]
+    state_iterations = cState["intent_iterations"]
+    fallback = current_state["fallback"]
+    matched_intents = find_matches(state_intents, state_iterations, user_reply)
+
+    # actions
+    sort_intents_priority(matched_intents, current_state["intents"])
+    assorted_intents: Tuple[list,list] = extract_overiterated(matched_intents, state_intents, state_iterations)
+    print(annotated_intents(assorted_intents))
+    final_answer: str = compose_answer(assorted_intents, state_intents)
+    return final_answer or fallback_response(fallback)
