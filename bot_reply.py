@@ -26,9 +26,9 @@ def reply(user_reply, cState) -> str:
     #                           make sure the robot speech is loaded async, right now theres a hardcoded timeout
     #
     #______________________________________________________________________________________________________________
-    # reactivity            -   see all the matched intents and compose an answer based on priority
-    #                       -   leave the over-iterated ones out (if there are any un-overiterated)
-    #                       -   in case of only overiterating steering the convo
+    # reactivity            -   in case of only overiterating steering the convo
+    #                       -   what does it mean to steer convo?
+    #                       -   each intent has possible follow-up
     #
     # steering the convo    -   next possible state in case theres not iniciative to react to
     #                       -   have AI determine whether there is no iniciative to react to
@@ -41,6 +41,7 @@ def reply(user_reply, cState) -> str:
     #                           fallback-   look for intent based on names of intents
     #                                   -   create an answer trying to steer the person back
     #                                       to general overview of convo defined in state_start (TODO)
+    #                           conversation with AI employed produces suggestions of new chunks of convDesign JSON
     #
 
 

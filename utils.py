@@ -33,7 +33,7 @@ def find_matches(state_intents, state_iterations, user_reply):
 
 
 def sort_intents_priority(matched_intents, state_intents):
-        matched_intents.sort(key=lambda intent: state_intents[intent]["priority"], reverse=True)
+        matched_intents.sort(key=lambda intent: state_intents[intent]["priority"])
         return matched_intents
 
 
@@ -66,6 +66,7 @@ def append_answers(intents_group: list, final_picked_answer_list: list, state_in
 
 
 def compose_answer(assorted_intents, state_intents) -> str:
+    # only over-iterated
     if not len(assorted_intents[0]) and len(assorted_intents[1]):
         answer_list = state_intents[assorted_intents[1][0]]["over_iterated_answers"]
         random_answer = answer_list[random.randint(0, len(answer_list)-1)]
@@ -76,7 +77,7 @@ def compose_answer(assorted_intents, state_intents) -> str:
         answer_list = state_intents[intent]["answers"]
         random_answer = answer_list[random.randint(0, len(answer_list)-1)]
         composed_answer.append(random_answer)
-    return ' '.join(composed_answer) or ""
+    return '. '.join(composed_answer) or ""
 
 
 def fallback_response(fallback) -> str:
