@@ -2,6 +2,7 @@ import json
 import random
 import re
 from typing import Tuple, Any
+import os
 
 
 def get_flow_json(flow_name) -> dict:
@@ -98,3 +99,7 @@ def state_answer(flow, cState, user_reply):
     print(annotated_intents(assorted_intents))
     final_answer: str = compose_answer(assorted_intents, state_intents)
     return final_answer or fallback_response(fallback)
+
+def apiKey():
+    if not "OPENAI_API_KEY" in os.environ:
+        os.environ["OPENAI_API_KEY"] = "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"

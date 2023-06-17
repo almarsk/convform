@@ -1,8 +1,15 @@
+from asyncio.tasks import sleep
 from utils import *
 import fire
+import openai
+from langchain.llms import OpenAI
+from langchain import PromptTemplate, LLMChain
+from utils import apiKey
 
 
-def reply(user_reply, cState) -> str:
+async def reply2(user_reply, cState) -> str:
+    await sleep(1.5)
+
     cState.setdefault("state", "state_start")
     cState.setdefault("global_turn", 0)
     cState.setdefault("intent_iterations", {})
@@ -15,6 +22,29 @@ def reply(user_reply, cState) -> str:
         return init_greeting
     else:
         return state_answer(flow, cState, user_reply)
+
+async def reply(user_reply, cState) -> str:
+    cState.setdefault("state", "state_start")
+    cState.setdefault("global_turn", 0)
+    cState.setdefault("intent_iterations", {})
+    flow: dict = get_flow_json(cState["flow"])
+
+    if cState["global_turn"] == 0:
+        cState["global_turn"] += 1
+        cState["state"] = "state_intro"
+        init_greeting: str = flow["state_start"]["greet"]
+        return init_greeting
+    else:
+        apiKey()
+        prompt = PromptTemplate(
+            input_variables=["q"],
+            template="{q}",
+        )
+        llm = OpenAI(temperature=0.9)
+        chain = LLMChain(llm=llm, prompt=prompt)
+        response = chain.run(user_reply)
+        return response
+
 
 
     # TODO
@@ -47,7 +77,7 @@ def reply(user_reply, cState) -> str:
 
 # TESTING SECTION
 
-def test():
+async def test():
     cState0 = {
         "flow" : "zvědavobot",
     }
@@ -79,11 +109,11 @@ def test():
         }
     }
 
-    print("bot: "+reply("", cState0))
+    print("bot: "+await reply("", cState0))
     print("usr: "+"ahoj")
-    print("bot: "+reply("ahoj", cState1))
-    print("bot: "+reply("ahoj jak se máš", cState2))
-    print("bot: "+reply("ahoj jak se máš", cState3))
+    print("bot: "+await reply("ahoj", cState1))
+    print("bot: "+await reply("ahoj jak se máš", cState2))
+    print("bot: "+await reply("ahoj jak se máš", cState3))
 
 
 if __name__ == '__main__':

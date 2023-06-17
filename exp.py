@@ -32,42 +32,43 @@ def main(query=''):
 
             if who:
                 if len(user[1]) < 6:
-                    return f"{user[1].capitalize()} ({reply[-1] / 1000}s):\t\t"
+                    return f"{user[1].capitalize()} ({reply[-1] / 1000}s):\t"
                 else:
                     return f"{user[1].capitalize()} ({reply[-1] / 1000}s):\t"
             else:
-                return f"{user[2].capitalize()}:\t\t\t"
+                return f"{user[2].capitalize()}:\t"
 
         # print info of user - TODO make it a return
         if not user[4]:
             time_date = re.search('(.{10}).(.{8})', user[3])
-            print(
-                f"User {user[1].capitalize()} (no.{user[0]})\n" +
-                f"Talked to {user[2].capitalize()} " +
-                f"on {time_date.group(1)}\n" +
-                f"from {time_date.group(2)}\n" +
-                f"and ended the conversation prematurely.\n"
-            )
+            if time_date is not None:
+                print(
+                    f"User {user[1].capitalize()} (no.{user[0]})\n" +
+                    f"Talked to {user[2].capitalize()} " +
+                    f"on {time_date.group(1)}\n" +
+                    f"from {time_date.group(2)}\n" +
+                    f"and ended the conversation prematurely.\n"
+                )
         else:
             time_date = re.search('(.{10}).(.{8})', user[3])
             time_end = re.search('(.{10}).(.{8})', user[4])
             abort = lambda val: "Aborted" if val == 1 else "Did not abort"
-
-            print(
-                f"\n\nUser {user[1].capitalize()} (id {user[0]})\n" +
-                f"Talked to {user[2].capitalize()} " +
-                f"on {time_date.group(1)}\n" +
-                f"from {time_date.group(2)} " +
-                f"to {time_end.group(2)}.\n" +
-                f"{abort(user[5])}, " +
-                f"rated {user[6]}.\n" +
-                f"and commented:\n\t'{user[7].capitalize().strip()}'\n"
-            )
+            if time_date is not None and time_end is not None:
+                print(
+                    f"\n\nUser {user[1].capitalize()} (id {user[0]})\n" +
+                    f"Talked to {user[2].capitalize()} " +
+                    f"on {time_date.group(1)}\n" +
+                    f"from {time_date.group(2)} " +
+                    f"to {time_end.group(2)}.\n" +
+                    f"{abort(user[5])}, " +
+                    f"rated {user[6]}.\n" +
+                    f"and commented:\n\t'{user[7].capitalize().strip()}'\n"
+                )
 
         # the actual conversation
         for reply in replies:
             if reply[1] == user[0]:
-                print(f"{user_bot(reply[-1])} {reply[2]}")
+                print(f"{user_bot(reply[-1])} {reply[2].strip()}")
         print("\n______\n")
 
     # Close the cursor and connection objects

@@ -9,17 +9,25 @@
     var delay = {{ config.REPLY_DELAY_MS }};
 
     document.addEventListener("DOMContentLoaded", ()=>{
-
-        setTimeout(function() {
+      async function fetchString() {
+          try {
+            const response = await fetch('/fetch_string');
+            const data = await response.json();
+            document.querySelector(".message").innerHTML = data.fetched_string;
+          } catch (error) {
+              console.error('Error:', error);
+          } finally {
             document.querySelector(".message").classList.remove("loader")
             document.querySelector(".confirm").classList.remove("hide")
             document.querySelector(".abort").classList.remove("hide")
-            document.querySelector(".message").innerHTML = '{{bot_reply}}'
-                start_time = Date.now();
-                }, delay);
+            start_time = Date.now();
+          }
+      }
+
+        fetchString()
         document.querySelectorAll(".avatar").forEach(avatar=>{
         avatar.classList.remove("hide")
-        })  
+        })
         document.querySelector(".message").classList.add("loader")
         document.querySelector(".message").innerHTML=''
         document.querySelector(".user-input").classList.remove("hide")
@@ -29,7 +37,7 @@
     document.querySelector(".abort").addEventListener("click", ()=>{
         document.querySelector(".grid-container").action="{{ url_for('dispatcher', abort=1)}}"
     })
-    
+
     const reaction_ms = document.querySelector("#reaction-ms")
 
         document.querySelector(".grid-container").addEventListener("submit", function() {

@@ -14,6 +14,7 @@ from flask import (
     redirect,
     request,
     url_for,
+    jsonify
 )
 from flask_sqlalchemy import SQLAlchemy
 
@@ -69,6 +70,25 @@ if not db_path.is_file():
 # the flow clears the session, as it's taken as a signal of a new
 # conversation starting. Trying to use the app without setting a
 # flow shows an error.
+@app.route("/fetch_string", methods=["GET"])
+async def fetch_string():
+
+    bot_reply = await reply(session["user_reply"], session["state"])
+    session.modified = True
+    if bot_reply is None:
+        session["page"] = "outro"
+        return redirect(url_for("dispatcher"))
+    else:
+        repl = Reply(user_id=session["user_id"], content=str(bot_reply))
+        db.session.add(repl)
+        db.session.commit()
+        # print(bot_reply)
+        return jsonify({
+            "fetched_string": bot_reply
+        })
+
+
+
 @app.route("/", methods=("GET", "POST"))
 def dispatcher():
     url_flow = request.args.get("flow") or None
@@ -112,7 +132,7 @@ def intro():
     if request.method == "GET":
         return render_template("intro.html", flow=session["flow"].capitalize())
     elif request.method == "POST":
-        user = User(nick=request.form.get("nick"), flow=session["flow"])  # nick isn't set up yet
+        user = User(nick=request.form.get("nick"), flow=session["flow"])
         db.session.add(user)
         db.session.commit()
         # the user only has a valid ID after they've been committed to
@@ -124,29 +144,21 @@ def intro():
 
 def chat():
     user = User.query.filter_by(id=session["user_id"]).first()
-    user_reply = request.form.get("answer")
+    session["user_reply"] = request.form.get("answer")
     if request.method == "POST":
         db.session.add(
             Reply(
                 user_id=user.id,
-                content=user_reply,
+                content=session["user_reply"],
                 reaction_ms=request.form.get("reaction-ms"),
             )
         )
+        db.session.commit()
     cState = session.setdefault("state", {"flow" : session["flow"]})  # conversation state
-    bot_reply = reply(user_reply, cState)
-    session.modified = True
-    if bot_reply is None:
-        session["page"] = "outro"
-        response = redirect(url_for("dispatcher"))
-    else:
-        db.session.add(Reply(user_id=user.id, content=str(bot_reply)))
-        response = render_template(
-            "chat.html", bot_reply=bot_reply, flow=session["flow"].capitalize()
-        )
 
-    db.session.commit()
-    return response
+    return render_template(
+        "chat.html", flow=session["flow"].capitalize()
+    )
 
 
 def outro():
