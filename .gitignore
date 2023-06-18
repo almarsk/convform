@@ -3,3 +3,4 @@ chatbot.db
 .idea
 venv
 pyrightconfig.json
+config.json

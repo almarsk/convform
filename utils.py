@@ -102,4 +102,6 @@ def state_answer(flow, cState, user_reply):
 
 def apiKey():
     if not "OPENAI_API_KEY" in os.environ:
-        os.environ["OPENAI_API_KEY"] = "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"
+        with open("config.json", "r") as c:
+            config = json.load(c)
+            os.environ["OPENAI_API_KEY"] = config["openai_api_key"]

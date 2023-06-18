@@ -3,6 +3,7 @@ from utils import *
 import fire
 import openai
 from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain import PromptTemplate, LLMChain
 from utils import apiKey
 
@@ -40,7 +41,7 @@ async def reply(user_reply, cState) -> str:
             input_variables=["q"],
             template="{q}",
         )
-        llm = OpenAI(temperature=0.9)
+        llm = ChatOpenAI(temperature=0.9)
         chain = LLMChain(llm=llm, prompt=prompt)
         response = await chain.arun(user_reply)
         return response
