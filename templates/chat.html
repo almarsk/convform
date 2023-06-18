@@ -8,7 +8,6 @@
 <script type="text/javascript">
     var delay = {{ config.REPLY_DELAY_MS }};
 
-    document.addEventListener("DOMContentLoaded", ()=>{
       async function fetchString() {
           try {
             const response = await fetch('/fetch_string');
@@ -23,6 +22,8 @@
             start_time = Date.now();
           }
       }
+
+    document.addEventListener("DOMContentLoaded", ()=>{
 
         fetchString()
         document.querySelectorAll(".avatar").forEach(avatar=>{

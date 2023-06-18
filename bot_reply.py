@@ -42,7 +42,7 @@ async def reply(user_reply, cState) -> str:
         )
         llm = OpenAI(temperature=0.9)
         chain = LLMChain(llm=llm, prompt=prompt)
-        response = chain.run(user_reply)
+        response = await chain.arun(user_reply)
         return response
 
 
