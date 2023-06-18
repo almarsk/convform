@@ -101,7 +101,6 @@ def state_answer(flow, cState, user_reply):
     return final_answer or fallback_response(fallback)
 
 def apiKey():
-    if not "OPENAI_API_KEY" in os.environ:
-        with open("config.json", "r") as c:
-            config = json.load(c)
-            os.environ["OPENAI_API_KEY"] = config["openai_api_key"]
+    with open("config.json", "r") as c:
+        config = json.load(c)
+        return config["openai_api_key"]

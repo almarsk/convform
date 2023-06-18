@@ -36,12 +36,12 @@ async def reply(user_reply, cState) -> str:
         init_greeting: str = flow["state_start"]["greet"]
         return init_greeting
     else:
-        apiKey()
         prompt = PromptTemplate(
             input_variables=["q"],
             template="{q}",
         )
-        llm = ChatOpenAI(temperature=0.9)
+
+        llm = ChatOpenAI(openai_api_key=apiKey(), temperature=0.9, client=None)
         chain = LLMChain(llm=llm, prompt=prompt)
         response = await chain.arun(user_reply)
         return response
