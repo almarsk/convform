@@ -130,6 +130,7 @@ def not_found():
 
 
 def intro():
+    print("flask: intro")
     if request.method == "GET":
         return render_template("intro.html", flow=session["flow"].capitalize())
     elif request.method == "POST":
