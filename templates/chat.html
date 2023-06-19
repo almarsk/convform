@@ -6,11 +6,11 @@
 
 {% block js %}
 <script type="text/javascript">
-    var delay = {{ config.REPLY_DELAY_MS }};
+    var base_url = ""
 
       async function fetchString() {
           try {
-            const response = await fetch('/fetch_string');
+            const response = await fetch(window.location.origin+'/fetch_string');
             const data = await response.json();
             document.querySelector(".message").innerHTML = data.fetched_string;
           } catch (error) {

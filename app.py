@@ -88,7 +88,6 @@ async def fetch_string():
         })
 
 
-
 @app.route("/", methods=("GET", "POST"))
 def dispatcher():
     print("flask: dispatcher")
