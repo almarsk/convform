@@ -55,6 +55,7 @@ AI:"""
     )
 
     response = await conversation.arun(f"Kamarád: {user_reply}" if user_reply else " ")
+    print(response)
     return response
 
 

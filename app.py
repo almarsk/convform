@@ -91,6 +91,7 @@ async def fetch_string():
 
 @app.route("/", methods=("GET", "POST"))
 def dispatcher():
+    print("flask: dispatcher")
     url_flow = request.args.get("flow") or None
 
     if url_flow is not None:
@@ -143,6 +144,7 @@ def intro():
 
 
 def chat():
+    print("flask: chat")
     user = User.query.filter_by(id=session["user_id"]).first()
     session["user_reply"] = request.form.get("answer")
     if request.method == "POST":
