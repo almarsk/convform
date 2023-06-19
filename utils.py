@@ -3,6 +3,9 @@ import random
 import re
 from typing import Tuple, Any
 import os
+import sqlite3
+from langchain.memory import ConversationBufferMemory
+from langchain.memory.buffer_window import ConversationBufferWindowMemory
 
 
 def get_flow_json(flow_name) -> dict:
@@ -104,3 +107,15 @@ def apiKey():
     with open("config.json", "r") as c:
         config = json.load(c)
         return config["openai_api_key"]
+
+def fillUpMem(cState, memory: ConversationBufferWindowMemory):
+    user_id = cState["user_id"]
+    conn = sqlite3.connect('chatbot.db')
+    cursor_replies = conn.cursor()
+    cursor_replies.execute(f"SELECT * FROM reply WHERE user_id == {user_id};")
+    replies = cursor_replies.fetchall()
+    if len(replies):
+        memory.chat_memory.add_ai_message(replies[0][2])
+        for i in range(1, len(replies), 2):
+            if i+1 < len(replies):
+                memory.save_context({"input": replies[i][2]}, {"output": replies[i + 1][2]})

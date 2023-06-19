@@ -154,7 +154,7 @@ def chat():
             )
         )
         db.session.commit()
-    cState = session.setdefault("state", {"flow" : session["flow"]})  # conversation state
+    cState = session.setdefault("state", {"flow" : session["flow"], "user_id":session["user_id"]})  # conversation state
 
     return render_template(
         "chat.html", flow=session["flow"].capitalize()
