@@ -10,8 +10,8 @@
 
       async function fetchString() {
           try {
-            var url = window.location.origin+'/fetch_string';
-            console.log(url)
+            var url = window.location.origin+window.location.pathname+'fetch_string';
+            console.log(window.location)
             const response = await fetch(url);
             const data = await response.json();
             document.querySelector(".message").innerHTML = data.fetched_string;
