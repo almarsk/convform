@@ -72,7 +72,10 @@ if not db_path.is_file():
 # flow shows an error.
 @app.route("/fetch_string", methods=["GET"])
 async def fetch_string():
-
+    if "user_id" not in session:
+        return jsonify({
+            "error": "no access"
+        })
     bot_reply = await reply(session["user_reply"], session["state"])
     session.modified = True
     if bot_reply is None:
