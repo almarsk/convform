@@ -43,29 +43,37 @@ AI:"""
         template=template
     )
 
-    memory = ConversationBufferWindowMemory(
-        memory_key='history', human_prefix="Kamarád", k=5)
+    memory = ConversationBufferWindowMemory(human_prefix="Kamarád", k=5)
+    # memory = ConversationBufferMemory()
     fillUpMem(cState, memory)
-    llm = ChatOpenAI(openai_api_key=apiKey(), model_name= "gpt-3.5-turbo", temperature=0)
-    conversation = LLMChain(
+    llm = ChatOpenAI(openai_api_key=apiKey(), model_name= "gpt-3.5-turbo", temperature=0, client=None)
+    conversation = ConversationChain(
         llm=llm,
         verbose=True,
         prompt=prompt,
         memory=memory
     )
 
-    response = await conversation.arun(f"Kamarád: {user_reply}" if user_reply else " ")
-    print(response)
+    response = conversation.run(f"Kamarád: {user_reply}" if user_reply else " ")
     return response
 
-
-    # TODO
+    # LangChain                 setup template work for different situations
+    #                                   for when there isnt an answer
+    #                                   for when bot is suggesting something and is waiting for approval
+    #                                   for when bot was allowed to do it
+    #
+    #                                   perhaps there will be reasoning chains necesarry for understanding
+    #                                   where we are in each process
+    # Dumb design TODO
     #                           order of composed answer based on priority
     #                           compose answer based on matched intents, priority and over-iteration
     #                           edge-cases: all over-iterated   - over-iterated answer + steering the conversation
     #                                        no matches          - AI fallback management
     #                           come up with another state to be able to test steering the convo as a fallback
     #                           make sure the robot speech is loaded async, right now theres a hardcoded timeout
+    #
+    # Safety TODO
+    #                           make sure to only allow fetch_string route in the context of a human on the chat
     #
     #______________________________________________________________________________________________________________
     # reactivity            -   in case of only overiterating steering the convo

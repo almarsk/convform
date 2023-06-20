@@ -4,3 +4,4 @@ chatbot.db
 venv
 pyrightconfig.json
 config.json
+__pycache__/

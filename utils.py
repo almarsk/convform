@@ -6,6 +6,7 @@ import os
 import sqlite3
 from langchain.memory import ConversationBufferMemory
 from langchain.memory.buffer_window import ConversationBufferWindowMemory
+from langchain import ConversationChain
 
 
 def get_flow_json(flow_name) -> dict:
@@ -119,3 +120,6 @@ def fillUpMem(cState, memory: ConversationBufferWindowMemory):
         for i in range(1, len(replies), 2):
             if i+1 < len(replies):
                 memory.save_context({"input": replies[i][2]}, {"output": replies[i + 1][2]})
+
+async def async_generate(chain, input):
+    return await chain.arun(input)

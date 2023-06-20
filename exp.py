@@ -47,7 +47,7 @@ def main(query=''):
                     f"Talked to {user[2].capitalize()} " +
                     f"on {time_date.group(1)}\n" +
                     f"from {time_date.group(2)}\n" +
-                    f"and ended the conversation prematurely.\n"
+                    f"and ended the conversation prematurely (or it never had a fixed end).\n"
                 )
         else:
             time_date = re.search('(.{10}).(.{8})', user[3])
