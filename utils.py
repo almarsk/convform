@@ -3,10 +3,7 @@ import random
 import re
 from typing import Tuple, Any
 import os
-import sqlite3
-from langchain.memory import ConversationBufferMemory
-from langchain.memory.buffer_window import ConversationBufferWindowMemory
-from langchain import ConversationChain
+from lch import smart_reply
 
 
 def get_flow_json(flow_name) -> dict:
@@ -82,14 +79,14 @@ def compose_answer(assorted_intents, state_intents) -> str:
         answer_list = state_intents[intent]["answers"]
         random_answer = answer_list[random.randint(0, len(answer_list)-1)]
         composed_answer.append(random_answer)
-    return '. '.join(composed_answer) or ""
+    return ' '.join(composed_answer) or ""
 
 
 def fallback_response(fallback) -> str:
     return fallback[random.randint(0, len(fallback)-1)]
 
 
-def state_answer(flow, cState, user_reply):
+async def state_answer(flow, cState, user_reply) -> str:
     # names
     current_state: dict = flow[cState["state"]]
     state_intents = current_state["intents"]
@@ -102,24 +99,6 @@ def state_answer(flow, cState, user_reply):
     assorted_intents: Tuple[list,list] = extract_overiterated(matched_intents, state_intents, state_iterations)
     print(annotated_intents(assorted_intents))
     final_answer: str = compose_answer(assorted_intents, state_intents)
-    return final_answer or fallback_response(fallback)
-
-def apiKey():
-    with open("config.json", "r") as c:
-        config = json.load(c)
-        return config["openai_api_key"]
-
-def fillUpMem(cState, memory: ConversationBufferWindowMemory):
-    user_id = cState["user_id"]
-    conn = sqlite3.connect('chatbot.db')
-    cursor_replies = conn.cursor()
-    cursor_replies.execute(f"SELECT * FROM reply WHERE user_id == {user_id};")
-    replies = cursor_replies.fetchall()
-    if len(replies):
-        memory.chat_memory.add_ai_message(replies[0][2])
-        for i in range(1, len(replies), 2):
-            if i+1 < len(replies):
-                memory.save_context({"input": replies[i][2]}, {"output": replies[i + 1][2]})
-
-async def async_generate(chain, input):
-    return await chain.arun(input)
+    fallback_answer: str = fallback_response(fallback)
+    smart_answer: str = await smart_reply(cState, user_reply)
+    return final_answer or smart_answer or fallback_answer

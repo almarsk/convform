@@ -11,9 +11,7 @@ from langchain.memory import ConversationBufferMemory
 
 
 
-async def reply2(user_reply, cState) -> str:
-    await sleep(1.5)
-
+async def reply(user_reply, cState) -> str:
     cState.setdefault("state", "state_start")
     cState.setdefault("global_turn", 0)
     cState.setdefault("intent_iterations", {})
@@ -25,69 +23,33 @@ async def reply2(user_reply, cState) -> str:
         init_greeting: str = flow["state_start"]["greet"]
         return init_greeting
     else:
-        return state_answer(flow, cState, user_reply)
-
-async def reply(user_reply, cState) -> str:
-
-    template ="""Jsi hodný česky mluvící robot, který rád říká vtipy.
-Mluvíš v krátkých větách.
-Vždy se nejdřív zeptáš, jestli můžeš říct vtip
-a až když ti to člověk dovolí řekneš ho.
-{history}
-{input}
-AI:"""
-
-    prompt = PromptTemplate(
-        input_variables=['history', 'input'],
-        partial_variables={},
-        template=template
-    )
-
-    memory = ConversationBufferWindowMemory(human_prefix="Kamarád", k=5)
-    # memory = ConversationBufferMemory()
-    fillUpMem(cState, memory)
-    llm = ChatOpenAI(openai_api_key=apiKey(), model_name= "gpt-3.5-turbo", temperature=0, client=None)
-    conversation = ConversationChain(
-        llm=llm,
-        verbose=True,
-        prompt=prompt,
-        memory=memory
-    )
-
-    response = conversation.run(f"Kamarád: {user_reply}" if user_reply else " ")
-    return response
+        return await state_answer(flow, cState, user_reply)
 
     # LangChain                 setup template work for different situations
     #                                   for when there isnt an answer
+    #                                       initiative function, for other cases too - base on general description of flow
     #                                   for when bot is suggesting something and is waiting for approval
     #                                   for when bot was allowed to do it
+    #                           LangChain router - multipromt chain - should take from the json based on superstate
+    #                                       anotator function - dialogue act, entities
+    #                                           to choose intents and states
     #
     #                                   perhaps there will be reasoning chains necesarry for understanding
     #                                   where we are in each process
     # Dumb design TODO
-    #                           order of composed answer based on priority
-    #                           compose answer based on matched intents, priority and over-iteration
-    #                           edge-cases: all over-iterated   - over-iterated answer + steering the conversation
-    #                                        no matches          - AI fallback management
-    #                           come up with another state to be able to test steering the convo as a fallback
-    #                           make sure the robot speech is loaded async, right now theres a hardcoded timeout
+    #                                        redo the json format + implementation implication
     #
-    # Safety TODO
-    #                           make sure to only allow fetch_string route in the context of a human on the chat
-    #
-    #______________________________________________________________________________________________________________
-    # reactivity            -   in case of only overiterating steering the convo
-    #                       -   what does it mean to steer convo?
-    #                       -   each intent has possible follow-up
+    #_______________________________________________________________
+    # reactivity            -   in case of only overiterating steering the convo    - smart reply
+    #                       -   what does it mean to steer convo?                   - general flow description + states
     #
     # steering the convo    -   next possible state in case theres not iniciative to react to
     #                       -   have AI determine whether there is no iniciative to react to
     #                               - if there is no iniciative - easy going phrase/steering the convo
     #                       -   or whether there is an uncaught intent - automate suggesting edits to the flow JSON
     #
-    # over-iteration behavior - next state? steering the convo?
     #
-    # have AI manage            1) fallbacks 2) establishing topics (later, vec dbs)
+    # have AI manage            1) fallbacks 2) initiative based on flow (later establishing topics, vec dbs)
     #                           fallback-   look for intent based on names of intents
     #                                   -   create an answer trying to steer the person back
     #                                       to general overview of convo defined in state_start (TODO)
