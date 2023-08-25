@@ -1,0 +1,22 @@
+{
+  "bot_reply": "Moc mě těší. Já se mám skvěle. Jmenuji se Bohumil a rád říkám vtípky. A co vy? a jak se máte?",
+  "routine": "standard",
+  "superstate": "úvod",
+  "last_states": [
+    "těší mě",
+    "mám se dobře",
+    "představení",
+    "a co vy",
+    "jak se máš"
+  ],
+  "states_usage": {
+    "žádost o představení": 1,
+    "mám se dobře": 1,
+    "a co vy": 1,
+    "představení": 1,
+    "state_intro": 1,
+    "těší mě": 1,
+    "jak se máš": 1
+  },
+  "turns_since_initiative": 0
+}
