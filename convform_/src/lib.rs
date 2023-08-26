@@ -1,8 +1,9 @@
 mod flow;
 use flow::c_status::c_status;
-pub use flow::c_status::c_status_out::CStatusOut;
+use flow::c_status::c_status_out::CStatusOut;
 pub use flow::Flow;
 use pyo3::prelude::*;
+use pyo3::Python;
 
 use std::fs::read_to_string;
 
@@ -10,8 +11,8 @@ use std::fs::read_to_string;
 impl CStatusOut {
     #[allow(unused_must_use)]
     #[new]
-    pub fn get_bot_reply(bot_name: &str, csi: &str) -> Self {
-        let path = format!("bots/{}.json", bot_name);
+    pub fn get_bot_reply(path: &str, bot_name: &str, csi: PyObject, py: Python) -> Self {
+        let path = format!("{}/{}.json", path, bot_name);
         let file = read_to_string(path.as_str()).unwrap();
 
         match Flow::validate_behavior(bot_name, &file) {
@@ -20,9 +21,10 @@ impl CStatusOut {
                 CStatusOut::default()
             }
             Ok(flow) => {
-                let path_csi = format!("bots/csi/csi{}.json", csi);
-                let csi = read_to_string(path_csi.as_str()).unwrap();
-                let cso = c_status(&csi, &flow);
+                // let path_csi = format!("convform_/bots/csi/{}.json", csi);
+                // println!("{}", path_csi);
+                // let csi = read_to_string(path_csi.as_str()).unwrap();
+                let cso = c_status(csi, &flow, py);
                 match cso {
                     Ok(o) => o,
                     Err(e) => {

@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 mod initiative;
 mod non_initiative;
 mod rhematize;
@@ -7,9 +6,11 @@ use serde::{Deserialize, Serialize};
 mod matched_states;
 pub mod response_states;
 mod stringmatching_pool;
+use pyo3::prelude::*;
+use std::collections::HashMap;
 use stringmatching_pool::StringMatchingPool;
 
-#[derive(Deserialize, Serialize, Debug, Clone)]
+#[derive(Deserialize, Serialize, Debug, Clone, FromPyObject)]
 pub struct CStatusIn<'a> {
     routine: &'a str,
     superstate: &'a str,

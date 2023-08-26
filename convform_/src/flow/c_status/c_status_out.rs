@@ -16,11 +16,17 @@ impl<'a> ResponseStates<'a> {
 #[allow(dead_code)]
 #[pyclass]
 pub struct CStatusOut {
+    #[pyo3(get)]
     bot_reply: String,
+    #[pyo3(get)]
     routine: String,
+    #[pyo3(get)]
     superstate: String,
+    #[pyo3(get)]
     last_states: Vec<String>,
+    #[pyo3(get)]
     states_usage: HashMap<String, usize>,
+    #[pyo3(get)]
     turns_since_initiative: usize,
 }
 
