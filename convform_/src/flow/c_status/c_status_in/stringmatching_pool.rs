@@ -26,6 +26,7 @@ impl<'a> StringMatchingPool<'a> {
 
     pub fn match_states(self) -> MatchedStates<'a> {
         let mut csi = self.get_csi();
+
         let mut answered_states: Vec<&'a str> = vec![];
         let ms: Vec<MatchItem<'a>> = self
             .get_kaps()

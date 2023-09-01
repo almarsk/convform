@@ -31,6 +31,19 @@ impl<'a> CStatusIn<'a> {
         }
     }
 
+    pub fn treat(self, flow: &Flow<'a>) -> Self {
+        let mut treated_csi = self.clone();
+
+        if treated_csi.routine.is_empty() {
+            treated_csi.routine = flow.routines.iter().next().unwrap().1.routine_name
+        };
+        if treated_csi.superstate.is_empty() {
+            treated_csi.superstate = flow.superstates.iter().next().unwrap().1.superstate_name
+        };
+
+        treated_csi
+    }
+
     pub fn tsi(&self) -> usize {
         self.turns_since_initiative
     }

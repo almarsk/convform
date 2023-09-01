@@ -1,29 +1,39 @@
-from asyncio.tasks import sleep
-from flask_sqlalchemy import query
+import cstatus
+import convform
 
-from langchain.memory.buffer_window import ConversationBufferWindowMemory
-from utils import *
-import fire
+"""
 import openai
 from langchain.chat_models import ChatOpenAI
 from langchain import PromptTemplate, ConversationChain, OpenAI, LLMChain
 from langchain.memory import ConversationBufferMemory
+from langchain.memory.buffer_window import ConversationBufferWindowMemory
+"""
 
 
+async def reply(cStatus) -> convform.CStatusOut:
+    # set default csi, make it roll
+    # in app.py get the latest user_reply and cState
+    # passed via cState -> routine, superstate, last_states, states_usage, turns_since_initiative
+    # passed via user_reply -> user_reply
+    # if none arrives
+    # -> routine = none (take the first one on rust side)
+    # -> superstate = none (take the first one on rust side)
+    # -> last_states = []
+    # -> states_usage = {}
+    # turns_since_initiative = 0
 
-async def reply(user_reply, cState) -> str:
-    cState.setdefault("state", "state_start")
-    cState.setdefault("global_turn", 0)
-    cState.setdefault("intent_iterations", {})
-    flow: dict = get_flow_json(cState["flow"])
 
-    if cState["global_turn"] == 0:
-        cState["global_turn"] += 1
-        cState["state"] = "state_intro"
-        init_greeting: str = flow["state_start"]["greet"]
-        return init_greeting
-    else:
-        return await state_answer(flow, cState, user_reply)
+    bot_path = "convform_/bots"
+    bot_name = "bohumil"
+    """    csi_name = "csi0"
+
+    csi_path = f"./convform_/bots/csi/{csi_name}.json"
+    csi = cstatus.parse_json_file(csi_path)
+    """
+    print(vars(cStatus))
+    cso = convform.CStatusOut(bot_path, bot_name, cStatus)
+
+    return cso
 
     # LangChain                 setup template work for different situations
     #                                   for when there isnt an answer
@@ -36,18 +46,6 @@ async def reply(user_reply, cState) -> str:
     #
     #                                   perhaps there will be reasoning chains necesarry for understanding
     #                                   where we are in each process
-    # Dumb design TODO
-    #                                        redo the json format + implementation implication
-    #
-    #_______________________________________________________________
-    # reactivity            -   in case of only overiterating steering the convo    - smart reply
-    #                       -   what does it mean to steer convo?                   - general flow description + states
-    #
-    # steering the convo    -   next possible state in case theres not iniciative to react to
-    #                       -   have AI determine whether there is no iniciative to react to
-    #                               - if there is no iniciative - easy going phrase/steering the convo
-    #                       -   or whether there is an uncaught intent - automate suggesting edits to the flow JSON
-    #
     #
     # have AI manage            1) fallbacks 2) initiative based on flow (later establishing topics, vec dbs)
     #                           fallback-   look for intent based on names of intents
@@ -55,48 +53,3 @@ async def reply(user_reply, cState) -> str:
     #                                       to general overview of convo defined in state_start (TODO)
     #                           conversation with AI employed produces suggestions of new chunks of convDesign JSON
     #
-
-
-# TESTING SECTION
-
-async def test():
-    cState0 = {
-        "flow" : "zvědavobot",
-    }
-    cState1 = {
-        "flow" : "zvědavobot",
-        'global_turn': 2,
-        'state': 'state_intro',
-        'intent_iterations': {
-            'pozdrav': 0,
-            'jak se máš': 0
-        }
-    }
-    cState2 = {
-        "flow" : "zvědavobot",
-        'global_turn': 3,
-        'state': 'state_intro',
-        'intent_iterations': {
-            'pozdrav': 1,
-            'jak se máš': 0
-        }
-    }
-    cState3 = {
-        "flow" : "zvědavobot",
-        'global_turn': 3,
-        'state': 'state_intro',
-        'intent_iterations': {
-            'pozdrav': 2,
-            'jak se máš': 1
-        }
-    }
-
-    print("bot: "+await reply("", cState0))
-    print("usr: "+"ahoj")
-    print("bot: "+await reply("ahoj", cState1))
-    print("bot: "+await reply("ahoj jak se máš", cState2))
-    print("bot: "+await reply("ahoj jak se máš", cState3))
-
-
-if __name__ == '__main__':
-  fire.Fire(test)

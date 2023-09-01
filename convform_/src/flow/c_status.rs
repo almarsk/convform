@@ -10,7 +10,9 @@ use pyo3::Python;
 
 pub fn c_status<'a>(csi: PyObject, flow: &'a Flow, py: Python) -> Result<CStatusOut, PyErr> {
     let cstatus_in: CStatusIn = csi.extract(py)?;
+
     Ok(cstatus_in
+        .treat(flow)
         .get_string_matching_pool(flow)
         .match_states()
         .handle_matched_states(flow)

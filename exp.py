@@ -3,9 +3,12 @@
 import re
 import sqlite3
 import fire
+import json
+import pprint
 
 
-def main(query=''):
+def main(query='', states=False):
+
     conn = sqlite3.connect('chatbot.db')
     cursor_users = conn.cursor()
     cursor_replies = conn.cursor()
@@ -32,9 +35,9 @@ def main(query=''):
 
             if who:
                 if len(user[1]) < 6:
-                    return f"{user[1].capitalize()} ({reply[-1] / 1000}s):\t"
+                    return f"{user[1].capitalize()} ({reply[-2] / 1000}s):\t"
                 else:
-                    return f"{user[1].capitalize()} ({reply[-1] / 1000}s):\t"
+                    return f"{user[1].capitalize()} ({reply[-2] / 1000}s):\t"
             else:
                 return f"{user[2].capitalize()}:\t"
 
@@ -68,7 +71,11 @@ def main(query=''):
         # the actual conversation
         for reply in replies:
             if reply[1] == user[0]:
-                print(f"{user_bot(reply[-1])} {reply[2].strip()}")
+                print(f"{user_bot(reply[-2])} {reply[2].strip()}")
+                if states and not reply[4]:
+                    turn_metadata = reply[5]
+                    # greetings from noobsville
+                    print("\n"+json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")[2:-2]+"\n")
         print("\n______\n")
 
     # Close the cursor and connection objects

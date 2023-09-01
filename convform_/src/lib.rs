@@ -12,6 +12,7 @@ impl CStatusOut {
     #[allow(unused_must_use)]
     #[new]
     pub fn get_bot_reply(path: &str, bot_name: &str, csi: PyObject, py: Python) -> Self {
+        println!("q{:?}", csi);
         let path = format!("{}/{}.json", path, bot_name);
         let file = read_to_string(path.as_str()).unwrap();
 
@@ -36,8 +37,8 @@ impl CStatusOut {
         }
     }
 
-    pub fn show(&self) {
-        println!("{:#?}", self);
+    pub fn show(&self) -> &Self {
+        self
     }
 }
 
