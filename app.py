@@ -83,8 +83,8 @@ async def fetch_string():
             "error": "no access"
         })
     csi = cstatus.get_csi(session["user_id"], session["user_reply"])
-    cso = await reply(csi) # cTypeError: failed to extract field CStatusIn.user_reply
-    print("cso.show()")
+    cso = await reply(csi)
+    print("cso.show():")
     print(cso.show())
     session.modified = True
     if cso is None:
@@ -110,7 +110,7 @@ def dispatcher():
         if os.path.exists(f"flows/{url_flow}.json"):
             session["flow"] = url_flow
             try:
-                with open(f"flows/{session['flow']}.json", "r") as file:
+                with open(f"convform/bots/{session['flow']}.json", "r") as file:
                     json.load(file)
             except ValueError:
                 return render_template("json_issue.html", flow=session["flow"].capitalize()), 500

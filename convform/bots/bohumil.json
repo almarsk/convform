@@ -390,7 +390,7 @@
       "over_iterated_say": [
         "Povídám, že se jmenuji Bohumil."
       ],
-      "state_type": "Flexible",
+      "state_type": "Responsive",
       "iteration": 1,
       "global": false
     },

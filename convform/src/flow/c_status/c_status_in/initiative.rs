@@ -8,7 +8,7 @@ pub fn handle_initiative<'a>(
     flow: &'a Flow<'a>,
     csi: &mut CStatusIn,
 ) -> Vec<&'a str> {
-    //println!("coming into handle initiative {:?}", v);
+    // println!("coming into handle initiative {:?}", v);
     let (prioritized, non): (Vec<&'a str>, Vec<&'a str>) = v.into_iter().partition(|state| {
         flow.states
             .iter()
@@ -35,9 +35,11 @@ pub fn handle_initiative<'a>(
             matches!(state_type, ResponseType::Initiative)
                 || matches!(state_type, ResponseType::Flexible)
         }) {
-            csi.turns_since_initiative += 0;
+            csi.turns_since_initiative = 0;
         } else {
-            csi.turns_since_initiative += 1;
+            println!("{}", csi.turns_since_initiative);
+            println!("dbg");
+            //csi.turns_since_initiative += 1;
             handle_noninitiative(&mut ordered, flow, csi);
         };
         //println!("ordered {:?}", ordered);

@@ -24,6 +24,7 @@ pub fn handle_noninitiative<'a>(ordered: &mut Vec<&'a str>, flow: &Flow<'a>, csi
                 || matches!(full_state.state_type, ResponseType::Initiative)
         })
     {
+        println!("is this the real life");
         // there are no initiative or flexible, what do ?!?!
         // check remaining non-overiterated states from current state
         let current_superstatename = csi.superstate;
@@ -80,6 +81,7 @@ pub fn handle_noninitiative<'a>(ordered: &mut Vec<&'a str>, flow: &Flow<'a>, csi
 
             if current_available_states.is_empty() {
                 // first state of next superstate, for when theres no init state, bad practice
+                println!("qqq{}", csi.turns_since_initiative);
                 ordered.push(current_statenames[0])
             } else {
                 // first initiative state of next superstate
@@ -87,6 +89,7 @@ pub fn handle_noninitiative<'a>(ordered: &mut Vec<&'a str>, flow: &Flow<'a>, csi
                 ordered.push(current_available_states[0].state_name)
             }
         } else {
+            println!("bing");
             csi.turns_since_initiative = 0;
             ordered.push(current_available_states[0].state_name);
         }
@@ -101,5 +104,8 @@ pub fn handle_noninitiative<'a>(ordered: &mut Vec<&'a str>, flow: &Flow<'a>, csi
                 .collect::<Vec<&str>>()
         );
         */
+    } else {
+        println!("bong");
+        csi.turns_since_initiative += 1;
     };
 }

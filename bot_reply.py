@@ -1,37 +1,19 @@
 import cstatus
 import convform
 
-"""
-import openai
-from langchain.chat_models import ChatOpenAI
-from langchain import PromptTemplate, ConversationChain, OpenAI, LLMChain
-from langchain.memory import ConversationBufferMemory
-from langchain.memory.buffer_window import ConversationBufferWindowMemory
-"""
-
+import os
 
 async def reply(cStatus) -> convform.CStatusOut:
     # set default csi, make it roll
     # in app.py get the latest user_reply and cState
-    # passed via cState -> routine, superstate, last_states, states_usage, turns_since_initiative
-    # passed via user_reply -> user_reply
-    # if none arrives
-    # -> routine = none (take the first one on rust side)
-    # -> superstate = none (take the first one on rust side)
-    # -> last_states = []
-    # -> states_usage = {}
-    # turns_since_initiative = 0
 
-
-    bot_path = "convform_/bots"
+    bot_path = "convform/bots"
     bot_name = "bohumil"
-    """    csi_name = "csi0"
 
-    csi_path = f"./convform_/bots/csi/{csi_name}.json"
-    csi = cstatus.parse_json_file(csi_path)
-    """
-    print(vars(cStatus))
-    cso = convform.CStatusOut(bot_path, bot_name, cStatus)
+    path = f"convform/bots/{bot_name}.json"
+
+    # print(vars(cStatus))
+    cso = convform.CStatusOut(bot_name, cStatus)
 
     return cso
 

@@ -42,7 +42,7 @@ struct Superstate<'a> {
 }
 
 pub fn default_usize() -> usize {
-    1
+    2
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, Default)]

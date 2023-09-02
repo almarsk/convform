@@ -75,7 +75,7 @@ def main(query='', states=False):
                 if states and not reply[4]:
                     turn_metadata = reply[5]
                     # greetings from noobsville
-                    print("\n"+json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")[2:-2]+"\n")
+                    print("\n"+json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")+"\n")
         print("\n______\n")
 
     # Close the cursor and connection objects

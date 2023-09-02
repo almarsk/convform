@@ -1,9 +1,7 @@
 use super::c_status_in::response_states::ResponseStates;
 use super::Flow;
 use pyo3::prelude::*;
-
 use rand::{thread_rng, Rng};
-use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
 impl<'a> ResponseStates<'a> {
@@ -12,45 +10,52 @@ impl<'a> ResponseStates<'a> {
     }
 }
 
-#[derive(Deserialize, Serialize, Debug, Default)]
+#[derive(Debug, Default)]
 #[allow(dead_code)]
 #[pyclass]
 pub struct CStatusOut {
-    #[pyo3(get)]
-    bot_reply: String,
-    #[pyo3(get)]
+    #[pyo3(get, set)]
+    bot_reply: String, // this has to be assembled
+    #[pyo3(get, set)]
     routine: String,
-    #[pyo3(get)]
+    #[pyo3(get, set)]
     superstate: String,
-    #[pyo3(get)]
+    #[pyo3(get, set)]
     last_states: Vec<String>,
-    #[pyo3(get)]
+    #[pyo3(get, set)]
     states_usage: HashMap<String, usize>,
-    #[pyo3(get)]
+    #[pyo3(get, set)]
     turns_since_initiative: usize,
 }
 
 impl<'a> CStatusOut {
     pub fn new(rs: ResponseStates<'a>, flow: &Flow) -> CStatusOut {
         let (rs, mut csi, superstate) = rs.get_fields();
-        let states_usage = csi.update_usage(&rs);
+        let states_usage = csi
+            .update_usage(&rs)
+            .into_iter()
+            .map(|(s, u)| (s.to_string(), u))
+            .collect();
         let bot_reply = compose_bot_reply(&rs, flow);
 
         CStatusOut {
             bot_reply,
             superstate: superstate.to_string(),
-            last_states: rs.into_iter().map(|s| s.to_string()).collect(),
+            last_states: rs.iter().map(|s| s.to_string()).collect(),
             turns_since_initiative: csi.tsi(),
             // might be fallback later
             routine: csi.routine().to_string(),
-            states_usage: states_usage
-                .into_iter()
-                .map(|(s, u)| (s.to_string(), u))
-                .collect(),
+            states_usage,
         }
 
         // get random say from each response state
         // how to handle fallback and how to communicate it in responsestates?
+    }
+    pub fn issue(issue: String) -> Self {
+        CStatusOut {
+            bot_reply: issue,
+            ..Default::default()
+        }
     }
 }
 

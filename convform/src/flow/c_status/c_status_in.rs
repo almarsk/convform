@@ -1,16 +1,16 @@
+use std::collections::HashMap;
 mod initiative;
 mod non_initiative;
 mod rhematize;
-use crate::Flow;
+use crate::flow::Flow;
 use serde::{Deserialize, Serialize};
 mod matched_states;
 pub mod response_states;
 mod stringmatching_pool;
 use pyo3::prelude::*;
-use std::collections::HashMap;
 use stringmatching_pool::StringMatchingPool;
 
-#[derive(Deserialize, Serialize, Debug, Clone, FromPyObject)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct CStatusIn<'a> {
     routine: &'a str,
     superstate: &'a str,
@@ -31,14 +31,21 @@ impl<'a> CStatusIn<'a> {
         }
     }
 
-    pub fn treat(self, flow: &Flow<'a>) -> Self {
-        let mut treated_csi = self.clone();
+    pub fn treat(self, flow: &'a Flow) -> Self {
+        let mut treated_csi = self;
 
         if treated_csi.routine.is_empty() {
-            treated_csi.routine = flow.routines.iter().next().unwrap().1.routine_name
+            treated_csi.routine = flow.routines.first_key_value().unwrap().1.routine_name;
         };
+
         if treated_csi.superstate.is_empty() {
-            treated_csi.superstate = flow.superstates.iter().next().unwrap().1.superstate_name
+            treated_csi.superstate = flow
+                .routines
+                .iter()
+                .find(|s| s.1.routine_name == treated_csi.routine)
+                .unwrap()
+                .1
+                .order_superstates[0]
         };
 
         treated_csi
@@ -163,4 +170,25 @@ fn get_answer_to<'a>(flow: &'a Flow, intent: &str) -> Vec<&'a str> {
         .find(|(_, i)| intent == i.intent_name)
         .map(|f_intent| f_intent.1.answer_to.clone())
         .unwrap()
+}
+
+impl<'a> FromPyObject<'a> for CStatusIn<'a> {
+    fn extract(ob: &'a PyAny) -> PyResult<Self> {
+        // Extract the fields from the Python object using PyAny methods.
+        let routine: &'a str = ob.getattr("routine")?.extract()?;
+        let superstate: &'a str = ob.getattr("superstate")?.extract()?;
+        let user_reply: &'a str = ob.getattr("user_reply")?.extract()?;
+        let last_states: Vec<&'a str> = ob.getattr("last_states")?.extract()?;
+        let states_usage: HashMap<&'a str, usize> = ob.getattr("states_usage")?.extract()?;
+        let turns_since_initiative: usize = ob.getattr("turns_since_initiative")?.extract()?;
+
+        Ok(CStatusIn {
+            routine,
+            superstate,
+            user_reply,
+            last_states,
+            states_usage,
+            turns_since_initiative,
+        })
+    }
 }

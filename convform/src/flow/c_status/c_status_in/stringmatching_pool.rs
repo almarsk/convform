@@ -27,12 +27,16 @@ impl<'a> StringMatchingPool<'a> {
     pub fn match_states(self) -> MatchedStates<'a> {
         let mut csi = self.get_csi();
 
+        // check if beginning of conversation - return state intro
+        if csi.view_user_reply().is_empty() {
+            return MatchedStates::new(csi, vec![MatchItem::new(vec!["state_intro"], 0)]);
+        }
+
         let mut answered_states: Vec<&'a str> = vec![];
         let ms: Vec<MatchItem<'a>> = self
             .get_kaps()
             .iter()
             .flat_map(|mi| {
-                // mi is currently broken, it is now a struct and no more a tuple
                 mi.keywords
                     .iter()
                     .filter_map(|kws| {

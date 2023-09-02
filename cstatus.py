@@ -90,6 +90,5 @@ def get_csi(user_id, user_reply):
             {},
             0
         )
-
     cursor_replies.close()
     return current_cstatus
