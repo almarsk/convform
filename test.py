@@ -1,6 +1,5 @@
 import bot_reply
 import cstatus
-import cstatus
 import asyncio
 import os
 

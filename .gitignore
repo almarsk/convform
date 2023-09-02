@@ -1,7 +1,11 @@
 chatbot.db
+_chatbot.db
+__chatbot.db
+cvft.sh
 .DS_Store
 .idea
 venv
 pyrightconfig.json
 config.json
 __pycache__/
+convform/target/
