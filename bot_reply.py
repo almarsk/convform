@@ -1,9 +1,9 @@
 import cstatus
-import convform
+from convform import CStatusOut
 
 import os
 
-async def reply(cStatus) -> convform.CStatusOut:
+async def reply(cStatus):
     # set default csi, make it roll
     # in app.py get the latest user_reply and cState
 
@@ -13,7 +13,7 @@ async def reply(cStatus) -> convform.CStatusOut:
     path = f"convform/bots/{bot_name}.json"
 
     # print(vars(cStatus))
-    cso = convform.CStatusOut(bot_name, cStatus)
+    cso = CStatusOut(bot_name, cStatus)
 
     return cso
 

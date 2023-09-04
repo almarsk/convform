@@ -82,7 +82,8 @@ async def fetch_string():
         return jsonify({
             "error": "no access"
         })
-    csi = cstatus.get_csi(session["user_id"], session["user_reply"])
+    print("sesh user id:"+str(session["user_id"]))
+    csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
     cso = await reply(csi)
     print("cso.show():")
     print(cso.show())
@@ -92,6 +93,7 @@ async def fetch_string():
         return redirect(url_for("dispatcher"))
     else:
         repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso))
+        print(vars(repl))
         db.session.add(repl)
         db.session.commit()
         return jsonify({
@@ -107,7 +109,7 @@ def dispatcher():
     if url_flow is not None:
         # a flow was set via the URL's query string -> start a new conversation
         session.clear()
-        if os.path.exists(f"flows/{url_flow}.json"):
+        if os.path.exists(f"convform/bots/{url_flow}.json"):
             session["flow"] = url_flow
             try:
                 with open(f"convform/bots/{session['flow']}.json", "r") as file:

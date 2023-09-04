@@ -14,8 +14,11 @@ def main(query='', states=False):
     cursor_replies = conn.cursor()
     # Prepare users table
     if not query.lower().startswith("where") and query:
-        query = " WHERE " + query
-    cursor_users.execute(f"SELECT * FROM user{query};")
+        query = "WHERE " + query
+
+    full_query = f"SELECT * FROM user {query};\n"
+    print(full_query)
+    cursor_users.execute(full_query)
     users = cursor_users.fetchall()
     # Prepare replies table
     user_ids = [user[0] for user in users.__iter__()]
@@ -75,7 +78,8 @@ def main(query='', states=False):
                 if states and not reply[4]:
                     turn_metadata = reply[5]
                     # greetings from noobsville
-                    print("\n"+json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")+"\n")
+                    print("whole tuple"+str(reply))
+                    print("just meta"+"\n"+json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")+"\n")
         print("\n______\n")
 
     # Close the cursor and connection objects

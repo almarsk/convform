@@ -3,6 +3,7 @@ import json
 import sys
 import os
 import sqlite3
+import exp
 
 # print("working dir: "+ os.getcwd())
 
@@ -68,20 +69,31 @@ def to_json(cso):
     "states_usage": cso.states_usage,
     "turns_since_initiative": cso.turns_since_initiative,
     }
-    j = json.dumps(q, ensure_ascii=False)
-    # print(j)
-    return j
+    #j = json.dumps(q, ensure_ascii=False)
+    #print("sql input: "+j)
+    return q
 
 def get_csi(user_id, user_reply):
+
+    exp.main(f"id={user_id}", True)
+
     conn = sqlite3.connect('chatbot.db')
     cursor_replies = conn.cursor()
-    cursor_replies.execute(f"SELECT * FROM reply WHERE user_id = {user_id};")
-    cr = cursor_replies.fetchall()
+    full_query = f"SELECT * FROM reply WHERE user_id = {user_id} AND cstatus IS NOT NULL ORDER BY id DESC LIMIT 1;" # cstatus is null in user replies
+    print(full_query)
+    cursor_replies.execute(full_query)
+    most_recent_reply = cursor_replies.fetchall()
+    print("type of most recent "+str(type(most_recent_reply)))
+    if len(most_recent_reply) > 0:
+        print(most_recent_reply[-5:])
+        print("type of most recent meta "+str(type(most_recent_reply[-1][-1])))
+        print("most recent meta "+str(most_recent_reply[-1][-1]))
     if user_reply is None:
         user_reply = ""
-    if len(cr) > 0:
-        current_cstatus = json.loads(cr[-1][-1])
+    if len(most_recent_reply) > 0:
+        current_cstatus = json.loads(most_recent_reply[-1][-1])
     else:
+        print("ok lesgo")
         current_cstatus = CStatusIn(
             "",
             "",
