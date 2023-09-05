@@ -103,5 +103,7 @@ pub fn handle_noninitiative<'a>(ordered: &mut Vec<&'a str>, flow: &Flow<'a>, csi
         */
     } else {
         csi.turns_since_initiative += 1;
+        println!("missed a spot")
+        //debug from here
     };
 }

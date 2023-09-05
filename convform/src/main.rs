@@ -1,4 +1,5 @@
 mod flow;
+//use flow::c_status::CStatusOut;
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -8,7 +9,7 @@ fn main() {
     let _csi = format!("csi{}", csi_index);
     //let c_out =
 
-    // CStatusOut::get_bot_reply("bohumil", &csi);
+    //CStatusOut::get_bot_reply("bohumil", &_csi); // fix this
 }
 
 // make the python interface
