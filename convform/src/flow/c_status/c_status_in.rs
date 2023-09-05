@@ -1,3 +1,4 @@
+use serde_json::Value;
 use std::collections::HashMap;
 mod initiative;
 mod non_initiative;
@@ -7,7 +8,6 @@ use serde::{Deserialize, Serialize};
 mod matched_states;
 pub mod response_states;
 mod stringmatching_pool;
-use pyo3::prelude::*;
 use stringmatching_pool::StringMatchingPool;
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
@@ -21,8 +21,8 @@ pub struct CStatusIn<'a> {
 }
 
 impl<'a> CStatusIn<'a> {
-    pub fn parse_into_c_status_in(file: &'a str) -> Result<CStatusIn<'a>, String> {
-        match serde_json::from_str::<CStatusIn<'a>>(file) {
+    pub fn parse_into_c_status_in(file: &'a str) -> Result<CStatusIn, String> {
+        match serde_json::from_str::<CStatusIn>(file) {
             Ok(c_status_in) => {
                 println!("\nuser said: {}\n", c_status_in.user_reply);
                 Ok(c_status_in)
@@ -172,15 +172,37 @@ fn get_answer_to<'a>(flow: &'a Flow, intent: &str) -> Vec<&'a str> {
         .unwrap()
 }
 
-impl<'a> FromPyObject<'a> for CStatusIn<'a> {
-    fn extract(ob: &'a PyAny) -> PyResult<Self> {
-        // Extract the fields from the Python object using PyAny methods.
-        let routine: &'a str = ob.getattr("routine")?.extract()?;
-        let superstate: &'a str = ob.getattr("superstate")?.extract()?;
-        let user_reply: &'a str = ob.getattr("user_reply")?.extract()?;
-        let last_states: Vec<&'a str> = ob.getattr("last_states")?.extract()?;
-        let states_usage: HashMap<&'a str, usize> = ob.getattr("states_usage")?.extract()?;
-        let turns_since_initiative: usize = ob.getattr("turns_since_initiative")?.extract()?;
+pub trait FromValue<'a> {
+    fn from_value(value: &'a Value) -> Result<Self, String>
+    where
+        Self: Sized;
+}
+
+impl<'a> FromValue<'a> for CStatusIn<'a> {
+    fn from_value(value: &'a Value) -> Result<Self, String> {
+        let routine = value["routine"].as_str().ok_or("Missing or invalid routine")?;
+        let superstate = value["superstate"].as_str().ok_or("Missing or invalid superstate")?;
+        let user_reply = value["user_reply"].as_str().ok_or("Missing or invalid user reply")?;
+        let last_states = value["last_states"]
+            .as_array()
+            .unwrap_or_else(|| panic!("Expected an array"))
+            .iter()
+            .map(|v| v.as_str().unwrap_or(""))
+            .collect();
+
+        let mut states_usage = HashMap::new();
+        if let Some(obj) = value["states_usage"].as_object() {
+            for (key, value) in obj {
+                if let Some(value_as_u64) = value.as_u64() {
+                    states_usage.insert(key.as_str(), value_as_u64 as usize);
+                }
+            }
+        }
+
+        let turns_since_initiative = value["turns_since_initiative"]
+            .as_u64()
+            .ok_or("Issue parsing turns since initiative")?
+            as usize;
 
         Ok(CStatusIn {
             routine,

@@ -8,7 +8,7 @@ use std::fs::read_to_string;
 #[pymethods]
 impl CStatusOut {
     #[new]
-    pub fn get_bot_reply(bot_name: &str, csi: PyObject, py: Python) -> CStatusOut {
+    pub fn get_bot_reply(bot_name: &str, csi: String, py: Python) -> CStatusOut {
         let path = format!("convform/bots/{}.json", bot_name);
         let file = read_to_string(path.as_str()).unwrap();
 

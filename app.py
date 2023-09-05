@@ -82,10 +82,10 @@ async def fetch_string():
         return jsonify({
             "error": "no access"
         })
-    print("sesh user id:"+str(session["user_id"]))
+    #print("sesh user id:"+str(session["user_id"]))
     csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
     cso = await reply(csi)
-    print("cso.show():")
+    #print("cso.show():")
     print(cso.show())
     session.modified = True
     if cso is None:
@@ -93,7 +93,7 @@ async def fetch_string():
         return redirect(url_for("dispatcher"))
     else:
         repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso))
-        print(vars(repl))
+        #print(vars(repl))
         db.session.add(repl)
         db.session.commit()
         return jsonify({
