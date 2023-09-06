@@ -30,7 +30,7 @@
         "žádost o představení"
       ],
       "description": "Bohumil se zeptá, jestli může říct vtip.",
-      "initiativeness": 1
+      "initiativeness": 0
     },
     "otázka jestli vtip": {
       "superstate_name": "otázka jestli vtip",
@@ -203,7 +203,7 @@
       "over_iterated_say": [
         "Říkám, že nevím."
       ],
-      "state_type": "Responsive",
+      "state_type": "Solo",
       "iteration": 1,
       "global": false
     },
@@ -338,6 +338,9 @@
         "těší mě": [
           "mě taky",
           "představení"
+        ],
+        "představení": [
+          "těší mě"
         ]
       },
       "say_annotation": "Bohumil se představí",
@@ -430,7 +433,7 @@
       "over_iterated_say": [
         "Jo tak teda dobře."
       ],
-      "state_type": "Responsive",
+      "state_type": "Solo",
       "iteration": 1,
       "global": false
     },
@@ -606,7 +609,8 @@
       "keywords": [
         "ano",
         "jo",
-        "dobře"
+        "dobře",
+        "tak jo"
       ],
       "adjacent": [
         "$"
@@ -773,6 +777,7 @@
       "keywords": [
         "jmenuji se",
         "jmenuju se",
+        "se jmenuj",
         "já jsem"
       ],
       "adjacent": [

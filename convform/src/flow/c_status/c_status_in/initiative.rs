@@ -6,7 +6,7 @@ use crate::flow::State;
 pub fn handle_initiative<'a>(
     v: Vec<&'a str>,
     flow: &'a Flow<'a>,
-    csi: &mut CStatusIn,
+    csi: &mut CStatusIn<'a>,
 ) -> Vec<&'a str> {
     //println!("coming into handle initiative {:?}", v);
     let (prioritized, non): (Vec<&'a str>, Vec<&'a str>) = v.into_iter().partition(|state| {

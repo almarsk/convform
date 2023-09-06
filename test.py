@@ -7,7 +7,7 @@ import json
 # print(os.getcwd())
 
 async def q():
-    csi = json.dumps({
+    csi1 = json.dumps({
         "routine": "standard",
         "superstate": "úvod",
         "user_reply": "ahoj",
@@ -15,19 +15,25 @@ async def q():
         "states_usage": {"state_intro":1},
         "turns_since_initiative": 1,
     })
-    csi = json.dumps({
-        "routine": "standard",
+
+    csi2 = json.dumps({
+    "routine": "standard",
         "superstate": "úvod",
-        "user_reply": "tak jo",
-        "last_states": ["otázka jestli vtip"],
-        "states_usage": {
-            "state_intro": 1,
-            "otázka jestli vtip": 1
-        },
+        "user_reply": "ahoj",
+        "last_states": ["state_intro"],
+        "states_usage": {"state_intro":1},
         "turns_since_initiative": 0,
     })
-    cso = await bot_reply.reply(csi)
-    cso.show()
+
+    cso1 = await bot_reply.reply(csi1)
+    print("1\n\n")
+    print(csi1)
+    cso1.show()
+
+    cso2 = await bot_reply.reply(csi2)
+    print("\n\n2\n\n")
+    print(csi2)
+    cso2.show()
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(q())

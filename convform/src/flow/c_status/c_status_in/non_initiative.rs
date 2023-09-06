@@ -7,7 +7,7 @@ use super::{
 pub fn handle_noninitiative<'a>(
     ordered: &mut Vec<&'a str>,
     flow: &'a Flow<'a>,
-    csi: &mut CStatusIn,
+    csi: &mut CStatusIn<'a>,
 ) {
     if csi.turns_since_initiative
         >= flow
@@ -18,7 +18,6 @@ pub fn handle_noninitiative<'a>(
             .1
             .initiativeness
     {
-        // there are no initiative or flexible, what do ?!?!
         // check remaining non-overiterated states from current state
         let current_superstatename = csi.superstate;
         let current_statenames = &flow
@@ -45,6 +44,7 @@ pub fn handle_noninitiative<'a>(
             .collect();
 
         if current_available_states.is_empty() {
+            // check next superstate
             off_to_next_superstate(flow, csi, ordered)
         } else {
             csi.turns_since_initiative = 0;
@@ -58,10 +58,14 @@ pub fn handle_noninitiative<'a>(
     };
 }
 
-fn off_to_next_superstate<'a>(flow: &'a Flow, csi: &mut CStatusIn, ordered: &mut Vec<&'a str>) {
+fn off_to_next_superstate<'a>(
+    flow: &'a Flow<'a>,
+    csi: &mut CStatusIn<'a>,
+    ordered: &mut Vec<&'a str>,
+) {
     println!("going off of the next superstate");
     // check first initiative state of next superstate - get_next_superstate() already exists
-    let next_superstatename = get_next_superstate(flow, csi);
+    let next_superstatename = get_next_superstate(flow, &csi.clone());
     let next_statenames = &flow
         .superstates
         .iter()
@@ -93,6 +97,7 @@ fn off_to_next_superstate<'a>(flow: &'a Flow, csi: &mut CStatusIn, ordered: &mut
     } else {
         // first initiative state of next superstate
         csi.turns_since_initiative = 0;
+        csi.superstate = get_next_superstate(flow, csi);
         ordered.push(next_available_states[0].state_name)
     }
 }
