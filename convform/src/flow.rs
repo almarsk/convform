@@ -35,10 +35,10 @@ struct Routine<'a> {
 #[derive(Debug, Deserialize, Serialize, Clone, Default)]
 struct Superstate<'a> {
     superstate_name: &'a str,
-    states: Vec<&'a str>, //validate they're real states
-    description: &'a str,
     #[serde(default = "default_usize")]
     initiativeness: usize,
+    states: Vec<&'a str>, //validate they're real states
+    description: &'a str,
 }
 
 pub fn default_usize() -> usize {

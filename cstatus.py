@@ -80,28 +80,18 @@ def get_csi(user_id, user_reply):
     conn = sqlite3.connect('chatbot.db')
     cursor_replies = conn.cursor()
     full_query = f"SELECT * FROM reply WHERE user_id = {user_id} AND cstatus IS NOT NULL ORDER BY id DESC LIMIT 1;" # cstatus is null in user replies
-    #print(full_query)
+
     cursor_replies.execute(full_query)
     most_recent_reply = cursor_replies.fetchall()
-    #print("type of most recent "+str(type(most_recent_reply)))
-    #if len(most_recent_reply) > 0:
-    #    print(most_recent_reply[-5:])
-    #    print("type of most recent meta "+str(type(most_recent_reply[-1][-1])))
-    #    print("most recent meta "+str(most_recent_reply[-1][-1]))
+
     if user_reply is None:
         user_reply = ""
     if len(most_recent_reply) > 0:
         current_cstatus = json.loads(most_recent_reply[-1][-1])
         current_cstatus["user_reply"] = user_reply
-        #print("______")
-        #print(type(current_cstatus))
-        #print(current_cstatus)
-        #print("______")
-
         current_cstatus_user_reply = json.dumps(current_cstatus, ensure_ascii=False)
 
     else:
-        #print("ok lesgo")
         current_cstatus_user_reply = json.dumps({
             "routine": "",
             "superstate": "",
@@ -112,5 +102,4 @@ def get_csi(user_id, user_reply):
         })
     cursor_replies.close()
 
-    print(current_cstatus_user_reply)
     return current_cstatus_user_reply

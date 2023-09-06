@@ -8,7 +8,7 @@ pub fn handle_initiative<'a>(
     flow: &'a Flow<'a>,
     csi: &mut CStatusIn,
 ) -> Vec<&'a str> {
-    // println!("coming into handle initiative {:?}", v);
+    //println!("coming into handle initiative {:?}", v);
     let (prioritized, non): (Vec<&'a str>, Vec<&'a str>) = v.into_iter().partition(|state| {
         flow.states
             .iter()
@@ -17,32 +17,33 @@ pub fn handle_initiative<'a>(
             .1
             .prioritize
     });
-
+    //println!("prio: {:?}, non: {:?}", prioritized, non);
     if prioritized.iter().any(|state_name| {
         let state_type = &get_full_state(flow, state_name).state_type;
         matches!(state_type, ResponseType::Initiative)
             || matches!(state_type, ResponseType::Flexible)
     }) {
+        //println!("oralipmc1; non: {:?}", non);
         order_responsive_and_last_init_plus_maybe_connective(prioritized, flow)
     } else {
+        //println!("oralipmc2; non: {:?}", non);
         let mut ordered = prioritized.clone();
         ordered.extend(order_responsive_and_last_init_plus_maybe_connective(
             non, flow,
         ));
-
+        //println!("ordered1 {:?}", ordered);
         if ordered.iter().any(|state_name| {
             let state_type = &get_full_state(flow, state_name).state_type;
             matches!(state_type, ResponseType::Initiative)
                 || matches!(state_type, ResponseType::Flexible)
+                || matches!(state_type, ResponseType::Solo)
         }) {
             csi.turns_since_initiative = 0;
         } else {
-            println!("{}", csi.turns_since_initiative);
-            println!("dbg");
             //csi.turns_since_initiative += 1;
             handle_noninitiative(&mut ordered, flow, csi);
         };
-        //println!("ordered {:?}", ordered);
+        //println!("ordered2 {:?}", ordered);
         ordered
 
         // find last init/chunk
@@ -71,6 +72,7 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
         let current_state = get_full_state(flow, state.1);
         if matches!(current_state.state_type, ResponseType::Flexible)
             || matches!(current_state.state_type, ResponseType::Initiative)
+            || matches!(current_state.state_type, ResponseType::Solo)
         {
             last_init.0 = state.1;
             last_init.1 = state.0

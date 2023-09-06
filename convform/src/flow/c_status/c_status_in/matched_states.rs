@@ -149,7 +149,7 @@ impl<'a> MatchedStates<'a> {
             .collect::<LinkedHashSet<_>>()
             .into_iter()
             .collect();
-        //println!("\nmno {:?}", match_not_overiterated);
+        println!("mno {:?}", match_not_overiterated);
 
         if match_not_overiterated.is_empty()
             || match_not_overiterated.iter().all(|s| {
@@ -262,13 +262,27 @@ fn assess_response_states<'a>(
     flow: &'a Flow,
     superstate: Option<&'a str>,
 ) -> ResponseStates<'a> {
-    // println!("{:?}", response_states);
+    //println!("{:?}", response_states);
     let final_response_states: Vec<&'a str> = if !response_states.is_empty() {
+        //println!("dbg hi");
         handle_initiative(response_states, flow, &mut csi)
     } else {
         handle_noninitiative(&mut response_states, flow, &mut csi);
         response_states // THINK ABOUT THIS, THIS IS ALSOW WHERE FALLBACK MANAGEMENT GOES
                         // println!("matched_states.rs line 222 -> fallback management needed\n")
     };
+
+    //println!("{:?}", final_response_states);
+
+    let solo: Vec<&'a str> = final_response_states
+        .iter()
+        .filter(|state| check_rtype(state, flow, ResponseType::Solo))
+        .copied()
+        .collect();
+    if !solo.is_empty() {
+        //println!("goin solo");
+        return ResponseStates::new(vec![solo[solo.len()]], csi, superstate);
+    }
+
     ResponseStates::new(final_response_states, csi, superstate)
 }

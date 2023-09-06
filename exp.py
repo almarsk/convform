@@ -78,8 +78,8 @@ def main(query='', states=False):
                 if states and not reply[4]:
                     turn_metadata = reply[5]
                     # greetings from noobsville
-                    print("whole tuple"+str(reply))
-                    print("just meta"+"\n"+json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")+"\n")
+                    # print("whole tuple"+str(reply))
+                    print(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")+"\n")
         print("\n______\n")
 
     # Close the cursor and connection objects

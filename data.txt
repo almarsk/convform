@@ -1,0 +1,21 @@
+SELECT * FROM user WHERE id=51;
+
+User Test (no.51)
+Talked to Bohumil on 2023-09-05
+from 19:17:18
+and ended the conversation prematurely (or it never had a fixed end).
+
+Bohumil:	 Ahoj, já se jmenuji Bohumil.
+{"routine": "standard", "superstate": "úvod", "last_states": ["state_intro"], "states_usage": {"state_intro": 1}, "turns_since_initiative": 1}
+
+Test (2.789s):	 ahoj jak se máš
+Bohumil:	 Já se mám skvěle. A co vy? jak se daří?
+{"routine": "standard", "superstate": "úvod", "last_states": ["mám se dobře", "a co vy", "jak se máš"], "states_usage": {"jak se máš": 1, "mám se dobře": 1, "a co vy": 1, "state_intro": 1}, "turns_since_initiative": 0}
+
+Test (8.499s):	 já se mám docela fajn
+Bohumil:	 To jsem rád!
+{"routine": "standard", "superstate": "úvod", "last_states": ["to mě těší"], "states_usage": {"state_intro": 1, "to mě těší": 1, "jak se máš": 1, "a co vy": 1, "mám se dobře": 1}, "turns_since_initiative": 1}
+
+
+______
+
