@@ -10,19 +10,22 @@ CStatusIn {
     },
     turns_since_initiative: 1,
 }
-[]
-{"state_intro": 1}
+
+
+matched: []
+
+
 state žádost o představení usage 0
 CStatusOut {
-    bot_reply: "Jak ti mám říkat?",
+    bot_reply: "Jaké je tvé jméno?",
     routine: "standard",
     superstate: "úvod",
     last_states: [
         "žádost o představení",
     ],
     states_usage: {
-        "žádost o představení": 1,
         "state_intro": 1,
+        "žádost o představení": 1,
     },
     turns_since_initiative: 0,
 }
@@ -37,12 +40,14 @@ CStatusIn {
     states_usage: {
         "state_intro": 1,
         "těší mě": 1,
-        "otázka jestli vtip": 1,
         "žádost o představení": 2,
+        "otázka jestli vtip": 1,
     },
     turns_since_initiative: 0,
 }
-[
+
+
+matched: [
     MatchItem {
         states: [
             "otázka vtipu",
@@ -59,7 +64,8 @@ CStatusIn {
         index_start: 6,
     },
 ]
-{"state_intro": 1, "těší mě": 1, "otázka jestli vtip": 1, "žádost o představení": 2}
+
+
 state odhad usage 0
 CStatusOut {
     bot_reply: "$",
@@ -69,21 +75,11 @@ CStatusOut {
         "odhad",
     ],
     states_usage: {
-        "otázka jestli vtip": 1,
-        "state_intro": 1,
         "těší mě": 1,
+        "state_intro": 1,
         "žádost o představení": 2,
         "odhad": 1,
+        "otázka jestli vtip": 1,
     },
     turns_since_initiative: 0,
 }
-1
-
-
-{"routine": "standard", "superstate": "\u00favod", "user_reply": "ahoj", "last_states": ["state_intro"], "states_usage": {"state_intro": 1}, "turns_since_initiative": 1}
-
-
-2
-
-
-{"routine": "standard", "superstate": "ot\u00e1zka jestli vtip", "user_reply": "tak jo", "last_states": ["t\u011b\u0161\u00ed m\u011b", "ot\u00e1zka jestli vtip"], "states_usage": {"\u017e\u00e1dost o p\u0159edstaven\u00ed": 2, "ot\u00e1zka jestli vtip": 1, "t\u011b\u0161\u00ed m\u011b": 1, "state_intro": 1}, "turns_since_initiative": 0}

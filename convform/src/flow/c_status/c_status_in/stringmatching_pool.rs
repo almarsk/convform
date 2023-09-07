@@ -40,9 +40,9 @@ impl<'a> StringMatchingPool<'a> {
                 mi.keywords
                     .iter()
                     .filter_map(|kws| {
-                        let mut start_indexes: Vec<usize> = Vec::with_capacity(kws.len());
+                        let mut start_indexes: Vec<usize> = Vec::with_capacity(kws.1.len());
 
-                        kws.iter().for_each(|kw| {
+                        kws.1.iter().for_each(|kw| {
                             let kw_rgx = Regex::new(kw).unwrap();
                             let captures = kw_rgx.captures_iter(csi.view_user_reply());
                             let mut start_index = usize::MAX;
@@ -86,7 +86,7 @@ impl<'a> StringMatchingPool<'a> {
         });
 
         // println!("{:#?}", csi.states_usage);
-        println!("{:#?}", ms);
+        println!("\n\nmatched: {:#?}\n\n", ms);
         MatchedStates::new(csi, ms)
     }
 }

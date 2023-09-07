@@ -34,13 +34,9 @@ async def q():
     })
 
     cso1 = await bot_reply.reply(csi1)
-    print("1\n\n")
-    print(csi1)
     cso1.show()
 
     cso2 = await bot_reply.reply(csi2)
-    print("\n\n2\n\n")
-    print(csi2)
     cso2.show()
 
 loop = asyncio.get_event_loop()

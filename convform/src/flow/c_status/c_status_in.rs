@@ -24,7 +24,7 @@ impl<'a> CStatusIn<'a> {
     pub fn parse_into_c_status_in(file: &'a str) -> Result<CStatusIn, String> {
         match serde_json::from_str::<CStatusIn>(file) {
             Ok(c_status_in) => {
-                println!("\nuser said: {}\n", c_status_in.user_reply);
+                //println!("\nuser said: {}\n", c_status_in.user_reply);
                 Ok(c_status_in)
             }
             Err(e) => Err(format!("Issue parsing json, {:?}", e)),
@@ -60,7 +60,7 @@ impl<'a> CStatusIn<'a> {
     }
 
     pub fn update_usage(&mut self, rs: &[&'a str]) -> HashMap<&'a str, usize> {
-        println!("{:?}", self.states_usage);
+        //println!("{:?}", self.states_usage);
         rs.iter().for_each(|rs| {
             println!(
                 "state {} usage {}",
@@ -91,10 +91,13 @@ impl<'a> CStatusIn<'a> {
                                 let current_intent_set: Vec<&'a str> =
                                     intent_on_state.0.split('+').map(|i| i.trim()).collect();
 
-                                let current_keywords_set: Vec<Vec<&'a str>> = current_intent_set
-                                    .iter()
-                                    .map(|subintent| get_keywords(flow, subintent))
-                                    .collect();
+                                let current_keywords_set: HashMap<&'a str, Vec<&'a str>> =
+                                    current_intent_set
+                                        .iter()
+                                        .map(|subintent| {
+                                            (*intent_on_state.0, get_keywords(flow, subintent))
+                                        })
+                                        .collect();
                                 let current_answer_to_set: Vec<&'a str> = current_intent_set
                                     .iter()
                                     .flat_map(|subintent| get_answer_to(flow, subintent))
@@ -123,6 +126,7 @@ impl<'a> CStatusIn<'a> {
                                     current_adjacent,
                                     current_answer_to_set,
                                 );
+                                //println!("{:?}", tm);
                                 tm
                             })
                             .collect::<Vec<_>>()
@@ -142,14 +146,14 @@ impl<'a> CStatusIn<'a> {
 
 #[derive(Debug)]
 pub struct ToMatch<'a> {
-    keywords: Vec<Vec<&'a str>>,
+    keywords: HashMap<&'a str, Vec<&'a str>>,
     adjacent: Vec<&'a str>,
     answer_to: Vec<&'a str>,
 }
 
 impl<'a> ToMatch<'a> {
     pub fn new(
-        keywords: Vec<Vec<&'a str>>,
+        keywords: HashMap<&'a str, Vec<&'a str>>,
         adjacent: Vec<&'a str>,
         answer_to: Vec<&'a str>,
     ) -> Self {
