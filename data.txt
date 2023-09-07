@@ -17,8 +17,6 @@ matched: [
     MatchItem {
         intent: [
             "jak se máš",
-            "jak se máš",
-            "jak se máš",
         ],
         states: [
             "mám se dobře",
@@ -34,7 +32,7 @@ state mám se dobře usage 0
 state a co vy usage 0
 state jak se máš usage 0
 CStatusOut {
-    bot_reply: "Já se mám fajn. A vy? a jak se máte?",
+    bot_reply: "Já se mám fajn. A vy? jak se daří?",
     routine: "standard",
     superstate: "úvod",
     last_states: [
@@ -43,11 +41,11 @@ CStatusOut {
         "jak se máš",
     ],
     states_usage: {
-        "žádost o představení": 1,
-        "mám se dobře": 1,
-        "jak se máš": 1,
-        "a co vy": 1,
         "state_intro": 1,
+        "žádost o představení": 1,
+        "jak se máš": 1,
+        "mám se dobře": 1,
+        "a co vy": 1,
     },
     turns_since_initiative: 0,
 }

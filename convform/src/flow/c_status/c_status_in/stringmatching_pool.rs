@@ -54,7 +54,9 @@ impl<'a> StringMatchingPool<'a> {
                                 }
                             }
                             start_indexes.push(start_index);
-                            matched_intents.push(kws.0)
+                            if !matched_intents.contains(kws.0) {
+                                matched_intents.push(kws.0)
+                            }
                         });
                         //println!("start indexes for {:?} {:?}", kws, start_indexes);
                         if start_indexes.iter().all(|si| *si == usize::MAX) {
