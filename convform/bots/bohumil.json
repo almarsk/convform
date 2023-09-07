@@ -380,7 +380,8 @@
         "Povídám, že se jmenuji Bohumil."
       ],
       "state_type": "Solo",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": true
     },
     "tak jak to je": {
       "state_name": "tak jak to je",

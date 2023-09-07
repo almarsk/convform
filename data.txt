@@ -1,25 +1,7 @@
 CStatusIn {
     routine: "standard",
     superstate: "úvod",
-    user_reply: "ahoj",
-    last_states: [
-        "state_intro",
-    ],
-    states_usage: {
-        "state_intro": 1,
-    },
-    turns_since_initiative: 1,
-}
-
-
-matched: []
-
-
-state žádost o představení usage 0
-CStatusOut {
-    bot_reply: "Jaké je tvé jméno?",
-    routine: "standard",
-    superstate: "úvod",
+    user_reply: "jak se máš?",
     last_states: [
         "žádost o představení",
     ],
@@ -29,57 +11,43 @@ CStatusOut {
     },
     turns_since_initiative: 0,
 }
-CStatusIn {
-    routine: "standard",
-    superstate: "otázka jestli vtip",
-    user_reply: "tak jo",
-    last_states: [
-        "těší mě",
-        "otázka jestli vtip",
-    ],
-    states_usage: {
-        "state_intro": 1,
-        "těší mě": 1,
-        "žádost o představení": 2,
-        "otázka jestli vtip": 1,
-    },
-    turns_since_initiative: 0,
-}
 
 
 matched: [
     MatchItem {
+        intent: [
+            "jak se máš",
+            "jak se máš",
+            "jak se máš",
+        ],
         states: [
-            "otázka vtipu",
+            "mám se dobře",
+            "a co vy",
+            "jak se máš",
         ],
         index_start: 0,
-    },
-    MatchItem {
-        states: [
-            "tak jo",
-            "řekni mi vtip",
-            "nevím",
-            "odhad",
-        ],
-        index_start: 6,
     },
 ]
 
 
-state odhad usage 0
+state mám se dobře usage 0
+state a co vy usage 0
+state jak se máš usage 0
 CStatusOut {
-    bot_reply: "$",
+    bot_reply: "Já se mám fajn. A vy? a jak se máte?",
     routine: "standard",
-    superstate: "otázka jestli vtip",
+    superstate: "úvod",
     last_states: [
-        "odhad",
+        "mám se dobře",
+        "a co vy",
+        "jak se máš",
     ],
     states_usage: {
-        "těší mě": 1,
+        "žádost o představení": 1,
+        "mám se dobře": 1,
+        "jak se máš": 1,
+        "a co vy": 1,
         "state_intro": 1,
-        "žádost o představení": 2,
-        "odhad": 1,
-        "otázka jestli vtip": 1,
     },
     turns_since_initiative: 0,
 }

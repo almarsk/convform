@@ -76,8 +76,46 @@ impl<'a> CStatusIn<'a> {
     }
 
     pub fn get_string_matching_pool(self, flow: &'a Flow<'a>) -> StringMatchingPool<'a> {
-        let kap = self
-            .last_states
+        let mut kap_last_states =
+            CStatusIn::extract_kaps_from_vec_of_states(&self.last_states, flow);
+
+        // take current superstate, get all the states from it and filter by the ones which have superstate global on true
+        // the filter those to only have superstates which arent in the csi.last_states
+        // extract_kaps from the resulting vec
+        let current_superstate_name = self.superstate;
+        let current_superstate_full = flow
+            .superstates
+            .iter()
+            .find(|s| s.0 == &current_superstate_name)
+            .unwrap()
+            .1;
+        let current_states_global_not_in_last: Vec<&str> = current_superstate_full
+            .states
+            .iter()
+            .filter(|s| {
+                let state = flow.states.iter().find(|ps| &ps.0 == s).unwrap().1;
+                state.superstate_global
+            })
+            .filter(|s| !self.last_states.contains(s))
+            .copied()
+            .collect();
+
+        if !current_states_global_not_in_last.is_empty() {
+            kap_last_states.extend(CStatusIn::extract_kaps_from_vec_of_states(
+                &current_states_global_not_in_last,
+                flow,
+            ))
+        }
+
+        StringMatchingPool::new(self, kap_last_states)
+    }
+
+    pub fn view_user_reply(&self) -> &'a str {
+        self.user_reply
+    }
+
+    fn extract_kaps_from_vec_of_states(states: &[&'a str], flow: &'a Flow<'a>) -> Vec<ToMatch<'a>> {
+        states
             .iter()
             .filter_map(|ls| {
                 flow.states
@@ -133,14 +171,7 @@ impl<'a> CStatusIn<'a> {
                     })
             })
             .flatten()
-            .collect();
-
-        //println!("\nc_status_in.rs 90 debug\nToMatch: {:#?}", kap);
-        StringMatchingPool::new(self, kap)
-    }
-
-    pub fn view_user_reply(&self) -> &'a str {
-        self.user_reply
+            .collect()
     }
 }
 

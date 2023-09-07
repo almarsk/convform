@@ -18,23 +18,20 @@ async def q():
 
     csi2 = json.dumps({
         "routine": "standard",
-        "superstate": "otázka jestli vtip",
-        "user_reply": "tak jo",
-        "last_states": [
-            "těší mě",
-            "otázka jestli vtip",
-        ],
-        "states_usage": {
-            "žádost o představení": 2,
-            "otázka jestli vtip": 1,
-            "těší mě": 1,
-            "state_intro": 1,
-        },
-        "turns_since_initiative": 0,
+            "superstate": "úvod",
+            "user_reply": "jak se máš?",
+            "last_states": [
+                "žádost o představení",
+            ],
+            "states_usage": {
+                "žádost o představení": 1,
+                "state_intro": 1,
+            },
+            "turns_since_initiative": 0,
     })
 
-    cso1 = await bot_reply.reply(csi1)
-    cso1.show()
+   # cso1 = await bot_reply.reply(csi1)
+   # cso1.show()
 
     cso2 = await bot_reply.reply(csi2)
     cso2.show()

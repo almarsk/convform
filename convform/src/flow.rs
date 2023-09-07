@@ -56,6 +56,8 @@ struct State<'a> {
     #[serde(default = "default_iteration")]
     iteration: usize,
     #[serde(default = "default_bool")]
+    superstate_global: bool,
+    #[serde(default = "default_bool")]
     prioritize: bool,
 }
 

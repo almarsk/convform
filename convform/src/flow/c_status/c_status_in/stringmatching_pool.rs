@@ -29,7 +29,7 @@ impl<'a> StringMatchingPool<'a> {
 
         // check if beginning of conversation - return state intro
         if csi.view_user_reply().is_empty() {
-            return MatchedStates::new(csi, vec![MatchItem::new(vec!["state_intro"], 0)]);
+            return MatchedStates::new(csi, vec![MatchItem::new(vec![""], vec!["state_intro"], 0)]);
         }
 
         let mut answered_states: Vec<&'a str> = vec![];
@@ -41,6 +41,7 @@ impl<'a> StringMatchingPool<'a> {
                     .iter()
                     .filter_map(|kws| {
                         let mut start_indexes: Vec<usize> = Vec::with_capacity(kws.1.len());
+                        let mut matched_intents: Vec<&'a str> = vec![];
 
                         kws.1.iter().for_each(|kw| {
                             let kw_rgx = Regex::new(kw).unwrap();
@@ -52,7 +53,8 @@ impl<'a> StringMatchingPool<'a> {
                                     start_index = current_start_index
                                 }
                             }
-                            start_indexes.push(start_index)
+                            start_indexes.push(start_index);
+                            matched_intents.push(kws.0)
                         });
                         //println!("start indexes for {:?} {:?}", kws, start_indexes);
                         if start_indexes.iter().all(|si| *si == usize::MAX) {
@@ -66,6 +68,7 @@ impl<'a> StringMatchingPool<'a> {
 
                             answered_states.extend(mi.answer_to.clone());
                             Some(MatchItem::new(
+                                matched_intents,
                                 mi.adjacent.clone(),
                                 matched_start_indexes[matched_start_indexes.len() - 1],
                             ))

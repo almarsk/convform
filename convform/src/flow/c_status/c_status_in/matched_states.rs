@@ -10,13 +10,15 @@ use linked_hash_set::LinkedHashSet;
 #[allow(dead_code)]
 #[derive(Clone, Debug)]
 pub struct MatchItem<'a> {
+    intent: Vec<&'a str>,
     states: Vec<&'a str>,
     index_start: usize,
 }
 
 impl<'a> MatchItem<'a> {
-    pub fn new(states: Vec<&'a str>, index_start: usize) -> Self {
+    pub fn new(intent: Vec<&'a str>, states: Vec<&'a str>, index_start: usize) -> Self {
         MatchItem {
+            intent,
             states,
             index_start,
         }
