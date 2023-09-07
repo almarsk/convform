@@ -86,7 +86,7 @@ impl<'a> StringMatchingPool<'a> {
         });
 
         // println!("{:#?}", csi.states_usage);
-        // println!("{:#?}", ms);
+        println!("{:#?}", ms);
         MatchedStates::new(csi, ms)
     }
 }

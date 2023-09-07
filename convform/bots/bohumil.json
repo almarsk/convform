@@ -65,8 +65,7 @@
       ],
       "over_iterated_say": [],
       "state_type": "Connective",
-      "iteration": 3,
-      "global": false
+      "iteration": 3
     },
     "aha": {
       "state_name": "aha",
@@ -85,8 +84,7 @@
         "Říkám, že nevím."
       ],
       "state_type": "Solo",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "co raději": {
       "state_name": "co raději",
@@ -108,8 +106,7 @@
         "Říkám, co jetě můžeme dělat"
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "další vtip": {
       "state_name": "další vtip",
@@ -136,8 +133,7 @@
         "Říkám, co tak bych pověděl další vtípek."
       ],
       "state_type": "Initiative",
-      "iteration": 4,
-      "global": false
+      "iteration": 4
     },
     "jak se máš": {
       "state_name": "jak se máš",
@@ -158,8 +154,7 @@
         "ptám se, jak se daří."
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "mám se dobře": {
       "state_name": "mám se dobře",
@@ -173,8 +168,7 @@
         "Povídám, že se mám fajn."
       ],
       "state_type": "Responsive",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "mě taky": {
       "state_name": "mě taky",
@@ -185,8 +179,7 @@
       ],
       "over_iterated_say": [],
       "state_type": "Connective",
-      "iteration": 3,
-      "global": false
+      "iteration": 3
     },
     "nevím": {
       "state_name": "nevím",
@@ -204,8 +197,7 @@
         "Říkám, že nevím."
       ],
       "state_type": "Solo",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "odhad": {
       "state_name": "odhad",
@@ -226,8 +218,7 @@
         "$"
       ],
       "state_type": "Solo",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "otázka jestli vtip": {
       "state_name": "otázka jestli vtip",
@@ -254,8 +245,7 @@
         "Říkám, jestli můžu říct vtip"
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "otázka vtipu": {
       "state_name": "otázka vtipu",
@@ -283,8 +273,7 @@
         "###zopakuj stejnou otázku trochu jinými slovy###"
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "pointa vtipu": {
       "state_name": "pointa vtipu",
@@ -307,8 +296,7 @@
         "###zopakuj pointu###"
       ],
       "state_type": "Initiative",
-      "iteration": 2,
-      "global": false
+      "iteration": 2
     },
     "proč ne": {
       "state_name": "proč ne",
@@ -329,8 +317,7 @@
         "Říkám, to jsou mé vtipy tak strašné?"
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "představení": {
       "state_name": "představení",
@@ -350,9 +337,8 @@
       "over_iterated_say": [
         "Říkám, že se jmenuji Bohumil a rád říkám vtipy."
       ],
-      "state_type": "Flexible",
-      "iteration": 1,
-      "global": false
+      "state_type": "Responsive",
+      "iteration": 1
     },
     "správně": {
       "state_name": "správně",
@@ -370,8 +356,7 @@
         "No je to tak, to jste bystrá hlavička."
       ],
       "state_type": "Responsive",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "state_intro": {
       "state_name": "state_intro",
@@ -395,8 +380,7 @@
         "Povídám, že se jmenuji Bohumil."
       ],
       "state_type": "Solo",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "tak jak to je": {
       "state_name": "tak jak to je",
@@ -415,8 +399,7 @@
         "Povídám, že nevím."
       ],
       "state_type": "Flexible",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "tak jo": {
       "state_name": "tak jo",
@@ -434,8 +417,7 @@
         "Jo tak teda dobře."
       ],
       "state_type": "Solo",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "to jsem rád": {
       "state_name": "to jsem rád",
@@ -453,8 +435,7 @@
         "Povídám, že mě to těší."
       ],
       "state_type": "Responsive",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "to mě mrzí": {
       "state_name": "to mě mrzí",
@@ -472,8 +453,7 @@
         "Fakt, je mi to líto."
       ],
       "state_type": "Responsive",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "to mě těší": {
       "state_name": "to mě těší",
@@ -491,8 +471,7 @@
         "Povídám, že mě to těší."
       ],
       "state_type": "Responsive",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "těší mě": {
       "state_name": "těší mě",
@@ -507,7 +486,6 @@
       ],
       "state_type": "Responsive",
       "iteration": 1,
-      "global": false,
       "prioritize": true
     },
     "uživatel další vtip": {
@@ -534,8 +512,7 @@
         "Ptám se, jestli znáte ještě nějaký další vtip. Řekněte."
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "řekni mi vtip": {
       "state_name": "řekni mi vtip",
@@ -559,8 +536,7 @@
         "Povídám, jestli bych si taky nemohl poslechnout nějaký vtip."
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "špatně": {
       "state_name": "špatně",
@@ -578,8 +554,7 @@
         "Povídám, že takhle to není."
       ],
       "state_type": "Responsive",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     },
     "žádost o představení": {
       "state_name": "žádost o představení",
@@ -598,8 +573,7 @@
         "Jak že se jmenuješ?"
       ],
       "state_type": "Initiative",
-      "iteration": 1,
-      "global": false
+      "iteration": 1
     }
   },
   "intents": {
@@ -781,8 +755,7 @@
         "já jsem"
       ],
       "adjacent": [
-        "těší mě",
-        "představení"
+        "těší mě"
       ],
       "answer_to": [
         "žádost o představení"

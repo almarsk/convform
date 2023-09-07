@@ -29,7 +29,7 @@ struct Routine<'a> {
     routine_name: &'a str,
     max_says_at_once: usize,
     the_track: &'a str,
-    order_superstates: Vec<&'a str>, //validate they're superstates
+    order_superstates: Vec<&'a str>,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone, Default)]
@@ -37,7 +37,7 @@ struct Superstate<'a> {
     superstate_name: &'a str,
     #[serde(default = "default_usize")]
     initiativeness: usize,
-    states: Vec<&'a str>, //validate they're real states
+    states: Vec<&'a str>,
     description: &'a str,
 }
 
@@ -49,15 +49,12 @@ pub fn default_usize() -> usize {
 struct State<'a> {
     state_name: &'a str,
     intents: BTreeMap<&'a str, Vec<&'a str>>,
-    // validate it's a real intent // leading into real state
     say_annotation: &'a str,
     say: Vec<&'a str>,
     over_iterated_say: Vec<&'a str>,
     state_type: ResponseType,
     #[serde(default = "default_iteration")]
     iteration: usize,
-    #[serde(default = "default_bool")]
-    global: bool,
     #[serde(default = "default_bool")]
     prioritize: bool,
 }
@@ -74,7 +71,7 @@ struct Intent<'a> {
     intent_name: &'a str,
     intent_annotation: &'a str,
     keywords: Vec<&'a str>,
-    adjacent: Vec<&'a str>, // validate that it's a real state
+    adjacent: Vec<&'a str>,
     #[serde(default = "default_vec")]
     answer_to: Vec<&'a str>,
 }

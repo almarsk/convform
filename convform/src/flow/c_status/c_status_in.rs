@@ -60,8 +60,13 @@ impl<'a> CStatusIn<'a> {
     }
 
     pub fn update_usage(&mut self, rs: &[&'a str]) -> HashMap<&'a str, usize> {
-        //println!("{:?}", self.states_usage);
+        println!("{:?}", self.states_usage);
         rs.iter().for_each(|rs| {
+            println!(
+                "state {} usage {}",
+                rs,
+                self.states_usage.get(rs).unwrap_or(&0usize)
+            );
             match self.states_usage.get(rs) {
                 Some(i) => self.states_usage.insert(rs, i + 1),
                 None => self.states_usage.insert(rs, 1),
@@ -112,7 +117,7 @@ impl<'a> CStatusIn<'a> {
                                             .collect();
                                     current_adjacent = adjacent;
                                 };
-                                // double intent not yet implemented
+
                                 let tm = ToMatch::new(
                                     current_keywords_set,
                                     current_adjacent,

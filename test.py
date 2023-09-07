@@ -17,11 +17,19 @@ async def q():
     })
 
     csi2 = json.dumps({
-    "routine": "standard",
-        "superstate": "úvod",
-        "user_reply": "ahoj",
-        "last_states": ["state_intro"],
-        "states_usage": {"state_intro":1},
+        "routine": "standard",
+        "superstate": "otázka jestli vtip",
+        "user_reply": "tak jo",
+        "last_states": [
+            "těší mě",
+            "otázka jestli vtip",
+        ],
+        "states_usage": {
+            "žádost o představení": 2,
+            "otázka jestli vtip": 1,
+            "těší mě": 1,
+            "state_intro": 1,
+        },
         "turns_since_initiative": 0,
     })
 

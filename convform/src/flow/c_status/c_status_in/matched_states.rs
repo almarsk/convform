@@ -97,7 +97,7 @@ impl<'a> MatchedStates<'a> {
             })
             .collect();
         if !matches_next_superstate.is_empty() {
-            //println!("goin next superstate");
+            println!("goin next superstate");
             return assess_response_states(
                 matches_next_superstate,
                 csi,
