@@ -3,6 +3,7 @@ use super::CStatusIn;
 use super::ToMatch;
 use regex::Regex;
 
+#[derive(Clone)]
 pub struct StringMatchingPool<'a> {
     keywords_adjacent_pairs: Vec<ToMatch<'a>>,
     c_status_in: CStatusIn<'a>,
@@ -33,6 +34,7 @@ impl<'a> StringMatchingPool<'a> {
         }
 
         let mut answered_states: Vec<&'a str> = vec![];
+        // println!("kaps: {:#?}", self.clone().get_kaps());
         let ms: Vec<MatchItem<'a>> = self
             .get_kaps()
             .iter()
@@ -44,10 +46,11 @@ impl<'a> StringMatchingPool<'a> {
                         let mut matched_intents: Vec<&'a str> = vec![];
 
                         kws.1.iter().for_each(|kw| {
-                            let kw_rgx = Regex::new(kw).unwrap();
+                            let kw_rgx = Regex::new(&format!("(?i){}", kw)).unwrap();
                             let captures = kw_rgx.captures_iter(csi.view_user_reply());
                             let mut start_index = usize::MAX;
                             for cap in captures {
+                                println!("Matched sector: {}", cap.get(0).unwrap().as_str());
                                 let current_start_index = cap.get(0).unwrap().start();
                                 if start_index > current_start_index {
                                     start_index = current_start_index
@@ -69,6 +72,7 @@ impl<'a> StringMatchingPool<'a> {
                                 .collect();
 
                             answered_states.extend(mi.answer_to.clone());
+                            println!("matched_intent: {:?}", matched_intents);
                             Some(MatchItem::new(
                                 matched_intents,
                                 mi.adjacent.clone(),
@@ -91,7 +95,7 @@ impl<'a> StringMatchingPool<'a> {
         });
 
         // println!("{:#?}", csi.states_usage);
-        println!("\n\nmatched: {:#?}\n\n", ms);
+        // println!("\n\nmatched: {:#?}\n\n", ms);
         MatchedStates::new(csi, ms)
     }
 }

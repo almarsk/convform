@@ -12,9 +12,9 @@ impl CStatusOut {
         let path = format!("convform/bots/{}.json", bot_name);
         let file = read_to_string(path.as_str()).unwrap();
 
-        match Flow::validate_behavior(bot_name, &file) {
+        match Flow::validate_behavior(path.as_str(), &file) {
             Err(e) => {
-                println!("{:?}", e);
+                println!("validation error: {:?}", e);
                 CStatusOut::issue(String::from("ERROR: json validation unsuccesful"))
             }
             Ok(flow) => {
@@ -23,7 +23,7 @@ impl CStatusOut {
                 match c_status(csi, &flow, py) {
                     Ok(cso) => cso,
                     Err(e) => {
-                        println!("{:?}", e);
+                        println!("cso error: {:?}", e);
                         CStatusOut::issue(String::from("ERROR: issue making cso"))
                     }
                 }

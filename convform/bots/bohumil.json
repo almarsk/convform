@@ -17,23 +17,15 @@
   "superstates": {
     "nabídka další vtip": {
       "superstate_name": "nabídka další vtip",
+      "initiativeness": 2,
       "states": [
         "další vtip"
       ],
       "description": "Bohumil nabídne další vtip."
     },
-    "úvod": {
-      "superstate_name": "úvod",
-      "states": [
-        "state_intro",
-        "představení",
-        "žádost o představení"
-      ],
-      "description": "Bohumil se zeptá, jestli může říct vtip.",
-      "initiativeness": 0
-    },
     "otázka jestli vtip": {
       "superstate_name": "otázka jestli vtip",
+      "initiativeness": 2,
       "states": [
         "otázka jestli vtip"
       ],
@@ -41,6 +33,7 @@
     },
     "otázka vtipu": {
       "superstate_name": "otázka vtipu",
+      "initiativeness": 2,
       "states": [
         "otázka vtipu"
       ],
@@ -48,10 +41,21 @@
     },
     "pointa vtipu": {
       "superstate_name": "pointa vtipu",
+      "initiativeness": 2,
       "states": [
         "pointa vtipu"
       ],
       "description": "Bohumil řekne pointu vtipu."
+    },
+    "úvod": {
+      "superstate_name": "úvod",
+      "initiativeness": 0,
+      "states": [
+        "state_intro",
+        "představení",
+        "žádost o představení"
+      ],
+      "description": "Bohumil se zeptá, jestli může říct vtip."
     }
   },
   "states": {
@@ -65,7 +69,9 @@
       ],
       "over_iterated_say": [],
       "state_type": "Connective",
-      "iteration": 3
+      "iteration": 3,
+      "superstate_global": false,
+      "prioritize": false
     },
     "aha": {
       "state_name": "aha",
@@ -84,7 +90,9 @@
         "Říkám, že nevím."
       ],
       "state_type": "Solo",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "co raději": {
       "state_name": "co raději",
@@ -106,7 +114,9 @@
         "Říkám, co jetě můžeme dělat"
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "další vtip": {
       "state_name": "další vtip",
@@ -133,7 +143,9 @@
         "Říkám, co tak bych pověděl další vtípek."
       ],
       "state_type": "Initiative",
-      "iteration": 4
+      "iteration": 4,
+      "superstate_global": false,
+      "prioritize": false
     },
     "jak se máš": {
       "state_name": "jak se máš",
@@ -154,7 +166,9 @@
         "ptám se, jak se daří."
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "mám se dobře": {
       "state_name": "mám se dobře",
@@ -168,7 +182,9 @@
         "Povídám, že se mám fajn."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "mě taky": {
       "state_name": "mě taky",
@@ -179,7 +195,9 @@
       ],
       "over_iterated_say": [],
       "state_type": "Connective",
-      "iteration": 3
+      "iteration": 3,
+      "superstate_global": false,
+      "prioritize": false
     },
     "nevím": {
       "state_name": "nevím",
@@ -197,7 +215,9 @@
         "Říkám, že nevím."
       ],
       "state_type": "Solo",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "odhad": {
       "state_name": "odhad",
@@ -218,7 +238,9 @@
         "$"
       ],
       "state_type": "Solo",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "otázka jestli vtip": {
       "state_name": "otázka jestli vtip",
@@ -231,7 +253,7 @@
           "řekni mi vtip",
           "co raději"
         ],
-        "uživatel vtip": [
+        "uživatel chce říct vtip": [
           "tak jo",
           "řekni mi vtip"
         ]
@@ -245,7 +267,9 @@
         "Říkám, jestli můžu říct vtip"
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "otázka vtipu": {
       "state_name": "otázka vtipu",
@@ -273,7 +297,9 @@
         "###zopakuj stejnou otázku trochu jinými slovy###"
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "pointa vtipu": {
       "state_name": "pointa vtipu",
@@ -296,7 +322,9 @@
         "###zopakuj pointu###"
       ],
       "state_type": "Initiative",
-      "iteration": 2
+      "iteration": 2,
+      "superstate_global": false,
+      "prioritize": false
     },
     "proč ne": {
       "state_name": "proč ne",
@@ -317,17 +345,19 @@
         "Říkám, to jsou mé vtipy tak strašné?"
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "představení": {
       "state_name": "představení",
       "intents": {
+        "představení": [
+          "těší mě"
+        ],
         "těší mě": [
           "mě taky",
           "představení"
-        ],
-        "představení": [
-          "těší mě"
         ]
       },
       "say_annotation": "Bohumil se představí",
@@ -338,7 +368,9 @@
         "Říkám, že se jmenuji Bohumil a rád říkám vtipy."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "správně": {
       "state_name": "správně",
@@ -356,7 +388,9 @@
         "No je to tak, to jste bystrá hlavička."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "state_intro": {
       "state_name": "state_intro",
@@ -381,7 +415,8 @@
       ],
       "state_type": "Solo",
       "iteration": 1,
-      "superstate_global": true
+      "superstate_global": true,
+      "prioritize": false
     },
     "tak jak to je": {
       "state_name": "tak jak to je",
@@ -400,7 +435,9 @@
         "Povídám, že nevím."
       ],
       "state_type": "Flexible",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "tak jo": {
       "state_name": "tak jo",
@@ -418,7 +455,9 @@
         "Jo tak teda dobře."
       ],
       "state_type": "Solo",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "to jsem rád": {
       "state_name": "to jsem rád",
@@ -436,7 +475,9 @@
         "Povídám, že mě to těší."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "to mě mrzí": {
       "state_name": "to mě mrzí",
@@ -454,7 +495,9 @@
         "Fakt, je mi to líto."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "to mě těší": {
       "state_name": "to mě těší",
@@ -472,7 +515,9 @@
         "Povídám, že mě to těší."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "těší mě": {
       "state_name": "těší mě",
@@ -487,6 +532,7 @@
       ],
       "state_type": "Responsive",
       "iteration": 1,
+      "superstate_global": false,
       "prioritize": true
     },
     "uživatel další vtip": {
@@ -513,7 +559,9 @@
         "Ptám se, jestli znáte ještě nějaký další vtip. Řekněte."
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "řekni mi vtip": {
       "state_name": "řekni mi vtip",
@@ -537,7 +585,9 @@
         "Povídám, jestli bych si taky nemohl poslechnout nějaký vtip."
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "špatně": {
       "state_name": "špatně",
@@ -555,7 +605,9 @@
         "Povídám, že takhle to není."
       ],
       "state_type": "Responsive",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     },
     "žádost o představení": {
       "state_name": "žádost o představení",
@@ -574,10 +626,25 @@
         "Jak že se jmenuješ?"
       ],
       "state_type": "Initiative",
-      "iteration": 1
+      "iteration": 1,
+      "superstate_global": false,
+      "prioritize": false
     }
   },
   "intents": {
+    "a co vy": {
+      "intent_name": "a co vy",
+      "intent_annotation": "uživatel se ptá co Bohumil",
+      "keywords": [
+        "a co ty",
+        "a ty",
+        "co ty"
+      ],
+      "adjacent": [
+        "$"
+      ],
+      "answer_to": []
+    },
     "ano": {
       "intent_name": "ano",
       "intent_annotation": "uživatel souhlasí",
@@ -589,19 +656,8 @@
       ],
       "adjacent": [
         "$"
-      ]
-    },
-    "a co vy": {
-      "intent_name": "a co vy",
-      "intent_annotation": "uživatel se ptá co Bohumil",
-      "keywords": [
-        "a co ty",
-        "a ty",
-        "co ty"
       ],
-      "adjacent": [
-        "$"
-      ]
+      "answer_to": []
     },
     "jak se máš": {
       "intent_name": "jak se máš",
@@ -615,7 +671,8 @@
         "mám se dobře",
         "a co vy",
         "jak se máš"
-      ]
+      ],
+      "answer_to": []
     },
     "mám se dobře": {
       "intent_name": "mám se dobře",
@@ -631,7 +688,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "mám se špatně": {
       "intent_name": "mám se špatně",
@@ -644,7 +702,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "ne": {
       "intent_name": "ne",
@@ -655,7 +714,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "nechci": {
       "intent_name": "nechci",
@@ -665,7 +725,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "negativní ohlas": {
       "intent_name": "negativní ohlas",
@@ -677,7 +738,8 @@
       ],
       "adjacent": [
         "to mě mrzí"
-      ]
+      ],
+      "answer_to": []
     },
     "neporozumění": {
       "intent_name": "neporozumění",
@@ -688,7 +750,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "nevím": {
       "intent_name": "nevím",
@@ -701,7 +764,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "odpověď": {
       "intent_name": "odpověď",
@@ -711,7 +775,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "opravdu": {
       "intent_name": "opravdu",
@@ -722,7 +787,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "otázka": {
       "intent_name": "otázka",
@@ -732,7 +798,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "pozitivní ohlas": {
       "intent_name": "pozitivní ohlas",
@@ -744,7 +811,8 @@
       ],
       "adjacent": [
         "to mě těší"
-      ]
+      ],
+      "answer_to": []
     },
     "představení": {
       "intent_name": "představení",
@@ -770,7 +838,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "tak jak to je": {
       "intent_name": "tak jak to je",
@@ -781,7 +850,8 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
     },
     "to nevadí": {
       "intent_name": "to nevadí",
@@ -794,7 +864,8 @@
       ],
       "adjacent": [
         "tak jo"
-      ]
+      ],
+      "answer_to": []
     },
     "těší mě": {
       "intent_name": "těší mě",
@@ -807,7 +878,22 @@
       ],
       "adjacent": [
         "$"
-      ]
+      ],
+      "answer_to": []
+    },
+    "uživatel chce říct vtip": {
+      "intent_name": "uživatel chce říct vtip",
+      "intent_annotation": "uživatel chce říct vtip",
+      "keywords": [
+        "já řeknu",
+        "já chci říct",
+        "teď já",
+        "co kdybych teď řekl[ a] já"
+      ],
+      "adjacent": [
+        "tak jo"
+      ],
+      "answer_to": []
     },
     "uživatel vtip": {
       "intent_name": "uživatel vtip",
@@ -818,7 +904,8 @@
       "adjacent": [
         "nevím",
         "odhad"
-      ]
+      ],
+      "answer_to": []
     },
     "řekni vtip": {
       "intent_name": "řekni vtip",
@@ -831,7 +918,8 @@
       "adjacent": [
         "tak jo",
         "otázka vtipu"
-      ]
+      ],
+      "answer_to": []
     },
     "špatný odhad": {
       "intent_name": "špatný odhad",
@@ -841,7 +929,8 @@
       ],
       "adjacent": [
         "tak jak to je"
-      ]
+      ],
+      "answer_to": []
     },
     "žádost o představení": {
       "intent_name": "žádost o představení",
@@ -855,7 +944,8 @@
         "představení",
         "a co vy",
         "žádost o představení"
-      ]
+      ],
+      "answer_to": []
     }
   }
 }

@@ -86,7 +86,7 @@ async def fetch_string():
     csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
     cso = await reply(csi)
     #print("cso.show():")
-    print(cso.show())
+    # print(cso.show())
     session.modified = True
     if cso is None:
         session["page"] = "outro"
