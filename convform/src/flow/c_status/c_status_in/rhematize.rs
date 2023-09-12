@@ -1,4 +1,4 @@
-use super::matched_states::MatchItem;
+use super::match_states::MatchItem;
 
 pub fn rhematize(mut m: Vec<MatchItem>) -> Vec<&str> {
     let _ = &mut m.sort_by_key(|ms| ms.get_index());

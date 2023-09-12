@@ -31,11 +31,13 @@ pub struct CStatusOut {
 impl<'a> CStatusOut {
     pub fn new(rs: ResponseStates<'a>, flow: &Flow) -> CStatusOut {
         let (rs, mut csi, superstate) = rs.get_fields();
+
         let states_usage = csi
             .update_usage(&rs)
             .into_iter()
             .map(|(s, u)| (s.to_string(), u))
             .collect();
+
         let bot_reply = compose_bot_reply(&rs, flow);
 
         CStatusOut {
@@ -43,7 +45,6 @@ impl<'a> CStatusOut {
             superstate: superstate.to_string(),
             last_states: rs.iter().map(|s| s.to_string()).collect(),
             turns_since_initiative: csi.tsi(),
-            // might be fallback later
             routine: csi.routine().to_string(),
             states_usage,
         }

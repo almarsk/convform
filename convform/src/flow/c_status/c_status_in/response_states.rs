@@ -4,7 +4,7 @@ use super::CStatusIn;
 pub struct ResponseStates<'a> {
     response_states: Vec<&'a str>,
     c_status_in: CStatusIn<'a>,
-    pub superstate: &'a str,
+    superstate: &'a str,
 }
 
 impl<'a> ResponseStates<'a> {

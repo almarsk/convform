@@ -9,10 +9,10 @@ import json
 async def q():
     csi1 = json.dumps({
         "routine": "standard",
-        "superstate": "otázka jestli vtip",
-       "user_reply": "já řeknu",
-        "last_states": ["otázka jestli vtip"],
-        "states_usage": {"žádost o představení": 1, "state_intro": 1, "otázka jestli vtip": 1},
+        "superstate": "úvod",
+       "user_reply": "a co ty jak se máš",
+        "last_states": ["state_intro"],
+        "states_usage": {},
         "turns_since_initiative": 0})
 
     cso1 = await bot_reply.reply(csi1)

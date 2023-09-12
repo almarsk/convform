@@ -1,35 +1,12 @@
 use super::super::Flow;
 use super::initiative::handle_initiative;
+use super::match_states::MatchItem;
 use super::non_initiative::handle_noninitiative;
 use super::response_states::ResponseStates;
 use super::rhematize::rhematize;
 use super::CStatusIn;
 use crate::flow::ResponseType;
 use linked_hash_set::LinkedHashSet;
-
-#[allow(dead_code)]
-#[derive(Clone, Debug)]
-pub struct MatchItem<'a> {
-    intent: Vec<&'a str>,
-    states: Vec<&'a str>,
-    index_start: usize,
-}
-
-impl<'a> MatchItem<'a> {
-    pub fn new(intent: Vec<&'a str>, states: Vec<&'a str>, index_start: usize) -> Self {
-        MatchItem {
-            intent,
-            states,
-            index_start,
-        }
-    }
-    pub fn get_states(&self) -> &Vec<&'a str> {
-        &self.states
-    }
-    pub fn get_index(&self) -> usize {
-        self.index_start
-    }
-}
 
 pub struct MatchedStates<'a> {
     matched_states: Vec<MatchItem<'a>>,
@@ -126,7 +103,10 @@ impl<'a> MatchedStates<'a> {
                     let _ms_response_type = &flow
                         .states
                         .iter()
-                        .find(|s| &s.1.state_name == ms)
+                        .find(|s| {
+                            println!("**{}~{}", ms, s.1.state_name);
+                            &s.1.state_name == ms
+                        })
                         .unwrap()
                         .1
                         .state_type;

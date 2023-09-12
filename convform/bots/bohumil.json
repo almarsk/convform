@@ -97,7 +97,7 @@
     "co raději": {
       "state_name": "co raději",
       "intents": {
-        "a co vy + jak se máš": [
+        "jak se máš": [
           "mám se dobře"
         ],
         "uživatel vtip": [
@@ -232,7 +232,7 @@
       },
       "say_annotation": "Bohumil zkouší odpovědět na otázku vtipu",
       "say": [
-        "$"
+        "$$$řekni otázku$$$"
       ],
       "over_iterated_say": [
         "$"

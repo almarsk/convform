@@ -1,6 +1,5 @@
 mod flow;
-use flow::c_status::c_status;
-pub use flow::c_status::CStatusOut;
+use flow::c_status::{c_status, CStatusOut};
 pub use flow::Flow;
 use pyo3::prelude::*;
 use std::fs::read_to_string;
@@ -16,18 +15,15 @@ impl CStatusOut {
             Err(e) => {
                 println!("validation error: {:?}", e);
                 CStatusOut::issue(String::from("ERROR: json validation unsuccesful"))
+                // not great - better make PyResult
             }
-            Ok(flow) => {
-                //let path_csi = format!("bots/csi/{}.json", csi);
-                //let csi = read_to_string(path_csi.as_str()).unwrap();
-                match c_status(csi, &flow, py) {
-                    Ok(cso) => cso,
-                    Err(e) => {
-                        println!("cso error: {:?}", e);
-                        CStatusOut::issue(String::from("ERROR: issue making cso"))
-                    }
+            Ok(flow) => match c_status(csi, &flow, py) {
+                Ok(cso) => cso,
+                Err(e) => {
+                    println!("cstatus_out error: {:?}", e);
+                    CStatusOut::issue(String::from("ERROR: issue making cso")) // not great - better make PyResult
                 }
-            }
+            },
         }
     }
     pub fn show(&self) {
