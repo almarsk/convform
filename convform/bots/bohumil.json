@@ -69,7 +69,7 @@
       ],
       "over_iterated_say": [],
       "state_type": "Connective",
-      "iteration": 3,
+      "iteration": 4,
       "superstate_global": false,
       "prioritize": false
     },
@@ -632,19 +632,6 @@
     }
   },
   "intents": {
-    "a co vy": {
-      "intent_name": "a co vy",
-      "intent_annotation": "uživatel se ptá co Bohumil",
-      "keywords": [
-        "a co ty",
-        "a ty",
-        "co ty"
-      ],
-      "adjacent": [
-        "$"
-      ],
-      "answer_to": []
-    },
     "ano": {
       "intent_name": "ano",
       "intent_annotation": "uživatel souhlasí",

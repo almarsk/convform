@@ -39,11 +39,12 @@ impl<'a> CStatusOut {
             .collect();
 
         let bot_reply = compose_bot_reply(&rs, flow);
-
+        let last_states = rs.iter().map(|s| s.to_string()).collect();
+        println!("last states: {:?}", last_states);
         CStatusOut {
             bot_reply,
             superstate: superstate.to_string(),
-            last_states: rs.iter().map(|s| s.to_string()).collect(),
+            last_states,
             turns_since_initiative: csi.tsi(),
             routine: csi.routine().to_string(),
             states_usage,

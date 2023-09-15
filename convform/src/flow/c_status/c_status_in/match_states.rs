@@ -7,14 +7,21 @@ pub struct MatchItem<'a> {
     _intent: &'a str,
     states: Vec<&'a str>,
     index_start: usize,
+    answer_to: &'a [&'a str],
 }
 
 impl<'a> MatchItem<'a> {
-    fn new(_intent: &'a str, states: Vec<&'a str>, index_start: usize) -> Self {
+    fn new(
+        _intent: &'a str,
+        states: Vec<&'a str>,
+        index_start: usize,
+        answer_to: &'a [&str],
+    ) -> Self {
         MatchItem {
             _intent,
             states,
             index_start,
+            answer_to,
         }
     }
     pub fn get_states(&self) -> Vec<&'a str> {
@@ -34,16 +41,8 @@ impl<'a> StringMatchingPool<'a> {
         // check if beginning of conversation - return state intro
         if csi.view_user_reply().is_empty() {
             // beginning of conversation
-            return MatchedStates::new(csi, vec![MatchItem::new("", vec!["state_intro"], 0)]);
+            return MatchedStates::new(csi, vec![MatchItem::new("", vec!["state_intro"], 0, &[])]);
         } else {
-            // increment implicitly answered states usage
-            kaps.iter().for_each(|k| {
-                k.answer_to().iter().for_each(|at| {
-                    let new_state_usage = csi.states_usage.entry(*at).or_insert(0);
-                    *new_state_usage += 1;
-                })
-            });
-
             // each ToMatch in kaps needs to be check against the user_reply
             let match_items: Vec<MatchItem<'a>> = kaps
                 .into_iter()
@@ -63,18 +62,27 @@ impl<'a> StringMatchingPool<'a> {
                         }
                         is_match
                     }) {
-                        Some(MatchItem::new(kap.intent_name, kap.adjacent, start_index))
+                        Some(MatchItem::new(
+                            kap.intent_name,
+                            kap.adjacent,
+                            start_index,
+                            kap.answer_to,
+                        ))
                     } else {
                         None
                     }
                 })
                 .collect::<Vec<MatchItem<'a>>>();
 
-            println!("{:#?}", match_items);
+            // increment implicitly answered states usage
+            match_items.iter().for_each(|k| {
+                k.answer_to.iter().for_each(|at| {
+                    let new_state_usage = csi.states_usage.entry(*at).or_insert(0);
+                    *new_state_usage += 1;
+                })
+            });
 
             MatchedStates::new(csi, match_items)
         }
     }
-
-    // answerto will be used to modify csi state usage history
 }

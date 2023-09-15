@@ -1,4 +1,5 @@
 use super::super::super::super::flow::ResponseType;
+use super::handle_matched_states::is_given_response_type;
 use super::non_initiative::handle_noninitiative;
 use super::{CStatusIn, Flow};
 use crate::flow::State;
@@ -19,35 +20,32 @@ pub fn handle_initiative<'a>(
     });
     //println!("prio: {:?}, non: {:?}", prioritized, non);
     if prioritized.iter().any(|state_name| {
-        let state_type = &get_full_state(flow, state_name).state_type;
-        matches!(state_type, ResponseType::Initiative)
-            || matches!(state_type, ResponseType::Flexible)
+        is_given_response_type(state_name, flow, ResponseType::Initiative)
+            || is_given_response_type(state_name, flow, ResponseType::Flexible)
     }) {
-        //println!("oralipmc1; non: {:?}", non);
         order_responsive_and_last_init_plus_maybe_connective(prioritized, flow)
     } else {
-        //println!("oralipmc2; non: {:?}", non);
         let mut ordered = prioritized.clone();
         ordered.extend(order_responsive_and_last_init_plus_maybe_connective(
             non, flow,
         ));
-        //println!("ordered1 {:?}", ordered);
-        if ordered.iter().any(|state_name| {
-            let state_type = &get_full_state(flow, state_name).state_type;
-            matches!(state_type, ResponseType::Initiative)
-                || matches!(state_type, ResponseType::Flexible)
-                || matches!(state_type, ResponseType::Solo)
+
+        if ordered.iter().all(|state_name| {
+            println!("state name: {state_name}");
+
+            !is_given_response_type(state_name, flow, ResponseType::Initiative)
+                || !is_given_response_type(state_name, flow, ResponseType::Flexible)
+                || !is_given_response_type(state_name, flow, ResponseType::Solo)
         }) {
             csi.turns_since_initiative = 0;
         } else {
             //csi.turns_since_initiative += 1;
+            println!("managing noninitiative");
             handle_noninitiative(&mut ordered, flow, csi);
+            println!("states out of noninitiative: {:?}", ordered);
         };
         //println!("ordered2 {:?}", ordered);
         ordered
-
-        // find last init/chunk
-        // order - prioritized, responsive, last init/chunk
     }
 }
 
@@ -63,31 +61,26 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
     v: Vec<&'a str>,
     flow: &'a Flow<'a>,
 ) -> Vec<&'a str> {
-    //println!("states coming into oralipmc {:?}", v);
+    println!("states coming into oralipmc {:?}", v);
 
     let mut last_init = ("", 0);
     let mut last_connective = ("", 0);
 
     let mut acc = v.iter().enumerate().fold(vec![], |mut acc, state| {
-        let current_state = get_full_state(flow, state.1);
-        if matches!(current_state.state_type, ResponseType::Flexible)
-            || matches!(current_state.state_type, ResponseType::Initiative)
-            || matches!(current_state.state_type, ResponseType::Solo)
-        {
-            last_init.0 = state.1;
-            last_init.1 = state.0
-        } else if matches!(current_state.state_type, ResponseType::Connective) {
-            last_connective.0 = state.1;
-            last_connective.1 = state.0;
-        } else if matches!(current_state.state_type, ResponseType::Responsive) {
-            //println!("pushin {:?} because its responsive", state.1);
-            acc.push(*state.1)
-        };
+        match get_full_state(flow, state.1).state_type {
+            ResponseType::Connective => {
+                last_connective.0 = state.1;
+                last_connective.1 = state.0;
+            }
+            ResponseType::Responsive => acc.push(*state.1),
+            _ => {
+                last_init.0 = state.1;
+                last_init.1 = state.0
+            }
+        }
 
         acc
     });
-
-    //println!("i{:?} c{:?}", last_init, last_connective);
 
     // put last initiative and possibly last connective at the end
     if !last_init.0.is_empty() {
@@ -95,11 +88,11 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
             && last_init.1 - last_connective.1 == 1
             && !last_connective.0.is_empty()
         {
-            //println!("pushin {:?} as the connective", last_connective.0);
+            println!("pushin {:?} as the connective", last_connective.0);
             acc.push(last_connective.0);
             acc.push(last_init.0);
         } else {
-            //println!("pushin {:?} as the initiative", last_init.0);
+            println!("pushin {:?} as the initiative", last_init.0);
             acc.push(last_init.0);
         }
     };

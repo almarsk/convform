@@ -18,6 +18,6 @@ pub fn c_status(input: String, flow: &Flow, _py: Python) -> Result<CStatusOut, S
         .treat(flow)
         .get_stringmatching_pool(flow)
         .match_states()
-        .handle_matched_states(flow)
+        .handle_matched_states2(flow)
         .create_c_state_out(flow))
 }

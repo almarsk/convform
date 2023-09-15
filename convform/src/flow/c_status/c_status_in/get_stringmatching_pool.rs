@@ -10,7 +10,7 @@ pub struct ToMatch<'a> {
     pub intent_name: &'a str,
     keywords: &'a [&'a str],
     pub adjacent: Vec<&'a str>,
-    answer_to: &'a [&'a str],
+    pub answer_to: &'a [&'a str],
 }
 
 impl<'a> ToMatch<'a> {
@@ -42,6 +42,8 @@ impl<'a> CStatusIn<'a> {
         let mut states = self.last_states.clone();
         states.extend(get_global_states(&self, flow));
 
+        println!("usage at start of get pool: {:?}", self.states_usage);
+
         let full_last_states: Vec<&'a State> = states
             .iter()
             .map(|ls| flow.states.iter().find(|fs| fs.0 == ls).unwrap())
@@ -51,13 +53,13 @@ impl<'a> CStatusIn<'a> {
         let last_states_intents: Vec<&'a BTreeMap<&str, Vec<&str>>> =
             full_last_states.iter().map(|fs| &fs.intents).collect();
 
-        println!("lsi: {:#?}", last_states_intents);
+        // println!("lsi: {:#?}", last_states_intents);
 
         let to_match_sequence: Vec<ToMatch> = last_states_intents
             .iter()
             .flat_map(|s| {
                 s.iter().map(|i| {
-                    println!("{:?}", i);
+                    println!("get_stringmatching_pool.rs{:?}", i);
 
                     ToMatch::new(
                         i.0,
@@ -110,6 +112,7 @@ fn get_global_states<'a>(csi: &CStatusIn, flow: &'a Flow) -> Vec<&'a str> {
 }
 
 fn get_adjacent<'a>(intent: (&str, &'a [&'a str]), flow: &'a Flow<'a>) -> Vec<&'a str> {
+    // dollar sign signifies default adjacent state which is present in flow definition
     if intent.1.contains(&"$") {
         let current_intent = flow.intents.iter().find(|i| i.0 == &intent.0).unwrap();
         let mut aditional_adjacent_states = current_intent.1.adjacent.clone();
