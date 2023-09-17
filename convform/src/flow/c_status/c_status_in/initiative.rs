@@ -31,18 +31,14 @@ pub fn handle_initiative<'a>(
         ));
 
         if ordered.iter().all(|state_name| {
-            println!("state name: {state_name}");
-
             !is_given_response_type(state_name, flow, ResponseType::Initiative)
-                || !is_given_response_type(state_name, flow, ResponseType::Flexible)
-                || !is_given_response_type(state_name, flow, ResponseType::Solo)
+                && !is_given_response_type(state_name, flow, ResponseType::Flexible)
+                && !is_given_response_type(state_name, flow, ResponseType::Solo)
         }) {
             csi.turns_since_initiative = 0;
         } else {
-            //csi.turns_since_initiative += 1;
             println!("managing noninitiative");
             handle_noninitiative(&mut ordered, flow, csi);
-            println!("states out of noninitiative: {:?}", ordered);
         };
         //println!("ordered2 {:?}", ordered);
         ordered
@@ -61,8 +57,6 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
     v: Vec<&'a str>,
     flow: &'a Flow<'a>,
 ) -> Vec<&'a str> {
-    println!("states coming into oralipmc {:?}", v);
-
     let mut last_init = ("", 0);
     let mut last_connective = ("", 0);
 

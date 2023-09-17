@@ -12,7 +12,7 @@ pub fn c_status(input: String, flow: &Flow, _py: Python) -> Result<CStatusOut, S
     let parsed_json: Value = serde_json::from_str(input.as_str()).map_err(|e| e.to_string())?;
     let csi: CStatusIn = CStatusIn::from_value(&parsed_json)?; // not great - could be made from_str
 
-    // println!("{:#?}", csi);
+    println!("{:#?}", csi);
 
     Ok(csi
         .treat(flow)

@@ -44,6 +44,7 @@ impl<'a> StringMatchingPool<'a> {
             return MatchedStates::new(csi, vec![MatchItem::new("", vec!["state_intro"], 0, &[])]);
         } else {
             // each ToMatch in kaps needs to be check against the user_reply
+
             let match_items: Vec<MatchItem<'a>> = kaps
                 .into_iter()
                 .filter_map(|kap| {

@@ -8,6 +8,7 @@ mod state_intro_check;
 pub mod validate_refs;
 use self::autoserialize::autoserialize;
 pub mod autoserialize;
+mod prompt;
 mod trait_edit;
 mod validate_regex;
 
@@ -33,6 +34,7 @@ impl<'a> Flow<'a> {
             flow.key_name_correspond(),
             flow.state_intro_present(),
             flow.placeholder_in_state(),
+            flow.prompt(),
         ];
 
         let issues: Vec<&IssueItem<'_>> =

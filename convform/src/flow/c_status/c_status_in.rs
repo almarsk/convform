@@ -57,7 +57,6 @@ impl<'a> CStatusIn<'a> {
     }
 
     pub fn update_usage(&mut self, rs: &[&'a str]) -> HashMap<&'a str, usize> {
-        //println!("{:?}", self.states_usage);
         rs.iter().for_each(|rs| {
             let entry = self.states_usage.entry(rs).or_insert(0);
             *entry += 1;

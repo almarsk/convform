@@ -11,12 +11,12 @@ impl<'a> MatchedStates<'a> {
     pub fn handle_matched_states2(self, flow: &'a Flow) -> ResponseStates<'a> {
         let (matched_b4_rhem, csi) = self.get_states_and_csi();
 
-        println!("usage at start of handle: {:?}", csi.states_usage);
+        //println!("usage at start of handle: {:?}", csi.states_usage);
 
         if matched_b4_rhem.is_empty() {
             // FALLBACK
             // println!("matched: {:#?}", matched);
-            println!("asss because empty");
+            //println!("asss because empty");
             return assess_response_states(vec![], csi, flow, None);
         }
 
@@ -31,7 +31,7 @@ impl<'a> MatchedStates<'a> {
             .collect();
         if !solo.is_empty() {
             let last_solo_to_vec = vec![solo[solo.len()]];
-            println!("asss because solo");
+            //println!("asss because solo");
             return assess_response_states(last_solo_to_vec, csi, flow, None);
         };
 
@@ -48,8 +48,8 @@ impl<'a> MatchedStates<'a> {
             })
             .collect();
         if !matches_next_superstate.is_empty() {
-            println!("goin next superstate");
-            println!("asss because next superstate match");
+            //println!("goin next superstate");
+            //println!("asss because next superstate match");
             return assess_response_states(
                 matches_next_superstate,
                 csi,
@@ -61,30 +61,26 @@ impl<'a> MatchedStates<'a> {
         // get non-overiterated states
         let nonoveriterated: Vec<&'a str> = matched
             .clone()
-            .iter()
+            .into_iter()
             .enumerate()
             .filter(|(i, ms)| {
                 antecedent_state_to_connective_unoveriterated(i, ms, matched.clone(), &csi, flow)
                     && !is_overiterated(ms, flow, MatchedStates::get_usage(&csi, ms))
             })
-            .map(|(_, ms)| *ms)
+            .map(|(_, ms)| ms)
             //not overiterated and ALSO if connective before initiative, the initiative is also not overiterated
             .collect::<LinkedHashSet<_>>()
             .into_iter()
             .collect();
 
-        if nonoveriterated.is_empty()
-            || nonoveriterated
-                .iter()
-                .all(|s| is_given_response_type(s, flow, ResponseType::Connective))
-        {
+        if nonoveriterated.is_empty() {
             let matched_overiterated = matched;
             let last_overiterated = matched_overiterated.iter().last().unwrap();
-            println!("asss because last overiterated");
+            //println!("asss because last overiterated");
             return assess_response_states(vec![last_overiterated], csi, flow, None);
         }
-        println!("asss happy path");
-        return assess_response_states(nonoveriterated, csi, flow, None);
+        //println!("asss happy path");
+        assess_response_states(nonoveriterated, csi, flow, None)
     }
 }
 

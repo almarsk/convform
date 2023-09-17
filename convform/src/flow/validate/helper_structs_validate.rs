@@ -25,6 +25,7 @@ pub enum IssueItem<'a> {
     DifferentKeyName((&'a str, &'a str, ConvItem)),
     DoublePlaceholder(&'a str, &'a str),
     FaultyRegex(FRgx<'a>),
+    InvalidPrompt((&'a str, &'a str)),
 }
 
 #[derive(Debug)]

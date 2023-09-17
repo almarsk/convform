@@ -18,10 +18,8 @@ pub fn handle_noninitiative<'a>(
             .1
             .initiativeness;
 
-    println!("init time: {}", is_time_to_be_initiative);
-
     if is_time_to_be_initiative {
-        // check remaining non-overiterated states from current state
+        // check remaining non-overiterated states from current superstate
         let current_superstatename = csi.superstate;
         let current_statenames = &flow
             .superstates
@@ -31,15 +29,15 @@ pub fn handle_noninitiative<'a>(
             .1
             .states;
 
-        println!("current statenames: {:?}", current_statenames);
-
         let current_available_states: Vec<&State<'_>> = flow
             .states
             .iter()
             .filter(|state| {
-                println!("usage: {:?}", csi.states_usage);
-
+                // debug section
+                /*
                 if current_statenames.contains(&state.1.state_name) {
+
+
                     println!("current state: {}", state.1.state_name);
                     println!(
                         "is in: {}",
@@ -58,7 +56,9 @@ pub fn handle_noninitiative<'a>(
                             true
                         }
                     );
-                }
+                } */
+
+                println!("current statename: {:?}", state.0);
 
                 current_statenames.contains(&state.1.state_name)
                     && (matches!(state.1.state_type, ResponseType::Flexible)
@@ -72,26 +72,15 @@ pub fn handle_noninitiative<'a>(
             .map(|s| s.1)
             .collect();
 
-        println!(
-            "current availabel statenames: {:?}",
-            current_available_states
-                .iter()
-                .map(|s| s.state_name)
-                .collect::<Vec<&str>>()
-        );
-
         if current_available_states.is_empty() {
             // check next superstate
-            println!("current superstates offers no more states");
             off_to_next_superstate(flow, csi, ordered)
         } else {
             csi.turns_since_initiative = 0;
             ordered.push(current_available_states[0].state_name);
-            println!("states after non_initiative: {:?}", ordered);
         }
     } else {
         csi.turns_since_initiative += 1;
-        println!("almost missed a spot");
         off_to_next_superstate(flow, csi, ordered)
         //debug from here
     };

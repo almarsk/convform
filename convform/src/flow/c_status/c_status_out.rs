@@ -40,7 +40,7 @@ impl<'a> CStatusOut {
 
         let bot_reply = compose_bot_reply(&rs, flow);
         let last_states = rs.iter().map(|s| s.to_string()).collect();
-        println!("last states: {:?}", last_states);
+        //println!("last states: {:?}", last_states);
         CStatusOut {
             bot_reply,
             superstate: superstate.to_string(),
@@ -53,6 +53,7 @@ impl<'a> CStatusOut {
         // get random say from each response state
         // how to handle fallback and how to communicate it in responsestates?
     }
+
     pub fn issue(issue: String) -> Self {
         CStatusOut {
             bot_reply: issue,

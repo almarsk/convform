@@ -53,7 +53,8 @@
       "states": [
         "state_intro",
         "představení",
-        "žádost o představení"
+        "žádost o představení",
+        "jak se máš"
       ],
       "description": "Bohumil se zeptá, jestli může říct vtip."
     }
@@ -232,7 +233,7 @@
       },
       "say_annotation": "Bohumil zkouší odpovědět na otázku vtipu",
       "say": [
-        "$$$řekni otázku$$$"
+        "###řekni otázku###"
       ],
       "over_iterated_say": [
         "$"
@@ -805,10 +806,9 @@
       "intent_name": "představení",
       "intent_annotation": "uživatel se představuje",
       "keywords": [
-        "jmenuji se",
-        "jmenuju se",
-        "se jmenuj",
-        "já jsem"
+        "jmenuj. se",
+        "já jsem",
+        "moje jméno je"
       ],
       "adjacent": [
         "těší mě"

@@ -32,24 +32,22 @@ impl<'a> MatchedStates<'a> {
     }
 }
 
-// assess_response_states(rs, csi, flow, superstate)
 pub fn assess_response_states<'a>(
     mut response_states: Vec<&'a str>,
     mut csi: CStatusIn<'a>,
     flow: &'a Flow,
     superstate: Option<&'a str>,
 ) -> ResponseStates<'a> {
-    println!("response states: {:?}", response_states);
+    //println!("response states: {:?}", response_states);
     let final_response_states: Vec<&'a str> = if !response_states.is_empty() {
-        println!("dbg hi");
         handle_initiative(response_states, flow, &mut csi)
     } else {
+        println!("matched_states.rs line 45 -> fallback management needed\n");
         handle_noninitiative(&mut response_states, flow, &mut csi);
-        println!("matched_states.rs line 222 -> fallback management needed\n");
-        response_states // THINK ABOUT THIS, THIS IS ALSOW WHERE FALLBACK MANAGEMENT GOES
+        response_states // THINK ABOUT THIS, THIS IS ALSO WHERE FALLBACK MANAGEMENT GOES
     };
 
-    println!("final response states: {:?}", final_response_states);
+    //println!("final response states: {:?}", final_response_states);
 
     let solo: Vec<&'a str> = final_response_states
         .iter()
