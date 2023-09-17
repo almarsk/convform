@@ -14,7 +14,7 @@ async def reply(cStatus):
 
     # print(vars(cStatus))
     cso = CStatusOut(bot_name, cStatus)
-
+    cso.show()
     return cso
 
     # LangChain                 setup template work for different situations

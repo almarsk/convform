@@ -30,7 +30,7 @@ impl<'a> MatchedStates<'a> {
             .copied()
             .collect();
         if !solo.is_empty() {
-            let last_solo_to_vec = vec![solo[solo.len()]];
+            let last_solo_to_vec = vec![solo[solo.len() - 1]];
             //println!("asss because solo");
             return assess_response_states(last_solo_to_vec, csi, flow, None);
         };
@@ -64,7 +64,7 @@ impl<'a> MatchedStates<'a> {
             .into_iter()
             .enumerate()
             .filter(|(i, ms)| {
-                antecedent_state_to_connective_unoveriterated(i, ms, matched.clone(), &csi, flow)
+                antecedent_state_to_connective_unoveriterated(i, matched.clone(), &csi, flow)
                     && !is_overiterated(ms, flow, MatchedStates::get_usage(&csi, ms))
             })
             .map(|(_, ms)| ms)
@@ -84,13 +84,10 @@ impl<'a> MatchedStates<'a> {
     }
 }
 
-pub fn is_given_response_type(state: &str, flow: &Flow, _response_type: ResponseType) -> bool {
-    if let Some(b) = flow
-        .states
-        .iter()
-        .find(|(_, s)| s.state_name == state)
-        .map(|(_, s)| !matches!(s.clone().state_type, _response_type))
-    {
+pub fn is_given_response_type(state: &str, flow: &Flow, response_type: ResponseType) -> bool {
+    if let Some(b) = flow.states.iter().find(|(_, s)| s.state_name == state).map(|(_, s)| {
+        std::mem::discriminant(&s.clone().state_type) == std::mem::discriminant(&response_type)
+    }) {
         b
     } else {
         println!("cant check response type - state not found");
@@ -120,21 +117,21 @@ pub fn get_next_superstate<'a>(flow: &'a Flow, csi: &CStatusIn) -> &'a str {
 }
 
 fn is_overiterated(state: &str, flow: &Flow, usage: &usize) -> bool {
-    if let Some(iteration) = &flow
+    if let Some(allowed_iteration) = &flow
         .states
         .iter()
         .find(|s| s.1.state_name == state)
         .map(|s| s.1.iteration)
     {
-        iteration < usage
+        allowed_iteration <= usage
     } else {
-        true
+        false
     }
 }
 
 fn antecedent_state_to_connective_unoveriterated(
     i: &usize,
-    ms: &str,
+
     matched: Vec<&str>,
     csi: &CStatusIn,
     flow: &Flow,
@@ -145,15 +142,7 @@ fn antecedent_state_to_connective_unoveriterated(
         None
     };
     if let Some(ns) = next_state {
-        let _ms_response_type = &flow
-            .states
-            .iter()
-            .find(|s| s.1.state_name == ms)
-            .unwrap()
-            .1
-            .state_type;
-
-        if matches!(_ms_response_type, ResponseType::Connective) {
+        if is_given_response_type(ns, flow, ResponseType::Connective) {
             let no = !is_overiterated(ns, flow, MatchedStates::get_usage(csi, ns));
             //println!("ns {} oi {}", ns, no);
             no

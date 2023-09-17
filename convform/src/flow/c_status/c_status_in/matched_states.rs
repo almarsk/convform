@@ -56,7 +56,7 @@ pub fn assess_response_states<'a>(
         .collect();
     if !solo.is_empty() {
         //println!("goin solo");
-        return ResponseStates::new(vec![solo[solo.len()]], csi, superstate);
+        return ResponseStates::new(vec![solo[solo.len() - 1]], csi, superstate);
     }
 
     ResponseStates::new(final_response_states, csi, superstate)

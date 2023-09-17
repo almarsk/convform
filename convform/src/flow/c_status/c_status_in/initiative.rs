@@ -30,10 +30,10 @@ pub fn handle_initiative<'a>(
             non, flow,
         ));
 
-        if ordered.iter().all(|state_name| {
-            !is_given_response_type(state_name, flow, ResponseType::Initiative)
-                && !is_given_response_type(state_name, flow, ResponseType::Flexible)
-                && !is_given_response_type(state_name, flow, ResponseType::Solo)
+        if ordered.iter().any(|state_name| {
+            is_given_response_type(state_name, flow, ResponseType::Initiative)
+                || is_given_response_type(state_name, flow, ResponseType::Flexible)
+                || is_given_response_type(state_name, flow, ResponseType::Solo)
         }) {
             csi.turns_since_initiative = 0;
         } else {

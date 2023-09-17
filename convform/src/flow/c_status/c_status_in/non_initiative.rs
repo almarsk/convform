@@ -1,4 +1,4 @@
-use super::handle_matched_states::get_next_superstate;
+use super::handle_matched_states::{get_next_superstate, is_given_response_type};
 use super::{
     super::super::super::flow::{Flow, ResponseType, State},
     CStatusIn,
@@ -29,47 +29,21 @@ pub fn handle_noninitiative<'a>(
             .1
             .states;
 
-        let current_available_states: Vec<&State<'_>> = flow
-            .states
+        let current_available_states: Vec<&State<'a>> = current_statenames
             .iter()
             .filter(|state| {
-                // debug section
-                /*
-                if current_statenames.contains(&state.1.state_name) {
-
-
-                    println!("current state: {}", state.1.state_name);
-                    println!(
-                        "is in: {}",
-                        current_statenames.contains(&state.1.state_name)
-                    );
-                    println!(
-                        "is init or flexi: {}",
-                        (matches!(state.1.state_type, ResponseType::Flexible)
-                            || matches!(state.1.state_type, ResponseType::Initiative))
-                    );
-                    println!(
-                        "is nonoveriterated: {}",
-                        if let Some(usage) = csi.states_usage.get(state.1.state_name) {
-                            state.1.iteration > *usage
-                        } else {
-                            true
-                        }
-                    );
-                } */
-
-                println!("current statename: {:?}", state.0);
-
-                current_statenames.contains(&state.1.state_name)
-                    && (matches!(state.1.state_type, ResponseType::Flexible)
-                        || matches!(state.1.state_type, ResponseType::Initiative))
-                    && if let Some(usage) = csi.states_usage.get(state.1.state_name) {
-                        state.1.iteration > *usage
-                    } else {
-                        true
-                    }
+                let f = is_given_response_type(state, flow, ResponseType::Flexible);
+                let i = is_given_response_type(state, flow, ResponseType::Initiative);
+                f || i
             })
-            .map(|s| s.1)
+            .map(|s| flow.states.iter().find(|state| state.0 == s).unwrap().1)
+            .filter(|state| {
+                if let Some(usage) = csi.states_usage.get(state.state_name) {
+                    state.iteration > *usage
+                } else {
+                    true
+                }
+            })
             .collect();
 
         if current_available_states.is_empty() {
