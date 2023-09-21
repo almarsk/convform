@@ -1,5 +1,6 @@
 import cstatus
 from convform import CStatusOut
+from smart_sub import check_for_prompts
 
 import os
 
@@ -10,11 +11,28 @@ async def reply(cStatus):
     bot_path = "convform/bots"
     bot_name = "bohumil"
 
-    path = f"convform/bots/{bot_name}.json"
+    path = f"convform/bots/"
 
     # print(vars(cStatus))
-    cso = CStatusOut(bot_name, cStatus)
+    cso = CStatusOut(bot_name, cStatus, path)
+
+
+    if "###" in cso.bot_reply:
+        persona = cso.persona(path, bot_name)
+        cso.prompt = f"{persona}; {cso.bot_reply[3:-4]}"
+        filled_in_reply = await check_for_prompts(persona, cso.bot_reply)
+        cso.bot_reply = filled_in_reply
+
     cso.show()
+
+    # prompt the intentional prompts
+    #
+    # if a signal is given (figure out propagating a flag through the custom structs and turning it on at the right place)
+    # create a return annotation function and a compose response based on gpt check
+    #
+    # if empty - create a function to assemble the prompt -> context + overall intent of bot
+
+
     return cso
 
     # LangChain                 setup template work for different situations

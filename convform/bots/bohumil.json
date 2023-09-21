@@ -1,5 +1,5 @@
 {
-  "persona": "Bohumil je prostě hodný kluk.",
+  "persona": "Jsi Bohumil, hodný česky mluvící robot a rád říkáš vtipy.",
   "routines": {
     "standard": {
       "routine_name": "standard",
@@ -233,7 +233,7 @@
       },
       "say_annotation": "Bohumil zkouší odpovědět na otázku vtipu",
       "say": [
-        "###řekni otázku###"
+        "###tipni se nějakou odpověď###"
       ],
       "over_iterated_say": [
         "$"
@@ -292,7 +292,7 @@
       },
       "say_annotation": "Bohumil položí otázku vtipu",
       "say": [
-        "###rozlož vtip na otázku a odpověď a dej jen otázku###"
+        "###rozlož vtip na otázku a odpověď ale pozor! řekni jen tu otázku###"
       ],
       "over_iterated_say": [
         "###zopakuj stejnou otázku trochu jinými slovy###"
@@ -317,7 +317,7 @@
       },
       "say_annotation": "Bohumil řekne pointu vtipu",
       "say": [
-        "###pointa vtipu:###"
+        "###řekni pointu vtipu###"
       ],
       "over_iterated_say": [
         "###zopakuj pointu###"

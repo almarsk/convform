@@ -6,7 +6,7 @@ pub use validate::autoserialize;
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct Flow<'a> {
-    persona: &'a str,
+    pub persona: &'a str,
     routines: BTreeMap<&'a str, Routine<'a>>,
     superstates: BTreeMap<&'a str, Superstate<'a>>,
     states: BTreeMap<&'a str, State<'a>>,

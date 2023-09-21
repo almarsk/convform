@@ -1,4 +1,5 @@
 mod flow;
+
 use flow::c_status::{c_status, CStatusOut};
 pub use flow::Flow;
 use pyo3::prelude::*;
@@ -7,8 +8,8 @@ use std::fs::read_to_string;
 #[pymethods]
 impl CStatusOut {
     #[new]
-    pub fn get_bot_reply(bot_name: &str, csi: String, py: Python) -> CStatusOut {
-        let path = format!("convform/bots/{}.json", bot_name);
+    pub fn get_bot_reply(bot_name: &str, csi: String, py: Python, path: &str) -> CStatusOut {
+        let path = format!("{}{}.json", path, bot_name);
         let file = read_to_string(path.as_str()).unwrap();
 
         match Flow::validate_behavior(path.as_str(), &file) {
@@ -28,6 +29,15 @@ impl CStatusOut {
     }
     pub fn show(&self) {
         println!("{:#?}", self)
+    }
+
+    pub fn persona(&self, path: &str, bot_name: &str) -> String {
+        let path = format!("{}{}.json", path, bot_name);
+        let file = read_to_string(path.as_str()).unwrap();
+        match Flow::validate_behavior(path.as_str(), &file) {
+            Ok(flow) => flow.persona.to_string(),
+            _ => "".to_string(),
+        }
     }
 }
 

@@ -1,5 +1,6 @@
 use super::c_status_in::response_states::ResponseStates;
 use super::Flow;
+
 use pyo3::prelude::*;
 use rand::{thread_rng, Rng};
 use std::collections::HashMap;
@@ -15,7 +16,7 @@ impl<'a> ResponseStates<'a> {
 #[pyclass]
 pub struct CStatusOut {
     #[pyo3(get, set)]
-    bot_reply: String, // this has to be assembled
+    pub bot_reply: String, // this has to be assembled
     #[pyo3(get, set)]
     routine: String,
     #[pyo3(get, set)]
@@ -26,6 +27,8 @@ pub struct CStatusOut {
     states_usage: HashMap<String, usize>,
     #[pyo3(get, set)]
     turns_since_initiative: usize,
+    #[pyo3(get, set)]
+    prompt: String,
 }
 
 impl<'a> CStatusOut {
@@ -48,10 +51,8 @@ impl<'a> CStatusOut {
             turns_since_initiative: csi.tsi(),
             routine: csi.routine().to_string(),
             states_usage,
+            prompt: String::from(""),
         }
-
-        // get random say from each response state
-        // how to handle fallback and how to communicate it in responsestates?
     }
 
     pub fn issue(issue: String) -> Self {
@@ -69,9 +70,10 @@ fn compose_bot_reply(rs: &[&str], flow: &Flow) -> String {
             if let Some(state) = flow.states.iter().find(|fs| fs.1.state_name == *rs) {
                 let says = state.1.say.clone();
                 let n = rng.gen_range(0..says.len());
-                says[n]
+                let raw_answer = says[n];
+                raw_answer.to_string()
             } else {
-                ""
+                "".to_string()
             }
         })
         .fold(String::new(), |acc, x| format!("{} {}", acc, x))

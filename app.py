@@ -56,6 +56,7 @@ class Reply(db.Model):
     content = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     reaction_ms = db.Column(db.Integer) # chatbot replies have a NULL reaction_ms
+    prompt = db.Column(db.Text)
     cstatus = db.Column(JSON)
 
 
@@ -92,7 +93,7 @@ async def fetch_string():
         session["page"] = "outro"
         return redirect(url_for("dispatcher"))
     else:
-        repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso))
+        repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso), prompt=cso.prompt)
         #print(vars(repl))
         db.session.add(repl)
         db.session.commit()

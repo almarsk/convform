@@ -4,24 +4,25 @@ import asyncio
 import os
 import json
 
-# print(os.getcwd())
-csiQ = json.dumps({
-    "user_reply": "ahoj",
-    "routine": "standard",
-    "superstate": "úvod",
-    "last_states": ["state_intro"],
-    "states_usage": {"state_intro": 1},
-    "turns_since_initiative": 0
-})
-
 async def q():
 
     csi1 = json.dumps(
-        {"routine": "standard",
-            "user_reply": "ahoj jak se máš",
-            "superstate": "úvod",
-            "last_states": ["state_intro"], "states_usage": {"state_intro": 1},
-            "turns_since_initiative": 0})
+        {
+            "user_reply": "tak jo, řekni",
+            "routine": "standard",
+            "superstate": "otázka jestli vtip",
+            "last_states": ["otázka jestli vtip"],
+            "states_usage": {
+                "a co vy": 1,
+                "žádost o představení": 2,
+                "jak se máš": 1,
+                "mám se dobře": 1,
+                "state_intro": 1,
+                "otázka jestli vtip": 1,
+                "těší mě": 1,
+                "to mě těší": 1},
+            "turns_since_initiative": 0
+        })
 
 
 

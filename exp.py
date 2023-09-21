@@ -38,9 +38,9 @@ def main(query='', states=False):
 
             if who:
                 if len(user[1]) < 6:
-                    return f"{user[1].capitalize()} ({reply[-2] / 1000}s):\t"
+                    return f"{user[1].capitalize()} ({reply[4] / 1000}s):\t"
                 else:
-                    return f"{user[1].capitalize()} ({reply[-2] / 1000}s):\t"
+                    return f"{user[1].capitalize()} ({reply[4] / 1000}s):\t"
             else:
                 return f"{user[2].capitalize()}:\t"
 
@@ -74,12 +74,13 @@ def main(query='', states=False):
         # the actual conversation
         for reply in replies:
             if reply[1] == user[0]:
-                print(f"{user_bot(reply[-2])} {reply[2].strip()}")
+                print(f"{user_bot(reply[4])} {reply[2].strip()}")
                 if states and not reply[4]:
-                    turn_metadata = reply[5]
+                    turn_metadata = reply[6]
                     # greetings from noobsville
                     # print("whole tuple"+str(reply))
                     print(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", "")+"\n")
+                    print(reply[5])
         print("\n______\n")
 
     # Close the cursor and connection objects
