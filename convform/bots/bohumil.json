@@ -292,7 +292,7 @@
       },
       "say_annotation": "Bohumil položí otázku vtipu",
       "say": [
-        "###rozlož vtip na otázku a odpověď ale pozor! řekni jen tu otázku###"
+        "###vymysli vtip a řekni z něj jenom otázku###"
       ],
       "over_iterated_say": [
         "###zopakuj stejnou otázku trochu jinými slovy###"
