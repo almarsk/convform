@@ -16,6 +16,7 @@ impl<'a> StringMatchingPool<'a> {
     }
 
     pub fn get_kaps(self) -> Vec<ToMatch<'a>> {
+        // decompose combined intents
         self.keywords_adjacent_pairs
     }
 

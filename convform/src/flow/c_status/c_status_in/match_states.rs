@@ -36,15 +36,14 @@ impl<'a> StringMatchingPool<'a> {
     pub fn match_states(self) -> MatchedStates<'a> {
         let mut csi = self.get_csi();
         let user_reply = csi.view_user_reply();
-        let kaps = self.get_kaps();
+        let kaps = self.get_kaps(); // decompose combined intents
 
         // check if beginning of conversation - return state intro
         if csi.view_user_reply().is_empty() {
             // beginning of conversation
-            return MatchedStates::new(csi, vec![MatchItem::new("", vec!["state_intro"], 0, &[])]);
+            MatchedStates::new(csi, vec![MatchItem::new("", vec!["state_intro"], 0, &[])])
         } else {
             // each ToMatch in kaps needs to be check against the user_reply
-
             let match_items: Vec<MatchItem<'a>> = kaps
                 .into_iter()
                 .filter_map(|kap| {
@@ -54,6 +53,7 @@ impl<'a> StringMatchingPool<'a> {
                         let kw_rgx = Regex::new(&format!("(?i){}", kw)).unwrap();
                         let captures_vec: Vec<_> = kw_rgx.captures_iter(user_reply).collect();
                         let is_match = !captures_vec.is_empty();
+
                         // determine the earliest start index
                         for cap in captures_vec {
                             let current_start_index = cap.get(0).unwrap().start();
@@ -61,6 +61,7 @@ impl<'a> StringMatchingPool<'a> {
                                 start_index = current_start_index
                             }
                         }
+
                         is_match
                     }) {
                         Some(MatchItem::new(
@@ -74,6 +75,16 @@ impl<'a> StringMatchingPool<'a> {
                     }
                 })
                 .collect::<Vec<MatchItem<'a>>>();
+
+            // fuse back decomposed combined matchitems
+            // each main one - check if the empty ones are there
+            // if all of them -
+            //              fuse => intent name intent1+intent2...
+            //                      adjacent just on the main one
+            //                      the lowest start index
+            //                      all answer to s can be fused,
+            //                          because duplicity check has
+            //                          been done upon decompose
 
             // increment implicitly answered states usage
             match_items.iter().for_each(|k| {

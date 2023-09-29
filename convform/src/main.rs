@@ -1,21 +1,19 @@
 mod flow;
-//use flow::c_status::CStatusOut;
+use flow::Flow;
+use std::fs::read_to_string;
 
 fn main() {
-    let args: Vec<String> = std::env::args().collect();
-    let zero = &String::from("0");
-    let csi_index = args.get(1).unwrap_or(zero);
+    let flow_path = "bots/bohumil.json";
+    let flow_file = read_to_string(flow_path).unwrap();
 
-    let _csi = format!("csi{}", csi_index);
-    //let c_out =
-
-    //CStatusOut::get_bot_reply("bohumil", &_csi); // fix this
+    match Flow::validate_behavior(flow_path, &flow_file) {
+        Err(e) => {
+            println!("validation error: {:?}", e);
+        }
+        Ok(flow) => println!("{:?}", flow),
+    }
 }
 
-// make the python interface
-//
-// cState will be written into the database as json upon every run
-//
 // check steps of dumb design
 //      break into functions - plan
 //      set up dumb design module

@@ -20,7 +20,7 @@ impl<'a> MatchedStates<'a> {
             return assess_response_states(vec![], csi, flow, None);
         }
 
-        // order states by start index
+        // order states by start index + converts MatchItems into &strs
         let matched = rhematize(matched_b4_rhem);
 
         // check for solo states and return last solo one if there is some
@@ -109,7 +109,7 @@ pub fn get_next_superstate<'a>(flow: &'a Flow, csi: &CStatusIn) -> &'a str {
         .position(|s| s == &csi.superstate)
         .unwrap();
 
-    if order_of_superstates.len() <= index_current_superstate {
+    if order_of_superstates.len() - 1 <= index_current_superstate {
         order_of_superstates[0]
     } else {
         order_of_superstates[index_current_superstate + 1]

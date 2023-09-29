@@ -51,8 +51,7 @@ impl<'a> CStatusIn<'a> {
         let last_states_intents: Vec<&'a BTreeMap<&str, Vec<&str>>> =
             full_last_states.iter().map(|fs| &fs.intents).collect();
 
-        let mut unique_last_states_intents: BTreeMap<&str, Vec<&str>> =
-            BTreeMap::<&str, Vec<&str>>::new();
+        let mut unique_last_states_intents = BTreeMap::<&str, Vec<&str>>::new();
 
         last_states_intents.iter().for_each(|b| {
             b.iter().for_each(|i| {
@@ -64,6 +63,14 @@ impl<'a> CStatusIn<'a> {
                 })
             });
         });
+
+        // decompose combined intents here and keep the info about the pairs
+        // only one of the combined intents will get the adjacent states
+        // the list of grouping will be added in Stringmatchingpool (new arm)
+        // the groupings list will be structured like - main; empty, so the pairing is easy
+        // add answer to only if the intent isnt duplicate
+        //
+        // add annotation to ToMatch so gpt can be prompted easily
 
         let to_match_sequence: Vec<ToMatch> = unique_last_states_intents
             .into_iter()
@@ -119,6 +126,10 @@ fn get_global_states<'a>(csi: &CStatusIn, flow: &'a Flow) -> Vec<&'a str> {
 
 fn get_adjacent<'a>(intent: (&str, Vec<&'a str>), flow: &'a Flow<'a>) -> Vec<&'a str> {
     // dollar sign signifies default adjacent state which is present in flow definition
+    //
+    // the function gets the state defined adjacent states in intent.1
+    // if there is "$" in the states intents, it finds the default adjacent (intent defined) states
+    // and puts those together
     if intent.1.contains(&"$") {
         let current_intent = flow.intents.iter().find(|i| i.0 == &intent.0).unwrap();
         let mut aditional_adjacent_states = current_intent.1.adjacent.clone();

@@ -17,7 +17,7 @@ pub fn c_status(input: String, flow: &Flow, _py: Python) -> Result<CStatusOut, S
     Ok(csi
         .treat(flow)
         .get_stringmatching_pool(flow)
-        .match_states()
+        .match_states() // add the checker for combined states
         .handle_matched_states2(flow)
         .create_c_state_out(flow))
 }

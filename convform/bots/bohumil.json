@@ -98,9 +98,6 @@
     "co raději": {
       "state_name": "co raději",
       "intents": {
-        "jak se máš": [
-          "mám se dobře"
-        ],
         "uživatel vtip": [
           "tak jo",
           "řekni mi vtip"
@@ -130,7 +127,7 @@
           "řekni mi vtip",
           "co raději"
         ],
-        "uživatel vtip": [
+        "uživatel chce říct vtip": [
           "tak jo",
           "řekni mi vtip"
         ]
@@ -359,7 +356,33 @@
         "těší mě": [
           "mě taky",
           "představení"
-        ]
+        ],
+        "state_intro": {
+          "state_name": "state_intro",
+          "intents": {
+            "jak se máš": [
+              "$"
+            ],
+            "představení": [
+              "$"
+            ],
+            "žádost o představení": [
+              "$"
+            ]
+          },
+          "say_annotation": "Bohumil se představí",
+          "say": [
+            "Ahoj, já se jmenuji Bohumil.",
+            "Zdravím, mé jméno je Bohumil."
+          ],
+          "over_iterated_say": [
+            "Povídám, že se jmenuji Bohumil."
+          ],
+          "state_type": "Solo",
+          "iteration": 1,
+          "superstate_global": true,
+          "prioritize": false
+        }
       },
       "say_annotation": "Bohumil se představí",
       "say": [
@@ -464,6 +487,7 @@
       "state_name": "to jsem rád",
       "intents": {
         "řekni vtip": [
+          "tak jo",
           "otázka vtipu"
         ]
       },

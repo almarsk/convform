@@ -1,8 +1,8 @@
 use super::c_status_in::response_states::ResponseStates;
 use super::Flow;
-
 use pyo3::prelude::*;
 use rand::{thread_rng, Rng};
+use serde::Serialize;
 use std::collections::HashMap;
 
 impl<'a> ResponseStates<'a> {
@@ -11,7 +11,7 @@ impl<'a> ResponseStates<'a> {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Serialize)]
 #[allow(dead_code)]
 #[pyclass]
 pub struct CStatusOut {

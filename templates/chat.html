@@ -8,41 +8,43 @@
 <script type="text/javascript">
     var base_url = ""
 
-      async function fetchString() {
-          try {
-            var url = window.location.origin+window.location.pathname+'fetch_string';
+    async function fetchString() {
+        try {
+            var url = window.location.origin + window.location.pathname + 'fetch_string';
             const response = await fetch(url);
             const data = await response.json();
-            document.querySelector(".message").innerHTML = data.fetched_string;
-          } catch (error) {
-              console.error('Error:', error);
-          } finally {
+            const cstatus = JSON.parse(data.fetched_string)
+            console.log(JSON.stringify(cstatus.meta, null, 2, false));
+            document.querySelector(".message").innerHTML = cstatus.reply;
+        } catch (error) {
+            console.error('Error:', error);
+        } finally {
             document.querySelector(".message").classList.remove("loader")
             document.querySelector(".confirm").classList.remove("hide")
             document.querySelector(".abort").classList.remove("hide")
             start_time = Date.now();
-          }
-      }
+        }
+    }
 
-    document.addEventListener("DOMContentLoaded", ()=>{
+    document.addEventListener("DOMContentLoaded", () => {
 
         fetchString()
-        document.querySelectorAll(".avatar").forEach(avatar=>{
-        avatar.classList.remove("hide")
+        document.querySelectorAll(".avatar").forEach(avatar => {
+            avatar.classList.remove("hide")
         })
         document.querySelector(".message").classList.add("loader")
-        document.querySelector(".message").innerHTML=''
+        document.querySelector(".message").innerHTML = ''
         document.querySelector(".user-input").classList.remove("hide")
         document.querySelector(".user-input").name = "answer"
     })
 
-    document.querySelector(".abort").addEventListener("click", ()=>{
-        document.querySelector(".grid-container").action="{{ url_for('dispatcher', abort=1)}}"
+    document.querySelector(".abort").addEventListener("click", () => {
+        document.querySelector(".grid-container").action = "{{ url_for('dispatcher', abort=1)}}"
     })
 
     const reaction_ms = document.querySelector("#reaction-ms")
 
-        document.querySelector(".grid-container").addEventListener("submit", function() {
+    document.querySelector(".grid-container").addEventListener("submit", function () {
         reaction_ms.value = Date.now() - start_time;
     });
 

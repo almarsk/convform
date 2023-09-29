@@ -79,7 +79,7 @@ def main(query='', states=False):
                     turn_metadata = reply[6]
                     # greetings from noobsville
                     # print("whole tuple"+str(reply))
-                    print(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", ""))
+                    pprint.pp(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", ""))
                     if reply[5]:
                         print("prompt: "+reply[5])
                     print("\n")

@@ -85,7 +85,7 @@ async def fetch_string():
         })
     #print("sesh user id:"+str(session["user_id"]))
     csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
-    cso = await reply(csi, session["user_id"])
+    cso = await reply(csi, session["user_id"], session["flow"])
     #print("cso.show():")
     # print(cso.show())
     session.modified = True
@@ -98,7 +98,7 @@ async def fetch_string():
         db.session.add(repl)
         db.session.commit()
         return jsonify({
-            "fetched_string": cso.bot_reply
+            "fetched_string": cstatus.to_json(cso)
         })
 
 

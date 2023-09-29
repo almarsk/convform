@@ -17,10 +17,11 @@ impl<'a> ResponseStates<'a> {
         // WHICH WILL CHANGE BEHAVIOR
         // IN CASE OF EMPTY RESPONSE STATES VEC
 
-        let mut current_superstate = c_status_in.superstate;
-        if let Some(s) = superstate {
-            current_superstate = s
-        }
+        let current_superstate = if let Some(s) = superstate {
+            s
+        } else {
+            c_status_in.superstate
+        };
 
         ResponseStates {
             response_states,

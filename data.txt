@@ -1,349 +1,95 @@
-SELECT * FROM user ;
+SELECT * FROM user WHERE id=22;
 
-User Test (no.1)
-Talked to Bohumil on 2023-09-21
-from 14:10:50
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (1.058s):	 ahoj
-Bohumil:	 Jaké je tvé jméno?
-Test (4.508s):	 já jsem albert. jak se máš?
-Bohumil:	 Těší mě, že se poznáváme. Já se mám fajn. A vy? a jak se máte?
-Test (4.399s):	 já se mám taky dobře
-Bohumil:	 To mám radost! Chcete slyšet vtip?
-Test (2.265s):	 tak jo
-Bohumil:	 Q: Proč robot nemůže skočit na skokánek?
-A: Protože by musel dodržet pravidlo "žádné skákání!"
-Test (11.886s):	 to je dobrý
-Bohumil:	 „Víš, jaký je rozdíl mezi dvěma balónky? Jedna je naplněná vzduchem a druhá se mou přítelkyní!“
-
-______
-
-User Test (no.2)
-Talked to Bohumil on 2023-09-21
-from 14:20:00
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (2.481s):	 ahoj bohumile
-Bohumil:	 Jaké je tvé jméno?
-Test (4.297s):	 já se jmenuju albert
-Bohumil:	 jak se daří?
-Test (6.401s):	 daří se mi dobře
-Bohumil:	 To mám radost! Chcete slyšet vtip?
-Test (2.739s):	 tak jo
-Bohumil:	 Q: Proč jdou knihy do knihovny?
-A: Protože tam mají domov.
-Test (5.23s):	 to je vtipné
-Bohumil:	 "Zřejmě je to nějaká chyba ve výpisu, protože se to nemůže dostat do bodu."
-
-______
-
-User Test (no.3)
-Talked to Bohumil on 2023-09-21
-from 14:21:13
+User Test (no.22)
+Talked to Bohumil on 2023-09-28
+from 11:12:01
 and ended the conversation prematurely (or it never had a fixed end).
 
 Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (1.107s):	 ahoj
-Bohumil:	 Jak se jmenuješ?
-Test (1.68s):	 albert
-Bohumil:	 a jak se máte?
-Test (1.889s):	 dobře
-Bohumil:	 To mám radost! Můžu říct vtip?
-Test (1.72s):	 tak jo
-Bohumil:	 Q: Proč robot nikdy nepřestane pracovat? 
-A: Protože nemá zákoník práce.
-Test (3.475s):	 hm hm
-Bohumil:	 "Říkám vtipy, protože je to zábava. A jaká je pointa? Člověk se nezasměje, dokud neuslyší tu nejlepší část!"
+('{"routine": "standard", "superstate": "úvod", "last_states": '
+ '["state_intro"], "states_usage": {"state_intro": 1}, '
+ '"turns_since_initiative": 0}')
 
-______
 
-User Test (no.4)
-Talked to Bohumil on 2023-09-22
-from 06:28:34
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (3.685s):	 ahoj bohumile
-Bohumil:	 Jak se jmenuješ?
-Test (6.073s):	 já se jmenuju Albert
-Bohumil:	 a jak se máte?
-Test (2.948s):	 dobře a ty?
-Bohumil:	 To jsem rád! Můžu říct vtip?
-Test (5.123s):	 tak jo
-Bohumil:	 <br>
-
-______
-
-User Test (no.5)
-Talked to Bohumil on 2023-09-22
-from 06:29:30
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (4.411s):	 aho bohumile, řekni mi vtip
+Test (3.507s):	 ahoh boumile
 Bohumil:	 Jak ti mám říkat?
-Test (2.074s):	 albert
-Bohumil:	 jak se daří?
-Test (1.6s):	 dobře
-Bohumil:	 To jsem rád! Chcete slyšet vtip?
-Test (1.88s):	 tak jo
-Bohumil:	 Samozřejmě, tady je jeden vtip:<br><br>Otázka: Jakou barvu má medvědí srst?<br>
+('{"routine": "standard", "superstate": "úvod", "last_states": ["žádost o '
+ 'představení"], "states_usage": {"žádost o představení": 1, "state_intro": '
+ '1}, "turns_since_initiative": 0}')
 
-______
 
-User Test (no.6)
-Talked to Bohumil on 2023-09-22
-from 06:39:46
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (2.715s):	 ahoj bohumile
-Bohumil:	 Jak ti mám říkat?
-Test (6.133s):	 říkej mi Albert
-Bohumil:	 a jak se máte?
-Test (3.875s):	 dobře se mám
-Bohumil:	 To jsem rád! Chcete slyšet vtip?
-Test (2.248s):	 tak jo
-Bohumil:	 Co udělá pytlík brambůrek, když ho potká zakřičená brambora?
-Test (8.309s):	 nevím, co?
-Bohumil:	 Samozřejmě, rád tě pobavím! Tady je jeden vtip:<br><br>Co dělá žirafa ve vířivce?<br><br>Má natažený krk!
-
-______
-
-User Test (no.7)
-Talked to Bohumil on 2023-09-25
-from 17:33:44
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (2.71s):	 nazdar bohumile
-Bohumil:	 Jak ti mám říkat?
-Test (4.788s):	 říkej mi třeba albert
-Bohumil:	 jak se daří?
-Test (3.607s):	 dobře a ty?
-Bohumil:	 To jsem rád! Můžu říct vtip?
-Test (10.953s):	 tak jo
-Bohumil:	 Co udělá průvodce, když se ztratí ve velkém lese?
-Test (4.868s):	 to nevím, co dělá?
-Bohumil:	 Samozřejmě! Tady máš vtip:<br><br>Proč se učilička ptá Pepíčka: "Kolik je 2+2?" Pepíček odpověděl: "To se ptáte mě? Já jsem přeci robot, ne matematický génius!"
-
-______
-
-User Test (no.8)
-Talked to Bohumil on 2023-09-25
-from 17:42:57
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (1.126s):	 ahoj
-Bohumil:	 Jak se jmenuješ?
-Test (25.988s):	 albert a jak se máš
-Bohumil:	 Já se mám fajn. A vy? a jak se máte?
-Test (2.837s):	 já taky dobře
-Bohumil:	 To mám radost! Můžu říct vtip?
-Test (1.82s):	 tak jo
-
-______
-
-User Test (no.9)
-Talked to Bohumil on 2023-09-25
-from 17:43:42
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (0.887s):	 ahoj
-Bohumil:	 Jaké je tvé jméno?
-Test (1.437s):	 albert
-Bohumil:	 a jak se máte?
-Test (1.565s):	 dobře
-Bohumil:	 To mám radost! Můžu říct vtip?
-Test (1.409s):	 tak jo
-Bohumil:	 Jak se říká melounu, který nezvládal základní matematické operace?
-Test (9.77s):	 jak?
-Bohumil:	 Proč matematik nemůže být zloděj?<br><br>Protože při krádeži by se musel vždycky přiznat, protože dva minus dva je vždy nula!
-
-______
-
-User Test (no.10)
-Talked to Bohumil on 2023-09-25
-from 18:08:32
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (2.247s):	 ahoj bohumile
-Bohumil:	 Jak ti mám říkat?
-Test (3.79s):	 jsem albert
-Bohumil:	 jak se daří?
-Test (4.384s):	 velmi dobře
-Bohumil:	 To mám radost! Můžu říct vtip?
-Test (1.7s):	 tak jo
-
-______
-
-User Test (no.11)
-Talked to Bohumil on 2023-09-25
-from 18:12:55
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (0.98s):	 ahoj
-Bohumil:	 Jak ti mám říkat?
-Test (1.925s):	 albert
-Bohumil:	 jak se daří?
-Test (0.956s):	 dobře
-Bohumil:	 To jsem rád! Chcete slyšet vtip?
-Test (1.582s):	 jo
-
-______
-
-User Test (no.12)
-Talked to Bohumil on 2023-09-25
-from 18:14:27
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (0.476s):	 
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (0.964s):	 
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (0.599s):	 
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (0.923s):	 ahoj
-Bohumil:	 Jaké je tvé jméno?
-Test (0.516s):	 
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (0.844s):	 
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (2.794s):	 ahoj
-Bohumil:	 a jak se máte?
-Test (1.736s):	 dobře
-Bohumil:	 To jsem rád! Můžu říct vtip?
-Test (1.626s):	 tak jo
-
-______
-
-User Test (no.13)
-Talked to Bohumil on 2023-09-25
-from 18:20:59
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (2.933s):	 ahoj bohumile jak se máš
-Bohumil:	 Já se mám skvěle. A co vy? a jak se máte?
-Test (2.768s):	 já taky dobrý
-Bohumil:	 Jak ti mám říkat?
-Test (1.937s):	 Albert
-Bohumil:	 Chcete slyšet vtip?
-Test (1.477s):	 tak jo
-
-______
-
-User Test (no.14)
-Talked to Bohumil on 2023-09-25
-from 18:24:20
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (1.823s):	 ahoj bohumile
-Bohumil:	 Jak ti mám říkat?
-Test (2.682s):	 já jsem Albert
-Bohumil:	 Moc mě těší. a jak se máte?
-Test (4.051s):	 mám se skvěle přímo
-Bohumil:	 To jsem rád! Můžu říct vtip?
-Test (1.73s):	 tak jo
-
-______
-
-User Test (no.15)
-Talked to Bohumil on 2023-09-25
-from 18:24:49
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Ahoj, já se jmenuji Bohumil.
-Test (2.479s):	 ahoj bohumile
-Bohumil:	 Jaké je tvé jméno?
-Test (2.971s):	 já jsem Ablert
-Bohumil:	 Moc mě těší. a jak se máte?
-Test (5.066s):	 mám se dobře a ty?
-Bohumil:	 To jsem rád! Můžu říct vtip?
-Test (1.791s):	 tak jo
-Bohumil:	 Na co si starý počítač odskočí, když se rozbije?<br>
-Test (5.364s):	 nevím
-Bohumil:	 Pokud s tebou tohle nebylo dohodnuto předem, tak bohužel, nemohu ti pointu tohoto konkrétního vtipu říct. Měl bych ti říct jiný vtip?
-Test (17.566s):	 dobře tak prosím
-Bohumil:	 Tak co, mám říct ještě jeden?
-Test (2.956s):	 jojo
-Bohumil:	 Tak jo.
-Test (2.388s):	 tak jo
-Bohumil:	 Tak to opravdu nevím.
-
-______
-
-User Test (no.16)
-Talked to Bohumil on 2023-09-25
-from 18:28:37
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (2.093s):	 Ahoj bohumile
-Bohumil:	 Jaké je tvé jméno?
-Test (3.226s):	 jsem Albert
-Bohumil:	 a jak se máte?
-Test (2.089s):	 moc dobře
-Bohumil:	 To mám radost! Chcete slyšet vtip?
-Test (1.411s):	 tak jo
-Bohumil:	 Dobrá, tady je otázka vyplývající z vtipu: Proč v roce 2021 není dobré hrát karty s hmyzem?
-Test (7.181s):	 nevím, proč?
-Bohumil:	 Protože v roce 2021 jsou všude distanční karty!
-Test (12.172s):	 dobrý vtip
-Bohumil:	 Tak já povím další vtip, ne?
-Test (1.602s):	 tak jo
-Bohumil:	 Proč by ne, nemám nic proti.
-
-______
-
-User Test (no.17)
-Talked to Bohumil on 2023-09-25
-from 18:29:29
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (2.152s):	 ahoj bohumile
-Bohumil:	 Jak ti mám říkat?
-Test (4.45s):	 říkej mi Albert
-Bohumil:	 jak se daří?
-Test (2.147s):	 skvěle
-Bohumil:	 To mám radost! Chcete slyšet vtip?
-Test (7.674s):	 tak jo
-Bohumil:	 Kolik programátorů je potřeba k výměně žárovky?
-Test (5.016s):	 nevím, kolik?
-Bohumil:	 Pointa vtipu je, že programátoři nepotřebují vyměňovat žárovky, protože většinou pracují v temných místnostech před monitory.
-Test (34.905s):	 hm to je dobré
-Bohumil:	 Tak já povím další vtip, ne?
-Test (1.72s):	 tak jo
-Bohumil:	 Proč by ne, nemám nic proti.
-
-______
-
-User Test (no.18)
-Talked to Bohumil on 2023-09-25
-from 18:33:43
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-Test (2.671s):	 ahoj bohumile
-Bohumil:	 Jak ti mám říkat?
-Test (3.121s):	 já jsem Albert
+Test (2.84s):	 já jsem albert
 Bohumil:	 Těší mě, že se poznáváme. jak se daří?
-Test (5.552s):	 já se mám skvěle a jak se máš ty?
-Bohumil:	 To mám radost! Já se mám skvěle. Chcete slyšet vtip?
-Test (5.776s):	 ano ne
-Bohumil:	 Dobře, tady je jedna otázka ze vtipu: Proč se stromy nezapomínají?
-Test (4.256s):	 proč?
-Bohumil:	 Protože mají vždycky kůru na paměti.
+('{"routine": "standard", "superstate": "úvod", "last_states": ["těší mě", '
+ '"jak se máš"], "states_usage": {"těší mě": 1, "jak se máš": 1, "žádost o '
+ 'představení": 2, "state_intro": 1}, "turns_since_initiative": 0}')
+
+
+Test (5.515s):	 já se mám skvěle a jak se máš ty
+Bohumil:	 To jsem rád! Já se mám fajn. Můžu říct vtip?
+('{"routine": "standard", "superstate": "otázka jestli vtip", "last_states": '
+ '["to mě těší", "mám se dobře", "otázka jestli vtip"], "states_usage": {"těší '
+ 'mě": 1, "state_intro": 1, "mám se dobře": 1, "to mě těší": 1, "žádost o '
+ 'představení": 2, "jak se máš": 1, "otázka jestli vtip": 1}, '
+ '"turns_since_initiative": 0}')
+
+
+Test (3.225s):	 jop
+Bohumil:	 Dobře, tady je otázka ze vtipu: Proč si ryba nikdy nepůjčí peníze?
+('{"routine": "standard", "superstate": "otázka vtipu", "last_states": '
+ '["otázka vtipu"], "states_usage": {"jak se máš": 1, "mám se dobře": 1, '
+ '"otázka vtipu": 1, "těší mě": 1, "žádost o představení": 2, "to mě těší": 1, '
+ '"otázka jestli vtip": 1, "state_intro": 1}, "turns_since_initiative": 0}')
+prompt: Jsi Bohumil, hodný česky mluvící robot a rád říkáš vtipy.; vymysli vtip a řekni z něj jenom otázku
+
+
+Test (109.287s):	 proč?
+Bohumil:	 Protože nemá žádné věci, které by mohla dát jako záruku!
+('{"routine": "standard", "superstate": "pointa vtipu", "last_states": '
+ '["pointa vtipu"], "states_usage": {"jak se máš": 1, "state_intro": 1, "mám '
+ 'se dobře": 1, "to mě těší": 1, "otázka jestli vtip": 1, "otázka vtipu": 1, '
+ '"pointa vtipu": 1, "těší mě": 1, "žádost o představení": 2}, '
+ '"turns_since_initiative": 0}')
+prompt: Jsi Bohumil, hodný česky mluvící robot a rád říkáš vtipy.; řekni pointu vtipu
+
+
+Test (8.179s):	 hm to je vtipný
+Bohumil:	 Tak já povím další vtip, ne?
+('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
+ '["další vtip"], "states_usage": {"state_intro": 1, "těší mě": 1, "žádost o '
+ 'představení": 2, "pointa vtipu": 1, "jak se máš": 1, "to mě těší": 1, '
+ '"otázka jestli vtip": 1, "mám se dobře": 1, "další vtip": 1, "otázka vtipu": '
+ '1}, "turns_since_initiative": 0}')
+
+
+Test (1.988s):	 tak jo
+Bohumil:	 Proč by ne, nemám nic proti.
+('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
+ '["tak jo"], "states_usage": {"pointa vtipu": 1, "otázka vtipu": 1, "mám se '
+ 'dobře": 1, "otázka jestli vtip": 1, "jak se máš": 1, "žádost o představení": '
+ '2, "těší mě": 1, "tak jo": 1, "další vtip": 1, "state_intro": 1, "to mě '
+ 'těší": 1}, "turns_since_initiative": 0}')
+
+
+Test (2.469s):	 aha
+Bohumil:	 Nemám šajn.
+('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
+ '["nevím"], "states_usage": {"další vtip": 1, "nevím": 1, "state_intro": 1, '
+ '"pointa vtipu": 1, "tak jo": 1, "otázka vtipu": 1, "to mě těší": 1, "otázka '
+ 'jestli vtip": 1, "těší mě": 1, "jak se máš": 1, "mám se dobře": 1, "žádost o '
+ 'představení": 2}, "turns_since_initiative": 0}')
+
+
+Test (2.375s):	 ??
+Bohumil:	 Nemám šajn.
+('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
+ '["aha"], "states_usage": {"to mě těší": 1, "pointa vtipu": 1, "další vtip": '
+ '1, "tak jo": 1, "jak se máš": 1, "state_intro": 1, "nevím": 1, "otázka '
+ 'jestli vtip": 1, "aha": 1, "žádost o představení": 2, "mám se dobře": 1, '
+ '"těší mě": 1, "otázka vtipu": 1}, "turns_since_initiative": 0}')
+
+
+Test (1.486s):	 .
 
 ______
 

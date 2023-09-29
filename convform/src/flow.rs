@@ -27,7 +27,6 @@ pub enum ResponseType {
 #[derive(Deserialize, Serialize, Debug, Clone)]
 struct Routine<'a> {
     routine_name: &'a str,
-    max_says_at_once: usize,
     the_track: &'a str,
     order_superstates: Vec<&'a str>,
 }

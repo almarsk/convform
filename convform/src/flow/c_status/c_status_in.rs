@@ -28,7 +28,7 @@ impl<'a> CStatusIn<'a> {
         let mut treated_csi = self;
 
         if treated_csi.routine.is_empty() {
-            treated_csi.routine = flow.routines.first_key_value().unwrap().1.routine_name;
+            treated_csi.routine = "standard";
         };
 
         if treated_csi.superstate.is_empty() {

@@ -1,5 +1,4 @@
 mod flow;
-
 use flow::c_status::{c_status, CStatusOut};
 pub use flow::Flow;
 use pyo3::prelude::*;
@@ -14,9 +13,9 @@ impl CStatusOut {
 
         match Flow::validate_behavior(path.as_str(), &file) {
             Err(e) => {
-                println!("validation error: {:?}", e);
+                println!("{}", e);
                 CStatusOut::issue(String::from("ERROR: json validation unsuccesful"))
-                // not great - better make PyResult
+                // not great - better make PyResult :()
             }
             Ok(flow) => match c_status(csi, &flow, py) {
                 Ok(cso) => cso,

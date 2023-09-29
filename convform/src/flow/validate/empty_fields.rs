@@ -44,7 +44,6 @@ trait Empty {
 impl<'a> Empty for Routine<'a> {
     fn empty(&self) -> Option<IssueItem<'a>> {
         if self.routine_name.is_empty()
-            || self.max_says_at_once == 0
             || self.the_track.is_empty()
             || self.order_superstates.is_empty()
         {

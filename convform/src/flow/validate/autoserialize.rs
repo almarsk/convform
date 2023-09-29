@@ -39,7 +39,7 @@ fn edit_flow<'a>(flow: &mut Flow<'a>, items: Vec<&IssueItem<'a>>) {
 }
 
 fn serialize_edited(edited: &Flow, path: &str) -> Result<(), std::io::Error> {
-    let serialized = serde_json::to_string(edited)?;
+    let serialized = serde_json::to_string_pretty(edited)?;
     let path = format!("{}_edited.json", path.trim_end_matches(".json"));
     println!("{path}");
     File::create(&path)?;

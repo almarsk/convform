@@ -4,15 +4,13 @@ from smart_sub import check_for_prompts
 
 import os
 
-async def reply(cStatus, user_id):
-    bot_path = "convform/bots"
-    bot_name = "bohumil"
-    path = f"convform/bots/"
+async def reply(cStatus, user_id, flow):
+    path = "convform/bots/"
 
-    cso = CStatusOut(bot_name, cStatus, path)
+    cso = CStatusOut(flow, cStatus, path)
 
     if "###" in cso.bot_reply:
-        persona = cso.persona(path, bot_name)
+        persona = cso.persona(path, flow)
         cso.prompt = f"{persona}; {cso.bot_reply[3:-3]}"
         filled_in_reply = await check_for_prompts(persona, cso.bot_reply, user_id)
         cso.bot_reply = filled_in_reply

@@ -62,16 +62,19 @@ print(cso.states_usage)
 """
 
 def to_json(cso):
-    q =  {
-    "routine": cso.routine,
-    "superstate": cso.superstate,
-    "last_states": cso.last_states,
-    "states_usage": cso.states_usage,
-    "turns_since_initiative": cso.turns_since_initiative,
+    q =  {"reply": cso.bot_reply,
+        "meta":
+            {
+        "routine": cso.routine,
+        "superstate": cso.superstate,
+        "last_states": cso.last_states,
+        "states_usage": cso.states_usage,
+        "turns_since_initiative": cso.turns_since_initiative,
+            }
     }
-    #j = json.dumps(q, ensure_ascii=False)
+    j = json.dumps(q, ensure_ascii=False)
     #print("sql input: "+j)
-    return q
+    return j
 
 def get_csi(user_id, user_reply):
 
@@ -86,11 +89,11 @@ def get_csi(user_id, user_reply):
 
     if user_reply is None:
         user_reply = ""
-    if len(most_recent_reply) > 0:
-        current_cstatus = json.loads(most_recent_reply[-1][-1])
-        current_cstatus["user_reply"] = user_reply
-        current_cstatus_user_reply = json.dumps(current_cstatus, ensure_ascii=False)
 
+    if len(most_recent_reply) > 0:
+        current_cstatus = json.loads(json.loads(most_recent_reply[-1][-1]))
+        current_cstatus["meta"]["user_reply"] = user_reply
+        current_cstatus_user_reply = json.dumps(current_cstatus["meta"], ensure_ascii=False)
     else:
         current_cstatus_user_reply = json.dumps({
             "routine": "",
