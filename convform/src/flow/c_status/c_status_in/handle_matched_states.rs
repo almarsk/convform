@@ -16,12 +16,14 @@ impl<'a> MatchedStates<'a> {
         if matched_b4_rhem.is_empty() {
             // FALLBACK
             // println!("matched: {:#?}", matched);
-            //println!("asss because empty");
+            println!("asss because empty");
             return assess_response_states(vec![], csi, flow, None);
         }
 
         // order states by start index + converts MatchItems into &strs
         let matched = rhematize(matched_b4_rhem);
+
+        println!("{:?}", matched);
 
         // check for solo states and return last solo one if there is some
         let solo: Vec<&'a str> = matched
@@ -31,7 +33,7 @@ impl<'a> MatchedStates<'a> {
             .collect();
         if !solo.is_empty() {
             let last_solo_to_vec = vec![solo[solo.len() - 1]];
-            //println!("asss because solo");
+            println!("asss because solo");
             return assess_response_states(last_solo_to_vec, csi, flow, None);
         };
 
@@ -48,8 +50,8 @@ impl<'a> MatchedStates<'a> {
             })
             .collect();
         if !matches_next_superstate.is_empty() {
-            //println!("goin next superstate");
-            //println!("asss because next superstate match");
+            println!("goin next superstate: {:?}", matches_next_superstate);
+            println!("asss because next superstate match");
             return assess_response_states(
                 matches_next_superstate,
                 csi,
@@ -76,10 +78,10 @@ impl<'a> MatchedStates<'a> {
         if nonoveriterated.is_empty() {
             let matched_overiterated = matched;
             let last_overiterated = matched_overiterated.iter().last().unwrap();
-            //println!("asss because last overiterated");
+            println!("asss because last overiterated");
             return assess_response_states(vec![last_overiterated], csi, flow, None);
         }
-        //println!("asss happy path");
+        println!("asss happy path");
         assess_response_states(nonoveriterated, csi, flow, None)
     }
 }
@@ -96,21 +98,34 @@ pub fn is_given_response_type(state: &str, flow: &Flow, response_type: ResponseT
 }
 
 pub fn get_next_superstate<'a>(flow: &'a Flow, csi: &CStatusIn) -> &'a str {
-    let order_of_superstates = &flow
+    let current_routine = &flow
         .routines
         .iter()
         .find(|r| r.1.routine_name == csi.routine)
         .map(|r| r.1)
-        .unwrap()
-        .order_superstates;
+        .unwrap();
+
+    let order_of_superstates = current_routine.order_superstates.clone();
 
     let index_current_superstate = order_of_superstates
         .iter()
         .position(|s| s == &csi.superstate)
         .unwrap();
 
+    // check if we're at last superstate of routine
     if order_of_superstates.len() - 1 <= index_current_superstate {
-        order_of_superstates[0]
+        if current_routine.is_loop {
+            order_of_superstates[0]
+        } else if let Some(next_routine) = current_routine.next {
+            flow.routines
+                .iter()
+                .find(|r| *r.0 == next_routine)
+                .unwrap()
+                .1
+                .order_superstates[0]
+        } else {
+            order_of_superstates[0] // add end routine with farewell and validation for it and template
+        }
     } else {
         order_of_superstates[index_current_superstate + 1]
     }

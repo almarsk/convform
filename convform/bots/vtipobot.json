@@ -55,7 +55,7 @@
         "žádost o představení",
         "jak se máš"
       ],
-      "description": "Bohumil se představí a seznámí s uživatelem."
+      "description": "Vtipobot se představí a seznámí s uživatelem."
     }
   },
   "states": {
@@ -201,7 +201,7 @@
           "otázka vtipu"
         ],
         "souhlas + nesouhlas": [
-          "tak co teda"
+          "tak ano nebo ne"
         ],
         "uživatel chce říct vtip": [
           "tak jo",
@@ -290,25 +290,38 @@
       },
       "say_annotation": "Vtipobot se představí.",
       "say": [
-        "Dobrý den, já jsem Bohumil.",
-        "Zdravím, mé jméno je Bohumil."
+        "Dobrý den, já jsem Vtipobot.",
+        "Zdravím, mé jméno je Vtipobot."
       ],
       "over_iterated_say": [
-        "Povídám, že se jmenuji Bohumil."
+        "Jmenuji se Vtipobot a rád říkám vtipy."
       ],
       "state_type": "Solo",
       "iteration": 1,
       "superstate_global": false,
       "prioritize": false
     },
-    "tak co teda": {
-      "state_name": "tak co teda",
-      "intents": {},
-      "say_annotation": "",
+    "tak ano nebo ne": {
+      "state_name": "tak ano nebo ne",
+      "intents": {
+        "souhlas + nesouhlas": [
+          "tak ano nebo ne",
+          "co raději"
+        ],
+        "souhlas": [
+          "otázka vtipu"
+        ],
+        "nesouhlas": [
+          "co raději",
+          "řekněte mi vtip"
+        ]
+      },
+      "say_annotation": "Vtipobot se zmateně ptá, jak to tedy je.",
       "say": [
         "Tak jak to je?",
         "Teď Vám nerozumím teda.",
-        "Nejsem si jistý, kterou z možností"
+        "Nejsem si jistý, kterou z možností",
+        "Teď nevím, co si počít"
       ],
       "over_iterated_say": [
         "Opravdu nevím, co si teď počít."
@@ -484,11 +497,7 @@
       "intent_name": "jak se máš",
       "intent_annotation": "uživatel se ptá, jak se vtipobot má",
       "keywords": [
-        "jak se má",
-        "jak je",
-        "se daří",
-        "má.*? se",
-        "a .y"
+        "jak se má"
       ],
       "adjacent": [
         "mám se dobře",

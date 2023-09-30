@@ -14,7 +14,7 @@ impl CStatusOut {
         match Flow::validate_behavior(path.as_str(), &file) {
             Err(e) => {
                 println!("{}", e);
-                CStatusOut::issue(String::from("ERROR: json validation unsuccesful"))
+                CStatusOut::issue(format!("ERROR: json validation unsuccesful, {}", path))
                 // not great - better make PyResult :()
             }
             Ok(flow) => match c_status(csi, &flow, py) {

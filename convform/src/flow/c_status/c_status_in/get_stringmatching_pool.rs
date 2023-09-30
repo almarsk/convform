@@ -63,6 +63,8 @@ impl<'a> CStatusIn<'a> {
             });
         });
 
+        println!("{:#?}", unique_last_states_intents);
+
         // decompose combined intents here and keep the info about the pairs
         // only one of the combined intents will get the adjacent states
         // the list of grouping will be added in Stringmatchingpool (new arm)
@@ -89,11 +91,17 @@ impl<'a> CStatusIn<'a> {
 }
 
 fn get_keywords<'a>(flow: &'a Flow, intent: &str) -> &'a [&'a str] {
-    flow.intents
+    if let Some(i) = flow
+        .intents
         .iter()
         .find(|(_, i)| intent == i.intent_name)
         .map(|f_intent| &f_intent.1.keywords)
-        .unwrap()
+    {
+        i
+    } else {
+        println!("{intent}");
+        &[]
+    }
 }
 
 fn get_answer_to<'a>(flow: &'a Flow, intent: &str) -> &'a [&'a str] {
