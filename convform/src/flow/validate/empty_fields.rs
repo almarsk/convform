@@ -75,9 +75,10 @@ impl<'a> Empty for State<'a> {
     fn empty(&self) -> Option<IssueItem<'a>> {
         if self.state_name.is_empty()
             || (self.intents.is_empty() &&
-                !matches!(self.state_type, ResponseType::Responsive) &&
-                !matches!(self.state_type, ResponseType::Connective))
-            // responsive and connective intents are allowed to have no intent activation
+                !is_given_response_type(&self.state_type, ResponseType::Responsive) &&
+                !is_given_response_type(&self.state_type, ResponseType::Connective) &&
+                !is_given_response_type(&self.state_type, ResponseType::Solo))
+            // responsive and solo and connective intents are allowed to have no intent activation
             || self.say_annotation.is_empty()
             || self.say.is_empty()
             || self.say.iter().any(|s| s.is_empty())
@@ -104,4 +105,8 @@ impl<'a> Empty for Intent<'a> {
             None
         }
     }
+}
+
+fn is_given_response_type(a: &ResponseType, b: ResponseType) -> bool {
+    std::mem::discriminant(a) == std::mem::discriminant(&b)
 }

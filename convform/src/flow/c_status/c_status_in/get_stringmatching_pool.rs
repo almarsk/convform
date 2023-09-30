@@ -39,8 +39,7 @@ impl<'a> ToMatch<'a> {
 
 impl<'a> CStatusIn<'a> {
     pub fn get_stringmatching_pool(self, flow: &'a Flow<'a>) -> StringMatchingPool<'a> {
-        let mut states = self.last_states.clone();
-        states.extend(get_global_states(&self, flow));
+        let states = self.last_states.clone();
 
         let full_last_states: Vec<&'a State> = states
             .iter()
@@ -103,25 +102,6 @@ fn get_answer_to<'a>(flow: &'a Flow, intent: &str) -> &'a [&'a str] {
         .find(|(_, i)| intent == i.intent_name)
         .map(|f_intent| &f_intent.1.answer_to)
         .unwrap()
-}
-
-fn get_global_states<'a>(csi: &CStatusIn, flow: &'a Flow) -> Vec<&'a str> {
-    let superstate_name = csi.superstate;
-    let last_states = &csi.last_states;
-    let full_superstate = flow
-        .superstates
-        .iter()
-        .find(|superstate| superstate.0 == &superstate_name)
-        .unwrap();
-    let relevant_states = &full_superstate.1.states;
-    let absent_states: Vec<_> =
-        relevant_states.iter().filter(|s| !last_states.contains(s)).collect();
-    absent_states
-        .iter()
-        .filter(|s| flow.states.iter().find(|fs| &fs.0 == *s).unwrap().1.superstate_global)
-        .copied()
-        .copied()
-        .collect()
 }
 
 fn get_adjacent<'a>(intent: (&str, Vec<&'a str>), flow: &'a Flow<'a>) -> Vec<&'a str> {

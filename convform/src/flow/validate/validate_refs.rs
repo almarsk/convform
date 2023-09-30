@@ -63,6 +63,14 @@ impl<'a> Flow<'a> {
 
     pub fn get_declared(&self) -> Vec<ValidationDeclaration<'a>> {
         let v = vec![
+            self.routines
+                .keys()
+                .filter(|r| r != &&"standard")
+                .map(|s| ValidationDeclaration {
+                    item_name: s,
+                    item_type: ConvItem::Routine,
+                })
+                .collect::<Vec<_>>(),
             self.superstates
                 .keys()
                 .map(|s| ValidationDeclaration {

@@ -25,7 +25,10 @@ impl<'a> Flow<'a> {
                 vec![]
             }
         } else {
-            vec![IssueItem::MissingStateIntro(("standard", "missing"))]
+            vec![IssueItem::MissingStateIntro((
+                "standard routine",
+                "missing",
+            ))]
         }
     }
 }

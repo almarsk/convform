@@ -34,6 +34,7 @@ impl<'a> Flow<'a> {
             flow.key_name_correspond(),
             flow.state_intro_present(),
             flow.placeholder_in_state(),
+            flow.placeholder_in_intent(),
             flow.prompt(),
         ];
 

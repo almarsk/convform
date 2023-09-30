@@ -23,7 +23,7 @@ pub enum IssueItem<'a> {
     UnusedDeclared((&'a str, ConvItem)),
     EmptyField((&'a str, ConvItem)),
     DifferentKeyName((&'a str, &'a str, ConvItem)),
-    DoublePlaceholder(&'a str, &'a str),
+    DoublePlaceholder(ConvItem, &'a str, &'a str),
     FaultyRegex(FRgx<'a>),
     InvalidPrompt((&'a str, &'a str)),
 }
@@ -64,7 +64,8 @@ pub trait ValidateReferences<'a> {
 
 impl<'a> ValidateReferences<'a> for Routine<'a> {
     fn get_refs(&self) -> Vec<ValidationReference<'a>> {
-        self.order_superstates
+        let superstates: Vec<ValidationReference<'a>> = self
+            .order_superstates
             .iter()
             .map(|superstate| ValidationReference {
                 origin_name: vec![self.routine_name],
@@ -72,7 +73,23 @@ impl<'a> ValidateReferences<'a> for Routine<'a> {
                 item_name: superstate,
                 item_type: ConvItem::SuperState,
             })
-            .collect()
+            .collect();
+        let next: Vec<ValidationReference<'a>> = if let Some(i) = self.next {
+            vec![ValidationReference {
+                origin_name: vec![self.routine_name],
+                origin_type: ConvItem::Routine,
+                item_name: i,
+                item_type: ConvItem::Routine,
+            }]
+        } else {
+            vec![]
+        };
+
+        let mut refs: Vec<ValidationReference<'a>> = vec![];
+        refs.extend(superstates);
+        refs.extend(next);
+
+        refs
     }
 
     fn get_name(&self) -> (&'a str, &'a str) {
@@ -166,8 +183,35 @@ impl<'a> ValidateReferences<'a> for Intent<'a> {
             item_name: state,
             item_type: ConvItem::State,
         });
+        let context_intent_refs: Vec<ValidationReference<'a>> = self
+            .context_intents
+            .iter()
+            .flat_map(|i| {
+                i.0.split('+').map(|i| i.trim()).map(|intent| ValidationReference {
+                    origin_name: vec![self.intent_name],
+                    origin_type: ConvItem::Intent,
+                    item_name: intent,
+                    item_type: ConvItem::Intent,
+                })
+            })
+            .collect();
+
+        let context_adjacent: Vec<ValidationReference<'_>> = self
+            .context_intents
+            .iter()
+            .flat_map(|(_, states)| states.iter().filter(|s| s != &&"$"))
+            .map(|state| ValidationReference {
+                origin_name: vec!["adjacent", self.intent_name],
+                origin_type: ConvItem::Intent,
+                item_name: state,
+                item_type: ConvItem::State,
+            })
+            .collect();
+
         let mut intent_refs = adjacent.clone();
         intent_refs.extend(answer_to);
+        intent_refs.extend(context_intent_refs);
+        intent_refs.extend(context_adjacent);
         intent_refs
     }
 

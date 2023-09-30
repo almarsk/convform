@@ -1,6 +1,6 @@
 use super::super::Flow;
 use super::helper_structs_validate::{ConvItem, IssueItem, MissRef};
-use crate::flow::{Intent, State, Superstate};
+use crate::flow::{Intent, Routine, State, Superstate};
 use std::default::Default;
 
 pub trait Edit<'a> {
@@ -26,6 +26,9 @@ impl<'a> Edit<'a> for Flow<'a> {
 
     fn add_item(&mut self, item: &MissRef<'a>) {
         match item.typ {
+            ConvItem::Routine => {
+                self.routines.insert(item.name, Routine::new(item.name));
+            }
             ConvItem::SuperState => {
                 self.superstates.insert(item.name, Superstate::new(item.name));
             }
@@ -35,14 +38,14 @@ impl<'a> Edit<'a> for Flow<'a> {
             ConvItem::Intent => {
                 self.intents.insert(item.name, Intent::new(item.name));
             }
-            _ => {
-                println!("Somethings being added to the flow that isnt supposed to");
-            }
         };
     }
 
     fn remove_item(&mut self, item: &(&'a str, ConvItem)) {
         match item.1 {
+            ConvItem::Routine => {
+                self.routines.remove(item.0);
+            }
             ConvItem::SuperState => {
                 self.superstates.remove(item.0);
             }
@@ -52,13 +55,18 @@ impl<'a> Edit<'a> for Flow<'a> {
             ConvItem::Intent => {
                 self.intents.remove(item.0);
             }
-            _ => {
-                println!("Somethings being removed from the flow that isnt supposed to");
-            }
         };
     }
 }
 
+impl<'a> Routine<'a> {
+    fn new(routine_name: &'a str) -> Self {
+        Routine {
+            routine_name,
+            ..Default::default()
+        }
+    }
+}
 impl<'a> Superstate<'a> {
     fn new(superstate_name: &'a str) -> Self {
         Superstate {

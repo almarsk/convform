@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+
 use std::collections::BTreeMap;
 pub mod c_status;
 mod validate;
@@ -24,9 +25,13 @@ pub enum ResponseType {
     Priority,
 }
 
-#[derive(Deserialize, Serialize, Debug, Clone)]
+#[derive(Deserialize, Serialize, Debug, Clone, Default)]
 struct Routine<'a> {
     routine_name: &'a str,
+    #[serde(default = "default_bool")]
+    is_loop: bool,
+    #[serde(default = "default_option")]
+    next: Option<&'a str>,
     the_track: &'a str,
     order_superstates: Vec<&'a str>,
 }
@@ -55,8 +60,6 @@ struct State<'a> {
     #[serde(default = "default_iteration")]
     iteration: usize,
     #[serde(default = "default_bool")]
-    superstate_global: bool,
-    #[serde(default = "default_bool")]
     prioritize: bool,
 }
 
@@ -75,8 +78,18 @@ struct Intent<'a> {
     adjacent: Vec<&'a str>,
     #[serde(default = "default_vec")]
     answer_to: Vec<&'a str>,
+    #[serde(default = "default_btree")]
+    context_intents: BTreeMap<&'a str, Vec<&'a str>>,
 }
 
 pub fn default_vec<'a>() -> Vec<&'a str> {
     vec![]
+}
+
+pub fn default_btree<K, V>() -> BTreeMap<K, V> {
+    BTreeMap::new()
+}
+
+pub fn default_option<T>() -> Option<T> {
+    None
 }
