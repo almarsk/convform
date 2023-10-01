@@ -22,5 +22,5 @@ def api_key():
         except Exception as e:
             print(f"An error occurred: {e}")
 
-    else:
-        print(os.environ[field_name])
+    #else:
+     #   print(os.environ[field_name])

@@ -23,7 +23,7 @@ impl<'a> MatchedStates<'a> {
         // order states by start index + converts MatchItems into &strs
         let matched = rhematize(matched_b4_rhem);
 
-        //println!("{:?}", matched);
+        //println!("matched: {:?}", matched);
 
         // check for solo states and return last solo one if there is some
         let solo: Vec<&'a str> = matched

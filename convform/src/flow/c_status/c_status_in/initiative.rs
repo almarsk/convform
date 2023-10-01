@@ -23,10 +23,10 @@ pub fn handle_initiative<'a>(
         is_given_response_type(state_name, flow, ResponseType::Initiative)
             || is_given_response_type(state_name, flow, ResponseType::Flexible)
     }) {
-        order_responsive_and_last_init_plus_maybe_connective(prioritized, flow)
+        order_responsive_and_first_init_plus_maybe_connective(prioritized, flow)
     } else {
         let mut ordered = prioritized.clone();
-        ordered.extend(order_responsive_and_last_init_plus_maybe_connective(
+        ordered.extend(order_responsive_and_first_init_plus_maybe_connective(
             non, flow,
         ));
 
@@ -53,14 +53,16 @@ fn get_full_state<'a>(flow: &'a Flow<'a>, state_name: &'a str) -> &'a State<'a> 
         .1
 }
 
-fn order_responsive_and_last_init_plus_maybe_connective<'a>(
+fn order_responsive_and_first_init_plus_maybe_connective<'a>(
     v: Vec<&'a str>,
     flow: &'a Flow<'a>,
 ) -> Vec<&'a str> {
     let mut last_init = ("", 0);
     let mut last_connective = ("", 0);
 
-    let mut acc = v.iter().enumerate().fold(vec![], |mut acc, state| {
+    //println!("v{v:?}");
+
+    let mut acc = v.iter().rev().enumerate().fold(vec![], |mut acc, state| {
         match get_full_state(flow, state.1).state_type {
             ResponseType::Connective => {
                 last_connective.0 = state.1;
@@ -78,8 +80,8 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
 
     // put last initiative and possibly last connective at the end
     if !last_init.0.is_empty() {
-        if last_init.1 > last_connective.1
-            && last_init.1 - last_connective.1 == 1
+        if last_init.1 < last_connective.1
+            && last_connective.1 - last_init.1 == 1
             && !last_connective.0.is_empty()
         {
             //println!("pushin {:?} as the connective", last_connective.0);
@@ -90,5 +92,7 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
             acc.push(last_init.0);
         }
     };
+
+    //println!("acc{acc:?}");
     acc
 }

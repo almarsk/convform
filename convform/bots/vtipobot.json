@@ -298,7 +298,7 @@
       ],
       "state_type": "Solo",
       "iteration": 1,
-      "superstate_global": false,
+      "superstate_global": true,
       "prioritize": false
     },
     "tak ano nebo ne": {

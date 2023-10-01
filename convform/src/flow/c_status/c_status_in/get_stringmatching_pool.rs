@@ -8,7 +8,7 @@ use std::collections::BTreeMap;
 #[derive(Debug, Clone)]
 pub struct ToMatch<'a> {
     pub intent_name: &'a str,
-    pub grouping: GroupingInfo,
+    pub grouping: GroupingInfo<'a>,
     keywords: &'a [&'a str],
     pub adjacent: Vec<&'a str>,
     pub answer_to: &'a [&'a str],
@@ -17,7 +17,7 @@ pub struct ToMatch<'a> {
 impl<'a> ToMatch<'a> {
     pub fn new(
         intent_name: &'a str,
-        grouping: GroupingInfo,
+        grouping: GroupingInfo<'a>,
         keywords: &'a [&'a str],
         adjacent: Vec<&'a str>,
         answer_to: &'a [&'a str],
@@ -42,7 +42,8 @@ impl<'a> ToMatch<'a> {
 
 impl<'a> CStatusIn<'a> {
     pub fn get_stringmatching_pool(self, flow: &'a Flow<'a>) -> StringMatchingPool<'a> {
-        let states = self.last_states.clone();
+        let mut states = self.last_states.clone();
+        states.extend(get_global_states(&self, flow));
 
         let full_last_states: Vec<&'a State> = states
             .iter()
@@ -50,17 +51,19 @@ impl<'a> CStatusIn<'a> {
             .map(|s| s.1)
             .collect();
 
-        let last_states_intents: Vec<&'a BTreeMap<&str, Vec<&str>>> =
-            full_last_states.iter().map(|fs| &fs.intents).collect();
+        let last_states_intents: Vec<(&'a BTreeMap<&str, Vec<&str>>, &'a str)> = full_last_states
+            .iter()
+            .map(|fs| (&fs.intents, fs.state_name))
+            .collect();
 
-        let mut unique_last_states_intents = BTreeMap::<&str, Vec<&str>>::new();
+        let mut unique_last_states_intents = BTreeMap::<&str, (Vec<&str>, &'a str)>::new();
 
         last_states_intents.iter().for_each(|b| {
-            b.iter().for_each(|i| {
-                let entry = unique_last_states_intents.entry(i.0).or_insert(vec![]);
+            b.0.iter().for_each(|i| {
+                let entry = unique_last_states_intents.entry(i.0).or_insert((vec![], b.1));
                 i.1.iter().for_each(|adjacent| {
-                    if !entry.contains(adjacent) {
-                        entry.push(adjacent)
+                    if !entry.0.contains(adjacent) {
+                        entry.0.push(adjacent)
                     }
                 })
             });
@@ -77,10 +80,11 @@ impl<'a> CStatusIn<'a> {
                 grouping.clone().into_iter().for_each(|di| {
                     unique_last_decomposed_intents.push(DecomposedIntentGrouping {
                         name: di.trim(),
-                        adjacent: i.1.clone(),
+                        adjacent: i.1 .0.clone(),
                         grouping: GroupingInfo {
                             id: index,
                             number: grouping.len(),
+                            origin: i.1 .1, // !!! fix
                         },
                     });
                 });
@@ -131,6 +135,25 @@ fn get_answer_to<'a>(flow: &'a Flow, intent: &str) -> &'a [&'a str] {
         .unwrap()
 }
 
+fn get_global_states<'a>(csi: &CStatusIn, flow: &'a Flow) -> Vec<&'a str> {
+    let superstate_name = csi.superstate;
+    let last_states = &csi.last_states;
+    let full_superstate = flow
+        .superstates
+        .iter()
+        .find(|superstate| superstate.0 == &superstate_name)
+        .unwrap();
+    let relevant_states = &full_superstate.1.states;
+    let absent_states: Vec<_> =
+        relevant_states.iter().filter(|s| !last_states.contains(s)).collect();
+    absent_states
+        .iter()
+        .filter(|s| flow.states.iter().find(|fs| &fs.0 == *s).unwrap().1.superstate_global)
+        .copied()
+        .copied()
+        .collect()
+}
+
 fn get_adjacent<'a>(intent: (&str, Vec<&'a str>), flow: &'a Flow<'a>) -> Vec<&'a str> {
     // dollar sign signifies default adjacent state which is present in flow definition
     //
@@ -155,11 +178,12 @@ fn get_adjacent<'a>(intent: (&str, Vec<&'a str>), flow: &'a Flow<'a>) -> Vec<&'a
 struct DecomposedIntentGrouping<'a> {
     name: &'a str,
     adjacent: Vec<&'a str>,
-    grouping: GroupingInfo,
+    grouping: GroupingInfo<'a>,
 }
 
 #[derive(Debug, Clone, Default)]
-pub struct GroupingInfo {
+pub struct GroupingInfo<'a> {
     pub id: usize,
     pub number: usize,
+    pub origin: &'a str,
 }

@@ -4,12 +4,13 @@ use super::get_stringmatching_pool::GroupingInfo;
 use super::matched_states::MatchedStates;
 use super::CStatusIn;
 use super::StringMatchingPool;
+use itertools::Itertools;
 use regex::Regex;
 
 #[derive(Clone, Debug)]
 pub struct MatchItem<'a> {
     _intent: &'a str,
-    grouping: GroupingInfo,
+    grouping: GroupingInfo<'a>,
     states: Vec<&'a str>,
     index_start: usize,
     answer_to: &'a [&'a str],
@@ -18,7 +19,7 @@ pub struct MatchItem<'a> {
 impl<'a> MatchItem<'a> {
     fn new(
         _intent: &'a str,
-        grouping: GroupingInfo,
+        grouping: GroupingInfo<'a>,
         states: Vec<&'a str>,
         index_start: usize,
         answer_to: &'a [&str],
@@ -95,7 +96,7 @@ impl<'a> StringMatchingPool<'a> {
                 })
                 .collect::<Vec<MatchItem<'a>>>();
 
-            let sufficing_match_items: Vec<MatchItem<'a>> = match_items
+            let unfiltered_sufficing_match_items: Vec<MatchItem<'a>> = match_items
                 .clone()
                 .into_iter()
                 .filter(|mi| {
@@ -111,7 +112,7 @@ impl<'a> StringMatchingPool<'a> {
                 })
                 .collect();
 
-            let sufficing_match_items: Vec<MatchItem<'a>> = sufficing_match_items
+            let sufficing_match_items: Vec<MatchItem<'a>> = unfiltered_sufficing_match_items
                 .clone()
                 .into_iter()
                 .filter(|mi| {
@@ -119,18 +120,54 @@ impl<'a> StringMatchingPool<'a> {
                     let req_id = mi.grouping.id;
 
                     // make sure that between identical intent names the composed one overrides
-                    match_items.iter().any(|mi_req| {
-                        println!("suff{:#?}", sufficing_match_items);
+                    !unfiltered_sufficing_match_items.iter().any(|mi_req| {
                         mi_req._intent == mi._intent
-                            && req_amount <= mi_req.grouping.number
-                            && req_id == mi_req.grouping.id
+                            && req_amount < mi_req.grouping.number
+                            && req_id != mi_req.grouping.id
                     })
                 })
                 .collect();
 
-            println!("{:#?}", sufficing_match_items);
+            let mut recomposed_match_items: Vec<MatchItem<'a>> = vec![];
+            let regrouped = sufficing_match_items.iter().group_by(|i| i.grouping.id);
 
-            //let mut recomposed_match_items: Vec<MatchItem<'a>> = vec![];
+            for (_, group) in regrouped.into_iter() {
+                let group_vec: Vec<_> = group.collect();
+                let count = group_vec.len();
+
+                if count == 1 {
+                    recomposed_match_items.push(group_vec[0].clone())
+                } else {
+                    let intent_names: Vec<&'a str> = group_vec.iter().map(|g| g._intent).collect();
+                    let origin_state: &'a str = group_vec[0].grouping.origin;
+                    let recomposed_intent_full = flow
+                        .states
+                        .iter()
+                        .find(|s| s.0 == &origin_state)
+                        .unwrap()
+                        .1
+                        //actually need to check intents of last states
+                        .intents
+                        .iter()
+                        .find(|i| {
+                            intent_names.iter().all(|im| {
+                                i.0.contains(format!("+{im}").as_str())
+                                    || i.0.contains(format!("{im}+").as_str())
+                            })
+                        })
+                        .unwrap();
+
+                    let recomposed_intent = MatchItem::new(
+                        recomposed_intent_full.0,
+                        group_vec[0].grouping.clone(),
+                        recomposed_intent_full.1.clone(),
+                        group_vec.iter().map(|g| g.index_start).min().unwrap(),
+                        &[],
+                    );
+
+                    recomposed_match_items.push(recomposed_intent)
+                }
+            }
 
             // fuse back decomposed combined matchitems
             // each main one - check if the empty ones are there
@@ -143,14 +180,14 @@ impl<'a> StringMatchingPool<'a> {
             //                          been done upon decompose
 
             // increment implicitly answered states usage
-            sufficing_match_items.iter().for_each(|k| {
+            recomposed_match_items.iter().for_each(|k| {
                 k.answer_to.iter().for_each(|at| {
                     let new_state_usage = csi.states_usage.entry(*at).or_insert(0);
                     *new_state_usage += 1;
                 })
             });
 
-            MatchedStates::new(csi, sufficing_match_items)
+            MatchedStates::new(csi, recomposed_match_items)
         }
     }
 }
