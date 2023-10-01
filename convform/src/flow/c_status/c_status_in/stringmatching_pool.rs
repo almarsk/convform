@@ -1,7 +1,7 @@
 use super::get_stringmatching_pool::ToMatch;
 use super::CStatusIn;
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct StringMatchingPool<'a> {
     keywords_adjacent_pairs: Vec<ToMatch<'a>>,
     c_status_in: CStatusIn<'a>,

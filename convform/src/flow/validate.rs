@@ -9,6 +9,7 @@ pub mod validate_refs;
 use self::autoserialize::autoserialize;
 pub mod autoserialize;
 mod prompt;
+mod space;
 mod trait_edit;
 mod validate_regex;
 
@@ -36,6 +37,7 @@ impl<'a> Flow<'a> {
             flow.placeholder_in_state(),
             flow.placeholder_in_intent(),
             flow.prompt(),
+            flow.check_for_space(),
         ];
 
         let issues: Vec<&IssueItem<'_>> =

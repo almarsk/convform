@@ -16,14 +16,14 @@ impl<'a> MatchedStates<'a> {
         if matched_b4_rhem.is_empty() {
             // FALLBACK
             // println!("matched: {:#?}", matched);
-            println!("asss because empty");
+            //println!("asss because empty");
             return assess_response_states(vec![], csi, flow, None);
         }
 
         // order states by start index + converts MatchItems into &strs
         let matched = rhematize(matched_b4_rhem);
 
-        println!("{:?}", matched);
+        //println!("{:?}", matched);
 
         // check for solo states and return last solo one if there is some
         let solo: Vec<&'a str> = matched
@@ -33,7 +33,7 @@ impl<'a> MatchedStates<'a> {
             .collect();
         if !solo.is_empty() {
             let last_solo_to_vec = vec![solo[solo.len() - 1]];
-            println!("asss because solo");
+            //println!("asss because solo");
             return assess_response_states(last_solo_to_vec, csi, flow, None);
         };
 
@@ -51,7 +51,7 @@ impl<'a> MatchedStates<'a> {
             .collect();
         if !matches_next_superstate.is_empty() {
             println!("goin next superstate: {:?}", matches_next_superstate);
-            println!("asss because next superstate match");
+            //println!("asss because next superstate match");
             return assess_response_states(
                 matches_next_superstate,
                 csi,
@@ -78,10 +78,10 @@ impl<'a> MatchedStates<'a> {
         if nonoveriterated.is_empty() {
             let matched_overiterated = matched;
             let last_overiterated = matched_overiterated.iter().last().unwrap();
-            println!("asss because last overiterated");
+            //println!("asss because last overiterated");
             return assess_response_states(vec![last_overiterated], csi, flow, None);
         }
-        println!("asss happy path");
+        //println!("asss happy path");
         assess_response_states(nonoveriterated, csi, flow, None)
     }
 }
@@ -92,7 +92,7 @@ pub fn is_given_response_type(state: &str, flow: &Flow, response_type: ResponseT
     }) {
         b
     } else {
-        println!("cant check response type - state not found");
+        println!("cant check response type - state not found: {}", state);
         false
     }
 }

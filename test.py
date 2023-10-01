@@ -9,7 +9,7 @@ async def q():
 
     csi1 = json.dumps(
 
-        {"user_reply": "tak jo",
+        {"user_reply": "tak jo ne",
         "reply": "To rád slyším. Chcete slyšet vtip?",
         "routine": "standard",
                 "superstate": "úvod",
@@ -19,7 +19,8 @@ async def q():
              "žádost o představení": 1,
              "jak se máš": 1,
              "těší mě": 1,
-             "to jsem rád": 1
+             "to jsem rád": 1,
+             "otázka jestli vtip": 1,
          }, "turns_since_initiative": 0}
 
 

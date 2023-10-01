@@ -200,7 +200,7 @@
         "souhlas": [
           "otázka vtipu"
         ],
-        "souhlas + nesouhlas": [
+        "souhlas+nesouhlas": [
           "tak ano nebo ne"
         ],
         "uživatel chce říct vtip": [
@@ -304,7 +304,7 @@
     "tak ano nebo ne": {
       "state_name": "tak ano nebo ne",
       "intents": {
-        "souhlas + nesouhlas": [
+        "souhlas+nesouhlas": [
           "tak ano nebo ne",
           "co raději"
         ],
@@ -320,8 +320,8 @@
       "say": [
         "Tak jak to je?",
         "Teď Vám nerozumím teda.",
-        "Nejsem si jistý, kterou z možností",
-        "Teď nevím, co si počít"
+        "Nejsem si jistý, kterou z možností.",
+        "Teď nevím, co si počít."
       ],
       "over_iterated_say": [
         "Opravdu nevím, co si teď počít."

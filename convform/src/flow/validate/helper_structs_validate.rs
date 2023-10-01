@@ -26,6 +26,7 @@ pub enum IssueItem<'a> {
     DoublePlaceholder(ConvItem, &'a str, &'a str),
     FaultyRegex(FRgx<'a>),
     InvalidPrompt((&'a str, &'a str)),
+    ExtraSpace((&'a str, &'a str)),
 }
 
 #[derive(Debug)]

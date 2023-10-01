@@ -82,11 +82,11 @@ fn order_responsive_and_last_init_plus_maybe_connective<'a>(
             && last_init.1 - last_connective.1 == 1
             && !last_connective.0.is_empty()
         {
-            println!("pushin {:?} as the connective", last_connective.0);
+            //println!("pushin {:?} as the connective", last_connective.0);
             acc.push(last_connective.0);
             acc.push(last_init.0);
         } else {
-            println!("pushin {:?} as the initiative", last_init.0);
+            //println!("pushin {:?} as the initiative", last_init.0);
             acc.push(last_init.0);
         }
     };

@@ -13,7 +13,7 @@ use serde_json::Value;
 use std::collections::HashMap;
 use stringmatching_pool::StringMatchingPool;
 
-#[derive(Deserialize, Serialize, Debug, Clone)]
+#[derive(Deserialize, Serialize, Debug, Clone, Default)]
 pub struct CStatusIn<'a> {
     routine: &'a str,
     superstate: &'a str,
