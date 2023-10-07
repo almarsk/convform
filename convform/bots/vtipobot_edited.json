@@ -117,6 +117,9 @@
     "jak se máš": {
       "state_name": "jak se máš",
       "intents": {
+        "a ty": [
+          "mám se dobře"
+        ],
         "dobře": [
           "to jsem rád"
         ],
@@ -304,16 +307,16 @@
     "tak ano nebo ne": {
       "state_name": "tak ano nebo ne",
       "intents": {
-        "souhlas+nesouhlas": [
-          "tak ano nebo ne",
-          "co raději"
+        "nesouhlas": [
+          "co raději",
+          "řekněte mi vtip"
         ],
         "souhlas": [
           "otázka vtipu"
         ],
-        "nesouhlas": [
-          "co raději",
-          "řekněte mi vtip"
+        "souhlas+nesouhlas": [
+          "tak ano nebo ne",
+          "co raději"
         ]
       },
       "say_annotation": "Vtipobot se zmateně ptá, jak to tedy je.",
@@ -475,6 +478,18 @@
     }
   },
   "intents": {
+    "a ty": {
+      "intent_name": "a ty",
+      "intent_annotation": "Uživatel se ptá, co Vtipobot.",
+      "keywords": [
+        "a(.*)?ty?"
+      ],
+      "adjacent": [
+        "$"
+      ],
+      "answer_to": [],
+      "context_intents": {}
+    },
     "dobře": {
       "intent_name": "dobře",
       "intent_annotation": "Uživatel říká, že se má dobře.",

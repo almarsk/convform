@@ -5,9 +5,10 @@ import sqlite3
 import fire
 import json
 import pprint
+import test
 
 
-def main(query='', states=False):
+def main(query='', states=False, debug=False, which=-1):
 
     conn = sqlite3.connect('chatbot.db')
     cursor_users = conn.cursor()
@@ -31,6 +32,8 @@ def main(query='', states=False):
 
     cursor_replies.execute(f"SELECT * FROM reply WHERE user_id {user_ids};")
     replies = cursor_replies.fetchall()
+    csi_container = []
+
     # Format the conversations
     for user in users:
 
@@ -47,7 +50,7 @@ def main(query='', states=False):
         # print info of user - TODO make it a return
         if not user[4]:
             time_date = re.search('(.{10}).(.{8})', user[3])
-            if time_date is not None:
+            if time_date is not None and not debug:
                 print(
                     f"User {user[1].capitalize()} (no.{user[0]})\n" +
                     f"Talked to {user[2].capitalize()} " +
@@ -59,7 +62,7 @@ def main(query='', states=False):
             time_date = re.search('(.{10}).(.{8})', user[3])
             time_end = re.search('(.{10}).(.{8})', user[4])
             abort = lambda val: "Aborted" if val == 1 else "Did not abort"
-            if time_date is not None and time_end is not None:
+            if time_date is not None and time_end is not None and not debug:
                 print(
                     f"\n\nUser {user[1].capitalize()} (id {user[0]})\n" +
                     f"Talked to {user[2].capitalize()} " +
@@ -71,19 +74,47 @@ def main(query='', states=False):
                     f"and commented:\n\t'{user[7].capitalize().strip()}'\n"
                 )
 
-        # the actual conversation
+
+        csi = {}
         for reply in replies:
+            if reply[4]:
+                csi["user_reply"] = reply[2]
             if reply[1] == user[0]:
-                print(f"{user_bot(reply[4])} {reply[2].strip()}")
-                if states and not reply[4]:
+                if debug and reply[6]:
                     turn_metadata = reply[6]
-                    # greetings from noobsville
-                    # print("whole tuple"+str(reply))
-                    pprint.pp(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", ""))
-                    if reply[5]:
-                        print("prompt: "+reply[5])
-                    print("\n")
-        print("\n______\n")
+                    data_dict = json.loads(json.loads(turn_metadata))
+
+
+                    if "user_reply" in csi:
+                        csi_container.append(csi.copy())
+                        #pprint.pp(csi)
+
+                    csi = {
+                        "reply": data_dict["reply"],
+                        "user_reply": reply[2],
+                        "superstate": data_dict["meta"]["superstate"],
+                        "routine": data_dict["meta"]["routine"],
+                        "last_states": data_dict["meta"]["last_states"],
+                        "states_usage": data_dict["meta"]["states_usage"],
+                        "turns_since_initiative": data_dict["meta"]["turns_since_initiative"]
+                    }
+
+                # the actual conversation
+                elif not debug:
+                    print(f"{user_bot(reply[4])} {reply[2].strip()}")
+                    if states and not reply[4]:
+                        turn_metadata = reply[6]
+                        # greetings from noobsville
+                        # print("whole tuple"+str(reply))
+                        pprint.pp(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", ""))
+                        if reply[5]:
+                            print("prompt: "+reply[5])
+                        print("\n")
+                        print("\n______\n")
+
+
+    #print(csi_container[-1])
+    test.main(csi_container[which])
 
     # Close the cursor and connection objects
     cursor_users.close()
@@ -121,9 +152,11 @@ def raw():
                 print(reply)
 
 
+
+
 if __name__ == '__main__':
     fire.Fire({
         'exp': main,
         'cols': cols,
-        'raw': raw
+        'raw': raw,
     })

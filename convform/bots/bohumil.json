@@ -99,7 +99,8 @@
       "state_name": "co raději",
       "intents": {
         "jak se máš": [
-          "mám se dobře"
+          "mám se dobře",
+          "a ty"
         ],
         "uživatel vtip": [
           "tak jo",
