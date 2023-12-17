@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cp convform/bots/vtipobot_edited.json ../cvf/bots/vtipobot.json
-cp -r ../cvf/bots/ convform/bots/
-cp ../cvf/Cargo.toml convform/Cargo.toml
+cp convform/bots/vtipobot_edited.json ../convform/bots/vtipobot.json
+cp -r ../convform/bots/ convform/bots/
+cp ../convform/Cargo.toml convform/Cargo.toml
 
-# cd convform/ && maturin develop && cd ..
+# cd convform/ && maturin develop --features debug
 python test.py

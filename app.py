@@ -86,20 +86,16 @@ async def fetch_string():
     #print("sesh user id:"+str(session["user_id"]))
     csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
     cso = await reply(csi, session["user_id"], session["flow"])
-    #print("cso.show():")
-    # print(cso.show())
     session.modified = True
-    if cso is None:
-        session["page"] = "outro"
-        return redirect(url_for("dispatcher"))
-    else:
-        repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso), prompt=cso.prompt)
-        #print(vars(repl))
-        db.session.add(repl)
-        db.session.commit()
-        return jsonify({
-            "fetched_string": cstatus.to_json(cso)
-        })
+
+
+    repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso), prompt=cso.prompt)
+    #print(vars(repl))
+    db.session.add(repl)
+    db.session.commit()
+    return jsonify({
+        "fetched_string": cstatus.to_json(cso)
+    })
 
 
 @app.route("/", methods=("GET", "POST"))
@@ -129,6 +125,10 @@ def dispatcher():
     if request.args.get("abort"):
         session["page"] = "outro"
         session["abort"] = True
+        return redirect(url_for("dispatcher"))
+
+    if request.args.get("done"):
+        session["page"] = "outro"
         return redirect(url_for("dispatcher"))
 
     page = session.setdefault("page", "intro")
@@ -170,7 +170,8 @@ def chat():
             )
         )
         db.session.commit()
-    cState = session.setdefault("state", {"flow" : session["flow"], "user_id":session["user_id"]})  # conversation state
+
+    # cState = session.setdefault("state", {"flow" : session["flow"], "user_id":session["user_id"]})  # conversation state
 
     return render_template(
         "chat.html", flow=session["flow"].capitalize()

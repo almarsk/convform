@@ -1,95 +1,57 @@
-SELECT * FROM user WHERE id=22;
-
-User Test (no.22)
-Talked to Bohumil on 2023-09-28
-from 11:12:01
-and ended the conversation prematurely (or it never had a fixed end).
-
-Bohumil:	 Zdravím, mé jméno je Bohumil.
-('{"routine": "standard", "superstate": "úvod", "last_states": '
- '["state_intro"], "states_usage": {"state_intro": 1}, '
- '"turns_since_initiative": 0}')
-
-
-Test (3.507s):	 ahoh boumile
-Bohumil:	 Jak ti mám říkat?
-('{"routine": "standard", "superstate": "úvod", "last_states": ["žádost o '
- 'představení"], "states_usage": {"žádost o představení": 1, "state_intro": '
- '1}, "turns_since_initiative": 0}')
-
-
-Test (2.84s):	 já jsem albert
-Bohumil:	 Těší mě, že se poznáváme. jak se daří?
-('{"routine": "standard", "superstate": "úvod", "last_states": ["těší mě", '
- '"jak se máš"], "states_usage": {"těší mě": 1, "jak se máš": 1, "žádost o '
- 'představení": 2, "state_intro": 1}, "turns_since_initiative": 0}')
-
-
-Test (5.515s):	 já se mám skvěle a jak se máš ty
-Bohumil:	 To jsem rád! Já se mám fajn. Můžu říct vtip?
-('{"routine": "standard", "superstate": "otázka jestli vtip", "last_states": '
- '["to mě těší", "mám se dobře", "otázka jestli vtip"], "states_usage": {"těší '
- 'mě": 1, "state_intro": 1, "mám se dobře": 1, "to mě těší": 1, "žádost o '
- 'představení": 2, "jak se máš": 1, "otázka jestli vtip": 1}, '
- '"turns_since_initiative": 0}')
-
-
-Test (3.225s):	 jop
-Bohumil:	 Dobře, tady je otázka ze vtipu: Proč si ryba nikdy nepůjčí peníze?
-('{"routine": "standard", "superstate": "otázka vtipu", "last_states": '
- '["otázka vtipu"], "states_usage": {"jak se máš": 1, "mám se dobře": 1, '
- '"otázka vtipu": 1, "těší mě": 1, "žádost o představení": 2, "to mě těší": 1, '
- '"otázka jestli vtip": 1, "state_intro": 1}, "turns_since_initiative": 0}')
-prompt: Jsi Bohumil, hodný česky mluvící robot a rád říkáš vtipy.; vymysli vtip a řekni z něj jenom otázku
-
-
-Test (109.287s):	 proč?
-Bohumil:	 Protože nemá žádné věci, které by mohla dát jako záruku!
-('{"routine": "standard", "superstate": "pointa vtipu", "last_states": '
- '["pointa vtipu"], "states_usage": {"jak se máš": 1, "state_intro": 1, "mám '
- 'se dobře": 1, "to mě těší": 1, "otázka jestli vtip": 1, "otázka vtipu": 1, '
- '"pointa vtipu": 1, "těší mě": 1, "žádost o představení": 2}, '
- '"turns_since_initiative": 0}')
-prompt: Jsi Bohumil, hodný česky mluvící robot a rád říkáš vtipy.; řekni pointu vtipu
-
-
-Test (8.179s):	 hm to je vtipný
-Bohumil:	 Tak já povím další vtip, ne?
-('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
- '["další vtip"], "states_usage": {"state_intro": 1, "těší mě": 1, "žádost o '
- 'představení": 2, "pointa vtipu": 1, "jak se máš": 1, "to mě těší": 1, '
- '"otázka jestli vtip": 1, "mám se dobře": 1, "další vtip": 1, "otázka vtipu": '
- '1}, "turns_since_initiative": 0}')
-
-
-Test (1.988s):	 tak jo
-Bohumil:	 Proč by ne, nemám nic proti.
-('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
- '["tak jo"], "states_usage": {"pointa vtipu": 1, "otázka vtipu": 1, "mám se '
- 'dobře": 1, "otázka jestli vtip": 1, "jak se máš": 1, "žádost o představení": '
- '2, "těší mě": 1, "tak jo": 1, "další vtip": 1, "state_intro": 1, "to mě '
- 'těší": 1}, "turns_since_initiative": 0}')
-
-
-Test (2.469s):	 aha
-Bohumil:	 Nemám šajn.
-('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
- '["nevím"], "states_usage": {"další vtip": 1, "nevím": 1, "state_intro": 1, '
- '"pointa vtipu": 1, "tak jo": 1, "otázka vtipu": 1, "to mě těší": 1, "otázka '
- 'jestli vtip": 1, "těší mě": 1, "jak se máš": 1, "mám se dobře": 1, "žádost o '
- 'představení": 2}, "turns_since_initiative": 0}')
-
-
-Test (2.375s):	 ??
-Bohumil:	 Nemám šajn.
-('{"routine": "standard", "superstate": "nabídka další vtip", "last_states": '
- '["aha"], "states_usage": {"to mě těší": 1, "pointa vtipu": 1, "další vtip": '
- '1, "tak jo": 1, "jak se máš": 1, "state_intro": 1, "nevím": 1, "otázka '
- 'jestli vtip": 1, "aha": 1, "žádost o představení": 2, "mám se dobře": 1, '
- '"těší mě": 1, "otázka vtipu": 1}, "turns_since_initiative": 0}')
-
-
-Test (1.486s):	 .
-
-______
-
+🔗 Found pyo3 bindings
+🐍 Found CPython 3.9 at /Users/almarsk/Documents/hekovani/rust/convform_app/app/venv/bin/python
+💻 Using `MACOSX_DEPLOYMENT_TARGET=11.0` for aarch64-apple-darwin by default
+   Compiling convform v0.1.0 (/Users/almarsk/Documents/hekovani/rust/convform_app/app/convform)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.87s
+📦 Built wheel for CPython 3.9 to /var/folders/74/wk7876n97730j_g56qr_458w0000gn/T/.tmpl7lygF/convform-0.1.0-cp39-cp39-macosx_11_0_arm64.whl
+🛠 Installed convform-0.1.0
+[src/lib.rs:18] &path = "convform/bots/vtipobot.json"
+[src/c_status.rs:21] &csi = CStatusIn {
+    user_reply: "",
+    last_states: [],
+    states_usage: {},
+    turns_since_initiative: 0,
+    bot_turns: 0,
+}
+[src/c_status/stringmatching_pool_get.rs:39] &unique_last_states_intents = {}
+[src/c_status/stringmatching_pool_get.rs:60] &unique_last_decomposed_intents = []
+[src/c_status/matched_states_get.rs:14] &kaps = []
+[src/c_status/response_states_get.rs:29] &csi.states_usage = {}
+[src/c_status/response_states_get.rs:45] &matched_b4_rhem = [
+    MatchItem {
+        intent: "",
+        grouping: GroupingInfo {
+            id: 0,
+            number: 1,
+            origin: "",
+        },
+        states: [
+            "state_intro",
+        ],
+        index_start: 0,
+        answer_to: [],
+    },
+]
+[src/c_status/response_states_get.rs:58] "assessing matched states solo" = "assessing matched states solo"
+[src/c_status/initiative.rs:43] &ordered = [
+    "state_intro",
+]
+[src/c_status/response_states_get.rs:102] &final_response_states = [
+    "state_intro",
+]
+[src/c_status/response_states.rs:14] "empty response states case needs handling" = "empty response states case needs handling"
+[src/c_status/cso.rs:54] &last_states = [
+    "state_intro",
+]
+[src/lib.rs:35] &self = CStatusOut {
+    bot_reply: "Zdravím, mé jméno je Vtipobot.",
+    last_states: [
+        "state_intro",
+    ],
+    states_usage: {
+        "state_intro": 1,
+    },
+    turns_since_initiative: 0,
+    bot_turns: 1,
+    prompt: "",
+}

@@ -1,100 +1,41 @@
 {
-  "persona": "jsi Vtipobot, hodný, česky mluvící bot, který rád říká vtipy",
-  "routines": {
-    "loop": {
-      "routine_name": "loop",
-      "is_loop": true,
-      "next": null,
-      "the_track": "Vtipobot říká vtipy tak dlouho, dokud to uživatele baví.",
-      "order_superstates": [
-        "otázka jestli vtip",
-        "otázka vtipu",
-        "pointa vtipu"
-      ]
-    },
-    "standard": {
-      "routine_name": "standard",
-      "is_loop": false,
-      "next": "loop",
-      "the_track": "Vtipobot se nejdřív zeptá, jestli může říct vtip, pak položí otázku vtipu a až pak řekne pointu vtipu",
-      "order_superstates": [
-        "úvod"
-      ]
-    }
-  },
-  "superstates": {
-    "otázka jestli vtip": {
-      "superstate_name": "otázka jestli vtip",
-      "initiativeness": 2,
-      "states": [
-        "otázka jestli vtip"
-      ],
-      "description": "Vtipobot se zeptá, jestli může říct vtip"
-    },
-    "otázka vtipu": {
-      "superstate_name": "otázka vtipu",
-      "initiativeness": 2,
-      "states": [
-        "otázka vtipu"
-      ],
-      "description": "Vtipobot si vymyslí vtip ale řekne z něj jenom otázku"
-    },
-    "pointa vtipu": {
-      "superstate_name": "pointa vtipu",
-      "initiativeness": 2,
-      "states": [
-        "pointa vtipu"
-      ],
-      "description": "Vtipobot prozradí pointu vtipu"
-    },
-    "úvod": {
-      "superstate_name": "úvod",
-      "initiativeness": 0,
-      "states": [
-        "state_intro",
-        "žádost o představení",
-        "jak se máš"
-      ],
-      "description": "Vtipobot se představí a seznámí s uživatelem."
-    }
-  },
+  "persona": "jsi Vtipobot, hodný, česky mluvící bot, který rád říká vtipy a uživateli vyká.",
+  "the_track": [
+    "žádost o představení",
+    "jak se máš",
+    "otázka jestli vtip",
+    "otázka vtipu",
+    "pointa vtipu",
+    "otázka jestli další vtip"
+  ],
+  "coda": "rozloučení",
   "states": {
     "a co vy": {
       "state_name": "a co vy",
       "intents": {},
       "say_annotation": "Vtipobot se ptá na stejnou otázku uživatele",
-      "say": [
-        "A co vy?",
-        "A vy?"
-      ],
-      "over_iterated_say": [
-        "Zajímalo mě co vy."
-      ],
+      "say": ["A co vy?", "A vy?"],
+      "over_iterated_say": ["Zajímalo mě co vy."],
       "state_type": "Connective",
-      "iteration": 4,
-      "superstate_global": false,
-      "prioritize": false
+      "iteration": 2,
+      "prioritize": false,
+      "initiativity": null
     },
     "co raději": {
       "state_name": "co raději",
       "intents": {
-        "uživatel chce říct vtip": [
-          "tak jo",
-          "řekněte mi vtip"
-        ]
+        "uživatel chce říct vtip": ["tak jo", "řekněte mi vtip"]
       },
       "say_annotation": "Vtipobot se ptá, co raději.",
       "say": [
         "Co bychom raději mohli podniknout?",
         "O čem bychom si ještě mohli povídat?"
       ],
-      "over_iterated_say": [
-        "Tak navrhněte, co budeme dělat?"
-      ],
+      "over_iterated_say": ["Tak navrhněte, co budeme dělat?"],
       "state_type": "Initiative",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "haha": {
       "state_name": "haha",
@@ -111,34 +52,26 @@
       ],
       "state_type": "Responsive",
       "iteration": 3,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "jak se máš": {
       "state_name": "jak se máš",
       "intents": {
-        "a ty": [
-          "mám se dobře"
-        ],
-        "dobře": [
-          "to jsem rád"
-        ],
-        "špatně": [
-          "to mě mrzí"
-        ]
+        "a ty": ["mám se dobře"],
+        "dobře": ["to jsem rád"],
+        "představení": ["$"],
+        "těší mě": ["$"],
+        "špatně": ["to mě mrzí"],
+        "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot se ptá, jak se uživatel má",
-      "say": [
-        "Jak se máte?",
-        "Jak se vám daří?"
-      ],
-      "over_iterated_say": [
-        "Ptám se, jak se máte?"
-      ],
+      "say": ["Jak se máte?", "Jak se vám daří?"],
+      "over_iterated_say": ["Ptám se, jak se máte?"],
       "state_type": "Initiative",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": 0
     },
     "mám se dobře": {
       "state_name": "mám se dobře",
@@ -149,67 +82,80 @@
         "Já se mám přímo skvěle.",
         "Já se mám prostě fantasticky."
       ],
-      "over_iterated_say": [
-        "Opravdu, mám se dobře, jak říkám."
-      ],
+      "over_iterated_say": ["Opravdu, mám se dobře, jak říkám."],
       "state_type": "Responsive",
-      "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "iteration": 3,
+      "prioritize": false,
+      "initiativity": null
     },
     "mě taky": {
       "state_name": "mě taky",
       "intents": {},
       "say_annotation": "Vtipobot říká, že jeho taky",
-      "say": [
-        "Mě taky.",
-        "Mě též",
-        "Nápodobně."
-      ],
+      "say": ["Mě taky.", "Mě též", "Nápodobně."],
       "over_iterated_say": [],
       "state_type": "Connective",
       "iteration": 3,
-      "superstate_global": false,
-      "prioritize": true
+      "prioritize": true,
+      "initiativity": null
     },
     "nevím": {
       "state_name": "nevím",
       "intents": {
-        "uživatel pointa vtipu": [
-          "haha"
-        ]
+        "uživatel pointa vtipu": ["haha"]
       },
       "say_annotation": "Vtipobot neví.",
-      "say": [
-        "Tak to netuším.",
-        "Nemám tušení."
-      ],
-      "over_iterated_say": [
-        "To tedy opravdu nevím.",
-        "Opravdu nemám tušení"
-      ],
+      "say": ["Tak to netuším.", "Nemám tušení."],
+      "over_iterated_say": ["To tedy opravdu nevím.", "Opravdu nemám tušení"],
       "state_type": "Solo",
       "iteration": 2,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
+    },
+    "no input response": {
+      "state_name": "no input response",
+      "intents": {},
+      "say_annotation": "Vtipobot nedostal žádnou odpověď od uživatele.",
+      "say": [
+        "Jste tam ještě?",
+        "Co říkáte?",
+        "Teď si nejsem jistý, co to říkáte."
+      ],
+      "over_iterated_say": ["No tak, mluvte se mnou přeci", "Haló?!?!"],
+      "state_type": "Responsive",
+      "iteration": 4,
+      "prioritize": true,
+      "initiativity": null
+    },
+    "otázka jestli další vtip": {
+      "state_name": "otázka jestli další vtip",
+      "intents": {
+        "nesouhlas": ["co raději", "řekněte mi vtip"],
+        "no input": ["$", "otázka jestli vtip"],
+        "souhlas": ["otázka vtipu"],
+        "souhlas+nesouhlas": ["tak ano nebo ne"],
+        "uživatel chce říct vtip": ["tak jo", "řekněte mi vtip"]
+      },
+      "say_annotation": "Vtipobote se ptá, jestli chce uživatel slyšet další vtip",
+      "say": [
+        "Chcete slyšet ještě jeden?",
+        "Chcete slyšet další?",
+        "Řeknu Vám ještě jeden vtip, jo?"
+      ],
+      "over_iterated_say": ["Tak já Vám povím ještě jeden, co vy na to?"],
+      "state_type": "Flexible",
+      "iteration": 1,
+      "prioritize": false,
+      "initiativity": null
     },
     "otázka jestli vtip": {
       "state_name": "otázka jestli vtip",
       "intents": {
-        "nesouhlas": [
-          "co raději",
-          "řekněte mi vtip"
-        ],
-        "souhlas": [
-          "otázka vtipu"
-        ],
-        "souhlas+nesouhlas": [
-          "tak ano nebo ne"
-        ],
-        "uživatel chce říct vtip": [
-          "tak jo",
-          "řekněte mi vtip"
-        ]
+        "nesouhlas": ["co raději", "řekněte mi vtip"],
+        "no input": ["$", "otázka jestli vtip"],
+        "souhlas": ["otázka vtipu"],
+        "souhlas+nesouhlas": ["tak ano nebo ne"],
+        "uživatel chce říct vtip": ["tak jo", "řekněte mi vtip"]
       },
       "say_annotation": "Vtipobot se ptá, jestli může říct vtip",
       "say": [
@@ -217,107 +163,81 @@
         "Řeknu vám vtip, co vy na to?",
         "Chcete slyšet vtip?"
       ],
-      "over_iterated_say": [
-        "Nenechte se přesvědčovat, řeknu vám vtip, jo?"
-      ],
+      "over_iterated_say": ["Nenechte se přesvědčovat, řeknu vám vtip, jo?"],
       "state_type": "Flexible",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": 3
     },
     "otázka vtipu": {
       "state_name": "otázka vtipu",
       "intents": {},
       "say_annotation": "Vtipobot říká vtip",
-      "say": [
-        "###vymysli vtip a řekni z něj jenom otázku###"
-      ],
-      "over_iterated_say": [
-        "###zopakuj stejnou otázku trochu jinými slovy###"
-      ],
+      "say": ["###vymysli vtip a řekni z něj jenom otázku###"],
+      "over_iterated_say": ["###zopakuj stejnou otázku trochu jinými slovy###"],
       "state_type": "Solo",
-      "iteration": 3,
-      "superstate_global": false,
-      "prioritize": false
+      "iteration": 2,
+      "prioritize": false,
+      "initiativity": null
     },
     "pointa vtipu": {
       "state_name": "pointa vtipu",
       "intents": {},
       "say_annotation": "Vtipobot říká pointu vtipu",
-      "say": [
-        "###řekni pointu vtipu###"
-      ],
-      "over_iterated_say": [
-        "###zopakuj pointu###"
-      ],
+      "say": ["###řekni pointu vtipu###"],
+      "over_iterated_say": ["###zopakuj pointu###"],
       "state_type": "Solo",
-      "iteration": 3,
-      "superstate_global": false,
-      "prioritize": false
+      "iteration": 2,
+      "prioritize": false,
+      "initiativity": null
     },
     "pokračujte": {
       "state_name": "pokračujte",
       "intents": {
-        "uživatel pointa vtipu": [
-          "haha"
-        ]
+        "uživatel pointa vtipu": ["haha"]
       },
       "say_annotation": "Vtipobot poslouchá vtip",
-      "say": [
-        "Aha, dobře?",
-        "Hmm, jak je to dál?"
-      ],
-      "over_iterated_say": [
-        "A jak to pokračuje?"
-      ],
+      "say": ["Aha, dobře?", "Hmm, jak je to dál?"],
+      "over_iterated_say": ["A jak to pokračuje?"],
       "state_type": "Solo",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
+    },
+    "rozloučení": {
+      "state_name": "rozloučení",
+      "intents": {},
+      "say_annotation": "Vtipobot se loučí",
+      "say": ["No nic, já už musím končit, tak děkuju za pokec a mějte se"],
+      "over_iterated_say": ["Já už opravdu musím končit, tak se mějte"],
+      "state_type": "Solo",
+      "iteration": 1,
+      "prioritize": false,
+      "initiativity": null
     },
     "state_intro": {
       "state_name": "state_intro",
       "intents": {
-        "jak se máš": [
-          "$"
-        ],
-        "představení": [
-          "$"
-        ],
-        "těší mě": [
-          "$"
-        ],
-        "žádost o představení": [
-          "$"
-        ]
+        "jak se máš": ["$"],
+        "končíme": ["rozloučení"],
+        "představení": ["$"],
+        "těší mě": ["$"],
+        "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot se představí.",
-      "say": [
-        "Dobrý den, já jsem Vtipobot.",
-        "Zdravím, mé jméno je Vtipobot."
-      ],
-      "over_iterated_say": [
-        "Jmenuji se Vtipobot a rád říkám vtipy."
-      ],
+      "say": ["Dobrý den, já jsem Vtipobot.", "Zdravím, mé jméno je Vtipobot."],
+      "over_iterated_say": ["Jmenuji se Vtipobot a rád říkám vtipy."],
       "state_type": "Solo",
       "iteration": 1,
-      "superstate_global": true,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": 1
     },
     "tak ano nebo ne": {
       "state_name": "tak ano nebo ne",
       "intents": {
-        "nesouhlas": [
-          "co raději",
-          "řekněte mi vtip"
-        ],
-        "souhlas": [
-          "otázka vtipu"
-        ],
-        "souhlas+nesouhlas": [
-          "tak ano nebo ne",
-          "co raději"
-        ]
+        "nesouhlas": ["co raději", "řekněte mi vtip"],
+        "souhlas": ["otázka vtipu"],
+        "souhlas+nesouhlas": ["tak ano nebo ne", "co raději"]
       },
       "say_annotation": "Vtipobot se zmateně ptá, jak to tedy je.",
       "say": [
@@ -326,120 +246,84 @@
         "Nejsem si jistý, kterou z možností.",
         "Teď nevím, co si počít."
       ],
-      "over_iterated_say": [
-        "Opravdu nevím, co si teď počít."
-      ],
+      "over_iterated_say": ["Opravdu nevím, co si teď počít."],
       "state_type": "Solo",
       "iteration": 2,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "tak jo": {
       "state_name": "tak jo",
       "intents": {},
       "say_annotation": "Vtipobot souhlasí",
-      "say": [
-        "Tak jo.",
-        "Proč ne."
-      ],
-      "over_iterated_say": [
-        "Jsem pro.",
-        "Jdeme na to."
-      ],
+      "say": ["Tak jo.", "Proč ne."],
+      "over_iterated_say": ["Jsem pro.", "Jdeme na to."],
       "state_type": "Responsive",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "tak jo connective": {
       "state_name": "tak jo connective",
       "intents": {},
       "say_annotation": "Vtipobot souhlasí",
-      "say": [
-        "Tak jo.",
-        "Dobře."
-      ],
-      "over_iterated_say": [
-        "Jsem pro."
-      ],
+      "say": ["Tak jo.", "Dobře."],
+      "over_iterated_say": ["Jsem pro."],
       "state_type": "Connective",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "to jsem rád": {
       "state_name": "to jsem rád",
       "intents": {},
       "say_annotation": "Vtipobot říká, že je rád",
-      "say": [
-        "To jsem rád",
-        "Tak to je dobře.",
-        "To rád slyším."
-      ],
-      "over_iterated_say": [
-        "Opravdu, jsem rád.",
-        "Opravdu, jsem za to rád."
-      ],
+      "say": ["To jsem rád.", "Tak to je dobře.", "To rád slyším."],
+      "over_iterated_say": ["Opravdu, jsem rád.", "Opravdu, jsem za to rád."],
       "state_type": "Responsive",
       "iteration": 2,
-      "superstate_global": false,
-      "prioritize": true
+      "prioritize": true,
+      "initiativity": null
     },
     "to mě mrzí": {
       "state_name": "to mě mrzí",
       "intents": {
-        "jsou horší věci": [
-          "$"
-        ],
-        "to nevadí": [
-          "$"
-        ]
+        "jsou horší věci": ["$"],
+        "to nevadí": ["$"]
       },
       "say_annotation": "Vtipobot říká, že ho to mrzí.",
-      "say": [
-        "To mě mrzí.",
-        "To je mi líto"
-      ],
+      "say": ["To mě mrzí.", "To je mi líto"],
       "over_iterated_say": [
         "Tak to mě opravdu mrzí",
         "Tak to je mi opravdu líto"
       ],
       "state_type": "Responsive",
       "iteration": 3,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "těší mě": {
       "state_name": "těší mě",
-      "intents": {},
+      "intents": {
+        "jak se máš": ["$"],
+        "těší mě": ["$"],
+        "žádost o představení": ["$"]
+      },
       "say_annotation": "Vtipobot říká, že ho těší",
-      "say": [
-        "Moc mě těší.",
-        "Těší mě, že se poznáváme."
-      ],
-      "over_iterated_say": [
-        "Povídám, že mě těší"
-      ],
+      "say": ["Moc mě těší.", "Těší mě, že se poznáváme."],
+      "over_iterated_say": ["Povídám, že mě těší"],
       "state_type": "Responsive",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": true
+      "prioritize": true,
+      "initiativity": null
     },
     "řekněte mi vtip": {
       "state_name": "řekněte mi vtip",
       "intents": {
-        "nesouhlas": [
-          "co raději"
-        ],
-        "uživatel vtip celý": [
-          "$"
-        ],
-        "uživatel vtip otázka": [
-          "$"
-        ],
-        "uživatel vtip část": [
-          "$"
-        ]
+        "nesouhlas": ["co raději"],
+        "uživatel vtip celý": ["$"],
+        "uživatel vtip otázka": ["$"],
+        "uživatel vtip část": ["$"]
       },
       "say_annotation": "Vtipobot říká, ať mu uživatel řekne vtip",
       "say": [
@@ -453,85 +337,74 @@
       ],
       "state_type": "Initiative",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     },
     "žádost o představení": {
       "state_name": "žádost o představení",
       "intents": {
-        "představení": [
-          "těší mě"
-        ]
+        "jak se máš": ["$"],
+        "představení": ["těší mě"],
+        "těší mě": ["$"],
+        "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot se ptá, s kým mluví",
-      "say": [
-        "Jak se jmenujete?",
-        "Jaké je vaše jméno?"
-      ],
-      "over_iterated_say": [
-        "Zajímalo by mě s kým mám tu čest."
-      ],
+      "say": ["Jak se jmenujete?", "Jaké je vaše jméno?"],
+      "over_iterated_say": ["Zajímalo by mě s kým mám tu čest."],
       "state_type": "Initiative",
       "iteration": 1,
-      "superstate_global": false,
-      "prioritize": false
+      "prioritize": false,
+      "initiativity": null
     }
   },
   "intents": {
     "a ty": {
       "intent_name": "a ty",
       "intent_annotation": "Uživatel se ptá, co Vtipobot.",
-      "keywords": [
-        "a(.*)?ty?"
-      ],
-      "adjacent": [
-        "$"
-      ],
+      "keywords": ["a(.*)?ty?"],
+      "adjacent": ["$"],
       "answer_to": [],
       "context_intents": {}
     },
+
     "dobře": {
       "intent_name": "dobře",
       "intent_annotation": "Uživatel říká, že se má dobře.",
       "keywords": [
-        "dobře",
+        "dobř",
+        "dobr",
         "fajn",
         "prima",
         "skvěle",
-        "super",
+        "se super",
         "jde to",
         "bylo hůř"
       ],
-      "adjacent": [
-        "to jsem rád"
-      ],
+      "adjacent": ["to jsem rád"],
       "answer_to": [],
       "context_intents": {}
     },
     "jak se máš": {
       "intent_name": "jak se máš",
       "intent_annotation": "uživatel se ptá, jak se vtipobot má",
-      "keywords": [
-        "jak se má"
-      ],
-      "adjacent": [
-        "mám se dobře",
-        "a co vy",
-        "jak se máš"
-      ],
+      "keywords": ["jak se má", "jak je"],
+      "adjacent": ["mám se dobře", "a co vy", "jak se máš"],
       "answer_to": [],
       "context_intents": {}
     },
     "jsou horší věci": {
       "intent_name": "jsou horší věci",
       "intent_annotation": "Uživatel říká, že jsou horší věci",
-      "keywords": [
-        "jsou horší věci",
-        "není to tak"
-      ],
-      "adjacent": [
-        "to jsem rád"
-      ],
+      "keywords": ["jsou horší věci", "není to tak"],
+      "adjacent": ["to jsem rád"],
+      "answer_to": [],
+      "context_intents": {}
+    },
+    "končíme": {
+      "intent_name": "končíme",
+      "intent_annotation": "Uživatel končí",
+      "keywords": ["konec"],
+      "adjacent": ["$"],
       "answer_to": [],
       "context_intents": {}
     },
@@ -539,6 +412,7 @@
       "intent_name": "nesouhlas",
       "intent_annotation": "Uživatel nesouhlasí",
       "keywords": [
+        "ne\\$",
         "ne$",
         "ne ",
         "neříkej",
@@ -547,26 +421,23 @@
         "to je dobr.",
         "v pohodě"
       ],
-      "adjacent": [
-        "řekněte mi vtip",
-        "tak jo connective",
-        "co raději"
-      ],
+      "adjacent": ["řekněte mi vtip", "tak jo connective", "co raději"],
+      "answer_to": [],
+      "context_intents": {}
+    },
+    "no input": {
+      "intent_name": "no input",
+      "intent_annotation": "uživatel nic neříká",
+      "keywords": ["^$"],
+      "adjacent": ["no input response"],
       "answer_to": [],
       "context_intents": {}
     },
     "představení": {
       "intent_name": "představení",
       "intent_annotation": "Uživatel se představuje.",
-      "keywords": [
-        "já jsem",
-        "jmenuj. se",
-        "říkej mi",
-        "říkají"
-      ],
-      "adjacent": [
-        "těší mě"
-      ],
+      "keywords": ["já jsem", "jmenuj. se", "se jmenuj.", "říkej mi", "říkají"],
+      "adjacent": ["těší mě"],
       "answer_to": [],
       "context_intents": {}
     },
@@ -585,9 +456,7 @@
         "pověz",
         "zkust.? to"
       ],
-      "adjacent": [
-        "$"
-      ],
+      "adjacent": ["$"],
       "answer_to": [],
       "context_intents": {}
     },
@@ -601,23 +470,23 @@
         "nic hrozného",
         "jsou horší věci"
       ],
-      "adjacent": [
-        "tak jo"
-      ],
+      "adjacent": ["tak jo"],
       "answer_to": [],
       "context_intents": {}
     },
     "těší mě": {
       "intent_name": "těší mě",
       "intent_annotation": "Uživatel říká, že ho těší",
-      "keywords": [
-        "těší mě",
-        "je mi ctí",
-        "rád.*?poznávám"
-      ],
-      "adjacent": [
-        "mě taky"
-      ],
+      "keywords": ["těší mě", "je mi ctí", "rád.*?poznávám"],
+      "adjacent": ["mě taky"],
+      "answer_to": [],
+      "context_intents": {}
+    },
+    "test context": {
+      "intent_name": "test context",
+      "intent_annotation": "test kontext",
+      "keywords": ["test kontext", "test context"],
+      "adjacent": ["mám se dobře"],
       "answer_to": [],
       "context_intents": {}
     },
@@ -628,102 +497,66 @@
         "teď .*? já",
         "(já)? chci (taky)? říct? vtip",
         "nech mě",
-        "zkusil.? já"
+        "zkusil.? já",
+        "řeknu vtip"
       ],
-      "adjacent": [
-        "tak jo",
-        "řekněte mi vtip"
-      ],
+      "adjacent": ["tak jo", "řekněte mi vtip"],
       "answer_to": [],
       "context_intents": {
-        "uživatel vtip celý": [
-          "$"
-        ],
-        "uživatel vtip otázka": [
-          "$"
-        ],
-        "uživatel vtip část": [
-          "$"
-        ]
+        "uživatel vtip celý": ["$"],
+        "uživatel vtip otázka": ["$"],
+        "uživatel vtip část": ["$"]
       }
     },
     "uživatel pointa vtipu": {
       "intent_name": "uživatel pointa vtipu",
       "intent_annotation": "Uživatel říká pointu vtipu",
-      "keywords": [
-        "###uživatel říká pointu vtipu###"
-      ],
-      "adjacent": [
-        "haha"
-      ],
+      "keywords": ["###uživatel říká pointu vtipu###"],
+      "adjacent": ["haha"],
       "answer_to": [],
       "context_intents": {}
     },
     "uživatel vtip celý": {
       "intent_name": "uživatel vtip celý",
       "intent_annotation": "Uživatel říká celý vtip",
-      "keywords": [
-        "###uživatel říká celý vtip###"
-      ],
-      "adjacent": [
-        "haha"
-      ],
+      "keywords": ["###uživatel říká celý vtip###"],
+      "adjacent": ["haha"],
       "answer_to": [],
       "context_intents": {}
     },
     "uživatel vtip otázka": {
       "intent_name": "uživatel vtip otázka",
       "intent_annotation": "Uživatel říká otázku vtipu",
-      "keywords": [
-        "###uživatel říká otázku vtipu###"
-      ],
-      "adjacent": [
-        "nevím"
-      ],
+      "keywords": ["###uživatel říká otázku vtipu###"],
+      "adjacent": ["nevím"],
       "answer_to": [],
       "context_intents": {
-        "uživatel pointa vtipu": [
-          "haha"
-        ]
+        "uživatel pointa vtipu": ["haha"]
       }
     },
     "uživatel vtip část": {
       "intent_name": "uživatel vtip část",
       "intent_annotation": "Uživatel říká část vtipu",
-      "keywords": [
-        "###uživatel říká část vtipu###"
-      ],
-      "adjacent": [
-        "pokračujte"
-      ],
+      "keywords": ["###uživatel říká část vtipu###"],
+      "adjacent": ["pokračujte"],
       "answer_to": [],
       "context_intents": {}
     },
     "špatně": {
       "intent_name": "špatně",
       "intent_annotation": "Uživatel říká, že se nemá dobře.",
-      "keywords": [
-        "nic moc",
-        "bylo l.p.?"
-      ],
-      "adjacent": [
-        "to mě mrzí"
-      ],
+      "keywords": ["nic moc", "bylo l.p.?"],
+      "adjacent": ["to mě mrzí"],
       "answer_to": [],
       "context_intents": {}
     },
     "žádost o představení": {
       "intent_name": "žádost o představení",
       "intent_annotation": "Uživatel žádá Vtipobota, aby se představil",
-      "keywords": [
-        "jmenuješ",
-        "ti.*?říkat"
-      ],
-      "adjacent": [
-        "state_intro"
-      ],
+      "keywords": ["jmenuješ", "ti.*?říkat"],
+      "adjacent": ["state_intro"],
       "answer_to": [],
-      "context_intents": {}
+      "context_intents": { "test context": ["$"] }
     }
   }
 }

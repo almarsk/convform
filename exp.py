@@ -8,7 +8,7 @@ import pprint
 import test
 
 
-def main(query='', states=False, debug=False, which=-1):
+def main(query='', states=False, debug=False, which=-2):
 
     conn = sqlite3.connect('chatbot.db')
     cursor_users = conn.cursor()
@@ -92,12 +92,15 @@ def main(query='', states=False, debug=False, which=-1):
                     csi = {
                         "reply": data_dict["reply"],
                         "user_reply": reply[2],
-                        "superstate": data_dict["meta"]["superstate"],
-                        "routine": data_dict["meta"]["routine"],
                         "last_states": data_dict["meta"]["last_states"],
                         "states_usage": data_dict["meta"]["states_usage"],
-                        "turns_since_initiative": data_dict["meta"]["turns_since_initiative"]
+                        "turns_since_initiative": data_dict["meta"]["turns_since_initiative"],
+                        "bot_turns": data_dict["meta"]["bot_turns"],
+                        "coda": data_dict["meta"]["coda"],
+                        "initiativity": data_dict["meta"]["initiativity"],
+                        "context": data_dict["meta"]["context"]
                     }
+                    #pprint.pp(csi)
 
                 # the actual conversation
                 elif not debug:
@@ -113,8 +116,11 @@ def main(query='', states=False, debug=False, which=-1):
                         print("\n______\n")
 
 
-    #print(csi_container[-1])
-    test.main(csi_container[which])
+    if debug:
+        print("debug time")
+        pprint.pp(csi_container)
+        """ [which]) """
+        test.main(csi_container[which])
 
     # Close the cursor and connection objects
     cursor_users.close()
@@ -136,27 +142,5 @@ def cols(table):
     cursor.execute(f"SELECT name FROM pragma_table_info('{table}')")
     return [row[0] for row in cursor.fetchall()]
 
-
-def raw():
-    conn = sqlite3.connect('chatbot.db')
-    cursor_users = conn.cursor()
-    cursor_replies = conn.cursor()
-    cursor_users.execute(f"SELECT * FROM user;")
-    cursor_replies.execute(f"SELECT * FROM reply;")
-    users = cursor_users.fetchall()
-    replies = cursor_replies.fetchall()
-    for user in users:
-        print(user)
-        for reply in replies:
-            if reply[1] == user[0]:
-                print(reply)
-
-
-
-
 if __name__ == '__main__':
-    fire.Fire({
-        'exp': main,
-        'cols': cols,
-        'raw': raw,
-    })
+    fire.Fire(main)

@@ -8,32 +8,35 @@ import exp
 # print("working dir: "+ os.getcwd())
 
 class CStatusIn:
-    def __init__(self, routine, superstate, user_reply, last_states, states_usage, turns_since_initiative):
-        self.routine = routine
-        self.superstate = superstate
+    def __init__(self, user_reply, last_states, states_usage, turns_since_initiative, coda, initiativity, context):
         self.user_reply = user_reply
         self.last_states = last_states
         self.states_usage = states_usage
         self.turns_since_initiative = turns_since_initiative
+        self.coda = coda
+        self.initiativity = initiativity
+        self.context = context
 
 def parse_json_file(file_path):
     with open(file_path, 'r') as json_file:
         data = json.load(json_file)
 
-    routine = data.get('routine')
-    superstate = data.get('superstate')
     user_reply = data.get('user_reply')
     last_states = data.get('last_states', [])
     states_usage = data.get('states_usage', {})
     turns_since_initiative = data.get('turns_since_initiative', 0)
+    coda = data.get('coda', 0)
+    initiativity = data.get('initiativity', 0)
+    context = data.get('context', 0)
 
     cstatus_instance = CStatusIn(
-        routine,
-        superstate,
         user_reply,
         last_states,
         states_usage,
-        turns_since_initiative
+        turns_since_initiative,
+        coda,
+        initiativity,
+        context
     )
 
     return cstatus_instance
@@ -65,11 +68,13 @@ def to_json(cso):
     q =  {"reply": cso.bot_reply,
         "meta":
             {
-        "routine": cso.routine,
-        "superstate": cso.superstate,
         "last_states": cso.last_states,
         "states_usage": cso.states_usage,
         "turns_since_initiative": cso.turns_since_initiative,
+        "bot_turns": cso.bot_turns,
+        "coda": cso.coda,
+        "initiativity": cso.initiativity,
+        "context": cso.context
             }
     }
     j = json.dumps(q, ensure_ascii=False)
@@ -96,12 +101,14 @@ def get_csi(user_id, user_reply):
         current_cstatus_user_reply = json.dumps(current_cstatus["meta"], ensure_ascii=False)
     else:
         current_cstatus_user_reply = json.dumps({
-            "routine": "",
-            "superstate": "",
             "user_reply": "",
             "last_states": [],
             "states_usage": {},
             "turns_since_initiative": 0,
+            "bot_turns": 0,
+            "coda": False,
+            "initiativity": 0,
+            "context": {}
         })
     cursor_replies.close()
 
