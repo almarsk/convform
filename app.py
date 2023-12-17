@@ -4,8 +4,10 @@ from pathlib import Path
 from importlib import import_module
 from datetime import datetime
 import json
-import cstatus
-from bot_reply import reply
+
+# my stuff
+import terbox.cstatus as cstatus
+from terbox.bot_reply import reply
 
 from flask import (
     Flask,
