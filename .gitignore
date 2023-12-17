@@ -13,3 +13,4 @@ update_rust.sh
 update_flow.sh
 convform/*
 !convform/bots
+!convform/convform*.tar.gz
