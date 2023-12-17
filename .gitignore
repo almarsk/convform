@@ -5,3 +5,6 @@ venv
 pyrightconfig.json
 config.json
 __pycache__/
+update_rust.sh
+update_flow.sh
+convform/target/
