@@ -1,11 +1,12 @@
-#! venv/bin/python3
-
 import re
 import sqlite3
 import fire
 import json
 import pprint
-import test
+import asyncio
+
+from terbox import dbg_test
+
 
 
 def main(query='', states=False, debug=False, which=-2):
@@ -118,9 +119,9 @@ def main(query='', states=False, debug=False, which=-2):
 
     if debug:
         print("debug time")
-        pprint.pp(csi_container)
+        # pprint.pp(csi_container)
         """ [which]) """
-        test.main(csi_container[which])
+        dbg_test(csi_container[which])
 
     # Close the cursor and connection objects
     cursor_users.close()

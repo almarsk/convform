@@ -1,5 +1,6 @@
-import bot_reply
-import cstatus
+import terbox.bot_reply as bot_reply
+
+
 import asyncio
 import os
 import json
@@ -12,12 +13,12 @@ async def q(csi):
     cso1 = await bot_reply.reply(csi1, 0, "vtipobot")
 
 
-def main(csi):
+def dbg_test(csi):
     loop = asyncio.get_event_loop()
     loop.run_until_complete(q(csi))
 
 if __name__ == "__main__":
-    main({
+    dbg_test({
         "bot_reply": "Dobrý den",
         "user_reply": "ahoj, jak se máš?",
         "last_states": ["state_intro"],
