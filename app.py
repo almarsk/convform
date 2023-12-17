@@ -4,6 +4,7 @@ from pathlib import Path
 from importlib import import_module
 from datetime import datetime
 import json
+import cstatus
 from bot_reply import reply
 
 from flask import (
@@ -17,6 +18,7 @@ from flask import (
     jsonify
 )
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import JSON
 
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Configuration
 app = Flask(__name__)
@@ -31,6 +33,9 @@ app.config.update(
     REPLY_DELAY_MS=int(os.environ.get("CHATBOT_REPLY_DELAY_MS", 1600)),
 )
 db = SQLAlchemy(app)
+
+
+
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Database
 
 
@@ -51,6 +56,8 @@ class Reply(db.Model):
     content = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     reaction_ms = db.Column(db.Integer) # chatbot replies have a NULL reaction_ms
+    prompt = db.Column(db.Text)
+    cstatus = db.Column(JSON)
 
 
 if not db_path.is_file():
@@ -76,33 +83,33 @@ async def fetch_string():
         return jsonify({
             "error": "no access"
         })
-    bot_reply = await reply(session["user_reply"], session["state"])
+    #print("sesh user id:"+str(session["user_id"]))
+    csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
+    cso = await reply(csi, session["user_id"], session["flow"])
     session.modified = True
-    if bot_reply is None:
-        session["page"] = "outro"
-        return redirect(url_for("dispatcher"))
-    else:
-        repl = Reply(user_id=session["user_id"], content=str(bot_reply))
-        db.session.add(repl)
-        db.session.commit()
-        # print(bot_reply)
-        return jsonify({
-            "fetched_string": bot_reply
-        })
+
+
+    repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso), prompt=cso.prompt)
+    #print(vars(repl))
+    db.session.add(repl)
+    db.session.commit()
+    return jsonify({
+        "fetched_string": cstatus.to_json(cso)
+    })
 
 
 @app.route("/", methods=("GET", "POST"))
 def dispatcher():
-    print("flask: dispatcher")
+    app.logger.info("flask: dispatcher")
     url_flow = request.args.get("flow") or None
 
     if url_flow is not None:
         # a flow was set via the URL's query string -> start a new conversation
         session.clear()
-        if os.path.exists(f"flows/{url_flow}.json"):
+        if os.path.exists(f"convform/bots/{url_flow}.json"):
             session["flow"] = url_flow
             try:
-                with open(f"flows/{session['flow']}.json", "r") as file:
+                with open(f"convform/bots/{session['flow']}.json", "r") as file:
                     json.load(file)
             except ValueError:
                 return render_template("json_issue.html", flow=session["flow"].capitalize()), 500
@@ -120,6 +127,10 @@ def dispatcher():
         session["abort"] = True
         return redirect(url_for("dispatcher"))
 
+    if request.args.get("done"):
+        session["page"] = "outro"
+        return redirect(url_for("dispatcher"))
+
     page = session.setdefault("page", "intro")
     handler = globals().get(page)
     if handler is None:
@@ -132,7 +143,7 @@ def not_found():
 
 
 def intro():
-    print("flask: intro")
+    app.logger.info("flask: intro")
     if request.method == "GET":
         return render_template("intro.html", flow=session["flow"].capitalize())
     elif request.method == "POST":
@@ -147,7 +158,7 @@ def intro():
 
 
 def chat():
-    print("flask: chat")
+    app.logger.info("flask: chat")
     user = User.query.filter_by(id=session["user_id"]).first()
     session["user_reply"] = request.form.get("answer")
     if request.method == "POST":
@@ -159,7 +170,8 @@ def chat():
             )
         )
         db.session.commit()
-    cState = session.setdefault("state", {"flow" : session["flow"], "user_id":session["user_id"]})  # conversation state
+
+    # cState = session.setdefault("state", {"flow" : session["flow"], "user_id":session["user_id"]})  # conversation state
 
     return render_template(
         "chat.html", flow=session["flow"].capitalize()

@@ -6,13 +6,12 @@
 
 {% block js %}
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", ()=>{
-        let message
+    document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#aborted").value = '{{aborted}}'
-        document.querySelector("#aborted").value == 'True'
-        ? message = "Proč jste konverzaci ukončili?"
-        : message = "Jak konverzace proběhla?" 
-        document.querySelector(".message").innerHTML=message+'<br>Prosím ohodnoťte <strong>slovně</strong> a <strong>známkou</strong> jako ve škole:'
+        let message = document.querySelector("#aborted").value == 'True'
+            ? "Proč jste konverzaci ukončili?"
+            : "Jak konverzace proběhla?"
+        document.querySelector(".message").innerHTML = message + '<br>Prosím ohodnoťte <strong>slovně</strong> a <strong>známkou</strong> jako ve škole:'
         document.querySelector(".user-eval").classList.remove("hide")
         document.querySelector(".middle.center").style.gridRow = 'span 2'
         document.querySelector(".bottom.right").appendChild(document.querySelector(".confirm"))
@@ -20,12 +19,12 @@
         document.querySelector(".confirm").classList.remove("hide")
         document.querySelector(".rating").classList.remove("hide")
 
-        document.querySelector(".confirm").addEventListener("click", e=>{
-            if (!document.querySelector(".user-eval").value){
+        document.querySelector(".confirm").addEventListener("click", e => {
+            if (!document.querySelector(".user-eval").value) {
                 e.preventDefault()
                 document.querySelector(".warning").classList.remove("hide")
             }
-            if (!document.querySelector(".rating").value){
+            if (!document.querySelector(".rating").value) {
                 e.preventDefault()
                 document.querySelector(".warning").classList.remove("hide")
             }

@@ -1,0 +1,12 @@
+{
+  "routine": "standard",
+  "superstate": "úvod",
+  "user_reply": "ahojík jak se máš jak se jmenuješ",
+  "last_states": [
+    "state_intro"
+  ],
+  "states_usage": {
+    "jak se máš": 0
+  },
+  "turns_since_initiative": 0
+}

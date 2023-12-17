@@ -1,0 +1,57 @@
+🔗 Found pyo3 bindings
+🐍 Found CPython 3.9 at /Users/almarsk/Documents/hekovani/rust/convform_app/app/venv/bin/python
+💻 Using `MACOSX_DEPLOYMENT_TARGET=11.0` for aarch64-apple-darwin by default
+   Compiling convform v0.1.0 (/Users/almarsk/Documents/hekovani/rust/convform_app/app/convform)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.87s
+📦 Built wheel for CPython 3.9 to /var/folders/74/wk7876n97730j_g56qr_458w0000gn/T/.tmpl7lygF/convform-0.1.0-cp39-cp39-macosx_11_0_arm64.whl
+🛠 Installed convform-0.1.0
+[src/lib.rs:18] &path = "convform/bots/vtipobot.json"
+[src/c_status.rs:21] &csi = CStatusIn {
+    user_reply: "",
+    last_states: [],
+    states_usage: {},
+    turns_since_initiative: 0,
+    bot_turns: 0,
+}
+[src/c_status/stringmatching_pool_get.rs:39] &unique_last_states_intents = {}
+[src/c_status/stringmatching_pool_get.rs:60] &unique_last_decomposed_intents = []
+[src/c_status/matched_states_get.rs:14] &kaps = []
+[src/c_status/response_states_get.rs:29] &csi.states_usage = {}
+[src/c_status/response_states_get.rs:45] &matched_b4_rhem = [
+    MatchItem {
+        intent: "",
+        grouping: GroupingInfo {
+            id: 0,
+            number: 1,
+            origin: "",
+        },
+        states: [
+            "state_intro",
+        ],
+        index_start: 0,
+        answer_to: [],
+    },
+]
+[src/c_status/response_states_get.rs:58] "assessing matched states solo" = "assessing matched states solo"
+[src/c_status/initiative.rs:43] &ordered = [
+    "state_intro",
+]
+[src/c_status/response_states_get.rs:102] &final_response_states = [
+    "state_intro",
+]
+[src/c_status/response_states.rs:14] "empty response states case needs handling" = "empty response states case needs handling"
+[src/c_status/cso.rs:54] &last_states = [
+    "state_intro",
+]
+[src/lib.rs:35] &self = CStatusOut {
+    bot_reply: "Zdravím, mé jméno je Vtipobot.",
+    last_states: [
+        "state_intro",
+    ],
+    states_usage: {
+        "state_intro": 1,
+    },
+    turns_since_initiative: 0,
+    bot_turns: 1,
+    prompt: "",
+}
