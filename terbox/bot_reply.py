@@ -9,11 +9,18 @@ async def reply(cStatus, user_id, flow):
 
     cso = CStatusOut(flow, cStatus, path)
 
+    filled_in_reply = cso.bot_reply
+    persona = cso.persona(path, flow)
+
     if "###" in cso.bot_reply:
-        persona = cso.persona(path, flow)
-        cso.prompt = f"{persona}; {cso.bot_reply[3:-3]}"
         filled_in_reply = await check_for_prompts(persona, cso.bot_reply, user_id)
-        cso.bot_reply = filled_in_reply
+
+    if cso.prompt is not None:
+        print("todo global prompting")
+        # make a function which will call gpt globally
+        # make a function which will add states using 613
+
+    cso.bot_reply = filled_in_reply
 
     cso.show()
 
