@@ -53,7 +53,7 @@ def main(query='', states=False, debug=False, which=-2):
             time_date = re.search('(.{10}).(.{8})', user[3])
             if time_date is not None and not debug:
                 print(
-                    f"User {user[1].capitalize()} (no.{user[0]})\n" +
+                    f"\nUser {user[1].capitalize()} (no.{user[0]})\n" +
                     f"Talked to {user[2].capitalize()} " +
                     f"on {time_date.group(1)}\n" +
                     f"from {time_date.group(2)}\n" +
@@ -122,6 +122,8 @@ def main(query='', states=False, debug=False, which=-2):
         # pprint.pp(csi_container)
         """ [which]) """
         dbg_test(csi_container[which])
+
+
 
     # Close the cursor and connection objects
     cursor_users.close()
