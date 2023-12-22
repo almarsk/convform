@@ -438,7 +438,7 @@
       "intent_annotation": "Uživatel se představuje.",
       "keywords": ["já jsem", "jmenuj. se", "se jmenuj.", "říkej mi", "říkají"],
       "adjacent": ["těší mě"],
-      "answer_to": [],
+      "answer_to": ["žádost o představení"],
       "context_intents": {}
     },
     "souhlas": {
