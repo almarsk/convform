@@ -1,5 +1,6 @@
 import terbox.cstatus as cstatus
 from convform import CStatusOut
+from terbox.lch import fill_in
 from terbox.smart_sub import check_for_prompts
 
 import os
@@ -17,11 +18,12 @@ async def reply(cStatus, user_id, flow):
 
     if cso.prompt is not None:
         print("todo global prompting")
+        filled_in_reply = await fill_in(cso.prompt, "zkontroluj a případně uprav tuhle odpověď", user_id)
         # make a function which will call gpt globally
         # make a function which will add states using 613
 
     cso.bot_reply = filled_in_reply
-
+    #print(cStatus)
     cso.show()
 
     # prompt the intentional prompts

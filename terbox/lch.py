@@ -12,9 +12,14 @@ async def fill_in(persona, task, user_id):
     messages = []
     update_memory(user_id, messages)
     chat = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.5)
-
     messages.append(SystemMessage(content=persona))
-    messages.append(HumanMessage(content=task)) # also a SystemMessage?
+    messages.append(SystemMessage(content=task)) # also a SystemMessage?
+
+    print("_______")
+    print(messages)
+    print(persona)
+    print(task)
+    print("_______")
 
     message = chat(messages)
     return message.content

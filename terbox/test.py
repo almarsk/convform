@@ -1,4 +1,4 @@
-import terbox.bot_reply as bot_reply
+from terbox.bot_reply import reply
 
 
 import asyncio
@@ -10,7 +10,7 @@ async def q(csi):
     csi1 = json.dumps(
         csi
     )
-    cso1 = await bot_reply.reply(csi1, 0, "vtipobot")
+    cso1 = await reply(csi1, 0, "vtipobot")
 
 
 def dbg_test(csi):

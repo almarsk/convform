@@ -7,9 +7,7 @@ import asyncio
 
 from terbox import dbg_test
 
-
-
-def main(query='', states=False, debug=False, which=-2):
+def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
 
     conn = sqlite3.connect('chatbot.db')
     cursor_users = conn.cursor()
@@ -110,6 +108,7 @@ def main(query='', states=False, debug=False, which=-2):
                         turn_metadata = reply[6]
                         # greetings from noobsville
                         # print("whole tuple"+str(reply))
+                        print()
                         pprint.pp(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", ""))
                         if reply[5]:
                             print("prompt: "+reply[5])
@@ -119,7 +118,8 @@ def main(query='', states=False, debug=False, which=-2):
 
     if debug:
         print("debug time")
-        # pprint.pp(csi_container)
+        if dd:
+            pprint.pp(csi_container)
         """ [which]) """
         dbg_test(csi_container[which])
 
@@ -146,4 +146,4 @@ def cols(table):
     return [row[0] for row in cursor.fetchall()]
 
 if __name__ == '__main__':
-    fire.Fire(main)
+    fire.Fire(look_in_database)

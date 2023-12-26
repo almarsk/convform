@@ -1,5 +1,5 @@
 import re
-import terbox.lch as lch
+from terbox.lch import fill_in
 import asyncio
 
 async def check_for_prompts(persona, reply, user_id):
@@ -11,5 +11,5 @@ async def check_for_prompts(persona, reply, user_id):
 
 async def modify_match(persona, match, user_id):
     captured_text = match.group(1)
-    n = await lch.fill_in(persona, captured_text, user_id)
+    n = await fill_in(persona, captured_text, user_id)
     return n

@@ -9,6 +9,7 @@ def update_memory(user_id, memory):
     replies = cursor_replies.fetchall()
 
     for reply in replies:
+        print(reply)
         if reply[4]: # duration - is only measured for user
             memory.append(HumanMessage(content=reply[2].strip()))
         else:
