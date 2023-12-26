@@ -6,16 +6,16 @@ import os
 import json
 
 
-async def q(csi):
+async def q(csi, user_id):
     csi1 = json.dumps(
         csi
     )
-    cso1 = await reply(csi1, 0, "vtipobot")
+    cso1 = await reply(csi1, user_id, "vtipobot")
 
 
-def dbg_test(csi):
+def dbg_test(csi, user_id):
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(q(csi))
+    loop.run_until_complete(q(csi, user_id))
 
 if __name__ == "__main__":
     dbg_test({
@@ -29,7 +29,7 @@ if __name__ == "__main__":
         "bot_turns": 1,
         "coda": False,
         "initiativity": 0,
-        "context": {}})
+        "context": {}}, 0)
 
 
 """

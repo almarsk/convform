@@ -32,6 +32,7 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
     cursor_replies.execute(f"SELECT * FROM reply WHERE user_id {user_ids};")
     replies = cursor_replies.fetchall()
     csi_container = []
+    user_ids = []
 
     # Format the conversations
     for user in users:
@@ -75,7 +76,9 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
 
 
         csi = {}
+
         for reply in replies:
+            user_ids.append(reply[1])
             if reply[4]:
                 csi["user_reply"] = reply[2]
             if reply[1] == user[0]:
@@ -121,7 +124,7 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
         if dd:
             pprint.pp(csi_container)
         """ [which]) """
-        dbg_test(csi_container[which])
+        dbg_test(csi_container[which], user_ids[which])
 
 
 
