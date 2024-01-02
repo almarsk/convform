@@ -15,7 +15,9 @@
             const data = await response.json();
             const endTime = performance.now();
             const executionTime = endTime - startTime;
+            console.log("time to parse string");
             const cstatus = JSON.parse(data.fetched_string);
+            console.log("parsed string succesfully");
             console.log(JSON.stringify(cstatus.meta, null, 2, false));
             if (!cstatus.reply) {
                 console.log("done");
@@ -28,13 +30,21 @@
             if (base_delay < 0) base_delay = 0;
 
             setTimeout(
-              (() => document.querySelector(".message").innerHTML = cstatus.reply),
+                () =>
+                    (document.querySelector(".message").innerHTML =
+                        cstatus.reply),
                 base_delay,
             );
         } catch (error) {
             console.error("Error:", error);
         } finally {
-          setTimeout((() => document.querySelector(".message").classList.remove("loader")), base_delay);
+            setTimeout(
+                () =>
+                    document
+                        .querySelector(".message")
+                        .classList.remove("loader"),
+                base_delay,
+            );
 
             document.querySelector(".confirm").classList.remove("hide");
             document.querySelector(".abort").classList.remove("hide");
