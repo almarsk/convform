@@ -35,7 +35,7 @@ pub struct CStatusOut {
 
 impl<'a> CStatusOut {
     pub fn new(rs: ResponseStates<'a>, flow: &Flow) -> CStatusOut {
-        let (rs, mut csi) = rs.get_fields();
+        let (rs, mut csi, prompt) = rs.get_fields();
 
         let states_usage = csi
             .update_usage(&rs)
@@ -61,7 +61,7 @@ impl<'a> CStatusOut {
             turns_since_initiative,
             bot_turns: csi.bot_turns + 1,
             states_usage,
-            prompt: None,
+            prompt,
             coda,
             initiativity,
             context,

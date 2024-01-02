@@ -1,3 +1,4 @@
+#[allow(unused_imports)]
 use super::super::flow::{the_track::next_from_the_track, ResponseType};
 use super::super::validate::helper_structs_validate::{are_same_variant, get_response_type};
 use super::matched_states::{MatchItem, MatchedStates};
@@ -10,7 +11,7 @@ use linked_hash_set::LinkedHashSet;
 
 impl<'a> MatchedStates<'a> {
     pub fn get_response_states(self, flow: &'a Flow) -> ResponseStates<'a> {
-        let (mut matched_b4_rhem, mut csi) = self.get_states_and_csi();
+        let (mut matched_b4_rhem, csi) = self.get_states_and_csi();
 
         // start of convo
         if csi.bot_turns == 0 {
@@ -30,22 +31,15 @@ impl<'a> MatchedStates<'a> {
         crate::cnd_dbg!(&csi.states_usage);
 
         if matched_b4_rhem.is_empty() {
+            let next_state_vec: Vec<&'a str> = vec![];
             /*
-                if
-                // csi.fallback ||   --> comes into play with gpt intent reco
-            {
-                // FALLBACK
-                crate::cnd_dbg!("empty matched states case needs handling");
-                todo!("fallback gpt autopilot time")
-            } else {
-            */
-
             // next from the track
             crate::cnd_dbg!("nomatch - assessing matched states next from the track");
-            let mut next_state_vec: Vec<&'a str> = vec![];
+            crate::cnd_dbg!("DOIN - next from the track needs to be conditioned by initiativity");
             if let Some(next_state) = next_from_the_track(flow, &mut csi) {
                 next_state_vec.push(next_state);
             }
+            */
             return assess_response_states(next_state_vec, csi, flow);
             //}
         }
@@ -99,6 +93,8 @@ pub fn assess_response_states<'a>(
 ) -> ResponseStates<'a> {
     //dbg!(response_states);
     let final_response_states: Vec<&'a str> = if !response_states.is_empty() {
+        crate::cnd_dbg!("initiative management");
+        crate::cnd_dbg!(&response_states);
         handle_initiative(response_states, flow, &mut csi)
     } else {
         crate::cnd_dbg!("fallback management needed");
@@ -114,11 +110,10 @@ pub fn assess_response_states<'a>(
         .copied()
         .collect();
     if !solo.is_empty() {
-        //dbg!("goin solo");
-        return ResponseStates::new(vec![solo[solo.len() - 1]], csi);
+        return ResponseStates::new(vec![solo[solo.len() - 1]], csi, flow);
     }
 
-    ResponseStates::new(final_response_states, csi)
+    ResponseStates::new(final_response_states, csi, flow)
 }
 
 fn is_overiterated(state: &str, flow: &Flow, usage: &usize) -> bool {
