@@ -18,7 +18,7 @@ async def reply(cStatus, user_id, flow):
 
     if cso.prompt is not None:
         print("todo global prompting")
-        filled_in_reply = await fill_in(cso.prompt, "zkontroluj a případně uprav tuhle odpověď", user_id)
+        filled_in_reply = await fill_in(cso.prompt, "zkontroluj a případně uprav poslední odpověď bota.\nco by teď bot řekl:", user_id)
         # make a function which will call gpt globally
         # make a function which will add states using 613
 
