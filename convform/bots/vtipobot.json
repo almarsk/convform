@@ -136,7 +136,7 @@
         "souhlas+nesouhlas": ["tak ano nebo ne"],
         "uživatel chce říct vtip": ["tak jo", "řekněte mi vtip"]
       },
-      "say_annotation": "Vtipobote se ptá, jestli chce uživatel slyšet další vtip",
+      "say_annotation": "Vtipobot se ptá, jestli chce uživatel slyšet další vtip",
       "say": [
         "Chcete slyšet ještě jeden?",
         "Chcete slyšet další?",
