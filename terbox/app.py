@@ -6,8 +6,8 @@ from datetime import datetime
 import json
 
 # my stuff
-import terbox.cstatus as cstatus
-from terbox.bot_reply import reply
+import cstatus as cstatus
+from bot_reply import reply
 
 from flask import (
     Flask,
@@ -25,7 +25,7 @@ from sqlalchemy import JSON
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Configuration
 app = Flask(__name__)
 secret_key = os.environ.get("CHATBOT_SECRET_KEY", secrets.token_bytes(32))
-db_path = Path(__file__).parent / "chatbot.db"
+db_path = Path(__file__).parent / "../chatbot.db"
 app.config.update(
     TEMPLATES_AUTO_RELOAD=True,
     SECRET_KEY=secret_key,
@@ -85,7 +85,7 @@ async def fetch_string():
         return jsonify({
             "error": "no access"
         })
-    #print("sesh user id:"+str(session["user_id"]))
+
     csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
     cso = await reply(csi, session["user_id"], session["flow"])
     session.modified = True

@@ -4,10 +4,6 @@ import sys
 import os
 import sqlite3
 
-
-
-# print("working dir: "+ os.getcwd())
-
 class CStatusIn:
     def __init__(self, user_reply, last_states, states_usage, turns_since_initiative, coda, initiativity, context):
         self.user_reply = user_reply
@@ -42,29 +38,6 @@ def parse_json_file(file_path):
 
     return cstatus_instance
 
-"""
-if len(sys.argv) > 1:
-    csi_name = sys.argv[1]
-else:
-    csi_name = "csi0"
-csi_path = f"./convform_/bots/csi/{csi_name}.json"
-csi = parse_json_file(csi_path)
-"""
-
-# print("csi: "+str(csi.__dict__))
-
-"""
-bot_path = "convform_/bots"
-bot_name = "bohumil"
-
-cso = convform.CStatusOut(bot_path, bot_name, csi)
-
-cso.show()
-
-print(cso.bot_reply)
-print(cso.states_usage)
-"""
-
 def to_json(cso):
     q =  {"reply": cso.bot_reply,
         "meta":
@@ -78,7 +51,7 @@ def to_json(cso):
         "context": cso.context
             }
     }
-    j = json.dumps(q, ensure_ascii=False)
+    j = json.dumps(q, ensure_ascii=False, indent=2)
     #print("sql input: "+j)
     return j
 

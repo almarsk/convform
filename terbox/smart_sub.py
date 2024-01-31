@@ -1,5 +1,5 @@
 import re
-from terbox.lch import fill_in
+from lch import fill_in
 import asyncio
 
 async def check_for_prompts(persona, reply, user_id):

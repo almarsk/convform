@@ -21,6 +21,3 @@ def api_key():
             print(f"Error parsing JSON: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
-
-    #else:
-     #   print(os.environ[field_name])

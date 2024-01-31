@@ -11,7 +11,7 @@ def update_memory(user_id):
     memory = []
 
     for reply in replies:
-        print(reply[2])
+        # print(reply[2])
         if reply[4]: # duration - is only measured for user
             memory.append(HumanMessage(content=reply[2].strip()))
         else:

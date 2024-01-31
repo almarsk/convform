@@ -5,13 +5,13 @@ import json
 import pprint
 import asyncio
 
-from terbox import dbg_test
+from test import dbg_test
 
 def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
-
     conn = sqlite3.connect('chatbot.db')
     cursor_users = conn.cursor()
     cursor_replies = conn.cursor()
+
     # Prepare users table
     if not query.lower().startswith("where") and query:
         query = "WHERE " + query
@@ -108,11 +108,10 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
                 elif not debug:
                     print(f"{user_bot(reply[4])} {reply[2].strip()}")
                     if states and not reply[4]:
-                        turn_metadata = reply[6]
-                        # greetings from noobsville
-                        # print("whole tuple"+str(reply))
+                        turn_metadata = json.loads(reply[6])
                         print()
-                        pprint.pp(json.dumps(json.loads(turn_metadata), ensure_ascii=False).replace("\\", ""))
+
+                        print(turn_metadata)
                         if reply[5]:
                             print("prompt: "+reply[5])
                         print("\n")
@@ -122,7 +121,7 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
     if debug:
         print("debug time")
         if dd:
-            pprint.pp(csi_container)
+            pprint.pp(csi_container[which])
         """ [which]) """
         dbg_test(csi_container[which], user_ids[which])
 
@@ -133,20 +132,6 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
     cursor_replies.close()
     conn.close()
 
-
-def cols(table):
-    conn = sqlite3.connect('chatbot.db')
-    cursor = conn.cursor()
-
-    # return names of table in scheme
-    if table == "?":
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-        return "\ntables in scheme are" \
-               ":\n"+str([row[0] for row in cursor.fetchall()])+"\nquery only has access to user table\n"
-
-    # return names of cols in tables
-    cursor.execute(f"SELECT name FROM pragma_table_info('{table}')")
-    return [row[0] for row in cursor.fetchall()]
 
 if __name__ == '__main__':
     fire.Fire(look_in_database)
