@@ -11,10 +11,11 @@ use linked_hash_set::LinkedHashSet;
 
 impl<'a> MatchedStates<'a> {
     pub fn get_response_states(self, flow: &'a Flow) -> ResponseStates<'a> {
-        let (mut matched_b4_rhem, csi) = self.get_states_and_csi();
+        let (mut matched_b4_rhem, mut csi) = self.get_states_and_csi();
 
         // start of convo
         if csi.bot_turns == 0 {
+            crate::cnd_dbg!("inserting empty matching item");
             matched_b4_rhem.push(MatchItem::new(
                 "",
                 GroupingInfo {
@@ -31,17 +32,20 @@ impl<'a> MatchedStates<'a> {
         crate::cnd_dbg!(&csi.states_usage);
 
         if matched_b4_rhem.is_empty() {
-            let next_state_vec: Vec<&'a str> = vec![];
-            /*
-            // next from the track
-            crate::cnd_dbg!("nomatch - assessing matched states next from the track");
-            crate::cnd_dbg!("DOIN - next from the track needs to be conditioned by initiativity");
-            if let Some(next_state) = next_from_the_track(flow, &mut csi) {
-                next_state_vec.push(next_state);
+            let mut next_state_vec: Vec<&'a str> = vec![];
+
+            if !csi.coda {
+                // next from the track
+                crate::cnd_dbg!("nomatch - assessing matched states next from the track");
+                crate::cnd_dbg!(
+                    "DOIN - next from the track needs to be conditioned by initiativity"
+                );
+                if let Some(next_state) = next_from_the_track(flow, &mut csi) {
+                    next_state_vec.push(next_state);
+                }
             }
-            */
+
             return assess_response_states(next_state_vec, csi, flow);
-            //}
         }
         crate::cnd_dbg!(&matched_b4_rhem);
 
@@ -131,7 +135,6 @@ fn is_overiterated(state: &str, flow: &Flow, usage: &usize) -> bool {
 
 fn postcedent_state_to_connective_unoveriterated(
     i: &usize,
-
     matched: Vec<&str>,
     csi: &CStatusIn,
     flow: &Flow,

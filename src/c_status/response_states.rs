@@ -15,7 +15,7 @@ impl<'a> ResponseStates<'a> {
         c_status_in: CStatusIn,
         flow: &'a Flow,
     ) -> ResponseStates<'a> {
-        let prompt = if !response_states.is_empty() {
+        let prompt = if !response_states.is_empty() || c_status_in.coda {
             None
         } else {
             crate::cnd_dbg!("TODO empty response states prompt here");

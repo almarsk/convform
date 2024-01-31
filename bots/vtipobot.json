@@ -361,7 +361,7 @@
     "a ty": {
       "intent_name": "a ty",
       "intent_annotation": "Uživatel se ptá, co Vtipobot.",
-      "keywords": ["a(.*)?ty?"],
+      "keywords": ["a(.*)?ty\\?"],
       "adjacent": ["$"],
       "answer_to": [],
       "context_intents": {}
