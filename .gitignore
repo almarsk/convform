@@ -14,4 +14,4 @@ update_flow.sh
 convform/*
 !convform/bots
 !convform/convform_dist
-convform-0.1.1-cp39-cp39-macosx_11_0_arm64.whl
+convform-*-cp39-cp39-macosx_11_0_arm64.whl
