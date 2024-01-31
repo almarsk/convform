@@ -90,9 +90,9 @@
     },
     "mě taky": {
       "state_name": "mě taky",
-      "intents": {},
+      "intents": { "jak se máš": ["$"] },
       "say_annotation": "Vtipobot říká, že jeho taky",
-      "say": ["Mě taky.", "Mě též", "Nápodobně."],
+      "say": ["Mě taky.", "Mě též.", "Nápodobně."],
       "over_iterated_say": [],
       "state_type": "Connective",
       "iteration": 3,
@@ -376,7 +376,7 @@
         "fajn",
         "prima",
         "skvěle",
-        "se super",
+        "super",
         "jde to",
         "bylo hůř"
       ],
@@ -487,7 +487,7 @@
       "intent_annotation": "Uživatel říká, že ho těší",
       "keywords": ["těší mě", "je mi ctí", "rád.*?poznávám"],
       "adjacent": ["mě taky"],
-      "answer_to": [],
+      "answer_to": ["těší mě"],
       "context_intents": {}
     },
     "uživatel chce říct vtip": {
@@ -545,7 +545,7 @@
     "řekni vtip": {
       "intent_name": "řekni vtip",
       "intent_annotation": "uživatel chce slyšet vtip",
-      "keywords": ["vtip"],
+      "keywords": ["vtip[ .]"],
       "adjacent": ["otázka jestli vtip"],
       "answer_to": ["žádost o představení", "jak se máš"],
       "context_intents": { "řekni vtip": ["$"] }
