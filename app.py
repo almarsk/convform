@@ -25,7 +25,7 @@ from sqlalchemy import JSON
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Configuration
 app = Flask(__name__)
 secret_key = os.environ.get("CHATBOT_SECRET_KEY", secrets.token_bytes(32))
-db_path = Path(__file__).parent / "../chatbot.db"
+db_path = Path(__file__).parent / "chatbot.db"
 app.config.update(
     TEMPLATES_AUTO_RELOAD=True,
     SECRET_KEY=secret_key,
