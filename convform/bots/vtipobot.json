@@ -130,7 +130,7 @@
     "otázka jestli další vtip": {
       "state_name": "otázka jestli další vtip",
       "intents": {
-        "nesouhlas": ["co raději", "řekněte mi vtip"],
+        "nesouhlas": ["řekněte mi vtip", "rozloučení"],
         "no input": ["$", "otázka jestli vtip"],
         "souhlas": ["otázka vtipu"],
         "souhlas+nesouhlas": ["tak ano nebo ne"],
