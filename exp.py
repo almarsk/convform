@@ -5,7 +5,7 @@ import json
 import pprint
 import asyncio
 
-from test import dbg_test
+from terbox.test import dbg_test
 
 def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
     conn = sqlite3.connect('chatbot.db')

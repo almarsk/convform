@@ -1,4 +1,4 @@
-from bot_reply import reply
+from terbox.bot_reply import reply
 
 
 import asyncio

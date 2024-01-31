@@ -6,8 +6,8 @@ from datetime import datetime
 import json
 
 # my stuff
-import cstatus as cstatus
-from bot_reply import reply
+from terbox.cstatus import get_csi, to_json
+from terbox.bot_reply import reply
 
 from flask import (
     Flask,
@@ -86,17 +86,17 @@ async def fetch_string():
             "error": "no access"
         })
 
-    csi = cstatus.get_csi(str(session["user_id"]), session["user_reply"])
+    csi = get_csi(str(session["user_id"]), session["user_reply"])
     cso = await reply(csi, session["user_id"], session["flow"])
     session.modified = True
 
 
-    repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=cstatus.to_json(cso), prompt=cso.prompt)
+    repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=to_json(cso), prompt=cso.prompt)
     #print(vars(repl))
     db.session.add(repl)
     db.session.commit()
     return jsonify({
-        "fetched_string": cstatus.to_json(cso)
+        "fetched_string": to_json(cso)
     })
 
 

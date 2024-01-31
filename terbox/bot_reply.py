@@ -1,7 +1,7 @@
-import cstatus as cstatus
+from terbox import cstatus
 from convform import CStatusOut
-from lch import fill_in
-from smart_sub import check_for_prompts
+from terbox.lch import fill_in
+from terbox.smart_sub import check_for_prompts
 
 import os
 
