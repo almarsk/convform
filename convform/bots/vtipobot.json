@@ -222,6 +222,7 @@
         "končíme": ["rozloučení"],
         "představení": ["$"],
         "těší mě": ["$"],
+        "řekni vtip": ["$"],
         "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot se představí.",
@@ -366,7 +367,6 @@
       "answer_to": [],
       "context_intents": {}
     },
-
     "dobře": {
       "intent_name": "dobře",
       "intent_annotation": "Uživatel říká, že se má dobře.",
@@ -460,6 +460,14 @@
       "answer_to": [],
       "context_intents": {}
     },
+    "test context": {
+      "intent_name": "test context",
+      "intent_annotation": "test kontext",
+      "keywords": ["test kontext", "test context"],
+      "adjacent": ["mám se dobře"],
+      "answer_to": [],
+      "context_intents": {}
+    },
     "to nevadí": {
       "intent_name": "to nevadí",
       "intent_annotation": "Uživatel říká, že to nevadí",
@@ -479,14 +487,6 @@
       "intent_annotation": "Uživatel říká, že ho těší",
       "keywords": ["těší mě", "je mi ctí", "rád.*?poznávám"],
       "adjacent": ["mě taky"],
-      "answer_to": [],
-      "context_intents": {}
-    },
-    "test context": {
-      "intent_name": "test context",
-      "intent_annotation": "test kontext",
-      "keywords": ["test kontext", "test context"],
-      "adjacent": ["mám se dobře"],
       "answer_to": [],
       "context_intents": {}
     },
@@ -542,6 +542,14 @@
       "answer_to": [],
       "context_intents": {}
     },
+    "řekni vtip": {
+      "intent_name": "řekni vtip",
+      "intent_annotation": "uživatel chce slyšet vtip",
+      "keywords": ["vtip"],
+      "adjacent": ["otázka jestli vtip"],
+      "answer_to": [],
+      "context_intents": { "řekni vtip": ["$"] }
+    },
     "špatně": {
       "intent_name": "špatně",
       "intent_annotation": "Uživatel říká, že se nemá dobře.",
@@ -556,7 +564,9 @@
       "keywords": ["jmenuješ", "ti.*?říkat"],
       "adjacent": ["state_intro"],
       "answer_to": [],
-      "context_intents": { "test context": ["$"] }
+      "context_intents": {
+        "test context": ["$"]
+      }
     }
   }
 }
