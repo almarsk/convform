@@ -122,7 +122,6 @@ def look_in_database(query='', states=False, debug=False, which=-1, dd=False):
         print("debug time")
         if dd:
             pprint.pp(csi_container[which])
-        """ [which]) """
         dbg_test(csi_container[which], user_ids[which])
 
 

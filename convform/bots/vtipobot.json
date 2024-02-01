@@ -62,9 +62,9 @@
         "dobře": ["to jsem rád"],
         "představení": ["$"],
         "těší mě": ["$"],
+        "řekni vtip": ["$"],
         "špatně": ["to mě mrzí"],
-        "žádost o představení": ["$"],
-        "řekni vtip": ["$"]
+        "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot se ptá, jak se uživatel má",
       "say": ["Jak se máte?", "Jak se vám daří?"],
@@ -91,7 +91,9 @@
     },
     "mě taky": {
       "state_name": "mě taky",
-      "intents": { "jak se máš": ["$"] },
+      "intents": {
+        "jak se máš": ["$"]
+      },
       "say_annotation": "Vtipobot říká, že jeho taky",
       "say": ["Mě taky.", "Mě též.", "Nápodobně."],
       "over_iterated_say": [],
@@ -205,6 +207,19 @@
       "prioritize": false,
       "initiativity": null
     },
+    "představení": {
+      "state_name": "představení",
+      "intents": { "řekni vtip": ["$"] },
+      "say_annotation": "Vtipobot se představí a říká co umí",
+      "say": ["Mé jmeno je vtipobot a umím říkat vtipy."],
+      "over_iterated_say": [
+        "Povídám, že se jmenuju Vtipobot a umím říkat vtipy."
+      ],
+      "state_type": "Responsive",
+      "iteration": 3,
+      "prioritize": false,
+      "initiativity": null
+    },
     "rozloučení": {
       "state_name": "rozloučení",
       "intents": {},
@@ -310,8 +325,8 @@
       "intents": {
         "jak se máš": ["$"],
         "těší mě": ["$"],
-        "žádost o představení": ["$"],
-        "řekni vtip": ["$"]
+        "řekni vtip": ["$"],
+        "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot říká, že ho těší",
       "say": ["Moc mě těší.", "Těší mě, že se poznáváme."],
@@ -350,6 +365,7 @@
         "jak se máš": ["$"],
         "představení": ["těší mě"],
         "těší mě": ["$"],
+        "řekni vtip": ["$"],
         "žádost o představení": ["$"]
       },
       "say_annotation": "Vtipobot se ptá, s kým mluví",
@@ -548,10 +564,12 @@
     "řekni vtip": {
       "intent_name": "řekni vtip",
       "intent_annotation": "uživatel chce slyšet vtip",
-      "keywords": ["vtip[ \\.$]"],
+      "keywords": ["vtip(\\b|\\.)", "řekni(\\b|\\.)"],
       "adjacent": ["otázka jestli vtip"],
       "answer_to": ["žádost o představení", "jak se máš"],
-      "context_intents": { "řekni vtip": ["$"] }
+      "context_intents": {
+        "řekni vtip": ["$"]
+      }
     },
     "špatně": {
       "intent_name": "špatně",
@@ -564,8 +582,8 @@
     "žádost o představení": {
       "intent_name": "žádost o představení",
       "intent_annotation": "Uživatel žádá Vtipobota, aby se představil",
-      "keywords": ["jmenuješ", "ti.*?říkat"],
-      "adjacent": ["state_intro"],
+      "keywords": ["jmenuješ", "ti.*?říkat", "umíš"],
+      "adjacent": ["představení"],
       "answer_to": [],
       "context_intents": {
         "test context": ["$"]
