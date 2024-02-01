@@ -548,7 +548,7 @@
     "řekni vtip": {
       "intent_name": "řekni vtip",
       "intent_annotation": "uživatel chce slyšet vtip",
-      "keywords": ["vtip[ .]"],
+      "keywords": ["vtip[ \\.$]"],
       "adjacent": ["otázka jestli vtip"],
       "answer_to": ["žádost o představení", "jak se máš"],
       "context_intents": { "řekni vtip": ["$"] }
