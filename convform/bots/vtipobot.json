@@ -63,7 +63,8 @@
         "představení": ["$"],
         "těší mě": ["$"],
         "špatně": ["to mě mrzí"],
-        "žádost o představení": ["$"]
+        "žádost o představení": ["$"],
+        "řekni vtip": ["$"]
       },
       "say_annotation": "Vtipobot se ptá, jak se uživatel má",
       "say": ["Jak se máte?", "Jak se vám daří?"],
@@ -290,7 +291,8 @@
       "state_name": "to mě mrzí",
       "intents": {
         "jsou horší věci": ["$"],
-        "to nevadí": ["$"]
+        "to nevadí": ["$"],
+        "řekni vtip": ["$"]
       },
       "say_annotation": "Vtipobot říká, že ho to mrzí.",
       "say": ["To mě mrzí.", "To je mi líto"],
@@ -308,7 +310,8 @@
       "intents": {
         "jak se máš": ["$"],
         "těší mě": ["$"],
-        "žádost o představení": ["$"]
+        "žádost o představení": ["$"],
+        "řekni vtip": ["$"]
       },
       "say_annotation": "Vtipobot říká, že ho těší",
       "say": ["Moc mě těší.", "Těší mě, že se poznáváme."],
