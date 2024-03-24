@@ -1,24 +1,25 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import myRequest from "../myRequest";
+import { useNavigate } from "react-router-dom";
 
 const Outro = () => {
+  const navigate = useNavigate(); // Access navigate function from the hook
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const comment = new FormData(e.target).get("comment");
     const grade = new FormData(e.target).get("grade");
-    await myRequest("/outro", [comment, grade]).then(
-      () => (window.location.href = "/"),
-    );
+    await myRequest("/outro", [comment, grade]);
+    navigate("/"); // Navigate to "/" after the form is submitted
   };
 
   const [aborted, setAborted] = useState(false);
 
   useEffect(() => {
     const isAborted = async () => {
-      return await myRequest("/is_aborted", {}).then((e) =>
-        setAborted(e.aborted),
-      );
+      const response = await myRequest("/is_aborted", {});
+      setAborted(response.aborted);
     };
     isAborted();
   }, []);
