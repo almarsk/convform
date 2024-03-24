@@ -1,7 +1,5 @@
 import os
 import json
-import jsonschema
-from jsonschema import validate
 
 from .proof_empty import proof_empty
 from .proof_exception import ProofException

@@ -6,6 +6,5 @@ langchain == 0.0.202
 langchain-openai == 0.0.8
 urllib3==1.26.6
 openai == 01.13.3
-jsonschema == 4.21.1
 langchain-core == 0.1.28
 python-slugify == 8.0.4
