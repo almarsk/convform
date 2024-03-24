@@ -4,8 +4,6 @@ import Intro from "../convo/Intro";
 import Chat from "../convo/Chat";
 import Outro from "../convo/Outro";
 import Start from "../convo/Start";
-
-import MenuButton from "../admin/MenuButton.jsx";
 import { Link } from "react-router-dom";
 
 const PHASES = {
@@ -17,6 +15,7 @@ const PHASES = {
 
 const App = ({ bot, phase }) => {
   phase = parseInt(phase);
+  console.log(phase);
 
   return (
     <div id="main">
