@@ -20,7 +20,7 @@ from convproof import validate_flow
 from convcore import reply
 from convform import convform
 
-app = Flask(__name__, static_url_path='/assets', static_folder='static/assets')
+app = Flask(__name__, static_url_path='/assets', static_folder='assets')
 
 secret_key = os.environ.get("CHATBOT_SECRET_KEY", secrets.token_bytes(32))
 db_path = Path(__file__).parent / "chatbot.db"
