@@ -1,14 +1,3 @@
-import os
-import secrets
-from pathlib import Path
-from importlib import import_module
-from datetime import datetime
-import json
-
-# my stuff
-from terbox.cstatus import get_csi, to_json
-from terbox.bot_reply import reply
-
 from flask import (
     Flask,
     abort,
@@ -19,11 +8,20 @@ from flask import (
     url_for,
     jsonify
 )
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import JSON
 
-# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Configuration
-app = Flask(__name__)
+import os
+import secrets
+from pathlib import Path
+from datetime import datetime
+import json
+
+from convproof import validate_flow
+from convcore import reply
+from convform import convform
+
+app = Flask(__name__, static_url_path='/assets', static_folder='static/assets')
+
 secret_key = os.environ.get("CHATBOT_SECRET_KEY", secrets.token_bytes(32))
 db_path = Path(__file__).parent / "chatbot.db"
 app.config.update(
@@ -32,16 +30,18 @@ app.config.update(
     SESSION_COOKIE_SAMESITE="Lax",
     SQLALCHEMY_DATABASE_URI=f"sqlite:///{db_path}",
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
-    REPLY_DELAY_MS=int(os.environ.get("CHATBOT_REPLY_DELAY_MS", 1600)),
+    BOTS_PATH="bots"
 )
-db = SQLAlchemy(app)
 
+from database import db
+db.init_app(app)
 
 
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Database
 
 
-class User(db.Model):
+class Conversation(db.Model):
+    __tablename__ = "conversation"
     id = db.Column(db.Integer, primary_key=True)
     nick = db.Column(db.Text, nullable=False)
     flow = db.Column(db.Text, nullable=False)
@@ -50,156 +50,104 @@ class User(db.Model):
     abort = db.Column(db.Boolean, default=None)
     rating = db.Column(db.Integer, default=None)
     comment = db.Column(db.Text, default=None)
+    __table_args__ = {'extend_existing': True}
 
 
 class Reply(db.Model):
+    __tablename__ = "reply"
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    content = db.Column(db.Text, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("conversation.id"), nullable=False)
+    reply = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     reaction_ms = db.Column(db.Integer) # chatbot replies have a NULL reaction_ms
-    prompt = db.Column(db.Text)
     cstatus = db.Column(JSON)
+    who = db.Column(db.Text, nullable=False)
+    __table_args__ = {'extend_existing': True}
+
+class Flow(db.Model):
+    __tablename__ = "flow"
+    id = db.Column(db.Integer, primary_key=True)
+    flow_name = db.Column(db.Text, nullable=False)
+    project_id = db.Column(db.Integer, db.ForeignKey("project.id"), nullable=False, default=1)
+    flow = db.Column(JSON)
+    created_on = db.Column(db.DateTime, nullable=True, default=datetime.utcnow)
+    is_archived = db.Column(db.Integer, default=False)
+    __table_args__ = {'extend_existing': True}
+
+
+class Project(db.Model):
+    __tablename__ = "project"
+    id = db.Column(db.Integer, primary_key=True)
+    project_name = db.Column(db.Text, nullable=False)
+    created_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    is_archived = db.Column(db.Integer, nullable=False, default=False)
+    default = db.Column(db.Integer, nullable=False, default=False)
+    __table_args__ = {'extend_existing': True}
 
 
 if not db_path.is_file():
     with app.app_context():
         db.create_all()
 
+        db.session.add(Project(project_name="workspace", default=True))
+        db.session.add(Project(project_name="archived", default=True))
+        db.session.commit()
+
+
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– Handling Requests
 
-
-# There's technically only one route, so as to prevent the user from
-# easily navigating the interaction with the chatbot. The state of the
-# app is instead held in session["page"], based on which the request is
-# dispatched to an appropriate handler.
-#
-# The flow can be set via query parameters in the URL
-# (?flow=...). Once set, it's stored in session["flow"]. Setting
-# the flow clears the session, as it's taken as a signal of a new
-# conversation starting. Trying to use the app without setting a
-# flow shows an error.
-@app.route("/fetch_string", methods=["GET"])
-async def fetch_string():
-    if "user_id" not in session:
-        return jsonify({
-            "error": "no access"
-        })
-
-    csi = get_csi(str(session["user_id"]), session["user_reply"])
-    cso = await reply(csi, session["user_id"], session["flow"])
-    session.modified = True
-
-
-    repl = Reply(user_id=session["user_id"], content=str(cso.bot_reply), cstatus=to_json(cso), prompt=cso.prompt)
-    #print(vars(repl))
-    db.session.add(repl)
-    db.session.commit()
-    return jsonify({
-        "fetched_string": to_json(cso)
-    })
-
-
-@app.route("/", methods=("GET", "POST"))
-def dispatcher():
-    app.logger.info("flask: dispatcher")
-    url_flow = request.args.get("flow") or None
-
-    if url_flow is not None:
-        # a flow was set via the URL's query string -> start a new conversation
+@app.route('/', defaults={'path': ''}, methods=("GET", "POST"))
+@app.route('/<path:path>')
+def dispatcher(path):
+    if path:
         session.clear()
-        if os.path.exists(f"convform/bots/{url_flow}.json"):
-            session["flow"] = url_flow
-            try:
-                with open(f"convform/bots/{session['flow']}.json", "r") as file:
-                    json.load(file)
-            except ValueError:
-                return render_template("json_issue.html", flow=session["flow"].capitalize()), 500
-        else:
-            session["page"] = "not_found"
-            return render_template("not_found.html", flow=url_flow.capitalize()), 404
-        return redirect(url_for("dispatcher"))
-    elif session.get("flow") is None:
-        # starting a conversation without setting a flow is forbidden -> 403 error
-        session["page"] = "no_access"
-        return render_template("no_access.html"), 403
 
-    if request.args.get("abort"):
-        session["page"] = "outro"
-        session["abort"] = True
+    flow = request.args.get("flow") or None
+
+    if flow is not None:
+        session.clear()
+        session["flow"] = flow
+        session["phase"] = 0
         return redirect(url_for("dispatcher"))
 
-    if request.args.get("done"):
-        session["page"] = "outro"
-        return redirect(url_for("dispatcher"))
+    success, message = validate_flow(session["flow"] if "flow" in session else "").values()
 
-    page = session.setdefault("page", "intro")
-    handler = globals().get(page)
-    if handler is None:
-        abort(404)
-    return handler()
-
-
-def not_found():
-    return render_template("not_found.html", flow=session["flow"].capitalize()), 404
-
-
-def intro():
-    app.logger.info("flask: intro")
-    if request.method == "GET":
-        return render_template("intro.html", flow=session["flow"].capitalize())
-    elif request.method == "POST":
-        user = User(nick=request.form.get("nick"), flow=session["flow"])
-        db.session.add(user)
-        db.session.commit()
-        # the user only has a valid ID after they've been committed to
-        # the database
-        session["user_id"] = user.id
-        session["page"] = "chat"
-        return redirect(url_for("dispatcher"))
-
-
-def chat():
-    app.logger.info("flask: chat")
-    user = User.query.filter_by(id=session["user_id"]).first()
-    session["user_reply"] = request.form.get("answer")
-    if request.method == "POST":
-        db.session.add(
-            Reply(
-                user_id=user.id,
-                content=session["user_reply"],
-                reaction_ms=request.form.get("reaction-ms"),
-            )
-        )
-        db.session.commit()
-
-    # cState = session.setdefault("state", {"flow" : session["flow"], "user_id":session["user_id"]})  # conversation state
+    if "flow" not in session or not success:
+        session["flow"] = ""
+        session["phase"] = 0
 
     return render_template(
-        "chat.html", flow=session["flow"].capitalize()
-    )
+        "index.html",
+        bot=session["flow"] if "flow" in session else "",
+        phase=session["phase"] if "phase" in session else 0)
 
 
-def outro():
+blueprint_paths = [
+    "intro.intro_bp",
+    "start.start_bp",
+    "bot.bot_bp",
+    "abort.abort_bp",
+    "abort.is_aborted_bp",
+    "outro.outro_bp",
+    "admin.call_convform.convform_bp",
+    "admin.list_bots.list_bot_bp",
+    "admin.create.create_bp",
+    "admin.list_projects.list_projects_bp",
+    "admin.proof.proof_bp",
+    "admin.login.login_bp",
+    "admin.move.move_bp",
+    "admin.copy.copy_flow_bp",
+    "admin.export.export_flow_bp",
+    "admin.rename.rename_bp",
+    "admin.structure.structure_bp",
+    "admin.stash.stash_bp"
+]
 
-    if request.method == "GET":
-        return render_template("outro.html", aborted=session.get('abort', None))
-
-    elif request.method == "POST":
-        rating_verbal = request.form.get("ratingVerbal")
-        rating_num = request.form.get("ratingNum") or 0
-
-        user = User.query.filter_by(id=session["user_id"]).first()
-        user.end_date = datetime.utcnow()
-        user.abort = session.get("abort", False)
-        user.rating = int(rating_num)
-        user.comment = rating_verbal
-        db.session.add(user)
-        db.session.commit()
-
-        session.clear()
-        return render_template("thanks.html")
-
+for path in blueprint_paths:
+    module_name, blueprint_name = path.rsplit('.', 1)
+    module = __import__(f"routes.{module_name}", fromlist=[blueprint_name])
+    blueprint = getattr(module, blueprint_name)
+    app.register_blueprint(blueprint)
 
 if __name__ == "__main__":
     app.run(debug=True)

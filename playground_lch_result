@@ -1,0 +1,264 @@
+
+c) postěžoval si na počasí
+
+
+
+
+
+
+
+
+
+
+{'function_call': {'arguments': '{"variants":["a) prozradil co d\\u011bl\\u00e1","b) zeptal se jak se m\\u00e1","c) post\\u011boval si na po\\u010das\\u00ed","d) pochv\\u00e1lil po\\u010das\\u00ed","e) nic z nab\\u00eddnut\\u00fdch mo\\u017enost\\u00ed"]}', 'name': 'choose_variants'}}
+{'function_call': {'arguments': '{"variants":["a) prozradil co d\\u011bl\\u00e1","b) zeptal se jak se m\\u00e1","c) post\\u0119\\u017eoval si na po\\u010das\\u00ed","d) pochv\\u00e1lil po\\u010das\\u00ed","e) nic z nab\\u00eddnut\\u00fdch mo\\u017enost\\u00ed"]}', 'name': 'choose_variants'}}
+{'function_call': {'arguments': '{"variants":["a) prozradil co d\\u011bl\\u00e1","b) zeptal se jak se m\\u00e1","c) post\\u0119\\u017eoval si na po\\u010das\\u00ed","d) pochv\\u00e1lil po\\u010das\\u00ed","e) nic z nab\\u00eddnut\\u00fdch mo\\u017enost\\u00ed"]}', 'name': 'choose_variants'}}
+{'function_call': {'arguments': '{"variants":["prozradil co d\\\\u011bl\\\\u00e1","zeptal se jak se m\\\\u00e1","post\\\\u011b\\\\u017eoval si na po\\\\u010das\\\\u00ed","pochv\\\\u00e1lil po\\\\u010das\\\\u00ed","nic z nab\\\\u00eddnut\\\\u00fdch mo\\\\u017enost\\\\u00ed"]}', 'name': 'choose_variants'}}
+{"variants":["a) prozradil co d\u011bl\u00e1","b) zeptal se jak se m\u00e1","c) post\u011b\u017eoval si na po\u010das\u00ed","d) pochv\u00e1lil po\u010das\u00ed","e) nic z nab\u00eddnut\u00fdch mo\u017enost\u00ed"]}
+{"variants":["prozradil co d\u011bl\u00e1","zeptal se jak se m\u00e1","post\u0119\u017eoval si na po\u010das\u00ed","pochv\u00e1lil po\u010das\u00ed","nic z nab\u00eddnut\u00fdch mo\u017enost\u00ed"]}
+To závisí na tom, kde se nacházíte. Pro přesnou předpověď počasí byste měli zkontrolovat lokální meteorologickou službu nebo použít počasí aplikaci s aktuálními informacemi pro vaši oblast. Mohu poskytnout obecné informace, ale nemám přístup k aktuálním meteorologickým datům.
+Omlouvám se, ale nemám přístup k aktuálním meteorologickým datům nebo předpovědím počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste získali nejnovější informace o počasí ve vaší oblasti.
+Ahoj! Bohužel vám nemůžu poskytnout aktuální předpověď počasí, protože k tomu nemám přístup k internetovým datům. Doporučuji se podívat na předpověď počasí ve vaší oblasti na internetu nebo v aplikaci s předpovědí počasí, abyste zjistili, jestli bude dnes pršet.
+Omlouvám se, ale momentálně nemám přístup k aktuálním předpovědím počasí. Podívej se prosím na předpověď počasí online nebo v některé z aplikací na tvém smartphonu, aby ses měl nejaktuálnější informace.
+Omlouvám se, ale nemám přístup k aktuálním počasím. Doporučuji se podívat na lokální předpověď počasí online nebo v aplikaci ve vašem telefonu.
+Ahoj! Nemám přesné info o počasí, abych ti mohl říct, jestli dneska bude pršet. Doporučuju mrknout na nejnovější předpověď počasí online nebo v aplikaci na tvém telefonu.
+Ahoj! Bohužel nejsem schopen zjistit aktuální počasí nebo předpověď, protože nemám přístup k internetu nebo lokálním datům. Doporučuji kouknout do nějaké weather appky nebo zkontrolovat online předpověď počasí.
+No tak to nevím, ale jestli potřebuješ přesnou předpověď, můžeš mrknout na nějakou meteorologickou appku nebo webovou stránku s předpovědí počasí. Ale co tě to tak zajímá? Plánuješ nějaký výlet nebo něco venku?
+Ahoj! Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji se podívat na lokální předpověď počasí online nebo zkontrolovat aplikaci na tvém telefonu pro nejnovější informace.
+Hele, omlouvám se, ale nemám teď přístup k aktuálním předpovědím počasí. Mrkni na to na internetu nebo v nějaké počasí appce, tam najdeš nejnovější info.
+Hele, mrknul jsem na předpověď a vypadá to, že by mohlo pršet. Doporučuji ti vzít si s sebou deštník nebo alespoň nepromokavou bundu.
+Je mi líto, ale nejsem schopný zjistit aktuální předpověď počasí. Ale co jsem slyšel nedávno o zajímavé knize, co se týče počasí – "The Weather Makers" od Tima Flanneryho. Zkoumá, jak ovlivňujeme klima a co to může znamenat pro budoucnost. Zajímá tě něco takového?
+Promiň, ale nemám aktuální informace o počasí. Mrkni na předpověď online nebo zkus aplikaci na tvém telefonu, aby ses dozvěděl, jestli bude dnes pršet.
+Ahoj! Bohužel ti teď nemůžu říct, jestli bude dneska pršet. Mrkni na předpověď počasí online nebo zkus aplikaci ve svém telefonu, aby ses dozvěděl/a aktuální informace.
+Ahoj! Bohužel ti nemůžu předpovědět počasí, ale co takhle si zjistit aktuální předpověď online nebo se podívat na nejbližší meteostanici? Jinak co je u tebe nového?
+Ahoj! Bohužel ti nemůžu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji se podívat na předpověď počasí online nebo zkontrolovat nějakou aplikaci na tvém telefonu, aby ses dozvěděl/a, jestli dnes bude pršet.
+
+Ahoj! Bohužel ti nemůžu předpovědět počasí, ale co jinak? Jaký máš plány na dnešek?
+
+Promiň, ale nemám aktuální informace o počasí. Doporučuji se podívat na předpověď počasí online nebo zkontrolovat nějakou počasí aplikaci na tvém telefonu.
+
+Ahoj! Bohužel ti nemůžu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji se podívat na předpověď počasí online nebo zkontrolovat nějakou aplikaci na tvém telefonu, aby ses dozvěděl/a, jestli bude dnes pršet.
+
+Ahoj! Bohužel ti teď nemůžu říct, jestli bude dneska pršet, protože nemám přístup k aktuálním předpovědím počasí. Mrkni na předpověď online nebo zkus aplikaci na tvém telefonu, aby ses dozvěděl/a více.
+
+Promiň, ale nemám aktuální informace o počasí. Doporučuji se podívat na předpověď počasí online nebo zkontrolovat nějakou počasí aplikaci na tvém telefonu.
+
+Ahoj! Bohužel ti teď nemůžu říct, jestli bude dneska pršet. Mrkni na předpověď počasí online nebo zkus aplikaci ve svém telefonu, aby ses dozvěděl/a aktuální informace.
+
+Ahoj! Bohužel ti nemůžu předpovědět počasí, ale co takhle si zjistit aktuální předpověď online nebo se podívat na nejbližší meteostanici? Jinak co je u tebe nového?
+
+Ahoj! Bohužel ti nemůžu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji se podívat na předpověď počasí na internetu nebo v nějaké počasí aplikaci pro nejnovější informace.
+
+Promiň, ale nemám aktuální předpověď počasí. Mrkni na to online nebo zkus nějakou počasí appku na tvém telefonu.
+
+Ahoj! Bohužel nemám aktuální informace o počasí, takže ti nedokážu říct, jestli dneska bude pršet. Doporučuji kouknout na předpověď počasí online nebo zkontrolovat nějakou počasí aplikaci na tvém telefonu.
+
+Promiň, ale nemám aktuální předpověď počasí. Co když si to zjistíš online nebo se podíváš na nějakou počasí appku? Jinak co je nového? Co tě dneska čeká zajímavého?
+
+Ahoj! Bohužel ti teď nemůžu říct, jestli bude dneska pršet. Mrkni na předpověď počasí online nebo zkus aplikaci ve svém telefonu, aby ses dozvěděl aktuální informace.
+
+Promiň, ale nemám aktuální předpověď počasí. Co takhle si zjistit předpověď online nebo se podívat na nějakou počasí appku? Jinak co je nového? Jak se máš?
+
+Hele, já jsem jenom umělá inteligence a nemám přístup k aktuálním datům o počasí. Ale když chceš vědět, jestli bude pršet, mrkni na nějakou předpověď online nebo zkus aplikaci na mobilu. Nebo si prostě vem s sebou deštník, aby tě nějaká ta kapka nepřekvapila.
+
+Promiň, ale nemám aktuální předpověď počasí. Mrkni na to online nebo zkus nějakou počasí appku na tvém telefonu.
+
+Ahoj! Bohužel ti teď nemůžu říct, jestli bude dneska pršet. Mrkni na předpověď počasí online nebo zkus aplikaci ve svém telefonu, aby ses dozvěděl aktuální informace.
+
+Promiň, ale nemám aktuální informace o počasí. Co tě ale zajímá? Možná ti mohu pomoci s něčím jiným.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci ve vašem telefonu.
+
+Omlouvám se, ale nemám aktuální informace o počasí. Doporučuji zkontrolovat lokální předpověď počasí nebo použít aplikaci pro předpověď počasí, abyste získali nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní meteorologickou službu nebo použít aplikaci pro předpověď počasí, aby jste získali nejnovější informace o počasí ve vaší oblasti.
+
+Promiň, ale nemám aktuální informace o počasí. Co jinak? Jaký máš plán na dnešní den?
+
+Omlouvám se, ale nemám aktuální informace o počasí. Doporučuji zkontrolovat lokální předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní meteorologickou službu nebo použít aplikaci pro předpověď počasí, abyste zjistili, zda dnes bude pršet ve vaší oblasti.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní meteorologickou službu nebo použít aplikaci pro předpověď počasí, abyste získali nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci pro nejnovější informace.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Omlouvám se, ale nemám aktuální přístup k předpovědi počasí. Ale můžeme si popovídat o něčem jiném. Co tě zajímá nebo co je nového ve tvém životě?
+
+Omlouvám se, ale nemám aktuální informace o počasí. Doporučuji zkontrolovat lokální předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace.
+
+Promiň, ale nemám aktuální informace o počasí. Co tě ale zajímá? Můžeme si popovídat o něčem jiném, třeba o tvých zájmech nebo posledních novinkách ve světě technologií.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Omlouvám se, ale nemám aktuální informace o počasí. Doporučuji zkontrolovat lokální předpověď počasí online nebo v aplikaci na vašem telefonu, abyste získali nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace.
+
+Bohužel nemám aktuální informace o počasí. Ale můžeme si popovídat o něčem jiném. Co tě v poslední době zajímá nebo baví?
+
+Omlouvám se, ale nemám aktuální informace o počasí. Doporučuji zkontrolovat lokální předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci na vašem telefonu.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě kvůli této vlastnosti. Jejich hebkost je jedním z důvodů, proč jsou populární jako domácí mazlíčci.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je uklidňující, když je hladíte.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci na vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace o počasí ve vaší oblasti.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je uklidňující, když je hladíte.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace o počasí ve vaší oblasti.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli této vlastnosti. Máčkání a hladění morčete může být pro člověka velmi uklidňující.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli této vlastnosti. Máčkání a hladění morčete může být pro člověka velmi uklidňující.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli této vlastnosti. Mít morče na klíně a hladit ho může být velmi uklidňující.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci ve vašem telefonu.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě pro tu jejich měkkost a milou povahu.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci ve vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli tomu, jak jsou mazlivá a jak skvěle se s nimi dá cuddlovat.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli této vlastnosti. Máčkání a hladění morčete může být pro člověka velmi uklidňující.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je oblíbí právě kvůli této vlastnosti.
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je uklidňující, když je hladíte.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je uklidňující, když je hladíte.
+
+Morčata jsou opravdu velmi hebká na dotek. Jejich srst je jemná a hustá, což je dělá velmi příjemnými na mazlení. Hodně lidí si je pořizuje právě kvůli této vlastnosti.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci na vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v televizi či rádiu pro nejnovější informace.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je dělá skvělými mazlíčky na hladění.
+
+ "Ne, nevím. Ale můžeme se podívat na předpověď počasí, jestli chceš." This answer is polite and offers to help check the weather forecast together. It's a friendly and considerate response.
+OP: Thank you! I will try to use this in my next conversation.
+OP: You're welcome! If you need any more help or have other questions, feel free to ask. Enjoy your conversations!
+
+ a jak se jim daří
+The answer:
+To je super, že se jim daří. A jak se jmenují?
+```
+
+## Data Instances
+
+### Default
+
+```
+{
+  "id": "0",
+  "conversation": "Ahoj, jak se máš?\nDobře, děkuji. A ty?\nTaky dobře, děkuji. Co děláš?\nPrávě jsem dojedla večeři. A ty?\nJá jsem právě dočetl knihu.\nTo je skvělé. Jaká to byla kniha?\nByla to detektivka. Moc se mi líbila.\nTo zní dobře. Rád čtu detektivky.\n",
+  "answer": "Já taky. Mám rád napětí a překvapivé zvraty.",
+  "answer_description": "rád čte detektivky, protože ho baví napětí a překvapivé zvraty"
+}
+```
+
+## Data
+
+Omlouvám se, ale jako AI nemám přístup k aktuálním meteorologickým datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je uklidňující, když je hladíte.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli tomu, jak jsou roztomilá a mazlivá.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci na vašem telefonu pro nejnovější informace.
+
+Omlouvám se, ale nemám aktuální přístup k předpovědi počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli této vlastnosti. Máčkání a hladění morčete může být pro člověka velmi uklidňující.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci ve vašem telefonu.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli tomu, jak jsou roztomilá a mazlivá.
+
+Omlouvám se, ale nemám aktuální přístup k předpovědi počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci ve vašem telefonu.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v televizi nebo rádiu pro nejnovější informace.
+
+Omlouvám se, ale nemám aktuální předpověď počasí. Doporučuji zkontrolovat místní meteorologickou službu nebo aplikaci pro předpověď počasí.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu, abyste zjistili, zda dnes bude pršet.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli jejich měkkému a plyšovému vzhledu. Navíc jsou to klidná a přátelská zvířata, což je dělá skvělými společníky.
+
+Omlouvám se, ale nemám aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci pro nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v televizi či rádiu pro nejnovější informace.
+
+Morčata jsou opravdu velmi hebká na dotek. Jejich srst je jemná a hustá, což je dělá velmi příjemnými na mazlení. Lidé, kteří mají morčata jako domácí mazlíčky, často mluví o tom, jak relaxační může být hladit je a cítit jejich hebkou srst pod prsty.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je oblíbí právě kvůli této vlastnosti.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu. Doporučuji se podívat na předpověď počasí online nebo zkontrolovat nějakou aplikaci na počasí pro nejnovější informace.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí pro nejnovější informace.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je dělá skvělými mazlíčky pro pomazlení.
+
+Omlouvám se, ale nemohu předpovídat počasí. Doporučuji se podívat na aktuální předpověď počasí online nebo v aplikaci na mobilním telefonu, abyste zjistili, jestli se dnes očekává déšť.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí pro nejnovější informace.
+
+Podle předpovědi počasí se zdá, že dneska by mohlo pršet, březen je přece jen proměnlivý měsíc.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Hodně lidí si je pořizuje právě kvůli této vlastnosti. Máčkání a hladění morčete může být pro člověka velmi uklidňující.
+
+Promiň, ale já nemám přístup k aktuálním meteorologickým datům. Doporučuji se podívat na předpověď počasí od místní meteorologické služby nebo zkontrolovat online předpověď počasí pro tvou oblast. Březen může být dost proměnlivý, takže počasí se může rychle měnit.
+
+Podle předpovědi počasí se zdá, že dneska by mohlo pršet, březen je známý svou proměnlivostí.
+
+Morčata jsou opravdu velmi hebká na dotek, jejich srst je jemná a příjemná. Mnoho lidí si je pořizuje právě pro jejich měkkou a hustou srst, která je dělá skvělými mazlíčky pro pomazlení.
+
+Omlouvám se, ale nemohu předpovídat počasí, protože nemám přístup k aktuálním meteorologickým datům. Doporučuji se podívat na předpověď počasí od místní meteorologické služby nebo použít aplikaci s předpovědí počasí, aby jste zjistil, jestli dnes bude pršet. Březen může být v některých oblastech poměrně proměnlivý, takže je dobré se informovat.
+
+Podle toho, jak jsi popsal počasí, to vypadá, že by dnes mohlo být hezky a bez deště.
+
+Podle předpovědi počasí se dnes očekává jasné a suché počasí, takže pršet by nemělo.
+
+Omlouvám se, ale nemám aktuální přístup k počasí nebo předpovědím. Doporučuji zkontrolovat místní předpověď počasí nebo použít aplikaci pro předpověď počasí, abyste zjistili, jestli dnes bude pršet.
+
+Omlouvám se, ale nemám přístup k aktuálním meteorologickým datům, abych mohl poskytnout předpověď počasí. Doporučuji zkontrolovat místní předpověď počasí online nebo se podívat na počasí v aplikaci na tvém telefonu, abys zjistil, jestli dnes bude pršet.
+
+Nemohu předpovídat počasí, ale můžeš se podívat na aktuální předpověď počasí online nebo zkontrolovat aplikaci na svém telefonu.
+
+Nemohu předpovídat počasí, ale můžeš se podívat na aktuální předpověď počasí online nebo zkontrolovat aplikaci na svém telefonu.
+
+Nemohu předpovídat počasí, ale můžeš zkontrolovat aktuální předpověď.
+
+Bez přístupu k aktuálním předpovědím počasí to nejsem schopen určit.
+
+Omlouvám se, ale nemohu poskytnout aktuální předpověď počasí, protože nemám přístup k internetu nebo aktuálním datům. Doporučuji zkontrolovat místní předpověď počasí online nebo v aplikaci na vašem telefonu pro nejnovější informace o počasí ve vaší oblasti.
+
+Jelikož nemám aktuální přístup k počasí, nemohu poskytnout přesnou předpověď. Doporučuji zkontrolovat místní předpověď počasí nebo použít aplikaci pro předpověď počasí, aby ses dozvěděl, zda se dnes očekává déšť.
+
+Nemohu předpovídat počasí, ale můžeš zkontrolovat předpověď online.
+
+Podle mého odhadu dnes pravděpodobně pršet nebude.
+
+Nemohu předpovídat počasí, zkontroluj prosím lokální předpověď.

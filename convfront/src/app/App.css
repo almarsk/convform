@@ -1,0 +1,121 @@
+#main {
+    color: black;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+#intro-text {
+    margin: 10px;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 83px;
+}
+
+.content-box.input {
+    justify-content: flex-end;
+    background-color: rgb(169, 169, 169);
+}
+
+.input-field-chat {
+    padding-left: 8px;
+    border-radius: 8px;
+    border: 0;
+    background-color: rgb(213, 213, 213);
+    transition: background-color 0.4s;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    resize: vertical;
+    -moz-resize: vertical;
+    -webkit-resize: vertical;
+    outline: none;
+    caret-color: rgb(129, 129, 129);
+    flex-grow: 1;
+}
+
+.content {
+    margin: 15px;
+}
+
+.input-field:focus {
+    outline: none;
+    background-color: rgb(218, 218, 218);
+    outline-offset: 0;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+.submit {
+    width: 3em;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border-radius: 9px;
+    background-color: rgb(189, 189, 189);
+    font-size: medium;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    border: none;
+}
+
+.submit:hover {
+    background-color: rgb(160, 160, 160);
+    cursor: pointer;
+}
+
+.submit:focus {
+    outline: none;
+    caret-color: transparent;
+}
+
+.submit:active {
+    background-color: rgb(200, 200, 200);
+}
+
+.outro-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.outro-eval {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outro-eval > * {
+    margin: 20px;
+}
+
+.eval-field {
+    margin: 0 0 15px 15px;
+    width: 25vw;
+    min-height: 120px;
+}
+
+.admin-button {
+    margin: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold-text {
+    font-weight: bold;
+}

@@ -1,0 +1,76 @@
+Flow {
+     persona: str
+     the track: [str]
+     coda: [str]
+     states: {str: State}
+     intents: {str: Intent}
+}
+
+CSO {
+    bot turns: int
+    history: [[str]]
+    context states: [str]
+    context intents: [str]
+    previous last states: [str]
+    possible intents: [str]
+    matched intents: [str]
+    adjacent states: [str]
+    turns_since_initiative: int
+    initiativity: int
+    last states: [str]
+    coda: bool
+    reply: str
+}
+
+State {
+    name: str
+    intents {name: [adjacent]}
+    annotation: str
+    say: [str] || prompt
+    type: Type
+    iteration: int
+    prioritize: bool
+    initiativity: int || None
+    context intents: [str]
+    context states: [str]
+    iterate states: [str]
+}
+
+Intent {
+    name: str,
+    annotation: str
+    match against: [str] || prompt
+    adjacent: [str]
+    context intents: [str]
+    context states: [str]
+    iterate states: [str]
+}
+
+steps - CSI and userspeech come in:
+
+CSI gets copied to CSO
+CSO bot turns increment
+move last states to previous last states
+gather possible intents: from context intents + from previous last states
+get matched intents - regex + prompting
+remove matched & context intents from context intents (???)
+adjacent states - from matched states
+last states - adjacent states + context states
+    - empty context states
+    - filter for overiterated states
+    - rhematize
+        - order based on match index (figure out how to fit llm intent reco into this)
+        - decide whether its time for initiativity (initiativity < turns since initiative)
+            - initiative
+                - end with one initiative (+ its connective if it has one)
+                - remove other initiatives (+ their connectives if they have one)
+                - if there is no initiative and it is not coda, add from the track
+                - turns since initiativity = 0
+            - non initiative
+                - only put responsives (+ their connectives if they have one)
+                - turns since initiativity += 1
+    - determine new initiativity if necessary
+    - add current last states to history
+    - set coda to true if necessary
+reply - assemble reply
+return

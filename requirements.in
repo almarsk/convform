@@ -3,6 +3,9 @@ flask == 2.3.1
 Flask[async]
 flask-sqlalchemy == 3.0.3
 langchain == 0.0.202
+langchain-openai == 0.0.8
 urllib3==1.26.6
-openai == 0.27.8
-maturin == 1.2.3
+openai == 01.13.3
+jsonschema == 4.21.1
+langchain-core == 0.1.28
+python-slugify == 8.0.4

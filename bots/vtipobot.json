@@ -1,0 +1,26 @@
+{
+  "flow": "vtipobot",
+  "má se": "dobře",
+  "persona": "vtipobot",
+  "track": ["sgsf"],
+  "coda": ["sgfs"],
+  "states": [
+    {
+      "name": "str",
+      "intents": {
+        "atr": ["blfsogf"],
+        "name": ["star", "lal"]
+      },
+      "annotation": "str",
+      "say": ["str"],
+      "response_type": "Flexible",
+      "iteration": 2,
+      "prioritize": true,
+      "initiativity": 0,
+      "context_intents": ["trs", "trop"],
+      "context_states": ["srg"],
+      "iterate_states": ["strr"]
+    }
+  ],
+  "intents": []
+}

@@ -1,0 +1,130 @@
+c) neodpověděl na otázku Berušky
+a) prozradil
+c) neodpověděl na otázku Berušky
+b) říkal nesmysl
+b) říkal nesmysl
+a) prozradil co dělá
+c) neodpověděl na otázku Berušky
+a) prozradil co dělá
+a) prozradil co dělá
+a) prozradil co dělá
+a) prozradil co dělá
+a) prozradil co dělá
+b) zeptal se Berušky jak se má
+b) zeptal se Berušky jak se má
+b) zeptal se Berušky jak se má
+b) zeptal se Berušky jak se má
+c) postěžoval si na počasí
+d) nic z nabídnutých možností
+a) prozradil co dělá
+a) prozradil co dělá
+a) prozradil co dělá
+a) prozradil co dělá
+a) prozradil co dělá
+c) postěžoval si na počasí
+d) pochválil počasí
+d) nic z nabídnutých možností
+b) zeptal se Berušky jak se má
+
+c) postěžoval si na počasí
+1
+1
+3
+1
+Právě si prohlížím nějaké dokumenty do práce. A co ty?
+Modrá
+Jenom si prohlížím nějaké staré fotky. Co ty?
+Podle předpovědi by mělo být celkem jasno, ale v poslední době to moc neodpovídá skutečnosti.
+Myslím, že meteorologové se ještě neshodli.
+Podle předpovědi by mělo zůstat sucho, ale ty víš, jak to bývá s počasím. Raději si vezmi s sebou deštník, pro jistotu.
+Podle předpovědi by mělo být dneska celkem slunečno, ale počasí se může rychle změnit, takže si raději vezmi s sebou deštník, pro jistotu.
+Myslím, že dnes bude ideální počasí na pečení koláčů!
+Myslím, že by měly být otevřené obchody do osmi.
+Hmm, nejsem si jistý, ale měl bych doma ještě trochu vanilkové zmrzliny.
+Mimochodem, jaký je tvůj oblíbený druh dinosaurů?
+Můj oblíbený film je Pán prstenů.
+Můj oblíbený film je Pán prstenů!
+Jasně, dneska večer mají v televizi dávat skvělý dokument o historii jazzu.
+Nemám jistotu, ale možná by mohlo spíš sněžit.
+Můj oblíbený film je Pán prstenů.
+Myslím, že dneska mají být výborné slevy na elektrospotřebiče!
+Podle předpovědi by mělo být dneska celkem jasno, ale počasí se může rychle změnit. Raději si vem s sebou deštník, pro jistotu.
+Podíval jsem se ráno a vypadalo to, že by mohlo, ale teď už si nejsem tak jistý. Raději si vem s sebou deštník.
+['a) prozradil co dÃ\x84Â\x9blÃ¡', 'b) zeptal se jak se mÃ¡', 'c) postÄ\x9bÅ¾oval si na poÄ\x8dasÃ\xad', 'd) pochvÃ¡lil poÄ\x8dasÃ\xad', 'e) nic z nabÃ\xaddnutÃ½ch moÅ¾nostÃ\xad']
+['a) prozradil co dÄ\x9blÃ¡', 'b) zeptal se jak se mÃ¡', 'c) postÄ\x99Å¾oval si na poÄ\x8dasÃ\xad', 'd) pochvÃ¡lil poÄ\x8dasÃ\xad', 'e) nic z nabÃ\xaddnutÃ½ch moÅ¾nostÃ\xad']
+['prozradil co dělá', 'zeptal se jak se má', 'postęžoval si na počasí', 'pochválil počasí', 'nic z nabídnutých možností']
+['a) prozradil co dělá', 'b) zeptal se jak se má', 'c) postěžoval si na počasí', 'd) pochválil počasí', 'e) nic z nabídnutých možností']
+['a', 'b', 'c', 'd', 'e']
+a,b,c,d,e
+{'popis0': False, 'popis1': True, 'popis2': True, 'popis3': False, 'popis4': False}
+{'popis0': False, 'popis1': False, 'popis2': True, 'popis3': False, 'popis4': False}
+{'popis1': False, 'popis2': True, 'popis3': False, 'popis4': False}
+{'popis1': False, 'popis2': True, 'popis3': True, 'popis4': False}
+{'popis1': False, 'popis2': False, 'popis3': True, 'popis4': False}
+{'popis1': False, 'popis2': True, 'popis3': True, 'popis4': False}
+{'popis1': False, 'popis2': False, 'popis3': True, 'popis4': False}
+{'popis1': False, 'popis2': False, 'popis3': True, 'popis4': False}
+{'2': 0}
+{'2': 0}
+{'2': 0}
+{'0': 0, '1': -1, '2': -1, '3': -1}
+{'0': -1, '1': 21, '2': 9, '3': -1}
+{'0': -1, '1': -1, '2': 20, '3': 0}
+{'1': 23, '2': 0}
+{'1': 24, '2': 0}
+{'1': -1, '2': 32, '3': 0, '4': -1}
+{'1': -1, '2': 18, '3': 12, '4': -1}
+{'1': -1, '2': 18, '3': 26, '4': -1}
+{'1': -1, '2': 22, '3': 17, '4': -1}
+{'1': -1, '2': 23, '3': 17, '4': -1}
+{'1': -1, '2': 23, '3': 0, '4': -1}
+{'1': -1, '2': 19, '3': -1, '4': -1}
+{'1': -1, '2': 23, '3': 0, '4': -1}
+{'popis1': False, 'popis2': False, 'popis3': True, 'popis4': False}
+{'1': -1, '2': 26, '3': 0, '4': -1}
+{'1': -1, '2': 33, '3': 0, '4': -1}
+{'1': -1, '2': 26, '3': 0, '4': -1}
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuji se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška a ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.
+Ahoj, jmenuju se Beruška, ráda tě poznávám. Musím ti povědět, co se dnes dělo ve škole. Dostali jsme tam dort, protože můj spolužák měl narozeniny.

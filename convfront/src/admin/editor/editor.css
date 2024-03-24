@@ -1,0 +1,253 @@
+.panel {
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editor-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 20%;
+}
+
+.editor-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.editor-label {
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.editor-brick {
+    width: 100%;
+    background-color: rgb(180, 180, 180);
+    border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-pad {
+    padding: 0;
+}
+
+.editor-field {
+    display: flex;
+    justify-content: start;
+    margin: 2px;
+}
+
+.editor-container {
+    width: 100%;
+}
+
+.small {
+    width: 25px;
+    height: 25px;
+    font-size: 6px;
+}
+
+.list-input:focus {
+    outline: none;
+}
+
+.list-submit {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    background-color: rgb(189, 189, 189);
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    border: none;
+}
+
+.list-submit:hover {
+    background-color: rgb(160, 160, 160);
+    cursor: pointer;
+}
+
+.list-field {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.prompt-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    margin-right: 5px;
+    font-size: 10px;
+    background-color: rgb(190, 190, 190);
+    border: none;
+    border-radius: 5px;
+    width: 45px;
+}
+
+.prompt-submit {
+    width: 15vw;
+}
+
+.edit-bricks-listing {
+    width: 100%;
+}
+
+.subheader {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.proof-list {
+    height: 93%;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.proof-item {
+    margin-bottom: 6px;
+}
+
+.side-panel {
+    height: 85vh;
+    width: 33vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.panel-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.items-list {
+    height: 70vh;
+    overflow: auto;
+}
+
+.string-input {
+    min-height: 30px;
+}
+
+.bool-input {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.response-type-input {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.dict-item {
+    cursor: pointer;
+}
+
+.list-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.editor-items-list {
+    display: flex;
+    width: 20vw;
+    overflow: auto;
+}
+
+.editor-tag {
+    cursor: pointer;
+    background-color: rgb(189, 189, 189);
+    border-radius: 10px;
+    padding: 1px 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    min-height: 25px;
+}
+
+.single-line {
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+}
+
+.area-input {
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    min-height: 100px;
+    padding-left: 8px;
+    border-radius: 8px;
+    line-height: 1.5;
+    text-align: left;
+    resize: vertical;
+    -moz-resize: vertical;
+    -webkit-resize: vertical;
+    outline: none;
+    caret-color: rgb(129, 129, 129);
+}
+
+.say-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    align-items: bottom;
+}
+
+.say-input {
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    align-items: bottom;
+}
+
+.form-container {
+    width: 90%;
+}
+
+.input-field {
+    width: 20vw;
+    padding-left: 8px;
+    border-radius: 8px;
+    border: 0;
+    background-color: rgb(213, 213, 213);
+    transition: background-color 0.4s;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    resize: vertical;
+    -moz-resize: vertical;
+    -webkit-resize: vertical;
+    outline: none;
+    caret-color: rgb(129, 129, 129);
+    flex-grow: 1;
+}
