@@ -101,6 +101,7 @@ class ConversationStatus:
         # replace prompt sections with llm output
         self.prompted_say = self.prompt_reply(
             prev_cs["turns_history"] + [{"say": user_speech, "who": "human"}]
+            if prev_cs else [{"say": user_speech, "who": "human"}]
         )
         # finalize answer via prompting
         self.say = self.finalize_reply()
@@ -108,7 +109,8 @@ class ConversationStatus:
         # if there is no reply, it is the end of convo
         self.end = self.raw_say is None or not self.raw_say
 
-        self.turns_history = [{"say": self.say, "who": "bot"}] if prev_cs is None else prev_cs["turns_history"] + [
+        self.turns_history = [
+            {"say": self.say, "who": "bot"}] if prev_cs is None else prev_cs["turns_history"] + [
             {"say": user_speech, "who": "human"}
         ] + [
             {"say": self.say, "who": "bot"}

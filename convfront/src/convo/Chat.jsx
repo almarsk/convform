@@ -3,13 +3,12 @@ import BotOutput from "./BotOutput";
 import myRequest from "../myRequest";
 import { useState, useEffect } from "react";
 import "./loader.css";
-import { useNavigate } from "react-router-dom";
+import basename from "../basename.jsx";
 
 const Chat = () => {
   const [[loading, minLoading], setLoading] = useState([true, true]);
   const [cStatus, setCStatus] = useState(null);
   const [startTime, setStartTime] = useState(null);
-  const navigate = useNavigate(); // Access navigate function from the hook
 
   useEffect(() => {
     setStartTime(Date.now()); // Record the start time when component mounts
@@ -23,13 +22,13 @@ const Chat = () => {
     if (!minLoading) setLoading([false, minLoading]);
 
     if (cStatus && cStatus.end) {
-      navigate("/"); // Navigate to "/" when cStatus.end is truthy
+      window.location.href = basename + "/";
     }
 
     if (!loading) console.log(cStatus);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cStatus, loading, navigate]);
+  }, [cStatus, loading]);
 
   const handleSubmit = async (e) => {
     setLoading([true, true]);
@@ -48,20 +47,23 @@ const Chat = () => {
 
   return (
     <>
-      <BotOutput
-        botSpeech={cStatus && !loading ? cStatus.say : ""}
-        loading={loading}
-      />
-      <UserInput submit={handleSubmit} loading={loading} />
-      <button
-        onClick={async () => {
-          await myRequest("/abort", {});
-          navigate("/"); // Navigate to "/" when the button is clicked
-        }}
-        className="submit"
-      >
-        🚫
-      </button>
+      <>
+        <BotOutput
+          botSpeech={cStatus && !loading ? cStatus.say : ""}
+          loading={loading}
+        />
+        <UserInput submit={handleSubmit} loading={loading} />
+        <button
+          onClick={async () => {
+            await myRequest("/abort", {}).then(
+              () => (window.location.href = basename + "/"),
+            );
+          }}
+          className="submit"
+        >
+          🚫
+        </button>
+      </>
     </>
   );
 };

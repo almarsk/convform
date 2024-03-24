@@ -7,11 +7,11 @@ import DraggableLabel from "./DraggableLabel";
 import RenameFlowForm from "./RenameFlowForm";
 import download_flow from "./download_flow";
 
+import basename from "../basename.jsx";
+
 const BotBrick = ({ bot, status, archived, setBotsList }) => {
   const [renameMode, setRenameMode] = useState(false);
   const [newFlowValue, setNewFlowValue] = useState(bot);
-
-  const basename = "";
 
   return (
     <div className="bot-brick">

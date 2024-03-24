@@ -1,7 +1,7 @@
 import UserInput from "../app/UserInput";
 import PropTypes from "prop-types";
 import myRequest from "../myRequest";
-import { Navigate } from "react-router-dom";
+import basename from "../basename.jsx";
 
 const Intro = ({ bot }) => {
   return (
@@ -16,7 +16,7 @@ const Intro = ({ bot }) => {
           await myRequest("/intro", {
             nick: new FormData(e.target).get("content"),
           }).then(() => {
-            <Navigate to="/" />;
+            window.location.href = basename + "/";
           });
         }}
         loading={false}

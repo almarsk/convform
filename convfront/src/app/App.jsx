@@ -16,8 +16,6 @@ const PHASES = {
 const App = ({ bot, phase }) => {
   phase = parseInt(phase);
 
-  console.log("lesgoo", bot);
-
   return (
     <div id="main">
       {localStorage.getItem("isLoggedIn") == "true" ? (

@@ -3,7 +3,8 @@ import pprint
 def proof_empty(bot, issues):
     try:
         for key, value in bot.items():
-            if not value:
+            # intents are an exception, they can be empty
+            if not value and key != "intents":
                 issues.append(f"{key} empty")
 
         for state in bot["states"]:
