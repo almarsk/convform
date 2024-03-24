@@ -15,7 +15,8 @@ const PHASES = {
 
 const App = ({ bot, phase }) => {
   phase = parseInt(phase);
-  console.log("bot", bot);
+
+  console.log("lesgoo");
 
   return (
     <div id="main">
