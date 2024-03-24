@@ -1,5 +1,7 @@
-deploy
 dont allow to run archived bots
+persona add in prompts
+do intents need to not be empty?
+add possibility to intent reco - ask about last turn / state of convo in general
 
 convread        - nice flexible exporting
 convread debug  - flexible cstatus

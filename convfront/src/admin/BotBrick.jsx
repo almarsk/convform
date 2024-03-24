@@ -11,6 +11,8 @@ const BotBrick = ({ bot, status, archived, setBotsList }) => {
   const [renameMode, setRenameMode] = useState(false);
   const [newFlowValue, setNewFlowValue] = useState(bot);
 
+  const basename = "";
+
   return (
     <div className="bot-brick">
       <div className="bot-name">
@@ -42,7 +44,8 @@ const BotBrick = ({ bot, status, archived, setBotsList }) => {
           icon={"🚀"}
           hoverText={`redirect to ${bot}`}
           click={() => {
-            if (status.success) window.open(`/?flow=${bot}`, "_blank");
+            if (status.success)
+              window.open(`${basename}/?flow=${bot}`, "_blank");
           }}
         />
       </div>
@@ -51,7 +54,7 @@ const BotBrick = ({ bot, status, archived, setBotsList }) => {
         icon={"📎"}
         hoverText={`link for ${bot}`}
         click={() => {
-          const flow_url = `${new URL(window.location.href).origin}/?flow=${bot.normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
+          const flow_url = `${new URL(window.location.href).origin}${basename}/?flow=${bot.normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
           navigator.clipboard.writeText(flow_url);
         }}
       />
