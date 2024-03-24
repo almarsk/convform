@@ -1,3 +1,6 @@
+deploy
+dont allow to run archived bots
+
 convread        - nice flexible exporting
 convread debug  - flexible cstatus
 cstatus interface - list convos and within convos list cstatuses
