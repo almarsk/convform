@@ -4,6 +4,7 @@ vnitřní provázanost textu
 koheze
 koreference
 pdt
+
 no relation
 kde se berou slova nezapojená
 -> zdůvodnění koherence
