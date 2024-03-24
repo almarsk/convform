@@ -1,0 +1,8 @@
+list possible paths to state
+show network
+
+fix - add templates of missing states and intents
+clean unused - remove unreferenced intents and states
+suggest autocomplete -
+        keep track of existing intents
+        and states and suggest them in appropriate fields
