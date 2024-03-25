@@ -4,6 +4,7 @@ import Intro from "../convo/Intro";
 import Chat from "../convo/Chat";
 import Outro from "../convo/Outro";
 import Start from "../convo/Start";
+import Thanks from "../convo/Thanks";
 import { Link } from "react-router-dom";
 
 const PHASES = {
@@ -38,7 +39,7 @@ const App = ({ bot, phase }) => {
         ) : phase === PHASES.OUTRO ? (
           <Outro />
         ) : (
-          <div>Díky za váš čas!</div>
+          <Thanks />
         )
       ) : (
         <div>🤖🤒</div>

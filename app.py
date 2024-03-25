@@ -13,7 +13,7 @@ from sqlalchemy import JSON
 import os
 import secrets
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 
 from convproof import validate_flow
@@ -30,6 +30,7 @@ app.config.update(
     SESSION_COOKIE_SAMESITE="Lax",
     SQLALCHEMY_DATABASE_URI=f"sqlite:///{db_path}",
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
+    PERMANENT_SESSION_LIFETIME = timedelta(minutes=45),
 )
 
 from database import db
@@ -128,6 +129,7 @@ blueprint_paths = [
     "abort.abort_bp",
     "abort.is_aborted_bp",
     "outro.outro_bp",
+    "reset.reset_bp",
     "admin.call_convform.convform_bp",
     "admin.list_bots.list_bot_bp",
     "admin.create.create_bp",
