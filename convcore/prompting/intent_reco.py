@@ -44,7 +44,7 @@ ve které uživatel {prompt}, nebo -1 pokud popis neodpovídá''',
     result = chat.invoke(messages, functions=functions)
     result = result.additional_kwargs
 
-    addition = {"context":[str(message) for message in messages], "function": functions, "result":result}
+    addition = [[str(message) for message in messages], functions, result]
     log(addition)
 
     if "function_call" in result:

@@ -21,14 +21,3 @@ def api_key():
             print(f"Error parsing JSON: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
-
-def get_letter_seq(number):
-    if number <= 26:
-        return chr(ord('a') - 1 + number)
-    else:
-        base = ord('a') - 1
-        letters = []
-        while number > 0:
-            number, remainder = divmod(number - 1, 26)
-            letters.append(chr(base + remainder + 1))
-        return ''.join(reversed(letters))

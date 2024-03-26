@@ -5,7 +5,6 @@ from .state import State
 from .intent import Intent
 
 class Flow:
-    persona: str
     track: list
     coda: list
     states: list
@@ -15,7 +14,6 @@ class Flow:
             flow = validate_flow( flow_name, return_flow=True)
         else:
             flow = {}
-        self.persona = flow.get("persona", "")
         self.track = flow.get("track", [])
         self.coda = flow.get("coda", [])
         self.states = [State(state) for state in flow.get("states", [])]

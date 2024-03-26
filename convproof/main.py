@@ -21,6 +21,11 @@ def validate_flow(flow, return_flow=False):
             "success": False,
             "message": ProofException(issues).message
         }
+    elif flow_data.is_archived:
+        result =  {
+            "success": False,
+            "message": "flow archived"
+        }
     else:
         bot = flow_data.flow
 

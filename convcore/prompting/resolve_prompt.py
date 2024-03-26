@@ -32,7 +32,7 @@ Robot {args["prompt"]}"""))
         chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0)
         result = chat.invoke(messages)
 
-        args["log"]([[m.content for m in messages], str(result.content)])
+        args["log"]([[m.content for m in messages], args["prompt"], str(result.content)])
 
 
         return f'{str(result.content)}'

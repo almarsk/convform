@@ -229,7 +229,7 @@ class ConversationStatus:
         prompts = [{
             "prompt": say["text"],
             "context": context if not say["emphasis"] else [],
-            "log": self.add_to_prompt_log
+            "log": self.add_to_prompt_log,
         } for say in self.raw_say if say["prompt"]]
 
         with ThreadPoolExecutor() as exec:
