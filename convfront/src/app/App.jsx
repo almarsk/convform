@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import PropTypes from "prop-types";
 import Intro from "../convo/Intro";
 import Chat from "../convo/Chat";

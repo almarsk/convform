@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import myRequest from "../../myRequest";
-import "./editor.css";
+import "./editor.scss";
 
 import AbstractForm from "./AbstractForm";
 import Listing from "./Listing";

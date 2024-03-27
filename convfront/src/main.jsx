@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./app/App.jsx";
-import "./index.css";
+import "./index.scss";
 import AdminConfig from "./admin/AdminConfig";
 import { IssuesContextProvider } from "./IssuesContext";
 

@@ -6,7 +6,7 @@ import Flows from "./Flows";
 import { Route, Routes } from "react-router-dom";
 import EditPage from "./editor/EditPage";
 import TestPage from "./TestPage";
-import "./admin.css";
+import "./admin.scss";
 import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
 
