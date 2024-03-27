@@ -1,3 +1,5 @@
+$light-grey: rgb(189, 189, 189);
+
 .admin-container {
     display: flex;
     flex-direction: column;
@@ -36,7 +38,7 @@
     flex-direction: row;
     align-items: center;
     padding: 5px;
-    background-color: rgb(189, 189, 189);
+    background-color: $light-grey;
     border-radius: 10px;
 }
 
@@ -44,7 +46,7 @@
     margin: 0 5px 5px 5px;
 
     height: 30px;
-    background-color: rgb(189, 189, 189);
+    background-color: $light-grey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
