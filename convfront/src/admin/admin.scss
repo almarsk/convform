@@ -32,7 +32,6 @@ $light-grey: rgb(189, 189, 189);
 
 .bot-brick {
     margin-bottom: 5px;
-    width: 628px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -160,4 +159,66 @@ ul {
 .editor-input {
     display: flex;
     flex-direction: column;
+}
+
+.navbar {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.navbar > * {
+  margin: 10px;
+}
+
+.spacer {
+  width: 100%;
+}
+
+.read-container {
+  display: grid;
+  grid-gap: 5px;
+}
+
+.read-item {
+  justify-self: center
+}
+
+.conversations-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(450px, 1fr));
+  grid-gap: 5px;
+  flex-wrap: wrap;
+}
+
+.convo-brick {
+  justify-content: space-between
+}
+
+.turns-reader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  overflow: scroll;
+}
+
+.conversation-reader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%
+}
+
+.turn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%
 }

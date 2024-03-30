@@ -6,7 +6,7 @@ import MenuButton from "./MenuButton";
 import FlowList from "./FlowList";
 import ProjectList from "./ProjectList";
 
-const Flows = ({ setIssues }) => {
+const Flows = () => {
   const [botsList, setBotsList] = useState([]);
   const [projects, setProjectsList] = useState([]);
   const [archived, setArchived] = useState(false);

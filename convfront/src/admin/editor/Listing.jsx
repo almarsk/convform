@@ -38,7 +38,6 @@ const Listing = ({
         name: newItemValue,
         data: data,
       }).then((e) => {
-        console.log(e);
         fetchItems();
         fetchProof();
         e.success

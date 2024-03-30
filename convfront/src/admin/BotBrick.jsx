@@ -75,6 +75,12 @@ const BotBrick = ({ bot, status, archived, setBotsList }) => {
       />
 
       <MenuButton
+        icon={"📖"}
+        hoverText={`read conversations of ${bot}`}
+        where={`/admin/read/${bot}`}
+      />
+
+      <MenuButton
         icon={status.success ? "🏗️" : "🛠️"}
         hoverText={status.message}
         where={`/admin/edit/${bot}`}

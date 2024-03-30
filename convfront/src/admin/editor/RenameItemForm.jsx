@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 import { useEffect, useRef } from "react";
 import myRequest from "../../myRequest";
+import slugify from "slugify";
 
 const RenameItemForm = ({
   renameMode,
@@ -32,13 +33,12 @@ const RenameItemForm = ({
           func: "rename",
           name: item,
           item_type: elementType,
-          data: newItemValue,
+          data: slugify(newItemValue),
         }).then((response) => {
-          console.log(response);
           if (response.success) {
             fetchProof();
             fetchItems();
-            setNewItemValue(newItemValue);
+            setNewItemValue(slugify(newItemValue));
             setRenameMode(false);
             setLastEvent(
               `renamed ${elementType} from ${item} to ${newItemValue}`,

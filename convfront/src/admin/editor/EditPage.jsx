@@ -2,16 +2,20 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import myRequest from "../../myRequest";
 import EditorPanel from "./EditorPanel";
+import MenuButton from "../MenuButton";
+import basename from "../../basename";
 
 const EditPage = () => {
   const { flow } = useParams();
   const [proof, setProof] = useState("");
+  const [valid, setValid] = useState(false);
   const [lastEvent, setLastEvent] = useState(`opened ${flow} editor`);
   const [flowData, setFlowData] = useState({});
 
   const fetchProof = async () => {
     const currentProof = await myRequest("/proof", { flow: flow });
     setProof(currentProof.message);
+    setValid(currentProof.success);
   };
 
   const fetchItems = async () => {
@@ -45,6 +49,13 @@ const EditPage = () => {
                   {message}
                 </div>
               ))}
+            {valid && (
+              <MenuButton
+                icon={"🚀"}
+                hoverText={`redirect to ${flow}`}
+                click={() => window.open(`${basename}/?flow=${flow}`, "_blank")}
+              />
+            )}
           </ul>
         </div>
         <EditorPanel

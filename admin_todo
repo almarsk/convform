@@ -1,7 +1,6 @@
-css
 
-convread        - nice flexible exporting
-convread debug  - flexible cstatus
+convread          - nice flexible exporting
+convread debug    - flexible cstatus
 cstatus interface - list convos and within convos list cstatuses
 
 add user directions to flow

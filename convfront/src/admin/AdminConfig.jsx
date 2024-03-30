@@ -9,6 +9,7 @@ import TestPage from "./TestPage";
 import "./admin.scss";
 import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
+import ReadPage from "./read/ReadPage";
 
 const AdminConfig = () => {
   const { issues, setIssues } = useContext(IssuesContext);
@@ -45,6 +46,7 @@ const AdminConfig = () => {
             <Route index element={<Flows />} />
             <Route path="/edit/:flow" element={<EditPage />} />
             <Route path="/test/:flow" element={<TestPage />} />
+            <Route path="/read/:flow" element={<ReadPage />} />
           </Routes>
         </AdminPage>
       ) : (
