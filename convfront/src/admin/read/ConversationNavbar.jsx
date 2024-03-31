@@ -12,7 +12,13 @@ const ConversationNavbar = ({
       ) : (
         <div className="spacer" />
       )}
-      <button className="submit" onClick={() => setActiveConversationId(null)}>
+      <button
+        className="submit"
+        onClick={() => {
+          localStorage.setItem("activeConversationId", null);
+          setActiveConversationId(null);
+        }}
+      >
         ↖︎
       </button>
       {nextConversation ? (

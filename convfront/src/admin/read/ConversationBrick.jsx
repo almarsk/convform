@@ -21,7 +21,6 @@ const ConversationBrick = ({
         className="submit"
         onClick={() => {
           setActiveConversationId(convoId);
-          localStorage.setItem("activeConversationId", convoId);
         }}
       >
         🔬

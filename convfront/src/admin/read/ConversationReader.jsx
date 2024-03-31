@@ -1,12 +1,18 @@
+import { useEffect } from "react";
 import ConversationNavbar from "./ConversationNavbar";
 
 const ConversationReader = ({
   activeConversation,
   setActiveConversationId,
+  activeConversationId,
   nextConversation,
   prevConversation,
 }) => {
-  console.log(activeConversation);
+  useEffect(() => {
+    localStorage.setItem("activeConversationId", activeConversationId);
+  });
+
+  !!activeConversation && console.log(activeConversation);
   if (!activeConversation) {
     setActiveConversationId(null);
   } else {

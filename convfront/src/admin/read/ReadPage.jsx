@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom";
 import myRequest from "../../myRequest";
 
 const getActiveId = () => {
-  const lc = localStorage.getItem("activeConversationId");
-  return lc === "null" ? null : lc;
+  const lc = parseInt(localStorage.getItem("activeConversationId"));
+  return lc;
 };
 
 const ReadPage = () => {
@@ -20,19 +20,21 @@ const ReadPage = () => {
     const getConvos = async () =>
       await myRequest("/convos", { flow: flow }).then((response) => {
         setConvos(response.data);
+        setActiveConversationId(getActiveId());
       });
     getConvos();
-
-    setActiveConversationId(getActiveId());
   }, []);
 
+  useEffect(() => {}, [activeConversationId]);
+
   return (
-    <>
+    <div>
       <b>reading {flow}</b>
       {activeConversationId || activeConversationId == 0 ? (
         <ConversationReader
-          activeConversation={convos[activeConversationId]}
+          activeConversation={!!convos && convos[activeConversationId]}
           setActiveConversationId={setActiveConversationId}
+          activeConversationId={activeConversationId}
           nextConversation={
             activeConversationId < convos.length - 1
               ? () => {
@@ -53,7 +55,7 @@ const ReadPage = () => {
           convos={convos}
         />
       )}
-    </>
+    </div>
   );
 };
 
