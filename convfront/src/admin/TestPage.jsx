@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import myRequest from "../myRequest";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useParams, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { IssuesContext } from "../IssuesContext";
 
 const states = {
   0: "valid",
@@ -11,6 +13,12 @@ const states = {
 const TestPage = () => {
   const { flow } = useParams();
   const [useValid, setValid] = useState(0);
+  const { setIssues, testCStatus } = useContext(IssuesContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log("test", testCStatus);
+  }, []);
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -26,6 +34,9 @@ const TestPage = () => {
     <div>
       <h2>Test Page</h2>
       <div>{flow}</div>
+      <button className="submit" onClick={() => navigate(-1)}>
+        ◀
+      </button>
       {states[useValid] == "unknown" ? <Navigate to="/" /> : ""}
       {states[useValid] == "invalid" ? <div>invalid flow, go fix</div> : ""}
     </div>

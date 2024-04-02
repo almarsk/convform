@@ -38,6 +38,7 @@ const Flows = () => {
   useEffect(() => {
     fetchBots();
     fetchProjects();
+    localStorage.setItem("activeConversationId", null);
   }, []);
 
   useEffect(() => {

@@ -9,7 +9,12 @@ const ConversationBrick = ({
   };
 
   return (
-    <div className="bot-brick convo-brick">
+    <div
+      className="bot-brick convo-brick"
+      onClick={() => {
+        setActiveConversationId(convoId);
+      }}
+    >
       <div>
         <div>{convo.nick}</div>
         <div>
@@ -17,14 +22,6 @@ const ConversationBrick = ({
           {convo.rating && "and rated " + convo.rating}
         </div>
       </div>
-      <button
-        className="submit"
-        onClick={() => {
-          setActiveConversationId(convoId);
-        }}
-      >
-        🔬
-      </button>
     </div>
   );
 };

@@ -13,8 +13,9 @@ const getActiveId = () => {
 
 const ReadPage = () => {
   const [activeConversationId, setActiveConversationId] = useState(null);
+  const [activeCStatusId, setActiveCStatusId] = useState(null);
+  const [convos, setConvos] = useState(null);
   const { flow } = useParams();
-  const [convos, setConvos] = useState([]);
 
   useEffect(() => {
     const getConvos = async () =>
@@ -25,13 +26,17 @@ const ReadPage = () => {
     getConvos();
   }, []);
 
-  useEffect(() => {}, [activeConversationId]);
+  useEffect(() => {
+    setActiveCStatusId(null);
+  }, [activeConversationId]);
 
   return (
     <div>
       <b>reading {flow}</b>
       {activeConversationId || activeConversationId == 0 ? (
         <ConversationReader
+          setActiveCStatusId={setActiveCStatusId}
+          activeCStatusId={activeCStatusId}
           activeConversation={!!convos && convos[activeConversationId]}
           setActiveConversationId={setActiveConversationId}
           activeConversationId={activeConversationId}

@@ -5,9 +5,17 @@ const IssuesContext = createContext();
 
 const IssuesContextProvider = ({ children }) => {
   const [issues, setIssues] = useState("");
+  const [testCStatus, setTestCStatus] = useState(null);
 
   return (
-    <IssuesContext.Provider value={{ issues, setIssues }}>
+    <IssuesContext.Provider
+      value={{
+        issues,
+        setIssues,
+        testCStatus,
+        setTestCStatus,
+      }}
+    >
       {children}
     </IssuesContext.Provider>
   );

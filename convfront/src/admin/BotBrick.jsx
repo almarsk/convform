@@ -125,7 +125,6 @@ BotBrick.propTypes = {
     success: PropTypes.bool.isRequired,
     message: PropTypes.string.isRequired,
   }).isRequired,
-
   archived: PropTypes.bool.isRequired,
   setBotsList: PropTypes.func.isRequired,
 };

@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 import ConversationNavbar from "./ConversationNavbar";
+import ConversationMetaInfo from "./ConversationMetaInfo";
+import ConversationContent from "./ConversationContent";
 
 const ConversationReader = ({
   activeConversation,
   setActiveConversationId,
   activeConversationId,
+  setActiveCStatusId,
+  activeCStatusId,
   nextConversation,
   prevConversation,
 }) => {
@@ -12,12 +16,13 @@ const ConversationReader = ({
     localStorage.setItem("activeConversationId", activeConversationId);
   });
 
-  !!activeConversation && console.log(activeConversation);
+  //!!activeConversation && console.log(activeConversation);
+
   if (!activeConversation) {
     setActiveConversationId(null);
   } else {
     return (
-      <>
+      <div className="reader-container">
         <ConversationNavbar
           setActiveConversationId={setActiveConversationId}
           nextConversation={nextConversation}
@@ -25,37 +30,26 @@ const ConversationReader = ({
         />
         <div className="conversation-reader">
           <div className="turns-reader">
-            <ul class="conversation-meta">
-              <li>{activeConversation.nick}</li>
-              <li>{activeConversation.start}</li>
-              <li>{activeConversation.end}</li>
-              <li>{activeConversation.aborted}</li>
-              <li>{activeConversation.rating}</li>
-              <li>{activeConversation.comment}</li>
-            </ul>
-            <ul class="conversation-content">
-              {activeConversation.conversation.map((turn) =>
-                turn.reply ? (
-                  <p className="turn">
-                    <p>{turn.who === "bot" ? "🤖: " : "🗣️: "}</p>
-                    <p>{turn.reply}</p>
-                  </p>
-                ) : (
-                  ""
-                ),
-              )}
-            </ul>
-            {/*JSON.stringify(activeConversation)*/} <br /> todo:
-            <br /> click convos - info, repliky,
-            <br /> bot turns have view cstate button,
+            <ConversationMetaInfo activeConversation={activeConversation} />
+            <ConversationContent
+              activeConversation={activeConversation}
+              setActiveCStatusId={setActiveCStatusId}
+              activeCStatusId={activeCStatusId}
+            />
           </div>
           <div className="turns-reader">
-            <br /> cstate panel (active cstate state)
-            <br /> link to testing in cstate panel if !! active cstate and if
-            flow is valid
+            {activeCStatusId &&
+              Object.entries(
+                activeConversation.conversation[activeCStatusId].cstatus,
+              ).map((item, index) => (
+                <pre className="cstatus-item" key={index}>
+                  {index !== 0 && <hr className="end" />}
+                  {item[0] + ": "} {JSON.stringify(item[1], null, 2)}
+                </pre>
+              ))}
           </div>
         </div>
-      </>
+      </div>
     );
   }
 };
