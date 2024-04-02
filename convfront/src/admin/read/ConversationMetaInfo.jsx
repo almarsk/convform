@@ -1,5 +1,6 @@
 function processMetaInfo(acid, item) {
   if (item == "start" || item == "end") return acid[item].split(".")[0];
+  if (item == "aborted") return acid[item] ? "aborted" : "not aborted";
   return acid[item];
 }
 

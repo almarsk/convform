@@ -13,8 +13,9 @@ const states = {
 const TestPage = () => {
   const { flow } = useParams();
   const [useValid, setValid] = useState(0);
-  const { setIssues, testCStatus } = useContext(IssuesContext);
+  const { testCStatus } = useContext(IssuesContext);
   const navigate = useNavigate();
+  const { setIssues } = useContext(IssuesContext);
 
   useEffect(() => {
     console.log("test", testCStatus);
@@ -28,13 +29,25 @@ const TestPage = () => {
         setValid(1);
       }
     });
+
+    myRequest("/structure").then((e) => {
+      console.log("structure", e.cstatus);
+    });
   }, []);
 
   return (
     <div>
       <h2>Test Page</h2>
       <div>{flow}</div>
-      <button className="submit" onClick={() => navigate(-1)}>
+      <button
+        className="submit"
+        onClick={() => navigate(-1)}
+        onMouseOver={() => {
+          setIssues("");
+          setIssues("back to conversation log");
+        }}
+        onMouseLeave={() => setIssues("")}
+      >
         ◀
       </button>
       {states[useValid] == "unknown" ? <Navigate to="/" /> : ""}

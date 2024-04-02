@@ -1,4 +1,5 @@
 import random
+from typing import Dict
 
 from .pipeline.get_to_match import get_to_match
 from .pipeline.get_matched_intents import get_matched_intents
@@ -14,8 +15,27 @@ from concurrent.futures import ThreadPoolExecutor
 HISTORY_LEN = 3
 
 class ConversationStatus:
+    bot_turns: int
+    previous_last_states: list
+    possible_intents: dict
+    prompt_log: list
+    matched_intents: dict
+    last_states: list
+    turns_since_initiative: int
+    initiativity: int
+    context_intents: list[str]
+    context_states: list[str]
+    history_intents: list
+    history_states: list
+    state_usage: dict[str, int]
+    raw_say: list
+    prompted_say: list
+    say: str
+    end: bool
+    coda: bool
+    turns_history: list
 
-    def __init__(self, user_speech, flow, prev_cs):
+    def __init__(self, user_speech, flow, prev_cs, structure=False):
 
         # number of bot turns
         # increments at the end of __init__
@@ -44,7 +64,7 @@ class ConversationStatus:
             prev_cs["turns_history"]+[{"say": user_speech, "who": "human"}] if prev_cs is not None else [])
 
         # process adjacent states to have max one initiative etc
-        self.last_states = ([flow.track[0]]
+        self.last_states = [] if structure else ([flow.track[0]]
             if prev_cs is None
             else self.rhematize(
             flow,

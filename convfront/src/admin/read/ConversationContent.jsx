@@ -1,7 +1,13 @@
-import { useContext } from "react";
-import MenuButton from "../MenuButton";
+import { useContext, useEffect, useState } from "react";
+import myRequest from "../../myRequest";
 import { Link, useParams } from "react-router-dom";
 import { IssuesContext } from "../../IssuesContext";
+
+const states = {
+  0: "valid",
+  1: "invalid",
+  2: "unknown",
+};
 
 const ConversationContent = ({
   activeConversation,
@@ -10,6 +16,18 @@ const ConversationContent = ({
 }) => {
   const { flow } = useParams();
   const { setIssues, setTestCStatus } = useContext(IssuesContext);
+  const [valid, setValid] = useState(0);
+
+  useEffect(() => {
+    myRequest("/proof", { flow: flow }).then((e) => {
+      if (e.message === "invalid path") {
+        setValid(2);
+      } else if (!e.success) {
+        setValid(1);
+      }
+    });
+  });
+
   return (
     <>
       <ul className="conversation-content">
@@ -18,9 +36,7 @@ const ConversationContent = ({
             <div
               key={i}
               className={`turn
-                ${i === activeCStatusId ? (i == 1 ? "highlighted" : "highlighted-bot") : ""}
-                ${i === activeCStatusId - 1 && typeof activeCStatusId == "number" ? "highlighted-human" : ""}
-
+                ${i === activeCStatusId ? "highlighted" : ""}
                 `}
             >
               <div className="turn-element">
@@ -39,7 +55,7 @@ const ConversationContent = ({
                     className="submit"
                     onMouseOver={() => {
                       setIssues("");
-                      setIssues("read cstatus");
+                      setIssues("inspect cstatus");
                     }}
                     onMouseLeave={() => setIssues("")}
                     onClick={() => {
@@ -49,7 +65,7 @@ const ConversationContent = ({
                     🔬
                   </button>
                 )}
-                {true && turn.who === "bot" && (
+                {states[valid] == "valid" && turn.who === "bot" && (
                   <div
                     onClick={() =>
                       setTestCStatus({
@@ -64,7 +80,7 @@ const ConversationContent = ({
                       className="submit"
                       onMouseOver={() => {
                         setIssues("");
-                        setIssues("read cstatus");
+                        setIssues("examine cstatus");
                       }}
                       onMouseLeave={() => setIssues("")}
                       onClick={() => {
