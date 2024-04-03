@@ -54,8 +54,14 @@ const TestPage = () => {
       {states[useValid] == "valid" ? (
         <div>
           <AbstractForm
-            element={"state"}
-            fields={cStatusStructure || {}}
+            element={"cstatus in flow"}
+            fields={
+              cStatusStructure
+                ? cStatusStructure.filter(
+                    (i) => i[1] != "typing_extensions.Any",
+                  )
+                : {}
+            }
             flow={flow}
             elementData={{}}
             //fetchItems={fetchItems}

@@ -10,7 +10,7 @@ import Say from "./input_types/Say";
 const EditBrick = ({ label, type, activeItem, setChanges, setActiveItem }) => {
   return (
     <div className="editor-brick">
-      <div className="editor-label">{label.replace(/_/, " ")}</div>
+      <div className="editor-label">{label.replace(/_/g, " ")}</div>
       <div className="editor-field">
         {type === "str" ? (
           <StringInput

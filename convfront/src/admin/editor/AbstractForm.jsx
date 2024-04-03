@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import myRequest from "../../myRequest";
 import PropTypes from "prop-types";
 import EditBrick from "./EditBrick";
 
@@ -9,35 +8,11 @@ const AbstractForm = ({
   elementData,
   fields,
   flow,
-  setLastEvent,
-  fetchProof,
-  fetchItems,
   setActivePanel,
+  handleSubmit,
 }) => {
   const [, setChanges] = useState(false);
   const [activeItem, setActiveItem] = useState({});
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const edit = async () => {
-      await myRequest("/convform", {
-        flow: flow,
-        func: "edit",
-        item_type: element,
-        name: activeItem.name,
-        data: activeItem,
-      }).then((e) => {
-        fetchProof();
-        fetchItems();
-        e.success
-          ? setLastEvent(`edited ${element} ${activeItem.name || ""}`)
-          : setLastEvent(`couldn't edit ${element} ${activeItem.name || ""}`);
-      });
-    };
-    edit();
-    setChanges(false);
-  };
 
   useEffect(() => {
     if (!elementData) setActivePanel(`list-${element}s`);
@@ -69,7 +44,10 @@ const AbstractForm = ({
               );
             })}
       </ul>
-      <form className="editor-input" onSubmit={handleSubmit}>
+      <form
+        className="editor-input"
+        onSubmit={(e) => handleSubmit({ e, element, activeItem, setChanges })}
+      >
         <div className="editor-submit">
           <button className="submit admin-button">📨</button>
         </div>

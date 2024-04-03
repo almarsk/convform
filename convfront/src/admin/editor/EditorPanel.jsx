@@ -30,6 +30,28 @@ const EditorPanel = ({
     fetchStructure();
   }, [flowData]);
 
+  const convform = ({ e, element, activeItem, setChanges }) => {
+    e.preventDefault();
+
+    const edit = async () => {
+      await myRequest("/convform", {
+        flow: flow,
+        func: "edit",
+        item_type: element,
+        name: activeItem.name,
+        data: activeItem,
+      }).then((e) => {
+        fetchProof();
+        fetchItems();
+        e.success
+          ? setLastEvent(`edited ${element} ${activeItem.name || ""}`)
+          : setLastEvent(`couldn't edit ${element} ${activeItem.name || ""}`);
+      });
+    };
+    edit();
+    setChanges(false);
+  };
+
   return (
     <div className="panel">
       <EditorButtons setActivePanel={setActivePanel} />
@@ -43,10 +65,8 @@ const EditorPanel = ({
               flowData &&
               flowData.states.filter((f) => f.name === activeElement)[0]
             }
-            setLastEvent={setLastEvent}
-            fetchProof={fetchProof}
-            fetchItems={fetchItems}
             setActivePanel={setActivePanel}
+            handleSubmit={convform}
           />
         </InputContextProvider>
       ) : activePanel === "list-states" ? (
@@ -79,6 +99,7 @@ const EditorPanel = ({
             fetchProof={fetchProof}
             fetchItems={fetchItems}
             setActivePanel={setActivePanel}
+            handleSubmit={convform}
           />
         </InputContextProvider>
       ) : activePanel === "list-intents" ? (
@@ -115,6 +136,7 @@ const EditorPanel = ({
             fetchProof={fetchProof}
             fetchItems={fetchItems}
             setActivePanel={setActivePanel}
+            handleSubmit={convform}
           />
         </InputContextProvider>
       )}

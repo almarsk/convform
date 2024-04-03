@@ -1,5 +1,6 @@
 import random
 from typing import Dict
+from typing_extensions import Any
 
 from .pipeline.get_to_match import get_to_match
 from .pipeline.get_matched_intents import get_matched_intents
@@ -16,24 +17,24 @@ HISTORY_LEN = 3
 
 class ConversationStatus:
     bot_turns: int
-    previous_last_states: list
+    previous_last_states: Any
     possible_intents: dict
-    prompt_log: list
-    matched_intents: dict
+    prompt_log: Any
+    matched_intents: Any
     last_states: list
     turns_since_initiative: int
     initiativity: int
-    context_intents: list[str]
-    context_states: list[str]
-    history_intents: list
-    history_states: list
+    context_intents: list
+    context_states: list
+    history_intents: Any
+    history_states: Any
     state_usage: dict[str, int]
-    raw_say: list
-    prompted_say: list
-    say: str
-    end: bool
+    raw_say: Any
+    prompted_say: Any
+    say: Any
+    end: Any
     coda: bool
-    turns_history: list
+    turns_history: Any
 
     def __init__(self, user_speech, flow, prev_cs, structure=False):
 
