@@ -3,6 +3,7 @@ import myRequest from "../myRequest";
 import { Navigate, useParams, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
+import AbstractForm from "./editor/AbstractForm";
 
 const states = {
   0: "valid",
@@ -50,6 +51,19 @@ const TestPage = () => {
       </button>
       {states[useValid] == "unknown" ? <Navigate to="/" /> : ""}
       {states[useValid] == "invalid" ? <div>invalid flow, go fix</div> : ""}
+      {states[useValid] == "valid" ? (
+        <div>
+          <AbstractForm
+            element={"state"}
+            fields={cStatusStructure || {}}
+            flow={flow}
+            elementData={{}}
+            //fetchItems={fetchItems}
+          />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

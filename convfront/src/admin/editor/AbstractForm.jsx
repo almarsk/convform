@@ -50,8 +50,11 @@ const AbstractForm = ({
       <ul className="edit-bricks-listing">
         {fields.length &&
           fields
-            .filter(([f]) => f != "name")
+            .filter(([f]) => {
+              return f != "name";
+            })
             .map(([f, fType], i) => {
+              console.log("f", f, fType, i);
               return (
                 <EditBrick
                   key={i}
