@@ -26,7 +26,7 @@ const ConversationContent = ({
         setValid(1);
       }
     });
-  });
+  }, []);
 
   return (
     <>
@@ -66,16 +66,7 @@ const ConversationContent = ({
                   </button>
                 )}
                 {states[valid] == "valid" && turn.who === "bot" && (
-                  <div
-                    onClick={() =>
-                      setTestCStatus({
-                        flow: flow,
-                        cstatus: activeConversation.conversation[i].cstatus,
-                        lastSpeech:
-                          activeConversation.conversation[i].reply || "",
-                      })
-                    }
-                  >
+                  <Link to={`/admin/test/${flow}`}>
                     <button
                       className="submit"
                       onMouseOver={() => {
@@ -84,12 +75,17 @@ const ConversationContent = ({
                       }}
                       onMouseLeave={() => setIssues("")}
                       onClick={() => {
-                        setActiveCStatusId(i);
+                        setTestCStatus({
+                          flow: flow,
+                          cstatus: activeConversation.conversation[i].cstatus,
+                          lastSpeech:
+                            activeConversation.conversation[i].reply || "",
+                        });
                       }}
                     >
-                      <Link to={`/admin/test/${flow}`}>🚀</Link>
+                      🚀
                     </button>
-                  </div>
+                  </Link>
                 )}
               </div>
             </div>

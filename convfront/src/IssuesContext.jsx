@@ -1,11 +1,20 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
+import myRequest from "./myRequest";
+import { useEffect } from "react";
 
 const IssuesContext = createContext();
 
 const IssuesContextProvider = ({ children }) => {
   const [issues, setIssues] = useState("");
   const [testCStatus, setTestCStatus] = useState(null);
+  const [cStatusStructure, setCStatusStructure] = useState(null);
+
+  useEffect(() => {
+    myRequest("/structure").then((e) => {
+      setCStatusStructure(e.cstatus);
+    });
+  }, []);
 
   return (
     <IssuesContext.Provider
@@ -14,6 +23,7 @@ const IssuesContextProvider = ({ children }) => {
         setIssues,
         testCStatus,
         setTestCStatus,
+        cStatusStructure,
       }}
     >
       {children}

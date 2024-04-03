@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 import { useState, useEffect } from "react";
 import myRequest from "../myRequest";
 import MenuButton from "./MenuButton";
@@ -66,7 +64,7 @@ const Flows = () => {
           <MenuButton
             icon={"❌"}
             click={async () => {
-              await myRequest("/stash", {}).then((e) => {
+              await myRequest("/stash", {}).then(() => {
                 fetchBots();
                 fetchProjects();
               });

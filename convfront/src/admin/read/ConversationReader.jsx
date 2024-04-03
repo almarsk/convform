@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import ConversationNavbar from "./ConversationNavbar";
 import ConversationMetaInfo from "./ConversationMetaInfo";
 import ConversationContent from "./ConversationContent";
+import { useContext } from "react";
+import { IssuesContext } from "../../IssuesContext";
 
 const ConversationReader = ({
   activeConversation,
@@ -12,9 +14,11 @@ const ConversationReader = ({
   nextConversation,
   prevConversation,
 }) => {
+  const { cStatusStructure } = useContext(IssuesContext);
+
   useEffect(() => {
     localStorage.setItem("activeConversationId", activeConversationId);
-  });
+  }, []);
 
   //!!activeConversation && console.log(activeConversation);
 
@@ -39,14 +43,17 @@ const ConversationReader = ({
           </div>
           <div className="turns-reader">
             {activeCStatusId &&
-              Object.entries(
-                activeConversation.conversation[activeCStatusId].cstatus,
-              ).map((item, index) => (
-                <pre className="cstatus-item" key={index}>
-                  {index !== 0 && <hr className="end" />}
-                  {item[0] + ": "} {JSON.stringify(item[1], null, 2)}
-                </pre>
-              ))}
+              activeConversation.conversation[activeCStatusId] &&
+              cStatusStructure.map(([key], index) => {
+                const value =
+                  activeConversation.conversation[activeCStatusId].cstatus[key];
+                return (
+                  <pre className="cstatus-item" key={index}>
+                    {index !== 0 && <hr className="end" />}
+                    {key + ": "} {JSON.stringify(value, null, 2)}
+                  </pre>
+                );
+              })}
           </div>
         </div>
       </div>

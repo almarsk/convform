@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom";
 import myRequest from "../../myRequest";
 
 const getActiveId = () => {
-  const lc = parseInt(localStorage.getItem("activeConversationId"));
-  return lc;
+  const lc = localStorage.getItem("activeConversationId");
+  return parseInt(lc);
 };
 
 const ReadPage = () => {
@@ -43,13 +43,23 @@ const ReadPage = () => {
           nextConversation={
             activeConversationId < convos.length - 1
               ? () => {
+                  localStorage.setItem(
+                    "activeConversationId",
+                    activeConversationId + 1,
+                  );
                   setActiveConversationId(activeConversationId + 1);
                 }
               : null
           }
           prevConversation={
             activeConversationId > 0
-              ? () => setActiveConversationId(activeConversationId - 1)
+              ? () => {
+                  localStorage.setItem(
+                    "activeConversationId",
+                    activeConversationId - 1,
+                  );
+                  setActiveConversationId(activeConversationId - 1);
+                }
               : null
           }
         />

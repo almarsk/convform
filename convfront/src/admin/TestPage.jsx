@@ -15,7 +15,7 @@ const TestPage = () => {
   const [useValid, setValid] = useState(0);
   const { testCStatus } = useContext(IssuesContext);
   const navigate = useNavigate();
-  const { setIssues } = useContext(IssuesContext);
+  const { setIssues, cStatusStructure } = useContext(IssuesContext);
 
   useEffect(() => {
     console.log("test", testCStatus);
@@ -30,9 +30,7 @@ const TestPage = () => {
       }
     });
 
-    myRequest("/structure").then((e) => {
-      console.log("structure", e.cstatus);
-    });
+    console.log("structure", cStatusStructure);
   }, []);
 
   return (
