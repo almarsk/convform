@@ -46,6 +46,7 @@ const EditorPanel = ({
             setLastEvent={setLastEvent}
             fetchProof={fetchProof}
             fetchItems={fetchItems}
+            setActivePanel={setActivePanel}
           />
         </InputContextProvider>
       ) : activePanel === "list-states" ? (
@@ -77,6 +78,7 @@ const EditorPanel = ({
             setLastEvent={setLastEvent}
             fetchProof={fetchProof}
             fetchItems={fetchItems}
+            setActivePanel={setActivePanel}
           />
         </InputContextProvider>
       ) : activePanel === "list-intents" ? (
@@ -112,6 +114,7 @@ const EditorPanel = ({
             setLastEvent={setLastEvent}
             fetchProof={fetchProof}
             fetchItems={fetchItems}
+            setActivePanel={setActivePanel}
           />
         </InputContextProvider>
       )}

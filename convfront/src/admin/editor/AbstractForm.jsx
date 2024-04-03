@@ -12,6 +12,7 @@ const AbstractForm = ({
   setLastEvent,
   fetchProof,
   fetchItems,
+  setActivePanel,
 }) => {
   const [, setChanges] = useState(false);
   const [activeItem, setActiveItem] = useState({});
@@ -39,6 +40,7 @@ const AbstractForm = ({
   };
 
   useEffect(() => {
+    if (!elementData) setActivePanel(`list-${element}s`);
     setActiveItem(elementData);
   }, [element, elementData]);
 
@@ -54,7 +56,7 @@ const AbstractForm = ({
               return f != "name";
             })
             .map(([f, fType], i) => {
-              console.log("f", f, fType, i);
+              //console.log("f", f, fType, i);
               return (
                 <EditBrick
                   key={i}
