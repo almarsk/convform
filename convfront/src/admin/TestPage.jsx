@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
 import AbstractForm from "./editor/AbstractForm";
 import CStatusReader from "./read/CStatusReader";
+import StringInput from "./editor/input_types/StringInput";
 
 const states = {
   0: "valid",
@@ -18,6 +19,7 @@ const TestPage = () => {
   const navigate = useNavigate();
   const { cStatusStructure, testCStatus } = useContext(IssuesContext);
   const [result, setResult] = useState(null);
+  const [say, setSay] = useState("");
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -60,6 +62,10 @@ const TestPage = () => {
                 setResult(result.activeItem);
               }}
             />
+            <div className="test-submit">
+              <StringInput label="user turn" />
+              <button className="submit cell">🚀</button>
+            </div>
           </div>
           <div className="test-content">
             {result && (

@@ -312,6 +312,8 @@ ul {
   width: 30%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .wide {
@@ -323,4 +325,14 @@ ul {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.test-submit {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+}
+
+.cell {
+  justify-self: end;
 }
