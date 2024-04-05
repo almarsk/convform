@@ -15,14 +15,16 @@ const AbstractForm = ({
   const [activeItem, setActiveItem] = useState({});
 
   useEffect(() => {
-    if (!elementData) setActivePanel(`list-${element}s`);
+    // going back to listing if elementData doesn't arrive
+    if (!elementData && setActivePanel) setActivePanel(`list-${element}s`);
+    //console.log(elementData);
     setActiveItem(elementData);
   }, [element, elementData]);
 
   return (
     <div className="form-container">
       <h5>
-        {element} {activeItem.name || flow}
+        {element} {activeItem ? activeItem.name || flow : ""}
       </h5>
       <ul className="edit-bricks-listing">
         {fields.length &&
@@ -46,7 +48,11 @@ const AbstractForm = ({
       </ul>
       <form
         className="editor-input"
-        onSubmit={(e) => handleSubmit({ e, element, activeItem, setChanges })}
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit({ element, activeItem, setChanges });
+          console.log("post submit", activeItem);
+        }}
       >
         <div className="editor-submit">
           <button className="submit admin-button">📨</button>

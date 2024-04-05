@@ -61,7 +61,10 @@ const DictInput = ({ label, activeItem, setChanges, setActiveItem }) => {
                   addTag={(item) => {
                     setChanges(true);
                     setDict((prev) => {
-                      const added = { ...prev, [k]: [...prev[k], item] };
+                      const added = {
+                        ...prev,
+                        [k]: [...prev[k], slugify(item)],
+                      };
                       return added;
                     });
                   }}

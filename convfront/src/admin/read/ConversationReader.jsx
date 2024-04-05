@@ -4,6 +4,7 @@ import ConversationMetaInfo from "./ConversationMetaInfo";
 import ConversationContent from "./ConversationContent";
 import { useContext } from "react";
 import { IssuesContext } from "../../IssuesContext";
+import CStatusReader from "./CStatusReader";
 
 const ConversationReader = ({
   activeConversation,
@@ -41,20 +42,13 @@ const ConversationReader = ({
               activeCStatusId={activeCStatusId}
             />
           </div>
-          <div className="turns-reader">
-            {activeCStatusId &&
-              activeConversation.conversation[activeCStatusId] &&
-              cStatusStructure.map(([key], index) => {
-                const value =
-                  activeConversation.conversation[activeCStatusId].cstatus[key];
-                return (
-                  <pre className="cstatus-item" key={index}>
-                    {index !== 0 && <hr className="end" />}
-                    {key + ": "} {JSON.stringify(value, null, 2)}
-                  </pre>
-                );
-              })}
-          </div>
+          <CStatusReader
+            cStatusStructure={cStatusStructure}
+            conversation={
+              activeCStatusId &&
+              activeConversation.conversation[activeCStatusId]
+            }
+          />
         </div>
       </div>
     );

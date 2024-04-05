@@ -300,3 +300,27 @@ ul {
   text-align: center;
   margin: 0;
 }
+
+.test-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.test-content {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.wide {
+  width: 35%;
+}
+
+.test-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

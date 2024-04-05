@@ -30,9 +30,7 @@ const EditorPanel = ({
     fetchStructure();
   }, [flowData]);
 
-  const convform = ({ e, element, activeItem, setChanges }) => {
-    e.preventDefault();
-
+  const convform = ({ element, activeItem, setChanges }) => {
     const edit = async () => {
       await myRequest("/convform", {
         flow: flow,

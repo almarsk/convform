@@ -4,6 +4,7 @@ import { Navigate, useParams, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
 import AbstractForm from "./editor/AbstractForm";
+import CStatusReader from "./read/CStatusReader";
 
 const states = {
   0: "valid",
@@ -14,13 +15,9 @@ const states = {
 const TestPage = () => {
   const { flow } = useParams();
   const [useValid, setValid] = useState(0);
-  const { testCStatus } = useContext(IssuesContext);
   const navigate = useNavigate();
-  const { setIssues, cStatusStructure } = useContext(IssuesContext);
-
-  useEffect(() => {
-    console.log("test", testCStatus);
-  }, []);
+  const { cStatusStructure, testCStatus } = useContext(IssuesContext);
+  const [result, setResult] = useState(null);
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -30,42 +27,48 @@ const TestPage = () => {
         setValid(1);
       }
     });
-
-    console.log("structure", cStatusStructure);
   }, []);
 
   return (
-    <div>
-      <h2>Test Page</h2>
-      <div>{flow}</div>
-      <button
-        className="submit"
-        onClick={() => navigate(-1)}
-        onMouseOver={() => {
-          setIssues("");
-          setIssues("back to conversation log");
-        }}
-        onMouseLeave={() => setIssues("")}
-      >
+    <div className="test-page">
+      <h5>testing {flow}</h5>
+      <button className="submit" onClick={() => navigate(-1)}>
         ◀
       </button>
       {states[useValid] == "unknown" ? <Navigate to="/" /> : ""}
       {states[useValid] == "invalid" ? <div>invalid flow, go fix</div> : ""}
       {states[useValid] == "valid" ? (
-        <div>
-          <AbstractForm
-            element={"cstatus in flow"}
-            fields={
-              cStatusStructure
-                ? cStatusStructure.filter(
-                    (i) => i[1] != "typing_extensions.Any",
-                  )
-                : {}
-            }
-            flow={flow}
-            elementData={{}}
-            //fetchItems={fetchItems}
-          />
+        <div className="test-container">
+          <div className="test-content"></div>
+          <div className="test-content wide">
+            <AbstractForm
+              element={"cstatus in flow"}
+              fields={
+                cStatusStructure
+                  ? cStatusStructure.filter(
+                      (i) => i[1] != "typing_extensions.Any",
+                    )
+                  : {}
+              }
+              flow={flow}
+              elementData={
+                testCStatus
+                  ? testCStatus.cstatus
+                  : templateCStatus(cStatusStructure)
+              }
+              handleSubmit={(result) => {
+                setResult(result.activeItem);
+              }}
+            />
+          </div>
+          <div className="test-content">
+            {result && (
+              <CStatusReader
+                cStatusStructure={cStatusStructure}
+                turn={{ cstatus: result }}
+              />
+            )}
+          </div>
         </div>
       ) : (
         ""
@@ -75,3 +78,19 @@ const TestPage = () => {
 };
 
 export default TestPage;
+
+function templateCStatus(cStatusStructure) {
+  return cStatusStructure
+    ? cStatusStructure.reduce((empty, [key, itemType]) => {
+        empty[key] =
+          itemType == "list"
+            ? []
+            : itemType == "dict"
+              ? {}
+              : itemType == "int"
+                ? 0
+                : "";
+        return empty;
+      }, {})
+    : null;
+}
