@@ -40,6 +40,7 @@ const Chat = () => {
       userSpeech,
       cStatus,
       Date.now() - startTime,
+      false,
     ]);
     setCStatus(newCStatus);
     setTimeout(() => setLoading([false, false]), 1500);

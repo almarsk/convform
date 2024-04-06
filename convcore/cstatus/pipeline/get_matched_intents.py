@@ -54,6 +54,8 @@ def get_matched_intents(flow, to_match_intent_names, user_speech, history, log):
 
 
 def is_match(match_against, speech):
+    print(match_against)
+    print(speech)
     match = re.search(match_against, speech)
     if match:
         start_index = match.start()

@@ -3,11 +3,14 @@ import myRequest from "../myRequest";
 import MenuButton from "./MenuButton";
 import FlowList from "./FlowList";
 import ProjectList from "./ProjectList";
+import { useContext } from "react";
+import { IssuesContext } from "../IssuesContext";
 
 const Flows = () => {
   const [botsList, setBotsList] = useState([]);
   const [projects, setProjectsList] = useState([]);
   const [archived, setArchived] = useState(false);
+  const { setTestCStatus } = useContext(IssuesContext);
 
   const [activeProject, setActiveProject] = useState(1);
   const [activeFlows, setActiveFlows] = useState(botsList);
@@ -37,6 +40,8 @@ const Flows = () => {
     fetchBots();
     fetchProjects();
     localStorage.setItem("activeConversationId", null);
+    localStorage.setItem("testCStatus", null);
+    setTestCStatus(null);
   }, []);
 
   useEffect(() => {

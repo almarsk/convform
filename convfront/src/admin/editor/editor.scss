@@ -250,3 +250,20 @@
     caret-color: rgb(129, 129, 129);
     flex-grow: 1;
 }
+
+.narrow {
+  width: 5vw;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+}
+
+.counter-item {
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

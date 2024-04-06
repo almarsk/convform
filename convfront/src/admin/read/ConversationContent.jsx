@@ -26,6 +26,7 @@ const ConversationContent = ({
         setValid(1);
       }
     });
+    localStorage.setItem("testCStatus", null);
   }, []);
 
   return (
@@ -75,12 +76,15 @@ const ConversationContent = ({
                       }}
                       onMouseLeave={() => setIssues("")}
                       onClick={() => {
-                        setTestCStatus({
+                        const testCStatus = {
                           flow: flow,
                           cstatus: activeConversation.conversation[i].cstatus,
-                          lastSpeech:
-                            activeConversation.conversation[i].reply || "",
-                        });
+                          speech: nextSpeech(activeConversation, i),
+                        };
+                        const string_cstatus = JSON.stringify(testCStatus);
+                        console.log("string c", string_cstatus);
+                        localStorage.setItem("testCStatus", string_cstatus);
+                        setTestCStatus(testCStatus);
                       }}
                     >
                       🚀
@@ -100,3 +104,8 @@ const ConversationContent = ({
 };
 
 export default ConversationContent;
+
+function nextSpeech(activeConversation, i) {
+  const next = activeConversation.conversation[i + 1];
+  return next ? next.reply : "";
+}

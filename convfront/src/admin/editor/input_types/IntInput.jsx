@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-const IntInput = ({ label, activeItem, setChanges, setActiveItem }) => {
+const IntInput = ({ label, activeItem, setChanges, setActiveItem, narrow }) => {
   return (
     <input
       min={-1}
       type="number"
-      className="input-field"
+      className={`input-field ${narrow && "narrow"}`}
       name={label}
       placeholder={label}
       value={activeItem && activeItem[label]}

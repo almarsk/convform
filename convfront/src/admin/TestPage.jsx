@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
 import AbstractForm from "./editor/AbstractForm";
 import CStatusReader from "./read/CStatusReader";
+import CStatusProof from "./CStatusProof";
 
 const states = {
   0: "valid",
@@ -16,9 +17,9 @@ const TestPage = () => {
   const { flow } = useParams();
   const [useValid, setValid] = useState(0);
   const navigate = useNavigate();
-  const { cStatusStructure, testCStatus } = useContext(IssuesContext);
+  const { cStatusStructure, testCStatus, setTestCStatus } =
+    useContext(IssuesContext);
   const [result, setResult] = useState(null);
-  const [say, setSay] = useState("ll");
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -28,11 +29,16 @@ const TestPage = () => {
         setValid(1);
       }
     });
+
+    const lc_cstatus = localStorage.getItem("testCStatus");
+    !testCStatus &&
+      lc_cstatus != "null" &&
+      setTestCStatus(JSON.parse(lc_cstatus));
   }, []);
 
   return (
     <div className="test-page">
-      <h5>testing {flow}</h5>
+      <h4>testing {flow}</h4>
       <button className="submit" onClick={() => navigate(-1)}>
         ◀
       </button>
@@ -40,13 +46,18 @@ const TestPage = () => {
       {states[useValid] == "invalid" ? <div>invalid flow, go fix</div> : ""}
       {states[useValid] == "valid" ? (
         <div className="test-container">
-          <div className="test-content"></div>
+          <div className="test-content">
+            <CStatusProof
+              cStatus={testCStatus && testCStatus.cstatus}
+              flow={flow}
+            />
+          </div>
           <div className="test-content wide">
             <AbstractForm
               element={"cstatus in flow"}
               fields={
                 cStatusStructure
-                  ? // adding the user reply for the testing
+                  ? // adding the user for the testing
                     // filtering our non descript fields for the testing
                     [...cStatusStructure, ["user_reply", "str"]].filter(
                       (i) => i[1] != "typing_extensions.Any",
@@ -54,9 +65,24 @@ const TestPage = () => {
                   : {}
               }
               flow={flow}
-              elementData={cStatusData(testCStatus, cStatusStructure, say)}
+              elementData={cStatusData(
+                testCStatus,
+                cStatusStructure,
+                testCStatus ? testCStatus.speech : "",
+              )}
               handleSubmit={(result) => {
-                setResult(result.activeItem);
+                console.log("active", result.activeItem);
+
+                const newCStatus = async () =>
+                  await myRequest("/bot", [
+                    result.activeItem.user_reply,
+                    result.activeItem,
+                    0,
+                    flow,
+                  ]).then((e) => setResult(e));
+
+                newCStatus();
+                //setTestCStatus(result.activeItem);
               }}
             />
           </div>
