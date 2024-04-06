@@ -33,7 +33,6 @@ const AbstractForm = ({
               return f != "name";
             })
             .map(([f, fType], i) => {
-              //console.log("f", f, fType, i);
               return (
                 <EditBrick
                   key={i}
@@ -51,7 +50,6 @@ const AbstractForm = ({
         onSubmit={(e) => {
           e.preventDefault();
           handleSubmit({ element, activeItem, setChanges });
-          console.log("post submit", activeItem);
         }}
       >
         <div className="editor-submit">

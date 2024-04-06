@@ -44,7 +44,7 @@ const ConversationReader = ({
           </div>
           <CStatusReader
             cStatusStructure={cStatusStructure}
-            conversation={
+            turn={
               activeCStatusId &&
               activeConversation.conversation[activeCStatusId]
             }

@@ -1,19 +1,27 @@
-
-convread          - nice flexible exporting
-convread debug    - flexible cstatus
-cstatus interface - list convos and within convos list cstatuses
+cstatus test todo:
+    dict[str, int]
+    figure out safety and correctness of cstatus
+    call reply
+    2024-03-14 12:22:25 debug duplicate last state
 
 add user directions to flow
+
 add pictures
-    - upload button
-    - state has
+
 
 nice to have:
-global reflection and prompting
-add possibility to intent reco - ask about last turn / state of convo in general
-self fix
-clean unused
-autocomplete
-list all possible paths to state
-show network
-multiple users, jwt
+    prompting
+        global reflection and prompting
+        add possibility to intent reco - ask about last turn / state of convo in general
+
+    design
+        self fix (add templates for missing references)
+        clean unused
+
+    view
+        list all possible paths to state
+        show network
+
+    users
+        multiple users
+        jwt

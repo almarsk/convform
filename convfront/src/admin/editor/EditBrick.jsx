@@ -6,6 +6,7 @@ import ListInput from "./input_types/ListInput";
 import ResponseTypeInput from "./input_types/ResponseTypeInput";
 import DictInput from "./input_types/DictInput";
 import Say from "./input_types/Say";
+import Counter from "./input_types/Counter";
 
 const EditBrick = ({ label, type, activeItem, setChanges, setActiveItem }) => {
   return (
@@ -56,6 +57,13 @@ const EditBrick = ({ label, type, activeItem, setChanges, setActiveItem }) => {
           />
         ) : type.trim() === "list[tuple[convcore.say.Say, str]]" ? (
           <Say
+            activeItem={activeItem}
+            label={label}
+            setActiveItem={setActiveItem}
+            setChanges={setChanges}
+          />
+        ) : type.trim() === "dict[str, int]" ? (
+          <Counter
             activeItem={activeItem}
             label={label}
             setActiveItem={setActiveItem}

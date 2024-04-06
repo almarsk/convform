@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { IssuesContext } from "../IssuesContext";
 import AbstractForm from "./editor/AbstractForm";
 import CStatusReader from "./read/CStatusReader";
-import StringInput from "./editor/input_types/StringInput";
 
 const states = {
   0: "valid",
@@ -19,7 +18,7 @@ const TestPage = () => {
   const navigate = useNavigate();
   const { cStatusStructure, testCStatus } = useContext(IssuesContext);
   const [result, setResult] = useState(null);
-  const [say, setSay] = useState("");
+  const [say, setSay] = useState("ll");
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -47,25 +46,19 @@ const TestPage = () => {
               element={"cstatus in flow"}
               fields={
                 cStatusStructure
-                  ? cStatusStructure.filter(
+                  ? // adding the user reply for the testing
+                    // filtering our non descript fields for the testing
+                    [...cStatusStructure, ["user_reply", "str"]].filter(
                       (i) => i[1] != "typing_extensions.Any",
                     )
                   : {}
               }
               flow={flow}
-              elementData={
-                testCStatus
-                  ? testCStatus.cstatus
-                  : templateCStatus(cStatusStructure)
-              }
+              elementData={cStatusData(testCStatus, cStatusStructure, say)}
               handleSubmit={(result) => {
                 setResult(result.activeItem);
               }}
             />
-            <div className="test-submit">
-              <StringInput label="user turn" />
-              <button className="submit cell">🚀</button>
-            </div>
           </div>
           <div className="test-content">
             {result && (
@@ -98,5 +91,17 @@ function templateCStatus(cStatusStructure) {
                 : "";
         return empty;
       }, {})
-    : null;
+    : {};
+}
+
+function cStatusData(testCStatus, cStatusStructure, reply) {
+  // adding the user reply for the testing
+  const cStatusStructure_w_reply = cStatusStructure
+    ? [...cStatusStructure, ["user_reply", "str"]]
+    : cStatusStructure;
+  const cstatus = testCStatus
+    ? testCStatus.cstatus
+    : templateCStatus(cStatusStructure_w_reply);
+  cstatus["user_reply"] = reply;
+  return cstatus;
 }

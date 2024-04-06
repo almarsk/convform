@@ -6,10 +6,6 @@ $light-grey: rgb(189, 189, 189);
     align-items: center;
     width: 100%;
     padding: 15px;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE/Edge */
-    user-select: none;
 }
 
 .admin-header {
@@ -183,10 +179,6 @@ ul {
 }
 
 .read-container {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge */
-  user-select: none;
   display: grid;
   grid-gap: 5px;
 }
@@ -196,10 +188,6 @@ ul {
 }
 
 .conversations-container {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge */
-  user-select: none;
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   grid-gap: 5px;
@@ -225,10 +213,6 @@ ul {
 }
 
 .turns-reader {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge */
-  user-select: none;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -311,7 +295,6 @@ ul {
 .test-content {
   width: 30%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
