@@ -21,6 +21,7 @@ const TestPage = () => {
     useContext(IssuesContext);
   const [result, setResult] = useState(null);
   const [activeCStatus, setActiveCStatus] = useState(null);
+  const [missing, setMissing] = useState({});
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -48,7 +49,12 @@ const TestPage = () => {
       {states[useValid] == "valid" ? (
         <div className="test-container">
           <div className="test-content">
-            <CStatusProof cStatus={activeCStatus} flow={flow} />
+            <CStatusProof
+              cStatus={activeCStatus}
+              flow={flow}
+              missing={missing}
+              setMissing={setMissing}
+            />
           </div>
           <div className="test-content wide">
             <AbstractForm
@@ -69,15 +75,16 @@ const TestPage = () => {
                 testCStatus ? testCStatus.speech : "",
               )}
               handleSubmit={(result) => {
-                console.log("active", result.activeItem);
-
                 const newCStatus = async () =>
                   await myRequest("/bot", [
                     result.activeItem.user_reply,
                     result.activeItem,
                     0,
                     flow,
-                  ]).then((e) => setResult(e));
+                  ]).then((e) => {
+                    console.log("e", e);
+                    setResult(e);
+                  });
 
                 newCStatus();
                 //setTestCStatus(result.activeItem);
@@ -85,6 +92,9 @@ const TestPage = () => {
               onChange={(item) => {
                 setActiveCStatus(item);
               }}
+              disableSubmit={
+                Object.values(missing).filter((v) => v.length).length
+              }
             />
           </div>
           <div className="test-content">

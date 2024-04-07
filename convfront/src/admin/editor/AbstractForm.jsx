@@ -11,6 +11,7 @@ const AbstractForm = ({
   setActivePanel,
   handleSubmit,
   onChange,
+  disableSubmit,
 }) => {
   const [, setChanges] = useState(false);
   const [activeItem, setActiveItem] = useState({});
@@ -49,17 +50,19 @@ const AbstractForm = ({
               );
             })}
       </ul>
-      <form
-        className="editor-input"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit({ element, activeItem, setChanges });
-        }}
-      >
-        <div className="editor-submit">
-          <button className="submit admin-button">📨</button>
-        </div>
-      </form>
+      {!disableSubmit && (
+        <form
+          className="editor-input"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit({ element, activeItem, setChanges });
+          }}
+        >
+          <div className="editor-submit">
+            <button className="submit admin-button">📨</button>
+          </div>
+        </form>
+      )}
     </div>
   );
 };
