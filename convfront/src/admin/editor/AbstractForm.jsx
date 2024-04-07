@@ -10,6 +10,7 @@ const AbstractForm = ({
   flow,
   setActivePanel,
   handleSubmit,
+  onChange,
 }) => {
   const [, setChanges] = useState(false);
   const [activeItem, setActiveItem] = useState({});
@@ -17,9 +18,12 @@ const AbstractForm = ({
   useEffect(() => {
     // going back to listing if elementData doesn't arrive
     if (!elementData && setActivePanel) setActivePanel(`list-${element}s`);
-    //console.log(elementData);
     setActiveItem(elementData);
   }, [element, elementData]);
+
+  useEffect(() => {
+    onChange && onChange(activeItem);
+  }, [activeItem]);
 
   return (
     <div className="form-container">

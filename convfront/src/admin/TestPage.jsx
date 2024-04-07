@@ -20,6 +20,7 @@ const TestPage = () => {
   const { cStatusStructure, testCStatus, setTestCStatus } =
     useContext(IssuesContext);
   const [result, setResult] = useState(null);
+  const [activeCStatus, setActiveCStatus] = useState(null);
 
   useEffect(() => {
     myRequest("/proof", { flow: flow }).then((e) => {
@@ -47,10 +48,7 @@ const TestPage = () => {
       {states[useValid] == "valid" ? (
         <div className="test-container">
           <div className="test-content">
-            <CStatusProof
-              cStatus={testCStatus && testCStatus.cstatus}
-              flow={flow}
-            />
+            <CStatusProof cStatus={activeCStatus} flow={flow} />
           </div>
           <div className="test-content wide">
             <AbstractForm
@@ -83,6 +81,9 @@ const TestPage = () => {
 
                 newCStatus();
                 //setTestCStatus(result.activeItem);
+              }}
+              onChange={(item) => {
+                setActiveCStatus(item);
               }}
             />
           </div>
