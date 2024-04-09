@@ -4,14 +4,10 @@ import { useState } from "react";
 import BotBrick from "./BotBrick";
 import myRequest from "../myRequest";
 
-const FlowList = ({
-  activeFlows,
-  setIssues,
-  fetchBots,
-  activeProject,
-  setBotsList,
-}) => {
+const FlowList = ({ activeFlows, fetchBots, activeProject, setBotsList }) => {
   const [newFlowValue, setNewFlowValue] = useState("");
+
+  console.log("active project", activeProject);
 
   const handleSubmitFlow = async (event) => {
     event.preventDefault();

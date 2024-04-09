@@ -19,9 +19,10 @@ def create():
         item = Flow(
             flow_name=name,
             flow=default_item(),
-            project_id=destination,
+            project_id=1 if destination == 0 else destination,
             is_archived = 1 if int(destination) == 2 else 0
         )
+        print("destination", destination)
         db.session.add(item)
         db.session.commit()
 
