@@ -7,8 +7,6 @@ import myRequest from "../myRequest";
 const FlowList = ({ activeFlows, fetchBots, activeProject, setBotsList }) => {
   const [newFlowValue, setNewFlowValue] = useState("");
 
-  console.log("active project", activeProject);
-
   const handleSubmitFlow = async (event) => {
     event.preventDefault();
     setNewFlowValue("");
