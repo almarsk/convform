@@ -16,7 +16,7 @@ def resolve_prompt(args: dict):
 
         messages+=[SystemMessage(content=f"""\
 Robot {args["prompt"]}.\
-Vezme přitom v potaz informace v předchozí informaci a na základě nich odhadne nejlepší možnou odpověď.\
+Vezme přitom v potaz informace v předchozí konverzaci a na základě nich odhadne nejlepší možnou odpověď.\
 Odpovídá stručně, jednou větou, maximálně 10 slov.
 
 Jasně, odpověď by mohla vypadat třeba takhle:""")]

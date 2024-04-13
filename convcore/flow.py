@@ -7,6 +7,7 @@ from .intent import Intent
 class Flow:
     track: list
     coda: list
+    instructions: str
     states: list
     intents: list
     def __init__(self, flow_name, structure=False):
@@ -16,5 +17,6 @@ class Flow:
             flow = {}
         self.track = flow.get("track", [])
         self.coda = flow.get("coda", [])
+        self.instructions = flow.get("instructions", [])
         self.states = [State(state) for state in flow.get("states", [])]
         self.intents = [Intent(intent) for intent in flow.get("intents", [])]
