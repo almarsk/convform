@@ -12,7 +12,7 @@ git clone https://github.com/almarsk/convform.git
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-mv template_config.json config.json // add your openAI API key in here
+mv template_config.json config.json // add your openAI API key here
 ```
 
 python app.py
