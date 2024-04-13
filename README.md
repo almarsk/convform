@@ -8,7 +8,7 @@ A React app which contains en environment to run and test chatbots, an admin to 
 
 To install:
 ```sh
-git clone
+git clone https://github.com/almarsk/convform.git
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
