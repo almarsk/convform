@@ -6,7 +6,7 @@ It contains:
 A Python Flask backend with a database and all the logic for developing a hybrid semi-rule-based chatbot.
 A React app which contains en environment to run and test chatbots, an admin to maintain, develop and test chatbots.
 
-To install:
+To install and run:
 ```sh
 git clone https://github.com/almarsk/convform.git
 python3 -m venv venv
@@ -15,3 +15,5 @@ pip install -r requirements.txt
 mv template_config.json config.json // add your openAI API key here
 python app.py
 ```
+
+More about how to create, test, run and maintain chatbots in [wiki](https://github.com/almarsk/convform/wiki)
