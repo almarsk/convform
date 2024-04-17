@@ -12,6 +12,7 @@ To install and run:
 git clone --depth 1 https://github.com/almarsk/convform.git
 cd convform/convfront
 npm install
+npm audit fix
 cd ..
 chmod +x update_convfront.sh
 ./update_convfront.sh
