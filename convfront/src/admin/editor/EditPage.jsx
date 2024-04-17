@@ -12,6 +12,13 @@ const EditPage = () => {
   const [lastEvent, setLastEvent] = useState(`opened ${flow} editor`);
   const [flowData, setFlowData] = useState({});
 
+  useEffect(() => {
+    document.title = flow;
+    return () => {
+      document.title = "convform";
+    };
+  }, []);
+
   const fetchProof = async () => {
     const currentProof = await myRequest("/proof", { flow: flow });
     setProof(currentProof.message);

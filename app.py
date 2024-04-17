@@ -142,7 +142,8 @@ blueprint_paths = [
     "admin.rename.rename_bp",
     "admin.structure.structure_bp",
     "admin.stash.stash_bp",
-    "admin.convos.convos_bp"
+    "admin.convos.convos_bp",
+    "admin.instructions.instructions_bp"
 ]
 
 for path in blueprint_paths:

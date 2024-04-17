@@ -15,6 +15,10 @@ const Flows = () => {
   const [activeProject, setActiveProject] = useState(1);
   const [activeFlows, setActiveFlows] = useState(botsList);
 
+  useEffect(() => {
+    document.title = "convform";
+  }, []);
+
   const fetchProjects = async () => {
     try {
       const result = await myRequest("/list-projects", {});

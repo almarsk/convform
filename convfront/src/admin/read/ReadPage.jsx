@@ -18,6 +18,13 @@ const ReadPage = () => {
   const { flow } = useParams();
 
   useEffect(() => {
+    document.title = flow;
+    return () => {
+      document.title = "convform";
+    };
+  }, []);
+
+  useEffect(() => {
     const getConvos = async () =>
       await myRequest("/convos", { flow: flow }).then((response) => {
         setConvos(response.data);

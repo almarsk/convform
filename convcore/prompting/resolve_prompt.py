@@ -7,6 +7,12 @@ from .utilz import api_key
 def resolve_prompt(args: dict):
     api_key()
     messages = list()
+
+    if args["persona"]:
+        messages += [
+            SystemMessage(content=args["persona"])
+        ]
+
     if args["context"]:
         messages += [
             AIMessage(content=say["say"]) if say["who"] == "bot"

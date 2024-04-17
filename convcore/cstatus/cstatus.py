@@ -122,7 +122,8 @@ class ConversationStatus:
         # replace prompt sections with llm output
         self.prompted_say = self.prompt_reply(
             prev_cs["turns_history"] + [{"say": user_speech, "who": "human"}]
-            if prev_cs else [{"say": user_speech, "who": "human"}]
+            if prev_cs else [{"say": user_speech, "who": "human"}],
+            flow.persona
         )
         # finalize answer via prompting
         self.say = self.finalize_reply()
@@ -243,11 +244,12 @@ class ConversationStatus:
         return raw_says
 
 
-    def prompt_reply(self, history):
+    def prompt_reply(self, history, persona):
         context = (history[HISTORY_LEN*-1:]
             if len(history) >= HISTORY_LEN
             else history)
         prompts = [{
+            "persona": persona,
             "prompt": say["text"],
             "context": context if not say["emphasis"] else [],
             "log": self.add_to_prompt_log,

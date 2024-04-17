@@ -3,8 +3,8 @@ import pprint
 def proof_empty(bot, issues):
     try:
         for key, value in bot.items():
-            # intents are an exception, they can be empty
-            if not value and key != "intents":
+            # intents, persona and instructions can be empty
+            if not value and key not in ["intents", "persona", "instructions"]:
                 issues.append(f"{key} empty")
 
         for state in bot["states"]:
@@ -32,10 +32,6 @@ def proof_empty(bot, issues):
             adjacent = [intent for intent in bot["intents"]][0]["adjacent"]
             if not adjacent:
                 issues.append(f"context intent {context_intent_name} in {source_item_type} {source_item_name} empty")
-
-
-
-
 
     except Exception as e:
         issues.append(e)
