@@ -16,7 +16,8 @@ cd ..
 chmod +x update_convfront.sh
 ./update_convfront.sh
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate //.fish
+pip install --upgrade pip
 pip install -r requirements.txt
 mv template_config.json config.json // add your openAI API key here
 python app.py
