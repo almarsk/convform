@@ -8,8 +8,6 @@ login_bp = Blueprint('login', __name__)
 def login():
     login = request.get_json()
 
-    login_ok = login in [
-        ["almarsk", "Sl0nice!"],
-    ] or True # todo actual auth
+    login_ok = True # todo actual auth
 
     return jsonify({"success": login_ok})
