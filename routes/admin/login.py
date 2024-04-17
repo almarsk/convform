@@ -10,7 +10,6 @@ def login():
 
     login_ok = login in [
         ["almarsk", "Sl0nice!"],
-        ["lurolec", "ReactRulezz!"]
-    ]
+    ] or True # todo actual auth
 
     return jsonify({"success": login_ok})
