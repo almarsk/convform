@@ -21,6 +21,12 @@ pip install --upgrade pip
 pip install -r requirements.txt
 mv template_config.json config.json # add your openAI API key here
 python app.py
+```
+
+and then in another terminal
+
+```sh
+# add your openAI API key to config.json
 open http://127.0.0.1:5000/admin
 ```
 
