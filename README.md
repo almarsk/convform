@@ -7,8 +7,14 @@ A Python Flask backend with a database and all the logic for developing a hybrid
 A React app which contains en environment to run and test chatbots, an admin to maintain, develop and test chatbots.
 
 To install and run:
+
 ```sh
 git clone https://github.com/almarsk/convform.git
+cd convform/convfront
+npm install
+cd ..
+chmod +x update_convfront.sh
+./update_convfront.sh
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
