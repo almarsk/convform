@@ -3,6 +3,8 @@ chatbot.db
 pyrightconfig.json
 **/__pycache__/
 **/node_modules
+assets/*
+templates/*
 **/dist
 .DS_Store
 config.json
