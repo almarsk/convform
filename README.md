@@ -9,7 +9,7 @@ A React app which contains en environment to run and test chatbots, an admin to 
 To install and run:
 
 ```sh
-git clone https://github.com/almarsk/convform.git
+git clone --depth 1 https://github.com/almarsk/convform.git
 cd convform/convfront
 npm install
 cd ..
