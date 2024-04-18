@@ -5,6 +5,9 @@ if [ ! -d "assets" ]; then
     mkdir assets
 fi
 
+rm assets/*.js
+rm assets/*.css
+
 cp -r dist/assets/* ../assets
 
 if [ ! -d "templates" ]; then
