@@ -1,9 +1,10 @@
-cd convfront
-npm run build
 
 if [ ! -d "assets" ]; then
     mkdir assets
 fi
+
+cd convfront
+npm run build
 
 rm assets/*.js
 rm assets/*.css
