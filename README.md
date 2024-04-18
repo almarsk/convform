@@ -1,6 +1,8 @@
 Make semi-rule-based hybrid chatbots.
 Convform is an a conversation design interface for creating rule-based chatbots optionally AI powered chatbots.
 
+Check out [wiki](https://github.com/almarsk/convform/wiki) to learn how to create, test, run and maintain chatbots.
+
 It contains:
 
 A Python Flask backend with a database and all the logic for developing a hybrid semi-rule-based chatbot.
@@ -33,5 +35,3 @@ open http://127.0.0.1:5000/admin
 
 There is a login endpoint in routes/admin/login.py\
 currently let's everything through
-
-More about how to create, test, run and maintain chatbots in [wiki](https://github.com/almarsk/convform/wiki)
