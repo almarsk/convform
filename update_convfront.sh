@@ -1,13 +1,12 @@
-
 if [ ! -d "assets" ]; then
     mkdir assets
 fi
 
-cd convfront
-npm run build
-
 rm assets/*.js
 rm assets/*.css
+
+cd convfront
+npm run build
 
 cp -r dist/assets/* ../assets
 
