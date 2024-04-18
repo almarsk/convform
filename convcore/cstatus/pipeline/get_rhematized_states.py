@@ -28,22 +28,26 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
     rhematized_states = list()
     previous_connective = ""
     initiatives = []
+
+    # only use one initiative and append it at the end
     for state in ordered_states:
         full_state = get_full_state(state)
         is_connective = full_state.response_type == "connective"
         if is_connective:
-            pass
+            previous_connective = full_state.name
+            continue
 
         is_overiterated = full_state.iteration >= 0 and full_state.iteration - usage.get(state, 0) < 0
         is_initiative = full_state.response_type == "initiative" or full_state.response_type == "flexible"
         if is_initiative:
             initiatives.append([previous_connective, state] if previous_connective else [state])
-            pass
+            continue
 
         elif not is_initiative and not is_overiterated and state not in rhematized_states:
             if previous_connective:
-                #print(previous_connective)
                 rhematized_states.append(previous_connective)
+            else:
+                print("no connective")
             rhematized_states.append(state)
         previous_connective = ""
 
@@ -62,6 +66,7 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         if track_state:
             rhematized_states.append(track_state)
 
+    # this effectively sets coda to true, because states that are in coda will be found in last states
     if not rhematized_states:
         coda_state = add_least_iterated_non_over_iterated(flow.coda, flow, usage)
         if coda_state:

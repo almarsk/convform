@@ -13,8 +13,6 @@ def stash():
     archived_project_ids = [project.id for project in projects_to_delete]
     flows_in_projects_to_delete = Flow.query.filter(Flow.project_id.in_(archived_project_ids)).all()
 
-    print("\n\n", flows_in_projects_to_delete)
-
     for group in [flows_to_delete, projects_to_delete, flows_in_projects_to_delete]:
         for row in group:
             db.session.delete(row)
