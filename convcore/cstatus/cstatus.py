@@ -263,5 +263,5 @@ class ConversationStatus:
         return prompted
 
     def finalize_reply(self):
-        # TODO check order and add missed info
+        # TODO check order and add missed info via global prompting
         return " ".join(self.prompted_say)

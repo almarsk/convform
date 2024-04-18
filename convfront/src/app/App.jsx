@@ -33,7 +33,7 @@ const App = ({ bot, phase }) => {
         phase === PHASES.INTRO ? (
           <Intro bot={bot} />
         ) : phase === PHASES.START ? (
-          <Start />
+          <Start bot={bot} />
         ) : phase === PHASES.CHAT ? (
           <Chat />
         ) : phase === PHASES.OUTRO ? (

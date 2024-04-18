@@ -9,6 +9,7 @@ def instructions():
     try:
         flow, = request.get_json().values()
     except:
+        print("lol")
         return jsonify({"success": False}), 400
     convo = Flow.query.filter_by(flow_name=flow).first()
 
@@ -16,7 +17,7 @@ def instructions():
         if k != "states" and k != "intents":
             print(k, v)
 
-    if hasattr(Flow, 'flow') and "instructions" in convo.flow:
+    if hasattr(Flow, 'flow') and "instructions" in convo.flow and convo.flow["instructions"]:
         user_instructions = convo.flow["instructions"]
         return jsonify({"success": True, "message": user_instructions}), 200
     else:
