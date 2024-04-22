@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor
 HISTORY_LEN = 3
 
 class ConversationStatus:
-    bot_turns: Any
+    bot_turns: int
     previous_last_states: Any
     possible_intents: Any
     prompt_log: Any

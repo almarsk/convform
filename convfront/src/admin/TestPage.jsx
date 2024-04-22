@@ -20,6 +20,7 @@ const TestPage = () => {
   const { cStatusStructure, testCStatus, setTestCStatus } =
     useContext(IssuesContext);
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [activeCStatus, setActiveCStatus] = useState(null);
   const [missing, setMissing] = useState({});
 
@@ -75,6 +76,7 @@ const TestPage = () => {
                 testCStatus ? testCStatus.speech : "",
               )}
               handleSubmit={(result) => {
+                setLoading(true);
                 const newCStatus = async () =>
                   await myRequest("/bot", [
                     result.activeItem.user_reply,
@@ -82,7 +84,7 @@ const TestPage = () => {
                     0,
                     flow,
                   ]).then((e) => {
-                    console.log("e", e);
+                    setLoading(false);
                     setResult(e);
                   });
 
@@ -98,12 +100,14 @@ const TestPage = () => {
             />
           </div>
           <div className="test-content">
-            {result && (
-              <CStatusReader
-                cStatusStructure={cStatusStructure}
-                turn={{ cstatus: result }}
-              />
-            )}
+            {!loading
+              ? result && (
+                  <CStatusReader
+                    cStatusStructure={cStatusStructure}
+                    turn={{ cstatus: result }}
+                  />
+                )
+              : "loading..."}
           </div>
         </div>
       ) : (
