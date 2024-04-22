@@ -79,6 +79,7 @@ const ItemBrick = ({
         <button
           onClick={(e) => {
             e.stopPropagation();
+            setNewItemValue(itemName);
             setRenameMode((prev) => !prev);
           }}
           className="submit admin-button"

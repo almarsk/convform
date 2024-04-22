@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
 import myRequest from "../../myRequest";
 import slugify from "slugify";
+import { useState } from "react";
 
 const RenameItemForm = ({
   renameMode,
@@ -46,7 +47,7 @@ const RenameItemForm = ({
           }
         });
       }}
-      className="rename-flow-form"
+      className="rename-flow-form project-name"
       style={{ width: "15px" }}
     >
       <input
