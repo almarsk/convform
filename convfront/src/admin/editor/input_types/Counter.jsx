@@ -4,13 +4,26 @@ import slugify from "slugify";
 
 const Counter = ({ label, activeItem, setActiveItem }) => {
   const [newValue, setNewValue] = useState("");
+
+  const removeItem = (state) => {
+    const newCounter = Object.keys(activeItem[label]).reduce((acc, key) => {
+      if (key !== state) {
+        acc[key] = activeItem[label][key];
+      }
+      return acc;
+    }, {});
+    setActiveItem((prev) => ({ ...prev, [label]: newCounter }));
+  };
+
   return (
     <div className="counter">
       {typeof activeItem[label] == "object" &&
         Object.entries(activeItem[label]).map(([state, usage], i) => {
           return (
             <div className="counter-item" key={i}>
-              <p>{state}</p>
+              <p className="counter-label" onClick={() => removeItem(state)}>
+                {state}
+              </p>
               <div>
                 <input
                   min={0}
@@ -50,7 +63,7 @@ const Counter = ({ label, activeItem, setActiveItem }) => {
             ) {
               setActiveItem((prev) => ({
                 ...prev,
-                [label]: { ...prev[label], [slugify(newValue)]: 0 },
+                [label]: { ...prev[label], [slugify(newValue)]: 1 },
               }));
             }
             setNewValue("");
