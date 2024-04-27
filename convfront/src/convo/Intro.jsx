@@ -7,7 +7,7 @@ const Intro = ({ bot }) => {
   return (
     <>
       <p id="intro-text">
-        Díky, že se účastníte vývoje chatbota jménem <i>${bot}</i>. Nejdřív
+        Díky, že se účastníte vývoje chatbota jménem <i>{bot}</i>. Nejdřív
         prosím vyplňte libovolnou <b>přezdívku</b>:
       </p>
       <UserInput
