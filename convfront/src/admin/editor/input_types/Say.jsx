@@ -3,20 +3,55 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import ListItems from "./ListItems";
 import NewItem from "./NewItem";
+import { useEffect } from "react";
 
 const Say = ({ label, activeItem, setChanges, setActiveItem }) => {
   const [isPrompt, setIsPrompt] = useState(false);
+
+  //todo
+  const [chains] = useState([]);
+  const [pickedChain, setPickedChain] = useState(0);
+
+  useEffect(() => {
+    (() => {
+      console.log("todo get chains");
+    })();
+  });
+
+  const maxThreeChars = (str) => {
+    console.log(str);
+    if (str.length < 3) return str;
+    return String(str).split("").slice(0, 3).join("");
+  };
 
   return (
     <>
       <div className="say-container">
         <div className="input-field say-input">
-          <button
-            className="prompt-button"
-            onClick={() => setIsPrompt((prev) => !prev)}
-          >
-            {isPrompt ? "prompt" : "say"}
-          </button>
+          <div>
+            <button
+              className="prompt-button"
+              onClick={() => setIsPrompt((prev) => !prev)}
+            >
+              {isPrompt ? "prompt" : "say"}
+            </button>
+            {isPrompt && (
+              <ul>
+                {chains.map((item, index) => {
+                  return (
+                    <li key={crypto.randomUUID()}>
+                      <input
+                        type="radio"
+                        onChange={() => setPickedChain(index)}
+                        checked={index == pickedChain}
+                      />
+                      <span>{maxThreeChars(item)}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
 
           <NewItem
             label={isPrompt ? "prompt" : label}

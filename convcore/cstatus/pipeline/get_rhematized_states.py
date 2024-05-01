@@ -46,8 +46,6 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         elif not is_initiative and not is_overiterated and state not in rhematized_states:
             if previous_connective:
                 rhematized_states.append(previous_connective)
-            else:
-                print("no connective")
             rhematized_states.append(state)
         previous_connective = ""
 
@@ -58,10 +56,7 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
     if emphasised:
         return [emphasised[-1]]
 
-
-
     if not initiatives and not coda and time_to_initiate:
-        #print("time to initiate")
         track_state = add_least_iterated_non_over_iterated(flow.track, flow, usage)
         if track_state:
             rhematized_states.append(track_state)
@@ -80,12 +75,11 @@ def add_least_iterated_non_over_iterated(states, flow, usage):
         s for s in flow.states if s.name == searched_state
         ][0]
 
-    candidate = sorted(
-        [state
+    candidates = [state
             for state in states
             if get_full_state(state).iteration >= 0
-            and get_full_state(state).iteration - usage.get(state, 0) > 0],
-        key=lambda state: get_full_state(state).iteration - usage.get(state, 0)
-    )
+            and get_full_state(state).iteration - usage.get(state, 0) > 0
+        if get_full_state(state).iteration - usage.get(state, 0) > 0
+    ]
 
-    return candidate[0] if candidate else None
+    return candidates[0] if candidates else None

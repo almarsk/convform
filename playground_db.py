@@ -9,9 +9,20 @@ cursor = conn.cursor()
 
 # pprint.pp([q for q in cursor.execute('''SELECT * FROM Flow;''')])
 # pprint.pp([x for x in cursor.execute('''SELECT * FROM Reply;''')])
-pprint.pp([x for x in cursor.execute('''SELECT * FROM Conversation;''')])
+# pprint.pp([x for x in cursor.execute('''SELECT * FROM Conversation;''')])
 # Insert JSON data into SQLite database
-# insert_data(cursor,("brlb", 1, load_json("bots/brlb.json"), 0, datetime.utcnow()))
+#
+def load_json(file_path):
+     with open(file_path, 'r') as file:
+         data = json.load(file)
+     return json.dumps(data)
+
+def insert_data(cursor, data):
+     cursor.execute('''INSERT INTO Flow (flow_name, project_id, flow, is_archived, created_on)
+                            VALUES (?, ?, ?, ?, ?)''',
+                            data)
+
+insert_data(cursor,("anafora", 1, load_json("bots/anafora-2.json"), 0, datetime.utcnow()))
 
 
 # Commit changes and close connection
