@@ -72,7 +72,7 @@ class ConversationStatus:
             prev_cs["context_states"],
             prev_cs["state_usage"],
             prev_cs["coda"],
-            prev_cs["initiativity"] - prev_cs["turns_since_initiative"] < 0
+            prev_cs["initiativity"] - prev_cs["turns_since_initiative"] <= 0
             )
         )
 
@@ -83,7 +83,7 @@ class ConversationStatus:
             flow)
 
         # update initiativity for next round
-        self.initiativity = self.update_initiative(flow)
+        self.initiativity = self.update_initiative(flow, prev_cs["initiativity"] if prev_cs else 1)
 
         # update context intents based on matched intents and last states
         self.context_intents = self.update_context_intents(
@@ -187,8 +187,8 @@ class ConversationStatus:
         return 0 if is_initiative(self.last_states, flow) else previous_number_of_turns + 1
 
 
-    def update_initiative(self, flow):
-        return get_current_initiativity(self.last_states, flow)
+    def update_initiative(self, flow, prev_value):
+        return get_current_initiativity(self.last_states, flow, prev_value)
 
 
     def get_context_states(self, flow):
