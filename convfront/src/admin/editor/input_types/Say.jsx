@@ -8,7 +8,7 @@ import { useEffect } from "react";
 const Say = ({ label, activeItem, setChanges, setActiveItem }) => {
   const [isPrompt, setIsPrompt] = useState(false);
 
-  //todo
+  // todo
   const [chains] = useState([]);
   const [pickedChain, setPickedChain] = useState(0);
 
@@ -63,6 +63,7 @@ const Say = ({ label, activeItem, setChanges, setActiveItem }) => {
                   ...prev,
                   [label]: [
                     ...prev[label],
+                    // todo
                     { text: newValue, prompt: isPrompt },
                   ],
                 };
