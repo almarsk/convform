@@ -8,7 +8,14 @@ import DictInput from "./input_types/DictInput";
 import Say from "./input_types/Say";
 import Counter from "./input_types/Counter";
 
-const EditBrick = ({ label, type, activeItem, setChanges, setActiveItem }) => {
+const EditBrick = ({
+  label,
+  type,
+  activeItem,
+  setChanges,
+  setActiveItem,
+  element,
+}) => {
   return (
     <div className="editor-brick">
       <div className="editor-label">{label.replace(/_/g, " ")}</div>
@@ -61,6 +68,7 @@ const EditBrick = ({ label, type, activeItem, setChanges, setActiveItem }) => {
             label={label}
             setActiveItem={setActiveItem}
             setChanges={setChanges}
+            element={element}
           />
         ) : type.trim() === "dict[str, int]" ? (
           <Counter

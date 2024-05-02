@@ -1,5 +1,7 @@
 import json
 import os
+import importlib
+from convcore.prompting.registered_chains import registered_chains
 
 def api_key():
     json_file_path = "config.json"
@@ -21,3 +23,19 @@ def api_key():
             print(f"Error parsing JSON: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
+
+def import_chains(registered_chains):
+    functions = {}
+    for chain_name in registered_chains:
+        try:
+            module = importlib.import_module(f"convcore.prompting.chains.{chain_name}")
+            functions[chain_name] =  func = getattr(module, chain_name, None)
+        except ImportError as e:
+            print(f"Failed to import chain '{chain_name}': {e}")
+    return functions
+
+
+def resolve_prompt(args: dict):
+    api_key()
+    args["log"]([args["chain"]])
+    return import_chains(registered_chains)[args["chain"]](args)

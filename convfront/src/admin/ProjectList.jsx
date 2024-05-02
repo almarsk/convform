@@ -9,7 +9,6 @@ const ProjectList = ({
   projects,
   setActiveProject,
   activeProject,
-  setIssues,
   fetchProjects,
 }) => {
   const [newProjectValue, setNewProjectValue] = useState("");

@@ -2,10 +2,8 @@ from langchain_openai import ChatOpenAI, OpenAI
 from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
-from .utilz import api_key
 
-def resolve_prompt(args: dict):
-    api_key()
+def basic(args):
     messages = list()
 
     if args["persona"]:

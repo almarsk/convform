@@ -24,9 +24,7 @@ def proof_empty(bot, issues):
         context_intents = [(context_intent, intent["name"], "intent")
             for intent in bot["intents"]
             for context_intent in intent["context_intents"]
-        ] + [(context_intent, state["name"], "state")
-            for state in bot["states"]
-            for context_intent in state["context_intents"]]
+        ]
 
         for context_intent_name, source_item_name, source_item_type in context_intents:
             adjacent = [intent for intent in bot["intents"]][0]["adjacent"]

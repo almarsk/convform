@@ -40,6 +40,7 @@ const AbstractForm = ({
             .map(([f, fType], i) => {
               return (
                 <EditBrick
+                  element={element}
                   key={i}
                   label={f}
                   type={fType}

@@ -9,7 +9,7 @@ from .pipeline.get_current_initiativity import get_current_initiativity
 from .pipeline.gather_context_states import gather_context_states
 from .pipeline.gather_context_intents import gather_context_intents
 from .pipeline.get_rhematized_states import get_rhematized_states
-from ..prompting.resolve_prompt import resolve_prompt
+from convcore.prompting.utilz import  resolve_prompt
 
 from concurrent.futures import ThreadPoolExecutor
 
@@ -253,6 +253,7 @@ class ConversationStatus:
             "prompt": say["text"],
             "context": context if not say["emphasis"] else [],
             "log": self.add_to_prompt_log,
+            "chain": say["prompt"]
         } for say in self.raw_say if say["prompt"]]
 
         with ThreadPoolExecutor() as exec:

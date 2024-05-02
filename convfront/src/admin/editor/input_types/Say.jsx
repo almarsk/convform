@@ -4,25 +4,27 @@ import { useState } from "react";
 import ListItems from "./ListItems";
 import NewItem from "./NewItem";
 import { useEffect } from "react";
+import myRequest from "../../../myRequest";
 
-const Say = ({ label, activeItem, setChanges, setActiveItem }) => {
+const maxThreeChars = (str) => {
+  if (str.length < 3) return str;
+  return String(str).split("").slice(0, 3).join("");
+};
+
+const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
   const [isPrompt, setIsPrompt] = useState(false);
 
   // todo
-  const [chains] = useState([]);
+  const [chains, setChains] = useState([]);
   const [pickedChain, setPickedChain] = useState(0);
 
   useEffect(() => {
     (() => {
-      console.log("todo get chains");
+      myRequest("/chains", [element]).then((e) => {
+        setChains(e);
+      });
     })();
-  });
-
-  const maxThreeChars = (str) => {
-    console.log(str);
-    if (str.length < 3) return str;
-    return String(str).split("").slice(0, 3).join("");
-  };
+  }, []);
 
   return (
     <>
@@ -59,12 +61,13 @@ const Say = ({ label, activeItem, setChanges, setActiveItem }) => {
             addTag={(newValue) => {
               setChanges(true);
               setActiveItem((prev) => {
+                console.log(chains[pickedChain]);
                 return {
                   ...prev,
                   [label]: [
                     ...prev[label],
                     // todo
-                    { text: newValue, prompt: isPrompt },
+                    { text: newValue, prompt: chains[pickedChain] },
                   ],
                 };
               });

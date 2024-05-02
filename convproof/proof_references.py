@@ -17,8 +17,6 @@ def proof_references(bot, issues):
                 add_or_append(substate, state_refs, f"iterate_states of {substate} in {state['name']}")
             for substate in state["context_states"]:
                 add_or_append(substate, state_refs, f"context states of {substate} in {state['name']}")
-            for subintent in state["context_intents"]:
-                add_or_append(subintent, intent_refs, f"context intents of {subintent}in {state['name']}")
             for intent, adjacent in state["intents"].items():
                 add_or_append(intent, intent_refs, f"intents in state {state['name']}")
                 for substate in adjacent:
