@@ -8,13 +8,13 @@ def basic(args):
 
     if args["persona"]:
         messages += [
-            SystemMessage(content=args["persona"])
+            SystemMessage(content="persona: " + args["persona"])
         ]
 
     if args["context"]:
+        messages += [SystemMessage(content="context:")]
         messages += [
-            AIMessage(content=say["say"]) if say["who"] == "bot"
-            else HumanMessage(content=say["say"])
+            SystemMessage(content=f"{say['who']}: {say['say']}")
             for say in args["context"]
         ]
 
