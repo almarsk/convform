@@ -13,7 +13,7 @@ from sqlalchemy import JSON
 import os
 import secrets
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import json
 
 from convproof import validate_flow
@@ -23,6 +23,7 @@ from convform import convform
 app = Flask(__name__, static_url_path='/assets', static_folder='assets')
 
 secret_key = os.environ.get("CHATBOT_SECRET_KEY", secrets.token_bytes(32))
+now = datetime.now(timezone.utc) + timedelta(hours=2)
 db_path = Path(__file__).parent / "chatbot.db"
 app.config.update(
     TEMPLATES_AUTO_RELOAD=True,
@@ -45,7 +46,7 @@ class Conversation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nick = db.Column(db.Text, nullable=False)
     flow = db.Column(db.Text, nullable=False)
-    start_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    start_date = db.Column(db.DateTime, nullable=False, default=now)
     end_date = db.Column(db.DateTime, default=None)
     abort = db.Column(db.Boolean, default=None)
     rating = db.Column(db.Integer, default=None)
@@ -58,7 +59,7 @@ class Reply(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("conversation.id"), nullable=False)
     reply = db.Column(db.Text, nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date = db.Column(db.DateTime, nullable=False, default=now)
     reaction_ms = db.Column(db.Integer) # chatbot replies have a NULL reaction_ms
     cstatus = db.Column(JSON)
     who = db.Column(db.Text, nullable=False)
@@ -70,7 +71,7 @@ class Flow(db.Model):
     flow_name = db.Column(db.Text, nullable=False)
     project_id = db.Column(db.Integer, db.ForeignKey("project.id"), nullable=False, default=1)
     flow = db.Column(JSON)
-    created_on = db.Column(db.DateTime, nullable=True, default=datetime.utcnow)
+    created_on = db.Column(db.DateTime, nullable=True, default=now)
     is_archived = db.Column(db.Integer, default=False)
     __table_args__ = {'extend_existing': True}
 
@@ -79,7 +80,7 @@ class Project(db.Model):
     __tablename__ = "project"
     id = db.Column(db.Integer, primary_key=True)
     project_name = db.Column(db.Text, nullable=False)
-    created_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    created_on = db.Column(db.DateTime, nullable=False, default=now)
     is_archived = db.Column(db.Integer, nullable=False, default=False)
     default = db.Column(db.Integer, nullable=False, default=False)
     __table_args__ = {'extend_existing': True}
