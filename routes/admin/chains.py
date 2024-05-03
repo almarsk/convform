@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 import sqlite3
 import os
 from convproof import validate_flow
-from convcore.prompting.registered_chains import registered_chains
+from registered_chains import registered_chains
 
 chains_bp = Blueprint('chains', __name__)
 

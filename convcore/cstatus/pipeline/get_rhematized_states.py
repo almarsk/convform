@@ -16,11 +16,7 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         for state in states
     ]
 
-    print(ordered_states)
-
     ordered_states += [state for state in context_states if state not in ordered_states]
-
-    print(ordered_states)
 
     get_full_state = lambda searched_state: [
         state

@@ -1,7 +1,7 @@
 import json
 import os
 import importlib
-from convcore.prompting.registered_chains import registered_chains
+from registered_chains import registered_chains
 
 def api_key():
     json_file_path = "config.json"
@@ -29,7 +29,7 @@ def import_chains(registered_chains):
     for chain_name in registered_chains:
         try:
             module = importlib.import_module(f"convcore.prompting.chains.{chain_name}")
-            functions[chain_name] =  func = getattr(module, chain_name, None)
+            functions[chain_name] = getattr(module, chain_name, None)
         except ImportError as e:
             print(f"Failed to import chain '{chain_name}': {e}")
     return functions

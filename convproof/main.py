@@ -1,6 +1,7 @@
 import os
 import json
 
+from .proof_chain import proof_chain
 from .proof_empty import proof_empty
 from .proof_exception import ProofException
 from .proof_references import proof_references
@@ -31,6 +32,7 @@ def validate_flow(flow, return_flow=False):
 
         proof_empty(bot, issues)
         proof_references(bot, issues)
+        proof_chain(bot,issues)
 
         result = dict()
 
