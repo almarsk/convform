@@ -8,11 +8,15 @@ convos_bp = Blueprint('convos', __name__)
 
 @convos_bp.route("/convos", methods=["POST"])
 def convos():
-    from app import db, Conversation, Reply
+    from app import db, Conversation, Reply, Flow
     try:
         flow, = request.get_json().values()
+        lol = Flow.query.filter_by(flow=flow)
+        print([l.id for l in lol])
     except:
         return jsonify({}), 400
+
+
 
     conversations = [{
         "id": c.id,
