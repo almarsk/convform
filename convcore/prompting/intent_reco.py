@@ -25,9 +25,9 @@ def intent_reco(prompts, convo, log):
         'name': 'analyza_repliky_uzivatele',
         'description': '''\
 Funkce popisuje, jestli uživatel udělal nebo neudělal ve své replice to, co se píše v popisce. \
--1 pokud to neudělal a 1 pokud ano. Pokud je popis obecný, buď raději přísný a neber jen tak cokoliv.\
-Hodnoť jen poslední repliku, \
-ty předchozí jsou zde jen pro kontext''',
+-1 pokud to neudělal a 1 pokud ano. Pokud je popis obecný, buď raději přísný a neber jen tak cokoliv. \
+Hodnoť výhradně poslední repliku!! \
+Ty předchozí jsou zde jen pro kontext''',
         'parameters': {
             'type': 'object',
             'properties': {
