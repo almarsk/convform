@@ -9,8 +9,14 @@ from convcore.prompting.chains import basic
 def an2fora(args):
     answer = basic(args)
 
-    messages = [
-        SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a dej místo něj osobní nebo vztažné zájmeno. Určitě proveď záměnu, odstranit slovo nestačí. Ostatní tematická centra nech jak jsou."),
+    messages = []
+
+    messages += [
+        SystemMessage(content="kontext"),
+        SystemMessage(content=f"{turn["who"]}: {turn["say"]}") for turn in args["context"]]
+
+    messages += [
+        SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a dej místo něj osobní nebo vztažné zájmeno. Určitě proveď záměnu, odstranit slovo nestačí. Pokud máš na výběr z vícera, zvol to, které se objevilo v kontextu Ostatní tematická centra nech jak jsou."),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
         SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
