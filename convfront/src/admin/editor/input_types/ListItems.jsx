@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 
 const maxThreeChars = (str) => {
-  if (str.length < 3) return str;
-  return String(str).split("").slice(0, 3).join("");
+  if (typeof str == "boolean") return "";
+  if (str.length < 3) return "- " + str;
+  return "- " + String(str).split("").slice(0, 3).join("");
 };
 
 const ListItems = ({ tags, editTags, vertical, meta }) => {
@@ -24,7 +25,7 @@ const ListItems = ({ tags, editTags, vertical, meta }) => {
               }}
               key={i}
             >
-              {`${meta == "say" ? `${t.prompt ? `prompt - ${maxThreeChars(t.prompt)}` : "say"} - ${t.text}` : t}`}
+              {`${meta == "say" ? `${t.prompt ? `prompt ${maxThreeChars(t.prompt)}` : "say"} - ${t.text}` : t}`}
             </div>
           ))
         : ""}
