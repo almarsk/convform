@@ -10,11 +10,11 @@ def anafora(args):
     answer = basic(args)
 
     messages = [
-        SystemMessage(content="najdi ve větě hlavní jmennou frázi a vyměň ji za osobní nebo vztažné zájmeno. Pokud to nejde, vrať ji tak, jak je."),
+        SystemMessage(content="pokud věta obsahuje hlavní jmennou frázi a vyměň ji za osobní nebo vztažné zájmeno."),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
         SystemMessage(content="Jasně! Když v této větě vyměním hlavní jmennou frázi za osobní nebo vztažné zájmeno \
-            věta bude vypadat takhle:")
+věta bude vypadat takhle:")
     ]
     try:
         chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.3)
