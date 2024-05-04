@@ -11,8 +11,7 @@ def convos():
     from app import db, Conversation, Reply, Flow
     try:
         flow, = request.get_json().values()
-        lol = Flow.query.filter_by(flow=flow)
-        print([l.id for l in lol])
+
     except:
         return jsonify({}), 400
 
