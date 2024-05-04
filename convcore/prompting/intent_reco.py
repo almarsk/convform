@@ -40,7 +40,7 @@ Only consider the last turn. The other ones are purely context''',
                     }
                 } for intent, prompt in prompts.items()
             },
-        'required': [f"{intent}" for intent, _ in prompts.items()]
+        'required': [f"{intent}" for intent, _ in prompts.items()]+[f"{intent}-why" for intent, _ in prompts.items()]
     }}]
 
     result = chat.invoke(messages, functions=functions)
