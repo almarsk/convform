@@ -1,1 +1,1 @@
-registered_chains = ["basic", "anafora"]
+registered_chains = ["basic", "anafora", "an2fora"]
