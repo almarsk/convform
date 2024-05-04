@@ -8,15 +8,20 @@ from convcore.prompting.chains import basic
 
 def an2fora(args):
     answer = basic(args)
+    messages= []
 
-    messages = [SystemMessage(content="kontext")]
+    if args["context"]:
+        messages += [SystemMessage(content="kontext:")]
+        messages += [
+            SystemMessage(content=f"{turn['who']}: {turn['say']}") for turn in args["context"][-1]
+        ]
 
     messages += [
-        SystemMessage(content=f"{turn['who']}: {turn['say']}") for turn in args["context"]
-    ]
-
-    messages += [
-        SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a dej místo něj osobní nebo vztažné zájmeno. Určitě proveď záměnu, odstranit slovo nestačí. Pokud máš na výběr z vícera, zvol to, které se objevilo v kontextu Ostatní tematická centra nech jak jsou."),
+        SystemMessage(content="\
+slovo, které spojuje větu s kontextem nahraď osobním nebo vztažným zájmenem. \
+Určitě proveď záměnu, odstranit slovo nestačí. \
+Pokud tam není doslovně, osobní nebo vztažné zájemno přidej. \
+Ostatní tematická centra nech jak jsou."),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
         SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
