@@ -11,9 +11,9 @@ def an2fora(args):
     messages= []
 
     if args["context"]:
-        messages += [SystemMessage(content="kontext:")]
-        messages += [
-            SystemMessage(content=f"{turn['who']}: {turn['say']}") for turn in args["context"][-1]
+        last_turn = args["context"][-1]
+        messages += [SystemMessage(content="kontext:"),
+            SystemMessage(content=f"{last_turn['who']}: {last_turn['say']}")
         ]
 
     messages += [
