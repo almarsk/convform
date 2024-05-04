@@ -24,8 +24,8 @@ def intent_reco(prompts, convo, log):
     functions=[{
         'name': 'zadej_zacatek_odpovidajiciho_segmentu',
         'description': '''\
-Zaznamenej u jednotlivých popisů,\
-jestli a kde začíná odpovídající segment v aktuální replice.\
+Funkce popisuje, jestli uživatel udělal nebo neudělal ve své replice to, co se píše v popisce. \
+-1 pokud to neudělal a 1 pokud ano. \
 Hodnoť jen poslední repliku, \
 ty předchozí jsou zde jen pro kontext''',
         'parameters': {
