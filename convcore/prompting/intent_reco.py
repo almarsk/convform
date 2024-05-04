@@ -34,6 +34,10 @@ Only consider the last turn. The other ones are purely context''',
                 f"{intent}": {
                     "type": "integer",
                     "description": f'''{prompt}''',
+                    f"{intent}": {
+                        "type": "string",
+                        "description": f'''je pravda, že uživatel {prompt}? Proč anebo proč ne?'''
+                    }
                 } for intent, prompt in prompts.items()
             },
         'required': [f"{intent}" for intent, _ in prompts.items()]
