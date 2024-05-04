@@ -34,8 +34,7 @@ ty předchozí jsou zde jen pro kontext''',
                 f"{intent}": {
                     "type": "integer",
                     "description": f'''\
-číslo písmene od začátku aktuální repliky, kde začíná část repliky,\
-ve které uživatel {prompt}, nebo -1 pokud popis neodpovídá''',
+1 pokud platí, že uživatel {prompt}. -1 pokud ne''',
                 } for intent, prompt in prompts.items()
             },
         'required': [f"{intent}" for intent, _ in prompts.items()]
