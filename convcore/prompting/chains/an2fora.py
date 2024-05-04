@@ -10,7 +10,7 @@ def anafora(args):
     answer = basic(args)
 
     messages = [
-        SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a dej místo něj osobní nebo vztažné zájmeno. Ostatní tematická centra nech jak jsou."),
+        SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a dej místo něj osobní nebo vztažné zájmeno. Určitě proveď záměnu, odstranit slovo nestačí. Ostatní tematická centra nech jak jsou."),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
         SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
