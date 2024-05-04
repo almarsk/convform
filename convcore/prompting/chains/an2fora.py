@@ -19,7 +19,7 @@ def an2fora(args):
     messages += [
         SystemMessage(content="\
 slovo, které spojuje větu s kontextem nahraď osobním nebo vztažným zájmenem. \
-Určitě proveď záměnu, odstranit slovo nestačí. \
+Určitě proveď záměnu, odstranit slovo nestačí, je nutné osobní nebo vztažné zájmeno přidat. \
 Pokud tam není doslovně, osobní nebo vztažné zájemno přidej. \
 Ostatní tematická centra nech jak jsou."),
         SystemMessage(content="věta:"),
