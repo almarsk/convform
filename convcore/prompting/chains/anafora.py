@@ -13,7 +13,7 @@ def anafora(args):
         SystemMessage(content="najdi ve větě tu část, o které véta je a vyměň ji za osobní nebo vztažné zájmeno."),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
-        SystemMessage(content="Jasně! Věta bude vypadat takhle:")
+        SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
     ]
     try:
         chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.3)

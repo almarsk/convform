@@ -19,7 +19,7 @@ def test(args):
         ]
 
         messages+=[SystemMessage(content=f"""\
-Robot udělá opak toho, že {args["prompt"]}.\
+Robot udělá opak toho, že {args["prompt"]}. \
 Vezme přitom v potaz informace v předchozí konverzaci a na základě nich odhadne nejlepší možnou odpověď.\
 Odpovídá stručně, jednou větou, maximálně 10 slov.
 
