@@ -12,7 +12,7 @@ def an2fora(args):
 
     if args["context"]:
         last_turn = args["context"][-1]
-        messages += [SystemMessage(content="kontext:"),
+        messages += [SystemMessage(content="poslední odpověď uživatele:"),
             SystemMessage(content=f"{last_turn['who']}: {last_turn['say']}")
         ]
 
