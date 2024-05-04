@@ -6,7 +6,7 @@ from langchain_core.messages.ai import AIMessage
 
 from convcore.prompting.chains import basic
 
-def anafora(args):
+def an2fora(args):
     answer = basic(args)
 
     messages = [
