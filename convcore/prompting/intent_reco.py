@@ -34,7 +34,7 @@ ty předchozí jsou zde jen pro kontext''',
                 f"{intent}": {
                     "type": "integer",
                     "description": f'''\
-1 pokud platí, že uživatel {prompt}. -1 pokud ne''',
+pokud uživatel {prompt} tak vrať 1. -1 pokud ne. Buď velmi přísný.''',
                 } for intent, prompt in prompts.items()
             },
         'required': [f"{intent}" for intent, _ in prompts.items()]
