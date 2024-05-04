@@ -24,10 +24,10 @@ def intent_reco(prompts, convo, log):
     functions=[{
         'name': 'analyza_repliky_uzivatele',
         'description': '''\
-Funkce popisuje, jestli uživatel udělal nebo neudělal ve své replice to, co se píše v popisce. \
--1 pokud to neudělal a 1 pokud ano. Pokud je popis obecný, buď raději přísný a neber jen tak cokoliv. \
-Hodnoť výhradně poslední repliku!! \
-Ty předchozí jsou zde jen pro kontext''',
+For each parameter, consider whether it corresponds with the user speech. \
+If it does, return 1 else return -1.\
+Be strict. If the description is vague, remain skeptical. \
+Only consider the last turn. The other ones are purely context''',
         'parameters': {
             'type': 'object',
             'properties': {
@@ -47,7 +47,7 @@ Ty předchozí jsou zde jen pro kontext''',
 
     if "function_call" in result:
         decoded_arguments = json.loads(bytes(result["function_call"]["arguments"], "utf-8").decode("unicode_escape"))
-
+        print(decoded_arguments)
         return decoded_arguments
     else:
         return {}
