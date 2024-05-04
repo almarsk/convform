@@ -22,7 +22,7 @@ def intent_reco(prompts, convo, log):
     messages.insert(-1, SystemMessage(content="\nAktuální replika:"))
 
     functions=[{
-        'name': 'zadej_zacatek_odpovidajiciho_segmentu',
+        'name': 'analyza_repliky_uzivatele',
         'description': '''\
 Funkce popisuje, jestli uživatel udělal nebo neudělal ve své replice to, co se píše v popisce. \
 -1 pokud to neudělal a 1 pokud ano. \
