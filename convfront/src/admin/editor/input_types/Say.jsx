@@ -67,7 +67,11 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
                   [label]: [
                     ...prev[label],
                     // todo
-                    { text: newValue, prompt: chains[pickedChain] },
+                    {
+                      text: newValue,
+                      prompt:
+                        element == "states" ? chains[pickedChain] : isPrompt,
+                    },
                   ],
                 };
               });
