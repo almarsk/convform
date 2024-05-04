@@ -261,7 +261,6 @@ class ConversationStatus:
             exec.shutdown(wait=True)
             resolved = list(results)
         prompted = [say["text"] if not say["prompt"] else resolved.pop(0) for say in self.raw_say]
-        print("prompted: ", prompted)
         return prompted
 
     def finalize_reply(self):
