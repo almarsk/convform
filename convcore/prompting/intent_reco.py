@@ -33,14 +33,10 @@ Only consider the last turn. The other ones are purely context''',
             'properties': {
                 f"{intent}": {
                     "type": "integer",
-                    "description": f'''{prompt}''',
-                    f"{intent}-why": {
-                        "type": "string",
-                        "description": f'''je pravda, že uživatel {prompt}? Proč anebo proč ne?'''
-                    }
+                    "description": f'''{prompt}'''
                 } for intent, prompt in prompts.items()
             },
-        'required': [f"{intent}" for intent, _ in prompts.items()]+[f"{intent}-why" for intent, _ in prompts.items()]
+        'required': [f"{intent}" for intent, _ in prompts.items()]
     }}]
 
     result = chat.invoke(messages, functions=functions)

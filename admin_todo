@@ -1,6 +1,8 @@
 prompt chain for states
 edit order of lists
 edit says
+link conversation to flow via id and not name lol
+redo intent recognition
 
 nicer full flow export
 add dir for backup flows
