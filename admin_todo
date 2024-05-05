@@ -1,11 +1,12 @@
-prompt chain for states
+
+send all the turn history to prompts
+
 edit order of lists
 edit says
 link conversation to flow via id and not name lol
 redo intent recognition
 
 nicer full flow export
-add dir for backup flows
 add script to add flows to db
 add button to upload a json
 add example flows

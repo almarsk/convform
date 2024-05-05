@@ -42,29 +42,3 @@ def resolve_prompt(args: dict):
     api_key()
     args["log"]([args["chain"]])
     return import_chains(registered_chains, "state")[args["chain"]](args)
-
-
-# prompts, history, log
-def match_prompt_intents(args: dict):
-    api_key()
-    matches = {}
-
-    for intent, prompt_info in args["prompts"].items():
-        print("\n\nargs", args)
-        chain = prompt_info["chain"]
-        args["log"](chain)
-
-        prompts = [{
-             "prompt": prompt["text"],
-             "context": context if not say["emphasis"] else [],
-             "log": self.add_to_prompt_log,
-             "chain": say["prompt"],
-         } for prompt in self.raw_say if say["prompt"]]
-
-
-        result = import_chains(registered_chains, "state")[chain]({
-
-        })
-        print("matches", matches[result])
-
-    return import_chains(registered_chains, "state")[chain](args)

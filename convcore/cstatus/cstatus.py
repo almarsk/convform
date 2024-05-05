@@ -62,7 +62,8 @@ class ConversationStatus:
         self.matched_intents = self.match_intents(
             user_speech,
             flow,
-            prev_cs["turns_history"]+[{"say": user_speech, "who": "human"}] if prev_cs is not None else [])
+            prev_cs["turns_history"]+[{"say": user_speech, "who": "human"}] if prev_cs is not None else [],
+            prev_cs["last_states"] if prev_cs else [])
 
         # process adjacent states to have max one initiative etc
         self.last_states = [] if structure else ([flow.track[0]]
@@ -148,7 +149,7 @@ class ConversationStatus:
         self.prompt_log += addition
 
 
-    def match_intents(self, user_speech, flow, history):
+    def match_intents(self, user_speech, flow, history, prev_last_states):
         to_match_intent_names = dict(self.possible_intents)
         if not to_match_intent_names:
             return {}
@@ -164,43 +165,25 @@ class ConversationStatus:
             "match_against": pattern.match_against,
             "adjacent": pattern.adjacent,
             "log": self.add_to_prompt_log,
-            "history": (history[HISTORY_LEN*-1:]
-                         if len(history) >= HISTORY_LEN
-                         else history),
+            "history": history,
             "user_speech": user_speech,
         } for pattern in [get_full_intent(intent) for intent in to_match_intent_names]]
 
         with ThreadPoolExecutor() as exec:
             results = exec.map(get_matched_intents, patterns)
             exec.shutdown(wait=True)
-            resolved = list(results)
+            resolved: list = list(results)
+            matched_intents = {key: value for match in resolved for key, value in match.items()}
 
-        return {}
-        """
-        #_________________________
+        get_full_state = lambda state: [s for s in flow.states if s.name == state][0]
+        for state in prev_last_states:
+            intents = get_full_state(state).intents
+            for matched_intent in matched_intents:
+                if matched_intent in intents.keys():
+                    matched_intents[matched_intent]["adjacent"] += intents[matched_intent]
 
+        return matched_intents
 
-
-
-        matched_intents_with_index = get_matched_intents(
-            flow,
-            to_match_intent_names.keys(),
-            user_speech,
-            (history[HISTORY_LEN*-1:]
-                if len(history) >= HISTORY_LEN
-                else history),
-            self.add_to_prompt_log)
-
-        print("tomatch cstatus", to_match_intent_names)
-        print("matched cstatus", matched_intents_with_index)
-
-        matched_intents_names = list(matched_intents_with_index.keys())
-
-        return {key: {
-            "adjacent": value,
-            "index": matched_intents_with_index[key]
-        } for key, value in to_match_intent_names.items() if key in matched_intents_names}
-        """
 
     def rhematize(self, flow, context_states, usage, coda, time_to_initiate):
         return get_rhematized_states(
@@ -275,13 +258,12 @@ class ConversationStatus:
 
 
     def prompt_reply(self, history, persona):
-        context = (history[HISTORY_LEN*-1:]
-            if len(history) >= HISTORY_LEN
-            else history)
+        context = history
         prompts = [{
             "persona": persona,
             "prompt": say["text"],
-            "context": context if not say["emphasis"] else [],
+            "context": context,
+            "emphasis": say["emphasis"],
             "log": self.add_to_prompt_log,
             "chain": say["prompt"],
         } for say in self.raw_say if say["prompt"]]

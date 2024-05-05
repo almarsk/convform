@@ -1,6 +1,6 @@
 import sys
 import re
-from convcore.prompting.utilz import import_chains, match_prompt_intents
+from convcore.prompting.utilz import import_chains
 from registered_chains import registered_chains
 import pprint
 from convcore.prompting.utilz import api_key
@@ -24,44 +24,19 @@ def get_matched_intents(pattern):
         else:
             matches.append(string_match(pattern_item["text"], pattern["user_speech"]))
 
-    return {}
-
-
-    """
-
-
-
-
-
-            else:
-                match_info = is_match(match_against["text"], user_speech)
-                if match_info["is_match"]:
-                    matched = True
-                    if match_info["match_index"] < match_index:
-                        match_index = match_info["match_index"]
-
-        if matched:
-            matched_intents_with_start_index[intent] = match_index
-
-    print("tomatch2", prompts_to_match)
-    # do the prompting
-    matched_prompts = dict()
-    if prompts_to_match:
-        matched_prompts = match_prompt_intents({
-            "prompts": prompts_to_match, "history": history, "log": log})
-
-    # add llm matched intents to matched_intents_with_start_index
-    for intent, index in matched_prompts.items():
-        # find intent based on prompt
-        if index >= 0:
-            matched_intents_with_start_index[intent] = index
-
-    #print(matched_prompts)
-    #print("matched llm",matched_intents_with_start_index)
-
-    return matched_intents_with_start_index
-
-   """
+    if not matches:
+        return None
+    else:
+       lowest_index = sys.maxsize
+       for match in matches:
+           if not bool(match):
+               continue
+           index = match[pattern["intent_name"]]
+           lowest_index = index if index < lowest_index else lowest_index
+       if lowest_index < sys.maxsize and lowest_index >= 0:
+           return {pattern["intent_name"]: {"index": lowest_index, "adjacent": pattern["adjacent"]}}
+       else:
+           return {}
 
 def string_match(match_against, speech):
     match = re.search(match_against, speech)
@@ -81,5 +56,4 @@ def string_match(match_against, speech):
 
 def smart_match(args):
     api_key()
-    pprint.pp(args)
-    import_chains(registered_chains, "intent")[args["chain"]](args)
+    return import_chains(registered_chains, "intent")[args["chain"]](args)

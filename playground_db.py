@@ -22,7 +22,7 @@ def insert_data(cursor, data):
                             VALUES (?, ?, ?, ?, ?)''',
                             data)
 
-insert_data(cursor,("anafora", 1, load_json("bots/anafora-2.json"), 0, datetime.utcnow()))
+insert_data(cursor,("F-anafora", 1, load_json("bots/František-anafora.json"), 0, datetime.utcnow()))
 
 
 # Commit changes and close connection

@@ -1,3 +1,8 @@
-import convcore.prompting.chains.anafora as a
+import convcore.prompting.playground.entity_play as e
+from convcore.prompting.utilz import api_key
 
-a.anafora("Jaké pivo máš nejraději?")
+import json
+import codecs
+
+api_key()
+e.entity()

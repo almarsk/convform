@@ -37,12 +37,37 @@ def basic(args):
     result = result.additional_kwargs
 
     addition = [[str(message) for message in messages], functions, result]
-    args["log"](args["chain"])
+    args["log"]([args["chain"]])
     args["log"](addition)
 
     if "function_call" in result:
         decoded_arguments = json.loads(bytes(result["function_call"]["arguments"], "utf-8").decode("unicode_escape"))
-        print("decoded", decoded_arguments)
-        return decoded_arguments
-    else:
-        return {}
+        # print("decoded", decoded_arguments)
+        if args["name"] in decoded_arguments and decoded_arguments[args["name"]]:
+
+            messages = [HumanMessage(content=f"Zajímalo by mě, jestli uživatel {args['prompt']}")]
+            functions=[{
+                'name': 'zaznam_segmentu_repliky',
+                'description': f'''Funkce zaznemanává, na jakém indexu v replice uživatel {args["prompt"]}''',
+                'parameters': {
+                    'type': 'object',
+                    'properties': {
+                        args["name"]: {
+                            "type": "integer",
+                            "description": f'''na jaké indexu v aktuální replice uživatel {args["prompt"]}?'''
+                        }
+                    },
+                'required': [args["name"]]
+            }}]
+
+            result = chat.invoke(messages, functions=functions)
+            result = result.additional_kwargs
+            addition = [[str(message) for message in messages], functions, result]
+            args["log"](addition)
+
+            if "function_call" in result:
+                decoded_arguments = json.loads(bytes(result["function_call"]["arguments"], "utf-8").decode("unicode_escape"))
+
+                return decoded_arguments
+
+    return {args["name"]: -1}

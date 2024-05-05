@@ -11,7 +11,7 @@ def basic(args):
             SystemMessage(content="persona: " + args["persona"])
         ]
 
-    if args["context"]:
+    if args["context"] and not args["emphasis"]:
         messages += [SystemMessage(content="context:")]
         messages += [
             SystemMessage(content=f"{say['who']}: {say['say']}")
