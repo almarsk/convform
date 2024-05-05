@@ -15,7 +15,7 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
   const [isPrompt, setIsPrompt] = useState(false);
 
   // todo
-  const [chains, setChains] = useState([]);
+  const [chains, setChains] = useState({ state: "basic", intent: "basic" });
   const [pickedChain, setPickedChain] = useState(0);
 
   useEffect(() => {
@@ -35,11 +35,11 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
               className="prompt-button"
               onClick={() => setIsPrompt((prev) => !prev)}
             >
-              {isPrompt ? "prompt" : "say"}
+              {isPrompt ? `prompt` : "say"}
             </button>
             {isPrompt && (
               <ul>
-                {chains.map((item, index) => {
+                {chains[element].map((item, index) => {
                   return (
                     <li key={crypto.randomUUID()}>
                       <input
@@ -56,7 +56,7 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
           </div>
 
           <NewItem
-            label={isPrompt ? "prompt" : label}
+            label={isPrompt ? `prompt ${chains[pickedChain]}` : label}
             area={true}
             addTag={(newValue) => {
               setChanges(true);
@@ -69,8 +69,7 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
                     // todo
                     {
                       text: newValue,
-                      prompt:
-                        element == "states" ? chains[pickedChain] : isPrompt,
+                      prompt: chains[pickedChain],
                     },
                   ],
                 };

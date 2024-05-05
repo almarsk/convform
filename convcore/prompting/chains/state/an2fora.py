@@ -4,7 +4,7 @@ from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
 
-from convcore.prompting.chains import basic
+from convcore.prompting.chains.state.basic import basic
 
 def an2fora(args):
     answer = basic(args)

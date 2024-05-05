@@ -9,7 +9,7 @@ from .pipeline.get_current_initiativity import get_current_initiativity
 from .pipeline.gather_context_states import gather_context_states
 from .pipeline.gather_context_intents import gather_context_intents
 from .pipeline.get_rhematized_states import get_rhematized_states
-from convcore.prompting.utilz import  resolve_prompt
+from convcore.prompting.utilz import resolve_prompt
 
 from concurrent.futures import ThreadPoolExecutor
 
@@ -150,9 +150,37 @@ class ConversationStatus:
 
     def match_intents(self, user_speech, flow, history):
         to_match_intent_names = dict(self.possible_intents)
-
         if not to_match_intent_names:
             return {}
+
+        get_full_intent = lambda searched_intent: [
+            intent
+            for intent in flow.intents
+            if intent.name == searched_intent
+        ][0]
+
+        patterns = [{
+            "intent_name": pattern.name,
+            "match_against": pattern.match_against,
+            "adjacent": pattern.adjacent,
+            "log": self.add_to_prompt_log,
+            "history": (history[HISTORY_LEN*-1:]
+                         if len(history) >= HISTORY_LEN
+                         else history),
+            "user_speech": user_speech,
+        } for pattern in [get_full_intent(intent) for intent in to_match_intent_names]]
+
+        with ThreadPoolExecutor() as exec:
+            results = exec.map(get_matched_intents, patterns)
+            exec.shutdown(wait=True)
+            resolved = list(results)
+
+        return {}
+        """
+        #_________________________
+
+
+
 
         matched_intents_with_index = get_matched_intents(
             flow,
@@ -163,14 +191,16 @@ class ConversationStatus:
                 else history),
             self.add_to_prompt_log)
 
-        #print("matched cstatus", matched_intents_with_index)
-        #print("tomatch cstatus", to_match_intent_names)
+        print("tomatch cstatus", to_match_intent_names)
+        print("matched cstatus", matched_intents_with_index)
+
+        matched_intents_names = list(matched_intents_with_index.keys())
 
         return {key: {
             "adjacent": value,
             "index": matched_intents_with_index[key]
-        } for key, value in to_match_intent_names.items() if key in list(matched_intents_with_index.keys())}
-
+        } for key, value in to_match_intent_names.items() if key in matched_intents_names}
+        """
 
     def rhematize(self, flow, context_states, usage, coda, time_to_initiate):
         return get_rhematized_states(
@@ -253,7 +283,7 @@ class ConversationStatus:
             "prompt": say["text"],
             "context": context if not say["emphasis"] else [],
             "log": self.add_to_prompt_log,
-            "chain": say["prompt"]
+            "chain": say["prompt"],
         } for say in self.raw_say if say["prompt"]]
 
         with ThreadPoolExecutor() as exec:
