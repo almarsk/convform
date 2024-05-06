@@ -74,8 +74,12 @@ U každého slova velmi stručně odůvodni svou úvahu a uzavři tím, že uved
     if "function_call" in result:
         try:
             decoded_arguments = json.loads(result["function_call"]["arguments"])
-            if decoded_arguments:
+            print(decoded_arguments)
+            print(decoded_arguments[args["name"]])
+            if args["name"] in decoded_arguments and decoded_arguments[args["name"]]:
                 return {args["name"]: 0}
+            else:
+                return {args["name"]: -1}
         except:
             return {args["name"]: -1}
 
