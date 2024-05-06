@@ -52,7 +52,7 @@ U každého slova velmi stručně odůvodni svou úvahu a uzavři tím, že uved
 
     functions=[{
         'name': 'zaznam_entit',
-        'description': f'''Funkce zaznemanává, jestli uživatel zmínil nové entity.''',
+        'description': f'''Zaznamenej, jestli uživatel zmínil nové entity.''',
         'parameters': {
             'type': 'object',
             'properties': {
