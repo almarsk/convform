@@ -174,8 +174,10 @@ class ConversationStatus:
             exec.shutdown(wait=True)
             resolved: list = list(results)
             matched_intents = {key: value for match in resolved for key, value in match.items()}
+            print(matched_intents)
 
         get_full_state = lambda state: [s for s in flow.states if s.name == state][0]
+
         for state in prev_last_states:
             intents = get_full_state(state).intents
             for matched_intent in matched_intents:
