@@ -15,13 +15,14 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
   const [isPrompt, setIsPrompt] = useState(false);
 
   // todo
-  const [chains, setChains] = useState({ state: "basic", intent: "basic" });
+  const [chains, setChains] = useState(["basic"]);
   const [pickedChain, setPickedChain] = useState(0);
 
   useEffect(() => {
     (() => {
       myRequest("/chains", [element]).then((e) => {
         setChains(e);
+        console.log(e);
       });
     })();
   }, []);
@@ -39,7 +40,7 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
             </button>
             {isPrompt && (
               <ul>
-                {chains[element].map((item, index) => {
+                {chains.map((item, index) => {
                   return (
                     <li key={crypto.randomUUID()}>
                       <input
