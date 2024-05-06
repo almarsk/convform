@@ -30,7 +30,6 @@ Ostatní tematická centra nech jak jsou."),
         chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.3)
         result = chat.invoke(messages)
         args["log"]([[m.content for m in messages], str(result.content)])
-        #print(f'anafora {str(result.content)}')
         return str(result.content)
 
     except Exception as e:

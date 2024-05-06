@@ -42,7 +42,6 @@ def basic(args):
 
     if "function_call" in result:
         decoded_arguments = json.loads(bytes(result["function_call"]["arguments"], "utf-8").decode("unicode_escape"))
-        # print("decoded", decoded_arguments)
         if args["name"] in decoded_arguments and decoded_arguments[args["name"]]:
 
             messages = [HumanMessage(content=f"Zajímalo by mě, jestli uživatel {args['prompt']}")]
