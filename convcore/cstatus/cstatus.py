@@ -178,6 +178,7 @@ class ConversationStatus:
 
         get_full_state = lambda state: [s for s in flow.states if s.name == state][0]
 
+        # adding adjacent from states - TODO make this happen in possible intents
         for state in prev_last_states:
             intents = get_full_state(state).intents
             for matched_intent in matched_intents:
