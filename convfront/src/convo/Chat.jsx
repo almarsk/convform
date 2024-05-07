@@ -42,7 +42,11 @@ const Chat = () => {
       Date.now() - startTime,
       false,
     ]);
-    setCStatus(newCStatus);
+    if (newCStatus) {
+      setCStatus(newCStatus);
+    } else {
+      setCStatus({ ...cStatus, coda: true });
+    }
     setTimeout(() => setLoading([false, false]), 1500);
   };
 
@@ -50,7 +54,9 @@ const Chat = () => {
     <>
       <>
         <BotOutput
-          botSpeech={cStatus && !loading ? cStatus.say : ""}
+          botSpeech={
+            cStatus && !loading ? cStatus.say : "Ajej teď se mi něco pokazilo"
+          }
           loading={loading}
         />
         <UserInput submit={handleSubmit} loading={loading} />
