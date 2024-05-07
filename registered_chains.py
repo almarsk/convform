@@ -1,4 +1,4 @@
 registered_chains = {
-    "state": ["basic", "anafora", "an2fora"],
+    "state": ["basic", "anafora", "ba3ck"],
     "intent": ["basic", "entity", "enstity"]
 }
