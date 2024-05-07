@@ -49,7 +49,7 @@ Robot {args["prompt"]}"""))
             elapsed_time = end_time - start_time
             print("Elapsed time:", elapsed_time, "seconds")
 
-        return f'{str(result.content)}'
+        return f'{str(result.content) if result.content else "Jejda, něco se pokazilo"}'
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return "Jejda, něco se pokazilo"

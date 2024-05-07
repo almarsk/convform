@@ -82,7 +82,6 @@ const ConversationContent = ({
                           speech: nextSpeech(activeConversation, i),
                         };
                         const string_cstatus = JSON.stringify(testCStatus);
-                        console.log("string c", string_cstatus);
                         localStorage.setItem("testCStatus", string_cstatus);
                         setTestCStatus(testCStatus);
                       }}
