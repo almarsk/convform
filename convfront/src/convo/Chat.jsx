@@ -51,6 +51,7 @@ const Chat = () => {
         ...cStatus,
         coda: true,
         say: issue,
+        last_states: [],
       });
     }
     setTimeout(() => setLoading([false, false]), 1500);
