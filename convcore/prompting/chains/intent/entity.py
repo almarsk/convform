@@ -33,7 +33,7 @@ Tato promluva postrádá entitu.
 
 Na tomto základě zvaž, která slova jsou entity v následující větě:
 
-{args['name']}
+{args['speech']}
 
 Zvaž význam každého podstatného jména ve větě a zvaž, zda by mohlo představovat konkrétní entitu, \
 a ne jen abstraktní pojem. \
