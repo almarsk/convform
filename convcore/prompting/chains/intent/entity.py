@@ -13,31 +13,25 @@ def entity(args, bench=False):
     if bench:
         start_time = time.time()
 
-    chat = ChatOpenAI(model="gpt-4-turbo-2024-04-09", temperature=0, max_tokens=200)
+    chat = ChatOpenAI(model="gpt-4-turbo-2024-04-09", temperature=0, max_tokens=800)
     messages: list[HumanMessage | AIMessage | SystemMessage] = list()
 
     messages.append(SystemMessage(content=f"""\
-co je to entita? osoba, věc, předmět; nemusí být životné; \
+Co je to entita? osoba, věc, předmět; nemusí být životné; \
 slovesa určitě v žádném případě nejsou entitami ani pokud reprezentují osobu. \
-většinou je to podstatné jméno a většina podstatných jmen jsou v promluvě entitou; \
+Je to vždy podstatné jméno a většina podstatných jmen jsou v promluvě entitou; \
 podstatná jména, která v promluvě nejsou entitami jsou velmi obecná či časová; \
 téma ve větě, ke kterému se dá odkázat osobním či vztažným zájmenem; \
 promluva má většinou jednu entitu, občas dvě a málokdy více. nezřídka promluva entitu úplně postrádá.
 
 příklad:
 Alenku nejvíc baví vybika.
-Entity v této větě jsou Alenka a vybika.
-příklad:
-Nemám ráda sekanou.
-Entita v této větě je sekaná.
-příklad:
-Zas tak dlouho to netrvalo.
-Tato promluva postrádá entitu.
+Entity v této větě jsou ["Alenka", "vybika"].
 příklad:
 Sraz máme zítra ve dvě.
-Tato promluva postrádá entitu.
+Tato promluva postrádá entitu, výstup je tedy []
 
-Na tomto základě zvaž, která slova jsou entity v následující větě:
+Zvaž, která slova jsou entity v následující větě:
 
 {args['speech']}
 
@@ -47,11 +41,8 @@ Uvažuj o všech možných objektech, které by mohly být v promluvě zmiňová
 a zvaž, zda by mohla být jejich jména považována za entity. \
 Nezapomeň, že slovesa nejsou entity, i když reprezentují osoby.
 
-Velmi stručně odůvodni úvahu a uzavři tím, \
-že uvedeš slova vybraná jako entity v hranatých závorkách ve fromátu JSON array. \
-Nezapomeň úplně nakonci uvést JSON array s vybranými slovy.
-
-Jasně! Entity v uvedené větě jsou"""))
+Velmi stručně odůvodni úvahu a uveď slova vybraná jako entity v hranatých závorkách ve fromátu JSON array. \
+Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
 
     result = chat.invoke(messages).content
 
@@ -65,14 +56,14 @@ Jasně! Entity v uvedené větě jsou"""))
         if bench:
             print(result)
         json_output = re.findall(str(r"\[.*\]"), result)
-        entities = json.loads(json_output[-1])
-        if bench:
-            print(entities)
 
         if bench:
             end_time = time.time()
             elapsed_time = end_time - start_time
             print("elapsed:", elapsed_time, "seconds")
+        entities = json.loads(json_output[-1])
+        if bench:
+            print(entities)
 
         if "log" in args:
             args["log"]([entities])
