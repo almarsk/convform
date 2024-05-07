@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import "./loader.css";
 import basename from "../basename.jsx";
 
+const issue = "Ajéje, teď se mi něco pokazilo.";
+
 const Chat = () => {
   const [[loading, minLoading], setLoading] = useState([true, true]);
   const [cStatus, setCStatus] = useState(null);
@@ -45,7 +47,11 @@ const Chat = () => {
     if (newCStatus) {
       setCStatus(newCStatus);
     } else {
-      setCStatus({ ...cStatus, coda: true });
+      setCStatus({
+        ...cStatus,
+        coda: true,
+        say: issue,
+      });
     }
     setTimeout(() => setLoading([false, false]), 1500);
   };
@@ -54,9 +60,7 @@ const Chat = () => {
     <>
       <>
         <BotOutput
-          botSpeech={
-            cStatus && !loading ? cStatus.say : "Ajej teď se mi něco pokazilo"
-          }
+          botSpeech={cStatus && !loading ? cStatus.say : issue}
           loading={loading}
         />
         <UserInput submit={handleSubmit} loading={loading} />
