@@ -54,9 +54,9 @@ Jasně! Entity v uvedené větě jsou"""))
 
     try:
         result = str(chat.invoke(messages).content)
-        print(result)
         json_output = re.findall(str(r"\[.*\]"), result)
         entities = json.loads(json_output[-1])
+        args["log"]([entities])
         if entities:
             return {args["name"]: 0}
         else:
