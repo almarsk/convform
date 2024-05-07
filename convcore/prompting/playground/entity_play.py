@@ -3,40 +3,53 @@ from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
 
+import re
 import json
 import pprint
 
-from convcore.prompting.utilz import api_key
-
-def entity():
+def entity(phrase):
     chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.5)
     messages: list[HumanMessage | AIMessage | SystemMessage] = list()
 
+    messages.append(SystemMessage(content=f"""\
+co je to entita? osoba, věc, předmět; nemusí být životné; \
+většinou je to podstatné jméno a většina podstatných jmen jsou v promluvě entitou; \
+podstatná jména, která v promluvě nejsou entitami jsou velmi obecná či časová; \
+téma ve větě, ke kterému se dá odkázat osobním či vztažným zájmenem; \
+promluva má většinou jednu entitu, občas dvě a málokdy více. nezřídka promluva entitu úplně postrádá.
 
-    messages = [SystemMessage(content='''V této větě "no už jsem docela dlouho nebyl a dělá mi to dobře zvedat činky" můžeme identifikovat následující podstatná jména: "činky".
-- "činky" - Toto slovo představuje konkrétní předmět, který je používán při fyzické aktivitě. V této větě je to konkrétní entita, na kterou se může odkazovat a která má specifický význam v kontextu promluvy.
-Slova jako "dlouho" nebo "dobře" jsou příslovce nebo abstraktní pojmy, které samy o sobě nepředstavují entitu. "No" je částice a "už", "docela", "nebyl", "a", "dělá", "mi", "to" jsou slova, která neoznačují konkrétní objekty nebo osoby.
-Na základě této analýzy jsou slova vybraná jako entity v této větě: "činky".''')]
+příklad:
+Alenku nejvíc baví vybika.
+Entity v této větě jsou Alenka a vybika.
+příklad:
+Nemám ráda sekanou.
+Entita v této větě je sekaná.
+příklad:
+Zas tak dlouho to netrvalo.
+Tato promluva postrádá entitu.
+příklad:
+Sraz máme zítra ve dvě.
+Tato promluva postrádá entitu.
 
-    functions=[{
-        'name': 'zaznam_entit',
-        'description': f'''Funkce zaznemanává, které nové entity uživatel zmínil podle analýzy. Vrací prázdný řetězec, pokud žádné nové entity nezmínil.''',
-        'parameters': {
-            'type': 'object',
-            'properties': {
-                "anafora-op": {
-                    "type": 'boolean',
-                    "description": f'''Zmínil uživatel nové entity'''
-                }
-            },
-        'required': ["anafora-op"]
-    }}]
+Na tomto základě zvaž, která slova jsou entity v následující větě:
 
-    result = chat.invoke(messages, functions=functions)
-    result = result.additional_kwargs
+{phrase}
 
-    print(result["function_call"]["arguments"])
+Zvaž význam každého podstatného jména ve větě a zvaž, zda by mohlo představovat konkrétní entitu, \
+a ne jen abstraktní pojem. \
+Uvažuj o všech možných objektech, které by mohly být v promluvě zmiňovány \
+a zvaž, zda by mohla být jejich jména považována za entity.
 
-    if "function_call" in result:
-        decoded_arguments = json.loads(result["function_call"]["arguments"])
-        print(decoded_arguments)
+U každého slova odůvodni svou úvahu a uzavři tím, \
+že uvedeš slova vybraná jako entity v hranatých závorkách ve fromátu JSON array. \
+Nezapomeň úplně nakonci uvést JSON array s vybranými slovy.
+
+Jasně! Entity v uvedené větě jsou"""))
+
+    try:
+        result = str(chat.invoke(messages).content)
+        print(result)
+        json_output = re.findall(str(r"\[.*\]"), result)
+        return json.loads(json_output[-1])
+    except:
+        return []
