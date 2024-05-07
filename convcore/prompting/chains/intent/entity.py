@@ -18,8 +18,9 @@ def entity(args, bench=False):
 
     messages.append(SystemMessage(content=f"""\
 Co je to entita? osoba, věc, předmět; nemusí být životné; \
-slovesa určitě v žádném případě nejsou entitami ani pokud reprezentují osobu. \
 Je to vždy podstatné jméno a většina podstatných jmen jsou v promluvě entitou; \
+Nikdy to nejsou zájmena. \
+slovesa určitě v žádném případě nejsou entitami ani pokud reprezentují osobu. \
 podstatná jména, která v promluvě nejsou entitami jsou velmi obecná či časová; \
 téma ve větě, ke kterému se dá odkázat osobním či vztažným zájmenem; \
 promluva má většinou jednu entitu, občas dvě a málokdy více. nezřídka promluva entitu úplně postrádá.
