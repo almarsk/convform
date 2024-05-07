@@ -17,9 +17,9 @@ def entity(args, bench=False):
     messages: list[HumanMessage | AIMessage | SystemMessage] = list()
 
     messages.append(SystemMessage(content=f"""\
-Co je to entita? osoba, věc, předmět; nemusí být životné; \
+Co je to entita? osoba, věc; nemusí být životné; \
 Je to vždy podstatné jméno a většina podstatných jmen jsou v promluvě entitou; \
-Zájmena jako třeba "ty", "on" a podobně v žádném případě nikdy nejsou entity i pokud reprezentují osoby. \
+POZOR! Zájmena jako třeba "ty", "on" a podobně v žádném případě nikdy nejsou entity i pokud reprezentují osoby. \
 slovesa určitě v žádném případě nejsou entitami ani pokud reprezentují osobu. \
 podstatná jména, která v promluvě nejsou entitami jsou velmi obecná či časová; \
 téma ve větě, ke kterému se dá odkázat osobním či vztažným zájmenem; \
@@ -32,7 +32,7 @@ příklad:
 Sraz máme zítra ve dvě.
 Tato promluva postrádá entitu, výstup je tedy [].
 příklad:
-Ty jsi ale hlavička!
+A co máš rád třeba ty?
 Tato promluva postrádá entitu, přestože je v ní osobní zájmeno, výstup je tedy [].
 
 Zvaž, která slova jsou entity v následující větě:
