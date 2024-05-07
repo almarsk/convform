@@ -41,7 +41,7 @@ Popis další odpovědi:
 Robot {args["prompt"]}"""))
 
     try:
-        chat = ChatOpenAI(model="gpt-4-turbo-2024-04-09", temperature=0)
+        chat = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
         result = chat.invoke(messages)
 
         args["log"]([[m.content for m in messages], str(result.content)])
