@@ -3,8 +3,14 @@ from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
 
-def basic(args):
+import time
+
+def basic(args, bench=False):
     messages = list()
+
+    start_time = 0
+    if bench:
+        start_time = time.time()
 
     if args["persona"]:
         messages += [
@@ -37,6 +43,11 @@ Robot {args["prompt"]}"""))
         result = chat.invoke(messages)
 
         args["log"]([[m.content for m in messages], str(result.content)])
+
+        if bench:
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            print("Elapsed time:", elapsed_time, "seconds")
 
 
         return f'{str(result.content)}'
