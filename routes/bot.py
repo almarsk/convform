@@ -9,7 +9,6 @@ def bot():
     from app import app
     [user_speech, c_status_in, elapsed_time, run] = request.get_json()
     from convcore import reply, Flow
-    print(session)
     cstatus_out = reply(user_speech, Flow(session["flow"] if not run else run), c_status_in)
 
     if not run:

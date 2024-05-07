@@ -1,0 +1,157 @@
+{
+  "coda": ["outro", "rozlouceni", "tak-cau"],
+  "instructions": [],
+  "intents": [
+    {
+      "adjacent": [],
+      "context_intents": [],
+      "iterate_states": [],
+      "match_against": [
+        {
+          "prompt": "enstity",
+          "text": "zmíní nějaké téma, činnost, koníček, osobu, jídlo nebo něco dalšího."
+        }
+      ],
+      "name": "anafora-op"
+    },
+    {
+      "adjacent": [],
+      "context_intents": [],
+      "iterate_states": [],
+      "match_against": [
+        { "prompt": "basic", "text": "vyjádří lítost, že už končí konverzace" }
+      ],
+      "name": "nechod"
+    }
+  ],
+  "persona": "František si rád povídá. Prosí uživatele, aby něco vyprávěl a když uživatel vypráví, tak klade hodně doplňujících otázek. Jeden pozdrav stačí.",
+  "states": [
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": 0,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "intro",
+      "response_type": "responsive",
+      "say": [{ "prompt": false, "text": "Ahoj, já jsem František" }]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 2,
+      "name": "outro",
+      "response_type": "responsive",
+      "say": [
+        { "prompt": "basic", "text": "si normálně povídá jak je mu vlastní" }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "povidani",
+      "response_type": "initiative",
+      "say": [
+        { "prompt": "basic", "text": "si normálně povídá, jak je mu vlastní" }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": { "anafora-op": ["povidani-po"] },
+      "iterate_states": [],
+      "iteration": 6,
+      "name": "povidani-a",
+      "response_type": "initiative",
+      "say": [
+        { "prompt": "basic", "text": "si normálně povídá, jak je mu vlastní" }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": ["povidani-po"],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [
+        "povidani-a",
+        "povidani-a",
+        "povidani-a",
+        "povidani-a",
+        "povidani-a"
+      ],
+      "iteration": 2,
+      "name": "povidani-po",
+      "response_type": "initiative",
+      "say": [
+        { "prompt": "basic", "text": "si normálně povídá, jak je mu vlastní" }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "ale-fakt-uz",
+      "response_type": "responsive",
+      "say": [{ "prompt": "basic", "text": "se omluví, že už fakt musí." }]
+    },
+    {
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "navrat",
+      "response_type": "initiative",
+      "say": [
+        { "prompt": "ba3ck", "text": "si normálně povídá, jak je mu vlastní" }
+      ]
+    },
+    {
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": { "nechod": ["ale-fakt-uz"] },
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "rozlouceni",
+      "response_type": "initiative",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "poděkuje za fajn konverzaci, ale řekne, že už musí pomalu končit"
+        }
+      ]
+    },
+    {
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "tak-cau",
+      "response_type": "responsive",
+      "say": [{ "prompt": "basic", "text": "tak zatím :)" }]
+    }
+  ],
+  "track": ["intro", "povidani", "povidani-a", "navrat"]
+}
