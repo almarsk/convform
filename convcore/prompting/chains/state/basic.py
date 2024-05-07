@@ -8,6 +8,8 @@ import time
 def basic(args, bench=False):
     messages = list()
 
+    print("args",args)
+
     start_time = 0
     if bench:
         start_time = time.time()
