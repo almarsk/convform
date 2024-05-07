@@ -12,9 +12,9 @@ def ba3ck(args, bench=False):
     used_context = []
     if "context" in args:
         context_len = len(args["context"])
-        if args["context"] and context_len > 3:
+        if args["context"] and context_len > 4:
             args["log"]([f"going back"])
-            used_context = args["context"][0:-3]
+            used_context = args["context"][0:-4]
 
     args["context"] = used_context
 
