@@ -33,7 +33,7 @@ Sraz máme zítra ve dvě.
 Tato promluva postrádá entitu, výstup je tedy [].
 příklad:
 Ty jsi ale hlavička!
-Tato promluva postrádá entitu, výstup je tedy [].
+Tato promluva postrádá entitu, přestože je v ní osobní zájmeno, výstup je tedy [].
 
 Zvaž, která slova jsou entity v následující větě:
 
