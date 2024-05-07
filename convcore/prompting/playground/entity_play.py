@@ -48,7 +48,7 @@ Jasně! Entity v uvedené větě jsou"""))
 
     try:
         result = str(chat.invoke(messages).content)
-        print(result)
+
         json_output = re.findall(str(r"\[.*\]"), result)
         return json.loads(json_output[-1])
     except:
