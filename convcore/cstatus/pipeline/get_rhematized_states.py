@@ -79,7 +79,6 @@ def add_least_iterated_non_over_iterated(states, flow, usage):
             for state in states
             if get_full_state(state).iteration >= 0
             and get_full_state(state).iteration - usage.get(state, 0) > 0
-        if get_full_state(state).iteration - usage.get(state, 0) > 0
     ]
 
     return candidates[0] if candidates else None
