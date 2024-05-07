@@ -30,7 +30,10 @@ Alenku nejvíc baví vybika.
 Entity v této větě jsou ["Alenka", "vybika"].
 příklad:
 Sraz máme zítra ve dvě.
-Tato promluva postrádá entitu, výstup je tedy []
+Tato promluva postrádá entitu, výstup je tedy [].
+příklad:
+Ty jsi ale hlavička!
+Tato promluva postrádá entitu, výstup je tedy [].
 
 Zvaž, která slova jsou entity v následující větě:
 
