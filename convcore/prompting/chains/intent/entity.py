@@ -19,7 +19,7 @@ def entity(args, bench=False):
     messages.append(SystemMessage(content=f"""\
 Co je to entita? osoba, věc, předmět; nemusí být životné; \
 Je to vždy podstatné jméno a většina podstatných jmen jsou v promluvě entitou; \
-Nikdy to nejsou zájmena. \
+Zájemna v žádném případě nikdy nejsou entity i pokud reprezentují osoby. \
 slovesa určitě v žádném případě nejsou entitami ani pokud reprezentují osobu. \
 podstatná jména, která v promluvě nejsou entitami jsou velmi obecná či časová; \
 téma ve větě, ke kterému se dá odkázat osobním či vztažným zájmenem; \
@@ -40,7 +40,7 @@ Zvaž význam každého podstatného jména ve větě a zvaž, zda by mohlo pře
 a ne jen abstraktní pojem. \
 Uvažuj o všech možných objektech, které by mohly být v promluvě zmiňovány \
 a zvaž, zda by mohla být jejich jména považována za entity. \
-Nezapomeň, že slovesa nejsou entity, i když reprezentují osoby.
+Nezapomeň, že slovesa ani zájmena nejsou entity, i když reprezentují osoby.
 
 Velmi stručně odůvodni úvahu a uveď slova vybraná jako entity v hranatých závorkách ve fromátu JSON array. \
 Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
