@@ -48,6 +48,10 @@ Jasně! Entity v uvedené větě jsou"""))
 
     result = chat.invoke(messages).content
 
+    addition = [[str(message) for message in messages], result]
+    args["log"]([args["chain"]])
+    args["log"](addition)
+
     try:
         result = str(chat.invoke(messages).content)
         print(result)
