@@ -7,7 +7,7 @@ import json
 import pprint
 
 def basic(args):
-    chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.5)
+    chat = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0.5)
 
     messages: list[HumanMessage | AIMessage | SystemMessage] = [
         HumanMessage(content=turn["say"])
