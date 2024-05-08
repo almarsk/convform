@@ -40,7 +40,7 @@ Popis další odpovědi:
 Robot {args["prompt"]}"""))
 
     try:
-        chat = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0)
+        chat = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0.5)
         result = chat.invoke(messages)
 
         args["log"]([[m.content for m in messages], str(result.content)])
