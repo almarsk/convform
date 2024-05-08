@@ -40,8 +40,6 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         is_overiterated = full_state.iteration >= 0 and full_state.iteration - usage.get(state, 0) < 0
         is_initiative = full_state.response_type == "initiative" or full_state.response_type == "flexible"
 
-        print("over", is_overiterated)
-
         if is_initiative and not is_overiterated:
             initiatives.append([previous_connective, state] if previous_connective else [state])
             continue

@@ -7,9 +7,15 @@ from convcore.prompting.chains.state.basic import basic
 
 import time
 
-how_far = 6
-
 def ba3ck(args, bench=False):
+    how_far = len(args["context"]) - 3 if "context" in args else 0
+
+    if "prompt" in args:
+        split = args["prompt"].split("|")
+        if len(split) > 1:
+            [text, distance] = split
+            how_far = int(distance)
+            args["prompt"] = text
 
     used_context = []
     if "context" in args:
@@ -17,6 +23,7 @@ def ba3ck(args, bench=False):
         if args["context"] and context_len > how_far:
             args["log"]([f"going back"])
             used_context = args["context"][0:-how_far]
+
 
     args["context"] = used_context
 

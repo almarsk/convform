@@ -1,6 +1,6 @@
 
 send all the turn history to prompts
-
+read convos specific convo in url by id
 edit order of lists
 edit says
 link conversation to flow via id and not name lol
