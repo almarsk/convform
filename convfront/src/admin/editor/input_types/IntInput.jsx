@@ -8,7 +8,7 @@ const IntInput = ({ label, activeItem, setChanges, setActiveItem, narrow }) => {
       className={`input-field ${narrow && "narrow"}`}
       name={label}
       placeholder={label}
-      value={activeItem && activeItem[label]}
+      value={activeItem && activeItem[label] ? activeItem[label] : 0}
       onChange={(e) => {
         setChanges(true);
         setActiveItem((prevActive) => {

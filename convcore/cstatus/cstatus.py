@@ -75,7 +75,8 @@ class ConversationStatus:
             prev_cs["context_states"],
             prev_cs["state_usage"],
             prev_cs["coda"],
-            prev_cs["initiativity"] - prev_cs["turns_since_initiative"] <= 0
+            prev_cs["initiativity"] - prev_cs["turns_since_initiative"] <= 0,
+            prev_cs["matched_intents"]
             )
         )
 
@@ -191,14 +192,12 @@ class ConversationStatus:
         return matched_intents
 
 
-    def rhematize(self, flow, context_states, usage, coda, time_to_initiate):
+    def rhematize(self, flow, context_states, usage, coda, time_to_initiate, matched_intents):
 
         usage_aware_matched_intents = dict()
-
-        for key, value in self.matched_intents:
+        for key, value in matched_intents:
             if key in self.intent_usage and self.intent_usage[key] <= 0 or key not in self.intent_usage:
                 usage_aware_matched_intents[key] = value
-
 
         return get_rhematized_states(
             flow,
