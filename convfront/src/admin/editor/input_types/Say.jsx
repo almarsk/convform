@@ -70,7 +70,7 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
                     // todo
                     {
                       text: newValue,
-                      prompt: chains[pickedChain],
+                      prompt: isPrompt ? chains[pickedChain] : false,
                     },
                   ],
                 };

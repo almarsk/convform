@@ -1,0 +1,10 @@
+konverzační styl
+    - méně otázek, více komentářů (inkvizitivní potenciál)
+    - aby něco nevěděl - dynamicky doplňovat z promluv uživatele
+generovat další reakce a reagovat na ně
+real time anotace entit a témat
+
+brahms - položí zodpovězenou otázku
+chybná syntax: Máš oblíbenou jeho skladbu
+
+design: kohezivní nekoherentní text
