@@ -19,6 +19,7 @@ const Listing = ({
 
   const handleSubmitItem = (e) => {
     e.preventDefault();
+    console.log("new item value", newItemValue);
     const edit = async () => {
       const data = {};
 
