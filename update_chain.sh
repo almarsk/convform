@@ -1,1 +1,1 @@
-git add .; git commit -m 'anafora touchup' ; git push
+git add .; git commit -m 'intent iteration' ; git push
