@@ -194,11 +194,11 @@ class ConversationStatus:
 
 
     def rhematize(self, flow, context_states, usage, coda, time_to_initiate, matched_intents, intent_usage):
+        get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]
 
-        print(matched_intents)
         usage_aware_matched_intents = dict()
         for key, value in matched_intents.items():
-            if (key in intent_usage and intent_usage[key] <= 1) or key not in intent_usage:
+            if (key in intent_usage and intent_usage[key] <= 1) or (key not in intent_usage and get_full_intent(key).iteration <= 1):
                 usage_aware_matched_intents[key] = value
 
         print("mr", matched_intents)
