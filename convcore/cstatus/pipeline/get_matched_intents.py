@@ -10,6 +10,8 @@ def get_matched_intents(pattern):
 
     matches = list()
 
+    print("matching")
+
     for pattern_item in pattern["match_against"]:
         if pattern_item["prompt"] and not prompt_done:
             prompt_done = True
@@ -29,9 +31,12 @@ def get_matched_intents(pattern):
     else:
        lowest_index = sys.maxsize
        for match in matches:
-           if not bool(match):
+
+           print("m",match)
+
+           if not bool(match["is_match"]):
                continue
-           index = match[pattern["intent_name"]]
+           index = match["match_index"]
            lowest_index = index if index < lowest_index else lowest_index
        if lowest_index < sys.maxsize and lowest_index >= 0:
            return {pattern["intent_name"]: {"index": lowest_index, "adjacent": pattern["adjacent"]}}
@@ -40,7 +45,7 @@ def get_matched_intents(pattern):
 
 def string_match(match_against, speech):
 
-    print("lesgo")
+    print("matching string")
 
     match = re.search(match_against, speech)
     if match:

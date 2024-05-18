@@ -26,6 +26,10 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
     })();
   }, []);
 
+  useEffect(() => {
+    console.log("isprompt", isPrompt);
+  }, [isPrompt]);
+
   return (
     <>
       <div className="say-container">
@@ -65,7 +69,6 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
                   ...prev,
                   [label]: [
                     ...prev[label],
-                    // todo
                     {
                       text: newValue,
                       prompt: isPrompt ? chains[pickedChain] : false,
