@@ -9,6 +9,7 @@ const FlowList = ({ activeFlows, fetchBots, activeProject, setBotsList }) => {
   const [newFlowValue, setNewFlowValue] = useState("");
 
   const handleSubmitFlow = async (event) => {
+    console.log(slugify(newFlowValue));
     event.preventDefault();
     setNewFlowValue("");
     await myRequest("/create", {
