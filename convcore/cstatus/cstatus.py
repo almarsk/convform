@@ -117,7 +117,7 @@ class ConversationStatus:
             else dict(prev_cs["state_usage"]),
             self.last_states, self.matched_intents.keys())
 
-        self.intent_usage = self.update_intents_usage(flow) if prev_cs else {}
+        self.intent_usage = {} if prev_cs is none else self.update_intents_usage(flow)
 
         # check if coda has started
         self.coda = self.check_for_coda(flow)
