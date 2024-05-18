@@ -10,7 +10,6 @@ def get_matched_intents(pattern):
 
     matches = list()
 
-    print("matching")
 
     for pattern_item in pattern["match_against"]:
         if pattern_item["prompt"] and not prompt_done:
@@ -32,8 +31,6 @@ def get_matched_intents(pattern):
        lowest_index = sys.maxsize
        for match in matches:
 
-           print("m",match)
-
            if not bool(match["is_match"]):
                continue
            index = match["match_index"]
@@ -44,8 +41,6 @@ def get_matched_intents(pattern):
            return {}
 
 def string_match(match_against, speech):
-
-    print("matching string")
 
     match = re.search(match_against, speech)
     if match:

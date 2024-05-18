@@ -1,1 +1,1 @@
-git add .; git commit -m 'intent iteration' ; git push
+git add .; git commit -m 'print statements cleanup' ; git push

@@ -52,8 +52,6 @@ kde uživatel {prompt}, nebo -1 pokud popis neodpovídá''',
 
     result = chat.invoke(messages, functions=functions).additional_kwargs
 
-    print(result)
-
     decoded_arguments = json.loads(bytes(result["function_call"]["arguments"], "utf-8").decode("unicode_escape"))
 
     with open("convcore/prompting/playground/playground_lch_result", "a") as p:
