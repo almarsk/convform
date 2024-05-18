@@ -12,6 +12,6 @@ class Intent:
         self.name = intent.get("name", "")
         self.match_against = intent.get("match_against", [])
         self.adjacent = intent.get("adjacent", [])
-        self.iteration = intent.get("iteration", 0)
+        self.iteration = intent.get("iteration", 1)
         self.context_intents = intent.get("context_intents", [])
         self.iterate_states = intent.get("iterate_states", [])

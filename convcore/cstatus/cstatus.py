@@ -196,7 +196,7 @@ class ConversationStatus:
 
         usage_aware_matched_intents = dict()
         for key, value in matched_intents:
-            if key in self.intent_usage and self.intent_usage[key] <= 0 or key not in self.intent_usage:
+            if key in self.intent_usage and self.intent_usage[key] <= 1 or key not in self.intent_usage:
                 usage_aware_matched_intents[key] = value
 
         return get_rhematized_states(
@@ -262,7 +262,7 @@ class ConversationStatus:
                 try:
                     intents_usage[matched_intent] = get_full_intent(matched_intent).iteration - 1
                 except:
-                    intents_usage[matched_intent] = 0
+                    intents_usage[matched_intent] = 1
             else:
                 intents_usage[matched_intent] -= 1
 
