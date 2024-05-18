@@ -8,7 +8,7 @@ import json
 import pprint
 
 def entity(phrase):
-    chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.5)
+    chat = ChatOpenAI(model="gpt-4o", temperature=0.5)
     messages: list[HumanMessage | AIMessage | SystemMessage] = list()
 
     messages.append(SystemMessage(content=f"""\

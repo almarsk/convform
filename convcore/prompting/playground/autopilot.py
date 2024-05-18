@@ -20,7 +20,7 @@ with open("playground_lch_result", "a") as p:
 
     The previous conversation:
     """
-    chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.9)
+    chat = ChatOpenAI(model="gpt-4o", temperature=0.9)
     messages = list()
     messages.append(SystemMessage(content=task))
     messages.append(HumanMessage(content="Ahoj"))

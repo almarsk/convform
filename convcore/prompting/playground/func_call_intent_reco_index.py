@@ -10,7 +10,7 @@ import pprint
 def intent_reco(prompts, convo):
     api_key()
 
-    gpt4 = "gpt-4-0125-preview"
+    gpt4 = "gpt-4o"
     gpt3 = "gpt-3.5-turbo-0613"
 
     chat = ChatOpenAI(model=gpt3, temperature=0)

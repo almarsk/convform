@@ -27,7 +27,7 @@ Ostatní tematická centra nech jak jsou."),
         SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
     ]
     try:
-        chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.3)
+        chat = ChatOpenAI(model="gpt-4o", temperature=0.3)
         result = chat.invoke(messages)
         args["log"]([[m.content for m in messages], str(result.content)])
         return str(result.content)

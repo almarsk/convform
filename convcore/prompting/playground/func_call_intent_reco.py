@@ -10,7 +10,7 @@ import pprint
 def intent_reco(prompts, convo):
     api_key()
 
-    chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.5)
+    chat = ChatOpenAI(model="gpt-4o", temperature=0.5)
 
     messages: list[HumanMessage | AIMessage | SystemMessage] = [
         HumanMessage(content=turn["say"])

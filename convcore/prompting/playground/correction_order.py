@@ -10,7 +10,7 @@ import pprint
 def correction_order():
     api_key()
 
-    chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.5)
+    chat = ChatOpenAI(model="gpt-4o", temperature=0.5)
 
     messages= [SystemMessage(content="""Instrukce:
     Následuje replika jednoho mluvčího. zkontroluj, že její jednotlivé části jsou seřazené správně a přirozeně a pokud ne, seřaď je lépe.
