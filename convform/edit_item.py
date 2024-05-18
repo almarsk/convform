@@ -7,7 +7,7 @@ def edit_item(args):
 
     flow = args.get("flow", "")
     item_type = args.get("item_type", "")
-    name = slugify(args.get("name", ""))
+    name = args.get("name", "")
     data = args.get("data", "")
     if "name" in data:
         data["name"] = name
