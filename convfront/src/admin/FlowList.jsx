@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-import slugify from "slugify";
 import { useState } from "react";
 import BotBrick from "./BotBrick";
 import myRequest from "../myRequest";
@@ -9,12 +8,11 @@ const FlowList = ({ activeFlows, fetchBots, activeProject, setBotsList }) => {
   const [newFlowValue, setNewFlowValue] = useState("");
 
   const handleSubmitFlow = async (event) => {
-    console.log(slugify(newFlowValue));
     event.preventDefault();
     setNewFlowValue("");
     await myRequest("/create", {
       item_type: "flow",
-      name: slugify(newFlowValue),
+      name: newFlowValue.replace(/ /, "_"),
       destination: activeProject,
     });
     setBotsList(await myRequest("/list-bots", {}));
