@@ -116,7 +116,7 @@ class ConversationStatus:
             else dict(prev_cs["state_usage"]),
             self.last_states, self.matched_intents.keys())
 
-        self.intent_usage = self.update_intents_usage() if prev_cs else {}
+        self.intent_usage = self.update_intents_usage(flow) if prev_cs else {}
 
         # check if coda has started
         self.coda = self.check_for_coda(flow)
@@ -252,15 +252,20 @@ class ConversationStatus:
 
         return previous_state_usage
 
-    def update_intents_usage(self):
+    def update_intents_usage(self, flow):
+        get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]
+
         matched_intents_names = self.matched_intents.keys()
         intents_usage = self.intent_usage
 
         for matched_intent in matched_intents_names:
             if matched_intent in intents_usage:
-                intents_usage[matched_intent] += 1
+                try:
+                    intents_usage[matched_intent] = get_full_intent(matched_intent).iteration - 1
+                except:
+                    intents_usage[matched_intent] = 0
             else:
-                intents_usage[matched_intent] = 1
+                intents_usage[matched_intent] -= 1
 
         return {}
 
