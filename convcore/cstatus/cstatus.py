@@ -29,6 +29,7 @@ class ConversationStatus:
     history_intents: Any
     history_states: Any
     state_usage: dict[str, int]
+    intent_usage: dict[str, int]
     raw_say: Any
     prompted_say: Any
     say: Any
@@ -64,6 +65,7 @@ class ConversationStatus:
             flow,
             prev_cs["turns_history"]+[{"say": user_speech, "who": "human"}] if prev_cs is not None else [],
             prev_cs["last_states"] if prev_cs else [])
+
 
         # process adjacent states to have max one initiative etc
         self.last_states = [] if structure else ([flow.track[0]]
@@ -113,6 +115,8 @@ class ConversationStatus:
             dict() if prev_cs is None
             else dict(prev_cs["state_usage"]),
             self.last_states, self.matched_intents.keys())
+
+        self.intent_usage = self.update_intents_usage() if prev_cs else {}
 
         # check if coda has started
         self.coda = self.check_for_coda(flow)
@@ -188,9 +192,17 @@ class ConversationStatus:
 
 
     def rhematize(self, flow, context_states, usage, coda, time_to_initiate):
+
+        usage_aware_matched_intents = dict()
+
+        for key, value in self.matched_intents:
+            if key in self.intent_usage and self.intent_usage[key] <= 0 or key not in self.intent_usage:
+                usage_aware_matched_intents[key] = value
+
+
         return get_rhematized_states(
             flow,
-            self.matched_intents,
+            usage_aware_matched_intents,
             context_states,
             usage,
             coda,
@@ -239,6 +251,18 @@ class ConversationStatus:
                 previous_state_usage[iterated] += 1
 
         return previous_state_usage
+
+    def update_intents_usage(self):
+        matched_intents_names = self.matched_intents.keys()
+        intents_usage = self.intent_usage
+
+        for matched_intent in matched_intents_names:
+            if matched_intent in intents_usage:
+                intents_usage[matched_intent] += 1
+            else:
+                intents_usage[matched_intent] = 1
+
+        return {}
 
 
     def check_for_coda(self, flow):
