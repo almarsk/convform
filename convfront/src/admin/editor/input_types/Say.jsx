@@ -22,7 +22,6 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
     (() => {
       myRequest("/chains", [element]).then((e) => {
         setChains(e);
-        console.log(e);
       });
     })();
   }, []);
@@ -62,7 +61,6 @@ const Say = ({ label, activeItem, setChanges, setActiveItem, element }) => {
             addTag={(newValue) => {
               setChanges(true);
               setActiveItem((prev) => {
-                console.log(chains[pickedChain]);
                 return {
                   ...prev,
                   [label]: [

@@ -19,7 +19,6 @@ const Listing = ({
 
   const handleSubmitItem = (e) => {
     e.preventDefault();
-    console.log("new item value", slugify(newItemValue));
     const edit = async () => {
       const data = {};
 
