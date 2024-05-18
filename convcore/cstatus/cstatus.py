@@ -266,7 +266,7 @@ class ConversationStatus:
             else:
                 intents_usage[matched_intent] -= 1
 
-        return {}
+        return intents_usage
 
 
     def check_for_coda(self, flow):
