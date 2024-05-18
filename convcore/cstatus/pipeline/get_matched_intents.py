@@ -39,6 +39,9 @@ def get_matched_intents(pattern):
            return {}
 
 def string_match(match_against, speech):
+
+    print("lesgo")
+
     match = re.search(match_against, speech)
     if match:
         start_index = match.start()
