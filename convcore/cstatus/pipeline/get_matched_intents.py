@@ -29,8 +29,6 @@ def get_matched_intents(pattern):
         return None
     else:
 
-       print(matches)
-
        lowest_index = sys.maxsize
        for (match_name, match_index) in matches:
 
