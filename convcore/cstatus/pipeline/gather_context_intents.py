@@ -28,4 +28,4 @@ def gather_context_intents(prev_context_intents, matched_intents, flow, last_sta
 
     context_intents = removed_matched + context_intents_of_matched_intents + context_intents_of_last_states
 
-    return set(context_intents)
+    return list(set(context_intents))
