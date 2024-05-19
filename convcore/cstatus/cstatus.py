@@ -201,8 +201,6 @@ class ConversationStatus:
             if (key in intent_usage and intent_usage[key] <= 1) or (key not in intent_usage and get_full_intent(key).iteration <= 1):
                 usage_aware_matched_intents[key] = value
 
-
-
         return get_rhematized_states(
             flow,
             usage_aware_matched_intents,
@@ -211,7 +209,6 @@ class ConversationStatus:
             coda,
             time_to_initiate
         )
-
 
     def update_turns_since_initiative(self, previous_number_of_turns, flow):
         return 0 if is_initiative(self.last_states, flow) else previous_number_of_turns + 1
