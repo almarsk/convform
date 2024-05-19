@@ -12,7 +12,16 @@ const ListInput = ({ label, activeItem, setChanges, setActiveItem }) => {
           addTag={(newValue) => {
             setChanges(true);
             setActiveItem((prev) => {
-              return { ...prev, [label]: [...prev[label], slugify(newValue)] };
+              console.log("p", prev);
+              console.log("p", Object.keys(prev));
+              const currentLabel = Object.keys(prev).some((k) => k == label)
+                ? prev[label]
+                : [];
+
+              return {
+                ...prev,
+                [label]: [...currentLabel, slugify(newValue)],
+              };
             });
           }}
           tags={
