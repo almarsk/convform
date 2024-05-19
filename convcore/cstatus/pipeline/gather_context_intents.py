@@ -27,5 +27,5 @@ def gather_context_intents(prev_context_intents, matched_intents, flow, last_sta
         context_intents_of_last_states = []
 
     context_intents = removed_matched + context_intents_of_matched_intents + context_intents_of_last_states
-    print("c",context_intents)
-    return context_intents
+
+    return set(context_intents)
