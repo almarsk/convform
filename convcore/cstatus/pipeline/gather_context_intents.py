@@ -13,4 +13,15 @@ def gather_context_intents(prev_context_intents, matched_intents, flow, last_sta
         for item in intent.context_intents
     ]
 
-    return removed_matched + context_intents_of_matched_intents
+    # add context intents of last states
+    try:
+        context_intents_of_last_states = [
+            item
+            for state in flow.states
+            if state.name in matched_intents
+            for item in state.context_intents
+        ]
+    except:
+        context_intents_of_last_states = []
+
+    return removed_matched + context_intents_of_matched_intents + context_intents_of_last_states

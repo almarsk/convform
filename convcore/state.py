@@ -16,6 +16,7 @@ class State:
     iteration: int
     initiativity: int
     context_states: list
+    context_intents: list
     iterate_states: list
     def __init__(self, state):
         self.name = state.get("name", "")
@@ -26,4 +27,5 @@ class State:
         self.iteration = state.get("iteration", 1)
         self.initiativity = state.get("initiativity", 1)
         self.context_states = state.get("context_states", [])
+        self.context_intents = state.get("context_intents", [])
         self.iterate_states = state.get("iterate_states", [])
