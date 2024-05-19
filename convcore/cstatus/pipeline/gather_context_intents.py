@@ -22,6 +22,7 @@ def gather_context_intents(prev_context_intents, matched_intents, flow, last_sta
             for item in state.context_intents
         ]
     except:
+        print("issue getting context intents from last states")
         context_intents_of_last_states = []
 
     return removed_matched + context_intents_of_matched_intents + context_intents_of_last_states
