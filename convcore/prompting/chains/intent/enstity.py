@@ -72,8 +72,8 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
         if "log" in args:
             args["log"]([entities])
         if entities:
-            return {args["name"]: 0}
+            return 0
         else:
-            return {args["name"]: -1}
+            return -1
     except:
-        return {args["name"]: -1}
+        return -1

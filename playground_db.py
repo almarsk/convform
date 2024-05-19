@@ -22,7 +22,7 @@ def insert_data(cursor, data):
                             VALUES (?, ?, ?, ?, ?)''',
                             data)
 
-insert_data(cursor,("iiter", 1, load_json("bots/intent_iter.json"), 0, datetime.utcnow()))
+insert_data(cursor,("trefa", 1, load_json("bots/ink_pot_trefa.json"), 0, datetime.utcnow()))
 
 
 # Commit changes and close connection

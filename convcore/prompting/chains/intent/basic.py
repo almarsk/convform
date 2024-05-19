@@ -67,6 +67,6 @@ def basic(args):
             if "function_call" in result:
                 decoded_arguments = json.loads(bytes(result["function_call"]["arguments"], "utf-8").decode("unicode_escape"))
 
-                return decoded_arguments
+                return decoded_arguments[args["name"]]
 
-    return {args["name"]: -1}
+    return -1

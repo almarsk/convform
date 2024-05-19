@@ -23,7 +23,8 @@ POZOR! Zájmena jako třeba "ty", "on" a podobně v žádném případě nikdy n
 slovesa určitě v žádném případě nejsou entitami ani pokud reprezentují osobu. \
 podstatná jména, která v promluvě nejsou entitami jsou velmi obecná či časová; \
 téma ve větě, ke kterému se dá odkázat osobním či vztažným zájmenem; \
-promluva má většinou jednu entitu, občas dvě a málokdy více. nezřídka promluva entitu úplně postrádá.
+promluva má většinou jednu entitu, občas dvě a málokdy více. nezřídka promluva entitu úplně postrádá.\
+Účastníci konverzace nikdy v žádném případě nejsou entitami.
 
 příklad:
 Alenku nejvíc baví vybika.
@@ -34,6 +35,9 @@ Tato promluva postrádá entitu, výstup je tedy [].
 příklad:
 A co máš rád třeba ty?
 Tato promluva postrádá entitu, přestože je v ní osobní zájmeno, výstup je tedy [].
+příklad:
+Jak se máš Karle?
+Tato promluva postrádá entitu, je v ní zmíněn pouze účastník komunikace, výstup je tedy [].
 
 Zvaž, která slova jsou entity v následující větě:
 
@@ -72,8 +76,8 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
         if "log" in args:
             args["log"]([entities])
         if entities:
-            return {args["name"]: 0}
+            return 0
         else:
-            return {args["name"]: -1}
+            return -1
     except:
-        return {args["name"]: -1}
+        return -1
