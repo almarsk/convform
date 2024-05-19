@@ -21,7 +21,6 @@ def gather_context_intents(prev_context_intents, matched_intents, flow, last_sta
             if state.name in last_states
             for item in state.context_intents
         ]
-        print(context_intents_of_last_states)
 
     except:
         context_intents_of_last_states = []
