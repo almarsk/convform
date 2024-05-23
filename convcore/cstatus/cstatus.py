@@ -259,7 +259,6 @@ class ConversationStatus:
 
         # including incrementing iteration from within states
         for state in last_states:
-            print(state, previous_state_usage)
             if state not in previous_state_usage:
                 previous_state_usage[state] = 0
             previous_state_usage[state] += 1
