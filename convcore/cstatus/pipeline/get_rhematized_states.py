@@ -64,7 +64,7 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
 
     if not rhematized_states:
         # add fallback states
-        rhematized_states.append(fallback_states)
+        rhematized_states += fallback_states
 
     # this effectively sets coda to true, because states that are in coda will be found in last states
     if not rhematized_states:

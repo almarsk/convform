@@ -127,7 +127,8 @@ class ConversationStatus:
             flow,
             dict() if prev_cs is None
             else dict(prev_cs["state_usage"]),
-            self.last_states, self.matched_intents.keys())
+            self.last_states,
+            self.matched_intents.keys())
 
         self.intent_usage = {} if prev_cs is None else self.update_intents_usage(flow, prev_cs["intent_usage"])
 
@@ -258,6 +259,7 @@ class ConversationStatus:
 
         # including incrementing iteration from within states
         for state in last_states:
+            print(state, previous_state_usage)
             if state not in previous_state_usage:
                 previous_state_usage[state] = 0
             previous_state_usage[state] += 1
