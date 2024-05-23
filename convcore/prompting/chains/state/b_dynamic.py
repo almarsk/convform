@@ -14,7 +14,7 @@ def b_dynamic(args, bench=False):
 
     print(args["checkpoints"])
 
-    checkpoint = (args["checkpoints"][0]
+    checkpoint = (args["checkpoints"][0] + 1
         if "checkpoints" in args and args["checkpoints"]
         else len(args["context"])
         if "context" in args

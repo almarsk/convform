@@ -40,12 +40,11 @@ class ConversationStatus:
 
         get_full_state = lambda state: [s for s in flow.states if s.name == state][0]
 
-        # number of bot turns
-        # increments at the end of __init__
+        # number of bot turns increments
         self.bot_turns = (
             0 if prev_cs is None
             else prev_cs["bot_turns"]
-        ) + 1
+        ) + 2
 
         # move last states of previous cso to previous last states of current cso
         self.previous_last_states = (
