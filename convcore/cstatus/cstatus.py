@@ -13,8 +13,6 @@ from convcore.prompting.utilz import resolve_prompt
 
 from concurrent.futures import ThreadPoolExecutor
 
-HISTORY_LEN = 3
-
 class ConversationStatus:
     bot_turns: int
     previous_last_states: Any
@@ -219,6 +217,12 @@ class ConversationStatus:
 
         usage_aware_matched_intents = dict()
         for key, value in matched_intents.items():
+            print("intent meta")
+            print(key, value)
+            print(intent_usage[key] if key in intent_usage else getattr(get_full_intent(key),"iteration", "nah"))
+            print("______")
+
+
             if (key in intent_usage and intent_usage[key] <= 1) or (key not in intent_usage and get_full_intent(key).iteration <= 1):
                 usage_aware_matched_intents[key] = value
 
