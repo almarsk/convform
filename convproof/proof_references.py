@@ -14,25 +14,25 @@ def proof_references(bot, issues):
 
         for state in bot["states"]:
             for substate in state["iterate_states"]:
-                add_or_append(substate, state_refs, f"iterate_states of {substate} in {state['name']}")
+                add_or_append(substate, state_refs, f"iterate_states in {state['name']}")
             for substate in state["context_states"]:
-                add_or_append(substate, state_refs, f"context states of {substate} in {state['name']}")
+                add_or_append(substate, state_refs, f"context states in {state['name']}")
             if "context_intents" in state:
                 for intent in state["context_intents"]:
-                    add_or_append(intent, intent_refs, f"context intents of {intent} in {state['name']}")
+                    add_or_append(intent, intent_refs, f"context intents in {state['name']}")
             if "fallback_states" in state:
                 for substate in state["fallback_states"]:
-                    add_or_append(substate, state_refs, f"fallback states of {substate} in {state['name']}")
+                    add_or_append(substate, state_refs, f"fallback states in {state['name']}")
             for intent, adjacent in state["intents"].items():
                 add_or_append(intent, intent_refs, f"intents in state {state['name']}")
                 for substate in adjacent:
-                    add_or_append(substate, state_refs, f"adjacent {substate} of intent {intent} in state {state['name']}")
+                    add_or_append(substate, state_refs, f"adjacent {substate} in state {state['name']}")
 
         for intent in bot ["intents"]:
             for substate in intent["iterate_states"]:
-                add_or_append(substate, state_refs, f"iterate states of {substate} in {intent['name']}")
+                add_or_append(substate, state_refs, f"iterate states in {intent['name']}")
             for subintent in intent["context_intents"]:
-                add_or_append(subintent, intent_refs, f"context intents of {subintent} in {intent['name']}")
+                add_or_append(subintent, intent_refs, f"context intents in {intent['name']}")
             for state in intent["adjacent"]:
                 add_or_append(state, state_refs, f"adjacent in {intent['name']}")
 
