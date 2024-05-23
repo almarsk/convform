@@ -310,6 +310,7 @@ class ConversationStatus:
             "emphasis": say["emphasis"],
             "log": self.add_to_prompt_log,
             "chain": say["prompt"],
+            "checkpoints": self.checkpoints
         } for say in self.raw_say if say["prompt"]]
 
         with ThreadPoolExecutor() as exec:
