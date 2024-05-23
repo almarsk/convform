@@ -12,8 +12,8 @@ def b_dynamic(args, bench=False):
 
     # goes back to first checkpoint if there is one
 
-    checkpoint = (args["checkpoint"]
-        if "checkpoint" in args
+    checkpoint = (args["checkpoints"][0]
+        if "checkpoints" in args and args["checkpoints"]
         else len(args["context"])
         if "context" in args
         else 0)
