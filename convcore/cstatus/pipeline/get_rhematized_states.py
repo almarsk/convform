@@ -2,7 +2,7 @@ from os import setuid
 import pprint
 from sys import getswitchinterval
 
-def get_rhematized_states(flow, states, context_states, usage, coda, time_to_initiate):
+def get_rhematized_states(flow, states, context_states, usage, coda, time_to_initiate, fallback_states):
 
     # order adjacents by index
     ordered_states = [
@@ -61,6 +61,10 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         track_state = add_least_iterated_non_over_iterated(flow.track, flow, usage)
         if track_state:
             rhematized_states.append(track_state)
+
+    if not rhematized_states:
+        # add fallback states
+        rhematized_states.append(fallback_states)
 
     # this effectively sets coda to true, because states that are in coda will be found in last states
     if not rhematized_states:

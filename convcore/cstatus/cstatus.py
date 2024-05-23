@@ -40,6 +40,8 @@ class ConversationStatus:
 
     def __init__(self, user_speech, flow, prev_cs, structure=False):
 
+        get_full_state = lambda state: [s for s in flow.states if s.name == state][0]
+
         # number of bot turns
         # increments at the end of __init__
         self.bot_turns = (
@@ -83,7 +85,10 @@ class ConversationStatus:
             prev_cs["coda"],
             prev_cs["initiativity"] - prev_cs["turns_since_initiative"] <= 0,
             self.matched_intents,
-            prev_cs["intent_usage"]
+            prev_cs["intent_usage"],
+            [fb_state   for state in prev_cs["last_states"]
+                        for fb_state_list in getattr(get_full_state(state), "fallback_states", [])
+                        for fb_state in fb_state_list]
             )
         )
 
@@ -209,7 +214,7 @@ class ConversationStatus:
         is_checkpoint = any(getattr(get_full_intent(intent), "checkpoint", False) for intent in self.matched_intents)
         return prev_checkpoints + ([self.bot_turns] if is_checkpoint else [])
 
-    def rhematize(self, flow, context_states, usage, coda, time_to_initiate, matched_intents, intent_usage):
+    def rhematize(self, flow, context_states, usage, coda, time_to_initiate, matched_intents, intent_usage, fallback_states):
         get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]
 
         usage_aware_matched_intents = dict()
@@ -223,7 +228,8 @@ class ConversationStatus:
             context_states,
             usage,
             coda,
-            time_to_initiate
+            time_to_initiate,
+            fallback_states
         )
 
     def update_turns_since_initiative(self, previous_number_of_turns, flow):
