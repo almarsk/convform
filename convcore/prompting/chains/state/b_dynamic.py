@@ -13,13 +13,6 @@ def b_dynamic(args, bench=False):
     checkpoint = args["checkpoint"] if "checkpoint" in args else 0
     how_far = len(args["context"]) - checkpoint if "context" in args else 0
 
-    if "prompt" in args:
-        split = args["prompt"].split("|")
-        if len(split) > 1:
-            [text, distance] = split
-            how_far = int(distance)
-            args["prompt"] = text
-
     used_context = []
     if "context" in args:
         context_len = len(args["context"])
