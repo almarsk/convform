@@ -27,7 +27,7 @@ def basic(args, bench=False):
 
         messages+=[SystemMessage(content=f"""\
 Robot {args["prompt"]}. \
-Vezme přitom v potaz informace v předchozí konverzaci a na základě nich odhadne nejlepší možnou odpověď.\
+Vezme přitom v potaz předchozí konverzaci a vymyslí vohdnou další odpověď.\
 Odpovídá stručně, jednou větou, maximálně 10 slov.
 
 Jasně, odpověď by mohla vypadat třeba takhle:""")]
