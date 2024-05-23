@@ -3,12 +3,15 @@ from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
 
-from convcore.prompting.chains.state.basic import basic
+from convcore.prompting.chains.state.anafora import anafora
 
 import time
 
 def b_dynamic(args, bench=False):
-    how_far = len(args["context"]) - 3 if "context" in args else 0
+    # goes back to first checkpoint if there is one
+
+    checkpoint = args["checkpoint"] if "checkpoint" in args else 0
+    how_far = len(args["context"]) - checkpoint if "context" in args else 0
 
     if "prompt" in args:
         split = args["prompt"].split("|")
@@ -27,4 +30,4 @@ def b_dynamic(args, bench=False):
 
     args["context"] = used_context
 
-    return basic(args, bench=bench)
+    return anafora(args, bench=bench)

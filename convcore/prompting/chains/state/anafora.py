@@ -6,8 +6,8 @@ from langchain_core.messages.ai import AIMessage
 
 from convcore.prompting.chains.state.basic import basic
 
-def anafora(args):
-    answer = basic(args)
+def anafora(args, bench=False):
+    answer = basic(args, bench)
 
     messages = [
         SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno. Ostatní tematická centra nech jak jsou."),
