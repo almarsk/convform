@@ -20,6 +20,9 @@ def proof_references(bot, issues):
             if "context_intents" in state:
                 for intent in state["context_intents"]:
                     add_or_append(intent, intent_refs, f"context intents of {intent} in {state['name']}")
+            if "fallback_states" in state:
+                for state in state["fallback_states"]:
+                    add_or_append(state, state_refs, f"fallback states of {state} in {state['name']}")
             for intent, adjacent in state["intents"].items():
                 add_or_append(intent, intent_refs, f"intents in state {state['name']}")
                 for substate in adjacent:
