@@ -13,7 +13,7 @@ def anafora(args, bench=False):
         SystemMessage(content="najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno. Ostatní tematická centra nech jak jsou."),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
-        SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
+        SystemMessage(content="Jasně! Upravená věta bez speciálního formátování bude vypadat takhle:")
     ]
     try:
         chat = ChatOpenAI(model="gpt-4o", temperature=0.3)

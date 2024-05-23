@@ -37,7 +37,7 @@ A co máš rád třeba ty?
 Tato promluva postrádá entitu, přestože je v ní osobní zájmeno, výstup je tedy [].
 příklad:
 Jak se máš Karle?
-Tato promluva postrádá entitu, je v ní zmíněn pouze účastník komunikace, výstup je tedy [].
+Tato promluva postrádá entitu, protože účastník komunikace nikdy není entitou, výstup je tedy [].
 
 Zvaž, která slova jsou entity v následující větě:
 
@@ -47,7 +47,8 @@ Zvaž význam každého podstatného jména ve větě a zvaž, zda by mohlo pře
 a ne jen abstraktní pojem. \
 Uvažuj o všech možných objektech, které by mohly být v promluvě zmiňovány \
 a zvaž, zda by mohla být jejich jména považována za entity. \
-Nezapomeň, že slovesa ani zájmena nejsou entity, i když reprezentují osoby.
+Nezapomeň, že slovesa ani zájmena nejsou entity, i když reprezentují osoby. \
+Mysli na to, že účastníci konverzace nejsou entitami.
 
 Velmi stručně odůvodni úvahu a uveď slova vybraná jako entity v hranatých závorkách ve fromátu JSON array. \
 Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
@@ -63,17 +64,26 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
         result = str(chat.invoke(messages).content)
         if bench:
             print(result)
+
+        print("r", result)
         json_output = re.findall(str(r"\[.*\]"), result)
+
+        print("j")
+        for j in json_output:
+            print(j)
+            print(json.loads(j))
 
         if bench:
             end_time = time.time()
             elapsed_time = end_time - start_time
             print("elapsed:", elapsed_time, "seconds")
+
         entities = json.loads(json_output[-1])
         if bench:
             print(entities)
 
         if "log" in args:
+            args["log"](["entities:"])
             args["log"]([entities])
         if entities:
             return 0
