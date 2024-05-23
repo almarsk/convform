@@ -88,9 +88,6 @@ class ConversationStatus:
             prev_cs["intent_usage"],
             [fb_state   for state in prev_cs["last_states"]
                         for fb_state in getattr(get_full_state(state), "fallback_states", [])]
-
-
-
             )
         )
 
@@ -289,6 +286,7 @@ class ConversationStatus:
                 intent_usage[matched_intent] = get_full_intent(matched_intent).iteration - 1
             except:
                 intent_usage[matched_intent] = 1
+                intent_usage["issue"] = 100
 
 
         return intent_usage
