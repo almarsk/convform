@@ -43,8 +43,8 @@ class ConversationStatus:
         # number of bot turns increments
         self.bot_turns = (
             0 if prev_cs is None
-            else prev_cs["bot_turns"]
-        ) + 2
+            else prev_cs["bot_turns"] + 2
+        )
 
         # move last states of previous cso to previous last states of current cso
         self.previous_last_states = (
