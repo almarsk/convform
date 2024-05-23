@@ -282,11 +282,15 @@ class ConversationStatus:
         matched_intents_names = self.matched_intents.keys()
 
         for matched_intent in matched_intents_names:
-            try:
-                intent_usage[matched_intent] = get_full_intent(matched_intent).iteration - 1
-            except:
-                intent_usage[matched_intent] = 1
-                intent_usage["issue"] = 100
+
+            if matched_intent not in intent_usage:
+                try:
+                    intent_usage[matched_intent] = get_full_intent(matched_intent).iteration - 1
+                except:
+                    intent_usage[matched_intent] = 1
+                    intent_usage["issue"] = 100
+            else:
+                intent_usage[matched_intent] -= 1
 
 
         return intent_usage
