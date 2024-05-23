@@ -2,7 +2,12 @@ from os import setuid
 import pprint
 from sys import getswitchinterval
 
+debug = True
+
 def get_rhematized_states(flow, states, context_states, usage, coda, time_to_initiate, fallback_states):
+
+    if debug:
+        print("states", states)
 
     # order adjacents by index
     ordered_states = [
@@ -16,7 +21,13 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         for state in states
     ]
 
+    if debug:
+        print("ordered states", ordered_states)
+
     ordered_states += [state for state in context_states if state not in ordered_states]
+
+    if debug:
+        print("os + context", ordered_states)
 
     get_full_state = lambda searched_state: [
         state
@@ -31,6 +42,8 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
 
     # only use one initiative and append it at the end
     for state in ordered_states:
+        if debug:
+            print("candidate and current", state, rhematized_states)
         full_state = get_full_state(state)
         is_connective = full_state.response_type == "connective"
         if is_connective:
@@ -52,25 +65,40 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
 
     rhematized_states += (initiatives[-1] if initiatives else [])
 
+    if debug:
+        print("rhem + init", rhematized_states)
+
     emphasised = [state for state in rhematized_states if get_full_state(state).emphasis]
 
     if emphasised:
         return [emphasised[-1]]
+
+    if debug:
+        print("rhem + emph", rhematized_states)
 
     if not initiatives and not coda and time_to_initiate:
         track_state = add_least_iterated_non_over_iterated(flow.track, flow, usage)
         if track_state:
             rhematized_states.append(track_state)
 
+    if debug:
+        print("rhem + track", rhematized_states)
+
     if not rhematized_states:
         # add fallback states
         rhematized_states += fallback_states
+
+    if debug:
+        print("rhem + fallback", rhematized_states)
 
     # this effectively sets coda to true, because states that are in coda will be found in last states
     if not rhematized_states:
         coda_state = add_least_iterated_non_over_iterated(flow.coda, flow, usage)
         if coda_state:
             rhematized_states.append(coda_state)
+
+    if debug:
+        print("coda", rhematized_states)
 
     return rhematized_states
 
