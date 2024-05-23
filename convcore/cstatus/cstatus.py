@@ -87,8 +87,10 @@ class ConversationStatus:
             self.matched_intents,
             prev_cs["intent_usage"],
             [fb_state   for state in prev_cs["last_states"]
-                        for fb_state_list in getattr(get_full_state(state), "fallback_states", [])
-                        for fb_state in fb_state_list]
+                        for fb_state in getattr(get_full_state(state), "fallback_states", [])]
+
+
+
             )
         )
 
@@ -262,6 +264,8 @@ class ConversationStatus:
             if state not in previous_state_usage:
                 previous_state_usage[state] = 0
             previous_state_usage[state] += 1
+
+            print(state)
 
             for iterated in get_full_state(state).iterate_states:
                 if iterated not in previous_state_usage:
