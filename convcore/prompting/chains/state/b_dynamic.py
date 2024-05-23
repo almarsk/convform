@@ -8,10 +8,14 @@ from convcore.prompting.chains.state.anafora import anafora
 import time
 
 def b_dynamic(args, bench=False):
+    args["log"](["b_dynamic"])
+
     # goes back to first checkpoint if there is one
 
     checkpoint = args["checkpoint"] if "checkpoint" in args else 0
     how_far = len(args["context"]) - checkpoint if "context" in args else 0
+
+    args["log"]([f"checkpoint {checkpoint}, how far {how_far}"])
 
     used_context = []
     if "context" in args:
