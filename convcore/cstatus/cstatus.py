@@ -21,6 +21,7 @@ class ConversationStatus:
     possible_intents: Any
     prompt_log: Any
     matched_intents: Any
+    checkpoints: list
     last_states: list
     turns_since_initiative: int
     initiativity: int
@@ -66,6 +67,11 @@ class ConversationStatus:
             prev_cs["turns_history"]+[{"say": user_speech, "who": "human"}] if prev_cs is not None else [],
             prev_cs["last_states"] if prev_cs else [])
 
+        # update checkpoints
+        self.checkpoints = self.gather_checkpoints(
+            [] if prev_cs is None else prev_cs["checkpoints"],
+            flow
+        )
 
         # process adjacent states to have max one initiative etc
         self.last_states = [] if structure else ([flow.track[0]]
@@ -192,6 +198,16 @@ class ConversationStatus:
 
         return matched_intents
 
+    def gather_checkpoints(self, prev_checkpoints, flow):
+        get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]
+        def safe_int(value):
+            try:
+                return int(value)
+            except (ValueError, TypeError):
+                return None
+        prev_checkpoints = [point for point in (safe_int(point) for point in prev_checkpoints) if point is not None]
+        is_checkpoint = any(getattr(get_full_intent(intent), "checkpoint", False) for intent in self.matched_intents)
+        return prev_checkpoints + ([self.bot_turns] if is_checkpoint else [])
 
     def rhematize(self, flow, context_states, usage, coda, time_to_initiate, matched_intents, intent_usage):
         get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]

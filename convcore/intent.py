@@ -7,6 +7,7 @@ class Intent:
     iteration: int
     context_intents: list
     iterate_states: list
+    checkpoint: bool
 
     def __init__(self, intent):
         self.name = intent.get("name", "")
@@ -15,3 +16,4 @@ class Intent:
         self.iteration = intent.get("iteration", 1)
         self.context_intents = intent.get("context_intents", [])
         self.iterate_states = intent.get("iterate_states", [])
+        self.checkpoint = intent.get("checkpoint", False)
