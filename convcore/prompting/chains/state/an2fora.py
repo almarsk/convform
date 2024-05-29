@@ -27,7 +27,8 @@ Nezapomeň také vynechat slova, která jsou případně součástí jmenné fr�
 Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - \
 sloveso pak bude často až na konci věty; je třeba dodržet pořadí příklonek - \
 nahrazovací zájmeno přijde pro zvratném a osobním zájmeně. Je také třeba správně rozeznat důležitější slovo - \
-vol to, o kterém je otázka.
+vol to, o kterém je otázka. \
+Pro zachování přirozenosti je občas potřeba taky upravit větu tak, že obsahuje vedlejší větu.
 
 příklad1:
 věta:
@@ -54,6 +55,14 @@ jaká je tvoje oblíbená káva v té kavárně?
 nahrazované slovo bude "kavárně", protože se nachází v kontextu. kvůli přirozenému slovosledu bude potřeba nahrazovací zájmeno předsunout.
 tvoje odpověď:
 jaká je v ní tvoje oblíbená káva?
+
+příklad4:
+věta:
+Máš nějaký trik na rychlé a efektivní žehlení košil?
+úvaha:
+nahrazované slovo bude "košile" a protože je věta složitá a nelze snadno předsunout sloveso, vyřeší to věta vedlejší.
+tvoje odpověď:
+Máš nějaký trik, jak je rychle a efektivně žehlit?
 
 úvahu vynech."""),
         SystemMessage(content="věta:"),
