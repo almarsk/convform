@@ -6,25 +6,34 @@ from langchain_core.messages.ai import AIMessage
 
 from convcore.prompting.chains.state.basic import basic
 
-def an2fora(args):
-    answer = basic(args)
-    messages= []
+def anafora(args, bench=False):
+    answer = basic(args, bench)
 
-    if args["context"]:
-        last_turn = args["context"][-1]
-        messages += [SystemMessage(content="poslední odpověď uživatele:"),
-            SystemMessage(content=f"{last_turn['who']}: {last_turn['say']}")
-        ]
+    messages = [
+        SystemMessage(content="""\
+úkol:
+najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno. Ostatní tematická centra nech jak jsou. Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - sloveso pak bude často až na konci věty; je třeba dodržet pořadí příklonek - nahrazovací zájmeno přijde pro zvratném a osobním zájmeně. Je také třeba správně rozeznat důležitější slovo - vol to, o kterém je otázka.
 
-    messages += [
-        SystemMessage(content="\
-slovo, které spojuje větu s kontextem nahraď osobním nebo vztažným zájmenem. \
-Určitě proveď záměnu, odstranit slovo nestačí, je nutné osobní nebo vztažné zájmeno přidat. \
-Pokud tam není doslovně, osobní nebo vztažné zájemno přidej. \
-Ostatní tematická centra nech jak jsou."),
+příklad1:
+věta:
+A o čem bude tvoje seminárka?
+úvaha:
+nahrazované slovo bude seminárka. slovo "tvoje" patří do jmenné fráze nahrazovaného slova.
+tvoje odpověď:
+A o čem ona bude?
+
+příklad2:
+věta:
+jak daleko od tvého domu je tvůj oblíbený park?
+úvaha:
+nahrazované slovo bude "park", je ve větě důležitější než slovo "domu". slovo "tvůj" patří do jmenné fráze nahrazovaného slova stejně jako slovo "oblíbený".
+tvoje odpověď:
+jak daleko od tvého odmu on je?
+
+úvahu vynech."""),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
-        SystemMessage(content="Jasně! Upravená věta bude vypadat takhle:")
+        SystemMessage(content="Jasně! Upravená věta bez speciálního formátování bude vypadat takhle:")
     ]
     try:
         chat = ChatOpenAI(model="gpt-4o", temperature=0.3)
