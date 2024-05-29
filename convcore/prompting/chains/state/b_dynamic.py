@@ -3,7 +3,7 @@ from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
 
-from convcore.prompting.chains.state.anafora import anafora
+from convcore.prompting.chains.state.an2fora import an2fora
 
 import time
 
@@ -31,4 +31,4 @@ def b_dynamic(args, bench=False):
 
     args["context"] = used_context
 
-    return anafora(args, bench=bench)
+    return an2fora(args, bench=bench)

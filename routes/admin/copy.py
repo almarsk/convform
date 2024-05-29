@@ -28,7 +28,7 @@ def copy_flow():
                 base = "-".join(split[0:-1])
             else:
                 base = source_flow.flow_name
-            new_name = f"{base}_{str(index)}"
+            new_name = f"{base}-{str(index)}"
 
         item = Flow(
             flow_name=new_name,

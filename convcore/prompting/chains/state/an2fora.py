@@ -8,26 +8,10 @@ from convcore.prompting.chains.state.basic import basic
 
 def an2fora(args, bench=False):
     answer = basic(args, bench)
-
-    messages = []
-    if args["context"]:
-        last_turn = args["context"][-1]
-        messages += [SystemMessage(content="poslední odpověď uživatele:"),
-                SystemMessage(content=f"{last_turn['who']}: {last_turn['say']}")
-            ]
-        messages += [SystemMessage(content="""\
-úkol:
-najdi ve větě jedno hlavní slovo, které větu spojuje s kontextem a vyměň ho za osobní nebo vztažné zájmeno.
-""")]
-    else:
-        messages += [SystemMessage(content="""\
-úkol:
-najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno.
-""")]
-
-
-    messages += [
+    input = [
         SystemMessage(content="""\
+úkol:
+najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno. \
 Ostatní tematická centra nech jak jsou. \
 Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. \
 Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - \
@@ -58,8 +42,8 @@ jak daleko od tvého odmu on je?
     ]
     try:
         chat = ChatOpenAI(model="gpt-4o", temperature=0.3)
-        result = chat.invoke(messages)
-        args["log"]([[m.content for m in messages], str(result.content)])
+        result = chat.invoke(input)
+        args["log"]([[m.content for m in input], str(result.content)])
         return str(result.content)
 
     except Exception as e:
