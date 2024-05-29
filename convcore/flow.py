@@ -9,6 +9,7 @@ class Flow:
     coda: list
     instructions: str
     persona: str
+    description: str
     states: list
     intents: list
     def __init__(self, flow_name, structure=False):
@@ -20,5 +21,6 @@ class Flow:
         self.coda = flow.get("coda", [])
         self.instructions = flow.get("instructions", [])
         self.persona = flow.get("persona", [])
+        self.description = flow.get("description", "")
         self.states = [State(state) for state in flow.get("states", [])]
-        self.intents = [Intent(intent) for intent in flow.get("intents", [])]
+        self.description = [Intent(intent) for intent in flow.get("intents", [])]
