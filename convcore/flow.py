@@ -23,4 +23,4 @@ class Flow:
         self.persona = flow.get("persona", [])
         self.description = flow.get("description", "")
         self.states = [State(state) for state in flow.get("states", [])]
-        self.description = [Intent(intent) for intent in flow.get("intents", [])]
+        self.intents = [Intent(intent) for intent in flow.get("intents", [])]
