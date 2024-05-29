@@ -8,10 +8,20 @@ from convcore.prompting.chains.state.basic import basic
 
 def an2fora(args, bench=False):
     answer = basic(args, bench)
-    input = [
+    input = list()
+
+    if args["context"] and not args["emphasis"]:
+        input += [SystemMessage(content="context:")]
+        input += [
+            SystemMessage(content=f"{say['who']}: {say['say']}")
+            for say in args["context"]
+        ]
+
+
+    input += [
         SystemMessage(content="""\
 úkol:
-najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno. \
+najdi ve větě jedno hlavní slovo, které větu spojuje s kontextem a vyměň ho za osobní nebo vztažné zájmeno. \
 Ostatní tematická centra nech jak jsou. \
 Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. \
 Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - \
