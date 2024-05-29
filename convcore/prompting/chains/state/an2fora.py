@@ -6,13 +6,34 @@ from langchain_core.messages.ai import AIMessage
 
 from convcore.prompting.chains.state.basic import basic
 
-def anafora(args, bench=False):
+def an2fora(args, bench=False):
     answer = basic(args, bench)
 
-    messages = [
-        SystemMessage(content="""\
+    messages = []
+    if args["context"]:
+        last_turn = args["context"][-1]
+        messages += [SystemMessage(content="poslední odpověď uživatele:"),
+                SystemMessage(content=f"{last_turn['who']}: {last_turn['say']}")
+            ]
+        messages += [SystemMessage(content="""\
 úkol:
-najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno. Ostatní tematická centra nech jak jsou. Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - sloveso pak bude často až na konci věty; je třeba dodržet pořadí příklonek - nahrazovací zájmeno přijde pro zvratném a osobním zájmeně. Je také třeba správně rozeznat důležitější slovo - vol to, o kterém je otázka.
+najdi ve větě jedno hlavní slovo, které větu spojuje s kontextem a vyměň ho za osobní nebo vztažné zájmeno.
+""")]
+    else:
+        messages += [SystemMessage(content="""\
+úkol:
+najdi ve větě jedno hlavní slovo, o kterém věta je a vyměň ho za osobní nebo vztažné zájmeno.
+""")]
+
+
+    messages += [
+        SystemMessage(content="""\
+Ostatní tematická centra nech jak jsou. \
+Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. \
+Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - \
+sloveso pak bude často až na konci věty; je třeba dodržet pořadí příklonek - \
+nahrazovací zájmeno přijde pro zvratném a osobním zájmeně. Je také třeba správně rozeznat důležitější slovo - \
+vol to, o kterém je otázka.
 
 příklad1:
 věta:
