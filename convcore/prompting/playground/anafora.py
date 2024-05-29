@@ -1,22 +1,12 @@
-from langchain_core import messages
+
 from langchain_openai import ChatOpenAI, OpenAI
 from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
 from langchain_core.messages.ai import AIMessage
 
-from convcore.prompting.chains.state.basic import basic
-
 def an2fora(args, bench=False):
-    answer = basic(args, bench)
+    answer = "Poradíš mi s efektivním česáním třešní?"
     input = list()
-
-    if args["context"] and not args["emphasis"]:
-        input += [SystemMessage(content="context:")]
-        input += [
-            SystemMessage(content=f"{say['who']}: {say['say']}")
-            for say in args["context"]
-        ]
-
 
     input += [
         SystemMessage(content="""\
@@ -73,7 +63,6 @@ Máš nějaký trik, jak je rychle a efektivně žehlit?
     try:
         chat = ChatOpenAI(model="gpt-4o", temperature=0.3)
         result = chat.invoke(input)
-        args["log"]([[m.content for m in input], str(result.content)])
         return str(result.content)
 
     except Exception as e:
