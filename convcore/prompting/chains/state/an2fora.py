@@ -20,7 +20,7 @@ def an2fora(args, bench=False):
 
     input += [
         SystemMessage(content="""\
-úkol:
+úkol: \
 najdi ve větě jedno hlavní slovo, které větu spojuje s kontextem a vyměň ho za osobní nebo vztažné zájmeno. \
 Ostatní tematická centra nech jak jsou. \
 Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. \
@@ -44,6 +44,16 @@ jak daleko od tvého domu je tvůj oblíbený park?
 nahrazované slovo bude "park", je ve větě důležitější než slovo "domu". slovo "tvůj" patří do jmenné fráze nahrazovaného slova stejně jako slovo "oblíbený".
 tvoje odpověď:
 jak daleko od tvého odmu on je?
+
+příklad3:
+kontext:
+půjdu do kavárny
+věta:
+jaká je tvoje oblíbená káva v té kavárně?
+úvaha:
+nahrazované slovo bude "kavárně", protože se nachází v kontextu. kvůli přirozenému slovosledu bude potřeba nahrazovací zájmeno předsunout.
+tvoje odpověď:
+jaká je v ní tvoje oblíbená káva?
 
 úvahu vynech."""),
         SystemMessage(content="věta:"),
