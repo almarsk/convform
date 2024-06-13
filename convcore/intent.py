@@ -5,6 +5,7 @@ class Intent:
     match_against: list[tuple[Say,str]]
     adjacent: list
     iteration: int
+    initiativity: int
     context_intents: list
     iterate_states: list
     checkpoint: bool
@@ -14,6 +15,7 @@ class Intent:
         self.match_against = intent.get("match_against", [])
         self.adjacent = intent.get("adjacent", [])
         self.iteration = intent.get("iteration", 1)
+        self.initiativity = intent.get("initiativity", 1)
         self.context_intents = intent.get("context_intents", [])
         self.iterate_states = intent.get("iterate_states", [])
         self.checkpoint = intent.get("checkpoint", False)

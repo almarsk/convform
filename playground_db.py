@@ -22,7 +22,7 @@ def insert_data(cursor, data):
                             VALUES (?, ?, ?, ?, ?)''',
                             data)
 
-insert_data(cursor,("ondrojd", 1, load_json("bots/f_Ondroid-un-rel.json"), 0, datetime.utcnow()))
+insert_data(cursor,("qq", 1, load_json("bots/qq.json"), 0, datetime.utcnow()))
 
 
 # Commit changes and close connection

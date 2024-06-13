@@ -235,7 +235,7 @@ class ConversationStatus:
 
 
     def update_initiative(self, flow, prev_value):
-        return get_current_initiativity(self.last_states, flow, prev_value)
+        return get_current_initiativity(self.last_states, self.matched_intents, flow, prev_value)
 
 
     def get_context_states(self, flow):
