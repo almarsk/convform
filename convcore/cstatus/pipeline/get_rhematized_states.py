@@ -2,7 +2,7 @@ from os import setuid
 import pprint
 from sys import getswitchinterval
 
-debug = False
+debug = True
 
 def get_rhematized_states(flow, states, context_states, usage, coda, time_to_initiate, fallback_states):
 
@@ -45,33 +45,54 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         if debug:
             print("candidate and current", state, rhematized_states)
         full_state = get_full_state(state)
+
+        if debug:
+            print("emph", state, full_state.emphasis)
+
         is_connective = full_state.response_type == "connective"
         if is_connective:
             previous_connective = full_state.name
+            if debug:
+                print("connective", state)
             continue
 
         is_overiterated = full_state.iteration >= 0 and full_state.iteration - usage.get(state, 0) < 0
         is_initiative = full_state.response_type == "initiative" or full_state.response_type == "flexible"
 
         if is_initiative and not is_overiterated:
+            if debug:
+                print("init non over iter", state)
             initiatives.append([previous_connective, state] if previous_connective else [state])
             continue
 
+            if debug:
+                print("is init and is over", is_initiative, is_overiterated)
+
         elif not is_initiative and not is_overiterated and state not in rhematized_states:
+            print("responsive non over", state)
+
             if previous_connective:
                 rhematized_states.append(previous_connective)
             rhematized_states.append(state)
         previous_connective = ""
 
-    rhematized_states += (initiatives[-1] if initiatives else [])
+    if debug:
+        print("pre emph rhem", rhematized_states)
+
+    emphasised = [state for state in rhematized_states if get_full_state(state).emphasis]
+
+    if debug:
+        print("emph", emphasised)
+
+    if emphasised:
+        return [emphasised[-1]]
+    else:
+        print("not emph")
+        rhematized_states += (initiatives[-1] if initiatives else [])
 
     if debug:
         print("rhem + init", rhematized_states)
 
-    emphasised = [state for state in rhematized_states if get_full_state(state).emphasis]
-
-    if emphasised:
-        return [emphasised[-1]]
 
     if debug:
         print("rhem + emph", rhematized_states)
@@ -113,5 +134,7 @@ def add_least_iterated_non_over_iterated(states, flow, usage):
             if get_full_state(state).iteration >= 0
             and get_full_state(state).iteration - usage.get(state, 0) > 0
     ]
+
+    print(candidates)
 
     return candidates[0] if candidates else None
