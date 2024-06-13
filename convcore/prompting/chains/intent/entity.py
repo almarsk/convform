@@ -38,6 +38,9 @@ Tato promluva postrádá entitu, přestože je v ní osobní zájmeno, výstup j
 příklad:
 Jak se máš Karle?
 Tato promluva postrádá entitu, protože účastník komunikace nikdy není entitou, výstup je tedy [].
+příklad:
+Jenom doufám, že nebude moc zima.
+Tato promluva postrádá entitu, protože atmosferický jev nikdy není entitou, výstup je tedy [].
 
 Zvaž, která slova jsou entity v následující větě:
 
