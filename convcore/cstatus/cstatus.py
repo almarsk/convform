@@ -305,7 +305,7 @@ class ConversationStatus:
         for state in self.last_states:
             full_state = get_full_state(state)
             say_info = full_state.say[random.randint(0, len(full_state.say) - 1)]
-            say_info["emphasis"] = full_state.emphasis
+            say_info["emphasis"] = full_state.cut_context if hasattr(full_state, "cut_context") else full_state.emphasis
             raw_says.append(
                 say_info
             )
