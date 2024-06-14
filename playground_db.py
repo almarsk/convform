@@ -22,7 +22,13 @@ def insert_data(cursor, data):
                             VALUES (?, ?, ?, ?, ?)''',
                             data)
 
-insert_data(cursor,("qqq", 1, load_json("bots/qqq.json"), 0, datetime.utcnow()))
+for bot in [
+    "f_AutoMarta-sh-rel.json",
+    "f_Elizabota-sh-inq.json",
+    "f_Ondroid-un-inq.json",
+    "f_Vladimatik-un-rel.json"
+]:
+    insert_data(cursor,(bot.strip(".json"), 1, load_json(f"bots/exp1/{bot}"), 0, datetime.utcnow()))
 
 
 # Commit changes and close connection

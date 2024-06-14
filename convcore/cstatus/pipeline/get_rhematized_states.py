@@ -60,7 +60,7 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
             print("usage",usage)
             print("iter", full_state.iteration)
 
-        is_overiterated = full_state.iteration >= 0 or full_state.iteration - usage.get(state, 0) <= 0
+        is_overiterated = full_state.iteration <= 0 or full_state.iteration - usage.get(state, 0) <= 0
         is_initiative = full_state.response_type == "initiative" or full_state.response_type == "flexible"
 
         if is_initiative and not is_overiterated:
