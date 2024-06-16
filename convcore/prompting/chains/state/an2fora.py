@@ -7,6 +7,14 @@ from langchain_core.messages.ai import AIMessage
 from convcore.prompting.chains.state.basic import basic
 
 def an2fora(args, bench=False):
+
+    topic = None
+    if "about_what" in args:
+        topic = args["about_what"][-1]
+        # change for a call which specifies what to ask about
+        args["log"](["todo changes basic to about what call"])
+        args["prompt"] = f"se zeptá zeptá na doplňující otázku k tématu {args["topic"]}"
+
     answer = basic(args, bench)
     input = list()
 
@@ -17,11 +25,14 @@ def an2fora(args, bench=False):
             for say in args["context"]
         ]
 
+    task = ("najdi ve větě jedno hlavní slovo a vyměň ho za osobní nebo vztažné zájmeno."
+        if not topic
+        else f"slovo {topic} ve vyměň za osobní nebo vztažné zájmeno.")
 
     input += [
-        SystemMessage(content="""\
+        SystemMessage(content=f"""\
 úkol: \
-najdi ve větě jedno hlavní slovo a vyměň ho za osobní nebo vztažné zájmeno. \
+{task} \
 Ostatní tematická centra nech jak jsou. \
 Nezapomeň také vynechat slova, která jsou případně součástí jmenné fráze nahrazovaného slova. \
 Nezapomeň také, že v případě nahrazení podstatného jména zájmenem je často třeba změnit slovosled - \

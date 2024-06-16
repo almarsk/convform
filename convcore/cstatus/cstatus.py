@@ -20,6 +20,7 @@ class ConversationStatus:
     prompt_log: Any
     matched_intents: Any
     checkpoints: list
+    checkpoints_contents: list
     last_states: list
     turns_since_initiative: int
     initiativity: int
@@ -58,6 +59,7 @@ class ConversationStatus:
         )
 
         self.prompt_log = []
+        self.entities = []
 
         # decide which intents have been matched
         self.matched_intents = self.match_intents(
@@ -163,6 +165,10 @@ class ConversationStatus:
         self.prompt_log += addition
 
 
+    def add_to_entities_list(self, addition):
+        self.entities += addition
+
+
     def match_intents(self, user_speech, flow, history, prev_last_states):
         to_match_intent_names = dict(self.possible_intents)
         if not to_match_intent_names:
@@ -179,6 +185,7 @@ class ConversationStatus:
             "match_against": pattern.match_against,
             "adjacent": pattern.adjacent,
             "log": self.add_to_prompt_log,
+            "entities": self.add_to_entities_list,
             "history": history,
             "user_speech": user_speech,
         } for pattern in [get_full_intent(intent) for intent in to_match_intent_names]]
@@ -200,6 +207,7 @@ class ConversationStatus:
 
         return matched_intents
 
+
     def gather_checkpoints(self, prev_checkpoints, flow):
         get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]
         def safe_int(value):
@@ -208,8 +216,11 @@ class ConversationStatus:
             except (ValueError, TypeError):
                 return None
         prev_checkpoints = [point for point in (safe_int(point) for point in prev_checkpoints) if point is not None]
+
+        # is any of matched intents marked as a "checkpoint" intent?
         is_checkpoint = any(getattr(get_full_intent(intent), "checkpoint", False) for intent in self.matched_intents)
         return prev_checkpoints + ([self.bot_turns] if is_checkpoint else [])
+
 
     def rhematize(self, flow, context_states, usage, coda, time_to_initiate, matched_intents, intent_usage, fallback_states):
         get_full_intent = lambda intent: [i for i in flow.intents if i.name == intent][0]
@@ -321,7 +332,8 @@ class ConversationStatus:
             "emphasis": say["emphasis"],
             "log": self.add_to_prompt_log,
             "chain": say["prompt"],
-            "checkpoints": self.checkpoints
+            "checkpoints": self.checkpoints,
+            "entities_all": self.entities
         } for say in self.raw_say if say["prompt"]]
 
         with ThreadPoolExecutor() as exec:

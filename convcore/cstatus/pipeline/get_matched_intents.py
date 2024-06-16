@@ -21,6 +21,7 @@ def get_matched_intents(pattern):
                 "convo": pattern["history"],
                 "log": pattern["log"],
                 "speech": pattern["user_speech"],
+                "entities": pattern["entities"] if "entities" in pattern else None
             })))
         else:
             matches.append((pattern["intent_name"],string_match(pattern_item["text"], pattern["user_speech"])))

@@ -88,9 +88,15 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
         if "log" in args:
             args["log"](["entities:"])
             args["log"]([entities])
+
+        if "entities" in args:
+            args["entities"](entities)
+
         if entities:
             return 0
         else:
             return -1
     except:
+        if "entities" in args:
+            args["entities"]([])
         return -1

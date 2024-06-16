@@ -9,6 +9,9 @@ import pprint
 import time
 
 def enstity(args, bench=False):
+    if "entities" in args:
+        args["entities"]([])
+
     start_time = 0
     if bench:
         start_time = time.time()

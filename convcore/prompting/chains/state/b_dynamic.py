@@ -1,3 +1,4 @@
+import sys
 from langchain_openai import ChatOpenAI, OpenAI
 from langchain_core.messages.system import SystemMessage
 from langchain_core.messages.human import HumanMessage
@@ -30,5 +31,6 @@ def b_dynamic(args, bench=False):
             used_context = args["context"][0:checkpoint]
 
     args["context"] = used_context
+    args["about_what"] = args["entities_all"][checkpoint]
 
     return an2fora(args, bench=bench)

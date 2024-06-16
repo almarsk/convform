@@ -7,6 +7,8 @@ import json
 import pprint
 
 def basic(args):
+    if "entities" in args:
+        args["entities"]([])
     chat = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0.5)
 
     messages: list[HumanMessage | AIMessage | SystemMessage] = [
