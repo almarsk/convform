@@ -59,7 +59,10 @@ class ConversationStatus:
             else self.to_match(flow, prev_cs["context_intents"])
         )
 
+        # log llm calls
         self.prompt_log = []
+
+        # save entities
         self.entity = []
 
         # decide which intents have been matched
@@ -134,9 +137,9 @@ class ConversationStatus:
         # check if coda has started
         self.coda = self.check_for_coda(flow)
 
+        # store entities
         self.entities = ([[]] if prev_cs is None
             else prev_cs["entities"] + self.entity + [[]])
-
 
         # assemble reply
         self.raw_say = self.assemble_reply(flow)
@@ -305,7 +308,6 @@ class ConversationStatus:
                     intent_usage["issue"] = 100
             else:
                 intent_usage[matched_intent] -= 1
-
 
         return intent_usage
 
