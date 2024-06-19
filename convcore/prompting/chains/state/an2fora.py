@@ -11,17 +11,17 @@ def an2fora(args, bench=False):
     topic = None
     # coming from b_dynamic
     if "about_what" in args:
-        topic = args["about_what"][-1]
+        topic = args["about_what"]
         # change for a call which specifies what to ask about
         args["log"](["todo changes basic to about what call"])
-        args["prompt"] = f"se zeptá zeptá na doplňující otázku k tématu {topic}"
+        args["prompt"] = f"se zeptá na doplňující otázku k tématu {topic}"
     elif "entities_all" in args:
         try:
             print("entities time")
             topic = args["entities_all"][-2][-1]
             # change for a call which specifies what to ask about
             args["log"](["todo changes basic to about what call"])
-            args["prompt"] = f"se zeptá zeptá na doplňující otázku k tématu {topic}"
+            args["prompt"] = f"se položí doplňující otázku k tématu {topic}"
         except:
             pass
 
