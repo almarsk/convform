@@ -135,7 +135,7 @@ class ConversationStatus:
         self.coda = self.check_for_coda(flow)
 
         self.entities = ([[]] if prev_cs is None
-            else prev_cs["entities"] + [self.entity,[]])
+            else prev_cs["entities"] + self.entity + [[]])
 
 
         # assemble reply

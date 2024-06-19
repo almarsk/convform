@@ -18,6 +18,7 @@ def an2fora(args, bench=False):
     elif "entities_all" in args:
         try:
             print("entities time")
+            print(args["entities_all"])
             topic = args["entities_all"][-2][-1]
             # change for a call which specifies what to ask about
             args["log"](["todo changes basic to about what call"])
