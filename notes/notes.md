@@ -1,4 +1,4 @@
-## NEDOLUZHKO
+## ndlzhk
 
 acl anthology
 
@@ -9,7 +9,7 @@ anaforicke chyby v koncerzaci
 mira naruseni
 hypoteza - mira zavaznosti naruseni koherence odpovida kategorii reakce na naruseni
 
-## ZIKÁNOVÁ
+## zkn
 
 hajičová & nedoluzhko - kde se berou kontextove zapojena slova ktera nejsou soucssti koreferencniho retezce
 

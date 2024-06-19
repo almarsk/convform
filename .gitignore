@@ -6,3 +6,4 @@ pyrightconfig.json
 **/dist
 .DS_Store
 config.json
+**/participanti
