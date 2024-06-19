@@ -20,6 +20,7 @@ class ConversationStatus:
     prompt_log: Any
     matched_intents: Any
     checkpoints: list
+    entities: list
     checkpoints_contents: list
     last_states: list
     turns_since_initiative: int
@@ -59,7 +60,7 @@ class ConversationStatus:
         )
 
         self.prompt_log = []
-        self.entities = []
+        self.entity = []
 
         # decide which intents have been matched
         self.matched_intents = self.match_intents(
@@ -133,6 +134,10 @@ class ConversationStatus:
         # check if coda has started
         self.coda = self.check_for_coda(flow)
 
+        self.entities = ([[]] if prev_cs is None
+            else prev_cs["entities"] + [self.entity,[]])
+
+
         # assemble reply
         self.raw_say = self.assemble_reply(flow)
 
@@ -165,8 +170,8 @@ class ConversationStatus:
         self.prompt_log += addition
 
 
-    def add_to_entities_list(self, addition):
-        self.entities += addition
+    def add_entity(self, addition):
+        self.entity = [addition]
 
 
     def match_intents(self, user_speech, flow, history, prev_last_states):
@@ -185,7 +190,7 @@ class ConversationStatus:
             "match_against": pattern.match_against,
             "adjacent": pattern.adjacent,
             "log": self.add_to_prompt_log,
-            "entities": self.add_to_entities_list,
+            "entities": self.add_entity,
             "history": history,
             "user_speech": user_speech,
         } for pattern in [get_full_intent(intent) for intent in to_match_intent_names]]

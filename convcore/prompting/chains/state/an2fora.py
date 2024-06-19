@@ -9,12 +9,24 @@ from convcore.prompting.chains.state.basic import basic
 def an2fora(args, bench=False):
 
     topic = None
+    # coming from b_dynamic
     if "about_what" in args:
         topic = args["about_what"][-1]
         # change for a call which specifies what to ask about
         args["log"](["todo changes basic to about what call"])
-        args["prompt"] = f"se zeptá zeptá na doplňující otázku k tématu {args["topic"]}"
+        args["prompt"] = f"se zeptá zeptá na doplňující otázku k tématu {topic}"
+    elif "entities_all" in args:
+        try:
+            print("entities time")
+            topic = args["entities_all"][-2][-1]
+            # change for a call which specifies what to ask about
+            args["log"](["todo changes basic to about what call"])
+            args["prompt"] = f"se zeptá zeptá na doplňující otázku k tématu {topic}"
+        except:
+            pass
 
+
+    print("prompt", args["prompt"])
     answer = basic(args, bench)
     input = list()
 
@@ -28,6 +40,8 @@ def an2fora(args, bench=False):
     task = ("najdi ve větě jedno hlavní slovo a vyměň ho za osobní nebo vztažné zájmeno."
         if not topic
         else f"slovo {topic} ve vyměň za osobní nebo vztažné zájmeno.")
+
+    print("task", task)
 
     input += [
         SystemMessage(content=f"""\

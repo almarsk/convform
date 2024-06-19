@@ -9,6 +9,7 @@ import pprint
 import time
 
 def entity(args, bench=False):
+
     start_time = 0
     if bench:
         start_time = time.time()
@@ -68,13 +69,13 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
         if bench:
             print(result)
 
-        print("r", result)
+
         json_output = re.findall(str(r"\[.*\]"), result)
 
-        print("j")
-        for j in json_output:
-            print(j)
-            print(json.loads(j))
+        if bench:
+            for j in json_output:
+                print(j)
+                print(json.loads(j))
 
         if bench:
             end_time = time.time()
@@ -90,7 +91,10 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
             args["log"]([entities])
 
         if "entities" in args:
+            print("entities lsgo")
+            print(entities)
             args["entities"](entities)
+
 
         if entities:
             return 0

@@ -31,6 +31,9 @@ def b_dynamic(args, bench=False):
             used_context = args["context"][0:checkpoint]
 
     args["context"] = used_context
-    args["about_what"] = args["entities_all"][checkpoint]
+    try:
+        args["about_what"] = args["entities_all"][checkpoint][-1]
+    except:
+        pass
 
     return an2fora(args, bench=bench)
