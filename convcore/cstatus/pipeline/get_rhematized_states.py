@@ -2,7 +2,7 @@ from os import setuid
 import pprint
 from sys import getswitchinterval
 
-debug = False
+debug = True
 
 def get_rhematized_states(flow, states, context_states, usage, coda, time_to_initiate, fallback_states):
 
