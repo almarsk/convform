@@ -10,6 +10,7 @@ import time
 
 def bd2(args, bench=False):
     args["log"](["b_dynamic"])
+    old_convo = list()
 
     # goes back to first checkpoint if there is one
     # -1 because checkpoints are taken from bot_turns which are 1 indexed
@@ -27,11 +28,13 @@ def bd2(args, bench=False):
         if args["context"] and context_len > checkpoint:
             args["log"]([f"b-dynamic succesful - going back"])
             used_context = args["context"][0:checkpoint+1]
+            old_convo = args["context"][checkpoint+1:]
 
     args["context"] = used_context
     try:
         print(args["context"][checkpoint+1:])
-        old_convo = "\n".join([bot_utterance["say"] for bot_utterance in args["context"][checkpoint+1:] if bot_utterance["who"] == "bot"])
+        if old_convo:
+            old_convo = "\n".join([bot_utterance["say"] for bot_utterance in old_convo if bot_utterance["who"] == "bot"])
 
 
 
