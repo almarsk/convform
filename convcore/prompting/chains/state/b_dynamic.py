@@ -13,9 +13,9 @@ def b_dynamic(args, bench=False):
 
     # goes back to first checkpoint if there is one
 
-    print(args["checkpoints"])
 
-    checkpoint = (args["checkpoints"][0]
+    # -1 because checkpoints are taken from bot_turns which are 1 indexed
+    checkpoint = (args["checkpoints"][0] - 1
         if "checkpoints" in args and args["checkpoints"]
         else len(args["context"])
         if "context" in args

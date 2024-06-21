@@ -21,7 +21,6 @@ class ConversationStatus:
     matched_intents: Any
     checkpoints: list
     entities: list
-    checkpoints_contents: list
     last_states: list
     turns_since_initiative: int
     initiativity: int
@@ -63,7 +62,7 @@ class ConversationStatus:
         self.prompt_log = []
 
         # save entities
-        self.entity = []
+        self.entity = None
 
         # decide which intents have been matched
         self.matched_intents = self.match_intents(
@@ -139,7 +138,9 @@ class ConversationStatus:
 
         # store entities
         self.entities = ([[]] if prev_cs is None
-            else prev_cs["entities"] + self.entity + [[]])
+            else prev_cs["entities"] +
+            [self.entity if self.entity is not None else []] +
+            [[]])
 
         # assemble reply
         self.raw_say = self.assemble_reply(flow)
@@ -174,7 +175,7 @@ class ConversationStatus:
 
 
     def add_entity(self, addition):
-        self.entity = [addition]
+        self.entity = addition
 
 
     def match_intents(self, user_speech, flow, history, prev_last_states):

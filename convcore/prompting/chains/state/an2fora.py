@@ -12,13 +12,9 @@ def an2fora(args, bench=False):
     # coming from b_dynamic
     if "about_what" in args:
         topic = args["about_what"]
-        # change for a call which specifies what to ask about
-        args["log"](["todo changes basic to about what call"])
         args["prompt"] = f"se zeptá na doplňující otázku k tématu {topic}"
     elif "entities_all" in args:
         try:
-            print("entities time")
-            print(args["entities_all"])
             topic = args["entities_all"][-2][-1]
             # change for a call which specifies what to ask about
             args["log"](["todo changes basic to about what call"])
@@ -30,13 +26,6 @@ def an2fora(args, bench=False):
     print("prompt", args["prompt"])
     answer = basic(args, bench)
     input = list()
-
-    if args["context"] and not args["emphasis"]:
-        input += [SystemMessage(content="context:")]
-        input += [
-            SystemMessage(content=f"{say['who']}: {say['say']}")
-            for say in args["context"]
-        ]
 
     task = ("najdi ve větě jedno hlavní slovo a vyměň ho za osobní nebo vztažné zájmeno."
         if not topic
