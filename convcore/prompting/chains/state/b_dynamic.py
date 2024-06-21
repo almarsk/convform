@@ -26,7 +26,7 @@ def b_dynamic(args, bench=False):
         context_len = len(args["context"])
         if args["context"] and context_len > checkpoint:
             args["log"]([f"b-dynamic succesful - going back"])
-            used_context = args["context"][0:checkpoint-1]
+            used_context = args["context"][0:checkpoint+1]
 
     args["context"] = used_context
     try:

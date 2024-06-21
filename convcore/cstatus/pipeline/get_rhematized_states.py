@@ -24,7 +24,8 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
     if debug:
         print("ordered states", ordered_states)
 
-    ordered_states += [state for state in context_states if state not in ordered_states]
+    if not ordered_states:
+        ordered_states += [state for state in context_states if state not in ordered_states]
 
     if debug:
         print("os + context", ordered_states)
