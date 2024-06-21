@@ -13,7 +13,7 @@ const Start = ({ bot }) => {
           setInstructions(e.message);
         } else {
           setInstructions(
-            "Můžeme začít. Pokud s vámi bude robot komunikovat nepřirozeně, ukončete ho červeným tlačítkem",
+            "Můžeme začít. Pokud s vámi bude robot komunikovat nepřirozeně, ukončete ho červeným tlačítkem.",
           );
         }
       });

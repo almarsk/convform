@@ -1,8 +1,7 @@
 import re
 import json
 
-result = "V této větě jsou dvě podstatná jména: \"indie\" a \"žánry\". \n\n- \"indie\" zde pravděpodobně odkazuje na hudební žánr, což je abstraktní pojem, nikoli konkrétní entita.\n- \"žánry\" je také abstraktní pojem, který neodkazuje na konkrétní entitu.\n\nProtože ani jedno z těchto podstatných jmen nepředstavuje konkrétní entitu, výstup bude prázdný.\n\n```json\n[]\n```"
-
+result = "Věta \"nejradši v lehátku\" obsahuje jedno podstatné jméno \"lehátku\". Toto podstatné jméno představuje konkrétní věc, která může být považována za entitu, protože se jedná o fyzický objekt, který lze identifikovat a odkázat na něj.\n\nVýstup tedy bude:\n```json\n[\"lehátku\"]\n```"
 print("r", result)
 json_output = re.findall(str(r"\[.*\]"), result)
 

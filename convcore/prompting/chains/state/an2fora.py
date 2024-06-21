@@ -12,7 +12,6 @@ def an2fora(args, bench=False):
     # coming from b_dynamic
     if "about_what" in args:
         topic = args["about_what"]
-        args["prompt"] = f"se zeptá na doplňující otázku k tématu {topic}."
     elif "entities_all" in args:
         try:
             topic = args["entities_all"][-2][-1]
