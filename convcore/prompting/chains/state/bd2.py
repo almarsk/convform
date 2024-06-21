@@ -35,7 +35,7 @@ def b_dynamic(args, bench=False):
 
 
         args["about_what"] = args["entities_all"][checkpoint][-1]
-        args["prompt"] = f"""se zeptá na doplňující otázku k tématu {args["about_what"]}.
+        args["prompt"] = f"""se zeptá na doplňující otázku k tématu {args['about_what']}.
 Dává si při tom pozor, aby jeho otázky souvisely s něčím jiným než s čím souvisí tyto:
 {old_convo}"""
     except:
