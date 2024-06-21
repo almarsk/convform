@@ -69,7 +69,6 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
         if bench:
             print(result)
 
-
         json_output = re.findall(str(r"\[.*\]"), result)
 
         if bench:
@@ -100,7 +99,8 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
             return 0
         else:
             return -1
-    except:
+    except Exception as e:
+        args["log"](["exception", e])
         if "entities" in args:
             args["entities"]([])
         return -1
