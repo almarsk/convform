@@ -8,7 +8,7 @@ from convcore.prompting.chains.state.an2fora import an2fora
 
 import time
 
-def b_dynamic(args, bench=False):
+def bd2(args, bench=False):
     args["log"](["b_dynamic"])
 
     # goes back to first checkpoint if there is one
