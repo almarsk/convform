@@ -12,8 +12,6 @@ def b_dynamic(args, bench=False):
     args["log"](["b_dynamic"])
 
     # goes back to first checkpoint if there is one
-
-
     # -1 because checkpoints are taken from bot_turns which are 1 indexed
     checkpoint = (args["checkpoints"][0] - 1
         if "checkpoints" in args and args["checkpoints"]
@@ -28,7 +26,7 @@ def b_dynamic(args, bench=False):
         context_len = len(args["context"])
         if args["context"] and context_len > checkpoint:
             args["log"]([f"b-dynamic succesful - going back"])
-            used_context = args["context"][0:checkpoint]
+            used_context = args["context"][0:checkpoint-1]
 
     args["context"] = used_context
     try:
