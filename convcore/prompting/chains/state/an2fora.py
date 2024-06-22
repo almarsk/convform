@@ -79,6 +79,12 @@ nahrazované slovo bude "košile" a protože je věta složitá a nelze snadno p
 tvoje odpověď:
 Máš nějaký trik, jak je rychle a efektivně žehlit?
 
+příklad5:
+věta:
+Na jaké trati tě nejvíc baví závodit?
+tvoje odpověď:
+Na jaké tě nevíc baví závodit?
+
 úvahu vynech."""),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
