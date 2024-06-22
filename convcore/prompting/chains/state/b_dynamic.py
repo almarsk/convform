@@ -31,7 +31,7 @@ def b_dynamic(args, bench=False):
     args["context"] = used_context
     try:
         args["about_what"] = args["entities_all"][checkpoint][-1]
-        args["prompt"] = f"se zeptá na doplňující otázku k tématu {args['about_what']}."
+        args["prompt"] = f"se zeptá na doplňující otázku přímo konkrétně k {args['about_what']}."
     except:
         pass
 
