@@ -54,7 +54,7 @@ a zvaž, zda by mohla být jejich jména považována za entity. \
 Nezapomeň, že slovesa ani zájmena nejsou entity, i když reprezentují osoby. \
 Mysli na to, že účastníci konverzace nejsou entitami.
 
-Velmi stručně odůvodni úvahu a uveď slova vybraná jako entity v hranatých závorkách ve fromátu JSON array. \
+Velmi stručně odůvodni úvahu a uveď slova vybraná jako entity v hranatých závorkách ve formátu JSON array. \
 Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
 
     result = chat.invoke(messages).content
