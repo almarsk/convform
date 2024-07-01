@@ -101,6 +101,9 @@ if not db_path.is_file():
 @app.route('/<path:path>')
 def dispatcher(path):
 
+    if path:
+        session.clear()
+
     if "experiment" in session:
         print(session)
 
@@ -109,8 +112,6 @@ def dispatcher(path):
             bot=session["flow"] if "flow" in session else "",
             phase=session["phase"] if "phase" in session else 1)
 
-    if path:
-        session.clear()
 
     flow = request.args.get("flow") or None
 

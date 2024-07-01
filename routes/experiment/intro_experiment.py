@@ -8,6 +8,9 @@ def intro_experiment():
     from app import Conversation
     nick = request.get_json()["nick"]
     convo = Conversation(nick=nick, flow=session["flow"])
+
+    print("qq", convo.__dict__ )
+
     session["phase"] = 1
     session["experiment"] = True
     db.session.add(convo)
