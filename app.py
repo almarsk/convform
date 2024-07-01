@@ -100,6 +100,15 @@ if not db_path.is_file():
 @app.route('/', defaults={'path': ''}, methods=("GET", "POST"))
 @app.route('/<path:path>')
 def dispatcher(path):
+
+    if "experiment" in session:
+        print(session)
+
+        return render_template(
+            "index.html",
+            bot=session["flow"] if "flow" in session else "",
+            phase=session["phase"] if "phase" in session else 1)
+
     if path:
         session.clear()
 
@@ -124,13 +133,13 @@ def dispatcher(path):
 
 
 blueprint_paths = [
-    "intro.intro_bp",
-    "start.start_bp",
-    "bot.bot_bp",
-    "abort.abort_bp",
-    "abort.is_aborted_bp",
-    "outro.outro_bp",
-    "reset.reset_bp",
+    "convo.intro.intro_bp",
+    "convo.start.start_bp",
+    "convo.bot.bot_bp",
+    "convo.abort.abort_bp",
+    "convo.abort.is_aborted_bp",
+    "convo.outro.outro_bp",
+    "convo.reset.reset_bp",
     "admin.call_convform.convform_bp",
     "admin.list_bots.list_bot_bp",
     "admin.create.create_bp",
@@ -145,7 +154,10 @@ blueprint_paths = [
     "admin.stash.stash_bp",
     "admin.convos.convos_bp",
     "admin.instructions.instructions_bp",
-    "admin.chains.chains_bp"
+    "admin.chains.chains_bp",
+    "experiment.route_experiment.route_experiment_bp",
+    "experiment.intro_experiment.intro_experiment_bp",
+    "experiment.experiment.experiment_bp",
 ]
 
 for path in blueprint_paths:

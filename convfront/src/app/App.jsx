@@ -6,8 +6,10 @@ import Outro from "../convo/Outro";
 import Start from "../convo/Start";
 import Thanks from "../convo/Thanks";
 import { Link } from "react-router-dom";
+import IntroExperiment from "../convo/IntroExperiment";
 
 const PHASES = {
+  EXPERIMENT: -1,
   INTRO: 0,
   START: 1,
   CHAT: 2,
@@ -29,7 +31,9 @@ const App = ({ bot, phase }) => {
         ""
       )}
 
-      {bot ? (
+      {phase === PHASES.EXPERIMENT ? (
+        <IntroExperiment />
+      ) : bot ? (
         phase === PHASES.INTRO ? (
           <Intro bot={bot} />
         ) : phase === PHASES.START ? (
