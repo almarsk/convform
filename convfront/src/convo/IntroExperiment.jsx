@@ -7,7 +7,7 @@ const IntroExperiment = () => {
   return (
     <>
       <p id="intro-text">
-        Díky, že se účastníte. Nejdřív prosím vyplňte libovolnou{" "}
+        Díky, že se účastníte. Nejdřív prosím vyplňte
         <b>přezdívku</b> <i>(tu stejnou co minule)</i>:
       </p>
       <UserInput
