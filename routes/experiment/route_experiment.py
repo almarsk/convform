@@ -26,7 +26,7 @@ def route_experiment():
         for flow in experimental_flows:
             name = flow.flow_name
 
-            if validate_flow(name)["success"] and flow.flow_name not in user_flows:
+            if flow.flow_name not in user_flows and validate_flow(name)["success"]:
                 convos = [convo for convo in Conversation.query.filter_by(flow=name).all() if bool(convo.end_date)]
                 flows_usage[name] = len(convos)
         bot_name: str = min(flows_usage, key=flows_usage.get)
