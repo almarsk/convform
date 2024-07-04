@@ -41,7 +41,7 @@ const Outro = () => {
           placeholder="komentář"
         ></textarea>
         <div className="outro-eval">
-          <select name="grade" required className="submit" defaultValue="">
+          <select name="grade" required className="submit" defaultValue="3">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
