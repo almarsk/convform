@@ -92,7 +92,7 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
     if emphasised:
         return [emphasised[-1]]
     else:
-        print("not emph")
+        # print("not emph")
         rhematized_states += (initiatives[-1] if initiatives else [])
 
     if debug:
@@ -140,6 +140,6 @@ def add_least_iterated_non_over_iterated(states, flow, usage):
             and get_full_state(state).iteration - usage.get(state, 0) > 0
     ]
 
-    print("candidate",candidates)
+    # print("candidate",candidates)
 
     return candidates[0] if candidates else None

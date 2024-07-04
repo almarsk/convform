@@ -9,7 +9,7 @@ def intro_experiment():
     nick = request.get_json()["nick"]
     convo = Conversation(nick=nick, flow=session["flow"])
 
-    print("qq", convo.__dict__ )
+    # print("qq", convo.__dict__ )
 
     session["phase"] = 1
     session["experiment"] = True

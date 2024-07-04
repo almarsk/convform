@@ -32,7 +32,7 @@ def bd2(args, bench=False):
 
     args["context"] = used_context
     try:
-        print(args["context"][checkpoint+1:])
+        # print(args["context"][checkpoint+1:])
         if old_convo:
             old_convo = "\n".join([bot_utterance["say"] for bot_utterance in old_convo if bot_utterance["who"] == "bot"])
 

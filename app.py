@@ -104,8 +104,7 @@ def dispatcher(path):
     if path:
         session.clear()
 
-    if "experiment" in session:
-        print(session)
+
 
         return render_template(
             "index.html",

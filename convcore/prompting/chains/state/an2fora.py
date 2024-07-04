@@ -22,7 +22,7 @@ def an2fora(args, bench=False):
             pass
 
 
-    print("prompt", args["prompt"])
+    # print("prompt", args["prompt"])
     answer = basic(args, bench)
     input = list()
 
@@ -30,7 +30,7 @@ def an2fora(args, bench=False):
         if not topic
         else f"slovo {topic} ve vyměň za osobní nebo vztažné zájmeno.")
 
-    print("task", task)
+    # print("task", task)
 
     input += [
         SystemMessage(content=f"""\

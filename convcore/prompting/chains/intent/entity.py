@@ -90,8 +90,8 @@ Nezapomeň úplně nakonci uvést JSON array s vybranými slovy."""))
             args["log"]([entities])
 
         if "entities" in args:
-            print("entities lsgo")
-            print(entities)
+            # print("entities lsgo")
+            # print(entities)
             args["entities"](entities)
 
 

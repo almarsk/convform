@@ -38,6 +38,6 @@ with open("playground_lch_result", "a") as p:
     Sure, on a scale 1 to 3, the number id choose would be"""))
 
     result = chat.invoke(messages)
-    print(result.content)
+    # print(result.content)
     p.write("\n")
     p.write(str(result.content))

@@ -12,7 +12,7 @@ def rename():
     except:
         return jsonify(), 400
 
-    print(name, new_name)
+    # print(name, new_name)
 
     if Flow.query.filter_by(flow_name=new_name).first():
         return jsonify({"success": False, "message": "there is a flow of that name already"})

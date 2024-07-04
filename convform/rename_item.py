@@ -4,7 +4,7 @@ import json
 def rename_item(args):
     from app import Reply, db
 
-    print(args)
+    # print(args)
 
     try:
         flow = args.get("flow", "")
