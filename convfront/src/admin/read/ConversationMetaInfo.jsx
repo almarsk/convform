@@ -7,7 +7,7 @@ function processMetaInfo(acid, item) {
 const ConversationMetaInfo = ({ activeConversation }) => {
   return (
     <ul className="conversation-meta">
-      {["nick", "start", "end", "aborted", "rating", "comment"].map(
+      {["nick", "start", "end", "aborted", "grade", "comment"].map(
         (item, i) => {
           return (
             <li key={i} className="meta-turn">
