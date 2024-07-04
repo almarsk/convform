@@ -9,7 +9,8 @@ const Outro = () => {
     const comment = new FormData(e.target).get("comment");
     const grade = parseInt(new FormData(e.target).get("grade"));
     await myRequest("/outro", [comment, grade]).then(
-      () => (window.location.href = basename + "/"),
+      console.log(comment, grade),
+      // () => (window.location.href = basename + "/"),
     );
   };
 
