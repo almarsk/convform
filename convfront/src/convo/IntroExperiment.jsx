@@ -23,11 +23,9 @@ const IntroExperiment = () => {
         loading={false}
         display={[true, false]}
       />
-      <p id="intro-text">
-        Upozornění: nevkládejte osobní informace
-        <p></p>
-        Prosba: na konci prosím vyplňte dotazník
-      </p>
+      <p id="intro-text">Upozornění: nevkládejte osobní informace</p>
+      <p>Prosba: na konci prosím vyplňte dotazník</p>
+      <p>Doporučení: mobilní zobrazení funguje lépe horizontálně</p>
     </>
   );
 };
