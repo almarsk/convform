@@ -24,8 +24,10 @@ const IntroExperiment = () => {
         display={[true, false]}
       />
       <p id="intro-text">Upozornění: nevkládejte osobní informace</p>
-      <p>Prosba: na konci prosím vyplňte dotazník</p>
-      <p>Doporučení: mobilní zobrazení funguje lépe horizontálně</p>
+      <p id="intro-text">Prosba: na konci prosím vyplňte dotazník</p>
+      <p id="intro-text">
+        Doporučení: mobilní zobrazení funguje lépe horizontálně
+      </p>
     </>
   );
 };
