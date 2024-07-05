@@ -22,9 +22,9 @@ const Intro = ({ bot }) => {
         loading={false}
         display={[true, false]}
       />
-      <p id="intro-text">Upozornění: nevkládejte osobní informace</p>
-      <p id="intro-text">Prosba: na konci prosím vyplňte dotazník</p>
-      <p id="intro-text">
+      <p className="intro-text">Upozornění: nevkládejte osobní informace</p>
+      <p className="intro-text">Prosba: na konci prosím vyplňte dotazník</p>
+      <p className="intro-text">
         Doporučení: mobilní zobrazení funguje lépe horizontálně
       </p>
     </>
