@@ -22,11 +22,9 @@ const Intro = ({ bot }) => {
         loading={false}
         display={[true, false]}
       />
-      <p className="intro-text">Upozornění: nevkládejte osobní informace</p>
-      <p className="intro-text">Prosba: na konci prosím vyplňte dotazník</p>
-      <p className="intro-text">
-        Doporučení: mobilní zobrazení funguje lépe horizontálně
-      </p>
+      <p className="center">Upozornění: nevkládejte osobní informace</p>
+      <p className="center">Prosba: na konci prosím vyplňte dotazník</p>
+      <p className="center">Doporučení: na mobilu nejlépe horizontálně</p>
     </>
   );
 };
