@@ -18,7 +18,7 @@ const UserInput = ({ submit, loading }) => {
       <p className="icon">🗣:️</p>
       <input
         required
-        className="input-field-chat content"
+        className="input-field content"
         name="content"
         onChange={handleChange}
         type="text"
