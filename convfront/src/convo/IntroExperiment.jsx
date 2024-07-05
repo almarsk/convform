@@ -8,7 +8,7 @@ const IntroExperiment = () => {
     <>
       <p id="intro-text">
         Díky, že se účastníte. Nejdřív prosím vyplňte <b>přezdívku</b>{" "}
-        <i>(tu stejnou co minule)</i>:
+        <i>(kdyžtak tu stejnou co minule)</i>:
       </p>
       <UserInput
         submit={async (e) => {
@@ -23,6 +23,11 @@ const IntroExperiment = () => {
         loading={false}
         display={[true, false]}
       />
+      <p id="intro-text">
+        Upozornění: nevkládejte osobní informace
+        <p></p>
+        Prosba: na konci prosím vyplňte dotazník
+      </p>
     </>
   );
 };

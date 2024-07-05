@@ -2,7 +2,7 @@ from os import setuid
 import pprint
 from sys import getswitchinterval
 
-debug = True
+debug = False
 
 def get_rhematized_states(flow, states, context_states, usage, coda, time_to_initiate, fallback_states):
 
@@ -103,7 +103,9 @@ def get_rhematized_states(flow, states, context_states, usage, coda, time_to_ini
         print("rhem + emph", rhematized_states)
 
     if not initiatives and not coda and time_to_initiate:
+
         track_state = add_least_iterated_non_over_iterated(flow.track, flow, usage)
+
         if track_state:
             rhematized_states.append(track_state)
 
