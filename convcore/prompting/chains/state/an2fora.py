@@ -8,6 +8,7 @@ from convcore.prompting.chains.state.basic import basic
 
 def an2fora(args, bench=False):
 
+    bot_intro= "Jasně! Upravená věta bez speciálního formátování bude vypadat takhle:"
     topic = None
     # coming from b_dynamic
     if "about_what" in args:
@@ -16,7 +17,6 @@ def an2fora(args, bench=False):
         try:
             topic = args["entities_all"][-2][-1]
             # change for a call which specifies what to ask about
-            args["log"](["todo changes basic to about what call"])
             args["prompt"] = f"se položí doplňující otázku k tématu {topic}."
         except:
             pass
@@ -88,13 +88,15 @@ Na jaké tě nevíc baví závodit?
 úvahu vynech."""),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
-        SystemMessage(content="Jasně! Upravená věta bez speciálního formátování bude vypadat takhle:")
+        SystemMessage(content=bot_intro)
     ]
     try:
         chat = ChatOpenAI(model="gpt-4o", temperature=0.3)
         result = chat.invoke(input)
         args["log"]([[m.content for m in input], str(result.content)])
-        return str(result.content)
+        result_fin = str(result.content)
+        # this checks that gpt didnt return the given intro
+        return result_fin.split(bot_intro)[-1].strip()
 
     except Exception as e:
         print(f"An error occurred: {str(e)}")

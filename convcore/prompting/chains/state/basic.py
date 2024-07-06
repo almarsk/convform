@@ -7,7 +7,7 @@ import time
 
 def basic(args, bench=False):
     messages = list()
-
+    bot_intro = "Jasně, odpověď by mohla vypadat třeba takhle:"
 
     start_time = 0
     if bench:
@@ -30,7 +30,7 @@ Robot {args["prompt"]} \
 Vezme přitom v potaz předchozí konverzaci. \
 Odpovídá stručně, jednou větou, maximálně 10 slov.
 
-Jasně, odpověď by mohla vypadat třeba takhle:""")]
+{bot_intro}""")]
 
     else:
         messages.append(SystemMessage(
@@ -50,9 +50,10 @@ Robot {args["prompt"]}"""))
             elapsed_time = end_time - start_time
             print("Elapsed time:", elapsed_time, "seconds")
 
-        final_result = str(result.content).strip("\"").strip("\'") if result.content else "Jejda, něco se pokazilo"
+        result_fin = str(result.content).strip("\"").strip("\'") if result.content else "Jejda, něco se pokazilo"
 
-        return final_result
+        # trying to get rid of the gpt intro if it does it
+        return result_fin.split(bot_intro)[-1].strip()
     except Exception as e:
         print(f"An error occurred: {str(e)}")
         return "Jejda, něco se pokazilo"

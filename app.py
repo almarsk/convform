@@ -65,6 +65,7 @@ class Reply(db.Model):
     who = db.Column(db.Text, nullable=False)
     __table_args__ = {'extend_existing': True}
 
+
 class Flow(db.Model):
     __tablename__ = "flow"
     id = db.Column(db.Integer, primary_key=True)
