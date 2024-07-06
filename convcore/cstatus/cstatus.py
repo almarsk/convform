@@ -134,7 +134,7 @@ class ConversationStatus:
         self.intent_usage = {} if prev_cs is None else self.update_intents_usage(flow, prev_cs["intent_usage"])
 
         # check if coda has started
-        self.coda = self.check_for_coda(flow)
+        self.coda = self.check_for_coda(flow, prev_cs["coda"])
 
         # store entities
         self.entities = ([[]] if prev_cs is None
@@ -311,7 +311,9 @@ class ConversationStatus:
         return intent_usage
 
 
-    def check_for_coda(self, flow):
+    def check_for_coda(self, flow, previous_coda):
+        if previous_coda:
+            return True
         coda = flow.coda
         return bool([state for state in self.last_states if state in coda])
 
