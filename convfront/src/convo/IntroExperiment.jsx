@@ -6,11 +6,25 @@ import basename from "../basename.jsx";
 const IntroExperiment = () => {
   return (
     <>
-      <p id="intro-text">
-        Díky, že se účastníte. Budete si povídat s chatbotem. Povídejte si s
-        ním, jak je vám přirozené. Nejdřív prosím vyplňte <b>přezdívku</b>{" "}
-        <i>(kdyžtak tu stejnou co minule)</i>:
-      </p>
+      <ul id="intro-text">
+        <li>Díky, že se účastníte.</li>
+        <li>––</li>
+        <li>Budete si povídat s chatbotem. </li>
+        <li>Povídejte si s ním, jak je vám přirozené.</li>
+        <li>––</li>
+        <li>
+          Konverzace bude trvat několik minut a chatbot se poté sám rozloučí.
+        </li>
+        <li>
+          Pokud bude chatbot komunikovat nepřirozeně, konverzaci ukončete
+          červeným tlačítkem.
+        </li>
+        <li>––</li>
+        <li>
+          Nejdřív prosím vyplňte <b>přezdívku</b>{" "}
+          <i>(kdyžtak tu stejnou co minule)</i>:
+        </li>
+      </ul>
       <UserInput
         submit={async (e) => {
           e.preventDefault();
@@ -24,9 +38,13 @@ const IntroExperiment = () => {
         loading={false}
         display={[true, false]}
       />
-      <p className="center">Upozornění: nevkládejte osobní informace</p>
-      <p className="center">Prosba: na konci prosím vyplňte dotazník</p>
-      <p className="center">Doporučení: na mobilu nejlépe horizontálně</p>
+      <ul>
+        <li className="center">
+          <b>Upozornění:</b> Nevkládejte osobní informace.
+        </li>
+        <li className="center">Na konci prosím vyplňte dotazník.</li>
+        <li className="center">Na mobilu nejlépe horizontálně.</li>
+      </ul>
     </>
   );
 };
