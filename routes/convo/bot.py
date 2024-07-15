@@ -13,7 +13,7 @@ def bot():
 
     if not run:
         if cstatus_out.end:
-            session["phase"] += 1
+            session["phase"] = 3
 
         from app import Reply
 

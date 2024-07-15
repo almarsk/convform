@@ -6,7 +6,7 @@ is_aborted_bp = Blueprint('is_aborted', __name__)
 @abort_bp.route("/abort", methods=["POST"])
 def abort():
     session["abort"] = True
-    session["phase"] += 1
+    session["phase"] = 3
     return jsonify({})
 
 @abort_bp.route("/is_aborted", methods=["POST"])

@@ -16,5 +16,5 @@ def outro():
     db.session.add(convo)
     db.session.commit()
 
-    session["phase"] += 1
+    session["phase"] = 4
     return jsonify({})

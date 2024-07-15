@@ -19,38 +19,40 @@ def export():
 
                     all_replies = Reply.query.filter_by(user_id=convo.id).all()
 
-                    replies = []
-                    replies_meta = []
+                    if all_replies:
 
-                    for reply in all_replies:
-                        if reply.reply:
+                        replies = []
+                        replies_meta = []
 
-                            reply_data = {
-                                "reaction_time": reply.reaction_ms,
-                                "stimuli": determine_stimuli(reply.cstatus),
-                            }
+                        for reply in all_replies:
+                            if reply.reply:
 
-                            if reply_data['stimuli'] and reply.who == 'bot':
-                                reply_data["entities"] = prompt_log = reply.cstatus["entities"]
-                            if reply.who == 'bot':
-                                reply_data["prompting"] = get_prompt_logs(reply.cstatus["prompt_log"])
+                                reply_data = {
+                                    "reaction_time": reply.reaction_ms,
+                                    "stimuli": determine_stimuli(reply.cstatus),
+                                }
+
+                                if reply_data['stimuli'] and reply.who == 'bot':
+                                    reply_data["entities"] = prompt_log = reply.cstatus["entities"]
+                                if reply.who == 'bot':
+                                    reply_data["prompting"] = get_prompt_logs(reply.cstatus["prompt_log"])
 
 
-                            replies_meta.append(reply_data)
-                            replies.append(f"{'!!!' if reply_data['stimuli'] and reply.who == 'bot' else ''} {reply.who}: {reply.reply}")
+                                replies_meta.append(reply_data)
+                                replies.append(f"{'!!!' if reply_data['stimuli'] and reply.who == 'bot' else ''} {reply.who}: {reply.reply}")
 
-                    convo_data = {
-                        "id": convo.id,
-                        "nick": convo.nick,
-                        "flow": flow.flow_name,
-                        "abort": convo.abort,
-                        "rating": convo.rating,
-                        "comment": convo.comment,
-                        "conversation": replies,
-                        "conversation_meta": replies_meta
-                    }
+                        convo_data = {
+                            "id": convo.id,
+                            "nick": convo.nick,
+                            "flow": flow.flow_name,
+                            "abort": convo.abort,
+                            "rating": convo.rating,
+                            "comment": convo.comment,
+                            "conversation": replies,
+                            "conversation_meta": replies_meta
+                        }
 
-                    all_convo_data[flow.flow_name]["data"][convo_data["id"]] = convo_data
+                        all_convo_data[flow.flow_name]["data"][convo_data["id"]] = convo_data
 
         # print(sum([len(all_convo_data[key]["data"]) for key in all_convo_data.keys()]))
 
