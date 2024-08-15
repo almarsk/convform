@@ -1,6 +1,6 @@
 #main {
     color: black;
-    height: 600px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,4 +119,19 @@
 
 .bold-text {
     font-weight: bold;
+}
+
+.submit-panel {
+    display: flex;
+    justify-content: end;
+}
+
+.outro-form-parent {
+    overflow: auto;
+}
+
+.submit-outro {
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
 }

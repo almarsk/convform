@@ -46,7 +46,12 @@ const App = ({ bot, phase }) => {
           <Thanks />
         )
       ) : (
-        <div>🤖🤒</div>
+        <>
+          <Outro />
+        </>
+        //
+        // <div>🤖🤒</div>
+        // </>
       )}
     </div>
   );
