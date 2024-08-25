@@ -1,0 +1,227 @@
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+COHERENCE DISRUPTIONS IN HUMAN-CHATBOT INTERACTION: TOWARDS QUANTITATIVE APPROACH TO CONVERSATION
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+contents:
+2	Intro
+15 	Theory
+		5 text, coherence, anaphore
+		5 interaction
+		5 disruptions
+20 Methodology
+		2 chatbots in general
+		10 research environment - convform
+			2 rule based approach
+				how its done
+				pros and cons
+			3 ai approach
+				llms
+				prompt engineering techniques
+				pros and cons
+			1 hybrid approach
+			4 convform
+		10 conversation design hands on
+			1 in general
+			8 stimuli
+				basic mode
+					how it is done
+					converstaional style
+						inquisitive
+						relaxed
+				prompt techniques
+					anaphorize
+					entity recognition
+				shallow anaphore
+				deep anaphore
+					how its done
+					asking info mentioned in the meantime
+					inappropriate pragmatics
+					ambivalent anaphore
+					remap
+				unassignable anaphore
+					hardcoded
+					prompting
+			1 ending the conversation
+10 Pilot study
+4  Centering theory
+	what it is
+	how it can be helpful here
+	how it needs to be augmented
+10 Main study
+2  Conclusion
+_ _ _ _ _ _ _ _ _
+INTRO
+_ _ _ _ _ _ _ _ _
+
+in todays ai world
+quantitative approach to conversation
+coherence disruptions
+_ _ _ _ _ _ _ _ _ _
+THEORY
+_ _ _ _ _ _ _ _ _ _
+
+https://docs.google.com/document/d/1NfLDdHX9T6Zn0VT7JYzIQ6QSLeaUkXcqOq9AU9w_ZUE/edit
+
+cohesion, coherence, text				- Hrbáček, Halliday, Smith, Givón, Nedoluzhko
+	anaphore, cataphore
+	endophore, exophore
+
+conversation, social, multiperspective
+- Sacks, Schegloff, Interaction linguistics, Grice
+
+    conversation text
+    constant negotiation
+    cooperation principle
+    conversation maxims
+    conversation analysis
+    adjacency pair
+    prefered answer
+	topic shading
+    sequence structure
+
+
+disruptions						- Hrbáček, Smith, Dingemans, Garfinkel
+	possible issues:
+		-> unassignable anaphore
+			-> it is to be negotiated what is the topic
+			-> meaning of demonstratives is to be negotiated
+			-> degrees of assignability
+				-> no candidates
+					-> can be understood cataphorically
+				-> multiple candidates
+				-> candidate too long ago
+					-> can be understood as an abrupt return to previously established topic
+		-> abrupt topic shifts
+			-> when is a topic exhausted?
+			-> what makes for a good segway?
+	reactions:
+		-> metacommunication; interactive repair
+		-> inference; pragmatic reasoning
+_ _ _ _ _ _ _ _ _ _ _ _
+METHODOLOGY
+_ _ _ _ _ _ _ _ _ _ _ _
+
+methodology - chatbot
+	partial control
+	illusion of social interaction can fall along with perception of coherence
+	using ai to have people define the topic
+		rule based approach
+		ai based approach
+		hybrid
+		convform
+	causing a unified type of disruption at correct time
+	2x3
+	conversational style
+		inquisitive
+		relaxed
+	anaphore
+		shallow
+		deep
+		unassignable
+
+	annotated by hand
+	stimulus checked
+	confirmed / updated / excluded
+	metrics
+		rating
+		reaction to stimulus
+		% aborted
+		mentions in comment
+_ _ _ _ _ _ _ _ _ _ _ _
+PILOT STUDY
+_ _ _ _ _ _ _ _ _ _ _ _
+
+unassignable anaphore
+	expectations
+		rating
+			from best to worse: shallow, deep, unassignable
+		abort
+			from least to most : shallow, deep, unassignable
+		reactions
+			shallow 	- continue
+			deep		- meta
+			unassignable 	- abort
+		inquisitive will be more negative
+	results
+		rating
+			✔ from best to worse: shallow, deep, unassignable
+			⛌ inquisitive scores higher
+		abort
+			⛌ deep and unassignable same amount of aborts
+			✔ inquisitive significantly more aborts for unassignable
+			✔ comments confirm this
+			⛌ inquisitive slightly less aborts for deep
+		reactions
+			✔ tendency manifested
+			⛌ deep and unassignable same amount of meta
+			✔ deep and unassignable mirroring continue and abort
+	qualitative
+		hardcoded phrase with intended unassignable anaphore is sometimes assignable by association
+		limiting context for deep anaphore tends to generate inappropriate pragmatics
+		limiting context for deep anaphore can lead to anaphore being open to a remap
+		inquisitivity sometimes appreciated, other times considered lack of contribution
+		deep anaphore (if accepted) tends to be seen as an abrupt shift to previous topic
+		unassignable anaphore (if accepted) tends to be seen as a cataphore
+		        cataphore is unimportant in conversation, it is a text phenomena
+			    what is important is there is trust (or tolerance)
+	further steps
+		making the questionnaire more detailed
+			convlog
+		replicate current results
+		annotator agreement on stimulus annotations
+		why inquisitive conversation style seems to be more likely to be appreciated?
+		what signifies appreciation / dissatisfaction in inquisitive conversation style? (router)
+		at which point does deep anaphore become unassignable?
+		when does associativity help assign an otherwise unassignable anaphore?
+_ _ _ _ _ _ _ _ _ _ _
+CENTERING
+_ _ _ _ _ _ _ _ _ _ _
+
+formal tool to discuss depth, assignability, ambivalence and associativity of anaphore
+centering						- Kibble, Poesio
+	unit - phrase, sentence, turn
+	CB - anaphore, reinstation
+	CF - candidate
+	CP - ranking ??
+	entity coherence
+
+			CB(Un) = CB(Un−1) or CB(Un−1) = NIL 		CB(Un) ̸= CB(Un−1)
+CB(Un) = CP(Un)			Continue				  Smooth Shift
+CB(Un) ̸= CP(Un) 	      Retain 					Rough Shift
+
+	what is missing
+		ranking (CP) has to be determined intuitively (annotator agreement?)
+		max lookback is 1
+			can CB be mapped on any preceding entity?
+		nonidentity of CB and CP
+			entity coherence
+_ _ _ _ _ _ _ _ _ _ _ _
+MAIN STUDY
+_ _ _ _ _ _ _ _ _ _ _ _
+
+	conversation design
+		depth of anaphore somehow?
+		improving deep of anaphore pragmatics
+		make unassignable anaphore be generated by prompt
+	data collection and processing
+		using centering theory derived formal apparatus to better describe and categorize stimuli
+		annotator agreement
+		more detailed questionnare
+		larger number of participants
+			larger number of data points
+			larger margin for excluding conversations
+			annotator agreement
+	data analysis
+		replicating pilot study?
+		looking closer into conversational style
+		comparing metrics from detailed questionnare
+	qualitative analysis
+_ _ _ _ _ _ _ _ _ _ _
+CONCLUSION
+_ _ _ _ _ _ _ _ _ _ _
+
+	can we look at conversation quantitatively?
+	what else can be done?
+	    topics
+		router

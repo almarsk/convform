@@ -1,0 +1,233 @@
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+COHERENCE DISRUPTIONS IN HUMAN-CHATBOT INTERACTION: TOWARDS QUANTITATIVE APPROACH TO CONVERSATION
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+INTRO 2
+breakthrough in the way we interact with machines - via natural language !!
+ai race
+automate conversations
+    practical usage
+    quantitative conversation research
+        like 60s sacks with phone transcripts, now automation of conversations
+metaresearch - is this a viable methodology?
+focus on disruption - a blurred line between what is and isn't a coherent conversation
+
+THEORY 15
+Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
+
+Text
+In order to operate on a firm base, we need to equip ourselves with some theory.
+The following concepts need to be explained on their own terms and in relation to each other:
+Text, coherence, cohesion, anaphore, cataphore, endophore, exophore, topic, entity and association.
+
+    Text
+    linguistic, written - intentional, juxtaposed, coherent, spatial
+    spoken - multiproducer, negotiated, temporal
+
+    This is as far as we need to go to suffice the topic of this paper,
+    but it is worth noting that the notion of text can go way further,
+    if we take semiotics and poststructuralism in the picture.
+
+    Coherence
+    what makes text understandable.
+    property of text as a whole
+    cognitive
+        - whether a written text is coherent depends mostly on the reader
+        - whether a spoken text is coherent depends on an ongoing negotiation
+    examples
+
+    Cohesion
+    cohesion is not a property of text or anything else
+    umbrella concept covering specific relations within the structure of the text
+    cohesive text does not need to be coherent
+    examples (Hrbáček)
+
+    Anaphore and Endophore
+    a reference inside the text pointing back
+    typically demonstratives or gendered flective endings
+    a cohesive element
+    anaphore referent can be subject to negotiation in conversation
+
+    Cataphore and Exophore - a thin line
+    a reference pointing towards in text
+    unimportant for conversation
+        understanding is achieved through trust and compliance with promise
+        demonstrative lacking referent can point forward in text,
+        but can simply be understood via shared knowledge of speakers
+        making it an exophore
+        difference here is formal and unimportant
+        as given referent is activated in speakers minds
+    referent of a cataphore is a realized potential of an exophore
+    only the referent is a cohesive element
+
+    Topic
+    content of text, what is it about
+    difficult to delimit
+    topic development within text is realized via anaphore and association
+    the topic composition of text contributes to text coherence
+
+    Association
+    textual realization of an isotopic relation
+    cohesive element, difficult to formalize
+
+    Entity
+    for the purpose of this paper, another concept is added - an entity
+    entity somewhat overlaps with topic,
+    but a single topic can contain several entities within a text
+    entity is typically a noun in text,
+    which can be meaningfully reffered to by an anaphore
+    or can realize an exophore potential making it a cataphore
+    has cohesive potential
+
+Conversation
+To define conversation in terms of previously introduced concepts,
+one could see conversation as text which is produced by multiple producers
+This complicates things
+    conversation happens as opposed to text which is made
+    conversational content is constantly negotiated by participants
+    temporal and cooperative nature of conversation allows
+        overlaps
+        swiftly corrected errors
+        there is multiple perspectives
+            each particiapnts perspective
+            each idea of all the other participants perspectives
+            each participants idea of the conversation text that is being cocreated
+        all of these can fall out of sync creating misunderstandings
+        humans however are pretty good at correcting misunderstandings
+        this is because under regular circumstances, people cooperate
+grice cooperation principle and maxims
+
+conversation as such has long been considered chaotic
+the origin of modern conversation research is conversation analysis
+thanks to recordings of phonecalls, transcripts could be qualitatively analyzed
+    adjacency pair
+    prefered answers
+    topic shading
+    sequence structure
+this analysis has been practiced by sociologists, ethnometodologists
+in modern day, there is a conversation analysis descendant called
+interaction linguistics - topic and sequence
+
+Disruptions
+While the question of what makes for a coherent text is very broad,
+to ask and answer what makes for a coherent conversation seems comfortably in reach
+since conversation participants negotiate understanding,
+it is up to them, when a conversation is and is not coherent
+to describe a coherent what a functioning conversation is,
+it is worth pursuing the moments, when the conversation stops working,
+we could call those coherence disruptions
+a coherence disruption is a complex phenomena,
+    it penetrates through some or all of mentioned perspectives on an on-going conversation
+    it can't be evaluate in a binary fashion
+        there are different degrees to which a conversation coherence can be disrupted
+if a participant suddenly starts speaking in an uncoherent way on their own,
+if the utterance simply is not grammatical and or understandable,
+while the conversation has been compromised and becomes incoherent,
+it has more to do with incoherent written text, because
+only one speaker is at the source of the incoherence
+- Smith
+it is a considerably different phenomena from when
+the source of incoherence stems from
+    the structure of the conversational text or
+    relationship between different utterances
+
+which incoherence sources are there for conversation?
+schegloff - sequence structure
+hrbáček - topic progression (issuez)
+    topic shifts
+    		-> abrupt topic shifts
+			 -> when is a topic exhausted?
+			 -> what makes for a good segway?
+unassignable anaphore
+			-> it is to be negotiated what is the topic
+			-> meaning of demonstratives is to be negotiated
+			-> types of confusing assignability
+				-> no candidates
+					-> can be understood as a promis of a cataphore/exophorically
+				-> multiple candidates
+				-> candidate too long ago
+					-> can be understood as an abrupt return to previously established topic
+so what do participants do about it?
+schegloff again
+dingemans
+    metacommunication, interactive repair
+    inference, pragmatic reasoning
+
+Conclusion
+    unassignable anaphore is underresearched
+    and a perfect area to work on our metaresearch question
+
+METHODOLOGY 20
+    chatbots in general
+	research environment
+	rule based approach
+		how its done
+		pros and cons
+	ai approach
+		llms
+		prompt engineering techniques
+		pros and cons
+	hybrid approach
+	convform
+	conversation design hands on
+		in general
+		stimuli
+			basic mode
+				how it is done
+				converstaional style
+					inquisitive
+					relaxed
+			prompt techniques
+				anaphorize
+				entity recognition
+			shallow anaphore
+			deep anaphore
+				how its done
+				asking info mentioned in the meantime
+			unassignable anaphore
+				hardcoded
+				prompting
+		ending the conversation
+
+PILOT 10
+    expectations
+		rating
+			from best to worse: shallow, deep, unassignable
+		abort
+			from least to most : shallow, deep, unassignable
+		reactions
+			shallow 	- continue
+			deep		- meta
+			unassignable 	- abort
+		inquisitive will be more negative
+	results
+		rating
+			✔ from best to worse: shallow, deep, unassignable
+			⛌ inquisitive scores higher
+		abort
+			⛌ deep and unassignable same amount of aborts
+			✔ inquisitive significantly more aborts for unassignable
+			✔ comments confirm this
+			⛌ inquisitive slightly less aborts for deep
+		reactions
+			✔ tendency manifested
+			⛌ deep and unassignable same amount of meta
+			✔ deep and unassignable mirroring continue and abort
+	qualitative
+		hardcoded phrase with intended unassignable anaphore is sometimes assignable by association
+		limiting context for deep anaphore tends to generate inappropriate pragmatics
+		limiting context for deep anaphore can lead to anaphore being open to a remap
+		inquisitivity sometimes appreciated, other times considered lack of contribution
+		deep anaphore (if accepted) tends to be seen as an abrupt shift to previous topic
+		unassignable anaphore (if accepted) tends to be seen as a cataphore
+		        cataphore is unimportant in conversation, it is a text phenomena
+			    what is important is there is trust (or tolerance)
+	further steps
+		making the questionnaire more detailed
+			convlog
+		replicate current results
+		annotator agreement on stimulus annotations
+		why inquisitive conversation style seems to be more likely to be appreciated?
+		what signifies appreciation / dissatisfaction in inquisitive conversation style? (router)
+		at which point does deep anaphore become unassignable?
+		when does associativity help assign an otherwise unassignable anaphore?
