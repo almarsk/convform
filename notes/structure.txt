@@ -3,14 +3,73 @@ COHERENCE DISRUPTIONS IN HUMAN-CHATBOT INTERACTION: TOWARDS QUANTITATIVE APPROAC
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 INTRO 2
-breakthrough in the way we interact with machines - via natural language !!
-ai race
-automate conversations
-    practical usage
-    quantitative conversation research
-        like 60s sacks with phone transcripts, now automation of conversations
-metaresearch - is this a viable methodology?
+Recently, there has been a breakthrough in the way we interact with machines.
+We can instruct a computer using natural language, the human speech.
+This opens new possibilities.
+Asides from making existing technology one step more accessible,
+new ways to use technology come up.
+Automated interaction alone can solve previously unsolvable problems,
+such as notably accessing a knowledge base.
+which until recently a knowledge base could be accessed only via fulltext,
+meaning we would only be able to find
+informations where we knew the formal encoding of a part of the information
+today, we can search informations asking questions,
+all thanks to natural language computer interface.
+
+The promise of much practical usage of the current wave of generative AI is ambitious
+and only brings its fruit slowly, perhaps slower, than was expected.
+There is talk of a "plateau" in development of the technology powering current cutting edge inventions.
+And there are more issues.
+Generative AI technology consumes great deal of electricity and has unpredictable impact on society
+to name the most prominent ones.
+
+That being said, in context of conversation research,
+this tool awakens temptation and curiosity.
+With a partial control of what happens in the conversation and a decent certainty, that
+our system will simulate actual human - human conversation in its coherence, it begs a question, whether
+we could elicitate conversational data - transcripts (or logs) of the human - bot interaction,
+that could be categorized based on
+    which researcher controlled stimulus and
+    which reaction to given stimulus
+they contain.
+
+In the 1960s the relatively recent emergence and adoption of telephone technology
+allowed for recording and transcribing the most authentic conversational data to date.
+This advancement took place thanks to developement in technology.
+
+While human - bot conversational data is arguably less authentic,
+experimental approach can be taken with the human element remaining present.
+It remains true, that the current wave of development in AI
+moves us a leap forward in understanding what conversation is -
+for the first time in history, we have a conversating machine
+and we can tell it what to do.
+
+This papers task is two-fold.
+Firstly it seeks to provide a debate on a metaresearch question -
+is using generative AI a viable methodology for conversation research?
+The way it does it is by attempting that very methodology.
+If we proceed that we operate in a frontier,
+the first steps should be establishing data backed baseline knowledge
+and assessing possible lines of research.
+
 focus on disruption - a blurred line between what is and isn't a coherent conversation
+while chatbots are evaluated for how natural and error free their way of conversating is,
+humans in their conversation frequently make errors and temporarily disrupt conversational coherence
+in the case of human - human communication, these disruptions can be cured easily
+in human - bot communication, disruptions can derail a conversation completely
+this is often because a human - bot communication is frequently single-purpose - there is a goal to be achieved
+an open-domain conversation, chit-chat or smalltalk if you will is also a coherent one
+the factors related to an open-domain coherence are
+    conventions - politeness
+    communicational strategy - politeness
+    intended content - message
+such communication can too be held between a human and a bot
+now that the natural language interface for communication with computers has been established
+the technology behind this interface is a model probabilistic in nature
+the model output is unpredictable and
+the only adjustments we can do to it
+have the form of natural language
+
 
 THEORY 15
 Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
@@ -159,6 +218,9 @@ Conclusion
 
 METHODOLOGY 20
     chatbots in general
+        Eliza
+        Replica
+        ChatGPT
 	research environment
 	rule based approach
 		how its done
