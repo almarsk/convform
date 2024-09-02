@@ -4,71 +4,109 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 INTRO 2
 Recently, there has been a breakthrough in the way we interact with machines.
-We can instruct a computer using natural language, the human speech.
+We can now instruct a computer using natural language, the human speech.
 This opens new possibilities.
-Asides from making existing technology one step more accessible,
+Besides making existing technology an extra step accessible,
 new ways to use technology come up.
 Automated interaction alone can solve previously unsolvable problems,
 such as notably accessing a knowledge base.
-which until recently a knowledge base could be accessed only via fulltext,
+Until recently a knowledge base would usually be accessed only via fulltext,
 meaning we would only be able to find
-informations where we knew the formal encoding of a part of the information
-today, we can search informations asking questions,
+information of which knew part of the formal encoding.
+Today, we can search for information simply asking questions,
 all thanks to natural language computer interface.
 
 The promise of much practical usage of the current wave of generative AI is ambitious
 and only brings its fruit slowly, perhaps slower, than was expected.
-There is talk of a "plateau" in development of the technology powering current cutting edge inventions.
-And there are more issues.
-Generative AI technology consumes great deal of electricity and has unpredictable impact on society
+There is talk of a "plateau" in development of the technology powering the current cutting edge inventions.
+And that is not the only issue there is to the current wave of cutting edge AI.
+    The electricity consumption is high and
+    the societal impact is unpredictable and broad
 to name the most prominent ones.
 
 That being said, in context of conversation research,
 this tool awakens temptation and curiosity.
 With a partial control of what happens in the conversation and a decent certainty, that
-our system will simulate actual human - human conversation in its coherence, it begs a question, whether
-we could elicitate conversational data - transcripts (or logs) of the human - bot interaction,
-that could be categorized based on
+our system will simulate actual human-human conversation in its coherence, it begs a question,
+whether we could elicitate conversational data -
+transcripts (or logs) of the human-bot interaction, that could be categorized based on
     which researcher controlled stimulus and
-    which reaction to given stimulus
+    which participant reaction to given stimulus
 they contain.
 
 In the 1960s the relatively recent emergence and adoption of telephone technology
 allowed for recording and transcribing the most authentic conversational data to date.
 This advancement took place thanks to developement in technology.
+This is reminiscent of the current day situation.
 
-While human - bot conversational data is arguably less authentic,
+While human-bot conversational data is arguably less authentic,
 experimental approach can be taken with the human element remaining present.
-It remains true, that the current wave of development in AI
+And so the current wave of development in AI
 moves us a leap forward in understanding what conversation is -
-for the first time in history, we have a conversating machine
-and we can tell it what to do.
+for the first time in history, we have a talking machine
+and better yet, it obeys our commands.
 
 This papers task is two-fold.
 Firstly it seeks to provide a debate on a metaresearch question -
 is using generative AI a viable methodology for conversation research?
-The way it does it is by attempting that very methodology.
-If we proceed that we operate in a frontier,
+This is done by attempting to develop that very methodology.
+Proceeding we operate in a frontier,
 the first steps should be establishing data backed baseline knowledge
 and assessing possible lines of research.
 
-focus on disruption - a blurred line between what is and isn't a coherent conversation
-while chatbots are evaluated for how natural and error free their way of conversating is,
-humans in their conversation frequently make errors and temporarily disrupt conversational coherence
-in the case of human - human communication, these disruptions can be cured easily
-in human - bot communication, disruptions can derail a conversation completely
-this is often because a human - bot communication is frequently single-purpose - there is a goal to be achieved
-an open-domain conversation, chit-chat or smalltalk if you will is also a coherent one
-the factors related to an open-domain coherence are
-    conventions - politeness
-    communicational strategy - politeness
-    intended content - message
-such communication can too be held between a human and a bot
-now that the natural language interface for communication with computers has been established
-the technology behind this interface is a model probabilistic in nature
-the model output is unpredictable and
-the only adjustments we can do to it
-have the form of natural language
+One way to understand what makes the unraveling text of a conversation
+a valid one - a coherent one,
+is obtaining conversational data containing coherence disruptions.
+This can be done using the discussed technology -
+it has the capability of conversing in a way
+that is found generally acceptable by humans
+and can drift away from the coherent interaction
+if correctly instruced to do so.
+
+Instead of reconstructing what conversation is bottom to top,
+the data this paper seeks to elicitate and analyse are
+regular conversation data containing moments which
+have the potential to be problematic for
+the human participant to process and follow up on.
+The line between what a coherent and an incoherent conversation is blurred.
+It is in no way a binary property of the conversation.
+This approach can however point at the divide between them.
+
+While chatbots are evaluated for how natural and error free their way of conversating is,
+humans in their conversation frequently
+    make errors and
+    temporarily disrupt conversational coherence
+in the case of human-human communication, these disruptions can be cured easily.
+
+It used to be that in human-bot communication, disruptions could derail a conversation completely,
+leaving the bot, who would only rely on surface level clues, in the dark.
+This has become rare with generative AI.
+The cutting edge technology powered chatbots are
+    better capable of understanding and producing relevant answers
+    behind the scene instructed so that they return to their point of departure
+        (offering help and service)
+making the default generative AI chatbot a very broad single-purpose one.
+Human-bot communication is often single-purpose - there is a goal to be achieved.
+The coherence of such conversation can then be described based on whether
+the goal has been achieved with success.
+An open-domain (also called chit-chat or smalltalk) human-bot conversation is possible.
+Some factors related to coherence in open-domain conversation
+(whether it is human-human or human-bot) stem from
+    convention and politeness   (Brown, Levinson)
+    communication strategy      (Austin, Searl)
+    conversational maxims       (Grice)
+    sequence structure          (Schegloff, Sacks)
+    message and topic           (???)
+While all of the mentioned areas bring a lot to the table,
+rarely do they concern themselves with the textual dimension of conversation.
+Most of the mentioned authors works do not fit in the field of linguistics, they only inform it.
+Exceptions from this trend have emerged.
+Interaction linguistics branches out of conversation analysis and
+points out specifically linguistic aspects in interaction to name a good example.
+
+Now that the natural language interface for communication with computers has been established
+it is possible to participate in cocreation of the conversation data text
+bringing us one step closer to experimental conversation research.
 
 
 THEORY 15
