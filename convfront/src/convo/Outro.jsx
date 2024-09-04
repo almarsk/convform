@@ -3,86 +3,59 @@ import { useState, useEffect } from "react";
 import LogRater from "./log-rater/LogRater.jsx";
 import myRequest from "../myRequest";
 import basename from "../basename.jsx";
-import Question from "./log-rater/Question.jsx";
-
-import mockConvo from "./log-rater/mock-convo.js";
 
 const Outro = () => {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const comment = new FormData(e.target).get("comment");
-    const grade = new FormData(e.target).get("grade");
-    await myRequest("/outro", [comment, grade]).then(
+  const [convo, setConvo] = useState([]);
+  const [rating, setRating] = useState(3);
+
+  const handleSubmit = async () => {
+    await myRequest("/outro", [rating, convo]).then(
       () => (window.location.href = basename + "/"),
     );
   };
 
-  const [aborted, setAborted] = useState(false);
-  const [convo, setConvo] = useState(mockConvo);
-
   useEffect(() => {
-    const isAborted = async () => {
-      return await myRequest("/is_aborted", {}).then((e) =>
-        setAborted(e.aborted),
-      );
+    const getConvo = async () => {
+      const convo_for_annotation = await myRequest("/convo");
+      setConvo(convo_for_annotation);
     };
-    isAborted();
+    getConvo();
   }, []);
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)} className="outro-form-parent">
-        <Question
-          evaluate={true}
-          text={
-            <p className="content">
-              {aborted
-                ? "Proč jste konverzaci ukončili?"
-                : "Jak konverzace proběhla?"}
-              <br></br>Prosím ohodnoťte <b>slovně</b> a <b>známkou</b> jako ve
-              škole:
-            </p>
-          }
-          setConvo={(updatedQ) =>
-            setConvo({
-              ...convo,
-              questions: convo.questions.map((q, i) =>
-                i == 0 ? { ...updatedQ } : { ...q },
-              ),
-            })
-          }
-          comment={convo.questions[0].comment}
-          evaluation={convo.questions[0].rating}
-        />
-        <Question
-          evaluate={false}
-          text={
-            <p className="content">
-              Měli jste někdy chuť konverzaci <b>ukončit</b>? Kdy?
-            </p>
-          }
-          setConvo={(updatedQ) =>
-            setConvo({
-              ...convo,
-              questions: convo.questions.map((q, i) => {
-                i == 1 ? { ...updatedQ } : { ...q };
-              }),
-            })
-          }
-          comment={convo.questions[1].comment}
-          evaluation={convo.questions[1].rating}
-        />
-
+      <form className="outro-form-parent">
+        <div className="outro-eval">
+          <span className="log-rater-turn">
+            Ohodnoťte přirozenost konverzace jako <b>ve škole</b>:
+          </span>
+          <select
+            name="grade"
+            value={rating}
+            required
+            className="submit"
+            onChange={(e) => {
+              setRating(e.target.value);
+            }}
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
         <LogRater
-          convo={convo.convo}
+          convo={convo.convo || []}
           setConvo={(updatedConvo) => {
             setConvo({ ...convo, convo: updatedConvo });
           }}
         />
         <div className="submit-panel">
           <button
-            onClick={() => {
-              console.log(convo);
+            onClick={(e) => {
+              e.preventDefault();
+              handleSubmit();
             }}
             className="submit submit-outro"
           >

@@ -49,8 +49,7 @@ class Conversation(db.Model):
     start_date = db.Column(db.DateTime, nullable=False, default=now)
     end_date = db.Column(db.DateTime, default=None)
     abort = db.Column(db.Boolean, default=None)
-    rating = db.Column(db.Integer, default=None)
-    comment = db.Column(db.Text, default=None)
+    user_annotation = db.Column(JSON)
     __table_args__ = {'extend_existing': True}
 
 
@@ -141,6 +140,7 @@ blueprint_paths = [
     "convo.abort.is_aborted_bp",
     "convo.outro.outro_bp",
     "convo.reset.reset_bp",
+    "convo.convo.convo_bp",
     "admin.call_convform.convform_bp",
     "admin.list_bots.list_bot_bp",
     "admin.create.create_bp",

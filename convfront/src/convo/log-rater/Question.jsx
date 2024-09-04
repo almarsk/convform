@@ -9,8 +9,9 @@ const Question = ({ evaluate, text, comment, evaluation, setConvo }) => {
           className="eval-field input-field content"
           type="text"
           required
-          placeholder="komentář"
+          placeholder="odpověď"
           value={comment}
+          onChange={(e) => setConvo(e.target.value)}
         ></textarea>
         {evaluate && (
           <div className="outro-eval">
@@ -19,7 +20,7 @@ const Question = ({ evaluate, text, comment, evaluation, setConvo }) => {
               required
               className="submit"
               value={evaluation}
-              onChange={setConvo()}
+              onChange={setConvo}
             >
               <option value="1">1</option>
               <option value="2">2</option>

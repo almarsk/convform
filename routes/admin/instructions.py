@@ -16,4 +16,4 @@ def instructions():
         user_instructions = convo.flow["instructions"]
         return jsonify({"success": True, "message": user_instructions}), 200
     else:
-        return jsonify({"success": False}), 400
+        return jsonify({"success": False}), 200

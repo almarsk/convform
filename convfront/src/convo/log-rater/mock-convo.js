@@ -1,14 +1,4 @@
 const mockConvo = {
-  questions: [
-    {
-      comment: "šlo to",
-      rating: 3,
-    },
-    {
-      comment: "bruh",
-      rating: 3,
-    },
-  ],
   convo: [
     {
       who: "bot",

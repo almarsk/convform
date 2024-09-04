@@ -5,7 +5,15 @@ const LogRater = ({ convo, setConvo }) => {
   return (
     <>
       <p className="log-rater-parent">
-        Prosím zvolte promluvy chatbota, které se vám <b>nelíbily</b>:
+        Zvolte odpovědi chatbota, které{" "}
+        <ul>
+          <li>
+            vás <b>zaujaly</b>{" "}
+          </li>
+          <li>
+            nebo se vám <b>nelíbily</b>:
+          </li>
+        </ul>
       </p>
       {convo.map((turn, renderIndex) => {
         return (
@@ -39,7 +47,7 @@ const LogRater = ({ convo, setConvo }) => {
               {turn.checked ? (
                 <>
                   <p className="log-rater-question">
-                    Co na této promluvě vás <b>zaujalo</b>?
+                    Co na této odpovědi vás <b>zaujalo</b>?
                   </p>
                   <textarea
                     required
