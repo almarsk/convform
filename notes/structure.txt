@@ -120,37 +120,36 @@ THEORY 15
 Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
 
 Textual dimension of conversation
-In order to operate on a firm base, key terminology has to be established.
-The following concepts need to be explained on their own terms and in relation to each other:
+In order to operate on a firm theoretical base, key terminology needs to be established.
+The following concepts will be explained on their own terms and in relation to each other:
 Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore, topic, entity and association.
 
     Text
     Text is any semiotic structure.
-    For the purpose of this paper,
+    For the purpose of this paper however,
     we will narrow this definition down to a structure that is
-    linguistic, intentional (produced and percieved as such) and coherent.
-    A text of conversation has a special property of being multiproducer.
-    This is not the only multiproducer text out there.
+    linguistic, produced and percieved as intentional and coherent.
+    A text of conversation is multiproducer.
+    This is not the only multiproducer text type out there.
     Another obivous example of a multiproducer text
     would be a sequence of commercial signs on a busy street.
     It is the spatial juxtaposition of the signs and temporal juxtaposition of utterances,
     that make them a text.
-    Spoken conversation is also negotiated.
+    Another property of conversation text is it is negotiated.
     This is given by its multiproducer and temporal nature.
     Other types of text which are also negotiated are relatively rare.
     There are occurences of debates which take place in written text,
     whether they are press columns or academic articles, which
-    interact explicitely with each other, making them a negotiation.
-    Another example worth mentioning is a so called rap beef or a rap battle.
-    This is when two or more rappers take turns releasing music
-    that is trying to belittle their opponent.
-    Both with rap battling and discourse it can be argued however,
-    that they surpass the what a textual unit is
-    and therefore are not text but rather
-    take part in a broader intertext.
+    interact explicitly with each other, making them a negotiation.
+    Another highly specific example is a so called rap beef or a rap battle.
+    This is when two rappers take turns releasing music
+    (or just improvising on the spot)
+    that is trying to belittle the opponent.
+    Both rap battling and press discourse can however be considered,
+    sequences of text units rather than a single temporarily juxtaposed text.
 
-    This perspective could hardly be defended with conversation, because
-    the tight temporal coupling and cohesiveness,
+    This perspective could hardly be defended in regards to conversation, because
+    its tight temporal coupling and cohesiveness,
     making conversation a unique phenomena.
 
     Coherence
@@ -158,20 +157,32 @@ Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore
     It is a property of the whole text, but
     textual elements can be pointed out that contribute to or diminish how
     coherent the text is.
-    Those elements are not refered to as "coherent" and will be discussed below.
+    Those elements are not refered to as "coherence elements" and will be discussed below.
     Coherence is a cognitive phenomena
         - whether a written text is coherent depends mostly on the reader
         - whether a spoken text is coherent depends on an ongoing negotiation
-    examples
+    Coherence is a scalar property rather than a binary one.
+    It is however tricky to measure.
+    This papers approach is discussed below, but to summarize,
+    different levels of coherence disruptions are declared
+    and the corelation with acceptance rates in participants is observed.
+    In summary, true measuring of coherence is impossible since
+    the degree to which a researched text is coherent
+    is a part of the research question.
 
     Cohesion
-    cohesion is not a property of text or anything else
-    umbrella concept covering specific relations within the structure of the text
-    cohesive text does not need to be coherent
-    examples (Hrbáček)
+    Cohesion is not a property of text or of anything else.
+    Instead it is an umbrella term
+    covering specific relations within the structure of the text.
+    Cohesive elements can be directly pinpointed in text.
+    It interacts with coherence.
+    A cohesive text does not need to be coherent. (Hrbáček)
+    A coherent text tends to be at least somewhat cohesive.
+    Following concepts can be considered cohesive elements.
 
     Coreference
-    textual elements that share an exophoric reference
+    Coreference is a relation between two textual elements
+    that share an exophoric reference.
 
     Anaphore and Endophore
     a reference inside the text pointing back
@@ -207,7 +218,7 @@ Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore
     but a single topic can contain several entities within a text
     entity is typically a noun in text,
     which can be meaningfully reffered to by an anaphore
-    or can realize an exophore potential making it a cataphore
+    or can realize an exophore potentially making it a cataphore
     has cohesive potential
 
 Interactional dimension of conversation
