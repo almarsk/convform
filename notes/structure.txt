@@ -12,7 +12,7 @@ Automated interaction alone can solve previously unsolvable problems,
 such as notably accessing a knowledge base.
 Until recently a knowledge base would usually be accessed only via fulltext,
 meaning we would only be able to find
-information of which knew part of the formal encoding.
+information knew part of the formal encoding of.
 Today, we can search for information simply asking questions,
 all thanks to natural language computer interface.
 
@@ -27,8 +27,8 @@ to name the most prominent ones.
 That being said, in context of conversation research,
 this tool awakens temptation and curiosity.
 With a partial control of what happens in the conversation and a decent certainty, that
-our system will simulate actual human-human conversation in its coherence, it begs a question,
-whether we could elicitate conversational data -
+our system will simulate human-human conversation to the user,
+new kind of conversational data is in reach -
 transcripts (or logs) of the human-bot interaction, that could be categorized based on
     which researcher controlled stimulus and
     which participant reaction to given stimulus
@@ -38,20 +38,15 @@ In the 1960s the relatively recent emergence and adoption of telephone technolog
 allowed for recording and transcribing the most authentic conversational data to date.
 This advancement took place thanks to developement in technology.
 This is reminiscent of the current day situation.
-
 While human-bot conversational data is arguably less authentic,
 experimental approach can be taken with the human element remaining present.
-And so the current wave of development in AI
-moves us a leap forward in understanding what conversation is -
-for the first time in history, we have a talking machine
-and better yet, it obeys our commands.
 
 This papers task is two-fold.
 Firstly it seeks to provide a debate on a metaresearch question -
 is using generative AI a viable methodology for conversation research?
 This is done by attempting to develop that very methodology.
 Proceeding we operate in a frontier,
-the first steps should be establishing data backed baseline knowledge
+our first steps should be establishing data backed baseline knowledge
 and assessing possible lines of research.
 
 One way to understand what makes the unraveling text of a conversation
@@ -63,14 +58,13 @@ that is found generally acceptable by humans
 and can drift away from the coherent interaction
 if correctly instruced to do so.
 
-Instead of reconstructing what conversation is bottom to top,
-the data this paper seeks to elicitate and analyse are
-regular conversation data containing moments which
+The data this paper seeks to elicitate and analyse are
+actual exchanges containing moments which
 have the potential to be problematic for
 the human participant to process and follow up on.
 The line between what a coherent and an incoherent conversation is blurred.
-It is in no way a binary property of the conversation.
-This approach can however point at the divide between them.
+It is in no way a binary property of the text of the conversation.
+This approach can however point out the divide between them.
 
 While chatbots are evaluated for how natural and error free their way of conversating is,
 humans in their conversation frequently
@@ -78,18 +72,21 @@ humans in their conversation frequently
     temporarily disrupt conversational coherence
 in the case of human-human communication, these disruptions can be cured easily.
 
-It used to be that in human-bot communication, disruptions could derail a conversation completely,
+It used to be (and remains in legacy systems)
+that in human-bot communication, disruptions could derail a conversation completely,
 leaving the bot, who would only rely on surface level clues, in the dark.
 This has become rare with generative AI.
 The cutting edge technology powered chatbots are
     better capable of understanding and producing relevant answers
-    behind the scene instructed so that they return to their point of departure
-        (offering help and service)
-making the default generative AI chatbot a very broad single-purpose one.
+    behind the scene instructed so that
+    they return to their conversational point of departure -
+offering help and service.
+
 Human-bot communication is often single-purpose - there is a goal to be achieved.
 The coherence of such conversation can then be described based on whether
-the goal has been achieved with success.
-An open-domain (also called chit-chat or smalltalk) human-bot conversation is possible.
+the goal has been achieved with success and ease.
+An open-domain (also called chit-chat or smalltalk) human-bot conversation is possible
+though less common.
 Some factors related to coherence in open-domain conversation
 (whether it is human-human or human-bot) stem from
     convention and politeness   (Brown, Levinson)
@@ -97,47 +94,95 @@ Some factors related to coherence in open-domain conversation
     conversational maxims       (Grice)
     sequence structure          (Schegloff, Sacks)
     message and topic           (???)
-While all of the mentioned areas bring a lot to the table,
+While all of the mentioned areas teach us a lot about the way conversation works,
 rarely do they concern themselves with the textual dimension of conversation.
-Most of the mentioned authors works do not fit in the field of linguistics, they only inform it.
-Exceptions from this trend have emerged.
+Most of the mentioned authors works could hardly be described as linguists,
+even though their works significantly inform linguistics.
+Yet, exceptions from this trend have emerged.
 Interaction linguistics branches out of conversation analysis and
 points out specifically linguistic aspects in interaction to name a good example.
 
-Now that the natural language interface for communication with computers has been established
-it is possible to participate in cocreation of the conversation data text
-bringing us one step closer to experimental conversation research.
+As opposed to interaction linguistics,
+which remains focused on the social and temporal aspect of human-human interaction,
+this paper will solely focus on the elements in conversational text,
+that make it cohesive and coherent.
+The key concepts that give text these properties is
+coreference realized by anaphore and
+closely related topic; what the text is about.
 
+The previously mentioned research fields
+of course inform about these concepts.
+With their help and the help of modern day technology
+this paper attempts to take a step further in
+understanding nature of conversation.
 
 THEORY 15
 Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
 
-Text
-In order to operate on a firm base, we need to equip ourselves with some theory.
-The following concepts need to be explained on their own terms and in relation to each other:
-Text, coherence, cohesion, anaphore, cataphore, endophore, exophore, topic, entity and association.
+Textual dimension of conversation
+In order to operate on a firm theoretical base, key terminology needs to be established.
+The following concepts will be explained on their own terms and in relation to each other:
+Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore, topic, entity and association.
 
     Text
-    linguistic, written - intentional, juxtaposed, coherent, spatial
-    spoken - multiproducer, negotiated, temporal
+    Text is any semiotic structure.
+    For the purpose of this paper however,
+    we will narrow this definition down to a structure that is
+    linguistic, produced and percieved as intentional and coherent.
+    A text of conversation is multiproducer.
+    This is not the only multiproducer text type out there.
+    Another obivous example of a multiproducer text
+    would be a sequence of commercial signs on a busy street.
+    It is the spatial juxtaposition of the signs and temporal juxtaposition of utterances,
+    that make them a text.
+    Another property of conversation text is it is negotiated.
+    This is given by its multiproducer and temporal nature.
+    Other types of text which are also negotiated are relatively rare.
+    There are occurences of debates which take place in written text,
+    whether they are press columns or academic articles, which
+    interact explicitly with each other, making them a negotiation.
+    Another highly specific example is a so called rap beef or a rap battle.
+    This is when two rappers take turns releasing music
+    (or just improvising on the spot)
+    that is trying to belittle the opponent.
+    Both rap battling and press discourse can however be considered,
+    sequences of text units rather than a single temporarily juxtaposed text.
 
-    This is as far as we need to go to suffice the topic of this paper,
-    but it is worth noting that the notion of text can go way further,
-    if we take semiotics and poststructuralism in the picture.
+    This perspective could hardly be defended in regards to conversation, because
+    its tight temporal coupling and cohesiveness,
+    making conversation a unique phenomena.
 
     Coherence
-    what makes text understandable.
-    property of text as a whole
-    cognitive
+    Coherence is what makes text understandable and its intention clear.
+    It is a property of the whole text, but
+    textual elements can be pointed out that contribute to or diminish how
+    coherent the text is.
+    Those elements are not refered to as "coherence elements" and will be discussed below.
+    Coherence is a cognitive phenomena
         - whether a written text is coherent depends mostly on the reader
         - whether a spoken text is coherent depends on an ongoing negotiation
-    examples
+    Coherence is a scalar property rather than a binary one.
+    It is however tricky to measure.
+    This papers approach is discussed below, but to summarize,
+    different levels of coherence disruptions are declared
+    and the corelation with acceptance rates in participants is observed.
+    In summary, true measuring of coherence is impossible since
+    the degree to which a researched text is coherent
+    is a part of the research question.
 
     Cohesion
-    cohesion is not a property of text or anything else
-    umbrella concept covering specific relations within the structure of the text
-    cohesive text does not need to be coherent
-    examples (Hrbáček)
+    Cohesion is not a property of text or of anything else.
+    Instead it is an umbrella term
+    covering specific relations within the structure of the text.
+    Cohesive elements can be directly pinpointed in text.
+    It interacts with coherence.
+    A cohesive text does not need to be coherent. (Hrbáček)
+    A coherent text tends to be at least somewhat cohesive.
+    Following concepts can be considered cohesive elements.
+
+    Coreference
+    Coreference is a relation between two textual elements
+    that share an exophoric reference.
 
     Anaphore and Endophore
     a reference inside the text pointing back
@@ -173,10 +218,10 @@ Text, coherence, cohesion, anaphore, cataphore, endophore, exophore, topic, enti
     but a single topic can contain several entities within a text
     entity is typically a noun in text,
     which can be meaningfully reffered to by an anaphore
-    or can realize an exophore potential making it a cataphore
+    or can realize an exophore potentially making it a cataphore
     has cohesive potential
 
-Conversation
+Interactional dimension of conversation
 To define conversation in terms of previously introduced concepts,
 one could see conversation as text which is produced by multiple producers
 This complicates things
@@ -205,7 +250,7 @@ this analysis has been practiced by sociologists, ethnometodologists
 in modern day, there is a conversation analysis descendant called
 interaction linguistics - topic and sequence
 
-Disruptions
+Disruptions in conversation coherence
 While the question of what makes for a coherent text is very broad,
 to ask and answer what makes for a coherent conversation seems comfortably in reach
 since conversation participants negotiate understanding,
