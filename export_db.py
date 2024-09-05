@@ -106,7 +106,7 @@ def get_prompt_logs(prompt_log):
 
 def get_user_annotation(convo):
     if hasattr(convo, "user_annotation"):
-        return [annotation for annotation in convo.user_annotation.convo if annotation["comment"]]
+        return [annotation for annotation in convo.user_annotation["convo"] if annotation["comment"]]
     else:
         return []
 
