@@ -50,7 +50,7 @@ def export():
                             "comment": convo.comment,
                             "conversation": replies,
                             "conversation_meta": replies_meta,
-                            "user_annotation": get_user_annotation()
+                            "user_annotation": get_user_annotation(convo)
                         }
 
                         all_convo_data[flow.flow_name]["data"][convo_data["id"]] = convo_data
