@@ -50,7 +50,7 @@ def export():
                             "comment": convo.comment,
                             "conversation": replies,
                             "conversation_meta": replies_meta,
-                            "user_annotation": [annotation for annotation in convo.user_annotation.convo if annotation["comment"]]
+                            "user_annotation": get_user_annotation()
                         }
 
                         all_convo_data[flow.flow_name]["data"][convo_data["id"]] = convo_data
@@ -103,5 +103,11 @@ def get_prompt_logs(prompt_log):
                 .replace("'''", "")]
 
     return prompt_log_filtered
+
+def get_user_annotation(convo):
+    if hasattr(convo, "user_annotation"):
+        return [annotation for annotation in convo.user_annotation.convo if annotation["comment"]]
+    else:
+        return []
 
 export()
