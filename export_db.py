@@ -49,7 +49,8 @@ def export():
                             "rating": convo.rating,
                             "comment": convo.comment,
                             "conversation": replies,
-                            "conversation_meta": replies_meta
+                            "conversation_meta": replies_meta,
+                            "user_annotation": [annotation for annotation in convo.user_annotation.convo if annotation["comment"]]
                         }
 
                         all_convo_data[flow.flow_name]["data"][convo_data["id"]] = convo_data
