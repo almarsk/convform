@@ -110,8 +110,7 @@ The key concepts that give text these properties is
 coreference realized by anaphore and
 closely related topic; what the text is about.
 
-The previously mentioned research fields
-of course inform about these concepts.
+The previously mentioned research fields inform about these concepts.
 With their help and the help of modern day technology
 this paper attempts to take a step further in
 understanding nature of conversation.
@@ -141,32 +140,31 @@ Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore
     There are occurences of debates which take place in written text,
     whether they are press columns or academic articles, which
     interact explicitly with each other, making them a negotiation.
-    Another highly specific example is a so called rap beef or a rap battle.
+    Another highly specific example is a so called rap beef.
     This is when two rappers take turns releasing music
     (or just improvising on the spot)
     that is trying to belittle the opponent.
-    Both rap battling and press discourse can however be considered,
-    sequences of text units rather than a single temporarily juxtaposed text.
+    Both rap battling and press discourse can however be considered
+    sequences of related text units rather than a single temporarily juxtaposed text.
 
     This perspective could hardly be defended in regards to conversation, because
-    its tight temporal coupling and cohesiveness,
+    its tight temporal coupling and cohesion,
     making conversation a unique phenomena.
 
     Coherence
     Coherence is what makes text understandable and its intention clear.
     It is a property of the whole text, but
-    textual elements can be pointed out that contribute to or diminish how
-    coherent the text is.
+    textual elements can be pointed out that contribute to or diminish the given text coherence.
     Those elements are not refered to as "coherence elements" and will be discussed below.
     Coherence is a cognitive phenomena
         - whether a written text is coherent depends mostly on the reader
-        - whether a spoken text is coherent depends on an ongoing negotiation
+        - whether a conversation text is coherent depends on an ongoing negotiation
     Coherence is a scalar property rather than a binary one.
     It is however tricky to measure.
     This papers approach is discussed below, but to summarize,
     different levels of coherence disruptions are declared
     and the corelation with acceptance rates in participants is observed.
-    In summary, true measuring of coherence is impossible since
+    True measuring of coherence is impossible since
     the degree to which a researched text is coherent
     is a part of the research question.
 
@@ -176,21 +174,30 @@ Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore
     covering specific relations within the structure of the text.
     Cohesive elements can be directly pinpointed in text.
     It interacts with coherence.
-    A cohesive text does not need to be coherent. (Hrbáček)
+    A text does not need to be coherent in order to be cohesive. (Hrbáček)
     A coherent text tends to be at least somewhat cohesive.
     Following concepts can be considered cohesive elements.
 
-    Coreference
-    Coreference is a relation between two textual elements
-    that share an exophoric reference.
+    Anaphore, Endophore and coreference
+    A common cohesive text element is an anaphore.
+    It is a reference inside the text pointing back to a previously mentioned entity.
+    Typically it is realised via demonstrative pronouns.
+    Though there are other ways for anaphore to realise.
+    In czech a common anaphoric element is a gendered suffix of a participle.
+    ...
+    An anaphoric element is by definition also endophoric (Halliday).
+    It points inside the text it appears in.
+    By definition an anaphoric element has a referent, which occures earlies in the text.
+    These two elements are then coreferent.
+    As such they also share an identical exophoric reference - they point outside of the text.
 
-    Anaphore and Endophore
-    a reference inside the text pointing back
-    typically demonstratives or gendered flective endings
-    a cohesive element
-    anaphore referent can be subject to negotiation in conversation
+    In conversation, where the text is cocreated
+    just like other aspects of it
+    the specific coreference relations are subject to negotiation.
+    The reference realised by one communication participant may be unclear to the other.
 
-    Cataphore and Exophore - a thin line
+    Cataphore and Exophore
+    If a suspicion arises, that the seemingly anaphoric text element
     a reference pointing towards in text
     unimportant for conversation
         understanding is achieved through trust and compliance with promise
@@ -277,7 +284,7 @@ which incoherence sources are there for conversation?
 schegloff - sequence structure
 hrbáček - topic progression (issuez)
     topic shifts
-    		-> abrupt topic shifts
+    		 -> abrupt topic shifts
 			 -> when is a topic exhausted?
 			 -> what makes for a good segway?
 unassignable anaphore
