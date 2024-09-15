@@ -15,7 +15,7 @@ const LogRater = ({ convo, setConvo }) => {
           </li>
         </ul>
       </p>
-      {convo
+      {convo.length
         ? convo.map((turn, renderIndex) => {
             return (
               <>
