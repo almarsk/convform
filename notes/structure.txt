@@ -2,7 +2,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 COHERENCE DISRUPTIONS IN HUMAN-CHATBOT INTERACTION: TOWARDS QUANTITATIVE APPROACH TO CONVERSATION
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-INTRO 2
+INTRODUCTION
 Recently, there has been a breakthrough in the way we interact with machines.
 We can now instruct a computer using natural language, the human speech.
 This opens new possibilities.
@@ -100,7 +100,7 @@ stem from
     conversational maxims       (Grice)
     sequence structure          (Schegloff, Sacks)
     message and topic           (???)
-While all of the mentioned areas teach us a lot about the way conversation works,
+While all of the mentioned areas unveil a lot about the way conversation works,
 rarely do they concern themselves with the textual dimension of conversation.
 Most of the mentioned authors works would hardly be described as linguists,
 though their works significantly inform linguistics.
@@ -116,7 +116,7 @@ The key concepts that give text these properties is
 coreference realized by anaphore and
 closely related - topic; what the text is about.
 
-THEORY 15
+THEORY
 Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
 
 Textual dimension of conversation
@@ -191,14 +191,14 @@ without necesarily complying with given literature.
     ...
     An anaphoric element is by definition also endophoric (Halliday).
     It points inside the text it appears in.
-    By definition an anaphoric element has a referent, which occures earlies in the text.
+    By definition an anaphoric element has a referent, which occures earlier in the text.
     These two elements are then coreferent.
-    As such they also share an identical exophoric reference - they point outside of the text.
+    As such they also share an identical exophoric reference (Halliday) - they point outside of the text.
 
     In conversation, many aspects of which are subject to negotiation,
     specific coreference relations can be questioned as well.
     The reference realised by one communication participant may be unclear to the other
-    resulting in a repair request (other initiated other repair).
+    resulting in a repair request (other initiated other repair - Sacks).
 
     Cataphore and Exophore
     If a seemingly anaphoric text element is not succesfully mapped
@@ -214,8 +214,9 @@ without necesarily complying with given literature.
     In conversation, where multiple contributors cocreate given text,
     and mutual understanding and agreement is the measure of
     how coherent the produced text is, later realisation of a vague reference
-    doesn't matter.
+    does not contribute to how coherent it is.
     Regardless, in case of a cataphore, only the referent is a cohesive element,
+    not the cataphore,
     as it ties back to the previous text, creating bonds across large textual units.
 
     Topic
@@ -223,34 +224,53 @@ without necesarily complying with given literature.
     That makes topic very complicated to pinpoint.
     Among others, some issues with topic and annotating it in text are:
         A text can and typically does contain multiple topics
-        Different framing will produce different topical annotations of text
-        Topic annotation is by nature more text, so even it can be annotated for topic.
-            It's recursive.
+        Different framing will produce different topic annotations of text
+        Topic annotation is by its nature always more text,
+            so even it can be annotated for topic.
+            making topic annotations recursive.
+            One cannot therefore achieve a definite topic description of a text.
         A true strict formal approach to topic does not exist.
         A topic section can be impossible to delimit within text.
-    Despite all the issues it brings,
+    Despite all these complications,
     topic cannot be set aside and ignored in conversation research
-    as it is intertwined with already mentioned concepts.
-    It is realised via anaphore and association.
-    It tightly interacts with coherence.
-    An appropriate amount of time, information has to be said about a topic
+    as it is deeply intertwined with already mentioned concepts.
+    Topic progressions across text are realised via anaphore and association
+    and tightly interact with coherence.
+    An appropriate amount of time has to be spend on a given topic unit,
+    enough information has to be said about a given topic
     in order for it to be possible to move on or add another one in the conversation.
     A closure has to be provided in order for a topic to be done.
     Transitioning from one topic to another has a potential to disrupt coherence,
     if the association between the topics is too distant.
+    A topical divergence has to be justified by a communicational intention.
 
     Association
-    textual realization of an isotopic relation
-    cohesive element, difficult to formalize
+    For the purpose of this paper association is textual realization of an isotopic relation. (Koblížek)
+    By their exophoric properties, referents exist in a semantic web of relationships.
+    Similarly to coherence, associative relationships are a cognitive phenomena.
+    They come to exist when they are percieved.
+    While association is a cohesive element it is difficult to formalize
+    the way it can and has been done with anaphoric text relations.
+    It is however a major factor in a coherence of text as
+    in extreme cases a text can only rely on association in its coherence.
 
     Entity
-    for the purpose of this paper, another concept is added - an entity
-    entity somewhat overlaps with topic,
-    but a single topic can contain several entities within a text
-    entity is typically a noun in text,
-    which can be meaningfully reffered to by an anaphore
-    or can realize an exophore potentially making it a cataphore
-    has cohesive potential
+    In this paper the term entity will serve as
+    a device connecting topic, anaphore and association in a formal way.
+    An entity is an exophoric referent.
+    Words or text elements which can be reffered to by an anaphore will be called entities.
+    Since a phrase containing an anaphore typically adds more information about the referent
+    the new information must be semantically compatible,
+    in other words association has to be possible between the referent and the added information.
+    Entity also has to do with topic.
+    Unfortunately not in a static way however.
+    A topic can in text can be represented by a single entity or multiple.
+    Coreferent words should be regarded as a single entity.
+    It will serve to partially map a topic distance in text (not semantic).
+    An extra layer of annotation might be required in some cases,
+    but for now entity distance serves as a good enough approach.
+    Review of this approach is one of the papers subtasks.
+    More on that in the methodology section.
 
 Interactional dimension of conversation
 To define conversation in terms of previously introduced concepts,
