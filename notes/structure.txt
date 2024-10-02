@@ -90,19 +90,21 @@ It can be described as open-domain.
 An open-domain human-bot conversation is possible
 though less common.
 This type of conversation is a good candidate phenomena to be studied.
-Since having the conversation is the purpose of it,
+Since having the conversation is the purpose here,
 the inner workings of what a conversation is step forward.
 Some factors related to coherence in the text of conversation
     (whether it is human-human or human-bot)
-stem from
+have been discussed before.
+Namely:
     convention and politeness   (Brown, Levinson)
     communication strategy      (Austin, Searl)
     conversational maxims       (Grice)
     sequence structure          (Schegloff, Sacks)
     message and topic           (???)
+    ...
 While all of the mentioned areas unveil a lot about the way conversation works,
 rarely do they concern themselves with the textual dimension of conversation.
-Most of the mentioned authors works would hardly be described as linguists,
+Most of the mentioned authors would hardly be described as linguists,
 though their works significantly inform linguistics.
 Yet, exceptions from this trend emerge in recent time.
 Interaction linguistics branches out of conversation analysis and
@@ -111,12 +113,13 @@ points out specifically linguistic aspects in interaction to name a good example
 Opposed to interaction linguistics,
 which remains focused on the social and temporal aspect of human-human interaction,
 this paper will solely focus on the elements in conversational text,
-that make it cohesive and coherent.
-The key concepts that give text these properties is
+that make it cohesive and coherent or rather
+those that have the potential to prevent it from being those things.
+The key concepts discussed in this paper are
 coreference realized by anaphore and
 closely related - topic; what the text is about.
 
-THEORY
+BACKGROUND
 Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
 
 Textual dimension of conversation
@@ -128,12 +131,13 @@ without necesarily complying with given literature.
 
     Text
     Text is any semiotic structure.
+    ...
     For the purpose of this paper however,
-    we will narrow this definition down to a structure that is
+    let this definition be narrowed down to a structure that is
     linguistic, produced and percieved as intentional and coherent.
     The text of a conversation is multiproducer.
     This is not the only multiproducer text type out there.
-    Another obivous example of a multiproducer text
+    Another example of a multiproducer text
     would be a sequence of commercial signs on a busy street.
     It is the spatial juxtaposition of the signs and temporal juxtaposition of utterances,
     that make them a text.
@@ -143,22 +147,27 @@ without necesarily complying with given literature.
     There are occurences of debates which take place in written text,
     whether they are press columns or academic articles, which
     interact explicitly with each other, making them a negotiation.
+    Such press discourse could however be considered
+    a sequence of text units rather than a single temporarily juxtaposed text.
     This perspective could hardly be defended in regards to conversation, because
     its tight temporal coupling and cohesion,
     making conversation a unique phenomena.
 
     Coherence
     Coherence describes the degree to which a text is understandable and its intention clear.
+    ...
     It is a property of the whole text, but
     textual elements can be pointed out that contribute to or diminish the given text coherence.
-    Those elements are not refered to as "coherence elements";
+    Those elements are not referred to as "coherence elements";
     will be discussed below.
     Coherence is a cognitive phenomena
+    ...
         - whether a written text is coherent depends mostly on the reader
         - whether a conversation text is coherent depends on an ongoing negotiation
     Coherence is a scalar property rather than a binary one.
     It is however tricky to measure.
-    This papers approach is discussed below, but to summarize,
+    This papers approach is discussed below.
+    To summarize,
     different levels of coherence disruptions are declared
     and the acceptance rates in participants are observed
     and corelation between
@@ -173,13 +182,18 @@ without necesarily complying with given literature.
         needs to be deployed.
 
     Cohesion
-    Cohesion is not a property of text or of anything else.
+    Cohesion and coherence are sometimes used interchangebly.
+    ...
+    This paper handles both terms differently.
+    Cohesion is not a property of text.
+    In fact it is not any property at all.
     Instead it is an umbrella term
     covering specific relations within the structure of the text.
     Cohesive elements can be directly pinpointed in text.
     It interacts with coherence.
     A text does not need to be coherent in order to be cohesive. (Hrbáček)
     A coherent text tends to be at least somewhat cohesive.
+    ... (Halliday)
     Following concepts can be considered cohesive elements.
 
     Anaphore, Endophore and coreference
@@ -189,6 +203,7 @@ without necesarily complying with given literature.
     Though there are other ways for anaphore to realise.
     In czech a common anaphoric element is a gendered suffix of a participle.
     ...
+
     An anaphoric element is by definition also endophoric (Halliday).
     It points inside the text it appears in.
     By definition an anaphoric element has a referent, which occures earlier in the text.
@@ -198,14 +213,16 @@ without necesarily complying with given literature.
     In conversation, many aspects of which are subject to negotiation,
     specific coreference relations can be questioned as well.
     The reference realised by one communication participant may be unclear to the other
-    resulting in a repair request (other initiated other repair - Sacks).
+    resulting in a repair request.
+    ...(other initiated other repair - Sacks).
 
     Cataphore and Exophore
+    ... (Halliday)
     If a seemingly anaphoric text element is not succesfully mapped
     to a preceding textual coreferent
     the reference can still be understood, because shared context.
-    Such element reaches out of the text with its reference, making it an exophoric one (Halliday)
-    A related circumstance is a cataphore.
+    Such element reaches out of the text with its reference, making it an exophoric one
+    A related phenomena is a cataphore.
     Cataphore is a reference which points forward in the text.
     Such occurence is rare in written text and even more so in a conversation.
     In fact it is somehow pointless to account for cataphore in a multi-producer text.
@@ -255,8 +272,6 @@ without necesarily complying with given literature.
     in extreme cases a text can only rely on association in its coherence.
 
     Entity
-    In this paper the term entity will serve as
-    a device connecting topic, anaphore and association in a formal way.
     An entity is an exophoric referent.
     Words or text elements which can be reffered to by an anaphore will be called entities.
     Since a phrase containing an anaphore typically adds more information about the referent
@@ -278,21 +293,22 @@ one could see conversation as text which is produced by multiple producers
 This complicates things
     conversation happens as opposed to text which is made
     conversational content is constantly negotiated by participants
-    temporal and cooperative nature of conversation allows
+    temporal and cooperative nature of conversation allows for
         overlaps
-        swiftly corrected errors
-        there is multiple perspectives
+        swiftly corrected errors (a subset of repairs)
+        multiple perspectives taking place
             each particiapnts perspective
             each idea of all the other participants perspectives
             each participants idea of the conversation text that is being cocreated
-        all of these can fall out of sync creating misunderstandings
-        humans however are pretty good at correcting misunderstandings
+        all of these can desynchronize creating misunderstandings
+        humans however are excellent at correcting misunderstandings
         this is because under regular circumstances, people cooperate
 grice cooperation principle and maxims
+...
 
-conversation as such has long been considered chaotic
-the origin of modern conversation research is conversation analysis
+modern conversation research reaches back to conversation analysis
 thanks to recordings of phonecalls, transcripts could be qualitatively analyzed
+this research has lead to coining new terminology:
     adjacency pair
     prefered answers
     topic shading
@@ -300,58 +316,82 @@ thanks to recordings of phonecalls, transcripts could be qualitatively analyzed
 this analysis has been practiced by sociologists, ethnometodologists
 in modern day, there is a conversation analysis descendant called
 interaction linguistics - topic and sequence
+...
 
 Disruptions in conversation coherence
-While the question of what makes for a coherent text is very broad,
-to ask and answer what makes for a coherent conversation seems comfortably in reach
-since conversation participants negotiate understanding,
+While the question of what makes for a coherent text is broad,
+to ask and answer what makes for a coherent conversation seems comfortably in reach.
+Because conversation participants negotiate understanding,
 it is up to them, when a conversation is and is not coherent
-to describe a coherent what a functioning conversation is,
-it is worth pursuing the moments, when the conversation stops working,
-we could call those coherence disruptions
-a coherence disruption is a complex phenomena,
+to describe what a coherent conversation is,
+it is worth pursuing the moments, when the conversation stops working.
+Such moments can be called coherence disruptions.
+A coherence disruption is a complex phenomena as
     it penetrates through some or all of mentioned perspectives on an on-going conversation
     it can't be evaluated in a binary fashion
-        there are different degrees to which a conversation coherence can be disrupted
-if a participant suddenly starts speaking in an uncoherent way on their own or
-if the utterance simply is not grammatical and or understandable,
+there are different degrees to which a conversation coherence can be disrupted
+    if a participant suddenly starts speaking
+    in an a way that can hardly be considered interaction
+    due to its irrelevance or
+    if the utterance simply is not grammatical and or understandable,
     while the conversation has been compromised and becomes incoherent,
     it has more to do with incoherent written text, because
     only one speaker is at the source of the incoherence
-    - Smith
-it is a considerably different phenomena from when
+Smith
+...
+This is a considerably different phenomena from when
 the source of incoherence stems from
     the structure of the conversational text or
     relationship between different utterances
     - this means another participant assesses,
-        they are leading a different conversation
-        or at least that they are conversing under another set of circumstances
+        they are simply speaking leading a different conversation
+        perhaps with a differing intention
+        or that they are conversing under differing set of circumstances
+        which manifests formally in the linguistic fabric of the conversation - its text.
 
-which incoherence sources are there for conversation?
+Which incoherence sources are there for conversation?
 schegloff - sequence structure
-hrbáček - topic progression (issuez)
+...
+
+Coherence disruptions are also discussed in linguistic literature.
+hrbáček - topic progression (issues)
+...
+
+This paper concerns itself with two phenomena - topic shifts and unassignable anaphore.
+Looking at these phenomena as coherence disrupting is rarely done in literature.
+
     topic shifts
     		 -> abrupt topic shifts
+             -> asking about a previously mentioned information
 			 -> when is a topic exhausted?
 			 -> what makes for a good segway?
-unassignable anaphore
-			-> it is to be negotiated what is the topic
-			-> meaning of demonstratives is to be negotiated
-			-> types of confusing assignability
-				-> no candidates
-					-> can be understood as a promis of a cataphore/exophorically
-				-> multiple candidates
-				-> candidate too long ago
+    ...
+
+    unassignable anaphore
+			-> closely tied to topic
+			    topic helps assigning anaphore and determining
+				between an anaphore and an exophore
+			-> in conversation meaning of demonstratives is to be negotiated
+		if an anaphores assignability causes confusion,
+		chances are it is caused by one of the following
+				-> there are no relevant assignment candidates
+					-> this situation can be understood as a vague exophore
+					-> unassignability is something absent in exophore
+							as long as assigning means
+							mapping one concrete text element onto another
+				-> there are multiple equally relevant candidates
+				-> candidate has occured in the conversation text too long ago
 					-> can be understood as an abrupt return to previously established topic
-so what do participants do about it?
-schegloff again
+What do participants do about coherence disruptions?
+schegloff
+...
 dingemans
     metacommunication, interactive repair
     inference, pragmatic reasoning
+...
 
-Conclusion
-    unassignable anaphore is underresearched
-    and a perfect area to work on our metaresearch question
+Unassignable anaphore is underresearched
+and it will serve as a suitable subject to work on our metaresearch question.
 
 METHODOLOGY 20
     chatbots in general
