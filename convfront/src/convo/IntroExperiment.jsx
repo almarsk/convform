@@ -7,22 +7,44 @@ const IntroExperiment = () => {
   return (
     <>
       <ul id="intro-text">
-        <li>Díky, že se účastníte.</li>
-        <li>––</li>
-        <li>Budete si povídat s chatbotem. </li>
-        <li>Povídejte si s ním, jak je vám přirozené.</li>
-        <li>––</li>
-        <li>
+        <li className="center">
+          Dobrý den,
+          <br /> jmenuji se Albert Maršík a jsem studentem NMgr. oboru Empirická
+          a komparativní lingvistika na FF UK.
+        </li>
+        <li className="center">V rámci studia se věnuji výzkumu konverzace.</li>
+        <li className="center">
+          Pro svou diplomovou práci jsem připravil chatbota, program, který si s
+          vámi bude povídat.
+          <br /> Povídejte si s ním, jak je vám přirozené.
+        </li>
+        <li>---</li>
+        <li className="center">
+          Během experimentu uvidíte vždy poslední promluvu chatbota a políčko na
+          vepsaní vaší další odpovědi.
+        </li>
+        <li className="center">
           Konverzace bude trvat několik minut a chatbot se poté sám rozloučí.
         </li>
-        <li>
+        <li className="center">
           Pokud bude chatbot komunikovat nepřirozeně, konverzaci ukončete
           červeným tlačítkem.
         </li>
-        <li>––</li>
-        <li>
-          Nejdřív prosím vyplňte <b>přezdívku</b>{" "}
-          <i>(kdyžtak tu stejnou co minule)</i>:
+        <li>---</li>
+        <li className="center">
+          Po skočení konverzace vám bude zobrazen přepis celé konverzace.
+          <br /> Prosím zaškrtněte promluvy chatbota, které se vám nelíbily,
+          nebo vás nějak zaujaly a okomentujte je.
+        </li>
+        <li>---</li>
+        <li className="center">
+          {" "}
+          <b>Upozornění</b>: Nevkládejte osobní informace.
+        </li>
+        <li className="centre">Díky, že se účastníte.</li>
+        <li className="center">
+          Nejdřív prosím vyplňte <b>identifikační číslo</b>, které jste obdrželi
+          v emailu:
         </li>
       </ul>
       <UserInput
@@ -38,13 +60,6 @@ const IntroExperiment = () => {
         loading={false}
         display={[true, false]}
       />
-      <ul>
-        <li className="center">
-          <b>Upozornění:</b> Nevkládejte osobní informace.
-        </li>
-        <li className="center">Na konci prosím vyplňte dotazník.</li>
-        <li className="center">Na mobilu nejlépe horizontálně.</li>
-      </ul>
     </>
   );
 };
