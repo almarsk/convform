@@ -17,6 +17,8 @@ const IntroExperiment = () => {
           Pro svou diplomovou práci jsem připravil chatbota, program, který si s
           vámi bude povídat.
           <br /> Povídejte si s ním, jak je vám přirozené.
+          <br /> Téma konverzace není předem určeno a záleží do značené míry na
+          vás.
         </li>
         <li>---</li>
         <li className="center">

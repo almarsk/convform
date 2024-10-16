@@ -89,9 +89,7 @@ Another common scenario is a purpose-less conversation. It gets called chit-chat
 It can be described as open-domain.
 An open-domain human-bot conversation is possible
 though less common.
-This type of conversation is a good candidate phenomena to be studied.
-Since having the conversation is the purpose here,
-the inner workings of what a conversation is step forward.
+
 Some factors related to coherence in the text of conversation
     (whether it is human-human or human-bot)
 have been discussed before.
@@ -130,10 +128,12 @@ The definitions draw from literature but attempt at creating their own sustainab
 without necesarily complying with given literature.
 
     Text
-    Text is any semiotic structure.
-    ...
-    For the purpose of this paper however,
-    let this definition be narrowed down to a structure that is
+    Text, in its broadest sense, refers to any form of communication that conveys meaning through a combination of signs, symbols, or language.
+    These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression.
+    A text can be as simple as a single sentence or as complex as a novel, and it can exist across different mediums, from books and articles to advertisements and digital content.
+    What defines a text is its ability to convey a coherent message or idea, often intended for interpretation by an audience or an adressee.
+    Texts can serve a wide range of purposes, including storytelling, instruction, persuasion, or simply recording information.
+    Typically text is a structure that is
     linguistic, produced and percieved as intentional and coherent.
     The text of a conversation is multiproducer.
     This is not the only multiproducer text type out there.
@@ -154,16 +154,36 @@ without necesarily complying with given literature.
     making conversation a unique phenomena.
 
     Coherence
-    Coherence describes the degree to which a text is understandable and its intention clear.
-    ...
+    Coherence refers to the logical connections and consistent relationships that
+    make a text easy to follow and possible to understand.
+    It is achieved when the ideas, sentences, and paragraphs within a text are linked together in a meaningful way,
+    allowing the reader to grasp the author's message without confusion.
+    Coherence often depends on the use of transitions, the logical flow of arguments, and the proper sequencing of information.
+    It ensures that each part of the text contributes to the overall meaning, creating a unified whole.
+    Without coherence, a text can be difficult or impossible to understand, even if the individual sentences are grammatically correct.
     It is a property of the whole text, but
     textual elements can be pointed out that contribute to or diminish the given text coherence.
     Those elements are not referred to as "coherence elements";
     will be discussed below.
-    Coherence is a cognitive phenomena
-    ...
+    Coherence is a cognitive phenomenon because
+    it involves the mental processes of interpreting, organizing, and understanding information.
+    When reading a text,
+    coherence arises not only from the structure and linguistic cues provided by the author but
+    also from the reader's ability to
+    make connections between ideas based on prior knowledge, expectations, and context.
+    This cognitive interaction between the text and the reader’s mind is what makes the content understandable.
+
+    In conversation, coherence becomes even more complex,
+    as multiple participants are simultaneously contributing to and interpreting the flow of information.
+    Each individual brings their own perspective and understanding to the interaction,
+    which requires constant negotiation to maintain coherence.
+    Misunderstandings, different backgrounds, and interruptions
+    can disrupt the coherence of a conversation,
+    making it a more dynamic and fragile process compared to written text.
+
         - whether a written text is coherent depends mostly on the reader
         - whether a conversation text is coherent depends on an ongoing negotiation
+
     Coherence is a scalar property rather than a binary one.
     It is however tricky to measure.
     This papers approach is discussed below.
@@ -303,8 +323,26 @@ This complicates things
         all of these can desynchronize creating misunderstandings
         humans however are excellent at correcting misunderstandings
         this is because under regular circumstances, people cooperate
-grice cooperation principle and maxims
-...
+
+The Gricean Cooperation Principle, introduced by philosopher H.P. Grice,
+suggests that participants in a conversation typically work together to achieve effective communication.
+Grice proposed that, to ensure this cooperation, speakers follow four conversational maxims:
+quantity, quality, relation, and manner.
+
+    - Quantity requires speakers to provide as much information as needed, but no more. Overloading a conversation with excessive details or being too brief could impede clarity.
+    - Quality refers to the expectation that participants provide truthful information, avoiding falsehoods or statements without adequate evidence.
+    - Relation (or relevance) ensures that contributions to the conversation are pertinent to the ongoing discussion.
+    - Manner emphasizes clarity, promoting orderly and unambiguous communication.
+
+These maxims represent an idealized version of conversation
+where both parties aim for mutual understanding.
+In practice, people may not always follow these maxims
+but they do so in ways that still rely on shared expectations of cooperation.
+Even when misunderstandings arise,
+humans naturally engage in conversational repair,
+using their social intuition and mutual cooperativity to clarify intetion and realign perspectives.
+Grice's maxims highlight the unspoken rules that underlie smooth conversation,
+crucial for maintaining its dynamic, ever-negotiated nature.
 
 modern conversation research reaches back to conversation analysis
 thanks to recordings of phonecalls, transcripts could be qualitatively analyzed
