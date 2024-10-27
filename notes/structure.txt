@@ -25,11 +25,11 @@ And that is not the only issue there is to the current wave of cutting edge AI.
 to name the most prominent ones.
 
 That being said, in context of conversation research,
-this tool awakens temptation and curiosity.
+this tool awakens curiosity.
 With a partial control of what happens in the conversation and a decent certainty, that
 our system will simulate human-human conversation to the user,
 new kind of conversational data is in reach -
-transcripts (or logs) of the human-bot interaction, that could be categorized based on
+logs of the human-bot interaction, that could be categorized based on
     which researcher controlled stimulus and
     which participant reaction to given stimulus
 they contain.
@@ -41,7 +41,7 @@ This is reminiscent of the current day situation.
 While human-bot conversational data is arguably less authentic than telephone conversation transcripts,
 experimental approach can be taken with the human element remaining present.
 
-This papers task is two-fold.
+This papers intention is two-fold.
 Firstly it seeks to provide a debate on a metaresearch question -
 is using generative AI a viable methodology for conversation research?
 This is done by attempting to develop that very methodology.
@@ -64,7 +64,7 @@ have the potential to be problematic for
 the human participant to process and follow up on.
 The line between what a coherent and an incoherent conversation is blurred.
 It is in no way a binary property of the text of the conversation.
-This approach has the potential however point out the divide between them.
+This approach has the potential however point out the gradual divide between them.
 
 While chatbots are evaluated for how natural and error free their way of conversing is,
 humans in their conversation frequently
@@ -82,7 +82,9 @@ The cutting edge technology powered chatbots are
         they return to their conversational point of departure -
             offering help and service.
 
-Human-bot communication is often single-purpose - there is a goal to be achieved.
+Nowadays in practice, human-bot communication is often single-purpose.
+Companies deploy voice applications to interact with customers,
+so there is usually a goal to be achieved.
 The coherence of such conversation can then be described based on whether
 the goal has been achieved with success and ease.
 Another common scenario is a purpose-less conversation. It gets called chit-chat or smalltalk.
@@ -90,16 +92,27 @@ It can be described as open-domain.
 An open-domain human-bot conversation is possible
 though less common.
 
-Some factors related to coherence in the text of conversation
-    (whether it is human-human or human-bot)
-have been discussed before.
-Namely:
-    convention and politeness   (Brown, Levinson)
-    communication strategy      (Austin, Searl)
-    conversational maxims       (Grice)
-    sequence structure          (Schegloff, Sacks)
-    message and topic           (???)
-    ...
+Some factors that influence coherence in conversational texts,
+whether in human-human or human-bot exchanges,
+have been extensively studied.
+
+---
+Namely
+ **Politeness**
+Brown and Levinson’s work on politeness strategies highlights the role of socially aligned communication in smooth interactions. Politeness strategies, such as using polite language, offering options, or softening potentially face-threatening comments, help to create a comfortable communicative environment. These strategies align with social norms, which people interpret as markers of respect, consideration, or even trust. However, a failure to employ these politeness strategies, or using them inconsistently, can disrupt conversational coherence. For example, blunt or overly direct responses may be perceived as abrupt or rude, diverting the conversation's flow or causing discomfort. In such cases, the breakdown of polite norms can lead participants to question intent, hindering effective and smooth communication.
+
+**Communication Strategy**
+Building on Austin and Searle's speech act theories, communication strategies rely on expressing clear intentions and meanings that foster mutual understanding. When speakers convey intentions explicitly through statements, questions, requests, or assertions, it signals to listeners the purpose and direction of the conversation. Effective communication strategies help maintain coherence by ensuring each contribution builds logically on the last. On the other hand, unclear intentions or ambiguous phrasing can create misunderstandings, disrupting the conversation's flow. Misalignment or mixed signals—such as using sarcasm without cues or making indirect requests without context—can leave listeners uncertain about how to respond, leading to off-track or irrelevant contributions. This weakens the cohesiveness of the interaction and detracts from the shared purpose.
+
+**Conversational Maxims**
+Grice’s conversational maxims—Quality, Quantity, Relevance, and Manner—are fundamental to coherent dialogue. They suggest that participants should provide truthful information (Quality), neither too much nor too little (Quantity), remain on-topic (Relevance), and communicate in an orderly, clear manner (Manner). These maxims encourage effective exchange by setting a standard for contributions that are informative, truthful, relevant, and unambiguous. When violated, such as by giving excessive detail, omitting important context, or straying from the topic, coherence suffers. For instance, irrelevant tangents or over-detailed explanations may confuse the listener, diverting attention from the main topic. This misalignment can leave participants uncertain about the conversation’s direction, ultimately diminishing coherence and the effectiveness of communication.
+
+**Sequence Structure**
+The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue. Turn-taking conventions—where participants follow an implicit sequence of speaking and responding—help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses (e.g., answering a question with a new question) can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
+
+**Message and Topic (Interactional Linguistics)**
+Interactional linguistics underscores that consistency in message and topic preserves continuity in conversation. When speakers stick to a shared topic or make gradual, clear shifts, coherence is maintained because participants know what to expect. Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges. For instance, introducing a new topic without closure on the previous one can confuse listeners, leading to a scattered or fragmented interaction. By shifting focus unpredictably or offering unclear messages, coherence diminishes as participants lose track of the conversation’s thread, resulting in exchanges that feel scattered or incomplete.
+
 While all of the mentioned areas unveil a lot about the way conversation works,
 rarely do they concern themselves with the textual dimension of conversation.
 Most of the mentioned authors would hardly be described as linguists,
@@ -201,28 +214,56 @@ without necesarily complying with given literature.
     A combination of qualitative and quantitative analysis
         needs to be deployed.
 
+    ---
     Cohesion
-    Cohesion and coherence are sometimes used interchangebly.
-    ...
-    This paper handles both terms differently.
-    Cohesion is not a property of text.
-    In fact it is not any property at all.
-    Instead it is an umbrella term
-    covering specific relations within the structure of the text.
-    Cohesive elements can be directly pinpointed in text.
-    It interacts with coherence.
-    A text does not need to be coherent in order to be cohesive. (Hrbáček)
-    A coherent text tends to be at least somewhat cohesive.
-    ... (Halliday)
+    Cohesion and coherence are sometimes used interchangeably.
+    However, the two terms hold distinct meanings.
+    While coherence refers to the interpretative quality of a text,
+    wherein the ideas form a logical and meaningful whole.
+    Cohesion, on the other hand, focuses on the structural relations
+    within a text, achieved through grammatical and lexical links.
+    Hrbáček contends that cohesion is not a property of the text itself.
+    Instead, it is an umbrella term
+    covering specific relations within
+    the structure of the text,
+    where cohesive elements can be directly pinpointed.
+    While coherent text does not necesarily need to be cohesive,
+    cohesive elements often support it.
+    A coherent text tends to be at least somewhat cohesive,
+
+    Halliday and Hasan developed
+    a detailed framework of cohesion, which includes both
+    internal and external referencing mechanisms within a text.
+    These include endophoric references, which
+    relate parts of the text to each other, and
+    exophoric references, which point outside the text.
+    Endophoric cohesion covers aspects
+    like anaphoric references and cataphoric references.
+    Exophoric references, however, rely on shared context beyond the text itself,
+    requiring readers to use prior knowledge.
+    This cohesive framework highlights how elements of cohesion
+    contribute to textual unity and flow, even
+    if coherence based on meaning is not fully achieved.
     Following concepts can be considered cohesive elements.
 
     Anaphore, Endophore and coreference
     A common cohesive text element is an anaphore.
     It is a reference inside the text pointing back to a previously mentioned entity.
-    Typically it is realised via demonstrative pronouns.
+    Often it is realised via personal pronouns.
     Though there are other ways for anaphore to realise.
-    In czech a common anaphoric element is a gendered suffix of a participle.
-    ...
+    ---
+    In Czech, anaphoric references often rely on grammatical gender and number,
+    making participial endings essential for identifying the referent.
+    For instance, when a masculine entity is mentioned,
+    later references might use a participle in the masculine form, such as šel ("he went"),
+    connecting back to muž without repeating the noun.
+    Demonstratives, such as ten ("that") or tento ("this one"),
+    also frequently serve anaphoric functions, guiding the reader to a previously mentioned subject.
+    Temporal and locative adverbs, such as tam ("there") and tehdy ("then"),
+    also contribute cohesion by indirectly referencing time and place details introduced earlier in the text.
+    These anaphoric elements strengthen textual coherence by reducing redundancy and maintaining flow.
+    The reader identifies coreferential links through these markers,
+    following the cohesive threads without needing explicit repetitions.
 
     An anaphoric element is by definition also endophoric (Halliday).
     It points inside the text it appears in.
@@ -427,9 +468,6 @@ dingemans
     metacommunication, interactive repair
     inference, pragmatic reasoning
 ...
-
-Unassignable anaphore is underresearched
-and it will serve as a suitable subject to work on our metaresearch question.
 
 METHODOLOGY 20
     chatbots in general
