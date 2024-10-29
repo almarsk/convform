@@ -272,14 +272,48 @@ without necesarily complying with given literature.
     As such they also share an identical exophoric reference (Halliday) - they point outside of the text.
 
     In conversation, many aspects of which are subject to negotiation,
-    specific coreference relations can be questioned as well.
+    also specific coreference relations can be questioned.
     The reference realised by one communication participant may be unclear to the other
     resulting in a repair request.
-    ...(other initiated other repair - Sacks).
+    In conversation analysis,
+    ---
+    Sacks’s concept of repair traditionally addresses
+    misunderstandings related to intentions and actions,
+    drawing on frameworks like Austin’s and Searle’s speech act theories.
+    From this perspective, repairs often target interpretative gaps about
+    what a speaker intends to do with their utterance.
+    However, viewed from a broader, more abstract level,
+    repair triggers can extend beyond intentions alone,
+    encompassing issues on the textual level as well.
+    For instance, an unassignable anaphora —
+    a reference that lacks a clear antecedent —
+    may lead to a repair request,
+    thereby showing how textual ambiguities prompt interactional responses.
+    This approach expands the causes of repair in conversation,
+    integrating elements of reference (textual level) and interactional misalignment,
+    where a structural aspect of the language itself can
+    become a repairable issue in the communicative exchange.
 
     Cataphore and Exophore
-    ... (Halliday)
-    If a seemingly anaphoric text element is not succesfully mapped
+    ---
+    In Halliday and Hasan's framework,
+    cohesion in language is achieved through various devices that connect
+    different parts of a text, forming a unified whole.
+    Anaphora is central to their concept of cohesive ties,
+    as it allows elements in a text to refer back to previously mentioned items,
+    creating clear links between ideas and ensuring continuity.
+    They classify these cohesive ties as
+    references, substitutive forms, ellipsis, and connectors, with
+    anaphoric references being one of the primary ways texts achieve cohesion.
+    When a text element cannot be mapped to a preceding referent,
+    Halliday and Hasan suggest that cohesion is maintained through
+    shared situational understanding, making the reference exophoric.
+    Cataphoric references, though less common, involve
+    elements that look forward in the text,
+    showing intentionality by the author but contributing to
+    cohesion primarily through the eventual resolution of the forward-pointing referent.
+
+    In covnersation if a seemingly anaphoric text element is not succesfully mapped
     to a preceding textual coreferent
     the reference can still be understood, because shared context.
     Such element reaches out of the text with its reference, making it an exophoric one
@@ -385,17 +419,20 @@ using their social intuition and mutual cooperativity to clarify intetion and re
 Grice's maxims highlight the unspoken rules that underlie smooth conversation,
 crucial for maintaining its dynamic, ever-negotiated nature.
 
-modern conversation research reaches back to conversation analysis
-thanks to recordings of phonecalls, transcripts could be qualitatively analyzed
+Modern conversation research can be understood to reach back to conversation analysis.
+---
+Conversation analysis has been practiced by sociologists and ethnometodologists.
+Modern conversation research traces its roots to conversation analysis, a field pioneered by sociologists like Harvey Sacks and Emanuel Schegloff. They sought to understand the structure and social rules of everyday interactions, focusing on the patterns and norms that govern turn-taking and response.
+For the first time in the 1960's thanks to recordings of phonecalls,
+transcripts could be qualitatively analyzed
 this research has lead to coining new terminology:
     adjacency pair
     prefered answers
     topic shading
     sequence structure
-this analysis has been practiced by sociologists, ethnometodologists
-in modern day, there is a conversation analysis descendant called
-interaction linguistics - topic and sequence
-...
+---
+Interaction linguistics emerged as a descendant of conversation analysis, building on its insights to examine language use in social contexts. It broadens the focus to study not only verbal exchanges but also multimodal cues like gestures, gaze, and intonation, analyzing how these elements contribute to meaning. Interaction linguistics aims to understand the dynamic aspects of conversations, such as how topics shift and how sequences of speech acts unfold, reflecting the fluid nature of human communication.
+
 
 Disruptions in conversation coherence
 While the question of what makes for a coherent text is broad,
