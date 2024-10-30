@@ -404,9 +404,14 @@ suggests that participants in a conversation typically work together to achieve 
 Grice proposed that, to ensure this cooperation, speakers follow four conversational maxims:
 quantity, quality, relation, and manner.
 
-    - Quantity requires speakers to provide as much information as needed, but no more. Overloading a conversation with excessive details or being too brief could impede clarity.
-    - Quality refers to the expectation that participants provide truthful information, avoiding falsehoods or statements without adequate evidence.
-    - Relation (or relevance) ensures that contributions to the conversation are pertinent to the ongoing discussion.
+    - Quantity requires speakers to
+        provide as much information as needed, but no more.
+        Overloading a conversation with excessive details or being too brief could impede clarity.
+    - Quality refers to the expectation that
+        participants provide truthful information,
+        avoiding falsehoods or statements without adequate evidence.
+    - Relation (or relevance) ensures that
+        contributions to the conversation are pertinent to the ongoing discussion.
     - Manner emphasizes clarity, promoting orderly and unambiguous communication.
 
 These maxims represent an idealized version of conversation
@@ -422,7 +427,11 @@ crucial for maintaining its dynamic, ever-negotiated nature.
 Modern conversation research can be understood to reach back to conversation analysis.
 ---
 Conversation analysis has been practiced by sociologists and ethnometodologists.
-Modern conversation research traces its roots to conversation analysis, a field pioneered by sociologists like Harvey Sacks and Emanuel Schegloff. They sought to understand the structure and social rules of everyday interactions, focusing on the patterns and norms that govern turn-taking and response.
+Modern conversation research traces its roots to conversation analysis,
+a field pioneered by sociologists like Harvey Sacks and Emanuel Schegloff.
+They sought to understand the structure and
+social rules of everyday interactions,
+focusing on the patterns and norms that govern turn-taking and response.
 For the first time in the 1960's thanks to recordings of phonecalls,
 transcripts could be qualitatively analyzed
 this research has lead to coining new terminology:
@@ -431,8 +440,14 @@ this research has lead to coining new terminology:
     topic shading
     sequence structure
 ---
-Interaction linguistics emerged as a descendant of conversation analysis, building on its insights to examine language use in social contexts. It broadens the focus to study not only verbal exchanges but also multimodal cues like gestures, gaze, and intonation, analyzing how these elements contribute to meaning. Interaction linguistics aims to understand the dynamic aspects of conversations, such as how topics shift and how sequences of speech acts unfold, reflecting the fluid nature of human communication.
-
+As a descendant of conversation analysis interaction linguistics has emerged,
+building on its insights to examine language use in social contexts.
+It broadens the focus to study not only verbal exchanges but also
+multimodal cues like gestures, gaze, and intonation,
+analyzing how these elements contribute to meaning.
+Interaction linguistics aims to understand the dynamic aspects of conversations,
+such as how topics shift and how sequences of speech acts unfold,
+reflecting the fluid nature of human communication.
 
 Disruptions in conversation coherence
 While the question of what makes for a coherent text is broad,
@@ -453,38 +468,92 @@ there are different degrees to which a conversation coherence can be disrupted
     while the conversation has been compromised and becomes incoherent,
     it has more to do with incoherent written text, because
     only one speaker is at the source of the incoherence
-Smith
-...
-This is a considerably different phenomena from when
+
+Smith Discusses various types of incoherent text.
+He exemplifies so called giberish as incoherent text that is absent of structural relations.
+On the other hand he discusses experimental theater or literature as a type of text
+which is assumed to be coherent in the sense that there is an intention behind it
+but contains little to no structural relations.
+Lastly he mentions a so called "schizophrenic discourse" as a speech that
+is not assumed to be coherent even if it has structural relations to it.
+This is similar to Hrbáček.
+In any case Smith definitively states that coherence is assumed
+and is therefore a receptive phenomena.
+The incoherence Smith discusses is considerably different from when
 the source of incoherence stems from
     the structure of the conversational text or
     relationship between different utterances
-    - this means another participant assesses,
+    - this is when another participant assesses,
         they are simply speaking leading a different conversation
         perhaps with a differing intention
         or that they are conversing under differing set of circumstances
         which manifests formally in the linguistic fabric of the conversation - its text.
+        All that despite everyone included being cooperative.
 
 Which incoherence sources are there for conversation?
-schegloff - sequence structure
-...
+---
+Schegloff shows how incoherence arises when
+people interpret sequence structure differently,
+namely in terms of which turn is seen as an answer to which previously occuring turn.
+In his example, the participants misread each other’s intentions,
+leading to confusion about how their turns fit together.
+They each project different expectations for how the conversation should unfold,
+which causes misaligned sequence structure interpretations.
+When this happens,
+they turn to brief metacommunication—comments about the conversation itself
+to try to clarify and re-align their understanding.
+Schegloff illustrates how these
+efforts to "repair" the misalignment are central to
+managing and resolving incoherent moments in conversation.
 
 Coherence disruptions are also discussed in linguistic literature.
-hrbáček - topic progression (issues)
-...
+---
+Hrbáček’s approach to coherence and cohesion in text distinguishes the two concepts,
+noting how they often interact but can also be independent.
+He highlights that while
+cohesion involves grammatical or lexical links that
+make sentences flow together,
+coherence relies on the logical and meaningful progression of ideas.
+This means that a text could be cohesive -
+using connectives, repetitions, and consistent lexical choices -
+yet still lack coherence if the sequence of ideas doesn’t
+make logical sense or
+follow a clear progression.
+Conversely, a text may be coherent in its narrative flow without
+relying heavily on cohesive devices.
+In Czech linguistics,
+the distinction between téma (theme) and réma (rheme), as used by Daneš,
+underlines the role of topic progression.
+Hrbáček illustrates this by discussing examples where
+a story progresses logically from one point to the next while
+even if it does use typical cohesive markers,
+it is not coherent as it never comes back a to previously mentioned topic.
 
 This paper concerns itself with two phenomena - topic shifts and unassignable anaphore.
 Looking at these phenomena as coherence disrupting is rarely done in literature.
 
-    topic shifts
-    		 -> abrupt topic shifts
-             -> asking about a previously mentioned information
-			 -> when is a topic exhausted?
-			 -> what makes for a good segway?
-    ...
+    Topic shifts
+    When conversations shift abruptly from one topic to another,
+    it can create confusion for the conversation partner.
+    They might find themselves trying to
+    reconnect to the previous discussion or
+    wondering how the new subject relates.
+    This can lead to misunderstandings,
+    as the transition can feel jarring.
+
+    One interesting question is,
+    how do we determine when a topic has run its course?
+    What common traits do conversations share when a subject is truly exhausted?
+    Can observing transcripts reveal repeating patterns in topic progression or sequence structure?
+
+    Moreover, what makes for a smooth transition between topics?
+    Is it related to the cues participants give each other,
+    or perhaps the context of the discussion?
+    How do we navigate the flow of conversation and
+    what indicates a natural shift versus a disruptive one?
 
     unassignable anaphore
-			-> closely tied to topic
+			-> closely tied to topic progression
 			    topic helps assigning anaphore and determining
 				between an anaphore and an exophore
 			-> in conversation meaning of demonstratives is to be negotiated
@@ -500,11 +569,11 @@ Looking at these phenomena as coherence disrupting is rarely done in literature.
 					-> can be understood as an abrupt return to previously established topic
 What do participants do about coherence disruptions?
 schegloff
-...
+... [as mentioned earlier they do metacomunication or interactive repairs or in the smoothest case they infer]
 dingemans
     metacommunication, interactive repair
     inference, pragmatic reasoning
-...
+... [from cognitive point of view arriving at similar conclusion]
 
 METHODOLOGY 20
     chatbots in general
