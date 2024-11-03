@@ -25,7 +25,7 @@ And that is not the only issue there is to the current wave of cutting edge AI.
 to name the most prominent ones.
 
 That being said, in context of conversation research,
-this tool awakens curiosity.
+this development in technology promises to open many new doors.
 With a partial control of what happens in the conversation and a decent certainty, that
 our system will simulate human-human conversation to the user,
 new kind of conversational data is in reach -
@@ -532,7 +532,7 @@ it is not coherent as it never comes back a to previously mentioned topic.
 This paper concerns itself with two phenomena - topic shifts and unassignable anaphore.
 Looking at these phenomena as coherence disrupting is rarely done in literature.
 
-    Topic shifts
+Topic shifts
     When conversations shift abruptly from one topic to another,
     it can create confusion for the conversation partner.
     They might find themselves trying to
@@ -552,28 +552,61 @@ Looking at these phenomena as coherence disrupting is rarely done in literature.
     How do we navigate the flow of conversation and
     what indicates a natural shift versus a disruptive one?
 
-    unassignable anaphore
-			-> closely tied to topic progression
-			    topic helps assigning anaphore and determining
-				between an anaphore and an exophore
-			-> in conversation meaning of demonstratives is to be negotiated
-		if an anaphores assignability causes confusion,
-		chances are it is caused by one of the following
-				-> there are no relevant assignment candidates
-					-> this situation can be understood as a vague exophore
-					-> unassignability is something absent in exophore
-							as long as assigning means
-							mapping one concrete text element onto another
-				-> there are multiple equally relevant candidates
-				-> candidate has occured in the conversation text too long ago
-					-> can be understood as an abrupt return to previously established topic
+Nonassignable anaphore
+    Unassignable anaphore closely tied to topic progression
+    Currently established topic or topics help assigning anaphore and
+    determining	between an anaphore and an exophore.
+    Even if an anaphoric device is not assignable,
+    and the reference is presumably an exophoric one,
+    The reason for employing this reference must be
+    relevat to an established topic.
+    In conversation meaning of demonstratives is to be negotiated.
+    If an anaphores assignability causes confusion,
+	chances are it is caused by one of the following
+		-> there are no relevant assignment candidates
+			-> this situation can be understood as a vague or unjustified exophore
+		-> there are multiple equally relevant candidates
+		-> candidate has occured in the conversation text too long ago
+			-> can be understood as an abrupt return to previously established topic
+
+---
 What do participants do about coherence disruptions?
-schegloff
-... [as mentioned earlier they do metacomunication or interactive repairs or in the smoothest case they infer]
-dingemans
-    metacommunication, interactive repair
-    inference, pragmatic reasoning
-... [from cognitive point of view arriving at similar conclusion]
+In conversation, coherence disruptions often prompt participants to
+employ strategies to maintain understanding and flow.
+Schegloff suggests that people manage these disruptions through interactive repair or inference.
+Interactive repair often involves
+explicitly addressing misunderstandings or clarifying intentions,
+often by rephrasing or asking questions.
+Interactive repair refers to immediate, collaborative corrections within dialogue,
+where one speaker might correct the other or themselves to enhance clarity.
+Inference and pragmatic reasoning, the most seamless methods,
+allow participants to fill gaps based on context and social cues,
+helping conversations continue smoothly without explicit repair.
+
+Dingemans echoes these strategies from a cognitive perspective,
+highlighting how inference and pragmatic reasoning are particularly effective.
+Participants rely on shared understanding and contextual knowledge to interpret ambiguous statements.
+Together, these strategies show how both
+explicit (metacommunication and repair) and
+implicit (inference and reasoning)
+methods work to restore coherence,
+underscoring the active role of participants in
+constructing clear and meaningful exchanges.
+
+It needs to be noted however that both interactive repair and reasoning are
+deployed in a number of other contexts
+other than conversation coherence disruption.
+Inference takes place almost constantly as Garfinkel notes.
+Each of those moments could be hardly considered a coherence disruption.
+There is however always potential for it,
+particularily via unclear or nonassignable anaphore or abrupt unjustified topic shifts.
+Repair and metacommunication also takes place in a mutually informed and synchonized interaction.
+It is for example deployed when conversation partners it is revealed to one or both
+that their intentions or opinions differ.
+
+These uses of interaction management are however
+hardly possible to analyse on a textual level
+since they do not cooccur with coherence disruptions.
 
 METHODOLOGY 20
     chatbots in general
@@ -609,6 +642,12 @@ METHODOLOGY 20
 				hardcoded
 				prompting
 		ending the conversation
+	what the data gives
+	how to handle data
+	learning from
+	    hands on design - trying to replicate a situation
+		qualitative analysis
+		quantitative analysis
 
 PILOT 10
     expectations
