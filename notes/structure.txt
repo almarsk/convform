@@ -1,8 +1,21 @@
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-COHERENCE DISRUPTIONS IN HUMAN-CHATBOT INTERACTION: TOWARDS QUANTITATIVE APPROACH TO CONVERSATION
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+\documentclass{article}
+\title{Coherence disruptions in human-chatbot interaction: towards quantitative approach to conversation}
+\date{}
+\author{Albert Maršík}
+\begin{document}
 
-INTRODUCTION
+%\begin{enumerate}
+    %\item LaTeX
+ %   \item fix %--- parts
+  %  \item add citations
+   % \item final touches
+%\end{enumerate}
+
+\maketitle
+
+\textbf{INTRODUCTION}
+\\
+\\
 Recently, there has been a breakthrough in the way we interact with machines.
 We can now instruct a computer using natural language, the human speech.
 This opens new possibilities.
@@ -15,14 +28,17 @@ meaning we would only be able to find
 information of which we knew a part of the formal encoding.
 Today, we can search for information simply by asking questions,
 all thanks to natural language computer interface.
-
+\\
+\\
 The promise of much practical usage of the current wave of generative AI is ambitious
 and only brings its fruit slowly, perhaps slower, than was expected.
 There is talk of a "plateau" in development of the technology powering the current cutting edge inventions.
-And that is not the only issue there is to the current wave of cutting edge AI.
-    The electricity consumption is high and
-    the societal impact is unpredictable and broad
-to name the most prominent ones.
+And that is not the only issue there is to the current wave of cutting edge AI. to name the most prominent ones:
+
+\begin{itemize}
+    \item the electricity consumption is high and
+    \item the societal impact is unpredictable and broad
+\end{itemize}
 
 That being said, in context of conversation research,
 this development in technology promises to open many new doors.
@@ -30,17 +46,23 @@ With a partial control of what happens in the conversation and a decent certaint
 our system will simulate human-human conversation to the user,
 new kind of conversational data is in reach -
 logs of the human-bot interaction, that could be categorized based on
-    which researcher controlled stimulus and
-    which participant reaction to given stimulus
-they contain.
 
+\begin{itemize}
+    \item which researcher controlled stimulus and
+    \item which participant reaction to given stimulus
+\end{itemize}
+
+they contain.
+\\
+\\
 In the 1960s the relatively recent emergence and adoption of telephone technology
 allowed for recording and transcribing the most authentic conversational data to date.
 This advancement took place thanks to developement in technology.
 This is reminiscent of the current day situation.
 While human-bot conversational data is arguably less authentic than telephone conversation transcripts,
 experimental approach can be taken with the human element remaining present.
-
+\\
+\\
 This papers intention is two-fold.
 Firstly it seeks to provide a debate on a metaresearch question -
 is using generative AI a viable methodology for conversation research?
@@ -48,7 +70,8 @@ This is done by attempting to develop that very methodology.
 Proceeding we operate in a frontier,
 our first steps should be establishing data backed baseline knowledge
 and assessing possible lines of research.
-
+\\
+\\
 One way to understand what makes the unraveling text of a conversation
 a valid one - a coherent one -
 is obtaining conversational data containing coherence disruptions.
@@ -57,7 +80,8 @@ it has the capability of conversing in a way
 that is found generally acceptable by humans
 and can drift away from the coherent interaction
 if correctly instruced to do so.
-
+\\
+\\
 The data this paper seeks to elicitate and analyse are
 actual exchanges containing moments which
 have the potential to be problematic for
@@ -65,23 +89,29 @@ the human participant to process and follow up on.
 The line between what a coherent and an incoherent conversation is blurred.
 It is in no way a binary property of the text of the conversation.
 This approach has the potential however point out the gradual divide between them.
-
+\\
+\\
 While chatbots are evaluated for how natural and error free their way of conversing is,
 humans in their conversation frequently
     make errors and
     temporarily disrupt conversational coherence
 in the case of human-human communication, these disruptions can be cured easily.
-
+\\
+\\
 It used to be (and remains so in legacy systems)
 that in human-bot communication, disruptions could derail a conversation completely,
 leaving the bot, who would only rely on surface level clues, in the dark.
 This has become rare with generative AI. (Though it brings a set of its own problems.)
 The cutting edge technology powered chatbots are
-    better capable of understanding and producing relevant answers
-    behind the scenes instructed so that
+
+\begin{itemize}
+\item    better capable of understanding and producing relevant answers
+\item    behind the scenes instructed so that
         they return to their conversational point of departure -
             offering help and service.
-
+\end{itemize}
+\\
+\\
 Nowadays in practice, human-bot communication is often single-purpose.
 Companies deploy voice applications to interact with customers,
 so there is usually a goal to be achieved.
@@ -91,28 +121,35 @@ Another common scenario is a purpose-less conversation. It gets called chit-chat
 It can be described as open-domain.
 An open-domain human-bot conversation is possible
 though less common.
-
+\\
+\\
 Some factors that influence coherence in conversational texts,
 whether in human-human or human-bot exchanges,
 have been extensively studied.
-
----
-Namely
- **Politeness**
+Namely:
+\\
+\\
+%---
+\textbf{Politeness}
 Brown and Levinson’s work on politeness strategies highlights the role of socially aligned communication in smooth interactions. Politeness strategies, such as using polite language, offering options, or softening potentially face-threatening comments, help to create a comfortable communicative environment. These strategies align with social norms, which people interpret as markers of respect, consideration, or even trust. However, a failure to employ these politeness strategies, or using them inconsistently, can disrupt conversational coherence. For example, blunt or overly direct responses may be perceived as abrupt or rude, diverting the conversation's flow or causing discomfort. In such cases, the breakdown of polite norms can lead participants to question intent, hindering effective and smooth communication.
-
-**Communication Strategy**
+\\
+\\
+\textbf{Communication Strategy}
 Building on Austin and Searle's speech act theories, communication strategies rely on expressing clear intentions and meanings that foster mutual understanding. When speakers convey intentions explicitly through statements, questions, requests, or assertions, it signals to listeners the purpose and direction of the conversation. Effective communication strategies help maintain coherence by ensuring each contribution builds logically on the last. On the other hand, unclear intentions or ambiguous phrasing can create misunderstandings, disrupting the conversation's flow. Misalignment or mixed signals—such as using sarcasm without cues or making indirect requests without context—can leave listeners uncertain about how to respond, leading to off-track or irrelevant contributions. This weakens the cohesiveness of the interaction and detracts from the shared purpose.
-
-**Conversational Maxims**
+\\
+\\
+\textbf{Conversational Maxims}
 Grice’s conversational maxims—Quality, Quantity, Relevance, and Manner—are fundamental to coherent dialogue. They suggest that participants should provide truthful information (Quality), neither too much nor too little (Quantity), remain on-topic (Relevance), and communicate in an orderly, clear manner (Manner). These maxims encourage effective exchange by setting a standard for contributions that are informative, truthful, relevant, and unambiguous. When violated, such as by giving excessive detail, omitting important context, or straying from the topic, coherence suffers. For instance, irrelevant tangents or over-detailed explanations may confuse the listener, diverting attention from the main topic. This misalignment can leave participants uncertain about the conversation’s direction, ultimately diminishing coherence and the effectiveness of communication.
-
-**Sequence Structure**
+\\
+\\
+\textbf{Sequence Structure}
 The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue. Turn-taking conventions—where participants follow an implicit sequence of speaking and responding—help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses (e.g., answering a question with a new question) can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
-
-**Message and Topic (Interactional Linguistics)**
+\\
+\\
+\textbf{Message and Topic}
 Interactional linguistics underscores that consistency in message and topic preserves continuity in conversation. When speakers stick to a shared topic or make gradual, clear shifts, coherence is maintained because participants know what to expect. Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges. For instance, introducing a new topic without closure on the previous one can confuse listeners, leading to a scattered or fragmented interaction. By shifting focus unpredictably or offering unclear messages, coherence diminishes as participants lose track of the conversation’s thread, resulting in exchanges that feel scattered or incomplete.
-
+\\
+\\
 While all of the mentioned areas unveil a lot about the way conversation works,
 rarely do they concern themselves with the textual dimension of conversation.
 Most of the mentioned authors would hardly be described as linguists,
@@ -120,7 +157,8 @@ though their works significantly inform linguistics.
 Yet, exceptions from this trend emerge in recent time.
 Interaction linguistics branches out of conversation analysis and
 points out specifically linguistic aspects in interaction to name a good example.
-
+\\
+\\
 Opposed to interaction linguistics,
 which remains focused on the social and temporal aspect of human-human interaction,
 this paper will solely focus on the elements in conversational text,
@@ -129,18 +167,23 @@ those that have the potential to prevent it from being those things.
 The key concepts discussed in this paper are
 coreference realized by anaphore and
 closely related - topic; what the text is about.
-
-BACKGROUND
-Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
-
-Textual dimension of conversation
+\pagebreak
+\\
+\\
+\textbf{BACKGROUND}
+\\
+%Hrbáček, Halliday, Smith, Givón, Nedoluzhko, Izotopie (Daneš a další)
+\\
+\textbf{Textual dimension of conversation}
+\\
 In order to operate on a firm theoretical base, key terminology needs to be established.
 The following concepts will be explained on their own terms and in relation to each other:
 Text, coherence, cohesion, coreference, anaphore, cataphore, endophore, exophore, topic, entity and association.
 The definitions draw from literature but attempt at creating their own sustainable model
 without necesarily complying with given literature.
-
-    Text
+\\
+\\
+\textbf{Text}
     Text, in its broadest sense, refers to any form of communication that conveys meaning through a combination of signs, symbols, or language.
     These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression.
     A text can be as simple as a single sentence or as complex as a novel, and it can exist across different mediums, from books and articles to advertisements and digital content.
@@ -165,8 +208,9 @@ without necesarily complying with given literature.
     This perspective could hardly be defended in regards to conversation, because
     its tight temporal coupling and cohesion,
     making conversation a unique phenomena.
-
-    Coherence
+\\
+\\
+\textbf{Coherence}
     Coherence refers to the logical connections and consistent relationships that
     make a text easy to follow and possible to understand.
     It is achieved when the ideas, sentences, and paragraphs within a text are linked together in a meaningful way,
@@ -185,7 +229,8 @@ without necesarily complying with given literature.
     also from the reader's ability to
     make connections between ideas based on prior knowledge, expectations, and context.
     This cognitive interaction between the text and the reader’s mind is what makes the content understandable.
-
+\\
+\\
     In conversation, coherence becomes even more complex,
     as multiple participants are simultaneously contributing to and interpreting the flow of information.
     Each individual brings their own perspective and understanding to the interaction,
@@ -194,8 +239,10 @@ without necesarily complying with given literature.
     can disrupt the coherence of a conversation,
     making it a more dynamic and fragile process compared to written text.
 
-        - whether a written text is coherent depends mostly on the reader
-        - whether a conversation text is coherent depends on an ongoing negotiation
+\begin{itemize}
+\item whether a written text is coherent depends mostly on the reader
+\item whether a conversation text is coherent depends on an ongoing negotiation
+\end{itemize}
 
     Coherence is a scalar property rather than a binary one.
     It is however tricky to measure.
@@ -204,8 +251,12 @@ without necesarily complying with given literature.
     different levels of coherence disruptions are declared
     and the acceptance rates in participants are observed
     and corelation between
-        those acceptance rates and
-        level of coherence disruptions
+
+\begin{itemize}
+\item those acceptance rates and
+\item level of coherence disruptions
+\end{itemize}
+
     are sought for.
     True measuring of coherence is impossible since
     the degree to which a researched text is coherent
@@ -213,10 +264,11 @@ without necesarily complying with given literature.
     Acceptance rate as a measurement also has its flaws.
     A combination of qualitative and quantitative analysis
         needs to be deployed.
-
-    ---
-    Cohesion
-    Cohesion and coherence are sometimes used interchangeably.
+\\
+\\
+%---
+\textbf{Cohesion}
+Cohesion and coherence are sometimes used interchangeably.
     However, the two terms hold distinct meanings.
     While coherence refers to the interpretative quality of a text,
     wherein the ideas form a logical and meaningful whole.
@@ -229,8 +281,9 @@ without necesarily complying with given literature.
     where cohesive elements can be directly pinpointed.
     While coherent text does not necesarily need to be cohesive,
     cohesive elements often support it.
-    A coherent text tends to be at least somewhat cohesive,
-
+    A coherent text tends to be at least somewhat cohesive.
+\\
+\\
     Halliday and Hasan developed
     a detailed framework of cohesion, which includes both
     internal and external referencing mechanisms within a text.
@@ -245,13 +298,14 @@ without necesarily complying with given literature.
     contribute to textual unity and flow, even
     if coherence based on meaning is not fully achieved.
     Following concepts can be considered cohesive elements.
-
-    Anaphore, Endophore and coreference
+\\
+\\
+\textbf{Anaphore, Endophore and coreference}
     A common cohesive text element is an anaphore.
     It is a reference inside the text pointing back to a previously mentioned entity.
     Often it is realised via personal pronouns.
     Though there are other ways for anaphore to realise.
-    ---
+    %---
     In Czech, anaphoric references often rely on grammatical gender and number,
     making participial endings essential for identifying the referent.
     For instance, when a masculine entity is mentioned,
@@ -264,19 +318,21 @@ without necesarily complying with given literature.
     These anaphoric elements strengthen textual coherence by reducing redundancy and maintaining flow.
     The reader identifies coreferential links through these markers,
     following the cohesive threads without needing explicit repetitions.
-
+\\
+\\
     An anaphoric element is by definition also endophoric (Halliday).
     It points inside the text it appears in.
     By definition an anaphoric element has a referent, which occures earlier in the text.
     These two elements are then coreferent.
     As such they also share an identical exophoric reference (Halliday) - they point outside of the text.
-
+\\
+\\
     In conversation, many aspects of which are subject to negotiation,
     also specific coreference relations can be questioned.
     The reference realised by one communication participant may be unclear to the other
     resulting in a repair request.
     In conversation analysis,
-    ---
+    %---
     Sacks’s concept of repair traditionally addresses
     misunderstandings related to intentions and actions,
     drawing on frameworks like Austin’s and Searle’s speech act theories.
@@ -293,9 +349,10 @@ without necesarily complying with given literature.
     integrating elements of reference (textual level) and interactional misalignment,
     where a structural aspect of the language itself can
     become a repairable issue in the communicative exchange.
-
-    Cataphore and Exophore
-    ---
+\\
+\\
+\textbf{Cataphore and Exophore}
+    %---
     In Halliday and Hasan's framework,
     cohesion in language is achieved through various devices that connect
     different parts of a text, forming a unified whole.
@@ -312,7 +369,8 @@ without necesarily complying with given literature.
     elements that look forward in the text,
     showing intentionality by the author but contributing to
     cohesion primarily through the eventual resolution of the forward-pointing referent.
-
+\\
+\\
     In covnersation if a seemingly anaphoric text element is not succesfully mapped
     to a preceding textual coreferent
     the reference can still be understood, because shared context.
@@ -330,19 +388,24 @@ without necesarily complying with given literature.
     Regardless, in case of a cataphore, only the referent is a cohesive element,
     not the cataphore,
     as it ties back to the previous text, creating bonds across large textual units.
-
-    Topic
+\\
+\\
+\textbf{Topic}
     Topic is what a text is about.
     That makes topic very complicated to pinpoint.
     Among others, some issues with topic and annotating it in text are:
-        A text can and typically does contain multiple topics
-        Different framing will produce different topic annotations of text
-        Topic annotation is by its nature always more text,
+
+\begin{itemize}
+\item A text can and typically does contain multiple topics
+\item Different framing will produce different topic annotations of text
+\item Topic annotation is by its nature always more text,
             so even it can be annotated for topic.
             making topic annotations recursive.
             One cannot therefore achieve a definite topic description of a text.
-        A true strict formal approach to topic does not exist.
-        A topic section can be impossible to delimit within text.
+\item A true strict formal approach to topic does not exist.
+\item A topic section can be impossible to delimit within text.
+\end{itemize}
+
     Despite all these complications,
     topic cannot be set aside and ignored in conversation research
     as it is deeply intertwined with already mentioned concepts.
@@ -355,8 +418,9 @@ without necesarily complying with given literature.
     Transitioning from one topic to another has a potential to disrupt coherence,
     if the association between the topics is too distant.
     A topical divergence has to be justified by a communicational intention.
-
-    Association
+\\
+\\
+\textbf{Association}
     For the purpose of this paper association is textual realization of an isotopic relation. (Koblížek)
     By their exophoric properties, referents exist in a semantic web of relationships.
     Similarly to coherence, associative relationships are a cognitive phenomena.
@@ -365,8 +429,9 @@ without necesarily complying with given literature.
     the way it can and has been done with anaphoric text relations.
     It is however a major factor in a coherence of text as
     in extreme cases a text can only rely on association in its coherence.
-
-    Entity
+\\
+\\
+\textbf{Entity}
     An entity is an exophoric referent.
     Words or text elements which can be reffered to by an anaphore will be called entities.
     Since a phrase containing an anaphore typically adds more information about the referent
@@ -381,38 +446,54 @@ without necesarily complying with given literature.
     but for now entity distance serves as a good enough approach.
     Review of this approach is one of the papers subtasks.
     More on that in the methodology section.
-
-Interactional dimension of conversation
+\\
+\\
+\textbf{Interactional dimension of conversation}
+\\
 To define conversation in terms of previously introduced concepts,
 one could see conversation as text which is produced by multiple producers
 This complicates things
-    conversation happens as opposed to text which is made
-    conversational content is constantly negotiated by participants
-    temporal and cooperative nature of conversation allows for
-        overlaps
-        swiftly corrected errors (a subset of repairs)
-        multiple perspectives taking place
-            each particiapnts perspective
-            each idea of all the other participants perspectives
-            each participants idea of the conversation text that is being cocreated
+
+\begin{itemize}
+\item conversation happens as opposed to text which is made
+\item conversational content is constantly negotiated by participants
+\item temporal and cooperative nature of conversation allows for
+\begin{itemize}
+\item overlaps
+\item swiftly corrected errors (a subset of repairs)
+\item multiple perspectives taking place:
+\begin{itemize}
+\item each participants perspective
+\item each idea of all the other participants perspectives
+\item each participants idea of the conversation text that is being cocreated
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
         all of these can desynchronize creating misunderstandings
         humans however are excellent at correcting misunderstandings
-        this is because under regular circumstances, people cooperate
-
-The Gricean Cooperation Principle, introduced by philosopher H.P. Grice,
+        this is because under regular circumstances, people cooperate.
+\\
+\\
+\textbf{The Cooperation Principle}
+\\
+The Cooperation Principle, introduced by philosopher H.P. Grice,
 suggests that participants in a conversation typically work together to achieve effective communication.
 Grice proposed that, to ensure this cooperation, speakers follow four conversational maxims:
+\\
 quantity, quality, relation, and manner.
 
-    - Quantity requires speakers to
+\begin{itemize}
+\item Quantity requires speakers to
         provide as much information as needed, but no more.
         Overloading a conversation with excessive details or being too brief could impede clarity.
-    - Quality refers to the expectation that
+\item Quality refers to the expectation that
         participants provide truthful information,
         avoiding falsehoods or statements without adequate evidence.
-    - Relation (or relevance) ensures that
+\item Relation (or relevance) ensures that
         contributions to the conversation are pertinent to the ongoing discussion.
-    - Manner emphasizes clarity, promoting orderly and unambiguous communication.
+\item Manner emphasizes clarity, promoting orderly and unambiguous communication.
+\end{itemize}
 
 These maxims represent an idealized version of conversation
 where both parties aim for mutual understanding.
@@ -423,9 +504,10 @@ humans naturally engage in conversational repair,
 using their social intuition and mutual cooperativity to clarify intetion and realign perspectives.
 Grice's maxims highlight the unspoken rules that underlie smooth conversation,
 crucial for maintaining its dynamic, ever-negotiated nature.
-
+\\
+\\
 Modern conversation research can be understood to reach back to conversation analysis.
----
+%---
 Conversation analysis has been practiced by sociologists and ethnometodologists.
 Modern conversation research traces its roots to conversation analysis,
 a field pioneered by sociologists like Harvey Sacks and Emanuel Schegloff.
@@ -435,11 +517,14 @@ focusing on the patterns and norms that govern turn-taking and response.
 For the first time in the 1960's thanks to recordings of phonecalls,
 transcripts could be qualitatively analyzed
 this research has lead to coining new terminology:
-    adjacency pair
-    prefered answers
-    topic shading
+\\
+    adjacency pair,
+    prefered answers,
+    topic shading and
     sequence structure
----
+\\
+\\
+%---
 As a descendant of conversation analysis interaction linguistics has emerged,
 building on its insights to examine language use in social contexts.
 It broadens the focus to study not only verbal exchanges but also
@@ -448,8 +533,10 @@ analyzing how these elements contribute to meaning.
 Interaction linguistics aims to understand the dynamic aspects of conversations,
 such as how topics shift and how sequences of speech acts unfold,
 reflecting the fluid nature of human communication.
-
-Disruptions in conversation coherence
+\\
+\\
+\textbf{Disruptions in conversation coherence}
+\\
 While the question of what makes for a coherent text is broad,
 to ask and answer what makes for a coherent conversation seems comfortably in reach.
 Because conversation participants negotiate understanding,
@@ -458,16 +545,22 @@ to describe what a coherent conversation is,
 it is worth pursuing the moments, when the conversation stops working.
 Such moments can be called coherence disruptions.
 A coherence disruption is a complex phenomena as
-    it penetrates through some or all of mentioned perspectives on an on-going conversation
-    it can't be evaluated in a binary fashion
+
+\begin{itemize}
+\item it penetrates through some or all of mentioned perspectives on an on-going conversation
+\item it can't be evaluated in a binary fashion
+\end{itemize}
+
 there are different degrees to which a conversation coherence can be disrupted
-    if a participant suddenly starts speaking
+\begin{itemize}
+\item    if a participant suddenly starts speaking
     in an a way that can hardly be considered interaction
     due to its irrelevance or
-    if the utterance simply is not grammatical and or understandable,
+\item    if the utterance simply is not grammatical and or understandable,
     while the conversation has been compromised and becomes incoherent,
     it has more to do with incoherent written text, because
     only one speaker is at the source of the incoherence
+\end{itemize}
 
 Smith Discusses various types of incoherent text.
 He exemplifies so called giberish as incoherent text that is absent of structural relations.
@@ -489,9 +582,10 @@ the source of incoherence stems from
         or that they are conversing under differing set of circumstances
         which manifests formally in the linguistic fabric of the conversation - its text.
         All that despite everyone included being cooperative.
-
+\\
+\\
 Which incoherence sources are there for conversation?
----
+%---
 Schegloff shows how incoherence arises when
 people interpret sequence structure differently,
 namely in terms of which turn is seen as an answer to which previously occuring turn.
@@ -505,9 +599,10 @@ to try to clarify and re-align their understanding.
 Schegloff illustrates how these
 efforts to "repair" the misalignment are central to
 managing and resolving incoherent moments in conversation.
-
+\\
+\\
 Coherence disruptions are also discussed in linguistic literature.
----
+%---
 Hrbáček’s approach to coherence and cohesion in text distinguishes the two concepts,
 noting how they often interact but can also be independent.
 He highlights that while
@@ -528,11 +623,13 @@ Hrbáček illustrates this by discussing examples where
 a story progresses logically from one point to the next while
 even if it does use typical cohesive markers,
 it is not coherent as it never comes back a to previously mentioned topic.
-
+\\
+\\
 This paper concerns itself with two phenomena - topic shifts and unassignable anaphore.
 Looking at these phenomena as coherence disrupting is rarely done in literature.
-
-Topic shifts
+\\
+\\
+\textbf{Topic shifts}
     When conversations shift abruptly from one topic to another,
     it can create confusion for the conversation partner.
     They might find themselves trying to
@@ -540,19 +637,22 @@ Topic shifts
     wondering how the new subject relates.
     This can lead to misunderstandings,
     as the transition can feel jarring.
-
+\\
+\\
     One interesting question is,
     how do we determine when a topic has run its course?
     What common traits do conversations share when a subject is truly exhausted?
     Can observing transcripts reveal repeating patterns in topic progression or sequence structure?
-
+\\
+\\
     Moreover, what makes for a smooth transition between topics?
     Is it related to the cues participants give each other,
     or perhaps the context of the discussion?
     How do we navigate the flow of conversation and
     what indicates a natural shift versus a disruptive one?
-
-Nonassignable anaphore
+\\
+\\
+\textbf{Nonassignable anaphore}
     Unassignable anaphore closely tied to topic progression
     Currently established topic or topics help assigning anaphore and
     determining	between an anaphore and an exophore.
@@ -568,9 +668,11 @@ Nonassignable anaphore
 		-> there are multiple equally relevant candidates
 		-> candidate has occured in the conversation text too long ago
 			-> can be understood as an abrupt return to previously established topic
-
----
-What do participants do about coherence disruptions?
+\\
+\\
+%---
+\textbf{What do people do about coherence disruptions?}
+\\
 In conversation, coherence disruptions often prompt participants to
 employ strategies to maintain understanding and flow.
 Schegloff suggests that people manage these disruptions through interactive repair or inference.
@@ -582,7 +684,8 @@ where one speaker might correct the other or themselves to enhance clarity.
 Inference and pragmatic reasoning, the most seamless methods,
 allow participants to fill gaps based on context and social cues,
 helping conversations continue smoothly without explicit repair.
-
+\\
+\\
 Dingemans echoes these strategies from a cognitive perspective,
 highlighting how inference and pragmatic reasoning are particularly effective.
 Participants rely on shared understanding and contextual knowledge to interpret ambiguous statements.
@@ -592,7 +695,8 @@ implicit (inference and reasoning)
 methods work to restore coherence,
 underscoring the active role of participants in
 constructing clear and meaningful exchanges.
-
+\\
+\\
 It needs to be noted however that both interactive repair and reasoning are
 deployed in a number of other contexts
 other than conversation coherence disruption.
@@ -603,10 +707,13 @@ particularily via unclear or nonassignable anaphore or abrupt unjustified topic 
 Repair and metacommunication also takes place in a mutually informed and synchonized interaction.
 It is for example deployed when conversation partners it is revealed to one or both
 that their intentions or opinions differ.
-
+\\
+\\
 These uses of interaction management are however
 hardly possible to analyse on a textual level
 since they do not cooccur with coherence disruptions.
+
+\if false
 
 METHODOLOGY 20
     chatbots in general
@@ -662,17 +769,17 @@ PILOT 10
 		inquisitive will be more negative
 	results
 		rating
-			✔ from best to worse: shallow, deep, unassignable
-			⛌ inquisitive scores higher
+			o from best to worse: shallow, deep, unassignable
+			x inquisitive scores higher
 		abort
-			⛌ deep and unassignable same amount of aborts
-			✔ inquisitive significantly more aborts for unassignable
-			✔ comments confirm this
-			⛌ inquisitive slightly less aborts for deep
+			x deep and unassignable same amount of aborts
+			o inquisitive significantly more aborts for unassignable
+			o comments confirm this
+			x inquisitive slightly less aborts for deep
 		reactions
-			✔ tendency manifested
-			⛌ deep and unassignable same amount of meta
-			✔ deep and unassignable mirroring continue and abort
+			o tendency manifested
+			x deep and unassignable same amount of meta
+			o deep and unassignable mirroring continue and abort
 	qualitative
 		hardcoded phrase with intended unassignable anaphore is sometimes assignable by association
 		limiting context for deep anaphore tends to generate inappropriate pragmatics
@@ -691,3 +798,7 @@ PILOT 10
 		what signifies appreciation / dissatisfaction in inquisitive conversation style? (router)
 		at which point does deep anaphore become unassignable?
 		when does associativity help assign an otherwise unassignable anaphore?
+
+\fi
+
+\end{document}
