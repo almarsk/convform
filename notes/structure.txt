@@ -5,7 +5,8 @@
 \begin{document}
 
 %\begin{enumerate}
-  %\itemadd citations
+  %\item
+  %add citations
    %\item
    %final touches
 %\end{enumerate}
@@ -171,7 +172,7 @@ communicate in an orderly, clear manner (Manner)
 These maxims encourage effective exchange by setting a standard for contributions that are informative, truthful, relevant, and unambiguous. When violated, such as by giving excessive detail, omitting important context, or straying from the topic, coherence suffers. For instance, irrelevant tangents or over-detailed explanations may confuse the listener as to what is the main focal point of conversation in that moment. This misalignment can leave participants uncertain about the conversation’s direction, ultimately diminishing coherence and the effectiveness of communication.
 
 \par{\textbf{Sequence Structure}}
-The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue (). Turn-taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses (e.g., answering a question with a new question) can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
+The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue (). Turn-taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
 
 \par{\textbf{Message and Topic}}
 Interactional linguistics underscores that consistency in message and topic preserves continuity in conversation (). When speakers stick to a shared topic or make gradual, clear shifts, coherence is maintained because participants know what to expect. Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges. For instance, introducing a new topic without closure on the previous one can confuse listeners, leading to a scattered or fragmented interaction. By shifting focus unpredictably or offering unclear messages, coherence diminishes as participants lose track of the conversation’s thread, resulting in exchanges that feel scattered or incomplete.
@@ -210,10 +211,10 @@ topic – what the text is about
 \par
     The following concepts will be explored individually, in relation to one another and in relation to conversation: text, coherence, cohesion, coreference, anaphora, cataphora, endophora, exophora, topic, entity, and association. While the presented exploration draws on existing literature, it seeks to establish an independent and sustainable framework, rather than strictly adhering to established interpretations.
 
-\subsection{Text}
+\subsubsection{Text}
 \par
     Text, in its broadest sense, refers to any form of communication that conveys meaning through a combination of signs, symbols, or language ().
-    These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression (Barthes).
+    These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression ()(Barthes).
     A text can be as simple as a single sentence or as complex as a novel, and it can exist across different mediums, from books and articles to advertisements and digital content.
     What defines a text is its ability to convey a coherent message or idea, often intended for interpretation by an audience or an adressee.
     Texts can serve a wide range of purposes, including storytelling, instruction, persuasion, or simply recording information.
@@ -240,7 +241,7 @@ topic – what the text is about
     its tight temporal coupling and cohesion,
     making conversation a unique phenomena.
 
-\subsection{Coherence}
+\subsubsection{Coherence}
 \par
     Coherence refers to the logical connections and consistent relationships that
     make a text easy to follow and possible to understand ().
@@ -287,7 +288,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     and corelation between them.
 
 %---
-\subsection{Cohesion}
+\subsubsection{Cohesion}
 \par
 The terms cohesion and coherence are sometimes used interchangeably ().
     However, the two terms hold distinct meanings.
@@ -319,7 +320,7 @@ The terms cohesion and coherence are sometimes used interchangeably ().
     if coherence based on meaning is not fully achieved.
     Following concepts can be considered cohesive elements.
 
-\subsection{Anaphore, Endophore and coreference}
+\subsubsection{Anaphore, Endophore and coreference}
 \par
     A common cohesive text element is an anaphore ().
     It is a reference inside the text pointing back to a previously mentioned entity.
@@ -340,11 +341,11 @@ The terms cohesion and coherence are sometimes used interchangeably ().
     following the cohesive threads without needing explicit repetitions.
 
 \par
-    An anaphoric element is by definition also endophoric (Halliday).
+    An anaphoric element is by definition also endophoric ()(Halliday).
     It points inside the text it appears in.
     By definition an anaphoric element has a referent, which occures earlier in the text.
     These two elements are then coreferent.
-    As such they also share an identical exophoric reference (Halliday) – they point outside of the text.
+    As such they also share an identical exophoric reference ()(Halliday) – they point outside of the text.
 
 \par
     In conversation, many aspects of which are subject to negotiation,
@@ -370,7 +371,7 @@ The terms cohesion and coherence are sometimes used interchangeably ().
     where a structural aspect of the language itself can
     become a repairable issue in the communicative exchange.
 
-\subsection{Cataphore and Exophore}
+\subsubsection{Cataphore and Exophore}
     %---
 \par
     In Halliday and Hasan's framework (),
@@ -407,7 +408,7 @@ The terms cohesion and coherence are sometimes used interchangeably ().
     not the cataphore,
     as it ties back to the previous text, creating bonds across large textual units.
 
-\subsection{Topic}
+\subsubsection{Topic}
 \par
     Topic is what a text is about.
     That makes topic very complicated to define.
@@ -441,9 +442,9 @@ Topic annotation is by its nature always more text,
     if the association between the topics is too distant.
     A divergence in topic has to be justified.
 
-\subsection{Association}
+\subsubsection{Association}
 \par
-    Association is a textual realization of an isotopic relation (Koblížek).
+    Association is a textual realization of an isotopic relation ()(Koblížek).
     By their exophoric properties, referents exist in a semantic web of relationships.
     Similarly to coherence, associative relationships are a cognitive phenomena.
     They come to exist when they are percieved.
@@ -452,7 +453,7 @@ Topic annotation is by its nature always more text,
     It is however a major factor in a coherence of text as
     in some cases a text can only rely on association in its coherence.
 
-\subsection{Entity}
+\subsubsection{Entity}
 \par
     An entity is an exophoric referent.
     Words or text elements which can be reffered to by an anaphore will be called entities.
@@ -466,8 +467,8 @@ Topic annotation is by its nature always more text,
 
 \section{Interactional dimension of conversation}
 \par
-To define conversation in terms of previously introduced concepts,
-one could see conversation as text which is produced by multiple producers
+In terms of introduced background,
+conversation is a text which is produced by multiple producers
 This complicates things:
 
 \begin{itemize}
@@ -476,10 +477,9 @@ This complicates things:
     Conversation is an interactive process, distinct from static text, which is created collaboratively.
 
     \item
-    Conversational content is continuously negotiated by participants, who continuously adapt.
+    Conversational content is continuously negotiated by participants, who continuously adapt one another.
 
 \end{itemize}
-
 
 Due to its temporal and cooperative nature, conversation allows for:
 \begin{itemize}
@@ -488,7 +488,7 @@ Due to its temporal and cooperative nature, conversation allows for:
     Overlaps in speech,
 
     \item
-    Swift corrections of minor errors (a subset of conversational repairs),
+    Swift corrections of minor errors,
 
     \item
     Multiple layers of perspective, including:
@@ -505,8 +505,8 @@ Due to its temporal and cooperative nature, conversation allows for:
         \end{itemize}
 \end{itemize}
 
-        all of these can desynchronize creating misunderstandings
-        humans however are excellent at correcting misunderstandings
+        each of these perspectives can desynchronize resulting in misunderstandings.
+        Humans however are excellent at correcting misunderstandings
         this is because under regular circumstances, people cooperate.
 
 \par
@@ -518,36 +518,39 @@ but they do so in ways that still rely on shared expectations of cooperation.
 Even when misunderstandings arise,
 humans naturally engage in conversational repair,
 using their social intuition and mutual cooperativity to clarify intetion and realign perspectives.
-Grice's maxims highlight the unspoken rules that underlie smooth conversation,
-crucial for maintaining its dynamic, ever-negotiated nature.
 
 \par
 Contemporary conversation research can be understood to draw from conversation analysis.
 %---
-Conversation analysis has been practiced by sociologists and ethnometodologists
-since the 1960s.
 Modern conversation research traces its roots to conversation analysis,
-a field pioneered by sociologists like Harvey Sacks and Emanuel Schegloff.
-They sought to understand the structure and
+a field pioneered by sociologists Harvey Sacks and Emanuel Schegloff in the 1960s.
+Despite verbal interaction being viewed as mostly chaotic at the time (),
+they sought to understand the structure and
 social rules of everyday interactions,
 focusing on the patterns and norms that govern turn-taking and response.
-For the first time in the 1960's thanks to recordings of phonecalls,
-transcripts could be qualitatively analyzed
-this research has lead to coining new terminology:
+Thanks to recordings of phonecalls,
+transcripts could be qualitatively analyzed.
+This research has lead to coining new terminology.
 
-\begin{itemize}
-    \item
-    adjacency pair
+    \subsubsection{Adjacency pair}
+    \par
+    Adjacency pairs describe sequences of two related utterances by different speakers (). These pairs are characterized by their predictable and reciprocal nature, where the first part sets up the expectation for a specific type of response. Common examples include greetings*("Hi" → "Hello"), questions and answers ("What time is it?" → "3 PM"), or offers and acceptances/declines ("Would you like some coffee?" → "Yes, please" or "No, thank you").
 
-    \item
-    prefered answers
+    \subsubsection{Sequence structure}
+    \par
+    Sequence structure refers to the organization of conversational turns into coherent patterns or sequences. It describes how interactions are shaped by predictable structures, such as adjacency pairs. These sequences provide order and meaning to conversations, guiding participants in understanding when and how to respond. Schegloff () emphasized that sequence structure is central to the social organization of talk, as it allows participants to manage and negotiate interaction effectively.
 
-    \item
-    topic shading and
+    \subsubsection{Topic shading}
+    \par
+    Topic shading, as discussed by Sacks, refers to the subtle way in which a conversation naturally shifts from one topic to another while maintaining coherence. Instead of abruptly changing the subject, speakers introduce a related idea or concept, gradually steering the discussion in a new direction. This process allows for smooth transitions in dialogue, helping participants maintain engagement and avoid confusion.
 
-    \item
-    sequence structure
-\end{itemize}
+    \subsubsection{Dis/prefered answers}
+    \par
+    Preferred answers, according to Sacks (), are responses in conversations that align with social norms and expectations, making interactions smoother and more cooperative. In conversation analysis, preferred answers typically follow the format or intent of the preceding question or statement . They contrast with "dispreferred" answers, which might include refusals or disagreements and often require additional explanation or mitigation to maintain social harmony.
+
+    \subsubsection{Conversational repair}
+    \par
+    Conversational repairs refer to how participants address and resolve problems in understanding, hearing, or speaking during interactions (). These issues, can occur at any point in a conversation. Repairs are classified into self-repair, where the speaker corrects their own error, and other-repair, where a different participant addresses the issue. They can further be classified into self-initiated repair and other-initiated repair.
 
 \par
 %---
@@ -562,8 +565,8 @@ reflecting the fluid nature of human communication.
 
 \section{Disruptions in conversation coherence}
 \par
-While the question of what makes for a coherent text is broad,
-to ask and answer what makes for a coherent conversation seems in reach.
+While the question of what makes for a coherent text is too broad,
+the answer to what makes for a coherent conversation can be somewhat easier to answer.
 Because conversation participants negotiate understanding,
 it is up to them, when a conversation is and is not coherent
 to describe what a coherent conversation is,
@@ -600,7 +603,6 @@ which is assumed to be coherent in the sense that there is an intention behind i
 but contains little to no structural relations.
 Lastly he mentions a so called "schizophrenic discourse" as a speech that
 is not assumed to be coherent even if it has structural relations to it.
-This is similar to Hrbáček.
 In any case Smith definitively states that coherence is assumed
 and is therefore a receptive phenomena.
 The incoherence Smith discusses is considerably different from when
@@ -625,7 +627,7 @@ leading to confusion about how their turns fit together.
 They each project different expectations for how the conversation should unfold,
 which causes misaligned sequence structure interpretations.
 When this happens,
-they turn to brief metacommunication—comments about the conversation itself
+they turn to brief metacommunication — comments about the conversation itself
 to try to clarify and re-align their understanding.
 Schegloff illustrates how these
 efforts to "repair" the misalignment are central to
@@ -642,9 +644,8 @@ make sentences flow together,
 coherence relies on the logical and meaningful progression of ideas.
 This means that a text could be cohesive -
 using connectives, repetitions, and consistent lexical choices -
-yet still lack coherence if the sequence of ideas doesn’t
-make logical sense or
-follow a clear progression.
+yet lack coherence if the sequence of ideas doesn’t
+make logical sense or follow a clear progression.
 Conversely, a text may be coherent in its narrative flow without
 relying heavily on cohesive devices.
 In Czech linguistics,
@@ -660,8 +661,7 @@ Two kinds of phenomena are at hand when it comes to
 ways in which conversation coherence can be disrupted -
 topic shifts and unassignable anaphore.
 While not unique to conversation
-both happen in ways that in conversation
-are in fact unique.
+both take on specific forms in it worth looking at.
 
 \par{\textbf{Topic shifts}}
     When conversations shift abruptly from one topic to another,
@@ -669,7 +669,7 @@ are in fact unique.
     They might find themselves trying to
     reconnect to the previous discussion or
     wondering how the new subject relates.
-    This can lead to misunderstandings,
+    This can lead to misunderstandings
     as the transition can feel jarring.
 
 \par
@@ -702,12 +702,17 @@ are in fact unique.
 \item
 there are no relevant assignment candidates
 
-\quad this situation can be understood as a vague or unjustified exophore
+    \quad
+    this situation can be understood as a vague or unjustified exophore
+
 \item
 there are multiple equally relevant candidates
+
 \item
-candidate has occured in the conversšation text too long ago
-\quad can be understood as an abrupt return to previously established topic
+candidate has occured in the conversation text too long ago
+
+    \quad
+    can be understood as an abrupt return to previously established topic
 \end{itemize}
 
 %---
@@ -726,33 +731,32 @@ allow participants to fill gaps based on context and social cues,
 helping conversations continue smoothly without explicit repair.
 
 \par
-Dingemans echoes these strategies from a cognitive perspective,
+Dingemans () echoes this from a cognitive perspective,
 highlighting how inference and pragmatic reasoning are particularly effective.
 Participants rely on shared understanding and contextual knowledge to interpret ambiguous statements.
-Together, these strategies show how both
+Together, they use both
 explicit (metacommunication and repair) and
 implicit (inference and reasoning)
-methods work to restore coherence,
-underscoring the active role of participants in
-constructing clear and meaningful exchanges.
+methods work to restore coherence.
 
 \par
 It needs to be noted however that both interactive repair and reasoning are
 deployed in a number of other contexts
 other than conversation coherence disruption.
-Inference takes place almost constantly as Garfinkel notes.
+Inference takes place almost constantly as Garfinkel () notes.
 Each of those moments could be hardly considered a coherence disruption.
 There is however always potential for it,
 particularily via unclear or nonassignable anaphore or abrupt unjustified topic shifts.
 Repair and metacommunication also takes place in a mutually informed and synchonized interaction.
-It is for example deployed when conversation partners it is revealed to one or both
-that their intentions or opinions differ.
+It is for example deployed when it is revealed
+that the interaction participants intentions or opinions differ.
 
 \par
 These uses of interaction management are however
 hardly possible to analyse on a textual level
 since they do not cooccur with coherence disruptions.
-
+What can be observed are – as mentioned above –
+troublesome anaforic references and topic progressions.
 \if false
 
 METHODOLOGY 20
