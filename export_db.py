@@ -1,8 +1,9 @@
 from app import Conversation, Flow, Project, Reply, app
 from database import db
 import pprint
+import sys, json
 
-def export():
+def export(file_path):
     with app.app_context():
 
         all_convos = Conversation.query.all()
@@ -57,10 +58,8 @@ def export():
 
         # print(sum([len(all_convo_data[key]["data"]) for key in all_convo_data.keys()]))
 
-        pprint.pp(all_convo_data, width=200)
-
-    #with open("chatbot1.json", "w") as c:
-    #    c.write(str(all_convo_data))
+        with open(file_path, "w", encoding="utf-8") as json_file:
+            json.dump(all_convo_data, json_file, indent=4, ensure_ascii=False)
 
 
 def determine_type(flow):
@@ -112,4 +111,11 @@ def get_user_annotation(convo):
     else:
         return []
 
-export()
+
+if len(sys.argv) != 2:
+    print("missing file path")
+    sys.exit(1)
+
+file_path = sys.argv[1]
+
+export(file_path)
