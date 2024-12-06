@@ -43,25 +43,83 @@ const IntroExperiment = () => {
           {" "}
           <b>Upozornění</b>: Nevkládejte osobní informace.
         </li>
-        <li className="centre">Díky, že se účastníte.</li>
+        <li>---</li>
+        <p>
+          <b>Účastí na experimentu potvrzujete, že:</b>
+          <ul>
+            <li>
+              a) jsem se seznámil/a s informacemi o cílech a průběhu výše
+              popsaného výzkumu;
+            </li>
+            <li>b) dobrovolně souhlasím s účastí své osoby v tomto výzkumu;</li>
+            <li>
+              c) rozumím tomu, že se mohu kdykoli rozhodnout ve své účasti na
+              výzkumu nepokračovat;
+            </li>
+            <li>
+              d) jsem srozuměn s tím, že jakékoliv užití a zveřejnění dat a
+              výstupů vzešlých z výzkumu nezakládá můj nárok na jakoukoliv
+              odměnu či náhradu, tzn. že veškerá oprávnění k užití a zveřejnění
+              dat a výstupů vzešlých z výzkumu poskytuji bezúplatně.
+            </li>
+            <li>---</li>
+            <li>Zároveň prohlašuji, že</li>
+          </ul>
+          <ul>
+            <li>
+              a) souhlasím se zveřejněním anonymizovaných dat a výstupů vzešlých
+              z výzkumu a s jejich dalším využitím;{" "}
+            </li>
+
+            <li>
+              b) souhlasím se zpracováním a uchováním osobních a citlivých údajů
+              v rozsahu v tomto informovaném souhlasu uvedených ze strany
+              Univerzity Karlovy, Filozofické fakulty, IČ: 00216208, se sídlem:
+              nám. Jana Palacha 2, 116 38 Praha 1, a to pro účely zpracování dat
+              vzešlých z výzkumu, pro účely případného kontaktování z důvodu
+              zpracování dat vzešlých z výzkumu či z důvodu nabídky účasti na
+              obdobných akcích a pro účely evidence a archivace; a s tím, že
+              tyto osobní údaje mohou být poskytnuty subjektům oprávněným k
+              výkonu kontroly projektu, v jehož rámci výzkum realizován;{" "}
+            </li>
+
+            <li>
+              c) jsem seznámen/-a se svými právy týkajícími se přístupu k
+              informacím a jejich ochraně podle § 46 a § 49 zákona č. 110/2019
+              Sb., o ochraně osobních údajů a o změně některých zákonů, ve znění
+              pozdějších předpisů, tedy že mohu požádat Univerzitu Karlovu v
+              Praze o informaci o zpracování mých osobních a citlivých údajů a
+              jsem oprávněn/-a ji dostat a že mohu požádat Univerzitu Karlovu v
+              Praze o opravu nepřesných osobních údajů, doplnění osobních údajů,
+              jejich blokaci a likvidaci.
+            </li>
+          </ul>
+          <li>---</li>
+          Výše uvedená svolení a souhlasy poskytuji dobrovolně na dobu neurčitou
+          až do odvolání a zavazuji se je neodvolat bez závažného důvodu
+          spočívajícího v podstatné změně okolností.
+        </p>
+        <li>---</li>
         <li className="center">
-          Nejdřív prosím vyplňte <b>identifikační číslo</b>, které jste obdrželi
-          v emailu:
+          Pokud potřebujete splnit účast v experimentu v rámci LABELS, prosím
+          uveďte svůj e-mail (stejný jako v registračním systému). Jinak uveďte
+          libovolnou přezdívku:
         </li>
+        <UserInput
+          submit={async (e) => {
+            e.preventDefault();
+            await myRequest("/intro_experiment", {
+              nick: new FormData(e.target).get("content"),
+            }).then((e) => {
+              window.location.href =
+                basename + `/route_experiment?username=${e.nick}`;
+            });
+          }}
+          loading={false}
+          display={[true, false]}
+        />
+        <p className="centre">Díky, že se účastníte.</p>
       </ul>
-      <UserInput
-        submit={async (e) => {
-          e.preventDefault();
-          await myRequest("/intro_experiment", {
-            nick: new FormData(e.target).get("content"),
-          }).then((e) => {
-            window.location.href =
-              basename + `/route_experiment?username=${e.nick}`;
-          });
-        }}
-        loading={false}
-        display={[true, false]}
-      />
     </>
   );
 };
