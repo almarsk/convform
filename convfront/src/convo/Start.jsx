@@ -22,7 +22,7 @@ const Start = ({ bot }) => {
   });
   return (
     <>
-      <p id="intro-text">
+      <p className="intro-text">
         <span
           dangerouslySetInnerHTML={{
             __html: instructions,
