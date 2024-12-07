@@ -6,13 +6,13 @@ import basename from "../basename.jsx";
 const IntroExperiment = () => {
   return (
     <ul className="intro-text">
-      <li className="center">
+      <li>
         Dobrý den,
         <br /> jmenuji se Albert Maršík a jsem studentem NMgr. oboru Empirická a
         komparativní lingvistika na FF UK.
       </li>
-      <li className="center">V rámci studia se věnuji výzkumu konverzace.</li>
-      <li className="center">
+      <li>V rámci studia se věnuji výzkumu konverzace.</li>
+      <li>
         Pro svou diplomovou práci jsem připravil chatbota, program, který si s
         vámi bude povídat.
         <br /> Povídejte si s ním, jak je vám přirozené.
@@ -20,25 +20,25 @@ const IntroExperiment = () => {
         vás.
       </li>
       <li>---</li>
-      <li className="center">
+      <li>
         Během experimentu uvidíte vždy poslední promluvu chatbota a políčko na
         vepsaní vaší další odpovědi.
       </li>
-      <li className="center">
+      <li>
         Konverzace bude trvat několik minut a chatbot se poté sám rozloučí.
       </li>
-      <li className="center">
+      <li>
         Pokud bude chatbot komunikovat nepřirozeně, konverzaci ukončete červeným
         tlačítkem.
       </li>
       <li>---</li>
-      <li className="center">
+      <li>
         Po skočení konverzace vám bude zobrazen přepis celé konverzace.
         <br /> Prosím zaškrtněte promluvy chatbota, které se vám nelíbily, nebo
         vás nějak zaujaly a okomentujte je.
       </li>
       <li>---</li>
-      <li className="center">
+      <li>
         {" "}
         <b>Upozornění</b>: Nevkládejte osobní informace.
       </li>
@@ -97,7 +97,7 @@ const IntroExperiment = () => {
       do odvolání a zavazuji se je neodvolat bez závažného důvodu spočívajícího
       v podstatné změně okolností.
       <li>---</li>
-      <li className="center">
+      <li>
         Pokud potřebujete splnit účast v experimentu v rámci LABELS, prosím
         uveďte svůj e-mail (stejný jako v registračním systému). Jinak uveďte
         libovolnou přezdívku:

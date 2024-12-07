@@ -58,25 +58,23 @@ const Chat = () => {
   };
 
   return (
-    <>
-      <>
-        <BotOutput
-          botSpeech={cStatus && !loading ? cStatus.say : issue}
-          loading={loading}
-        />
-        <UserInput submit={handleSubmit} loading={loading} />
-        <button
-          onClick={async () => {
-            await myRequest("/abort", {}).then(
-              () => (window.location.href = basename + "/"),
-            );
-          }}
-          className="submit"
-        >
-          🚫
-        </button>
-      </>
-    </>
+    <div className="box">
+      <BotOutput
+        botSpeech={cStatus && !loading ? cStatus.say : issue}
+        loading={loading}
+      />
+      <UserInput submit={handleSubmit} loading={loading} />
+      <button
+        onClick={async () => {
+          await myRequest("/abort", {}).then(
+            () => (window.location.href = basename + "/"),
+          );
+        }}
+        className="submit"
+      >
+        🚫
+      </button>
+    </div>
   );
 };
 

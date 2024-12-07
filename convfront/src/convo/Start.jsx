@@ -21,8 +21,8 @@ const Start = ({ bot }) => {
     getInstructions();
   });
   return (
-    <>
-      <p className="intro-text">
+    <div className="intro-text">
+      <p>
         <span
           dangerouslySetInnerHTML={{
             __html: instructions,
@@ -43,7 +43,7 @@ const Start = ({ bot }) => {
           <button className="submit">↵</button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
