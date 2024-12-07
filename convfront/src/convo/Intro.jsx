@@ -5,7 +5,7 @@ import basename from "../basename.jsx";
 
 const Intro = ({ bot }) => {
   return (
-    <>
+    <div className="box">
       <p id="intro-text">
         Díky, že se účastníte vývoje chatbota jménem <i>{bot}</i>. Nejdřív
         prosím vyplňte libovolnou <b>přezdívku</b>:
@@ -25,7 +25,7 @@ const Intro = ({ bot }) => {
       <p className="center">Upozornění: nevkládejte osobní informace</p>
       <p className="center">Prosba: na konci prosím vyplňte dotazník</p>
       <p className="center">Doporučení: na mobilu nejlépe horizontálně</p>
-    </>
+    </div>
   );
 };
 

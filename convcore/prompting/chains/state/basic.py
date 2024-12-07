@@ -7,7 +7,7 @@ import time
 
 def basic(args, bench=False):
     messages = list()
-    bot_intro = "Jasně, odpověď by mohla vypadat třeba takhle:"
+    bot_intro = "Jasně, odpověď by mohla vypadat třeba takhle: bot:"
 
     start_time = 0
     if bench:
@@ -40,7 +40,7 @@ Popis další odpovědi:
 Robot {args["prompt"]}"""))
 
     try:
-        chat = ChatOpenAI(model="gpt-4o", temperature=1)
+        chat = ChatOpenAI(model="gpt-4o-mini", temperature=1)
         result = chat.invoke(messages)
 
         args["log"]([[m.content for m in messages], str(result.content)])
@@ -50,7 +50,7 @@ Robot {args["prompt"]}"""))
             elapsed_time = end_time - start_time
             print("Elapsed time:", elapsed_time, "seconds")
 
-        result_fin = str(result.content).strip("\"").strip("\'") if result.content else "Jejda, něco se pokazilo"
+        result_fin = str(result.content).strip("\"").strip("\'").lstrip("bot:") if result.content else "Jejda, něco se pokazilo"
 
         # trying to get rid of the gpt intro if it does it
         return result_fin.split(bot_intro)[-1].strip()
