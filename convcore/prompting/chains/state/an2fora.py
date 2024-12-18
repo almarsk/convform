@@ -91,7 +91,7 @@ Na jaké tě nevíc baví závodit?
         SystemMessage(content=bot_intro)
     ]
     try:
-        chat = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        chat = ChatOpenAI(model="gpt-4o", temperature=0.3)
         result = chat.invoke(input)
         args["log"]([[m.content for m in input], str(result.content)])
         result_fin = str(result.content)

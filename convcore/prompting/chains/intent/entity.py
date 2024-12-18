@@ -14,7 +14,7 @@ def entity(args, bench=False):
     if bench:
         start_time = time.time()
 
-    chat = ChatOpenAI(model="gpt-4o-mini", temperature=0, max_tokens=800)
+    chat = ChatOpenAI(model="gpt-4o", temperature=0, max_tokens=800)
     messages: list[HumanMessage | AIMessage | SystemMessage] = list()
 
     messages.append(SystemMessage(content=f"""\
