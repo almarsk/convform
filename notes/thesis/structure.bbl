@@ -57,6 +57,17 @@ Maria~Teresa Baldassarre, Danilo Caivano, Berenice Fernandez~Nieto, Domenico
 \newblock In {\em Proceedings of the 2023 ACM Conference on Information
   Technology for Social Good}, pages 363--373, 2023.
 
+\bibitem{Sacks1992}
+Harvey Sacks.
+\newblock {\em Lectures on Conversation}, volume 1 & 2.
+\newblock Basil Blackwell, Oxford, 1992.
+
+\bibitem{mctear2020conversational}
+Michael~F. McTear.
+\newblock {\em Conversational AI: Dialogue Systems, Conversational Agents, and
+  Chatbots}.
+\newblock Springer International Publishing, 2020.
+
 \bibitem{brown1987politeness}
 P.~Brown and S.C. Levinson.
 \newblock {\em Politeness: Some Universals in Language Usage}.
@@ -84,5 +95,56 @@ Emanuel~A. Schegloff.
 \newblock {\em Sequence Organization in Interaction: A Primer in Conversation
   Analysis}.
 \newblock Cambridge University Press, 2007.
+
+\bibitem{CouperKuhlenSelting2017}
+Elizabeth Couper-Kuhlen and Margret Selting.
+\newblock {\em Interactional Linguistics: Studying Language in Social
+  Interaction}.
+\newblock Cambridge University Press, 2017.
+
+\bibitem{Roberts01101993}
+Richard~M. Roberts and Roger~J. Kreuz.
+\newblock Nonstandard discourse and its coherence.
+\newblock {\em Discourse Processes}, 16(4):451--464, 1993.
+
+\bibitem{Halliday76cohesion}
+M.~A.~K. Halliday and R.~Hasan.
+\newblock {\em Cohesion in English}.
+\newblock Longman, 1976.
+
+\bibitem{hajicovasgall2003}
+Eva Hajičová, Jiří Havelka, and Petr Sgall.
+\newblock Discourse semantics and the salience of referents.
+\newblock {\em Journal of Slavic Linguistics}, 11(1):127--140, 2003.
+
+\bibitem{Nedoluzhko2010}
+Anna Nedoluzhko.
+\newblock {\em Rozšířená textová koreference a asociační anafora
+  (koncepce anotace českých dat v pražském závislostním korpusu)}.
+\newblock Phd thesis, Univerzita Karlova, Filozofická fakulta, Ústav
+  českého jazyka a teorie komunikace, Prague, 2010.
+
+\bibitem{koblizek2015}
+Tomáš Koblížek.
+\newblock {\em Untitled Work (Details Provided in Czech)}.
+\newblock Univerzita Karlova v Praze, Filozofická fakulta, Prague, 1 edition,
+  2015.
+
+\bibitem{Schegloff1990}
+Emanuel~A. Schegloff.
+\newblock On the organization of sequences as a source of 'coherence' in
+  talk-in-interaction.
+\newblock In Bruce Dorval, editor, {\em Conversational Organization and its
+  Development}, page 51–77. Ablex, Norwood, NJ, 1990.
+
+\bibitem{DINGEMANSE202430}
+Mark Dingemanse and N.J. Enfield.
+\newblock Interactive repair and the foundations of language.
+\newblock {\em Trends in Cognitive Sciences}, 28(1):30--42, 2024.
+
+\bibitem{garfinkelstudies}
+Harold Garfinkel.
+\newblock Studies in ethnomethodology.
+\newblock pages 209--261. Routledge, 2023.
 
 \end{thebibliography}
