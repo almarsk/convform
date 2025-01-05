@@ -1,37 +1,15 @@
-import json
-import sqlite3
-from datetime import datetime
-import pprint
 
 
-conn = sqlite3.connect("chatbot.db")
-cursor = conn.cursor()
+with open("export/part/exp1", "r") as first:
+    with open("export/part/exp2", "r") as second:
+        r_first = first.readlines()
+        r_second = second.readlines()
 
-# pprint.pp([q for q in cursor.execute('''SELECT * FROM Flow;''')])
-# pprint.pp([x for x in cursor.execute('''SELECT * FROM Reply;''')])
-# pprint.pp([x for x in cursor.execute('''SELECT * FROM Conversation;''')])
-# Insert JSON data into SQLite database
-#
-def load_json(file_path):
-     with open(file_path, 'r') as file:
-         data = json.load(file)
-     return json.dumps(data)
+        for mail_first in r_first:
+            did_both = False
+            for mail_second in r_second:
+                if mail_first.strip() == mail_second.strip():
+                    did_both = True
 
-def insert_data(cursor, data):
-     cursor.execute('''INSERT INTO Flow (flow_name, project_id, flow, is_archived, created_on)
-                            VALUES (?, ?, ?, ?, ?)''',
-                            data)
-
-for bot in [
-    #"f_AutoMarta-sh-rel.json",
-    #"f_Elizabota-sh-inq.json",
-    #"f_Ondroid-un-inq.json",
-    #"f_Vladimatik-un-rel.json"
-    "t_Robomila-dp-rel.json"
-]:
-    insert_data(cursor,(bot.strip(".json"), 1, load_json(f"bots/{bot}"), 0, datetime.utcnow()))
-
-
-# Commit changes and close connection
-conn.commit()
-conn.close()
+            if did_both:
+                print(mail_first, end="")

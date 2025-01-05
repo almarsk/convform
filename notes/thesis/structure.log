@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  19 DEC 2024 19:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  5 JAN 2025 22:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -59,31 +59,31 @@ Chapter 1.
 [6
 
 ] [7] [8] [9] [10] [11] [12] [13]
-Overfull \hbox (9.36113pt too wide) in paragraph at lines 554--562
+Overfull \hbox (9.36113pt too wide) in paragraph at lines 552--560
 []\OT1/cmr/m/n/12 As a de-scen-dant of con-ver-sa-tion anal-y-sis in-ter-ac-tio
 n lin-guis-tics has emerged,
  []
 
 [14]
-Overfull \hbox (0.43993pt too wide) in paragraph at lines 634--655
+Overfull \hbox (0.43993pt too wide) in paragraph at lines 632--653
 []\OT1/cmr/m/n/12 Coherence dis-rup-tions are also dis-cussed in lin-guis-tic l
 it-er-a-ture. Hrb^^Sa^^Tcek's
  []
 
 [15]
-Overfull \hbox (0.74872pt too wide) in paragraph at lines 657--662
+Overfull \hbox (0.74872pt too wide) in paragraph at lines 655--660
 \OT1/cmr/m/n/12 ver-sa-tion co-her-ence can be dis-rupted - topic shifts and un
 assignable anaphore.
  []
 
-[16] (./structure.bbl [17]
+[16] (./structure.bbl [17] [18
+
+] [19]
 ! Misplaced alignment tab character &.
-l.62 ...{\em Lectures on Conversation}, volume 1 &
+l.150 ...\em Lectures on Conversation}, volume 1 &
                                                    2.
 ? 
-[18
-
-] [19]) [20] (./structure.aux)
+) [20] (./structure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -94,20 +94,20 @@ L3 programming layer <2024-02-20>
 ### simple group (level 1) entered at line 151 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 515 strings out of 475567
- 9704 string characters out of 5777889
+ 521 strings out of 475567
+ 9798 string characters out of 5777889
  1933187 words of memory out of 5000000
- 22738 multiletter control sequences out of 15000+600000
+ 22744 multiletter control sequences out of 15000+600000
  562089 words of font info for 49 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 35i,7n,50p,944b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 35i,7n,50p,944b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/l
 jfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2024basic/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024basic/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on structure.pdf (21 pages, 112767 bytes).
+Output written on structure.pdf (21 pages, 113385 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

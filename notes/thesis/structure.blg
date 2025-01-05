@@ -6,45 +6,45 @@ Database file #1: references.bib
 Warning--empty journal in ritter2024ai
 Warning--can't use both author and editor fields in Sacks1992
 Warning--empty booktitle in garfinkelstudies
-You've used 25 entries,
+You've used 31 entries,
             1791 wiz_defined-function locations,
-            595 strings with 7264 characters,
-and the built_in function-call counts, 5032 in all, are:
-= -- 463
-> -- 176
+            632 strings with 7915 characters,
+and the built_in function-call counts, 6155 in all, are:
+= -- 568
+> -- 215
 < -- 5
-+ -- 71
-- -- 46
-* -- 240
-:= -- 792
-add.period$ -- 82
-call.type$ -- 25
-change.case$ -- 17
++ -- 87
+- -- 56
+* -- 300
+:= -- 970
+add.period$ -- 101
+call.type$ -- 31
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 283
-empty$ -- 529
-format.name$ -- 46
-if$ -- 1167
+cite$ -- 34
+duplicate$ -- 341
+empty$ -- 653
+format.name$ -- 56
+if$ -- 1425
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 33
-newline$ -- 130
-num.names$ -- 29
-pop$ -- 110
+int.to.str$ -- 31
+missing$ -- 43
+newline$ -- 160
+num.names$ -- 35
+pop$ -- 135
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 122
+skip$ -- 138
 stack$ -- 0
-substring$ -- 190
-swap$ -- 67
+substring$ -- 240
+swap$ -- 73
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 45
-width$ -- 27
-write$ -- 275
+while$ -- 55
+width$ -- 33
+write$ -- 341
 (There were 3 warnings)

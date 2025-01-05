@@ -57,11 +57,6 @@ Maria~Teresa Baldassarre, Danilo Caivano, Berenice Fernandez~Nieto, Domenico
 \newblock In {\em Proceedings of the 2023 ACM Conference on Information
   Technology for Social Good}, pages 363--373, 2023.
 
-\bibitem{Sacks1992}
-Harvey Sacks.
-\newblock {\em Lectures on Conversation}, volume 1 & 2.
-\newblock Basil Blackwell, Oxford, 1992.
-
 \bibitem{mctear2020conversational}
 Michael~F. McTear.
 \newblock {\em Conversational AI: Dialogue Systems, Conversational Agents, and
@@ -102,6 +97,26 @@ Elizabeth Couper-Kuhlen and Margret Selting.
   Interaction}.
 \newblock Cambridge University Press, 2017.
 
+\bibitem{hrbacek1994}
+Josef Hrbáček.
+\newblock {\em Nárys textové syntaxe spisovné češtiny}.
+\newblock Trizonia, Praha, 1994.
+
+\bibitem{hjelmslev2016}
+Louis Hjelmslev.
+\newblock {\em O základech teorie jazyka}.
+\newblock Academia, Praha, 2. doplněné a upravené vydání edition, 2016.
+
+\bibitem{barthes1977image}
+R.~Barthes and S.~Heath.
+\newblock {\em Image, Music, Text}.
+\newblock A fontana original. Fontana Press, 1977.
+
+\bibitem{givón2020coherence}
+T.~Giv{\'o}n.
+\newblock {\em Coherence}.
+\newblock John Benjamins Publishing Company, 2020.
+
 \bibitem{Roberts01101993}
 Richard~M. Roberts and Roger~J. Kreuz.
 \newblock Nonstandard discourse and its coherence.
@@ -130,12 +145,28 @@ Tomáš Koblížek.
 \newblock Univerzita Karlova v Praze, Filozofická fakulta, Prague, 1 edition,
   2015.
 
+\bibitem{Sacks1992}
+Harvey Sacks.
+\newblock {\em Lectures on Conversation}, volume 1 & 2.
+\newblock Basil Blackwell, Oxford, 1992.
+
 \bibitem{Schegloff1990}
 Emanuel~A. Schegloff.
 \newblock On the organization of sequences as a source of 'coherence' in
   talk-in-interaction.
 \newblock In Bruce Dorval, editor, {\em Conversational Organization and its
   Development}, page 51–77. Ablex, Norwood, NJ, 1990.
+
+\bibitem{topicshading}
+EMANUEL~A. SCHEGLOFF and HARVEY SACKS.
+\newblock Opening up closings.
+\newblock {\em Semiotica}, 8(4):289--327, 1973.
+
+\bibitem{sacksRepair}
+Emanuel~A. Schegloff, Gail Jefferson, and Harvey Sacks.
+\newblock The preference for self-correction in the organization of repair in
+  conversation.
+\newblock {\em Language}, 53(2):361--382, 1977.
 
 \bibitem{DINGEMANSE202430}
 Mark Dingemanse and N.J. Enfield.
