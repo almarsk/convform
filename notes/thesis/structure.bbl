@@ -1,181 +1,1078 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{sharma2024exploring}
-Dipankar Sharma, Deepak~A Vidhate, Joel Osei-Asiamah, R~Meena~Kumari, Vaishali
-  Mahajan, and K~Rajagopal.
-\newblock Exploring the evolution of chatgpt: From origin to revolutionary
-  influence.
-\newblock {\em Educational Administration: Theory and Practice}, 30(5), 2024.
 
-\bibitem{hendrix1982natural}
-Gary~G Hendrix.
-\newblock Natural-language interface.
-\newblock {\em American Journal of Computational Linguistics}, 8(2):56--61,
-  1982.
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{austin1962how}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3455a21bea5aa0430d52cf6402adef15}{%
+           family={Austin},
+           familyi={A\bibinitperiod},
+           given={J.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{fullhash}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{fullhashraw}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{bibnamehash}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{authorbibnamehash}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{authornamehash}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{authorfullhash}{3455a21bea5aa0430d52cf6402adef15}
+      \strng{authorfullhashraw}{3455a21bea5aa0430d52cf6402adef15}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to do things with words}
+      \field{year}{1962}
+    \endentry
+    \entry{baldassarre2023social}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=83c545a751d50d0eb693ffe64638b0c6}{%
+           family={Baldassarre},
+           familyi={B\bibinitperiod},
+           given={M.\bibnamedelimi T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=cdb6373ecc1dc85ded171abf772d4186}{%
+           family={Caivano},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b06d1554d4a650de53af871cf6d5cda9}{%
+           family={Nieto},
+           familyi={N\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8ee16fc73663b12ea4eae1050d43c2d6}{%
+           family={Domenico},
+           familyi={D\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           suffix={B.and\bibnamedelima Domenico},
+           suffixi={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b415f584042f1893642fd0b4619c0eef}{%
+           family={Ragone},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{76914363f897927e2f29418043809569}
+      \strng{fullhash}{a60f889205d5ced795dc46c6bbf6a54b}
+      \strng{fullhashraw}{a60f889205d5ced795dc46c6bbf6a54b}
+      \strng{bibnamehash}{76914363f897927e2f29418043809569}
+      \strng{authorbibnamehash}{76914363f897927e2f29418043809569}
+      \strng{authornamehash}{76914363f897927e2f29418043809569}
+      \strng{authorfullhash}{a60f889205d5ced795dc46c6bbf6a54b}
+      \strng{authorfullhashraw}{a60f889205d5ced795dc46c6bbf6a54b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2023 ACM Conference on Information Technology for Social Good}
+      \field{title}{The social impact of generative ai: An analysis on chatgpt}
+      \field{year}{2023}
+      \field{pages}{363\bibrangedash 373}
+      \range{pages}{11}
+    \endentry
+    \entry{barthes1977image}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=40836e7ee71ffe1f1c25c69cd1a4e630}{%
+           family={Barthes},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b37335d914380413ddf509bf40c626b3}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Fontana Press}%
+      }
+      \strng{namehash}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{fullhash}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{fullhashraw}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{bibnamehash}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{authorbibnamehash}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{authornamehash}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{authorfullhash}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \strng{authorfullhashraw}{5e6703349efc9aa3a7e2622f8ecd097d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{A fontana original}
+      \field{title}{Image, Music, Text}
+      \field{year}{1977}
+    \endentry
+    \entry{brown1987politeness}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=4729a261378d835b1c7fbde98d5f1407}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9e77c71ebf0dbc442ad6b96fafe805e6}{%
+           family={Levinson},
+           familyi={L\bibinitperiod},
+           given={S.C.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{fullhash}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{fullhashraw}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{bibnamehash}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{authorbibnamehash}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{authornamehash}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{authorfullhash}{af5f726f600dd66ccf5c093d7604edee}
+      \strng{authorfullhashraw}{af5f726f600dd66ccf5c093d7604edee}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Politeness: Some Universals in Language Usage}
+      \field{title}{Politeness: Some Universals in Language Usage}
+      \field{year}{1987}
+    \endentry
+    \entry{CouperKuhlenSelting2017}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=4d38c6805638055cbe2465841a4f1b12}{%
+           family={Couper-Kuhlen},
+           familyi={C\bibinithyphendelim K\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b51b3cc261ae5ee82c44ae1a7fae7558}{%
+           family={Selting},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{fullhash}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{fullhashraw}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{bibnamehash}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{authorbibnamehash}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{authornamehash}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{authorfullhash}{3d4b0cb42248df7dbf31977905dae0dc}
+      \strng{authorfullhashraw}{3d4b0cb42248df7dbf31977905dae0dc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Interactional Linguistics: Studying Language in Social Interaction}
+      \field{year}{2017}
+    \endentry
+    \entry{DINGEMANSE202430}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b4db28807799a8a6e722d9017fccc0cf}{%
+           family={Dingemanse},
+           familyi={D\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=add63c34d9e35c968b40e5105a7c2c5d}{%
+           family={Enfield},
+           familyi={E\bibinitperiod},
+           given={N.\bibnamedelimi J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{fullhash}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{fullhashraw}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{bibnamehash}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{authorbibnamehash}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{authornamehash}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{authorfullhash}{344dd6f53af2ef5826643fe22a973bff}
+      \strng{authorfullhashraw}{344dd6f53af2ef5826643fe22a973bff}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Trends in Cognitive Sciences}
+      \field{number}{1}
+      \field{title}{Interactive repair and the foundations of language}
+      \field{volume}{28}
+      \field{year}{2024}
+      \field{pages}{30\bibrangedash 42}
+      \range{pages}{13}
+    \endentry
+    \entry{garfinkelstudies}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=4a307ecafe1946a101c88f28b34a0d16}{%
+           family={Garfinkel},
+           familyi={G\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{fullhash}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{fullhashraw}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{bibnamehash}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{authorbibnamehash}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{authornamehash}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{authorfullhash}{4a307ecafe1946a101c88f28b34a0d16}
+      \strng{authorfullhashraw}{4a307ecafe1946a101c88f28b34a0d16}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Studies in ethnomethodology}
+      \field{year}{2023}
+      \field{pages}{209\bibrangedash 261}
+      \range{pages}{53}
+    \endentry
+    \entry{givón2020coherence}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7ddaa028645cfff70f0670d981cf041a}{%
+           family={Givón},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Benjamins Publishing Company}%
+      }
+      \strng{namehash}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{fullhash}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{fullhashraw}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{bibnamehash}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{authorbibnamehash}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{authornamehash}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{authorfullhash}{7ddaa028645cfff70f0670d981cf041a}
+      \strng{authorfullhashraw}{7ddaa028645cfff70f0670d981cf041a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Coherence}
+      \field{year}{2020}
+    \endentry
+    \entry{grice1975logic}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=6901b87606f754ab73a1dfda8bfd8bf9}{%
+           family={Grice},
+           familyi={G\bibinitperiod},
+           given={H.\bibnamedelimi P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=d59bef1c480e103dec86b71e47802b1b}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b2bd978f51cae016d5a94d61bbffbdee}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Jerry\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{fullhash}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{fullhashraw}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{bibnamehash}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{authorbibnamehash}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{authornamehash}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{authorfullhash}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{authorfullhashraw}{6901b87606f754ab73a1dfda8bfd8bf9}
+      \strng{editorbibnamehash}{cee440d678832a7b5c7e0015f964a4b3}
+      \strng{editornamehash}{cee440d678832a7b5c7e0015f964a4b3}
+      \strng{editorfullhash}{cee440d678832a7b5c7e0015f964a4b3}
+      \strng{editorfullhashraw}{cee440d678832a7b5c7e0015f964a4b3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Syntax and Semantics: Vol. 3: Speech Acts}
+      \field{title}{Logic and Conversation}
+      \field{year}{1975}
+      \field{pages}{41\bibrangedash 58}
+      \range{pages}{18}
+    \endentry
+    \entry{hagerty2019global}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=33dad5cd3facab117ddc454b957c4ab1}{%
+           family={Hagerty},
+           familyi={H\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f2426dcaebc94d156ec4dec0fbd5e57f}{%
+           family={Rubinov},
+           familyi={R\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{fullhash}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{fullhashraw}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{bibnamehash}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{authorbibnamehash}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{authornamehash}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{authorfullhash}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \strng{authorfullhashraw}{24c47f86c2e246c6bd964778aa3fa5ab}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1907.07892}
+      \field{title}{Global AI ethics: a review of the social impacts and ethical implications of artificial intelligence}
+      \field{year}{2019}
+    \endentry
+    \entry{hajicovasgall2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=59146e24e00f5fe6c675a04a9d270cfb}{%
+           family={Hajičová},
+           familyi={H\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9ef348357a3d52865cc0a1c1ac166897}{%
+           family={Havelka},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6e392dca1e8a529bc1fdd1baddddb321}{%
+           family={Sgall},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Slavica Publishers}%
+      }
+      \strng{namehash}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{fullhash}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{fullhashraw}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{bibnamehash}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{authorbibnamehash}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{authornamehash}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{authorfullhash}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \strng{authorfullhashraw}{cc4da9c99a835a4907e4633e8a06a5e0}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Slavic Linguistics}
+      \field{number}{1}
+      \field{title}{Discourse Semantics and the Salience of Referents}
+      \field{volume}{11}
+      \field{year}{2003}
+      \field{pages}{127\bibrangedash 140}
+      \range{pages}{14}
+    \endentry
+    \entry{Halliday76cohesion}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=02086519d39addfdf6fc98bacfee027c}{%
+           family={Halliday},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=f114cda3d1821574c0b78311d0b5c117}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Longman}%
+      }
+      \strng{namehash}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{fullhash}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{fullhashraw}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{bibnamehash}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{authorbibnamehash}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{authornamehash}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{authorfullhash}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \strng{authorfullhashraw}{3fff77e7ddbeaf921711d8fbac3b1429}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cohesion in English}
+      \field{year}{1976}
+    \endentry
+    \entry{hendrix1982natural}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=50eb601bfb4201b45306d6fed1f2e012}{%
+           family={Hendrix},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi G.},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{fullhash}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{fullhashraw}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{bibnamehash}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{authorbibnamehash}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{authornamehash}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{authorfullhash}{50eb601bfb4201b45306d6fed1f2e012}
+      \strng{authorfullhashraw}{50eb601bfb4201b45306d6fed1f2e012}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Computational Linguistics}
+      \field{number}{2}
+      \field{title}{Natural-language interface}
+      \field{volume}{8}
+      \field{year}{1982}
+      \field{pages}{56\bibrangedash 61}
+      \range{pages}{6}
+    \endentry
+    \entry{hjelmslev2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=551b92018b305e53ae073e139b96df05}{%
+           family={Hjelmslev},
+           familyi={H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=62d0fdfe37f5d9902330f305ade6de03}{%
+           family={Čermák},
+           familyi={Č\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Praha}%
+      }
+      \list{publisher}{1}{%
+        {Academia}%
+      }
+      \strng{namehash}{551b92018b305e53ae073e139b96df05}
+      \strng{fullhash}{551b92018b305e53ae073e139b96df05}
+      \strng{fullhashraw}{551b92018b305e53ae073e139b96df05}
+      \strng{bibnamehash}{551b92018b305e53ae073e139b96df05}
+      \strng{authorbibnamehash}{551b92018b305e53ae073e139b96df05}
+      \strng{authornamehash}{551b92018b305e53ae073e139b96df05}
+      \strng{authorfullhash}{551b92018b305e53ae073e139b96df05}
+      \strng{authorfullhashraw}{551b92018b305e53ae073e139b96df05}
+      \strng{translatorbibnamehash}{62d0fdfe37f5d9902330f305ade6de03}
+      \strng{translatornamehash}{62d0fdfe37f5d9902330f305ade6de03}
+      \strng{translatorfullhash}{62d0fdfe37f5d9902330f305ade6de03}
+      \strng{translatorfullhashraw}{62d0fdfe37f5d9902330f305ade6de03}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. doplněné a upravené vydání}
+      \field{title}{O základech teorie jazyka}
+      \field{year}{2016}
+    \endentry
+    \entry{hrbacek1994}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d696f8d90336a3b33354924a3efe92a1}{%
+           family={Hrbáček},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Praha}%
+      }
+      \list{publisher}{1}{%
+        {Trizonia}%
+      }
+      \strng{namehash}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{fullhash}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{fullhashraw}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{bibnamehash}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{authorbibnamehash}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{authornamehash}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{authorfullhash}{d696f8d90336a3b33354924a3efe92a1}
+      \strng{authorfullhashraw}{d696f8d90336a3b33354924a3efe92a1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nárys textové syntaxe spisovné češtiny}
+      \field{year}{1994}
+    \endentry
+    \entry{reuters2024openai}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2d1c0400c6090796911ab04cfa33982b}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5f1c25015c333940c60fd6ce77a6fa3c}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{fullhash}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{fullhashraw}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{bibnamehash}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{authorbibnamehash}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{authornamehash}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{authorfullhash}{75f319a541b3c303022ee4a6bce2cd5d}
+      \strng{authorfullhashraw}{75f319a541b3c303022ee4a6bce2cd5d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Reuters}
+      \field{title}{OpenAI Rivals Seek New Path to Smarter AI as Current Methods Hit Limitations}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11
+      \endverb
+      \verb{url}
+      \verb https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11
+      \endverb
+    \endentry
+    \entry{koblizek2015}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=649d703388358fed83cd3b7f269eff11}{%
+           family={Koblížek},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Univerzita Karlova v Praze, Filozofická fakulta}%
+      }
+      \strng{namehash}{649d703388358fed83cd3b7f269eff11}
+      \strng{fullhash}{649d703388358fed83cd3b7f269eff11}
+      \strng{fullhashraw}{649d703388358fed83cd3b7f269eff11}
+      \strng{bibnamehash}{649d703388358fed83cd3b7f269eff11}
+      \strng{authorbibnamehash}{649d703388358fed83cd3b7f269eff11}
+      \strng{authornamehash}{649d703388358fed83cd3b7f269eff11}
+      \strng{authorfullhash}{649d703388358fed83cd3b7f269eff11}
+      \strng{authorfullhashraw}{649d703388358fed83cd3b7f269eff11}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Interpretační sémantika. Úvod do textové teorie Francoise Rastiera}
+      \field{year}{2015}
+    \endentry
+    \entry{makela2005survey}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=c01cbaba7c59e747c8c8cab3784da3ee}{%
+           family={Makela},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Department of Computer Science, University of Helsinki, Helsinki}%
+      }
+      \strng{namehash}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{fullhash}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{fullhashraw}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{bibnamehash}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{authorbibnamehash}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{authornamehash}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{authorfullhash}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \strng{authorfullhashraw}{c01cbaba7c59e747c8c8cab3784da3ee}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the seminar on knowledge management on the semantic web}
+      \field{title}{Survey of semantic search research}
+      \field{year}{2005}
+    \endentry
+    \entry{mctear2020conversational}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=884d8c0e8e489f4e19ff7527378aa504}{%
+           family={McTear},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{fullhash}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{fullhashraw}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{bibnamehash}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{authorbibnamehash}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{authornamehash}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{authorfullhash}{884d8c0e8e489f4e19ff7527378aa504}
+      \strng{authorfullhashraw}{884d8c0e8e489f4e19ff7527378aa504}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Conversational AI: Dialogue Systems, Conversational Agents, and Chatbots}
+      \field{year}{2020}
+      \field{pages}{43\bibrangedash 70}
+      \range{pages}{28}
+    \endentry
+    \entry{bloomberg2024openai1}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c668a5d57b9966c8ed02bbd61b8f7aae}{%
+           family={Metz},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=af68df40b362adbdd23e502c84d2a5ec}{%
+           family={Ghaffary},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=97a49065663bfbb9d4bb351822338b7d}{%
+           family={Bass},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1465e94d0df6d5e4ec49770a4c3c3789}{%
+           family={Love},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7864f9d29c234675f887f82bf3789866}
+      \strng{fullhash}{58cda36612dad4032460772c34548878}
+      \strng{fullhashraw}{58cda36612dad4032460772c34548878}
+      \strng{bibnamehash}{7864f9d29c234675f887f82bf3789866}
+      \strng{authorbibnamehash}{7864f9d29c234675f887f82bf3789866}
+      \strng{authornamehash}{7864f9d29c234675f887f82bf3789866}
+      \strng{authorfullhash}{58cda36612dad4032460772c34548878}
+      \strng{authorfullhashraw}{58cda36612dad4032460772c34548878}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bloomberg News}
+      \field{note}{Accessed: 2024-12-19}
+      \field{title}{OpenAI, Google, and Anthropic Are Struggling to Build More Advanced AI}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bloomberg.com/news/articles/2024-11-13/openai-google-and-anthropic-are-struggling-to-build-more-advanced-ai
+      \endverb
+      \verb{url}
+      \verb https://www.bloomberg.com/news/articles/2024-11-13/openai-google-and-anthropic-are-struggling-to-build-more-advanced-ai
+      \endverb
+    \endentry
+    \entry{Nedoluzhko2010}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=24eddf09292a50627e64b1953398280a}{%
+           family={Nedoluzhko},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Univerzita Karlova, Filozofická fakulta, Ústav českého jazyka a teorie komunikace}%
+      }
+      \list{location}{1}{%
+        {Prague}%
+      }
+      \strng{namehash}{24eddf09292a50627e64b1953398280a}
+      \strng{fullhash}{24eddf09292a50627e64b1953398280a}
+      \strng{fullhashraw}{24eddf09292a50627e64b1953398280a}
+      \strng{bibnamehash}{24eddf09292a50627e64b1953398280a}
+      \strng{authorbibnamehash}{24eddf09292a50627e64b1953398280a}
+      \strng{authornamehash}{24eddf09292a50627e64b1953398280a}
+      \strng{authorfullhash}{24eddf09292a50627e64b1953398280a}
+      \strng{authorfullhashraw}{24eddf09292a50627e64b1953398280a}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rozšířená textová koreference a asociační anafora (koncepce anotace českých dat v pražském závislostním korpusu)}
+      \field{type}{PhD thesis}
+      \field{year}{2010}
+    \endentry
+    \entry{ritchie2024ai}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=73b4dcf180392cf1033c3286fea1340e}{%
+           family={Ritchie},
+           familyi={R\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{fullhash}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{fullhashraw}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{bibnamehash}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{authorbibnamehash}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{authornamehash}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{authorfullhash}{73b4dcf180392cf1033c3286fea1340e}
+      \strng{authorfullhashraw}{73b4dcf180392cf1033c3286fea1340e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sustainability by Numbers}
+      \field{month}{11}
+      \field{title}{What’s the impact of artificial intelligence on energy demand?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.sustainabilitybynumbers.com/p/ai-energy-demand
+      \endverb
+      \verb{url}
+      \verb https://www.sustainabilitybynumbers.com/p/ai-energy-demand
+      \endverb
+    \endentry
+    \entry{ritter2024ai}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=24a3e2d0198edd4b1da45bd2034be363}{%
+           family={Ritter},
+           familyi={R\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ab361a4c3518e2c13bd5d8b87e314738}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{fullhash}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{fullhashraw}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{bibnamehash}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{authorbibnamehash}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{authornamehash}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{authorfullhash}{4ca99e593750b7c9cc2be389feb5b886}
+      \strng{authorfullhashraw}{4ca99e593750b7c9cc2be389feb5b886}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{The AI Plateau Is Real — How We Jump To The Next Breakthrough}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.emcap.com/thoughts/ai-s-curve-plateau-proprietary-business-data-breakthrough/
+      \endverb
+      \verb{url}
+      \verb https://www.emcap.com/thoughts/ai-s-curve-plateau-proprietary-business-data-breakthrough/
+      \endverb
+    \endentry
+    \entry{Roberts01101993}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=425bc9c4ca195b7bb2301638c0007860}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c3d31d19de3b887ff3c2588666174674}{%
+           family={Kreuz},
+           familyi={K\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{fullhash}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{fullhashraw}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{bibnamehash}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{authorbibnamehash}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{authornamehash}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{authorfullhash}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \strng{authorfullhashraw}{ecc9d152a1b289b772ea32fa5a9e2b14}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Discourse Processes}
+      \field{number}{4}
+      \field{title}{Nonstandard discourse and its coherence}
+      \field{volume}{16}
+      \field{year}{1993}
+      \field{pages}{451\bibrangedash 464}
+      \range{pages}{14}
+    \endentry
+    \entry{Sacks1992}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=eec1c6a7a4853265c930ee6188f0a3a8}{%
+           family={Sacks},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=4225acfd4c22fbadeacbb516b827566d}{%
+           family={Jefferson},
+           familyi={J\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Basil Blackwell}%
+      }
+      \strng{namehash}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{fullhash}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{fullhashraw}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{bibnamehash}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{authorbibnamehash}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{authornamehash}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{authorfullhash}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{authorfullhashraw}{eec1c6a7a4853265c930ee6188f0a3a8}
+      \strng{editorbibnamehash}{4225acfd4c22fbadeacbb516b827566d}
+      \strng{editornamehash}{4225acfd4c22fbadeacbb516b827566d}
+      \strng{editorfullhash}{4225acfd4c22fbadeacbb516b827566d}
+      \strng{editorfullhashraw}{4225acfd4c22fbadeacbb516b827566d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lectures on Conversation}
+      \field{year}{1992}
+    \endentry
+    \entry{Schegloff1990}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=bab2d813c18610cf4803ae6ab6a9f6a4}{%
+           family={Schegloff},
+           familyi={S\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=0ee01cf975ed20f2df71115efacc7db4}{%
+           family={Dorval},
+           familyi={D\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ablex}%
+      }
+      \strng{namehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{fullhash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{fullhashraw}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{bibnamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorbibnamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authornamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorfullhash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorfullhashraw}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{editorbibnamehash}{0ee01cf975ed20f2df71115efacc7db4}
+      \strng{editornamehash}{0ee01cf975ed20f2df71115efacc7db4}
+      \strng{editorfullhash}{0ee01cf975ed20f2df71115efacc7db4}
+      \strng{editorfullhashraw}{0ee01cf975ed20f2df71115efacc7db4}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Conversational Organization and its Development}
+      \field{title}{On the organization of sequences as a source of 'coherence' in talk-in-interaction}
+      \field{year}{1990}
+      \field{pages}{51\bibrangedash 77}
+      \range{pages}{27}
+    \endentry
+    \entry{Schegloff_2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=bab2d813c18610cf4803ae6ab6a9f6a4}{%
+           family={Schegloff},
+           familyi={S\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{fullhash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{fullhashraw}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{bibnamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorbibnamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authornamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorfullhash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorfullhashraw}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sequence Organization in Interaction: A Primer in Conversation Analysis}
+      \field{year}{2007}
+    \endentry
+    \entry{sacksRepair}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=bab2d813c18610cf4803ae6ab6a9f6a4}{%
+           family={Schegloff},
+           familyi={S\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4225acfd4c22fbadeacbb516b827566d}{%
+           family={Jefferson},
+           familyi={J\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eec1c6a7a4853265c930ee6188f0a3a8}{%
+           family={Sacks},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Linguistic Society of America}%
+      }
+      \strng{namehash}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{fullhash}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{fullhashraw}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{bibnamehash}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{authorbibnamehash}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{authornamehash}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{authorfullhash}{b75da91e085ffa06ea846614c47a3c60}
+      \strng{authorfullhashraw}{b75da91e085ffa06ea846614c47a3c60}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Language}
+      \field{number}{2}
+      \field{title}{The Preference for Self-Correction in the Organization of Repair in Conversation}
+      \field{volume}{53}
+      \field{year}{1977}
+      \field{pages}{361\bibrangedash 382}
+      \range{pages}{22}
+    \endentry
+    \entry{topicshading}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bab2d813c18610cf4803ae6ab6a9f6a4}{%
+           family={Schegloff},
+           familyi={S\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=eec1c6a7a4853265c930ee6188f0a3a8}{%
+           family={Sacks},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{fullhash}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{fullhashraw}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{bibnamehash}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{authorbibnamehash}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{authornamehash}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{authorfullhash}{140b9cdf6477fcfd659083faa059ea14}
+      \strng{authorfullhashraw}{140b9cdf6477fcfd659083faa059ea14}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Semiotica}
+      \field{number}{4}
+      \field{title}{Opening up Closings}
+      \field{volume}{8}
+      \field{year}{1973}
+      \field{pages}{289\bibrangedash 327}
+      \range{pages}{39}
+    \endentry
+    \entry{searle1969speech}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=dcc73fc66b9219a3e4fa73358a44e910}{%
+           family={Searle},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{fullhash}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{fullhashraw}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{bibnamehash}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{authorbibnamehash}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{authornamehash}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{authorfullhash}{dcc73fc66b9219a3e4fa73358a44e910}
+      \strng{authorfullhashraw}{dcc73fc66b9219a3e4fa73358a44e910}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Speech Acts: An Essay in the Philosophy of Language}
+      \field{year}{1969}
+    \endentry
+    \entry{sharma2024exploring}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=45122ec44c8c06cdbf4183f8cb938bba}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=affa7281c5d35bb9f249b9dee1541a60}{%
+           family={Vidhate},
+           familyi={V\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=be236d2ee094a74e733518c61a00c559}{%
+           family={Osei-Asiamah},
+           familyi={O\bibinithyphendelim A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c3aacc5478a0fcacc318fdd238746d5d}{%
+           family={Meena\bibnamedelima Kumari},
+           familyi={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=07d2b1a2e43eb190e1e96a247b812f1f}{%
+           family={Mahajan},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=63bd5195d55debe94a7c8cf6dfa0a117}{%
+           family={Rajagopal},
+           familyi={R\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{082d55651d8ca9d2f8d334f21cfa2d61}
+      \strng{fullhash}{122a7796fd05e95c47726ed1d1967838}
+      \strng{fullhashraw}{122a7796fd05e95c47726ed1d1967838}
+      \strng{bibnamehash}{082d55651d8ca9d2f8d334f21cfa2d61}
+      \strng{authorbibnamehash}{082d55651d8ca9d2f8d334f21cfa2d61}
+      \strng{authornamehash}{082d55651d8ca9d2f8d334f21cfa2d61}
+      \strng{authorfullhash}{122a7796fd05e95c47726ed1d1967838}
+      \strng{authorfullhashraw}{122a7796fd05e95c47726ed1d1967838}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Educational Administration: Theory and Practice}
+      \field{number}{5}
+      \field{title}{Exploring The Evolution Of Chatgpt: From Origin To Revolutionary Influence}
+      \field{volume}{30}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{makela2005survey}
-Eetu M{\"a}kel{\"a}.
-\newblock Survey of semantic search research.
-\newblock In {\em Proceedings of the seminar on knowledge management on the
-  semantic web}. Department of Computer Science, University of Helsinki,
-  Helsinki, 2005.
-
-\bibitem{bloomberg2024openai1}
-Bloomberg News.
-\newblock Openai, google, and anthropic are struggling to build more advanced
-  ai.
-\newblock {\em Bloomberg News}, 2024.
-\newblock Accessed: 2024-12-19.
-
-\bibitem{reuters2024openai}
-Reuters News.
-\newblock Openai rivals seek new path to smarter ai as current methods hit
-  limitations.
-\newblock {\em Reuters}, 2024.
-\newblock Accessed: 2024-12-19.
-
-\bibitem{ritter2024ai}
-Gordon Ritter and Wendy Lu.
-\newblock The ai plateau is real — how we jump to the next breakthrough.
-\newblock December 2024.
-
-\bibitem{ritchie2024ai}
-Hannah Ritchie.
-\newblock What’s the impact of artificial intelligence on energy demand?
-\newblock {\em Sustainability by Numbers}, November 2024.
-
-\bibitem{hagerty2019global}
-Alexa Hagerty and Igor Rubinov.
-\newblock Global ai ethics: a review of the social impacts and ethical
-  implications of artificial intelligence.
-\newblock {\em arXiv preprint arXiv:1907.07892}, 2019.
-
-\bibitem{baldassarre2023social}
-Maria~Teresa Baldassarre, Danilo Caivano, Berenice Fernandez~Nieto, Domenico
-  Gigante, and Azzurra Ragone.
-\newblock The social impact of generative ai: An analysis on chatgpt.
-\newblock In {\em Proceedings of the 2023 ACM Conference on Information
-  Technology for Social Good}, pages 363--373, 2023.
-
-\bibitem{mctear2020conversational}
-Michael~F. McTear.
-\newblock {\em Conversational AI: Dialogue Systems, Conversational Agents, and
-  Chatbots}.
-\newblock Springer International Publishing, 2020.
-
-\bibitem{brown1987politeness}
-P.~Brown and S.C. Levinson.
-\newblock {\em Politeness: Some Universals in Language Usage}.
-\newblock Politeness: Some Universals in Language Usage. Cambridge University
-  Press, 1987.
-
-\bibitem{austin1962how}
-John~Langshaw Austin.
-\newblock {\em How to do things with words}.
-\newblock Oxford University Press, 1962.
-
-\bibitem{searle1969speech}
-John~R. Searle.
-\newblock {\em Speech Acts: An Essay in the Philosophy of Language}.
-\newblock Cambridge University Press, 1969.
-
-\bibitem{grice1975logic}
-H.~P. Grice.
-\newblock Logic and conversation.
-\newblock In Peter Cole and Jerry~L. Morgan, editors, {\em Syntax and
-  Semantics: Vol. 3: Speech Acts}, pages 41--58. Academic Press, 1975.
-
-\bibitem{Schegloff_2007}
-Emanuel~A. Schegloff.
-\newblock {\em Sequence Organization in Interaction: A Primer in Conversation
-  Analysis}.
-\newblock Cambridge University Press, 2007.
-
-\bibitem{CouperKuhlenSelting2017}
-Elizabeth Couper-Kuhlen and Margret Selting.
-\newblock {\em Interactional Linguistics: Studying Language in Social
-  Interaction}.
-\newblock Cambridge University Press, 2017.
-
-\bibitem{hrbacek1994}
-Josef Hrbáček.
-\newblock {\em Nárys textové syntaxe spisovné češtiny}.
-\newblock Trizonia, Praha, 1994.
-
-\bibitem{hjelmslev2016}
-Louis Hjelmslev.
-\newblock {\em O základech teorie jazyka}.
-\newblock Academia, Praha, 2. doplněné a upravené vydání edition, 2016.
-
-\bibitem{barthes1977image}
-R.~Barthes and S.~Heath.
-\newblock {\em Image, Music, Text}.
-\newblock A fontana original. Fontana Press, 1977.
-
-\bibitem{givón2020coherence}
-T.~Giv{\'o}n.
-\newblock {\em Coherence}.
-\newblock John Benjamins Publishing Company, 2020.
-
-\bibitem{Roberts01101993}
-Richard~M. Roberts and Roger~J. Kreuz.
-\newblock Nonstandard discourse and its coherence.
-\newblock {\em Discourse Processes}, 16(4):451--464, 1993.
-
-\bibitem{Halliday76cohesion}
-M.~A.~K. Halliday and R.~Hasan.
-\newblock {\em Cohesion in English}.
-\newblock Longman, 1976.
-
-\bibitem{hajicovasgall2003}
-Eva Hajičová, Jiří Havelka, and Petr Sgall.
-\newblock Discourse semantics and the salience of referents.
-\newblock {\em Journal of Slavic Linguistics}, 11(1):127--140, 2003.
-
-\bibitem{Nedoluzhko2010}
-Anna Nedoluzhko.
-\newblock {\em Rozšířená textová koreference a asociační anafora
-  (koncepce anotace českých dat v pražském závislostním korpusu)}.
-\newblock Phd thesis, Univerzita Karlova, Filozofická fakulta, Ústav
-  českého jazyka a teorie komunikace, Prague, 2010.
-
-\bibitem{koblizek2015}
-Tomáš Koblížek.
-\newblock {\em Untitled Work (Details Provided in Czech)}.
-\newblock Univerzita Karlova v Praze, Filozofická fakulta, Prague, 1 edition,
-  2015.
-
-\bibitem{Sacks1992}
-Harvey Sacks.
-\newblock {\em Lectures on Conversation}, volume 1 & 2.
-\newblock Basil Blackwell, Oxford, 1992.
-
-\bibitem{Schegloff1990}
-Emanuel~A. Schegloff.
-\newblock On the organization of sequences as a source of 'coherence' in
-  talk-in-interaction.
-\newblock In Bruce Dorval, editor, {\em Conversational Organization and its
-  Development}, page 51–77. Ablex, Norwood, NJ, 1990.
-
-\bibitem{topicshading}
-EMANUEL~A. SCHEGLOFF and HARVEY SACKS.
-\newblock Opening up closings.
-\newblock {\em Semiotica}, 8(4):289--327, 1973.
-
-\bibitem{sacksRepair}
-Emanuel~A. Schegloff, Gail Jefferson, and Harvey Sacks.
-\newblock The preference for self-correction in the organization of repair in
-  conversation.
-\newblock {\em Language}, 53(2):361--382, 1977.
-
-\bibitem{DINGEMANSE202430}
-Mark Dingemanse and N.J. Enfield.
-\newblock Interactive repair and the foundations of language.
-\newblock {\em Trends in Cognitive Sciences}, 28(1):30--42, 2024.
-
-\bibitem{garfinkelstudies}
-Harold Garfinkel.
-\newblock Studies in ethnomethodology.
-\newblock pages 209--261. Routledge, 2023.
-
-\end{thebibliography}

@@ -2,6 +2,11 @@
 \title{Coherence disruptions in human-chatbot interaction: towards quantitative approach to conversation}
 \date{}
 \author{Albert Maršík}
+
+\bibliographystyle{alpha}
+\usepackage[style=verbose]{biblatex}
+\addbibresource{references.bib}
+
 \begin{document}
 
    % intro and theory final touches
@@ -15,12 +20,12 @@
 \addcontentsline{toc}{chapter}{Introduction}
 
 \par
-Recently, there has been a breakthrough in the way we interact with machines \cite{sharma2024exploring}.
-Now that we can instruct a computer using natural language new possibilities opens up \cite{hendrix1982natural}.
+Recently, there has been a breakthrough in the way we interact with machines \footcite{sharma2024exploring}.
+We can instruct a computer using natural language \footcite{hendrix1982natural}.
 Besides making existing technology an extra step accessible,
 new ways to use technology appear.
 Automated interaction alone can solve previously unsolvable problems,
-such as notably accessing a knowledge base via semantic search \cite{makela2005survey}.
+such as notably accessing a knowledge base via semantic search \footcite{makela2005survey}.
 Until recently a knowledge base would usually be accessed only via fulltext,
 meaning we would only be able to find
 information of which we knew a part of the formal encoding.
@@ -29,21 +34,21 @@ all thanks to natural language computer interface.
 \par
 The promise of much practical usage of the current wave of generative AI is ambitious
 and only brings its fruit slowly, perhaps slower, than was expected
-\cite{bloomberg2024openai1}\cite{reuters2024openai}.
-There is talk of a "plateau" in development of the technology powering the current cutting edge inventions \cite{ritter2024ai}.
+\footcite{bloomberg2024openai1}\footcite{reuters2024openai}.
+There is talk of a "plateau" in development of the technology powering the current cutting edge inventions \footcite{ritter2024ai}.
 And that is not the only issue there is to the current wave of cutting edge AI. To name the most prominent ones:
 
 \begin{itemize}
 
     \item
-    high electricity consumption \cite{ritchie2024ai}
+    high electricity consumption \footcite{ritchie2024ai}
 
     \item
-    unpredictable and broad societal impact \cite{hagerty2019global}\cite{baldassarre2023social}
+    unpredictable and broad societal impact \footcite{hagerty2019global}\footcite{baldassarre2023social}
 \end{itemize}
 
 That being said, in context of conversation research,
-this development in technology promises to open many new doors.
+this development in technology promises to makes things possible that previously were not.
 With a partial control of what happens in the conversation and a decent certainty, that
 our system will simulate human-human conversation to the user,
 new kind of conversational data is in reach -
@@ -113,7 +118,7 @@ In case of human-human communication, disruptions can however be cured easily.
 \par
 It used to be (and remains so in legacy systems)
 that in human-bot communication, disruptions could derail a conversation completely,
-leaving the bot, who would only rely on surface level textual clues, in the dark. \cite{mctear2020conversational}
+leaving the bot, who would only rely on surface level textual clues, in the dark. \footcite{mctear2020conversational}
 This has become rare with generative AI.
 Even though it brings a set of its own problems like
 frequently lacking factuality or
@@ -147,14 +152,14 @@ Namely:
 
 %--
 \par{\textbf{Politeness}
-Brown and Levinson’s work on politeness strategies describes social alignment in smooth interactions \cite{brown1987politeness}. Politeness strategies, such as using polite language, offering options, or softening potentially face-threatening comments, help to create a comfortable communicative environment. These strategies align with social norms, which people interpret as markers of respect, consideration, or even trust. A failure to employ these politeness strategies, or using them inconsistently, can disrupt conversational coherence. For example, blunt or overly direct responses may be perceived as abrupt or rude, diverting the conversation's flow or causing discomfort. In such cases, the breakdown of polite norms can lead participants to question intent, hindering effective and smooth communication.
+Brown and Levinson’s work on politeness strategies describes social alignment in smooth interactions \footcite{brown1987politeness}. Politeness strategies, such as using polite language, offering options, or softening potentially face-threatening comments, help to create a comfortable communicative environment. These strategies align with social norms, which people interpret as markers of respect, consideration, or even trust. A failure to employ these politeness strategies, or using them inconsistently, can disrupt conversational coherence. For example, blunt or overly direct responses may be perceived as abrupt or rude, diverting the conversation's flow or causing discomfort. In such cases, the breakdown of polite norms can lead participants to question intent, hindering effective and smooth communication.
 
 
 \par{\textbf{Speech acts}}
-Following Austin and Searle's speech act theories, communication rely on expressing clear intentions and meanings that help build mutual understanding \cite{austin1962how} \cite{searle1969speech}. When speakers convey intentions explicitly through statements, questions, requests, or assertions, it signals to listeners the purpose and direction of the conversation. Effective communication strategies help maintain coherence by ensuring each contribution builds logically on the last. On the other hand, unclear intentions or ambiguous phrasing can create misunderstandings, disrupting the conversation's flow. Misalignment or mixed signals – such as using sarcasm without cues or making indirect requests without context— can leave listeners uncertain about how to respond, leading to off-track or irrelevant contributions and possibly creating need to address the communication to regain understanding.
+Following Austin and Searle's speech act theories, communication rely on expressing clear intentions and meanings that help build mutual understanding \footcite{austin1962how} \footcite{searle1969speech}. When speakers convey intentions explicitly through statements, questions, requests, or assertions, it signals to listeners the purpose and direction of the conversation. Effective communication strategies help maintain coherence by ensuring each contribution builds logically on the last. On the other hand, unclear intentions or ambiguous phrasing can create misunderstandings, disrupting the conversation's flow. Misalignment or mixed signals – such as using sarcasm without cues or making indirect requests without context— can leave listeners uncertain about how to respond, leading to off-track or irrelevant contributions and possibly creating need to address the communication to regain understanding.
 
 \par{\textbf{Conversational Maxims}}
-Grice’s conversational maxims are fundamental to coherent dialogue \cite{grice1975logic}.
+Grice’s conversational maxims are fundamental to coherent dialogue \footcite{grice1975logic}.
 They suggest that participants should:
 
 \begin{itemize}
@@ -171,11 +176,11 @@ communicate in an orderly, clear manner (Manner)
 These maxims encourage effective exchange by setting a standard for contributions that are informative, truthful, relevant, and unambiguous. When violated, such as by giving excessive detail, omitting important context, or straying from the topic, coherence suffers. For instance, irrelevant tangents or over-detailed explanations may confuse the listener as to what is the main focal point of conversation in that moment. This misalignment can leave participants uncertain about the conversation’s direction, ultimately diminishing coherence and the effectiveness of communication.
 
 \par{\textbf{Sequence Structure}}
-The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue \cite{Schegloff_2007}. Turn-taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
+The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue \footcite{Schegloff_2007}. Turn-taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
 
 \par{\textbf{Message and Topic}}
 Interactional linguistics underscores that consistency in message and topic preserves continuity in conversation
-\cite{CouperKuhlenSelting2017}. When speakers stick to a shared topic or make gradual, clear shifts, coherence is maintained because participants know what to expect. Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges. For instance, introducing a new topic without closure on the previous one can confuse listeners, leading to a scattered or fragmented interaction. By shifting focus unpredictably or offering unclear messages, coherence diminishes as participants lose track of the conversation’s thread, resulting in exchanges that feel scattered or incomplete.
+\footcite{CouperKuhlenSelting2017}. When speakers stick to a shared topic or make gradual, clear shifts, coherence is maintained because participants know what to expect. Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges. For instance, introducing a new topic without closure on the previous one can confuse listeners, leading to a scattered or fragmented interaction. By shifting focus unpredictably or offering unclear messages, coherence diminishes as participants lose track of the conversation’s thread, resulting in exchanges that feel scattered or incomplete.
 
 \par
 While all of the mentioned areas unveil much about the way conversation works,
@@ -210,8 +215,8 @@ topic – what the text is about
 
 \subsubsection{Text}
 \par
-    Text, in its broadest sense, refers to any form of communication that conveys meaning through a combination of signs, symbols, or language \cite[p.7]{hrbacek1994}\cite{hjelmslev2016}.
-    These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression \cite[p.13]{barthes1977image}.
+    Text, in its broadest sense, refers to any form of communication that conveys meaning through a combination of signs, symbols, or language \footcite[p.~7]{hrbacek1994}\footcite{hjelmslev2016}.
+    These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression \footcite[p.~13]{barthes1977image}.
     A text can be as simple as a single sentence or as complex as a novel, and it can exist across different mediums, from books and articles to advertisements and digital content.
     What defines a text is its ability to convey a coherent message or idea, often intended for interpretation by an audience or an adressee.
     Texts can serve a wide range of purposes, including storytelling, instruction, persuasion, or simply recording information.
@@ -241,18 +246,18 @@ topic – what the text is about
 \subsubsection{Coherence}
 \par
     Coherence refers to the logical connections and consistent relationships that
-    make a text easy to follow and possible to understand \cite[p.83]{givón2020coherence}\cite[p.9]{hrbacek1994}.
+    make a text easy to follow and possible to understand \footcite[p.~83]{givón2020coherence}\footcite[p.~9]{hrbacek1994}.
     It is achieved when the ideas, sentences, and paragraphs within a text are linked together in a meaningful way,
     allowing the reader to grasp the author's message without confusion.
     Coherence often depends on the use of transitions, the logical flow of arguments, and the proper sequencing of information.
-    It ensures that each part of the text contributes to the overall meaning, creating a unified whole \cite[p.28]{hrbacek1994}.
-    Incoherent text can be difficult or impossible to understand, even if the individual sentences are grammatically correct \cite[p.30]{hrbacek1994}.
+    It ensures that each part of the text contributes to the overall meaning, creating a unified whole \footcite[p.~28]{hrbacek1994}.
+    Incoherent text can be difficult or impossible to understand, even if the individual sentences are grammatically correct \footcite[p.~30]{hrbacek1994}.
     It is a property of the whole text, but
     textual elements can be pointed out that contribute to or diminish the given texts coherence.
     Those elements are however not referred to as 'coherence elements'.
 
 \par
-    Coherence is a cognitive phenomenon \cite{Roberts01101993} because
+    Coherence is a cognitive phenomenon \footcite{Roberts01101993} because
     it involves the mental processes of interpreting, organizing, and understanding information.
     When reading a text,
     coherence arises not only from the structure and linguistic cues provided by the author but
@@ -300,13 +305,13 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     A coherent text tends to be at least somewhat cohesive.
 
 \par
-    Halliday and Hasan \cite{Halliday76cohesion} developed
+    Halliday and Hasan \footcite{Halliday76cohesion} developed
     a detailed framework of cohesion, which includes
     endophoric references,
     relating parts of the text to each other, and
-    exophoric references, which point outside the text \cite[p.31]{Halliday76cohesion}.
+    exophoric references, which point outside the text \footcite[p.~31]{Halliday76cohesion}.
     Endophoric cohesion covers aspects
-    like anaphoric references and cataphoric references \cite{hajicovasgall2003}.
+    like anaphoric references and cataphoric references \footcite{hajicovasgall2003}.
     Exophoric references, however, rely on shared context beyond the text itself,
     requiring readers to use prior knowledge.
     Their framework highlights how elements of cohesion
@@ -322,7 +327,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     different parts of a text, forming a unified whole.
     They classify cohesive ties as
     references, substitutive forms, ellipsis, and connectors, with
-    anaphoric references being one of the primary ways texts achieve cohesion \cite[p.68]{Halliday76cohesion}.
+    anaphoric references being one of the primary ways texts achieve cohesion \footcite[p.~68]{Halliday76cohesion}.
     When a text element cannot be mapped to a preceding referent,
     Halliday and Hasan suggest that cohesion is maintained through
     shared situational understanding, making the reference exophoric.
@@ -353,7 +358,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
 
 \subsubsection{Anaphore, Endophore and Coreference}
 \par
-    A common cohesive text element is an anaphore \cite{Nedoluzhko2010}.
+    A common cohesive text element is an anaphore \footcite{Nedoluzhko2010}.
     It is a reference inside the text pointing back to a previously mentioned entity.
     Often it is realised via personal pronouns.
     Though there are other ways for anaphore to realise.
@@ -438,7 +443,7 @@ Topic annotation is by its nature always more text,
 
 \subsubsection{Association}
 \par
-    Association is a textual realization of an isotopic relation \cite{koblizek2015}.
+    Association is a textual realization of an isotopic relation \footcite{koblizek2015}.
     By their exophoric properties, referents exist in a semantic web of relationships.
     Similarly to coherence, associative relationships are a cognitive phenomena.
     They come to exist when they are percieved.
@@ -527,23 +532,23 @@ This research has lead to coining new terminology.
 
     \subsubsection{Adjacency pair}
     \par
-    Adjacency pairs describe sequences of two related utterances by different speakers \cite[p.188]{Sacks1992}. These pairs are characterized by their predictable and reciprocal nature, where the first part sets up the expectation for a specific type of response. Common examples include greetings('Hi' → 'Hello'), questions and answers ('What time is it?' → '3 PM'), or offers and acceptances/declines ('Would you like some coffee?' → 'Yes, please' or 'No, thank you').
+    Adjacency pairs describe sequences of two related utterances by different speakers \footcite[p.~188]{Sacks1992}. These pairs are characterized by their predictable and reciprocal nature, where the first part sets up the expectation for a specific type of response. Common examples include greetings('Hi' → 'Hello'), questions and answers ('What time is it?' → '3 PM'), or offers and acceptances/declines ('Would you like some coffee?' → 'Yes, please' or 'No, thank you').
 
     \subsubsection{Sequence structure}
     \par
-    Sequence structure refers to the organization of conversational turns into coherent patterns or sequences. It describes how interactions are shaped by predictable structures, such as adjacency pairs. These sequences provide order and meaning to conversations, guiding participants in understanding when and how to respond. Schegloff \cite{Schegloff1990} emphasized that sequence structure is central to the social organization of talk, as it allows participants to manage and negotiate interaction effectively.
+    Sequence structure refers to the organization of conversational turns into coherent patterns or sequences. It describes how interactions are shaped by predictable structures, such as adjacency pairs. These sequences provide order and meaning to conversations, guiding participants in understanding when and how to respond. Schegloff \footcite{Schegloff1990} emphasized that sequence structure is central to the social organization of talk, as it allows participants to manage and negotiate interaction effectively.
 
     \subsubsection{Topic shading}
     \par
-    Topic shading, as discussed by Sacks \cite{topicshading}, refers to the subtle way in which a conversation naturally shifts from one topic to another while maintaining coherence. Instead of abruptly changing the subject, speakers introduce a related idea or concept, gradually steering the discussion in a new direction. This process allows for smooth transitions in dialogue, helping participants maintain engagement and avoid confusion.
+    Topic shading, as discussed by Sacks \footcite{topicshading}, refers to the subtle way in which a conversation naturally shifts from one topic to another while maintaining coherence. Instead of abruptly changing the subject, speakers introduce a related idea or concept, gradually steering the discussion in a new direction. This process allows for smooth transitions in dialogue, helping participants maintain engagement and avoid confusion.
 
     \subsubsection{Dis/prefered answers}
     \par
-    Preferred answers, according to Sacks \cite[p.410]{Sacks1992}, are responses in conversations that align with social norms and expectations, making interactions smoother and more cooperative. In conversation analysis, preferred answers typically follow the format or intent of the preceding question or statement . They contrast with "dispreferred" answers, which might include refusals or disagreements and often require additional explanation or mitigation to maintain social harmony.
+    Preferred answers, according to Sacks \footcite[p.~410]{Sacks1992}, are responses in conversations that align with social norms and expectations, making interactions smoother and more cooperative. In conversation analysis, preferred answers typically follow the format or intent of the preceding question or statement . They contrast with "dispreferred" answers, which might include refusals or disagreements and often require additional explanation or mitigation to maintain social harmony.
 
     \subsubsection{Conversational repair}
     \par
-    Conversational repairs refer to how participants address and resolve problems in understanding, hearing, or speaking during interactions \cite{sacksRepair}. These issues, can occur at any point in a conversation. Repairs are classified into self-repair, where the speaker corrects their own error, and other-repair, where a different participant addresses the issue. They can further be classified into self-initiated repair and other-initiated repair.
+    Conversational repairs refer to how participants address and resolve problems in understanding, hearing, or speaking during interactions \footcite{sacksRepair}. These issues, can occur at any point in a conversation. Repairs are classified into self-repair, where the speaker corrects their own error, and other-repair, where a different participant addresses the issue. They can further be classified into self-initiated repair and other-initiated repair.
 
 \par
 %---
@@ -589,7 +594,7 @@ There are different degrees to which a conversation coherence can be disrupted:
     the incoherence is encapsulated on the level of a single utterance
 \end{itemize}
 
-Roberts \cite{Roberts01101993} Discusses various types of incoherent text.
+Roberts \footcite{Roberts01101993} Discusses various types of incoherent text.
 He exemplifies so called giberish as incoherent text that is absent of structural relations.
 On the other hand he discusses experimental theater or literature as a type of text
 which is assumed to be coherent in the sense that there is an intention behind it
@@ -724,7 +729,7 @@ allow participants to fill gaps based on context and social cues,
 helping conversations continue smoothly without explicit repair.
 
 \par
-Dingemanse and Enfield \cite{DINGEMANSE202430} echoes this from a cognitive perspective,
+Dingemanse and Enfield \footcite{DINGEMANSE202430} echoes this from a cognitive perspective,
 highlighting how inference and pragmatic reasoning are particularly effective.
 Participants rely on shared understanding and contextual knowledge to interpret ambiguous statements.
 Together, they use both
@@ -736,7 +741,7 @@ methods work to restore coherence.
 It needs to be noted however that both interactive repair and reasoning are
 deployed in a number of other contexts
 other than conversation coherence disruption.
-Inference takes place constantly \cite{garfinkelstudies}.
+Inference takes place constantly \footcite{garfinkelstudies}.
 Each of those moments could be hardly considered a coherence disruption.
 There is however always potential for it,
 particularily via unclear or nonassignable anaphore or abrupt unjustified topic shifts.
@@ -753,42 +758,42 @@ troublesome anaforic references and topic progressions.
 \if false
 
 METHODOLOGY 20
-    chatbots in general
+    2 chatbots in general
         Eliza
         Replica
         ChatGPT
-	research environment
-	rule based approach
+	1 research environment
+	1 rule based approach
 		how its done
 		pros and cons
-	ai approach
-		llms
-		prompt engineering techniques
-		pros and cons
-	hybrid approach
-	convform
+	3 ai approach
+		1 llms
+		1 prompt engineering techniques
+		1 pros and cons
+	1 hybrid approach
+	1 convform
 	conversation design hands on
-		in general
+	1	in general
 		stimuli
-			basic mode
+	1		basic mode
 				how it is done
-				converstaional style
+	1			converstaional style
 					inquisitive
 					relaxed
-			prompt techniques
+	3		prompt techniques
 				anaphorize
 				entity recognition
-			shallow anaphore
-			deep anaphore
+	1		shallow anaphore
+	1		deep anaphore
 				how its done
 				asking info mentioned in the meantime
-			unassignable anaphore
+	1		unassignable anaphore
 				hardcoded
 				prompting
-		ending the conversation
-	what the data gives
-	how to handle data
-	learning from
+	1	ending the conversation
+	1 what the data gives
+	   how to handle data
+	2 learning from
 	    hands on design - trying to replicate a situation
 		qualitative analysis
 		quantitative analysis
@@ -838,8 +843,7 @@ PILOT 10
 
 \fi
 
-% Bibliography section
-\bibliographystyle{unsrt}
-\bibliography{references}
+
+\printbibliography
 
 \end{document}

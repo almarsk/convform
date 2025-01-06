@@ -1,50 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: structure.aux
-The style file: unsrt.bst
-Database file #1: references.bib
-Warning--empty journal in ritter2024ai
-Warning--can't use both author and editor fields in Sacks1992
-Warning--empty booktitle in garfinkelstudies
-You've used 31 entries,
-            1791 wiz_defined-function locations,
-            632 strings with 7915 characters,
-and the built_in function-call counts, 6155 in all, are:
-= -- 568
-> -- 215
-< -- 5
-+ -- 87
-- -- 56
-* -- 300
-:= -- 970
-add.period$ -- 101
-call.type$ -- 31
-change.case$ -- 20
-chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 341
-empty$ -- 653
-format.name$ -- 56
-if$ -- 1425
-int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 43
-newline$ -- 160
-num.names$ -- 35
-pop$ -- 135
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 138
-stack$ -- 0
-substring$ -- 240
-swap$ -- 73
-text.length$ -- 5
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 3
-while$ -- 55
-width$ -- 33
-write$ -- 341
-(There were 3 warnings)
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'structure.blg'
+[54] biber-darwin:340> INFO - === Mon Jan  6, 2025, 17:25:21
+[68] Biber.pm:420> INFO - Reading 'structure.bcf'
+[124] Biber.pm:994> INFO - Found 31 citekeys in bib section 0
+[135] Biber.pm:4463> INFO - Processing section 0
+[143] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[145] bibtex.pm:1713> INFO - LaTeX decoding ...
+[164] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[314] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[314] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[314] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[315] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[339] bbl.pm:676> INFO - Writing 'structure.bbl' with encoding 'UTF-8'
+[349] bbl.pm:779> INFO - Output to structure.bbl
