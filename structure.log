@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  7 JAN 2025 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  7 JAN 2025 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **structure.tex
-(./structure.tex
+(./notes/thesis/structure.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/base/report.cls
@@ -306,7 +306,8 @@ Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
 \@quotelevel=\count391
 \@quotereset=\count392
- (./structure.aux)
+
+No file structure.aux.
 \openout1 = `structure.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -325,7 +326,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 )
@@ -335,16 +335,16 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `structure.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'structure.bbl' found.
+Package biblatex Info: ... file 'structure.bbl' not found.
 
-(./structure.bbl)
+No file structure.bbl.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 17.
- [1
+[1
 
 {/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -355,67 +355,205 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 23.
- [1
 
-] [2] [3] [4] [5] [6]
+
+LaTeX Warning: Citation 'sharma2024exploring' on page 1 undefined on input line
+ 23.
+
+
+LaTeX Warning: Citation 'hendrix1982natural' on page 1 undefined on input line 
+24.
+
+
+LaTeX Warning: Citation 'makela2005survey' on page 1 undefined on input line 28
+.
+
+
+LaTeX Warning: Citation 'bloomberg2024openai1' on page 1 undefined on input lin
+e 37.
+
+
+LaTeX Warning: Citation 'reuters2024openai' on page 1 undefined on input line 3
+7.
+
+
+LaTeX Warning: Citation 'ritter2024ai' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'ritchie2024ai' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'hagerty2019global' on page 1 undefined on input line 4
+7.
+
+
+LaTeX Warning: Citation 'baldassarre2023social' on page 1 undefined on input li
+ne 47.
+
+[1
+
+] [2]
+
+LaTeX Warning: Citation 'mctear2020conversational' on page 3 undefined on input
+ line 121.
+
+
+LaTeX Warning: Citation 'brown1987politeness' on page 3 undefined on input line
+ 155.
+
+
+LaTeX Warning: Citation 'austin1962how' on page 3 undefined on input line 159.
+
+
+LaTeX Warning: Citation 'searle1969speech' on page 3 undefined on input line 15
+9.
+
+[3]
+
+LaTeX Warning: Citation 'grice1975logic' on page 4 undefined on input line 162.
+
+
+
+LaTeX Warning: Citation 'Schegloff_2007' on page 4 undefined on input line 179.
+
+
+[4]
+
+LaTeX Warning: Citation 'CouperKuhlenSelting2017' on page 5 undefined on input 
+line 183.
+
+[5]
 Chapter 1.
-[7
 
-] [8] [9] [10] [11] [12] [13] [14]
-Overfull \hbox (9.36113pt too wide) in paragraph at lines 551--559
+LaTeX Warning: Citation 'hrbacek1994' on page 6 undefined on input line 218.
+
+
+LaTeX Warning: Citation 'hjelmslev2016' on page 6 undefined on input line 218.
+
+
+LaTeX Warning: Citation 'barthes1977image' on page 6 undefined on input line 21
+9.
+
+[6
+
+]
+
+LaTeX Warning: Citation 'giv√≥n2020coherence' on page 7 undefined on input line
+ 249.
+
+Missing character: There is no √ in font cmbx10!
+Missing character: There is no ≥ in font cmbx10!
+
+LaTeX Warning: Citation 'hrbacek1994' on page 7 undefined on input line 249.
+
+
+LaTeX Warning: Citation 'hrbacek1994' on page 7 undefined on input line 253.
+
+
+LaTeX Warning: Citation 'hrbacek1994' on page 7 undefined on input line 254.
+
+
+LaTeX Warning: Citation 'Roberts01101993' on page 7 undefined on input line 260
+.
+
+[7]
+
+LaTeX Warning: Citation 'Halliday76cohesion' on page 8 undefined on input line 
+308.
+
+
+LaTeX Warning: Citation 'Halliday76cohesion' on page 8 undefined on input line 
+312.
+
+
+LaTeX Warning: Citation 'hajicovasgall2003' on page 8 undefined on input line 3
+14.
+
+[8]
+
+LaTeX Warning: Citation 'Halliday76cohesion' on page 9 undefined on input line 
+330.
+
+
+LaTeX Warning: Citation 'Nedoluzhko2010' on page 9 undefined on input line 361.
+
+
+[9] [10]
+
+LaTeX Warning: Citation 'koblizek2015' on page 11 undefined on input line 446.
+
+[11] [12]
+
+LaTeX Warning: Citation 'Sacks1992' on page 13 undefined on input line 535.
+
+
+LaTeX Warning: Citation 'Schegloff1990' on page 13 undefined on input line 539.
+
+
+
+LaTeX Warning: Citation 'topicshading' on page 13 undefined on input line 543.
+
+[13]
+
+LaTeX Warning: Citation 'Sacks1992' on page 14 undefined on input line 547.
+
+
+LaTeX Warning: Citation 'sacksRepair' on page 14 undefined on input line 551.
+
+
+Overfull \hbox (9.36113pt too wide) in paragraph at lines 555--563
 []\OT1/cmr/m/n/12 As a de-scen-dant of con-ver-sa-tion anal-y-sis in-ter-ac-tio
 n lin-guis-tics has emerged,
  []
 
-[15] [16]
-Overfull \hbox (0.43993pt too wide) in paragraph at lines 631--652
+[14]
+
+LaTeX Warning: Citation 'Roberts01101993' on page 15 undefined on input line 59
+7.
+
+[15]
+Overfull \hbox (0.43993pt too wide) in paragraph at lines 635--656
 []\OT1/cmr/m/n/12 Coherence dis-rup-tions are also dis-cussed in lin-guis-tic l
 it-er-a-ture. Hrb^^Sa^^Tcek's
  []
 
 
-Overfull \hbox (0.74872pt too wide) in paragraph at lines 654--659
+Overfull \hbox (0.74872pt too wide) in paragraph at lines 658--663
 \OT1/cmr/m/n/12 ver-sa-tion co-her-ence can be dis-rupted - topic shifts and un
 assignable anaphore.
  []
 
-[17] [18] [19]
+[16]
+
+LaTeX Warning: Citation 'DINGEMANSE202430' on page 17 undefined on input line 7
+32.
+
+[17]
+
+LaTeX Warning: Citation 'garfinkelstudies' on page 18 undefined on input line 7
+44.
+
+[18]
 Chapter 2.
-[20
 
-] [21] [22
+LaTeX Warning: Empty bibliography on input line 853.
 
-]
-Overfull \hbox (27.82501pt too wide) in paragraph at lines 920--920
-\OT1/cmtt/m/n/12 rivals -[] seek -[] new -[] path -[] smarter -[] ai -[] curren
-t -[] methods -[] hit -[] limitations -[]
- []
+[19
 
-
-Overfull \hbox (12.6491pt too wide) in paragraph at lines 920--920
-[][]\OT1/cmr/m/n/12 Kobl^^S^^P^^Tzek, T. \OT1/cmr/m/it/12 In-ter-preta^^Tcn^^S^
-^P s^^Semantika. []Uvod do tex-tov^^Se teorie Fran-coise Rastiera\OT1/cmr/m/n/1
-2 .
- []
-
-
-Overfull \hbox (92.43416pt too wide) in paragraph at lines 920--920
-\OT1/cmr/m/n/12 In: \OT1/cmr/m/it/12 Sus-tain-abil-ity by Num-bers \OT1/cmr/m/n
-/12 (Nov. 2024). \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https 
-: / / www . sustainabilitybynumbers .
- []
-
-[23]
-Overfull \hbox (6.94548pt too wide) in paragraph at lines 920--920
-[][]\OT1/cmr/m/n/12 Schegloff, E. A., G. Jef-fer-son, and H. Sacks. ``The Pref-
-er-ence for Self-Correction
- []
-
-[24] (./structure.aux)
+] (./structure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                structure
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'structure.run.xml'.
 \openout1 = `structure.run.xml'.
 
@@ -425,30 +563,26 @@ Package logreq Info: Writing requests to 'structure.run.xml'.
 ### simple group (level 1) entered at line 154 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8854 strings out of 475567
- 176946 string characters out of 5777889
- 1938187 words of memory out of 5000000
- 30975 multiletter control sequences out of 15000+600000
- 565812 words of font info for 62 fonts, out of 8000000 for 9000
+ 8630 strings out of 475567
+ 170248 string characters out of 5777889
+ 1934187 words of memory out of 5000000
+ 30758 multiletter control sequences out of 15000+600000
+ 564488 words of font info for 57 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 66i,8n,81p,994b,1576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,8n,81p,994b,1319s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/l
 jfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2024basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024basic/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024basic/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024basi
-c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024
-basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
-ive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/
-texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on structure.pdf (25 pages, 218799 bytes).
+/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024basic/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basic/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024basic
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024bas
+ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on structure.pdf (20 pages, 138097 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
