@@ -5,6 +5,7 @@
 
 \bibliographystyle{alpha}
 \usepackage[style=verbose]{biblatex}
+\usepackage{dirtytalk}
 \addbibresource{references.bib}
 
 \begin{document}
@@ -307,7 +308,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     relating parts of the text to each other, and
     exophoric references, which point outside the text \footcite[p.~31]{Halliday76cohesion}.
     Endophoric cohesion covers aspects
-    like anaphoric references and cataphoric references \footcite{hajicovasgall2003}.
+    like anaphoric references and cataphoric references \footcite{hajicovasgall2003} \footcite{loaiciga-etal-2022-anaphoric}.
     Exophoric references, however, rely on shared context beyond the text itself,
     requiring readers to use prior knowledge.
     Their framework highlights how elements of cohesion
@@ -381,7 +382,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
 
 \par
     In conversation, many aspects of which are subject to negotiation,
-    also specific coreference relations can be questioned.
+    also specific coreference relations can be questioned \footcite{loaiciga2021reference}.
     The reference realised by one communication participant may be unclear to the other
     resulting in a repair request coming from another particiapant.
     In conversation analysis,
@@ -394,7 +395,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     However, viewed from a broader, more abstract level,
     what is called repair triggers can extend beyond intentions alone,
     encompassing issues on the textual level as well.
-    For instance, an unassignable anaphora —
+    For instance, an nonassignable anaphora —
     a reference that lacks a clear antecedent —
     may lead to a repair request,
     thereby showing how textual ambiguities prompt interactional responses.
@@ -450,7 +451,7 @@ Topic annotation is by its nature always more text,
 
 \subsubsection{Entity}
 \par
-    An entity is an exophoric referent.
+    An entity is an exophoric referent, descriptions of objects, people, events etc \footcite{entities}.
     Words or text elements which can be reffered to by an anaphore will be called entities.
     Since a phrase containing an anaphore typically adds more information about the referent
     the new information must be semantically compatible,
@@ -653,7 +654,7 @@ due to never coming back to a previously mentioned topic.
 \par
 Two kinds of phenomena are at hand when it comes to
 ways in which conversation coherence can be disrupted -
-topic shifts and unassignable anaphore.
+topic shifts and nonassignable anaphore.
 While not unique to conversation
 both take on specific forms in it worth looking at.
 
@@ -682,16 +683,16 @@ both take on specific forms in it worth looking at.
 
 \subsubsection{Nonassignable anaphore}
 \par
-    Unassignable anaphore is closely tied to topic progression.
+    nonassignable anaphore is closely tied to topic progression.
     Currently established topic or topics help assigning anaphore and
-    determining	between an anaphore and an exophore.
+    determining between an anaphore and an exophore.
     Even if an anaphoric device is not assignable,
     and the reference is presumably an exophoric one,
     The reason for employing this reference must be
     relevant to an established topic.
     In conversation meaning of demonstratives is to be negotiated.
     If an anaphores assignability causes confusion,
-	chances are it is caused by one of the following
+    chances are it is caused by one of the following
 
 \begin{itemize}
 \item
@@ -757,22 +758,149 @@ troublesome anaforic references and topic progressions.
 
 \section{What are chatbots?}
 \par
-A chatbot is a ...
+A chatbot is a dialog system powered application simulating conversation with a user.
+An attempt to make a machine conversate with a human user requires capturing the essence of human speech.
+What the essence speech is and what capturing it means are not defined and
+some definitions of what essence of speech is
+require specific definitions of what capturing it means.
+(Semantics and DialogueSchlangen, David2015) ..
+In case of the history of chatbots,
+the essence of speech is partially achieved
+via mimicking it.
+The intention was to have a user interact with a chatbot
+that would communicate so well that
+the user would be convinced
+this is a another human they are talking to.
+Whether just that has been achieved would be measured by a so called turing test
+proposed by Alan Turing in 1950 ()
 
 \par
-Eliza
+Initial attempts at making a computer converse were rule-based ()[McTear]
+What that means is the content of the chatbot utterances
+would be predetermined
+and there would be a decision tree that would decide what to say next.
+In the early days as well as often times in modern day systems
+string matching would be used to analyse user input.
+
+% https://github.com/wadetb/eliza/blob/master/p36-weizenabaum.pdf
+\par
+ELIZA () is regarded as a milestone
+what it was, it pretended to be a therapist
+hiding behind general phrases
+doctor authority
+
+as long as interaction frame is strictly defined and
+the robot has some level of authority in it
+the rule-based approach can work
+granted, it requires a lot of manual design
+and constant maintenance
+but it is used nowadays
 
 \par
-Replica
+Machine learning moved things forward in many ways
+Fuzzy matchin allowed for close matches
+without the neccesity to predefine the exact sequence of characters.
+IBM Watson uses classifiers build on examples ()
+structure remains rule based
+reasoning about these rules is decided to a large degree by classifiers
 
 \par
-GPT
+The recent breakthrough pushed another thing in the mainstream
+it is now possible to generate near natural speech
+this gives the possibility to just let the conversation be taken over by one answer generator
+this way we lose tight control over what it does though
+For some use cases
+like open domain conversation or accessing knowledge base
+that is not an issue.
 
-\section{Research environment}
 \par
-Research has been conducted using a custom tool ...
+And so currently chabot interface text generators are very prevalent.
+In 2024 this technology is now closer to beating the Turing test than
+any other model or approach before it\footcite{jones2024peopledistinguishgpt4human}
+by having 54\% of participants thinking
+they are talking to a human.
+While Eliza convinced 22\% of participants,
+actual humans only convince 67\% of participants.
+
+\subsubsection{Turn taking in chatbot interactions}
+
+\par
+Even if the Turing test is passed,
+really fitting simulation of conversation
+can only be achieved if the low-level conversation mechanisms
+are simulated, like turn taking \footcite{optimizing-turn-taking}.
+
+\par
+As established in previous chapter, turn taking is a crucial aspect of conversation.
+The way participants distribute who is to talk
+explains exhaustively
+the difference between
+a structure of the text of conversation
+and a single-producer text.
+
+The mechanism of turn taking differs
+between actual human conversation
+and an interaction between a chatbot and a user.
+
+Interaction between chatbot and user
+typically take place in a strict fashion
+where both participants,
+human and virtual,
+have unlimited time to come up with the next answer.
+While the chatbot should be optimized to answer as fast as possible,
+the user has as much time as they need until fallback.
+
+\par
+\say{Research in sociolinguistics, psycholinguistics, and
+conversational analysis has revealed that
+turn-taking is a mixed-initiative,
+locally coordinated process, in which
+a variety of verbal and nonverbal cues such as
+eye gaze,
+body pose,
+head movements,
+hand gestures,
+intonation,
+hesitations, and
+filled pauses
+play a very important role.
+We continuously produce and monitor each other for
+these signals and can coordinate seamlessly
+at the scale of hundreds of milliseconds
+across these different channels
+with multiple actors.} \footcite{turntaking}
+
+\par
+People are capable of producing and picking up clues
+that indicate opportunities for turn taking flawlessly.
+There is a some way ahead for robots in this regard
+whether it is figuring out the correct time to start speech \footcite{turntakingreview} \footcite{GRAVANO2011601}
+or actually creating a system that will be able to produce such behavior \footcite{distributedturntaking} \footcite{Gervits2020Sigdial}.
+This research field
+has the potential to push conversation technology
+closer to true conversation simulation.
+
+\section{Convform}
+\par
+An exploration has been carried out using a custom tool by the name Convform \footcite{convform}.
+
+chatting environment
+showing only the last chatbot response
+entering the next answer
+sending it
+being instructed to end the conversation if it is weird
+
+database
+
+
+editor
 
 \section{Conversation design in theory}
+
+\par
+Conversation design is ...
+
+\footcite{kolosova2022}
 
 \subsection{Rule-based approach}
 
@@ -793,14 +921,12 @@ Research has been conducted using a custom tool ...
 
 \subsection{Hybrid approach}
 
-\subsection{Convform}
-
 
 
 \section{Conversation design in practice}
 
 \par
-conversation design in Convform ...
+conversation design in Convform ..
 
 \subsubsection{State}
 
@@ -821,12 +947,49 @@ Relaxed
 
 \par
 Entity recognition
+(New or Old? Exploring How Pre-Trained Language Models Represent Discourse Entities)
 
 \par
 Anaphorization
 
-\subsubsection{Default regime}
-\subsubsection{Default regime}
+(Annotating anaphoric phenomena in situated dialogue) but here we try to generate it instead
+
+
+\subsection{Stimuli}
+
+\subsubsection{shallow anaphore}
+
+\subsubsection{deep anaphore}
+
+\par
+how its done ..
+
+\par
+topic mentioned in the meantime ..
+
+\subsubsection{nonassignable anaphore}
+
+\par
+hardcoded ..
+
+\par
+prompting ..
+
+\subsection{Ending the conversation}
+
+\subsection{Data}
+
+\par
+the nature of elicited data ..
+therefore to process the data ..
+
+\subsubsection{Attempting to replicate a situation using conversation design}
+
+\subsubsection{Quantitative analysis}
+
+\subsubsection{Qualitative analysis}
+
+
 
 
 
@@ -838,6 +1001,7 @@ METHODOLOGY 20
         Replica
         ChatGPT
 	1 research environment
+	Conversation design in theory
 	1 rule based approach
 		how its done
 		pros and cons
@@ -846,13 +1010,13 @@ METHODOLOGY 20
 		1 prompt engineering techniques
 		1 pros and cons
 	1 hybrid approach
-	1 convform
 	conversation design hands on
 	1	in general
 		stimuli
 	1		basic mode
 				how it is done
 	1			converstaional style
+	                (Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions) \
 					inquisitive
 					relaxed
 	3		prompt techniques
@@ -862,7 +1026,7 @@ METHODOLOGY 20
 	1		deep anaphore
 				how its done
 				asking info mentioned in the meantime
-	1		unassignable anaphore
+	1		nonassignable anaphore
 				hardcoded
 				prompting
 	1	ending the conversation
@@ -876,34 +1040,34 @@ METHODOLOGY 20
 PILOT 10
     expectations
 		rating
-			from best to worse: shallow, deep, unassignable
+			from best to worse: shallow, deep, nonassignable
 		abort
-			from least to most : shallow, deep, unassignable
+			from least to most : shallow, deep, nonassignable
 		reactions
 			shallow 	- continue
 			deep		- meta
-			unassignable 	- abort
+			nonassignable 	- abort
 		inquisitive will be more negative
 	results
 		rating
-			o from best to worse: shallow, deep, unassignable
+			o from best to worse: shallow, deep, nonassignable
 			x inquisitive scores higher
 		abort
-			x deep and unassignable same amount of aborts
-			o inquisitive significantly more aborts for unassignable
+			x deep and nonassignable same amount of aborts
+			o inquisitive significantly more aborts for nonassignable
 			o comments confirm this
 			x inquisitive slightly less aborts for deep
 		reactions
 			o tendency manifested
-			x deep and unassignable same amount of meta
-			o deep and unassignable mirroring continue and abort
+			x deep and nonassignable same amount of meta
+			o deep and nonassignable mirroring continue and abort
 	qualitative
-		hardcoded phrase with intended unassignable anaphore is sometimes assignable by association
+		hardcoded phrase with intended nonassignable anaphore is sometimes assignable by association
 		limiting context for deep anaphore tends to generate inappropriate pragmatics
 		limiting context for deep anaphore can lead to anaphore being open to a remap
 		inquisitivity sometimes appreciated, other times considered lack of contribution
 		deep anaphore (if accepted) tends to be seen as an abrupt shift to previous topic
-		unassignable anaphore (if accepted) tends to be seen as a cataphore
+		nonassignable anaphore (if accepted) tends to be seen as a cataphore
 		        cataphore is unimportant in conversation, it is a text phenomena
 			    what is important is there is trust (or tolerance)
 	further steps
@@ -913,8 +1077,8 @@ PILOT 10
 		annotator agreement on stimulus annotations
 		why inquisitive conversation style seems to be more likely to be appreciated?
 		what signifies appreciation / dissatisfaction in inquisitive conversation style? (router)
-		at which point does deep anaphore become unassignable?
-		when does associativity help assign an otherwise unassignable anaphore?
+		at which point does deep anaphore become nonassignable?
+		when does associativity help assign an otherwise nonassignable anaphore?
 
 \fi
 

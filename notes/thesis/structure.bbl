@@ -19,6 +19,49 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{turntaking}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=99a6853d724245364d7eacf4a4590384}{%
+           family={Andrist},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=66ee20b10ed3fe5ed6af205ca6c46b6b}{%
+           family={Bohus},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5d3fc36f249c2e926e0325ef98e98d45}{%
+           family={Mutlu},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=87699c68a210085a127653f76c5148f5}{%
+           family={Schlangen},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4931c168a5cde30575f3c0e5bd408ca3}
+      \strng{fullhash}{0d13071b54733920ff9ab9ab265404ca}
+      \strng{fullhashraw}{0d13071b54733920ff9ab9ab265404ca}
+      \strng{bibnamehash}{4931c168a5cde30575f3c0e5bd408ca3}
+      \strng{authorbibnamehash}{4931c168a5cde30575f3c0e5bd408ca3}
+      \strng{authornamehash}{4931c168a5cde30575f3c0e5bd408ca3}
+      \strng{authorfullhash}{0d13071b54733920ff9ab9ab265404ca}
+      \strng{authorfullhashraw}{0d13071b54733920ff9ab9ab265404ca}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ai Magazine}
+      \field{month}{12}
+      \field{title}{Turn-Taking and Coordination in Human-Machine Interaction}
+      \field{volume}{37}
+      \field{year}{2016}
+      \field{pages}{5\bibrangedash 6}
+      \range{pages}{2}
+    \endentry
     \entry{austin1962how}{book}{}{}
       \name{author}{1}{}{%
         {{hash=3455a21bea5aa0430d52cf6402adef15}{%
@@ -44,6 +87,32 @@
       \field{labeltitlesource}{title}
       \field{title}{How to do things with words}
       \field{year}{1962}
+    \endentry
+    \entry{entities}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=f083df5aede94054829af0c345492622}{%
+           family={Ayuso},
+           familyi={A\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f083df5aede94054829af0c345492622}
+      \strng{fullhash}{f083df5aede94054829af0c345492622}
+      \strng{fullhashraw}{f083df5aede94054829af0c345492622}
+      \strng{bibnamehash}{f083df5aede94054829af0c345492622}
+      \strng{authorbibnamehash}{f083df5aede94054829af0c345492622}
+      \strng{authornamehash}{f083df5aede94054829af0c345492622}
+      \strng{authorfullhash}{f083df5aede94054829af0c345492622}
+      \strng{authorfullhashraw}{f083df5aede94054829af0c345492622}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{27th Annual Meeting of the Association for Computational Linguistics}
+      \field{title}{Discourse entities in Janus}
+      \field{year}{1989}
+      \field{pages}{243\bibrangedash 250}
+      \range{pages}{8}
     \endentry
     \entry{baldassarre2023social}{inproceedings}{}{}
       \name{author}{5}{}{%
@@ -249,6 +318,51 @@
       \field{pages}{209\bibrangedash 261}
       \range{pages}{53}
     \endentry
+    \entry{Gervits2020Sigdial}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=f1aade8e8dc794fa0de78c6708071607}{%
+           family={Gervits},
+           familyi={G\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cc714e821c14e182f3c2348bc2503d0}{%
+           family={Thielstrom},
+           familyi={T\bibinitperiod},
+           given={Ravenna},
+           giveni={R\bibinitperiod}}}%
+        {{hash=71bbddb4f466dd0dad165bab6e6d0a35}{%
+           family={Roque},
+           familyi={R\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=85e8e413f67c3ee2e515e95dffc7ef40}{%
+           family={Scheutz},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
+      \strng{fullhash}{db0601d1170dee439cccf4274d34a9b3}
+      \strng{fullhashraw}{db0601d1170dee439cccf4274d34a9b3}
+      \strng{bibnamehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
+      \strng{authorbibnamehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
+      \strng{authornamehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
+      \strng{authorfullhash}{db0601d1170dee439cccf4274d34a9b3}
+      \strng{authorfullhashraw}{db0601d1170dee439cccf4274d34a9b3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Special Interest Group on Discourse and Dialogue}
+      \field{title}{It's About Time: Turn-Entry Timing for Situated Human-Robot Dialogue}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://hrilab.tufts.edu/publications/Gervits2020Sigdial.pdf
+      \endverb
+      \verb{url}
+      \verb https://hrilab.tufts.edu/publications/Gervits2020Sigdial.pdf
+      \endverb
+    \endentry
     \entry{givón2020coherence}{book}{}{}
       \name{author}{1}{}{%
         {{hash=7ddaa028645cfff70f0670d981cf041a}{%
@@ -274,6 +388,40 @@
       \field{labeltitlesource}{title}
       \field{title}{Coherence}
       \field{year}{2020}
+    \endentry
+    \entry{GRAVANO2011601}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1bc33de8e9a0063f435641c07d726150}{%
+           family={Gravano},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6196915124b7d95b00b244b3c0608b20}{%
+           family={Hirschberg},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{fullhash}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{fullhashraw}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{bibnamehash}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{authorbibnamehash}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{authornamehash}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{authorfullhash}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \strng{authorfullhashraw}{eb1e0cea03ca2c3bee6b9f59abed0588}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Speech \& Language}
+      \field{number}{3}
+      \field{title}{Turn-taking cues in task-oriented dialogue}
+      \field{volume}{25}
+      \field{year}{2011}
+      \field{pages}{601\bibrangedash 634}
+      \range{pages}{34}
+      \keyw{Dialogue,Turn-taking,IVR systems,Prosody}
     \endentry
     \entry{grice1975logic}{incollection}{}{}
       \name{author}{1}{}{%
@@ -554,6 +702,76 @@
       \verb https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11
       \endverb
     \endentry
+    \entry{jones2024peopledistinguishgpt4human}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=a3c29170872793634dd472f0b29a7967}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=37f665d6734736e666d97815182ffa8f}{%
+           family={Bergen},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{fullhash}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{fullhashraw}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{bibnamehash}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{authorbibnamehash}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{authornamehash}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{authorfullhash}{bbbaa79d0d334878a091c5145ff73756}
+      \strng{authorfullhashraw}{bbbaa79d0d334878a091c5145ff73756}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.HC}
+      \field{eprinttype}{arXiv}
+      \field{title}{People cannot distinguish GPT-4 from a human in a Turing test}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2405.08007
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2405.08007
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2405.08007
+      \endverb
+    \endentry
+    \entry{distributedturntaking}{inbook}{}{}
+      \name{author}{2}{}{%
+        {{hash=97fd771fac6b1d127c40314f305b7e48}{%
+           family={Jonsdottir},
+           familyi={J\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e75d8f769ef472986f53b3e392c2a0b7}{%
+           family={Thórisson},
+           familyi={T\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{fullhash}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{fullhashraw}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{bibnamehash}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{authorbibnamehash}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{authornamehash}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{authorfullhash}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \strng{authorfullhashraw}{bfe8be9b454eadc4473981b8cfcf95f8}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{A Distributed Architecture for Real-Time Dialogue and On-Task Learning of Efficient Co-Operative Turn-Taking}
+      \field{year}{2013}
+      \field{pages}{293\bibrangedash 323}
+      \range{pages}{31}
+    \endentry
     \entry{koblizek2015}{book}{}{}
       \name{author}{1}{}{%
         {{hash=649d703388358fed83cd3b7f269eff11}{%
@@ -579,6 +797,118 @@
       \field{labeltitlesource}{title}
       \field{title}{Interpretační sémantika. Úvod do textové teorie Francoise Rastiera}
       \field{year}{2015}
+    \endentry
+    \entry{kolosova2022}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d48102cb9f5c9a2c1f0bb7130ec36a9}{%
+           family={Kološová},
+           familyi={K\bibinitperiod},
+           given={Š.},
+           giveni={Š\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Univerzita Karlova, Filozofická fakulta, Ústav informačních studií - studia nových médií}%
+      }
+      \list{location}{1}{%
+        {Praha}%
+      }
+      \strng{namehash}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{fullhash}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{fullhashraw}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{bibnamehash}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{authorbibnamehash}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{authornamehash}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{authorfullhash}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \strng{authorfullhashraw}{5d48102cb9f5c9a2c1f0bb7130ec36a9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Konverzační design: principy designu hlasového robota pro přirozenou komunikaci s lidmi}
+      \field{type}{Diplomová práce}
+      \field{year}{2022}
+    \endentry
+    \entry{loaiciga2021reference}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=55b55b91bc984b5e7563eff939c66b08}{%
+           family={Loaiciga},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=235f870f86100c6cbc67415ceddd204e}{%
+           family={D.},
+           familyi={D\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=87699c68a210085a127653f76c5148f5}{%
+           family={Schlangen},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{da9653eb8a74bab410132206622956db}
+      \strng{fullhash}{da9653eb8a74bab410132206622956db}
+      \strng{fullhashraw}{da9653eb8a74bab410132206622956db}
+      \strng{bibnamehash}{da9653eb8a74bab410132206622956db}
+      \strng{authorbibnamehash}{da9653eb8a74bab410132206622956db}
+      \strng{authornamehash}{da9653eb8a74bab410132206622956db}
+      \strng{authorfullhash}{da9653eb8a74bab410132206622956db}
+      \strng{authorfullhashraw}{da9653eb8a74bab410132206622956db}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Second Workshop on Advances in Language and Vision Research}
+      \field{title}{Reference and coreference in situated dialogue}
+      \field{year}{2021}
+      \field{pages}{39\bibrangedash 44}
+      \range{pages}{6}
+    \endentry
+    \entry{loaiciga-etal-2022-anaphoric}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=55b55b91bc984b5e7563eff939c66b08}{%
+           family={Loaiciga},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c935ca73e0b4a3f7d8a7bd80a71ac9bd}{%
+           family={Dobnik},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=87699c68a210085a127653f76c5148f5}{%
+           family={Schlangen},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{fullhash}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{fullhashraw}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{bibnamehash}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{authorbibnamehash}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{authornamehash}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{authorfullhash}{58c3c7780738276c2b98bb3c460cd07e}
+      \strng{authorfullhashraw}{58c3c7780738276c2b98bb3c460cd07e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Fifth Workshop on Computational Models of Reference, Anaphora and Coreference}
+      \field{month}{10}
+      \field{title}{Anaphoric Phenomena in Situated dialog: A First Round of Annotations}
+      \field{year}{2022}
+      \field{pages}{31\bibrangedash 37}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb https://aclanthology.org/2022.crac-1.4/
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/2022.crac-1.4/
+      \endverb
     \endentry
     \entry{makela2005survey}{inproceedings}{}{}
       \name{author}{1}{}{%
@@ -606,6 +936,30 @@
       \field{booktitle}{Proceedings of the seminar on knowledge management on the semantic web}
       \field{title}{Survey of semantic search research}
       \field{year}{2005}
+    \endentry
+    \entry{convform}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=48b25a09b8bcdee5989a75dcdfdcf0ea}{%
+           family={Maršík},
+           familyi={M\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{fullhash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{fullhashraw}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{bibnamehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{authorbibnamehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{authornamehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{authorfullhash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{authorfullhashraw}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/almarsk/convform}}
+      \field{title}{Convform}
+      \field{year}{2024}
     \endentry
     \entry{mctear2020conversational}{book}{}{}
       \name{author}{1}{}{%
@@ -710,6 +1064,41 @@
       \field{title}{Rozšířená textová koreference a asociační anafora (koncepce anotace českých dat v pražském závislostním korpusu)}
       \field{type}{PhD thesis}
       \field{year}{2010}
+    \endentry
+    \entry{optimizing-turn-taking}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d26e127faa2140148d156ca8679d6a11}{%
+           family={Raux},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=068112f4713057b3036bf91aca33ac86}{%
+           family={Eskenazi},
+           familyi={E\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{8172930093477cf8f1a74069809ffa64}
+      \strng{fullhash}{8172930093477cf8f1a74069809ffa64}
+      \strng{fullhashraw}{8172930093477cf8f1a74069809ffa64}
+      \strng{bibnamehash}{8172930093477cf8f1a74069809ffa64}
+      \strng{authorbibnamehash}{8172930093477cf8f1a74069809ffa64}
+      \strng{authornamehash}{8172930093477cf8f1a74069809ffa64}
+      \strng{authorfullhash}{8172930093477cf8f1a74069809ffa64}
+      \strng{authorfullhashraw}{8172930093477cf8f1a74069809ffa64}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Trans. Speech Lang. Process.}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Optimizing the turn-taking behavior of task-oriented spoken dialog systems}
+      \field{volume}{9}
+      \field{year}{2012}
     \endentry
     \entry{ritchie2024ai}{article}{}{}
       \name{author}{1}{}{%
@@ -1071,6 +1460,34 @@
       \field{title}{Exploring The Evolution Of Chatgpt: From Origin To Revolutionary Influence}
       \field{volume}{30}
       \field{year}{2024}
+    \endentry
+    \entry{turntakingreview}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f30c3ada688952743188b1ca8f7aa5a1}{%
+           family={Skantze},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{fullhash}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{fullhashraw}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{bibnamehash}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{authorbibnamehash}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{authornamehash}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{authorfullhash}{f30c3ada688952743188b1ca8f7aa5a1}
+      \strng{authorfullhashraw}{f30c3ada688952743188b1ca8f7aa5a1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Speech \& Language}
+      \field{month}{5}
+      \field{title}{Turn-taking in Conversational Systems and Human-Robot Interaction: A Review}
+      \field{volume}{67}
+      \field{year}{2021}
+      \field{pages}{101\bibrangedash 178}
+      \range{pages}{78}
     \endentry
   \enddatalist
 \endrefsection
