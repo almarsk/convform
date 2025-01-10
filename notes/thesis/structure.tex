@@ -884,16 +884,58 @@ closer to true conversation simulation.
 \par
 An exploration has been carried out using a custom tool by the name Convform \footcite{convform}.
 
-chatting environment
-showing only the last chatbot response
-entering the next answer
-sending it
-being instructed to end the conversation if it is weird
+At its core Convform is a computer program
+which accepts a configuration, user input and context
+and determines next chatbot answer.
+Other than that it offers a collection of utilities
+to help design and run chatbots.
 
-database
+\subsubsection{Participant facing chat interface}
+In order the inputs, convform provides a chatting environment
+for the participants to interact with a chatbot.
+The convform environment differs from a usual chat log
+because it does not display
+the entire history the conversation.
+In attempt to simulate spoken conversation
+it only displays the last chatbot response.
+This way the participant has to rely on their memory
+in taking part in the conversation.
+Other than that the participant may enter their next response
+and send it.
+They are also instructed to end to conversation by a red button
+if the chatbot behaviour is "unnatural" (nepřirozené)
+After the conversation whether it has been ended by the user or the chatbot,
+there is a questionare which
+asks the participants to rate how "natural" the conversation was
+and mark and comment on utterances in the now fully displayed conversation.
 
 
-editor
+\subsubsection{Conversation design tool}
+lets admin user create chatbots and define their behavior
+the behavior can be defined by string matching rules or prompts
+it is capable of working as a statemachine or a single state
+it provides a level of control over references within the design
+
+\subsubsection{Testing and debugging of various conversation contexts}
+while designing chatbots it is necessary to be able to simulate various situations.
+the convform chatbots use a conversation status (CStatus) object
+to represent their current understanding of the conversation.
+
+It contains information about the history of the conversation
+which in conjunction with the configuration file and user input
+helps determine the next response.
+The configuration file is static
+CStatus changes automatically
+User input comes from the user.
+
+This conversation status can simulate any possible conversation context
+from the chatbots perspective
+For testing and debugging specific contexts, convform allows admin user
+to tweak the conversation status
+
+\subsubsection{Accesing the conversation data}
+Convform includes a convenient way to read user interactions
+and browse associated CStatus objects
 
 \section{Conversation design in theory}
 

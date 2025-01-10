@@ -320,35 +320,35 @@
     \endentry
     \entry{Gervits2020Sigdial}{inproceedings}{}{}
       \name{author}{4}{}{%
-        {{hash=f1aade8e8dc794fa0de78c6708071607}{%
+        {{hash=72a75258a92ff89dc37a84f2bb00bef1}{%
            family={Gervits},
            familyi={G\bibinitperiod},
-           given={Felix},
+           given={F.},
            giveni={F\bibinitperiod}}}%
-        {{hash=3cc714e821c14e182f3c2348bc2503d0}{%
+        {{hash=1e5dac055c7920639ed4953d555f814d}{%
            family={Thielstrom},
            familyi={T\bibinitperiod},
-           given={Ravenna},
+           given={R.},
            giveni={R\bibinitperiod}}}%
-        {{hash=71bbddb4f466dd0dad165bab6e6d0a35}{%
+        {{hash=8660097cb13e905a0778f36f756ec8c8}{%
            family={Roque},
            familyi={R\bibinitperiod},
-           given={Antonio},
+           given={A.},
            giveni={A\bibinitperiod}}}%
-        {{hash=85e8e413f67c3ee2e515e95dffc7ef40}{%
+        {{hash=9d85f3996d59456443121726a70e6ae8}{%
            family={Scheutz},
            familyi={S\bibinitperiod},
-           given={Matthias},
+           given={M.},
            giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
-      \strng{fullhash}{db0601d1170dee439cccf4274d34a9b3}
-      \strng{fullhashraw}{db0601d1170dee439cccf4274d34a9b3}
-      \strng{bibnamehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
-      \strng{authorbibnamehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
-      \strng{authornamehash}{b6cb9c8f43b9c5062187bfe20aa6275c}
-      \strng{authorfullhash}{db0601d1170dee439cccf4274d34a9b3}
-      \strng{authorfullhashraw}{db0601d1170dee439cccf4274d34a9b3}
+      \strng{namehash}{c80a667cbaafdd3d90234280f11f13e8}
+      \strng{fullhash}{8773699fb150edeb648a921749466d76}
+      \strng{fullhashraw}{8773699fb150edeb648a921749466d76}
+      \strng{bibnamehash}{c80a667cbaafdd3d90234280f11f13e8}
+      \strng{authorbibnamehash}{c80a667cbaafdd3d90234280f11f13e8}
+      \strng{authornamehash}{c80a667cbaafdd3d90234280f11f13e8}
+      \strng{authorfullhash}{8773699fb150edeb648a921749466d76}
+      \strng{authorfullhashraw}{8773699fb150edeb648a921749466d76}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
@@ -939,20 +939,20 @@
     \endentry
     \entry{convform}{misc}{}{}
       \name{author}{1}{}{%
-        {{hash=48b25a09b8bcdee5989a75dcdfdcf0ea}{%
+        {{hash=4bb6449a4289757449eaae7dbee9d19c}{%
            family={Maršík},
            familyi={M\bibinitperiod},
-           given={Albert},
+           given={A.},
            giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{fullhash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{fullhashraw}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{bibnamehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{authorbibnamehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{authornamehash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{authorfullhash}{48b25a09b8bcdee5989a75dcdfdcf0ea}
-      \strng{authorfullhashraw}{48b25a09b8bcdee5989a75dcdfdcf0ea}
+      \strng{namehash}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{fullhash}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{fullhashraw}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{bibnamehash}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{authorbibnamehash}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{authornamehash}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{authorfullhash}{4bb6449a4289757449eaae7dbee9d19c}
+      \strng{authorfullhashraw}{4bb6449a4289757449eaae7dbee9d19c}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
