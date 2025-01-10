@@ -10,7 +10,6 @@
 
 \begin{document}
 
-   % intro and theory final touches
    % methodology
    % data
    % experiment
@@ -940,16 +939,70 @@ and browse associated CStatus objects
 \section{Conversation design in theory}
 
 \par
-Conversation design is ...
+Designing the behavior of a dialog system like a chatbot
+is called conversation design\footcite{kolosova2022} ()[mctear].
+It is not the course of any one conversation that is being designed here
+but rather a possible way any conversation could go
+for a given use case.
+Conversation design as a proffesion is deeply connected
+with the rule-based approach that has been used in ELIZA.
+Maintaining all the possible utterances and
+rules under which they would be uttered
+in commercial dialog systems
+is a responsibility large enough
+to generate entire jobs.
 
-\footcite{kolosova2022}
+A conversation designer operates in between
+business logic or use case of the dialog system
+the clients, customers or users interacting with the system
+and the developers that maintain the platform
+allowing for such a system to run from a technical point of view.
 
 \subsection{Rule-based approach}
 
-\subsubsection{How is it done}
+In order to be able to design a rule-based dialog system,
+one needs to be able to encode the following:
+
+    \begin{itemize}
+
+        \item
+        The possible utterances, that the dialog system can produce.
+
+        \item
+        Rules under which the next utterance will be chosen.
+
+    \end{itemize}
+
+\par
+If the conversation is supposed to be a state machnie e.g.
+it should be able to use different sets of rules
+under different contexts in the conversation.
+A conversation design of this sort
+can be displayed as a diagram.
+Then a way to maintain context of conversation is also necessary.
+This context needs to encode rules to choose the already mentioned ruleset
+which helps determine the next utterance.
+This principle is a simplification of
+how people decide what they will say next in conversation.
 
 \subsubsection{Pros and cons}
 
+This approach to designing a dialog system
+has been the standard way to do it for decades.
+It offers granular control over how a conversation should go.
+In case of the state machine variant it
+allows to guide the user through a relatively complex process.
+It however suffers from how unpredictable the user can be.
+Even if a certain meaning is included in a ruleset,
+the system might not grasp the meaning and react in an incoherent way.
+With the state machine the
+distribution of various rules across various rulesets
+requires big effort.
+In conclusion rule-based approach to conversation design
+provides control over the dialog system behavior
+but tends to be inflexible.
+Extending the capabilites of a rule-based dialog system
+hardly scale and tend to have regressions.
 
 \subsection{Generative approach}
 
@@ -1038,15 +1091,6 @@ therefore to process the data ..
 \if false
 
 METHODOLOGY 20
-    2 chatbots in general
-        Eliza
-        Replica
-        ChatGPT
-	1 research environment
-	Conversation design in theory
-	1 rule based approach
-		how its done
-		pros and cons
 	3 ai approach
 		1 llms
 		1 prompt engineering techniques
