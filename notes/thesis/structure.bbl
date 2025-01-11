@@ -290,6 +290,99 @@
       \field{pages}{30\bibrangedash 42}
       \range{pages}{13}
     \endentry
+    \entry{building_watson_2010}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=dbf8c6c7acbb3442095e92dc98d532c6}{%
+           family={Ferrucci},
+           familyi={F\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5b4584119bec10db34b5e12eaae2482b}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3dd125181f401604e9376df30345fd7d}{%
+           family={Chu-Carroll},
+           familyi={C\bibinithyphendelim C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e15b815678e316512682ce6a40bdf834}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f863a482d5a1cd977e7413c7376ec6af}{%
+           family={Gondek},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6d5cca9ef3540a4e4e85d1899a6d0bd8}{%
+           family={Kalyanpur},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b83ae13073b1fd59e62be5b9bffd9994}{%
+           family={Lally},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fe5a11087b4046236639b340c4da0b0f}{%
+           family={Murdock},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=eafd73a5ac1878377a79c9487adb9898}{%
+           family={Nyberg},
+           familyi={N\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=973a6291a9448674b83749073d47768c}{%
+           family={Prager},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=edb3e84c9a14c5b7c5f048ebf564dc80}{%
+           family={Schlaefer},
+           familyi={S\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=5ed472fd54995f15d3b587f163b96fca}{%
+           family={Welty},
+           familyi={W\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0512e4c816286f9d779a1a72af32a4b9}
+      \strng{fullhash}{bde878b535435a6d10ce33e80406fe61}
+      \strng{fullhashraw}{bde878b535435a6d10ce33e80406fe61}
+      \strng{bibnamehash}{0512e4c816286f9d779a1a72af32a4b9}
+      \strng{authorbibnamehash}{0512e4c816286f9d779a1a72af32a4b9}
+      \strng{authornamehash}{0512e4c816286f9d779a1a72af32a4b9}
+      \strng{authorfullhash}{bde878b535435a6d10ce33e80406fe61}
+      \strng{authorfullhashraw}{bde878b535435a6d10ce33e80406fe61}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AI Magazine}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{Building Watson: An Overview of the DeepQA Project}
+      \field{volume}{31}
+      \field{year}{2010}
+      \field{pages}{59\bibrangedash 79}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1609/aimag.v31i3.2303
+      \endverb
+      \verb{urlraw}
+      \verb https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/2303
+      \endverb
+      \verb{url}
+      \verb https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/2303
+      \endverb
+    \endentry
     \entry{garfinkelstudies}{incollection}{}{}
       \name{author}{1}{}{%
         {{hash=4a307ecafe1946a101c88f28b34a0d16}{%
@@ -1488,6 +1581,72 @@
       \field{year}{2021}
       \field{pages}{101\bibrangedash 178}
       \range{pages}{78}
+    \endentry
+    \entry{turing1950computing}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fdc523429c3c89c34880f733033f2099}{%
+           family={Turing},
+           familyi={T\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press on behalf of the Mind Association}%
+      }
+      \strng{namehash}{fdc523429c3c89c34880f733033f2099}
+      \strng{fullhash}{fdc523429c3c89c34880f733033f2099}
+      \strng{fullhashraw}{fdc523429c3c89c34880f733033f2099}
+      \strng{bibnamehash}{fdc523429c3c89c34880f733033f2099}
+      \strng{authorbibnamehash}{fdc523429c3c89c34880f733033f2099}
+      \strng{authornamehash}{fdc523429c3c89c34880f733033f2099}
+      \strng{authorfullhash}{fdc523429c3c89c34880f733033f2099}
+      \strng{authorfullhashraw}{fdc523429c3c89c34880f733033f2099}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mind}
+      \field{number}{236}
+      \field{title}{Computing Machinery and Intelligence}
+      \field{volume}{59}
+      \field{year}{1950}
+      \field{pages}{433\bibrangedash 460}
+      \range{pages}{28}
+    \endentry
+    \entry{weizenbaum1966eliza}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=32a5099050b186567432d831df9a84a8}{%
+           family={Weizenbaum},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{32a5099050b186567432d831df9a84a8}
+      \strng{fullhash}{32a5099050b186567432d831df9a84a8}
+      \strng{fullhashraw}{32a5099050b186567432d831df9a84a8}
+      \strng{bibnamehash}{32a5099050b186567432d831df9a84a8}
+      \strng{authorbibnamehash}{32a5099050b186567432d831df9a84a8}
+      \strng{authornamehash}{32a5099050b186567432d831df9a84a8}
+      \strng{authorfullhash}{32a5099050b186567432d831df9a84a8}
+      \strng{authorfullhashraw}{32a5099050b186567432d831df9a84a8}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{ELIZA a Computer Program for the Study of Natural Language Communication Between Man and Machine}
+      \field{volume}{9}
+      \field{year}{1966}
+      \field{pages}{36\bibrangedash 45}
+      \range{pages}{10}
     \endentry
   \enddatalist
 \endrefsection

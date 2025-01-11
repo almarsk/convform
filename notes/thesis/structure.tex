@@ -771,19 +771,18 @@ that would communicate so well that
 the user would be convinced
 this is a another human they are talking to.
 Whether just that has been achieved would be measured by a so called turing test
-proposed by Alan Turing in 1950 ()
+proposed by Alan Turing in 1950 \footcite{turing1950computing}
 
 \par
-Initial attempts at making a computer converse were rule-based ()[McTear]
+Initial attempts at making a computer converse were rule-based \footcite[p.~43]{Sacks1992}
 What that means is the content of the chatbot utterances
 would be predetermined
 and there would be a decision tree that would decide what to say next.
 In the early days as well as often times in modern day systems
 string matching would be used to analyse user input.
 
-% https://github.com/wadetb/eliza/blob/master/p36-weizenabaum.pdf
 \par
-ELIZA () is regarded as a milestone
+ELIZA \footcite{weizenbaum1966eliza} is regarded as a milestone
 what it was, it pretended to be a therapist
 hiding behind general phrases
 doctor authority
@@ -799,7 +798,7 @@ but it is used nowadays
 Machine learning moved things forward in many ways
 Fuzzy matchin allowed for close matches
 without the neccesity to predefine the exact sequence of characters.
-IBM Watson uses classifiers build on examples ()
+IBM Watson uses classifiers build on examples \footcite{building_watson_2010}
 structure remains rule based
 reasoning about these rules is decided to a large degree by classifiers
 
@@ -836,7 +835,6 @@ explains exhaustively
 the difference between
 a structure of the text of conversation
 and a single-producer text.
-
 The mechanism of turn taking differs
 between actual human conversation
 and an interaction between a chatbot and a user.
@@ -881,7 +879,7 @@ closer to true conversation simulation.
 
 \section{Convform}
 \par
-An exploration has been carried out using a custom tool by the name Convform \footcite{convform}.
+An exploration has been carried out using a custom tool called Convform \footcite{convform}.
 
 At its core Convform is a computer program
 which accepts a configuration, user input and context
@@ -890,7 +888,7 @@ Other than that it offers a collection of utilities
 to help design and run chatbots.
 
 \subsubsection{Participant facing chat interface}
-In order the inputs, convform provides a chatting environment
+In order to handle the inputs, convform provides a chatting environment
 for the participants to interact with a chatbot.
 The convform environment differs from a usual chat log
 because it does not display
@@ -903,60 +901,61 @@ Other than that the participant may enter their next response
 and send it.
 They are also instructed to end to conversation by a red button
 if the chatbot behaviour is "unnatural" (nepřirozené)
-After the conversation whether it has been ended by the user or the chatbot,
+After the conversation is over whether it has been ended by the user or the chatbot,
 there is a questionare which
 asks the participants to rate how "natural" the conversation was
 and mark and comment on utterances in the now fully displayed conversation.
 
-
 \subsubsection{Conversation design tool}
-lets admin user create chatbots and define their behavior
+Lets admin user create chatbots and define their behavior
 the behavior can be defined by string matching rules or prompts
 it is capable of working as a statemachine or a single state
 it provides a level of control over references within the design
 
 \subsubsection{Testing and debugging of various conversation contexts}
-while designing chatbots it is necessary to be able to simulate various situations.
-the convform chatbots use a conversation status (CStatus) object
+while designing chatbots it is necessary
+to be able to simulate various situations
+to fine tune various possible scenarios
+that might occur in the conversation.
+To achieve this, there must be a way
+to encode required context to convform.
+The convform chatbots use a conversation status (CStatus) object
 to represent their current understanding of the conversation.
-
 It contains information about the history of the conversation
 which in conjunction with the configuration file and user input
 helps determine the next response.
 The configuration file is static
 CStatus changes automatically
 User input comes from the user.
-
 This conversation status can simulate any possible conversation context
 from the chatbots perspective
 For testing and debugging specific contexts, convform allows admin user
 to tweak the conversation status
 
 \subsubsection{Accesing the conversation data}
-Convform includes a convenient way to read user interactions
-and browse associated CStatus objects
+Lastly convform naturally includes a convenient way to read user interactions
+and browse associated conversation status objects
 
 \section{Conversation design in theory}
 
 \par
-Designing the behavior of a dialog system like a chatbot
-is called conversation design\footcite{kolosova2022} ()[mctear].
+Designing the behavior of a dialog system
+is referred to as conversation design\footcite{kolosova2022} \footcite{mctear2020conversational}.
 It is not the course of any one conversation that is being designed here
-but rather a possible way any conversation could go
+but rather as many possible ways any conversation could go
 for a given use case.
-Conversation design as a proffesion is deeply connected
+Conversation design as a profession is deeply connected
 with the rule-based approach that has been used in ELIZA.
 Maintaining all the possible utterances and
 rules under which they would be uttered
 in commercial dialog systems
-is a responsibility large enough
-to generate entire jobs.
+has proven to be a responsibility large enough
+to generate jobs.
 
-A conversation designer operates in between
-business logic or use case of the dialog system
+A conversation designer operates between
+the business logic and use case of the dialog system
 the clients, customers or users interacting with the system
-and the developers that maintain the platform
-allowing for such a system to run from a technical point of view.
+and the developers maintaining the system.
 
 \subsection{Rule-based approach}
 
@@ -966,52 +965,150 @@ one needs to be able to encode the following:
     \begin{itemize}
 
         \item
-        The possible utterances, that the dialog system can produce.
+        The possible utterances, that the dialog system can produce - "the mouth"
 
         \item
-        Rules under which the next utterance will be chosen.
+        Rules under which the next utterance will be chosen - "the ear"
 
     \end{itemize}
 
 \par
 If the conversation is supposed to be a state machnie e.g.
-it should be able to use different sets of rules
+it needs be able to use different sets of rules
 under different contexts in the conversation.
+This way a dialog system can be context aware to a degree.
 A conversation design of this sort
 can be displayed as a diagram.
 Then a way to maintain context of conversation is also necessary.
-This context needs to encode rules to choose the already mentioned ruleset
+This context needs to encode rules to choose an immediate ruleset
 which helps determine the next utterance.
 This principle is a simplification of
 how people decide what they will say next in conversation.
 
 \subsubsection{Pros and cons}
 
+\par
 This approach to designing a dialog system
-has been the standard way to do it for decades.
-It offers granular control over how a conversation should go.
+has been the standard for decades.
+It offers a granular control over how a conversation should go.
 In case of the state machine variant it
 allows to guide the user through a relatively complex process.
 It however suffers from how unpredictable the user can be.
+It is up to the conversation designer to cover all the possible ways of answering
+which not only is hardly possible
+but also poses a neccesity to parcel the spectrum of possible answers
+which can generate conflict when
+a user input semantically spans across multiple determined categories.
+This issue is even stronger while using the string matching approach,
+because there the string literal can decide about the following dialog system answer
+as if meanings and their speech representations were a one-to-one map,
+which they are not.
 Even if a certain meaning is included in a ruleset,
 the system might not grasp the meaning and react in an incoherent way.
 With the state machine the
 distribution of various rules across various rulesets
 requires big effort.
+Extending the capabilites of a rule-based dialog system
+hardly scale and tend to have regressions.
+In case of dialog systems relying on user input by speech transcription
+the text input processed by the system is not guaranteed to represent
+what the user actually said.
 In conclusion rule-based approach to conversation design
 provides control over the dialog system behavior
 but tends to be inflexible.
-Extending the capabilites of a rule-based dialog system
-hardly scale and tend to have regressions.
 
-\subsection{Generative approach}
+\subsection{Statistically driven approach}
+
+Some of the issues tied to rule-based systems
+are resolved using another approach.
+Especially in recent years the breakthroughs in the field
+of speech generation have been significant ()
+allowing for letting the dialog system play a bigger role
+in what is being said next.
+In its simplest form,
+it is possible to just let the the answer be generated "end-to-end".
+The user input is sent to a model which generates an answer.
+It has been convincingly shown that this technology has the capability
+of reacting in a flexible way to much of what is being thrown at it ().
+While not perfect ()
+this technology is capable of staying on topic (), mirroring ()
+and other things that make for a coherent conversation.
 
 \subsubsection{Large language models}
 
+The main component that is responsible for
+this way of simulating conversation at this level of flexibility
+are so called large language models ().
+These models, powered by advanced neural networks,
+have revolutionized the field of natural language processing.
+Among the most influential architectures are transformers,
+which enable these models to handle
+vast amounts of text data and capture complex patterns of meaning, context, and grammar.
+The way they generate answers is they take use their training data
+to generate the next most probable token.
+
+The Generative Pre-trained Transformer family of models, including ChatGPT,
+exemplifies the capabilities of LLMs.
+These systems are trained on diverse datasets containing billions of words,
+allowing them to generate coherent and contextually relevant responses across various topics.
+This flexibility has made them increasingly mainstream,
+being integrated into tools for writing, education, customer service, and more.
+
+Unlike traditional rule-based systems,
+LLMs rely on deep learning techniques to process and predict language,
+enabling them to understand nuanced queries and provide human-like responses.
+This adaptability has set new standards for conversational AI,
+making it a valuable resource in numerous industries.
+
 \subsubsection{Prompt engineering techniques}
+
+The rapid advancement of LLM technology
+has outpaced research into optimal interaction strategies.
+Understanding how to engage effectively
+with these systems has been a challenge,
+reflecting both their power and their novel nature.
+Despite this, a foundational idea persists:
+an LLM might perform nearly any task if prompted correctly.
+While this perspective becomes hard to keep if one expects it to be fulfilled exhaustively
+it remains the most productive approach for leveraging LLMs' capabilities.
+
+Over time, researchers and practitioners have developed techniques for
+crafting effective prompts to optimize outputs.
+The simplest approach is known as "zero-shot" prompting,
+where a user poses a direct question or request without additional context.
+However, zero-shot prompting may not always yield the desired depth or accuracy.
+
+More sophisticated strategies include "few-shot" prompting,
+where examples are provided to guide the model's response style or focus.
+..
+Chain-of-thought (CoT) prompting encourages the model to
+articulate its reasoning step-by-step,
+enhancing logical accuracy.
+Retrieval-augmented generation (RAG)
+incorporates external knowledge sources into responses,
+improving factual reliability.
+Finally, approaches like ReAct (Reasoning + Acting)
+combine reasoning with actions to handle complex, multi-step tasks dynamically.
 
 \subsubsection{Pros and cons}
 
+pros -
+flexibility,
+
+creativity,
+
+controllability
+
+cons -
+hallucinations,
+
+jail breaks,
+
+questionable reliability,
+
+alignment,
+
+how much of a responsibility do we want to allow LLMS to have?
 
 
 \subsection{Hybrid approach}
@@ -1101,7 +1198,7 @@ METHODOLOGY 20
 		stimuli
 	1		basic mode
 				how it is done
-	1			converstaional style
+	1			conversational style
 	                (Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions) \
 					inquisitive
 					relaxed
