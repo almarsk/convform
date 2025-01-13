@@ -1191,36 +1191,10 @@ anything else on top of the conversation itself,
 if they are meant to be powered by LLMs,
 a regulating structure needs to be placed on top of the LLM.
 
-\subsection{Hybrid approach}
-
-An interesting next step that could be done
-on the contact surface of conversation design and LLM development
-is a hybrid system that would allow a conversation designer
-to have the dialog system interact with a user
-in the required way including
-passing through a state-machine like process
-while keeping the flexibility of an LLM.
-
-analysis prompt
-
-master prompt
-
-prompt component
-
-hardcoded ?
-
-issues - speed
-
-convform
-
-
-
-
-
 \section{Conversation design in practice}
 
 \par
-conversation design in Convform ..
+Conversation design in Convform ..
 
 \subsubsection{State}
 
@@ -1273,17 +1247,17 @@ prompting ..
 
 \subsection{Ending the conversation}
 
-\subsection{Data}
+\section{Data}
 
 \par
 the nature of elicited data ..
 therefore to process the data ..
 
-\subsubsection{Attempting to replicate a situation using conversation design}
+\subsection{Attempting to replicate a situation using conversation design}
 
-\subsubsection{Quantitative analysis}
+\subsection{Quantitative analysis}
 
-\subsubsection{Qualitative analysis}
+\subsection{Qualitative analysis}
 
 
 
@@ -1292,19 +1266,18 @@ therefore to process the data ..
 \if false
 
 METHODOLOGY 20
-	1 hybrid approach
 	conversation design hands on
 	1	in general
+	    state
+		intent
+    1	conversational style
+            (Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions) \
+			inquisitive
+			relaxed
+	3	prompt techniques
+			anaphorize
+			entity recognition
 		stimuli
-	1		basic mode
-				how it is done
-	1			conversational style
-	                (Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions) \
-					inquisitive
-					relaxed
-	3		prompt techniques
-				anaphorize
-				entity recognition
 	1		shallow anaphore
 	1		deep anaphore
 				how its done
@@ -1363,7 +1336,49 @@ PILOT 10
 		at which point does deep anaphore become nonassignable?
 		when does associativity help assign an otherwise nonassignable anaphore?
 
+
+        ... quantitative experiment
+
+        ... next steps
+        1 hybrid approach
 \fi
+
+\chapter{Next steps}
+
+\subsection{Hybrid approach}
+
+An interesting next step that could be done
+on the contact surface of conversation design and LLM development
+is a hybrid system () that would allow a conversation designer
+to have the dialog system interact with a user
+in the required way including
+passing through a state-machine like process
+while keeping the flexibility of an LLM.
+
+For such system one would need to decide the relationship
+between generated and hardcoded system utterances.
+Integrating a hardcoded utterance
+with a potential generated surrounding could be impossible,
+so the final layer of producing an answer would
+always be a prompt.
+
+Prompt consists of multiple components
+as calling an LLM usually includes giving it
+a general instruction called the system prompt
+and whichever dynamically added information
+that is necessary to make the model output
+appropriate information
+like custom context and mainly the end user input.
+A hybrid approach to this would mean
+to allow a conversation designer
+to modify various components in the prompt
+based on context.
+The only way to know anything about
+what is going on in the conversation
+at design time however
+would be analyzing the user input
+and the evolving interaction
+via analysis prompts.
 
 
 \printbibliography
