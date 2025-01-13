@@ -1044,15 +1044,25 @@ have revolutionized the field of natural language processing.
 Among the most influential architectures are transformers,
 which enable these models to handle
 vast amounts of text data and capture complex patterns of meaning, context, and grammar.
-The way they generate answers is they take use their training data
-to generate the next most probable token.
+They use their training data to generate the next most probable token.
 
-The Generative Pre-trained Transformer family of models, including ChatGPT,
+and then it takes also its output and predicts the next probable output
+
+llms for other things than conversation
+
+The Generative Pre-trained Transformer family of models,
 exemplifies the capabilities of LLMs.
+
+Researched in - exponential improvements over short period of time.
+
+including ChatGPT, presented in ... ()
+
 These systems are trained on diverse datasets containing billions of words,
 allowing them to generate coherent and contextually relevant responses across various topics.
 This flexibility has made them increasingly mainstream,
 being integrated into tools for writing, education, customer service, and more.
+
+Nowadays there are multiple publicly available LLM services.
 
 Unlike traditional rule-based systems,
 LLMs rely on deep learning techniques to process and predict language,
@@ -1065,53 +1075,145 @@ making it a valuable resource in numerous industries.
 The rapid advancement of LLM technology
 has outpaced research into optimal interaction strategies.
 Understanding how to engage effectively
-with these systems has been a challenge,
-reflecting both their power and their novel nature.
-Despite this, a foundational idea persists:
+with these systems has been a developing area (),
+which illustrates both their power and their novel nature.
+The foundational idea is:
 an LLM might perform nearly any task if prompted correctly.
-While this perspective becomes hard to keep if one expects it to be fulfilled exhaustively
-it remains the most productive approach for leveraging LLMs' capabilities.
+
+The quality of the task differs significantly task to taks in reality,
+but the anything is possible approach has proven to break new grounds
+when leveraging LLMs' capabilities.
 
 Over time, researchers and practitioners have developed techniques for
 crafting effective prompts to optimize outputs.
 The simplest approach is known as "zero-shot" prompting,
 where a user poses a direct question or request without additional context.
 However, zero-shot prompting may not always yield the desired depth or accuracy.
+It is common for the model to "misunderstand" the assignment
+and generate tokens so that it will "confuse" itself
+and lead to generated answer in a completely irrelevat direction.
 
 More sophisticated strategies include "few-shot" prompting,
 where examples are provided to guide the model's response style or focus.
-..
-Chain-of-thought (CoT) prompting encourages the model to
+This way there is a reference for the structure of the answer
+and there is a protection to the answer leading somewhere it is not meant to.
+Since analogy is a task LLMs are doing really well in ()
+framing the task as an analogy can help improve the output significantly.
+
+Another very prevalent way that has proven to
+improve the performance of LLMs is a so called
+chain-of-thought (CoT) prompting.
+It encourages the model to
 articulate its reasoning step-by-step,
 enhancing logical accuracy.
-Retrieval-augmented generation (RAG)
-incorporates external knowledge sources into responses,
-improving factual reliability.
-Finally, approaches like ReAct (Reasoning + Acting)
-combine reasoning with actions to handle complex, multi-step tasks dynamically.
+There are many ways to achieve this,
+but the primary one is a few-shot approach
+where a description of the logic is
+explicitly described.
+The model is then prompted to produce
+a similar chain of thought (hence the name)
+and end the answer with the sought after information.
+
+This principle can be further improved by
+chaining several LLM calls and having one
+evaluate the previous one.
+Such strategy has been used for the GPT o1
+which has proven to surpass other models
+in available metrics ().
 
 \subsubsection{Pros and cons}
 
-pros -
-flexibility,
+Using large language models as core component
+of dialog systems brings resolution to many issues
+rule-based systems introduce.
 
-creativity,
+An LLM powered dialog system is flexible in understanding
+the user input.
+The user input is processed in a way much more sophisticated
+than the shallow string-matching approach.
+While the classifier approach is a lot more capable to understand,
+it is still forced to choose a predefined answer, whereas
+an LLM has the capability to taylor an answer for every input.
+It can do this in a way that would be very hard to come up with
+especially in advance with the help of a conversation designer,
+leveraging the fact that LLM is primarily a text generator
+and only functions as a component in a dialog system.
+It can be relatively well controlled as
+it can accept complex instructions as to how to behave
+and these instructions can be tuned in runtime.
 
-controllability
+Systems of this sort however introduce their own set of problems.
+The biggest issue are so called hallucinations ().
+Factuality is a challenge for LLMs overall.
+Being programs that are to output text no matter what,
+there have been instances of asking them questions,
+that do not have a correct answer ().
+It has been shown, that LLMs have an issue
+knowing that they do not know something.
+Recognizing that is the case requires
+an extra level of reasoning
+that is an object of research as of recently ()[dark matter of ai]
 
-cons -
-hallucinations,
+Since these models are their own agents,
+us humans also need them to be ethically aligned with us ().
+That can prove challenging since a lot of ethical problems exist,
+that do not have a simple answer.
+Alignment however means that an LLM must always side with humans.
+This is an ongoing research field which has been making some
+troublesome observations recently with the most intelligent models available ().
 
-jail breaks,
+Even if all the programming and training is done to the most benefit of humans,
+information technology is succeptible to be broken by malicious action.
+In case of LLMs we talk of so called jail breaks ().
+LLMs being trained on vast amount of data,
+they hold knowledge that can be illegal or unethical to spread
+like steps to create explosives for example.
+The typical examples of jail breaks are ways to manipulate
+the LLM to give out this information
+which under regular circumstance it would not give.
 
-questionable reliability,
-
-alignment,
-
+With all this in mind,
 how much of a responsibility do we want to allow LLMS to have?
+Considering the direction our civilization is going in
+LLM powered technology is expected to be making decisions
+that will affect people on a daily basis.
+Hopefully that will not happen before
+the challenges of alignment and hallucinations
+are solved.
 
+As far as open domain conversation simulation goes,
+LLM powered chatbots are relatively safe
+though there are cases of dangerous or tragic situations
+especially for vulnerable individuals ().
+
+This is why for dialog systems that are supposed to achieve
+anything else on top of the conversation itself,
+if they are meant to be powered by LLMs,
+a regulating structure needs to be placed on top of the LLM.
 
 \subsection{Hybrid approach}
+
+An interesting next step that could be done
+on the contact surface of conversation design and LLM development
+is a hybrid system that would allow a conversation designer
+to have the dialog system interact with a user
+in the required way including
+passing through a state-machine like process
+while keeping the flexibility of an LLM.
+
+analysis prompt
+
+master prompt
+
+prompt component
+
+hardcoded ?
+
+issues - speed
+
+convform
+
+
 
 
 
@@ -1125,6 +1227,8 @@ conversation design in Convform ..
 \subsubsection{Intent}
 
 \subsubsection{Conversation style}
+
+(Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions)
 
 \par
 default mode
@@ -1188,10 +1292,6 @@ therefore to process the data ..
 \if false
 
 METHODOLOGY 20
-	3 ai approach
-		1 llms
-		1 prompt engineering techniques
-		1 pros and cons
 	1 hybrid approach
 	conversation design hands on
 	1	in general
