@@ -17,7 +17,6 @@
 \maketitle
 
 \chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
 
 \par
 Recently, there has been a breakthrough in the way we interact with machines \footcite{sharma2024exploring}.
@@ -199,9 +198,9 @@ two closely related topics:
 Coreference realized by anaphore and topic – what the text is about.
 
 
+% _____________________
 
-
-\chapter{Theoretical background}
+\chapter{Theoretical foundations}
 
 % Hrbáček, Halliday, Roberts, Givón, Nedoluzhko, Izotopie (Daneš a další)
 
@@ -753,7 +752,10 @@ since they do not cooccur with coherence disruptions.
 What can be observed are – as mentioned above –
 troublesome anaforic references and topic progressions.
 
-\chapter{Methodology}
+
+% _____________________
+
+\chapter{Experimental framework}
 
 \section{What are chatbots?}
 \par
@@ -1181,7 +1183,7 @@ Hopefully that will not happen before
 the challenges of alignment and hallucinations
 are solved.
 
-As far as open domain conversation simulation goes,
+As far as low-stakes open-domain conversation simulation goes,
 LLM powered chatbots are relatively safe
 though there are cases of dangerous or tragic situations
 especially for vulnerable individuals ().
@@ -1194,24 +1196,128 @@ a regulating structure needs to be placed on top of the LLM.
 \section{Conversation design in practice}
 
 \par
-Conversation design in Convform ..
+Conversation design in Convform attempts
+to combine elements of rule-based design with text generation.
+It allows creating a purely rule-based chatbots
+which analyse the user input based on string matching
+and say exactly what they are prescribed to.
+On the other hand it also allows to make the chatbot
+understand the user input by adding it in a prompt
+and answer using a generated response.
+Both these approaches can be combined in various ways.
+Other than that, convform also allows to predetermine
+the chatbot personality for the entire conversation.
+The building blocks of a convform chatbot are
+states and intents which are
+analogical to the previously mentioned "mouth" and "ear"
+of the chatbot.
 
 \subsubsection{State}
+A state is an object which carries several pieces of information
+bundled together.
+At its core it contains the utterance of the chatbot
+whether it is a hardcoded one or a prompt component which is to be called.
+A state however also contains information about
+which intens to listen to in the next user input,
+which states to add automatically to the next response
+and other navigation instructions like this one.
+Each convform status associated with a response
+can contain multiple states.
+This is to make convform generate more complex answers
+which can react in a flexible way.
+However it also comes with a challenge to order these responses correctly
+and make sure that they are not contradicting each other content-wise.
+Ultimately a master prompt with multiple components
+regulating itself via analysis prompts
+might be a smarter direction to go.
 
 \subsubsection{Intent}
+An intent is an object representing a category of a user response.
+It contains the information to determine whether
+user input fits in given category and
+the state or states to respond with next.
+Just like in state, the information about whether the user input
+corresponds with the intent can be encoded via
+string-matching patterns or a prompt.
+As mentioned intent is a problematic concept,
+because it forces an outside logic and categorization
+on user input, which might not be able to fit well
+in the framework declared by the current intent set.
+It is however also the necessary evil since
+it is the only way for a conversation designer
+to peek into what is going on in the conversation
+and to direct the dialog system in the correct way.
+
+\par
+This way a convform chatbot can be created,
+that will be instructed to lead from one state to another
+make decisions based on intents
+while being able to use any combination of
+hardcoded responses and intent patterns
+and descriptions of responses or user inputs used in intents.
+Detailed description of how convform works can be found
+in the wiki of its github repository \footcite{https://github.com/almarsk/convform/wiki}
+
+\subsubsection{Coherence}
+With support of LLM powered responses
+convform can be used to simulate
+an open-domain conversation with a user
+and simultaneously using a combination
+of intents and prompting
+a convform chatbot can be created
+that will act incoherently under a predefined set of conditions
+allowing to create experimental stimuli.
+First however, regular conversation needs to be achieved using convform.
 
 \subsubsection{Conversation style}
 
-(Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions)
+To simulate conversation, it is first necessary to simulate a persona.
+The persona can then have a simulated motive to conversate
+which can interest the user enough to engage in interaction with the dialog system.
+For rule-based systems, persona can be defined ahead of time
+and it can manifest itself via the specific writing of the hardcoded responses
+that the system is able to give.
+With generated responses, the persona of the chatbot has to be included in the prompt.
+The personality of LLMs and conversation technology more broadly
+is being discussed\footcite{gpttoxicity}\footcite{robopersona}.
+The general characteristics of a machine talking to a human are typically
+friendliness, helpfulness and submissivity.
+For conversation research with convform,
+the goal is to achieve just that.
+The chatbot persona needs to be friendly,
+polite and curious.
+It needs to be able to keep the conversation going
+but not change topic too often.
+It needs to be able to add a little bit of its own perspective.
+\par
+The conversation style e.g. the amount of participation and initiativity in conversation
+is something people adapt in to their conversation counter-part.
+Since developing a system that would immitate this behavior
+requires additional effort
+and expands scope beyond the coherence research
+this paper focuses on,
+this approach to conversation design
+has not been taken here.
+Instead two versions of conversation style
+have been developed
+and distributed evenly between participants.
 
 \par
-default mode
+The initial conversation style used in the experiments
+represents a curious and friendly chatbot
+who is instructed via prompt to ask lots of follow up questions.
+This tends to result in a conversation that moves forward in its topical structure
+in way deemed incoherent by Hrbáček\footcite[p.~30]{hrbacek1994}.
+It depends on the participants impression whether it would be perceived as
+curious and initiatve or shallow and dismissive.
 
 \par
-Inquisitive
-
-\par
-Relaxed
+A second version of conversation style has been introduced
+to get some insights on participants acceptance and
+the course of conversation itself.
+This one would interleave topical questions with remarks on the topic
+The intention behind this would be to slow down conversation tempo
+and give the participant the opportunity to bring their own initiative.
 
 \subsubsection{Prompting}
 
@@ -1260,20 +1366,15 @@ therefore to process the data ..
 \subsection{Qualitative analysis}
 
 
+% _____________________
 
+\chapter{Data collection and analysis}
 
 
 \if false
 
 METHODOLOGY 20
 	conversation design hands on
-	1	in general
-	    state
-		intent
-    1	conversational style
-            (Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions) \
-			inquisitive
-			relaxed
 	3	prompt techniques
 			anaphorize
 			entity recognition
@@ -1343,9 +1444,9 @@ PILOT 10
         1 hybrid approach
 \fi
 
-\chapter{Next steps}
+\chapter*{Final thoughts}
 
-\subsection{Hybrid approach}
+\subsubsection{Hybrid approach}
 
 An interesting next step that could be done
 on the contact surface of conversation design and LLM development

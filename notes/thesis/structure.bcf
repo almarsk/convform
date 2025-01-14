@@ -2426,6 +2426,10 @@
     <bcf:citekey order="53" intorder="1">convform</bcf:citekey>
     <bcf:citekey order="54" intorder="1">kolosova2022</bcf:citekey>
     <bcf:citekey order="55" intorder="1">mctear2020conversational</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">https://github.com/almarsk/convform/wiki</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">gpttoxicity</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">robopersona</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">hrbacek1994</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

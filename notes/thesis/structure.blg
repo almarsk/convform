@@ -1,15 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'structure.blg'
-[52] biber-darwin:340> INFO - === Sat Jan 11, 2025, 12:29:49
-[64] Biber.pm:420> INFO - Reading 'structure.bcf'
-[122] Biber.pm:994> INFO - Found 46 citekeys in bib section 0
-[135] Biber.pm:4463> INFO - Processing section 0
-[143] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[146] bibtex.pm:1713> INFO - LaTeX decoding ...
-[176] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[391] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[391] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[425] bbl.pm:676> INFO - Writing 'structure.bbl' with encoding 'UTF-8'
-[440] bbl.pm:779> INFO - Output to structure.bbl
+[53] biber-darwin:340> INFO - === Tue Jan 14, 2025, 10:19:09
+[66] Biber.pm:420> INFO - Reading 'structure.bcf'
+[124] Biber.pm:994> INFO - Found 49 citekeys in bib section 0
+[137] Biber.pm:4463> INFO - Processing section 0
+[145] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[147] bibtex.pm:1713> INFO - LaTeX decoding ...
+[179] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[409] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[409] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[409] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[409] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[445] bbl.pm:676> INFO - Writing 'structure.bbl' with encoding 'UTF-8'
+[462] bbl.pm:779> INFO - Output to structure.bbl
+[462] Biber.pm:131> WARN - I didn't find a database entry for 'https://github.com/almarsk/convform/wiki' (section 0)
+[462] Biber.pm:133> INFO - WARNINGS: 1

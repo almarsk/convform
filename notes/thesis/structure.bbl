@@ -257,6 +257,60 @@
       \field{title}{Interactional Linguistics: Studying Language in Social Interaction}
       \field{year}{2017}
     \endentry
+    \entry{gpttoxicity}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=33bf8f7fc9e9a81b26cf9ac97dacd855}{%
+           family={Deshpande},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4d88af8c353edf8dcee8473db16dff94}{%
+           family={Murahari},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f840ce4c122c3bb9ac4cd8266f79b05b}{%
+           family={Rajpurohit},
+           familyi={R\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6fe7a44e76683c77acccb6f63f162f73}{%
+           family={Kalyan},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3cf0db5e66b18633782c4e0fe4bf55f6}{%
+           family={Narasimhan},
+           familyi={N\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ead56e68fc8e2f16ed8bbcf621eb9a28}
+      \strng{fullhash}{927dc27b8db5415801b116a692bac724}
+      \strng{fullhashraw}{927dc27b8db5415801b116a692bac724}
+      \strng{bibnamehash}{ead56e68fc8e2f16ed8bbcf621eb9a28}
+      \strng{authorbibnamehash}{ead56e68fc8e2f16ed8bbcf621eb9a28}
+      \strng{authornamehash}{ead56e68fc8e2f16ed8bbcf621eb9a28}
+      \strng{authorfullhash}{927dc27b8db5415801b116a692bac724}
+      \strng{authorfullhashraw}{927dc27b8db5415801b116a692bac724}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{Toxicity in ChatGPT: Analyzing Persona-assigned Language Models}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2304.05335
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2304.05335
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2304.05335
+      \endverb
+    \endentry
     \entry{DINGEMANSE202430}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b4db28807799a8a6e722d9017fccc0cf}{%
@@ -373,9 +427,6 @@
       \field{year}{2010}
       \field{pages}{59\bibrangedash 79}
       \range{pages}{21}
-      \verb{doi}
-      \verb 10.1609/aimag.v31i3.2303
-      \endverb
       \verb{urlraw}
       \verb https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/2303
       \endverb
@@ -920,6 +971,72 @@
       \field{title}{Konverzační design: principy designu hlasového robota pro přirozenou komunikaci s lidmi}
       \field{type}{Diplomová práce}
       \field{year}{2022}
+    \endentry
+    \entry{robopersona}{inproceedings}{}{}
+      \name{author}{9}{}{%
+        {{hash=9c5caf6af511860048e589dbde39452f}{%
+           family={Laban},
+           familyi={L\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9cf70ab1c22a273b86196c163997d9d2}{%
+           family={Le\bibnamedelima Maguer},
+           familyi={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=14f87fbb1fcbb064a8eb8c80398f618b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=406f5813b058b40d6e8d8d8d52c779ba}{%
+           family={Kontogiorgos},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bec45c7796627eb02626d436de039783}{%
+           family={Reig},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ddf1102709e58a4b557922f1817ad2dd}{%
+           family={Torre},
+           familyi={T\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=63f92d4246f57de7b987a968c50cb78c}{%
+           family={Tejwani},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=60bb94ed191aa111e1f7bc052c84dcc5}{%
+           family={Dennis},
+           familyi={D\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4b5fb220c029f34ee16642a6c8731c3f}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a02ca6ef64270c7d9b345ef9f9d905da}
+      \strng{fullhash}{4ace36755783aabcc3c4a1ae7e94d96d}
+      \strng{fullhashraw}{4ace36755783aabcc3c4a1ae7e94d96d}
+      \strng{bibnamehash}{a02ca6ef64270c7d9b345ef9f9d905da}
+      \strng{authorbibnamehash}{a02ca6ef64270c7d9b345ef9f9d905da}
+      \strng{authornamehash}{a02ca6ef64270c7d9b345ef9f9d905da}
+      \strng{authorfullhash}{4ace36755783aabcc3c4a1ae7e94d96d}
+      \strng{authorfullhashraw}{4ace36755783aabcc3c4a1ae7e94d96d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 17th ACM/IEEE International Conference on Human-Robot Interaction (HRI)}
+      \field{title}{Robo-Identity: Exploring Artificial Identity and Emotion via Speech Interactions}
+      \field{year}{2022}
+      \field{pages}{1265\bibrangedash 1268}
+      \range{pages}{4}
     \endentry
     \entry{loaiciga2021reference}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -1649,6 +1766,7 @@
       \range{pages}{10}
     \endentry
   \enddatalist
+  \missing{https://github.com/almarsk/convform/wiki}
 \endrefsection
 \endinput
 
