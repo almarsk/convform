@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  14 JAN 2025 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  14 JAN 2025 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,63 +393,113 @@ Chapter 2.
 LaTeX Warning: Citation 'https://github.com/almarsk/convform/wiki' on page 30 u
 ndefined on input line 1259.
 
-[30] [31] [32] [33]
-Chapter 3.
-[34
+[30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1353
 
-] [35
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1354--1369
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1414
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1415--1422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1433--1440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1447
+
+ []
+
+[34] [35]
+Chapter 3.
+[36
+
+] [37
+
+] [38
 
 ]
-Overfull \hbox (24.98024pt too wide) in paragraph at lines 1486--1486
+Overfull \hbox (24.98024pt too wide) in paragraph at lines 1605--1605
 \OT1/cmr/m/it/12 course and Di-a-logue\OT1/cmr/m/n/12 . 2020. \OT1/cmr/m/sc/12 
 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / hrilab . tufts . edu / publi
 cations /
  []
 
-[36
-
-]
-Overfull \hbox (27.82501pt too wide) in paragraph at lines 1486--1486
+[39]
+Overfull \hbox (27.82501pt too wide) in paragraph at lines 1605--1605
 \OT1/cmtt/m/n/12 rivals -[] seek -[] new -[] path -[] smarter -[] ai -[] curren
 t -[] methods -[] hit -[] limitations -[]
  []
 
 
-Overfull \hbox (12.6491pt too wide) in paragraph at lines 1486--1486
+Overfull \hbox (12.6491pt too wide) in paragraph at lines 1605--1605
 [][]\OT1/cmr/m/n/12 Kobl^^S^^P^^Tzek, T. \OT1/cmr/m/it/12 In-ter-preta^^Tcn^^S^
 ^P s^^Semantika. []Uvod do tex-tov^^Se teorie Fran-coise Rastiera\OT1/cmr/m/n/1
 2 .
  []
 
 
-Overfull \hbox (16.42484pt too wide) in paragraph at lines 1486--1486
+Overfull \hbox (16.42484pt too wide) in paragraph at lines 1605--1605
 \OT1/cmr/m/n/12 p^^Trirozenou ko-mu-nikaci s lidmi''. Diplo-mov^^Sa pr^^Sace. P
 raha: Uni-verzita Karlova,
  []
 
-[37]
-Overfull \hbox (92.43416pt too wide) in paragraph at lines 1486--1486
+[40]
+Overfull \hbox (92.43416pt too wide) in paragraph at lines 1605--1605
 \OT1/cmr/m/n/12 In: \OT1/cmr/m/it/12 Sus-tain-abil-ity by Num-bers \OT1/cmr/m/n
 /12 (Nov. 2024). \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https 
 : / / www . sustainabilitybynumbers .
  []
 
-[38]
-Overfull \hbox (6.94548pt too wide) in paragraph at lines 1486--1486
+[41]
+Overfull \hbox (6.94548pt too wide) in paragraph at lines 1605--1605
 [][]\OT1/cmr/m/n/12 Schegloff, E. A., G. Jef-fer-son, and H. Sacks. ``The Pref-
 er-ence for Self-Correction
  []
 
-[39] (./structure.aux)
+[42] [43] (./structure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'structure.run.xml'.
 \openout1 = `structure.run.xml'.
 
@@ -459,10 +509,10 @@ Package logreq Info: Writing requests to 'structure.run.xml'.
 ### simple group (level 1) entered at line 153 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8988 strings out of 475567
- 181094 string characters out of 5777889
- 1938187 words of memory out of 5000000
- 31104 multiletter control sequences out of 15000+600000
+ 8989 strings out of 475567
+ 181108 string characters out of 5777889
+ 1936187 words of memory out of 5000000
+ 31105 multiletter control sequences out of 15000+600000
  566120 words of font info for 63 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  66i,8n,81p,994b,1576s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -471,19 +521,22 @@ jfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2024basic/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024basic/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024bas
-ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024
-basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-24basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
-ive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
-texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
-cal/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on structure.pdf (40 pages, 274840 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024basic/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024bas
+ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024
+basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2
+024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
+/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
+ocal/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+>
+Output written on structure.pdf (44 pages, 307865 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
+ 224 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

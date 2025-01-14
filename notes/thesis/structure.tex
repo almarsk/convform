@@ -1321,17 +1321,140 @@ and give the participant the opportunity to bring their own initiative.
 
 \subsubsection{Prompting}
 
+special prompts used to achieve things beyond regular conversation
+all in czech including prompts
+czech versions of prompts will be in annex
+
 \par
 Entity recognition
+
+In order to track entities that could be referred to
+a few-shot prompt was deployed that would help
+keep track of which entities have been mentioned.
+Since GPT4o, the model used in the experiment,
+tended to consider too many things an entity,
+most examples are negative and do not capture an entity.
+It also contains some repetition as a result of fine-tuning the best wording.
+
+..
 (New or Old? Exploring How Pre-Trained Language Models Represent Discourse Entities)
 
-\par
-Anaphorization
+Loose english translation of the prompt goes as follows:\\
+\linespread{1.5}
+{\tiny
+What is an entity? a person, a thing; may not be animate;\\
+ It is always a noun and most nouns are an entity in the speech;\\
+ Look out! Pronouns such as "you", "he" and the like are never entities even if they represent persons.\\
+ Verbs are certainly by no means entities even if they represent a person.\\
+ nouns which are not entities in a speech are very generic or temporal;\\
+ a subject in a sentence to which reference may be made by a personal or reference pronoun;\\
+ the utterance usually has one entity, sometimes two, and rarely more. often the utterance lacks an entity altogether.\\
+ The participants in the conversation are never entities in any way.\\
 
+ example:\\
+ Alice likes speedball the best.\\
+ The entities in this sentence are ["Alice", "speedball"].\\
+ example:\\
+ We're meeting tomorrow at 2:00.\\
+ This discourse lacks an entity, so the output is [].\\
+ example:\\
+ What do you like?\\
+ This discourse lacks an entity, although there is a personal pronoun in it, the output is therefore [].\\
+ example:\\
+ How are you, Carl?\\
+ This speech lacks an entity, because the communicator is never an entity, so the output is [].\\
+ example:\\
+ I just hope it doesn't get too cold.\\
+ This speech lacks an entity, because the atmospheric phenomenon is never an entity, so the output is [].\\
+
+ Consider which words are entities in the next sentence:\\
+
+ \[user input\]\\
+
+ Consider the meaning of each noun in a sentence and consider whether it could represent a specific entity,\\
+ and not just an abstract concept.\\
+ Consider all possible objects that could be mentioned in the speech\\
+ and consider whether their names could be considered entities.\\
+ Remember that verbs and pronouns are not entities, even if they represent persons.\\
+ Remember that the conversationalists are not entities.
+}
+
+\par
+anaphora in conversation
+..
 (Annotating anaphoric phenomena in situated dialogue) but here we try to generate it instead
+
+to be able to create conversation designs which contain various types of anaphore,
+convform first needs to be able to give a response that
+has an anaphoric reference to an entity from the previous conversation in it.
+
+For generating such a response
+another few-shot prompt was used to modify a just generated response.
+Its loose english translation is as follows:\\
+
+\linespread{1.5}
+{\tiny
+Find one main word in a sentence and swap it for a personal or reference pronoun.\\
+ Leave the other topic centers as they are.\\
+ Don't forget to omit words that may be part of the name phrase of the replaced word.\\
+ Don't forget that when a noun is replaced by a pronoun, you often need to change the verb sequence -\\
+ the verb will then often be at the end of the sentence; the order of the pronouns must be followed -\\
+ the replacement pronoun will come for the reversible and the personal pronoun. You also need to correctly recognize the more important word -\\
+ choose the one about which the question is.\\
+ To preserve the naturalness, you sometimes need to modify a sentence\\
+ to include a secondary sentence, especially if the replaced word is linked to a deverbative noun.\\
+
+ Example1:\\
+ sentence:\\
+ And what will your paper be about?\\
+ consideration:\\
+ the replaced word will be a seminar. The word "yours" belongs to the name phrase of the replaced word.\\
+ your answer:\\
+ And what will it be about?\\
+
+ Example2:\\
+ sentence:\\
+ how far from your house is your favorite park?\\
+ consideration:\\
+ the substituted word will be "park," is more important in a sentence than the word "house." the word "yours" belongs to the name phrase of the substituted word as well as the word "favorite."\\
+ your answer:\\
+ How far from your house is it?\\
+
+ Example3:\\
+ context:\\
+ I'll go to the cafe\\
+ sentence:\\
+ what is your drink in the cafe?\\
+ reasoning:\\
+ the substituted word will be "cafe" because it is in context. because of the natural word sequence, you will need to move the substitution pronoun.\\
+ your answer:\\
+ What is your drink there?\\
+
+ Example4:\\
+ sentence:\\
+ Do you have any tricks for ironing shirts quickly and efficiently?\\
+ reasoning:\\
+ the substituted word will be "shirt" and because the sentence is complex and you cannot easily move the verb, a secondary sentence will solve it.\\
+ your answer:\\
+ Do you have any tricks for ironing them quickly and efficiently?\\
+
+ Example5:\\
+ sentence:\\
+ What track do you most enjoy racing on?\\
+ your answer:\\
+ Which one do you most enjoy racing on?\\
+}
 
 
 \subsection{Stimuli}
+
+With these tools
+multiple chatbots were created
+that would generate conversation situations
+which can be used as stimuli.
+Participant reactions to these stimuli
+can be then compared.
+This way conversational experimental designs can be created.
 
 \subsubsection{shallow anaphore}
 
@@ -1374,10 +1497,6 @@ therefore to process the data ..
 \if false
 
 METHODOLOGY 20
-	conversation design hands on
-	3	prompt techniques
-			anaphorize
-			entity recognition
 		stimuli
 	1		shallow anaphore
 	1		deep anaphore
