@@ -1388,8 +1388,15 @@ to be able to create conversation designs which contain various types of anaphor
 convform first needs to be able to give a response that
 has an anaphoric reference to an entity from the previous conversation in it.
 
-For generating such a response
-another few-shot prompt was used to modify a just generated response.
+The GPT4o model used for this use case
+does not tend to generate sentences with anaphores in them.
+Instead it will rather mirror the entity phrase.
+
+The anaphorization prompt therefore tasks the model
+to modify a generated response so
+that the mirrored entity is replaced with
+an anaphoric device.
+For this another few-shot prompt was used to modify a just generated response.
 Its loose english translation is as follows:\\
 
 \linespread{1.5}
@@ -1445,28 +1452,151 @@ Find one main word in a sentence and swap it for a personal or reference pronoun
  Which one do you most enjoy racing on?\\
 }
 
+This prompt has been tuned to catch as many tricky cases as possible.
+
+examples description ..
+
 
 \subsection{Stimuli}
 
 With these tools
 multiple chatbots were created
 that would generate conversation situations
-which can be used as stimuli.
+which serve the role of experimental stimuli.
 Participant reactions to these stimuli
 can be then compared.
 This way conversational experimental designs can be created.
+There are three types of stimuli created
+for the purpose of this paper.
+They are shallow anaphore, deep anaphore and nonassignable anaphore.
 
-\subsubsection{shallow anaphore}
+\subsubsection{Shallow anaphore}
 
-\subsubsection{deep anaphore}
+A shallow anaphore is a kind of anaphore
+where the referent of the anaphoric device
+should be relatively easy to map
+as opposed to a deep anaphore.
+The referent will always occur
+in the preceding utterance of the participant.
+This type of stimuli is relatively simple to achieve
+in convform
+generating a response
+and using the anaphorization prompt on it afterwards.
+
+Shallow anaphore is common in regular conversation ()
+and should not pose a problem for participant to understand
+in a conversation with chatbot.
+It should therefore not have an impact
+on the user acceptance of the chatbot
+and should generally go unnoticed.
+It is regardless worth using as stimuli
+for a reference unproblematic case
+that still requires the same kind of processing
+as other more interesting stimuli.
+
+Example: \\
+Participant: I love coffee.
+Chatbot (not anaphorized): What kind of coffee do you like best?
+Chatbot (anaphorized): What kind of it do you like best?
+
+\subsubsection{Deep anaphore}
+
+A deep anaphore is a situation
+where the referent of the anaphoric device
+occurs several utterances ago.
+The depth is not measured by number of occurences
+but by number of new entities that occur
+since the referent which the anaphore refers to.
+Measuring depth of anaphore by the number of utterances
+does not capture the dynamic nature
+of topic progression in the text of the conversation.
+The number of utterances does not map
+on how many topics have been visited.
+While the number of new entities does not
+map exactly either,
+it is first of all a lot closer to the topic progression
+and second of all actually very close to
+what is being sought after here -
+how far in the conversation is an entity
+still acceptable or even available to speakers.
+An entity is can represent a topic
+but can also be one of several entities to represent a topic
+or can cover several topics at once
+all depending on which way the covnersation goes.
 
 \par
-how its done ..
+As stated earlier,
+both topic and entity are difficult to define
+and their annotations tend to be recursive.
+A close-enough approach has been adopted in this paper.
+While runtime topic annotation by an LLM
+is not necessary for generating deep anaphore
+and has therefore not been attempted in this paper,
+entity tracking is made possible my
+entity recognition prompt.
+
+This prompt runs in parallel with the next response generation
+and writes down its results in the conversation status.
+A chatbot that contains the deep anaphore stimuli
+chooses a participant mentioned entity
+relatively early on in the conversation
+(though not at the very beginning)
+and then tracks new mentioned entities.
+When there have been 4 new entities mentioned,
+the next response generation prompt will be modified.
+The modification lies in that the context of the conversation
+that has so far taken place
+will be cut so
+that the chatbot only has access
+to the conversation until the point of the mention of the entity.
+Given the response generation prompt
+the response will contain a question
+about the mentioned entity.
+Then the only thing that needs to be done
+is modifying the response via the anaphorization prompt.
+
+The trick here the participant and the chatbot differ in their perspectives
+on what the conversation currently is.
+The chatbot refers to something
+that from the perspective of the participant
+has been mentioned a while ago.
+
+This approach is relatively imprecise and relies on luck to a certain degree.
+Compared to the shallow anaphore however
+it is expected to be somewhat more problematic
+and perhaps cause the participant to request clarification.
+
+Example ..
 
 \par
-topic mentioned in the meantime ..
+There has been one issue that has arisen while developing this stimuli
+that has proven to alter the character of the data in an unwanted way.
+Since the chatbot has no access to the conversation that happens
+between the occurence of the referred to entity and the participants present moment,
+chances are the chatbots question will be on
+a piece of information that has been mentioned in the meantime.
+Whenever that happens the degree of participant acceptance decreases significantly
+due to a topical incoherence rather than
+due to struggling to mapping a deep anaphore.
+This has been dealt with via providing the chatbot
+with the rest of the conversation in another component of the prompt
+with the instruction to avoid any of the topics mentioned there.
+LLMs are known to handle negative instruction with less success than positive ones ()
+but this measure seems to have mitigated the problem
+as can be seen in the data attached in the annex.
 
 \subsubsection{nonassignable anaphore}
+
+The last type of stimuli used in this paper
+is called a nonassignable anaphore.
+It is a device that the participant will tend to
+interpret as an anaphoric device,
+typically a personal or demonstrative pronoun,
+but one such that the participant will not be able
+to map to any of the candidate entities
+in the previous conversation text.
+This stimuli is expected to lower the participant acceptance
+by the greatest amount.
 
 \par
 hardcoded ..
@@ -1498,16 +1628,12 @@ therefore to process the data ..
 
 METHODOLOGY 20
 		stimuli
-	1		shallow anaphore
-	1		deep anaphore
-				how its done
-				asking info mentioned in the meantime
 	1		nonassignable anaphore
 				hardcoded
 				prompting
 	1	ending the conversation
-	1 what the data gives
-	   how to handle data
+	1   what the data gives
+	       how to handle data
 	2 learning from
 	    hands on design - trying to replicate a situation
 		qualitative analysis
@@ -1564,6 +1690,11 @@ PILOT 10
 \fi
 
 \chapter*{Final thoughts}
+
+\subsubsection{Comparing different anaphore depths}
+\subsubsection{Realtime topic annotation}
+\subsubsection{Relating tracked entities to one another}
+\subsubsection{Prompting unassignable anaphora}
 
 \subsubsection{Hybrid approach}
 
