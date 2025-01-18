@@ -1598,13 +1598,87 @@ in the previous conversation text.
 This stimuli is expected to lower the participant acceptance
 by the greatest amount.
 
-\par
-hardcoded ..
+To make a chatbot contain this stimuli
+entities are tracked to make sure
+there are candidates to be considered
+in case an anaphore occurs.
+Once there is a sufficient number of
+entities recognized in the conversation
+a hardcoded response is returned instead of an LLM generated one.
+The response contains a pronoun that to make sense of
+participant needs to interpret as an anaphore.
 
-\par
-prompting ..
+Since the response containing the stimuli is hardcoded,
+there is no guarantee
+that is actually is incoherent with the previous conversation
+and that there is no candidate to map the anaphore on to.
+Though odds are high enough
+every conversation that is supposed to contain this stimuli
+will have to be manually checked
+to confirm the required stimuli is present.
+This will be the case for all the conversations regardless
+because presence of stimuli is not guaranteed
+for shallow and deep anaphore either.
+
+An approach not explored in this paper is
+achieving a nonassignable anaphore is also possible
+via generating a response
+using a prompt that instructs an LLM
+to come up with a question containing an unrelated entity
+avoiding all mentioned entities
+and anaphorize it before showing it to the participant.
+Although LLMs tend to perform worse with negative instructions ()
+this could be achieved using a chain of prompts.
+The notion of nonassignable anaphore
+brings into scope the question of
+what makes an anaphora assignable.
+It is the semantic compatibility of the words around the anaphore
+that determine which of the candidates the anaphore is referring back to.
+The generation of the lexical surroundings of the anaphore
+needs to be handled carefully
+when coming up with an LLM based response.
 
 \subsection{Ending the conversation}
+
+While recognizing when the conversation is ending
+or especially when it should not end
+people rely on a set of clues
+similarly to knowing when to take turns speaking ().
+In open-domain conversation
+like the one a convform chatbot holds with experiment participants,
+the main challenge is to recognize
+when there is a topic at hand
+that interests the participant.
+Another discipline in the realm of ending the conversation
+is recognizing it is a good time to end the conversation
+due to the participants lack of interest.
+Conversation designs made for this paper
+do not take much of this into account.
+The main goal for a convform chatbot here
+is to present the participant with a stimuli.
+Once they manage that,
+if the participant is willing to continue
+the conversation continues for a hardcoded number of responses.
+This leads to participants sometimes noticing
+the conversation ending abruptly
+and mentioning they would like to continue
+in the questionnare
+or even at the very end of the conversation itself.
+This can potentially have effect on
+the score given by the participant
+and therefore brings noise into this parameter.
+In terms of quantization
+conversation is inherently noisy.
+Since each conversation has to be manually checked,
+an assessment of how to deal with this noise can be made
+while and after processing the data.
+A runtime topic annotation
+and other prompting techniques
+could potentially help make
+the convform chatbot converse in such a way
+that would be more aware of the general course of the conversation
+perhaps giving hints about ending the conversation ahead of time
+or reacting to and handling the participants hints of the same type.
 
 \section{Data}
 
@@ -1627,11 +1701,6 @@ therefore to process the data ..
 \if false
 
 METHODOLOGY 20
-		stimuli
-	1		nonassignable anaphore
-				hardcoded
-				prompting
-	1	ending the conversation
 	1   what the data gives
 	       how to handle data
 	2 learning from
@@ -1693,6 +1762,8 @@ PILOT 10
 
 \subsubsection{Comparing different anaphore depths}
 \subsubsection{Realtime topic annotation}
+\subsubsection{Making the chatbot aware of the general course of the conversation}
+ending correctly
 \subsubsection{Relating tracked entities to one another}
 \subsubsection{Prompting unassignable anaphora}
 
