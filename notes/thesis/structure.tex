@@ -10,9 +10,14 @@
 
 \begin{document}
 
-   % methodology
+   % TODO
+   % touch up methodology
+   % touch up theory with bublitz
+   % pilot experiment
+   % touch up pilot
    % data
-   % experiment
+   % big experiment
+   % conclusion and further steps
 
 \maketitle
 
@@ -176,6 +181,11 @@ These maxims encourage effective exchange by setting a standard for contribution
 
 \par{\textbf{Sequence Structure}}
 The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue \footcite{Schegloff_2007}. Turn-taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
+
+Disturbed coherence fill me in .. Bublitz Lenk ()
+hearer knows best
+disturbed coherence - partial coherence
+topic
 
 \par{\textbf{Message and Topic}}
 Interactional linguistics underscores that consistency in message and topic preserves continuity in conversation
@@ -1682,20 +1692,138 @@ or reacting to and handling the participants hints of the same type.
 
 \section{Data}
 
-\par
-the nature of elicited data ..
-therefore to process the data ..
+The data collected using a convform chatbot
+is a transcript of the conversation
+between a participant and the chatbot.
+Depending on the conversation design of the given chatbot
+the conversation may contain a record of
+the participant being exposed to a specific situation
+and their reaction to it.
+Other than that the collected data contains
+an information about whether the participant quit the conversation,
+the participants rating of the conversation
+and their comment on it.
 
-\subsection{Attempting to replicate a situation using conversation design}
+Unfortunately it cannot be guaranteed
+the required stimuli actually occurs in the conversation.
+Though the probability is relatively high,
+the LLM technology responsible for most answers
+is nondeterministic
+and the participants tend to be unpredicatble.
+On many levels conversation can take an unintended direction
+which can spoil the stimuli.
+Whether thematic, textual or interactional,
+anything can go wrong.
+That is why as mentioned earlier,
+each conversation needs to be visited manually
+to confirm required stimuli is present.
+That does not present too much of a problem
+since a qualitative analysis of the data
+has the potential to bring lots of
+corrections to experiment design,
+relevant observations or
+inspiration for further steps.
+It would however pose a complication
+was one interested in scaling up this approach
+that would have to be dealt with.
 
-\subsection{Quantitative analysis}
+\subsection{Data analysis}
 
-\subsection{Qualitative analysis}
+Since the collected data is relatively complex
+multiple layers of analysis need to be performed on it.
+The steps of analysis will be following:
+
+\begin{itemize}
+\item{Conversation design stimuli qualitative analysis}
+\item{Participant reaction qualitative analysis}
+\item{Quantitative analysis}
+\end{itemize}
+
+In order to assess the datapoints for quantitative analysis
+each conversation needs to be visited
+to confirm or deny the presence of expected stimuli.
+This preliminary step of qualitative analysis
+provides feedback on whether the conversation design
+that is meant to facilitate the experimental design
+was succesful in doing so.
+Further analysis leading up to a quantitative assessment
+should only be done on conversations
+where convform succesfully exposed the participant to the stimuli.
+It has been observed in collected data
+that sometimes an unintended stimuli
+takes place instead of the intended one.
+Then simply changing the label of the conversation is appropriate.
+It is also necessary to filter the collected data for
+noncooperative participants who make it impossible for convform
+to perform the stimuli in the first place.
+The participant needs to take on a role of a friendly conversator
+if the experiment is to work.
+If they for example attempt to take advantage of the LLMs obedience
+and give it an unrelated task that involves any sort of text generation,
+they need to be pronounced noncooperative.
+
+The qualitative analysis of the participant reaction to stimuli
+is mostly of explorative nature.
+The convform environment lets the user to input any text
+which even under the condition that they are cooperative
+can be unexpected and can derail the conversation.
+While these incidents are typically anecdotal
+and cannot be used to make generalizations
+they needs to be taken into account
+as a possible participant behavior.
+From the perspective of dialog system development
+such cases would be considered to be edge cases
+and dealing with them on the conversation design level
+is typically considered lower priority.
+However the conversation analysis perspective
+will be very interested in all the potential paths that
+a certain conversation situation can go in.
+This is ultimately why any weaknes to the conversation design
+does not matter too much
+as all conversation should be visited anyways
+in search for unique situations.
+
+Ultimately the main reason for using
+an experiment environment solution like convform
+can be summed up in two points:
+
+\begin{itemize}
+\item{Partial control over what happens in the conversation}
+\item{The ability to expose multiple people to a comparable conversational stimuli}
+\end{itemize}
+
+The first point has been described in detail above.
+As far as the second point goes,
+this approach is a step towards
+a quantitative analysis of conversation.
+Though conversation is multifactored
+and various types of situation
+always come with a different set of circumastances
+if a quantitative analysis of a set of conversations
+containing a certain reoccuring pattern
+proves contrastive in some of the quantifiable parameters
+to a set of conversations containing a different reoccuring pattern
+case could be made this is caused by the observed patterns
+regardless of all the noise naturally present in a conversation text.
+In case of this paper,
+the parameter is mainly:
+
+\begin{itemize}
+\item{participant acceptance score}
+\item{ratio of the participants quitting the conversation at the stimuli}
+\end{itemize}
+
+
+
+
 
 
 % _____________________
 
 \chapter{Data collection and analysis}
+
+\section{Pilot experiment}
+\section{Main experiment}
 
 
 \if false
@@ -1759,6 +1887,8 @@ PILOT 10
 \fi
 
 \chapter*{Final thoughts}
+
+\section{Further steps}
 
 \subsubsection{Comparing different anaphore depths}
 \subsubsection{Realtime topic annotation}
