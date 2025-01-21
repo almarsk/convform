@@ -44,6 +44,8 @@ nahrazovací zájmeno přijde pro zvratném a osobním zájmeně. Je také třeb
 vol to, o kterém je otázka. \
 Pro zachování přirozenosti je občas potřeba taky upravit větu tak, \
 že obsahuje vedlejší větu, obzvlášť pokud je nahrazované slovo navázané na deverbativní podstatné jméno.
+Někdy je potřeba trochu změnit slovosled věty.
+Zhodnoť jestli je přirozenější nulová nulová nebo explicitní anafora.
 
 příklad1:
 věta:
@@ -51,7 +53,7 @@ A o čem bude tvoje seminárka?
 úvaha:
 nahrazované slovo bude seminárka. slovo "tvoje" patří do jmenné fráze nahrazovaného slova.
 tvoje odpověď:
-A o čem ona bude?
+A o čem bude?
 
 příklad2:
 věta:
@@ -59,7 +61,7 @@ jak daleko od tvého domu je tvůj oblíbený park?
 úvaha:
 nahrazované slovo bude "park", je ve větě důležitější než slovo "domu". slovo "tvůj" patří do jmenné fráze nahrazovaného slova stejně jako slovo "oblíbený".
 tvoje odpověď:
-jak daleko od tvého odmu on je?
+jak daleko od tvého domu je?
 
 příklad3:
 kontext:
@@ -69,21 +71,13 @@ jaká je tvoje oblíbená káva v té kavárně?
 úvaha:
 nahrazované slovo bude "kavárně", protože se nachází v kontextu. kvůli přirozenému slovosledu bude potřeba nahrazovací zájmeno předsunout.
 tvoje odpověď:
-jaká je v ní tvoje oblíbená káva?
+jaká je tam tvoje oblíbená káva?
 
 příklad4:
 věta:
-Máš nějaký trik na rychlé a efektivní žehlení košil?
-úvaha:
-nahrazované slovo bude "košile" a protože je věta složitá a nelze snadno předsunout sloveso, vyřeší to věta vedlejší.
-tvoje odpověď:
-Máš nějaký trik, jak je rychle a efektivně žehlit?
-
-příklad5:
-věta:
 Na jaké trati tě nejvíc baví závodit?
 tvoje odpověď:
-Na jaké tě nevíc baví závodit?
+Na které tě nevíc baví závodit?
 
 úvahu vynech."""),
         SystemMessage(content="věta:"),
