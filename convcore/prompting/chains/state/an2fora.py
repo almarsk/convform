@@ -26,9 +26,9 @@ def an2fora(args, bench=False):
     answer = basic(args, bench)
     input = list()
 
-    task = ("najdi ve větě jedno hlavní slovo a vyměň ho za osobní nebo vztažné zájmeno."
+    task = ("najdi ve větě jedno hlavní slovo a vyměň ho za anaforu - třeba osobní nebo vztažné zájmeno, zájmenné příslovce nebo v případě potřeby nulovou anaforu (tedy nic)."
         if not topic
-        else f"slovo {topic} ve vyměň za osobní nebo vztažné zájmeno.")
+        else f"slovo {topic} ve vyměň za anaforu - osobní nebo vztažné zájmeno, zájmenné příslovce nebo v případě potřeby nulovou anaforu (tedy nic).")
 
     # print("task", task)
 
@@ -69,7 +69,7 @@ půjdu do kavárny
 věta:
 jaká je tvoje oblíbená káva v té kavárně?
 úvaha:
-nahrazované slovo bude "kavárně", protože se nachází v kontextu. kvůli přirozenému slovosledu bude potřeba nahrazovací zájmeno předsunout.
+nahrazované slovo bude "kavárně", kvůli jeho finální pozici ve větě. kvůli přirozenému slovosledu bude potřeba nahrazovací zájmeno předsunout.
 tvoje odpověď:
 jaká je tam tvoje oblíbená káva?
 
