@@ -79,6 +79,8 @@ Na jaké trati tě nejvíc baví závodit?
 tvoje odpověď:
 Na které tě nevíc baví závodit?
 
+Pokud je to možné, preferuj nulovou anaforu.
+
 úvahu vynech."""),
         SystemMessage(content="věta:"),
         SystemMessage(content=answer),
