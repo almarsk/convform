@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-\title{Coherence disruptions in human-chatbot interaction: towards quantitative approach to conversation}
+\title{Coherence disruptions in human–chatbot interaction: towards quantitative approach to conversation}
 \date{}
 \author{Albert Maršík}
 
@@ -25,44 +25,38 @@
 
 \par
 Recently, there has been a breakthrough in the way we interact with machines \footcite{sharma2024exploring}.
-We can instruct a computer using natural language \footcite{hendrix1982natural}.
+We can now instruct a computer using natural language \footcite{hendrix1982natural}.
 Besides making existing technology an extra step accessible,
 new ways to use technology appear.
-Automated interaction alone can solve previously unsolvable problems,
+Being able to simply talk to a machine and have it respond
+can help overcome longstanding challenges
 such as notably accessing a knowledge base via semantic search \footcite{makela2005survey}.
-Until recently a knowledge base would usually be accessed only via fulltext,
+Until recently a knowledge base would usually be accessed via fulltext,
 meaning we would only be able to find
 information of which we knew a part of the formal encoding.
 Today, we can search for information simply by asking questions,
+including follow up ones
 all thanks to natural language computer interface.
 \par
 The promise of much practical usage of the current wave of generative AI is ambitious
 and only brings its fruit slowly, perhaps slower, than was expected
 \footcite{bloomberg2024openai1}\footcite{reuters2024openai}.
-There is talk of a "plateau" in development of the technology powering the current cutting edge inventions \footcite{ritter2024ai}.
-And that is not the only issue there is to the current wave of cutting edge AI. To name the most prominent ones:
-
-\begin{itemize}
-
-    \item
-    high electricity consumption \footcite{ritchie2024ai}
-
-    \item
-    unpredictable and broad societal impact \footcite{hagerty2019global}\footcite{baldassarre2023social}
-\end{itemize}
+There is talk of a "plateau" in development of the technology powering
+the current cutting edge inventions \footcite{ritter2024ai}.
+That besides the current day issues of cutting edge AI like
+high electricity consumption \footcite{ritchie2024ai} and
+unpredictable and broad societal impact \footcite{hagerty2019global}\footcite{baldassarre2023social}
 
 That being said, in context of conversation research,
-this development in technology promises to makes things possible that previously were not.
+this development in technology promises to make things possible that previously were not.
 With a partial control of what happens in the conversation and a decent certainty, that
-our system will simulate human-human conversation to the user,
-new kind of conversational data is in reach -
-logs of the human-bot interaction, that could be categorized based on
+our system will simulate human–human conversation to the user,
+new kind of conversational data is in reach –
+logs of the human–bot interaction, that could be categorized based on
 
 \begin{itemize}
-
     \item
     which researcher controlled stimulus and
-
     \item
     which participant reaction to given stimulus
 \end{itemize}
@@ -74,11 +68,11 @@ In the 1960s the relatively recent emergence and adoption of telephone technolog
 allowed for recording and transcribing authentic conversational data.
 This advancement took place thanks to developement in technology
 which is reminiscent of the current day situation.
-While human-bot conversational data is arguably less authentic than telephone conversation transcripts,
+While human–bot conversational data is arguably less authentic than telephone conversation transcripts,
 experimental approach can be taken while the human element is present.
 
 \par
-This papers intention is to provide a debate on a metaresearch question -
+This papers intention is to provide a debate on a metaresearch question –
 is using generative AI a viable methodology for conversation research?
 This is done by attempting to develop that very methodology.
 Proceeding we operate in a frontier,
@@ -86,12 +80,12 @@ our first steps should be establishing data backed baseline knowledge
 and assessing possible lines of research.
 
 \par
-To understand what something is,
-it can be fruitful first understanding what that thing is not.
-One way to understand what makes the unraveling text of a conversation
-a valid one - a coherent one -
-is obtaining conversational data containing coherence disruptions.
-This can be done using the discussed technology -
+Understanding what makes
+the unraveling text of a conversation a coherent one
+can be approached via obtaining
+conversational data containing coherence disruptions.
+This used to be difficult in the past () but
+can be done using the discussed technology –
 it has the capability of conversing in a way
 that is found generally acceptable by humans
 and can drift away from the coherent interaction
@@ -99,29 +93,24 @@ if appropriately instruced to do so.
 
 \par
 The data this paper seeks to elicitate and analyse are
-actual human-chatbot exchanges containing moments which
+actual human–chatbot exchanges containing moments which
 have the potential to be problematic for
 the human participant to process and follow up on.
-The line between what a coherent and an incoherent conversation is blurred.
-It is in no way a binary property of the text of the conversation.
+The boundary between what a coherent and an incoherent conversation is blurred.
+It is in no way a binary property of the text of the conversation ().
 The goal is therefore to touch on the gradual divide between them.
+
+.. () Bublitz
 
 \par
 While chatbots are evaluated for how natural and error free their way of conversing is,
-human-human conversation is rarely flawless:
-
-\begin{itemize}
-\item
-errors happen
-\item
+human–human conversation is rarely flawless as
+errors happen and
 conversational coherence gets temporarily disrupted
-\end{itemize}
-
-In case of human-human communication, disruptions can however be cured easily.
+In case of human–human communication, disruptions can however be cured easily ().
 
 \par
-It used to be (and remains so in legacy systems)
-that in human-bot communication, disruptions could derail a conversation completely,
+In human–bot communication, disruptions could derail a conversation completely,
 leaving the bot, who would only rely on surface level textual clues, in the dark. \footcite{mctear2020conversational}
 This has become rare with generative AI.
 Even though it brings a set of its own problems like
@@ -130,37 +119,39 @@ the difficulty to handle data responsibly,
 the cutting edge technology powered conversation systems are
 
 \begin{itemize}
-
 \item
    better capable of understanding and producing relevant answers
 
 \item
-   instructed to return to their conversational point of departure
+   able to return to their conversational point of departure
 \end{itemize}
 
 \par
-Human-bot communication is often single-purpose.
+Human–bot communication is often single–purpose.
 Companies and institutions deploy voice applications to interact with customers and clients,
 so there is usually a goal to be achieved.
-The coherence of such conversation can then be described based on whether
-the goal has been achieved with success and ease.
-Another common scenario is an open-domain conversation,
-also known as chit-chat or smalltalk.
+The coherence in each moment of such conversation can then be described based on whether
+the goal is currently coming closer to being achieved with ease.
+Another common frame for a human–bot interaction is an open–domain conversation,
+also known as chit–chat or smalltalk ().
+Since there is no global goal to achieve,
+the coherence of such interaction is dictated by
+a different set of factors ()[https://aclanthology.org/2021.acl-long.136/]
 
 \par
 Some factors that influence coherence in conversational texts,
-whether in human-human or human-bot exchanges,
+whether in human–human or human–bot exchanges,
 have been extensively studied.
 \par
 Namely:
 
-%--
+%––
 \par{\textbf{Politeness}
-Brown and Levinson’s work on politeness strategies describes social alignment in smooth interactions \footcite{brown1987politeness}. Politeness strategies, such as using polite language, offering options, or softening potentially face-threatening comments, help to create a comfortable communicative environment. These strategies align with social norms, which people interpret as markers of respect, consideration, or even trust. A failure to employ these politeness strategies, or using them inconsistently, can disrupt conversational coherence. For example, blunt or overly direct responses may be perceived as abrupt or rude, diverting the conversation's flow or causing discomfort. In such cases, the breakdown of polite norms can lead participants to question intent, hindering effective and smooth communication.
+Brown and Levinson’s work on politeness strategies describes social alignment in smooth interactions \footcite{brown1987politeness}. Politeness strategies, such as using polite language, offering options, or softening potentially face–threatening comments, help to create a comfortable communicative environment. These strategies align with social norms, which people interpret as markers of respect, consideration, or even trust. A failure to employ these politeness strategies, or using them inconsistently, can disrupt conversational coherence. For example, blunt or overly direct responses may be perceived as abrupt or rude, diverting the conversation's flow or causing discomfort. In such cases, the breakdown of polite norms can lead participants to question intent, hindering effective and smooth communication.
 
 
 \par{\textbf{Speech acts}}
-Following Austin and Searle's speech act theories, communication rely on expressing clear intentions and meanings that help build mutual understanding \footcite{austin1962how} \footcite{searle1969speech}. When speakers convey intentions explicitly through statements, questions, requests, or assertions, it signals to listeners the purpose and direction of the conversation. Effective communication strategies help maintain coherence by ensuring each contribution builds logically on the last. On the other hand, unclear intentions or ambiguous phrasing can create misunderstandings, disrupting the conversation's flow. Misalignment or mixed signals – such as using sarcasm without cues or making indirect requests without context— can leave listeners uncertain about how to respond, leading to off-track or irrelevant contributions and possibly creating need to address the communication to regain understanding.
+Following Austin and Searle's speech act theories, communication rely on expressing clear intentions and meanings that help build mutual understanding \footcite{austin1962how} \footcite{searle1969speech}. When speakers convey intentions explicitly through statements, questions, requests, or assertions, it signals to listeners the purpose and direction of the conversation. Effective communication strategies help maintain coherence by ensuring each contribution builds logically on the last. On the other hand, unclear intentions or ambiguous phrasing can create misunderstandings, disrupting the conversation's flow. Misalignment or mixed signals – such as using sarcasm without cues or making indirect requests without context— can leave listeners uncertain about how to respond, leading to off–track or irrelevant contributions and possibly creating need to address the communication to regain understanding.
 
 \par{\textbf{Conversational Maxims}}
 Grice’s conversational maxims are fundamental to coherent dialogue \footcite{grice1975logic}.
@@ -172,33 +163,38 @@ provide truthful information (Quality)
 \item
 neither too much nor too little (Quantity)
 \item
-remain on-topic (Relevance)
+remain on–topic (Relevance)
 \item
 communicate in an orderly, clear manner (Manner)
 \end{itemize}
 
-These maxims encourage effective exchange by setting a standard for contributions that are informative, truthful, relevant, and unambiguous. When violated, such as by giving excessive detail, omitting important context, or straying from the topic, coherence suffers. For instance, irrelevant tangents or over-detailed explanations may confuse the listener as to what is the main focal point of conversation in that moment. This misalignment can leave participants uncertain about the conversation’s direction, ultimately diminishing coherence and the effectiveness of communication.
+These maxims encourage effective exchange by setting a standard for contributions that are informative, truthful, relevant, and unambiguous. When violated, such as by giving excessive detail, omitting important context, or straying from the topic, coherence suffers. For instance, irrelevant tangents or over–detailed explanations may confuse the listener as to what is the main focal point of conversation in that moment. This misalignment can leave participants uncertain about the conversation’s direction, ultimately diminishing coherence and the effectiveness of communication.
 
 \par{\textbf{Sequence Structure}}
-The work of Schegloff and Sacks on sequence structure and turn-taking emphasizes that ordered interactions support predictability and continuity in dialogue \footcite{Schegloff_2007}. Turn-taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well-paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
+The work of Schegloff and Sacks on sequence structure and turn–taking emphasizes that ordered interactions support predictability and continuity in dialogue \footcite{Schegloff_2007}. Turn–taking conventions — where participants follow an implicit sequence of speaking and responding — help maintain the flow by structuring the conversation in a logical order. This sequence structure allows both parties to anticipate when to listen and when to speak, contributing to a well–paced, cohesive exchange. However, interruptions, abrupt changes in topic, or skipping expected responses can disrupt this sequence, introducing unpredictability that can confuse participants. These interruptions fragment coherence by shifting the conversation away from expected responses or structured flow, often leaving gaps in understanding or causing conversational breakdowns.
 
 Disturbed coherence fill me in .. Bublitz Lenk ()
 hearer knows best
-disturbed coherence - partial coherence
+disturbed coherence – partial coherence
 topic
 
 \par{\textbf{Message and Topic}}
 Interactional linguistics underscores that consistency in message and topic preserves continuity in conversation
-\footcite{CouperKuhlenSelting2017}. When speakers stick to a shared topic or make gradual, clear shifts, coherence is maintained because participants know what to expect. Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges. For instance, introducing a new topic without closure on the previous one can confuse listeners, leading to a scattered or fragmented interaction. By shifting focus unpredictably or offering unclear messages, coherence diminishes as participants lose track of the conversation’s thread, resulting in exchanges that feel scattered or incomplete.
+\footcite{CouperKuhlenSelting2017}.
+When speakers stick to a shared topic or make gradual, clear shifts, coherence is
+maintained because participants know what to expect.
+Frequent or abrupt topic shifts, however, or sending unclear or conflicting messages, can create disjointed exchanges.
+For instance, introducing a new topic without closure on the previous one can confuse listeners,
+leading to a scattered or fragmented interaction.
 
 \par
 While all of the mentioned areas unveil much about the way conversation works,
 rarely do they concern themselves with the textual dimension of conversation.
-Most of the mentioned authors (with the notable exception of those operating within the interactional linguistics framework) would hardly be described as linguists,
+Most of the mentioned authors (with the notable exception of those operating within the interactional linguistics framework) could hardly be described as linguists,
 though their works significantly inform linguistics.
 
 \par
-The lack of a true interpersonal dimension in human-chatbot communication
+The lack of a true interpersonal dimension in human–chatbot communication
 allows to focus solely on the elements in conversational text,
 that make it cohesive and coherent or rather
 those that have the potential to prevent it from being that.
@@ -216,12 +212,16 @@ Coreference realized by anaphore and topic – what the text is about.
 
 \section{Textual dimension of conversation}
 \par
-    The following concepts will be explored individually, in relation to one another and in relation to conversation: text, coherence, cohesion, coreference, anaphora, cataphora, endophora, exophora, topic, entity, and association. While the presented exploration draws on existing literature, it seeks to establish an independent and sustainable framework, rather than strictly adhering to established interpretations.
+    The following concepts will be explored individually, in relation to one another and in relation to conversation:
+    text, coherence, cohesion, coreference, anaphora, cataphora, endophora, exophora, topic, entity, and association.
+    While the presented exploration draws on existing literature,
+    it seeks to establish an independent and sustainable framework,
+    rather than strictly adhering to established interpretations.
 
 \subsubsection{Text}
 \par
     Text, in its broadest sense, refers to any form of communication that conveys meaning through a combination of signs, symbols, or language \footcite[p.~7]{hrbacek1994}\footcite{hjelmslev2016}.
-    These semiotic structures can take various forms, including written, spoken, visual, or even non-verbal modes of expression \footcite[p.~13]{barthes1977image}.
+    These semiotic structures can take various forms, including written, spoken, visual, or even non–verbal modes of expression \footcite[p.~13]{barthes1977image}.
     A text can be as simple as a single sentence or as complex as a novel, and it can exist across different mediums, from books and articles to advertisements and digital content.
     What defines a text is its ability to convey a coherent message or idea, often intended for interpretation by an audience or an adressee.
     Texts can serve a wide range of purposes, including storytelling, instruction, persuasion, or simply recording information.
@@ -236,7 +236,7 @@ Coreference realized by anaphore and topic – what the text is about.
     that make them a text.
 
     \par
-    Another property of a conversation text is it is negotiated.
+    Another property of a conversation text is it is negotiated ().
     This is given by its multiproducer and temporal nature.
     Other types of text which are also negotiated are relatively rare.
     There are occurences of debates which take place in written text,
@@ -281,20 +281,20 @@ Coreference realized by anaphore and topic – what the text is about.
 
 \begin{itemize}
 \item
-whether a written text is coherent depends mostly on the reader
+whether a written text is coherent depends mostly on the reader () [bublitz]
 \item
-whether a conversation text is coherent depends on an ongoing\\ negotiation
+whether a conversation text is coherent depends on\\ an ongoing negotiation
 \end{itemize}
 
 \par
-    Coherence is a scalar property rather than a binary one.
-    It is however tricky to measure.
+    Coherence is a scalar property rather than a binary one ().
+    It is also tricky to measure.
     This paper seeks to explore one possible approach of
     declaring different levels of coherence disruptions
     and observing the acceptance rates in participants
     and corelation between them.
 
-%---
+%–––
 \subsubsection{Cohesion}
 \par
     While coherence refers to the interpretative quality of a text,
@@ -319,13 +319,10 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     like anaphoric references and cataphoric references \footcite{hajicovasgall2003} \footcite{loaiciga-etal-2022-anaphoric}.
     Exophoric references, however, rely on shared context beyond the text itself,
     requiring readers to use prior knowledge.
-    Their framework highlights how elements of cohesion
-    contribute to textual unity and flow, even
-    if coherence based on meaning is not fully achieved.
     Following concepts can be considered cohesive elements.
 
 \subsubsection{Cataphore and Exophore}
-    %---
+    %–––
 \par
     In Halliday and Hasan's framework,
     cohesion in language is achieved through various devices that connect
@@ -339,7 +336,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     Cataphoric references, though less common, involve
     elements that look forward in the text,
     showing intentionality by the author but contributing to
-    cohesion primarily through the eventual resolution of the forward-pointing referent.
+    cohesion primarily through the eventual resolution of the forward–pointing referent.
 
 \par
     In conversation if a seemingly anaphoric text element is not succesfully mapped
@@ -349,7 +346,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     Cataphore is a related phenomena –
     a reference which points forward in the text.
     Such occurence is relatively rare in written text and even more so in conversation.
-    In fact it is somehow pointless to account for cataphore in a multi-producer text.
+    In fact it is somehow pointless to account for cataphore in a multi–producer text.
     A cataphore denotes an authors intention to reveal
     the nature of a referent explicitly after first mentioning them.
     In conversation, where multiple contributors cocreate given text,
@@ -367,7 +364,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     It is a reference inside the text pointing back to a previously mentioned entity.
     Often it is realised via personal pronouns.
     Though there are other ways for anaphore to realise.
-    %---
+    %–––
     In Czech, anaphoric references often rely on grammatical gender and number,
     making participial endings essential for identifying the referent.
     For instance, when a gramatically masculine entity is mentioned,
@@ -394,7 +391,7 @@ whether a conversation text is coherent depends on an ongoing\\ negotiation
     The reference realised by one communication participant may be unclear to the other
     resulting in a repair request coming from another particiapant.
     In conversation analysis,
-    %---
+    %–––
     Sacks’s concept of repair traditionally addresses
     misunderstandings related to intentions and actions,
     loosely drawing on frameworks like Austin’s and Searle’s speech act theories.
@@ -434,11 +431,11 @@ Topic annotation is by its nature always more text,
 
 \par
     Despite all these complications,
-    topic cannot be ignored in conversation research
-    as it is deeply intertwined with the aforementioned concepts.
+    topic cannot be skipped in conversation research
+    as it is deeply intertwined with the concepts mentioned above.
     Topic progressions across text are realised via anaphore and association
     and tightly interact with coherence.
-    An appropriate amount of time has to be spent on a given topic unit,
+    An sufficient amount of time has to be spent on a given topic unit,
     enough information has to be said about a given topic
     in order for it to be possible to move on or add another one in the conversation.
     Closure has to be provided in order for a topic to be done.
@@ -471,8 +468,7 @@ Topic annotation is by its nature always more text,
 
 \section{Interactional dimension of conversation}
 \par
-In terms of introduced background,
-conversation is a text which is produced by multiple producers
+A conversation text is produced by multiple producers.
 This complicates things:
 
 \begin{itemize}
@@ -505,7 +501,7 @@ Due to its temporal and cooperative nature, conversation allows for:
             Each participant’s perception of others’ viewpoints,
 
             \item
-            Each participant’s understanding of the shared conversation as it’s being co-created.
+            Each participant’s understanding of the shared conversation as it’s being co–created.
         \end{itemize}
 \end{itemize}
 
@@ -525,12 +521,12 @@ using their social intuition and mutual cooperativity to clarify intetion and re
 
 \par
 Contemporary conversation research can be understood to draw from conversation analysis.
-%---
+%–––
 Modern conversation research traces its roots to conversation analysis,
 a field pioneered by sociologists Harvey Sacks and Emanuel Schegloff in the 1960s.
 They sought to understand the structure and
 social rules of everyday interactions,
-focusing on the patterns and norms that govern turn-taking and response.
+focusing on the patterns and norms that govern turn–taking and response.
 Thanks to recordings of phonecalls,
 transcripts could be qualitatively analyzed.
 This research has lead to coining new terminology.
@@ -553,10 +549,11 @@ This research has lead to coining new terminology.
 
     \subsubsection{Conversational repair}
     \par
-    Conversational repairs refer to how participants address and resolve problems in understanding, hearing, or speaking during interactions \footcite{sacksRepair}. These issues, can occur at any point in a conversation. Repairs are classified into self-repair, where the speaker corrects their own error, and other-repair, where a different participant addresses the issue. They can further be classified into self-initiated repair and other-initiated repair.
+    Conversational repairs refer to how participants address and resolve problems in understanding, hearing, or speaking during interactions \footcite{sacksRepair}.
+    These issues, can occur at any point in a conversation. Repairs are classified into self–repair, where the speaker corrects their own error, and other–repair, where a different participant addresses the issue. They can further be classified into self–initiated repair and other–initiated repair.
 
 \par
-%---
+%–––
 As a descendant of conversation analysis interaction linguistics has emerged,
 building on its insights to examine language use in social contexts.
 It broadens the focus to study not only verbal exchanges but also
@@ -579,7 +576,7 @@ A coherence disruption is a complex phenomena as
 
 \begin{itemize}
 \item
-it penetrates through some or all of mentioned perspectives on an on-going conversation
+it penetrates through some or all of mentioned perspectives on an on–going conversation
 \item
 it can't be evaluated in a binary fashion
 \end{itemize}
@@ -612,16 +609,16 @@ The incoherence Roberts discusses is considerably different from when
 the source of incoherence stems from
     the structure of the conversational text or
     relationship between different utterances
-    - this is when another participant assesses,
+    – this is when another participant assesses,
         they are simply speaking leading a different conversation
         perhaps with a differing intention
         or that they are conversing under differing set of circumstances
-        which manifests formally in the linguistic fabric of the conversation - its text.
+        which manifests formally in the linguistic fabric of the conversation – its text.
         All that despite everyone included being cooperative.
 
 \subsection{Sources of incoherence in conversation}
 \par
-%---
+%–––
 Schegloff shows how incoherence arises when
 people interpret sequence structure differently,
 namely in terms of which turn is seen as an answer to which previously occuring turn.
@@ -631,22 +628,22 @@ They each project different expectations for how the conversation should unfold,
 which causes misaligned sequence structure interpretations.
 When this happens,
 they turn to brief metacommunication — comments about the conversation itself
-to try to clarify and re-align their understanding.
+to try to clarify and re–align their understanding.
 Schegloff illustrates how these
 efforts to "repair" the misalignment are central to
 managing and resolving incoherent moments in conversation.
 
 \par
-Coherence disruptions are also discussed in linguistic literature.
-%---
+Coherence disruptions are also discussed in literature.
+%–––
 Hrbáček’s approach to coherence and cohesion in text distinguishes the two concepts,
 noting how they often interact but can also be independent.
 He highlights that while
 cohesion involves grammatical or lexical links that
 make sentences flow together,
 coherence relies on the logical and meaningful progression of ideas.
-This means that a text could be cohesive -
-using connectives, repetitions, and consistent lexical choices -
+This means that a text could be cohesive –
+using connectives, repetitions, and consistent lexical choices –
 yet lack coherence if the sequence of ideas doesn’t
 make logical sense or follow a clear progression.
 Conversely, a text may be coherent in its narrative flow without
@@ -661,10 +658,12 @@ due to never coming back to a previously mentioned topic.
 
 \par
 Two kinds of phenomena are at hand when it comes to
-ways in which conversation coherence can be disrupted -
+ways in which conversation coherence can be disrupted –
 topic shifts and nonassignable anaphore.
 While not unique to conversation
 both take on specific forms in it worth looking at.
+
+..()[Bublitz] disturbed coherece, unclear reference, topic drifts
 
 \subsubsection{Topic shifts}
 \par
@@ -719,7 +718,7 @@ candidate has occured in the conversation text too long ago
     can be understood as an abrupt return to previously established topic
 \end{itemize}
 
-%---
+%–––
 \subsection{What do people do about coherence disruptions?}
 \par
 In conversation, coherence disruptions often prompt participants to
@@ -786,7 +785,7 @@ Whether just that has been achieved would be measured by a so called turing test
 proposed by Alan Turing in 1950 \footcite{turing1950computing}
 
 \par
-Initial attempts at making a computer converse were rule-based \footcite[p.~43]{Sacks1992}
+Initial attempts at making a computer converse were rule–based \footcite[p.~43]{Sacks1992}
 What that means is the content of the chatbot utterances
 would be predetermined
 and there would be a decision tree that would decide what to say next.
@@ -801,7 +800,7 @@ doctor authority
 
 as long as interaction frame is strictly defined and
 the robot has some level of authority in it
-the rule-based approach can work
+the rule–based approach can work
 granted, it requires a lot of manual design
 and constant maintenance
 but it is used nowadays
@@ -837,7 +836,7 @@ actual humans only convince 67\% of participants.
 \par
 Even if the Turing test is passed,
 really fitting simulation of conversation
-can only be achieved if the low-level conversation mechanisms
+can only be achieved if the low–level conversation mechanisms
 are simulated, like turn taking \footcite{optimizing-turn-taking}.
 
 \par
@@ -846,7 +845,7 @@ The way participants distribute who is to talk
 explains exhaustively
 the difference between
 a structure of the text of conversation
-and a single-producer text.
+and a single–producer text.
 The mechanism of turn taking differs
 between actual human conversation
 and an interaction between a chatbot and a user.
@@ -862,7 +861,7 @@ the user has as much time as they need until fallback.
 \par
 \say{Research in sociolinguistics, psycholinguistics, and
 conversational analysis has revealed that
-turn-taking is a mixed-initiative,
+turn–taking is a mixed–initiative,
 locally coordinated process, in which
 a variety of verbal and nonverbal cues such as
 eye gaze,
@@ -957,7 +956,7 @@ It is not the course of any one conversation that is being designed here
 but rather as many possible ways any conversation could go
 for a given use case.
 Conversation design as a profession is deeply connected
-with the rule-based approach that has been used in ELIZA.
+with the rule–based approach that has been used in ELIZA.
 Maintaining all the possible utterances and
 rules under which they would be uttered
 in commercial dialog systems
@@ -969,18 +968,18 @@ the business logic and use case of the dialog system
 the clients, customers or users interacting with the system
 and the developers maintaining the system.
 
-\subsection{Rule-based approach}
+\subsection{Rule–based approach}
 
-In order to be able to design a rule-based dialog system,
+In order to be able to design a rule–based dialog system,
 one needs to be able to encode the following:
 
     \begin{itemize}
 
         \item
-        The possible utterances, that the dialog system can produce - "the mouth"
+        The possible utterances, that the dialog system can produce – "the mouth"
 
         \item
-        Rules under which the next utterance will be chosen - "the ear"
+        Rules under which the next utterance will be chosen – "the ear"
 
     \end{itemize}
 
@@ -1013,32 +1012,32 @@ which can generate conflict when
 a user input semantically spans across multiple determined categories.
 This issue is even stronger while using the string matching approach,
 because there the string literal can decide about the following dialog system answer
-as if meanings and their speech representations were a one-to-one map,
+as if meanings and their speech representations were a one–to–one map,
 which they are not.
 Even if a certain meaning is included in a ruleset,
 the system might not grasp the meaning and react in an incoherent way.
 With the state machine the
 distribution of various rules across various rulesets
 requires big effort.
-Extending the capabilites of a rule-based dialog system
+Extending the capabilites of a rule–based dialog system
 hardly scale and tend to have regressions.
 In case of dialog systems relying on user input by speech transcription
 the text input processed by the system is not guaranteed to represent
 what the user actually said.
-In conclusion rule-based approach to conversation design
+In conclusion rule–based approach to conversation design
 provides control over the dialog system behavior
 but tends to be inflexible.
 
 \subsection{Statistically driven approach}
 
-Some of the issues tied to rule-based systems
+Some of the issues tied to rule–based systems
 are resolved using another approach.
 Especially in recent years the breakthroughs in the field
 of speech generation have been significant ()
 allowing for letting the dialog system play a bigger role
 in what is being said next.
 In its simplest form,
-it is possible to just let the the answer be generated "end-to-end".
+it is possible to just let the the answer be generated "end–to–end".
 The user input is sent to a model which generates an answer.
 It has been convincingly shown that this technology has the capability
 of reacting in a flexible way to much of what is being thrown at it ().
@@ -1062,10 +1061,10 @@ and then it takes also its output and predicts the next probable output
 
 llms for other things than conversation
 
-The Generative Pre-trained Transformer family of models,
+The Generative Pre–trained Transformer family of models,
 exemplifies the capabilities of LLMs.
 
-Researched in - exponential improvements over short period of time.
+Researched in – exponential improvements over short period of time.
 
 including ChatGPT, presented in ... ()
 
@@ -1076,9 +1075,9 @@ being integrated into tools for writing, education, customer service, and more.
 
 Nowadays there are multiple publicly available LLM services.
 
-Unlike traditional rule-based systems,
+Unlike traditional rule–based systems,
 LLMs rely on deep learning techniques to process and predict language,
-enabling them to understand nuanced queries and provide human-like responses.
+enabling them to understand nuanced queries and provide human–like responses.
 This adaptability has set new standards for conversational AI,
 making it a valuable resource in numerous industries.
 
@@ -1098,14 +1097,14 @@ when leveraging LLMs' capabilities.
 
 Over time, researchers and practitioners have developed techniques for
 crafting effective prompts to optimize outputs.
-The simplest approach is known as "zero-shot" prompting,
+The simplest approach is known as "zero–shot" prompting,
 where a user poses a direct question or request without additional context.
-However, zero-shot prompting may not always yield the desired depth or accuracy.
+However, zero–shot prompting may not always yield the desired depth or accuracy.
 It is common for the model to "misunderstand" the assignment
 and generate tokens so that it will "confuse" itself
 and lead to generated answer in a completely irrelevat direction.
 
-More sophisticated strategies include "few-shot" prompting,
+More sophisticated strategies include "few–shot" prompting,
 where examples are provided to guide the model's response style or focus.
 This way there is a reference for the structure of the answer
 and there is a protection to the answer leading somewhere it is not meant to.
@@ -1114,12 +1113,12 @@ framing the task as an analogy can help improve the output significantly.
 
 Another very prevalent way that has proven to
 improve the performance of LLMs is a so called
-chain-of-thought (CoT) prompting.
+chain–of–thought (CoT) prompting.
 It encourages the model to
-articulate its reasoning step-by-step,
+articulate its reasoning step–by–step,
 enhancing logical accuracy.
 There are many ways to achieve this,
-but the primary one is a few-shot approach
+but the primary one is a few–shot approach
 where a description of the logic is
 explicitly described.
 The model is then prompted to produce
@@ -1137,12 +1136,12 @@ in available metrics ().
 
 Using large language models as core component
 of dialog systems brings resolution to many issues
-rule-based systems introduce.
+rule–based systems introduce.
 
 An LLM powered dialog system is flexible in understanding
 the user input.
 The user input is processed in a way much more sophisticated
-than the shallow string-matching approach.
+than the shallow string–matching approach.
 While the classifier approach is a lot more capable to understand,
 it is still forced to choose a predefined answer, whereas
 an LLM has the capability to taylor an answer for every input.
@@ -1193,7 +1192,7 @@ Hopefully that will not happen before
 the challenges of alignment and hallucinations
 are solved.
 
-As far as low-stakes open-domain conversation simulation goes,
+As far as low–stakes open–domain conversation simulation goes,
 LLM powered chatbots are relatively safe
 though there are cases of dangerous or tragic situations
 especially for vulnerable individuals ().
@@ -1207,8 +1206,8 @@ a regulating structure needs to be placed on top of the LLM.
 
 \par
 Conversation design in Convform attempts
-to combine elements of rule-based design with text generation.
-It allows creating a purely rule-based chatbots
+to combine elements of rule–based design with text generation.
+It allows creating a purely rule–based chatbots
 which analyse the user input based on string matching
 and say exactly what they are prescribed to.
 On the other hand it also allows to make the chatbot
@@ -1236,7 +1235,7 @@ can contain multiple states.
 This is to make convform generate more complex answers
 which can react in a flexible way.
 However it also comes with a challenge to order these responses correctly
-and make sure that they are not contradicting each other content-wise.
+and make sure that they are not contradicting each other content–wise.
 Ultimately a master prompt with multiple components
 regulating itself via analysis prompts
 might be a smarter direction to go.
@@ -1248,7 +1247,7 @@ user input fits in given category and
 the state or states to respond with next.
 Just like in state, the information about whether the user input
 corresponds with the intent can be encoded via
-string-matching patterns or a prompt.
+string–matching patterns or a prompt.
 As mentioned intent is a problematic concept,
 because it forces an outside logic and categorization
 on user input, which might not be able to fit well
@@ -1266,12 +1265,12 @@ while being able to use any combination of
 hardcoded responses and intent patterns
 and descriptions of responses or user inputs used in intents.
 Detailed description of how convform works can be found
-in the wiki of its github repository \footcite{https://github.com/almarsk/convform/wiki}
+in the wiki of its github repository \footnote{https://github.com/almarsk/convform/wiki}
 
 \subsubsection{Coherence}
 With support of LLM powered responses
 convform can be used to simulate
-an open-domain conversation with a user
+an open–domain conversation with a user
 and simultaneously using a combination
 of intents and prompting
 a convform chatbot can be created
@@ -1284,7 +1283,7 @@ First however, regular conversation needs to be achieved using convform.
 To simulate conversation, it is first necessary to simulate a persona.
 The persona can then have a simulated motive to conversate
 which can interest the user enough to engage in interaction with the dialog system.
-For rule-based systems, persona can be defined ahead of time
+For rule–based systems, persona can be defined ahead of time
 and it can manifest itself via the specific writing of the hardcoded responses
 that the system is able to give.
 With generated responses, the persona of the chatbot has to be included in the prompt.
@@ -1301,7 +1300,7 @@ but not change topic too often.
 It needs to be able to add a little bit of its own perspective.
 \par
 The conversation style e.g. the amount of participation and initiativity in conversation
-is something people adapt in to their conversation counter-part.
+is something people adapt in to their conversation counter–part.
 Since developing a system that would immitate this behavior
 requires additional effort
 and expands scope beyond the coherence research
@@ -1339,15 +1338,15 @@ czech versions of prompts will be in annex
 Entity recognition
 
 In order to track entities that could be referred to
-a few-shot prompt was deployed that would help
+a few–shot prompt was deployed that would help
 keep track of which entities have been mentioned.
 Since GPT4o, the model used in the experiment,
 tended to consider too many things an entity,
 most examples are negative and do not capture an entity.
-It also contains some repetition as a result of fine-tuning the best wording.
+It also contains some repetition as a result of fine–tuning the best wording.
 
 ..
-(New or Old? Exploring How Pre-Trained Language Models Represent Discourse Entities)
+(New or Old? Exploring How Pre–Trained Language Models Represent Discourse Entities)
 
 Loose english translation of the prompt goes as follows:\\
 \linespread{1.5}
@@ -1406,7 +1405,7 @@ The anaphorization prompt therefore tasks the model
 to modify a generated response so
 that the mirrored entity is replaced with
 an anaphoric device.
-For this another few-shot prompt was used to modify a just generated response.
+For this another few–shot prompt was used to modify a just generated response.
 Its loose english translation is as follows:\\
 
 \linespread{1.5}
@@ -1414,9 +1413,9 @@ Its loose english translation is as follows:\\
 Find one main word in a sentence and swap it for a personal or reference pronoun.\\
  Leave the other topic centers as they are.\\
  Don't forget to omit words that may be part of the name phrase of the replaced word.\\
- Don't forget that when a noun is replaced by a pronoun, you often need to change the verb sequence -\\
- the verb will then often be at the end of the sentence; the order of the pronouns must be followed -\\
- the replacement pronoun will come for the reversible and the personal pronoun. You also need to correctly recognize the more important word -\\
+ Don't forget that when a noun is replaced by a pronoun, you often need to change the verb sequence –\\
+ the verb will then often be at the end of the sentence; the order of the pronouns must be followed –\\
+ the replacement pronoun will come for the reversible and the personal pronoun. You also need to correctly recognize the more important word –\\
  choose the one about which the question is.\\
  To preserve the naturalness, you sometimes need to modify a sentence\\
  to include a secondary sentence, especially if the replaced word is linked to a deverbative noun.\\
@@ -1526,7 +1525,7 @@ While the number of new entities does not
 map exactly either,
 it is first of all a lot closer to the topic progression
 and second of all actually very close to
-what is being sought after here -
+what is being sought after here –
 how far in the conversation is an entity
 still acceptable or even available to speakers.
 An entity is can represent a topic
@@ -1538,7 +1537,7 @@ all depending on which way the covnersation goes.
 As stated earlier,
 both topic and entity are difficult to define
 and their annotations tend to be recursive.
-A close-enough approach has been adopted in this paper.
+A close–enough approach has been adopted in this paper.
 While runtime topic annotation by an LLM
 is not necessary for generating deep anaphore
 and has therefore not been attempted in this paper,
@@ -1654,7 +1653,7 @@ While recognizing when the conversation is ending
 or especially when it should not end
 people rely on a set of clues
 similarly to knowing when to take turns speaking ().
-In open-domain conversation
+In open–domain conversation
 like the one a convform chatbot holds with experiment participants,
 the main challenge is to recognize
 when there is a topic at hand
@@ -1832,7 +1831,7 @@ METHODOLOGY 20
 	1   what the data gives
 	       how to handle data
 	2 learning from
-	    hands on design - trying to replicate a situation
+	    hands on design – trying to replicate a situation
 		qualitative analysis
 		quantitative analysis
 
@@ -1841,11 +1840,11 @@ PILOT 10
 		rating
 			from best to worse: shallow, deep, nonassignable
 		abort
-			from least to most : shallow, deep, nonassignable
+			from least to most: shallow, deep, nonassignable
 		reactions
-			shallow 	- continue
-			deep		- meta
-			nonassignable 	- abort
+			shallow 	– continue
+			deep		– meta
+			nonassignable 	– abort
 		inquisitive will be more negative
 	results
 		rating
@@ -1904,7 +1903,7 @@ on the contact surface of conversation design and LLM development
 is a hybrid system () that would allow a conversation designer
 to have the dialog system interact with a user
 in the required way including
-passing through a state-machine like process
+passing through a state–machine like process
 while keeping the flexibility of an LLM.
 
 For such system one would need to decide the relationship
@@ -1936,3 +1935,5 @@ via analysis prompts.
 \printbibliography
 
 \end{document}
+
+}

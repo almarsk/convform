@@ -1,4 +1,3 @@
-Make semi-rule-based hybrid chatbots.
 Convform is an a conversation design interface for creating rule-based and optionally AI powered chatbots.
 
 Check out [wiki](https://github.com/almarsk/convform/wiki) to learn how to create, test, run and maintain chatbots.

@@ -1,4 +1,94 @@
+textbad(
+
+done:
+pilot
+teorie v1
+data raw
+metodologie raw
+
+qs:
 anotace - jen část? manuál? kdo?
+    pokud se anotátoři shodnou, je relevantní tvrdit, že ta data lze tímhle způsobem dělit
+    kappa statistically relevant
+
+stimulus
+meta
+poznámka
+
+anaphore ne !! anaphora
+
 překlad promptů do anglickéhho textu práce
+
+    llm dostane vnucenou explicitní anaforu - chyba ?
+        sníží přirozenost
+        přidá explicitnost
+
+        přidat ještě malinkej experiment s nulovou anaforou !!
+
+        do appendixu - česky + anglicky s komentářem
+        dva sloupečky?
+
+latex - command na hlídání malých písmenek
+
+
 experimentální kapitola narativně pilot a pak hlavní ...?
-název Coherence disruptions in human-chatbot interaction: towards quantitative approach to conversation
+    vzhledem k podobnosti experimentů slejt
+    nezatajit ale nestavět to podle toho
+
+název
+Coherence disruptions in human-chatbot interaction:
+    Towards quantitive analysis of anaphoric relations in conversation
+    přidat anaforu
+
+intro neobsahuje intenci práce - jak moc narušení anafory škodí koherenci
+nabízím to já
+co to je narušení anaforických vztahů
+tento úkol je řešitelný pomocí chatbota - pojďme to zkusit
+
+zdůraznit že to je moje - convform
+
+_______________
+co dál:
+
+promyslet název práce - ponechat quantitative, zrušit conversation, dodat anaforu
+Coherence disruptions in human-chatbot interaction:
+    A Quantitative Exploration of Anaphoric Relations
+
+IAA
+    připravit 30 konverzací,
+    připravit manuál
+    připravit tabulku
+    oanotovat
+    poslat AN, Týně, Janovi
+    spočítat IAA
+    dodat do kostry
+
+poslat AN kostru
+
+nulová anafora
+    připravit dodatečnej experimentek s nulovou anaforou
+    poslat AN
+    rozeslat lidem
+    dodat do kostry
+
+----
+
+přepracovat úvod
+    zapracovat feedback
+    dodat intenci
+        - narušení anaforických vztahů
+        - pojďme to řešit pomocí chatbota
+    prodat svůj záměr - convform je můj
+
+doladit metodologii
+    explicitní anafora
+
+napsat experimentální kapitolu
+    sběr dat
+    IAA
+    analýza
+    zero anaphore
+
+dodat keywords
+dodat abstrakt
+dodat AI declaration
