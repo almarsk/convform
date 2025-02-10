@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  19 JAN 2025 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  7 FEB 2025 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,111 +340,104 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'structure.bbl' found.
 
-(./structure.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                https://github.com/almarsk/convform/wiki
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(./structure.bbl)
 Package biblatex Info: Reference section=0 on input line 11.
 Package biblatex Info: Reference segment=0 on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 22.
+(Font)              <14.4> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 22.
+(Font)              <7> on input line 32.
  [1
 
 {/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
+(Font)              <6> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 27.
+(Font)              <5> on input line 37.
  [1
 
-] [2] [3] [4] [5] [6]
+] [2]
+Overfull \hbox (7.79865pt too wide) in paragraph at lines 105--112
+[]\OT1/cmr/m/n/12 The data this pa-per seeks to elic-i-tate and anal-yse are ac
+-tual hu-man{chatbot
+ []
+
+
+Overfull \hbox (107.4115pt too wide) in paragraph at lines 140--150
+\OT1/cmr/m/n/12 ence of such in-ter-ac-tion is dic-tated by a dif-fer-ent set o
+f fac-tors ()[https://aclanthology.org/2021.acl-
+ []
+
+[3] [4] [5] [6]
 Chapter 1.
 [7
 
 ] [8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (9.36113pt too wide) in paragraph at lines 560--568
+Overfull \hbox (9.36113pt too wide) in paragraph at lines 567--575
 []\OT1/cmr/m/n/12 As a de-scen-dant of con-ver-sa-tion anal-y-sis in-ter-ac-tio
 n lin-guis-tics has emerged,
  []
 
-[16]
-Overfull \hbox (0.43993pt too wide) in paragraph at lines 640--661
-[]\OT1/cmr/m/n/12 Coherence dis-rup-tions are also dis-cussed in lin-guis-tic l
-it-er-a-ture. Hrb^^Sa^^Tcek's
- []
-
-[17] [18] [19] [20]
+[16] [17] [18] [19] [20]
 Chapter 2.
 [21
 
-] [22] [23] [24] [25] [26] [27] [28] [29]
-
-LaTeX Warning: Citation 'https://github.com/almarsk/convform/wiki' on page 30 u
-ndefined on input line 1269.
-
-[30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1352--1363
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1379
+] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 1363--1374
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1380--1381
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1411
+Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1414--1423
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1425--1434
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1424--1431
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1432--1439
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1440--1449
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1450--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1461--1468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1464
+Underfull \hbox (badness 10000) in paragraph at lines 1469--1475
 
  []
 
@@ -457,40 +450,40 @@ Chapter 3.
 ] [43] [44
 
 ]
-Overfull \hbox (24.98024pt too wide) in paragraph at lines 1937--1937
+Overfull \hbox (24.98024pt too wide) in paragraph at lines 2022--2022
 \OT1/cmr/m/it/12 course and Di-a-logue\OT1/cmr/m/n/12 . 2020. \OT1/cmr/m/sc/12 
 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / hrilab . tufts . edu / publi
 cations /
  []
 
 [45]
-Overfull \hbox (27.82501pt too wide) in paragraph at lines 1937--1937
+Overfull \hbox (27.82501pt too wide) in paragraph at lines 2022--2022
 \OT1/cmtt/m/n/12 rivals -[] seek -[] new -[] path -[] smarter -[] ai -[] curren
 t -[] methods -[] hit -[] limitations -[]
  []
 
 
-Overfull \hbox (12.6491pt too wide) in paragraph at lines 1937--1937
+Overfull \hbox (12.6491pt too wide) in paragraph at lines 2022--2022
 [][]\OT1/cmr/m/n/12 Kobl^^S^^P^^Tzek, T. \OT1/cmr/m/it/12 In-ter-preta^^Tcn^^S^
 ^P s^^Semantika. []Uvod do tex-tov^^Se teorie Fran-coise Rastiera\OT1/cmr/m/n/1
 2 .
  []
 
 
-Overfull \hbox (16.42484pt too wide) in paragraph at lines 1937--1937
+Overfull \hbox (16.42484pt too wide) in paragraph at lines 2022--2022
 \OT1/cmr/m/n/12 p^^Trirozenou ko-mu-nikaci s lidmi''. Diplo-mov^^Sa pr^^Sace. P
 raha: Uni-verzita Karlova,
  []
 
-[46]
-Overfull \hbox (92.43416pt too wide) in paragraph at lines 1937--1937
+[46] [47]
+Overfull \hbox (92.43416pt too wide) in paragraph at lines 2022--2022
 \OT1/cmr/m/n/12 In: \OT1/cmr/m/it/12 Sus-tain-abil-ity by Num-bers \OT1/cmr/m/n
 /12 (Nov. 2024). \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https 
 : / / www . sustainabilitybynumbers .
  []
 
-[47]
-Overfull \hbox (6.94548pt too wide) in paragraph at lines 1937--1937
+
+Overfull \hbox (6.94548pt too wide) in paragraph at lines 2022--2022
 [][]\OT1/cmr/m/n/12 Schegloff, E. A., G. Jef-fer-son, and H. Sacks. ``The Pref-
 er-ence for Self-Correction
  []
@@ -506,37 +499,35 @@ Package logreq Info: Writing requests to 'structure.run.xml'.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 158 ({)
+### simple group (level 1) entered at line 159 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8989 strings out of 475567
- 181108 string characters out of 5777889
+ 8996 strings out of 475567
+ 181406 string characters out of 5777889
  1936187 words of memory out of 5000000
- 31105 multiletter control sequences out of 15000+600000
- 566120 words of font info for 63 fonts, out of 8000000 for 9000
+ 31113 multiletter control sequences out of 15000+600000
+ 565812 words of font info for 62 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 66i,8n,81p,994b,1576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,8n,81p,996b,1564s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/l
 jfour/jknappen/ec/tcrm1200.600pk></usr/local/texlive/2024basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024basic/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024bas
-ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024
-basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2
-024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
-/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
-ocal/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
-sr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
->
-Output written on structure.pdf (50 pages, 320305 bytes).
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024basic/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024basic/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024basic/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024b
+asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/202
+4basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
+live/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
+/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/l
+ocal/texlive/2024basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on structure.pdf (50 pages, 310103 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+ 238 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

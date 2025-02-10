@@ -16,7 +16,7 @@ with open("export/final_annotated_data.json", "r") as d:
         _rated = [c["rating"] for c in data if "rating" in c and c["rating"] and "type" in c and stimulus_type in c["type"]]
         _sum_score = sum([c for c in _rated])
         rating_avg = _sum_score/len(_rated)
-        print(f"rating {stimulus_type} {rating_avg}")
+        print(f"Rating {stimulus_type} {rating_avg}")
 
     get_rating_avg("shallow")
     get_rating_avg("deep")

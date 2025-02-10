@@ -1,0 +1,45 @@
+Experiment
+    Data collection
+        Designs
+            Anaphora
+            Conversation style
+        Participants
+        Pilot
+        LABELS students
+    Data Annotation
+    IAA
+        Result
+        Differences
+        Conclusion
+    Quantitative analysis
+        Expectations
+        Results
+            Types of disruptions
+                Reactions
+                Rating
+            Conversation style
+                Rating
+                Comment mentions
+            Conclusion
+        Zero anaphora
+            Score
+            Reactions
+            Conclusion
+    Qualitative
+        Remaps
+        Indirect anaphora
+        Inappropriate pragmatics
+        Topic shifts
+        Metacommunication
+        ...
+        Evaluation of shallow, deep, nonassignable categorization
+
+Further steps
+    Comparing different anaphora depths
+    Realtime topic annotation
+    Hybrid approach to conversation design
+    Making the chatbot aware of the general course of the conversation
+        ending correctly
+    Relating tracked entities to one another
+    Prompting unassignable anaphora
+    Associativity in nonassignable anaphora

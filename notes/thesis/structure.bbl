@@ -194,6 +194,62 @@
       \field{title}{Image, Music, Text}
       \field{year}{1977}
     \endentry
+    \entry{cxd}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=a4b939d44ff3388bb31ce528e5cbad64}{%
+           family={Brabra},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=41984ac09590cd8ce402fc2dd9324c78}{%
+           family={Báez},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=27d8d645f0c1e8dcd04e1602a8a7f3b7}{%
+           family={Benatallah},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=90815ff1740da080b32b0937275abd56}{%
+           family={Gaaloul},
+           familyi={G\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a175a4610e5640ecf87f8016fff8ea7d}{%
+           family={Bouguelia},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fd920a135ade9635d199d9a9cadcdd98}{%
+           family={Zamanirad},
+           familyi={Z\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{757fff0716c58bbdd7899c73e4c748e4}
+      \strng{fullhash}{0f01eece5d426d359de8aa9a02c4380a}
+      \strng{fullhashraw}{0f01eece5d426d359de8aa9a02c4380a}
+      \strng{bibnamehash}{757fff0716c58bbdd7899c73e4c748e4}
+      \strng{authorbibnamehash}{757fff0716c58bbdd7899c73e4c748e4}
+      \strng{authornamehash}{757fff0716c58bbdd7899c73e4c748e4}
+      \strng{authorfullhash}{0f01eece5d426d359de8aa9a02c4380a}
+      \strng{authorfullhashraw}{0f01eece5d426d359de8aa9a02c4380a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Cognitive and Developmental Systems}
+      \field{number}{3}
+      \field{title}{Dialogue Management in Conversational Systems: A Review of Approaches, Challenges, and Opportunities}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{783\bibrangedash 798}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/TCDS.2021.3086565
+      \endverb
+    \endentry
     \entry{brown1987politeness}{book}{}{}
       \name{author}{2}{}{%
         {{hash=4729a261378d835b1c7fbde98d5f1407}{%
@@ -225,6 +281,40 @@
       \field{series}{Politeness: Some Universals in Language Usage}
       \field{title}{Politeness: Some Universals in Language Usage}
       \field{year}{1987}
+    \endentry
+    \entry{bublitz1999disturbed}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=49875f66c406be993f6e14af8ce9521a}{%
+           family={Bublitz},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ea4c5de6c9638ee187549bb7373b9298}{%
+           family={Lenk},
+           familyi={L\bibinitperiod},
+           given={Uta},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JOHN BENJAMINS PUBLISHING CO.}%
+      }
+      \strng{namehash}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{fullhash}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{fullhashraw}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{bibnamehash}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{authorbibnamehash}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{authornamehash}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{authorfullhash}{e8cdb40e76a75696c680ed363e7a3086}
+      \strng{authorfullhashraw}{e8cdb40e76a75696c680ed363e7a3086}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PRAGMATICS AND BEYOND NEW SERIES}
+      \field{title}{Disturbed coherence:'Fill me in'}
+      \field{year}{1999}
+      \field{pages}{153\bibrangedash 174}
+      \range{pages}{22}
     \endentry
     \entry{CouperKuhlenSelting2017}{book}{}{}
       \name{author}{2}{}{%
@@ -1766,7 +1856,6 @@
       \range{pages}{10}
     \endentry
   \enddatalist
-  \missing{https://github.com/almarsk/convform/wiki}
 \endrefsection
 \endinput
 

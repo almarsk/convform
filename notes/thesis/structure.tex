@@ -11,13 +11,23 @@
 \begin{document}
 
    % TODO
+   % annotate data
+   % handle IAA
+   % process annotated data with quantifiable data
+   % remove emails from final data
+   % handle zero anaphore data
+   % conclude experiment
+   % qualitative analysis
+   %
+   % write experiment chapter
+   % write conclusion and further steps
+   %
    % touch up methodology
+   % split data chapter
+   % touch up theory
    % touch up theory with bublitz
-   % pilot experiment
-   % touch up pilot
-   % data
-   % big experiment
-   % conclusion and further steps
+
+
 
 \maketitle
 
@@ -100,7 +110,7 @@ The boundary between what a coherent and an incoherent conversation is blurred.
 It is in no way a binary property of the text of the conversation ().
 The goal is therefore to touch on the gradual divide between them.
 
-.. () Bublitz
+.. () Bublitz \footcite{bublitz1999disturbed}
 
 \par
 While chatbots are evaluated for how natural and error free their way of conversing is,
@@ -949,9 +959,11 @@ and browse associated conversation status objects
 
 \section{Conversation design in theory}
 
+% https://ieeexplore.ieee.org/abstract/document/9447005
+
 \par
 Designing the behavior of a dialog system
-is referred to as conversation design\footcite{kolosova2022} \footcite{mctear2020conversational}.
+is referred to as conversation design\footcite{kolosova2022} \footcite{mctear2020conversational} \footcite{cxd}.
 It is not the course of any one conversation that is being designed here
 but rather as many possible ways any conversation could go
 for a given use case.
@@ -1827,14 +1839,6 @@ the parameter is mainly:
 
 \if false
 
-METHODOLOGY 20
-	1   what the data gives
-	       how to handle data
-	2 learning from
-	    hands on design – trying to replicate a situation
-		qualitative analysis
-		quantitative analysis
-
 PILOT 10
     expectations
 		rating
@@ -1880,6 +1884,80 @@ PILOT 10
 
 
         ... quantitative experiment
+
+        word order is sometimes weirdly generated due to anaphorization
+        it is contrastive so not ungrammatical, only pragmatics is off (33)
+        number rating is very noisy, other things happen in conversation that affect it
+
+        123 sequentially interesting
+        243 misunderstood reference
+        248, 260 between shallow deep and nonassignable
+        323, 319p pure chaos
+        100, 316, 53, 257 will map if can
+        106, 271p, 212 pseudoanaphora
+            spectrum between pseudoanaphora and a newly mentioned entity anaphorized
+        142 changed topic upon nonassignable
+        241 nonclarifying metacommunication
+        276, 275 nonassignable interpreted as third person participant reference
+        101 meta but ended shortly after, coherence would not recover
+        149 unmapped pseudoanaphore (mediace při rozvodu)
+        279 continuing despite nonassignability
+        190 didnt get to stimulus, not enough topic in conversation?
+        317 metacommunication
+        264p topic incoherence
+        30 clear mapping due to verb
+        36 jaké další knihy ti doporučili ? general third person is accepted
+        126, 49, 330, 157, 175, 236 remap
+        162, 114 stimulus understood but topic shift not accepted
+        96, 168, 192, 203, 240, 245 not moving away from topic
+        253 perfect
+        270 double anaphore -> meta
+        274 almost meta
+        312 vague anaphore, but on topic
+        67 relaxed style not appreciated
+        127 repeating a question - topical incoherence
+        259 epic remap
+        337 anaphore refers to hyperonymum of previous utterance entities
+        357 here zero anaphore does not work
+
+        nonassignable
+            appropriate verb wouldve changed the data
+                on purpose - hardcoded
+            156 !!
+            its not easy changing just the anaphore
+
+
+        deep with generation issue
+        deep with acceptance
+        deep within same topic, other within same topic
+
+        162 graph according to Daneš
+
+        b: Jaký je T1?
+        h: R2 a R3
+        b: Jaký je T2?
+        h: R2a R2b R2c
+         dodělat !!
+
+        entity of q anaphore returned to is not topicalized at any point
+
+        as opposed to 145 where entity of q anaphore is topicalized
+
+
+        !! pouze subjektové nuly !!
+
+        deep anaphora needs improvement in generation
+        after meta in deep, bot is not anymore informed about the referent, improvises
+            would be nice if it would know what its talking about and followed up on it
+        deep anaphora acceptance depends on
+            whether the topic shift is annotated, accepted and
+            whether there is enough information to perform mapping
+        347 shouldve dropped
+
+        relaxed style is reduced to repetition
+
+        https://aclanthology.org/2021.findings-emnlp.145.pdf
+
 
         ... next steps
         1 hybrid approach
@@ -1935,5 +2013,3 @@ via analysis prompts.
 \printbibliography
 
 \end{document}
-
-}
