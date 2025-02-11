@@ -1095,7 +1095,7 @@
         ],
         "user_annotation": [],
         "stimulus": "shallow",
-        "user_reaction": "none",
+        "user_reaction": "continuation",
         "comment_annot": "",
         "generation_issue": false,
         "zero_anaphora": false,
