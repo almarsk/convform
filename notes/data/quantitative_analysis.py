@@ -1,5 +1,6 @@
 import json
 import pprint
+import matplotlib.pyplot as plt
 
 def run_for_all_designs(fun):
     fun("shallow")
@@ -23,17 +24,52 @@ with open("notes/data/final_annotated_data.json", "r") as d:
     print(f"Number of convos: {len(data)}")
 
     print("______________")
+    print("Rating range")
+    print("______________")
+
+    ratings = {}
+    _rated = [c["rating"] for c in data
+        if "rating" in c and c["rating"] and
+        "stimulus" in c and c["stimulus"] in ["shallow", "deep", "nonassignable"]
+    ]
+    for rating in _rated:
+        if rating not in ratings:
+            ratings[rating] = 1
+        else:
+            ratings[rating] += 1
+    pprint.pp(ratings)
+
+    def plot_rating_distribution():
+        ratings_list = [rating for rating, count in ratings.items() for _ in range(count)]
+        plt.hist(ratings_list, bins=range(1, 7), align='left', color='skyblue', edgecolor='black')
+        plt.xlabel("Rating")
+        plt.ylabel("Frequency")
+        plt.title("Rating Distribution")
+        plt.xticks(range(1, 6))  # Ensure all ratings are labeled
+        plt.show()
+
+    print("______________")
     print("Design rating")
     print("______________")
 
     def print_stimulus_ratio():
         ratio = []
-        for stimulus_type in ["shallow", "deep", "nonassignable"]:
+        for stimulus_type in ["shallow", "deep", "nonassignable", "other"]:
             ratio.append(len([c for c in data if
                 "stimulus" in c and c["stimulus"] == stimulus_type
                 ]))
-        print(f"Ratio stimulus s:d:n {ratio[0]}:{ratio[1]}:{ratio[2]}")
+        print(f"Ratio stimulus shallow:deep:nonassignable:other {ratio[0]}:{ratio[1]}:{ratio[2]}:{ratio[3]}")
     print_stimulus_ratio()
+
+    def print_stimulus_ratio_rating_check():
+        ratio = []
+        for stimulus_type in ["shallow", "deep", "nonassignable", "other"]:
+            ratio.append(len([c for c in data if
+                "rating" in c and c["rating"] and
+                "stimulus" in c and c["stimulus"] == stimulus_type
+                ]))
+        print(f"Ratio stimulus rating check shallow:deep:nonassignable:other {ratio[0]}:{ratio[1]}:{ratio[2]}:{ratio[3]}")
+    print_stimulus_ratio_rating_check()
 
     def get_rating_avg(stimulus_type: str):
         _rated = [c["rating"] for c in data if
@@ -57,7 +93,7 @@ with open("notes/data/final_annotated_data.json", "r") as d:
                 not c["rating"] and
                 "stimulus" in c and c["stimulus"] == stimulus_type
                 ]))
-        print(f"Ratio stimulus null rating s:d:n {ratio[0]}:{ratio[1]}:{ratio[2]}")
+        print(f"Ratio stimulus null rating shallow:deep:nonassignable {ratio[0]}:{ratio[1]}:{ratio[2]}")
     print_stimulus_ratio_null_rating()
 
     def get_rating_avg_with_null_direct(stimulus_type: str):
@@ -71,13 +107,13 @@ with open("notes/data/final_annotated_data.json", "r") as d:
         return rating_avg
     def print_rating_avg_with_null_direct(stimulus_type: str):
         rating_avg = get_rating_avg_with_null_direct(stimulus_type)
-        print(f"Rating incl null {get_design_mask(stimulus_type)} {rating_avg}")
+        print(f"Rating incl null direct {get_design_mask(stimulus_type)} {rating_avg}")
     run_for_all_designs(print_rating_avg_with_null_direct)
 
     def get_rating_difference_with_without_null_direct(stimulus_type: str):
         return get_rating_avg(stimulus_type) - get_rating_avg_with_null_direct(stimulus_type)
     def print_rating_difference_with_without_null_direct(stimulus_type: str):
-        print(f"Rating diff nonull vs null {get_design_mask(stimulus_type)} {get_rating_difference_with_without_null_direct(stimulus_type)}")
+        print(f"Rating diff nonull vs null direct {get_design_mask(stimulus_type)} {get_rating_difference_with_without_null_direct(stimulus_type)}")
     run_for_all_designs(print_rating_difference_with_without_null_direct)
 
     def get_rating_avg_with_null_anytime(stimulus_type: str):
@@ -97,7 +133,7 @@ with open("notes/data/final_annotated_data.json", "r") as d:
     def get_rating_difference_with_without_null_anytime(stimulus_type: str):
         return get_rating_avg(stimulus_type) - get_rating_avg_with_null_anytime(stimulus_type)
     def print_rating_difference_with_without_null_anytime(stimulus_type: str):
-        print(f"Rating diff nonull vs null {get_design_mask(stimulus_type)} {get_rating_difference_with_without_null_anytime(stimulus_type)}")
+        print(f"Rating diff nonull vs null anytime {get_design_mask(stimulus_type)} {get_rating_difference_with_without_null_anytime(stimulus_type)}")
 
     run_for_all_designs(print_rating_difference_with_without_null_anytime)
 
@@ -117,7 +153,7 @@ with open("notes/data/final_annotated_data.json", "r") as d:
         return ratio
 
     ratio = get_zero_anaphora_stimulus_type()
-    print(f"stimulus zero anaphora s:d:n {ratio[0]:02}:{ratio[1]:02}:{ratio[2]:02}")
+    print(f"stimulus zero anaphora shallow:deep:nonassignable {ratio[0]:02}:{ratio[1]:02}:{ratio[2]:02}")
 
     def get_zero_anaphora_reaction_ratio():
         ratio = []
@@ -128,7 +164,7 @@ with open("notes/data/final_annotated_data.json", "r") as d:
         return ratio
 
     ratio = get_zero_anaphora_reaction_ratio()
-    print(f"rating zero anaphora c:m:a {ratio[0]:02}:{ratio[1]:02}:{ratio[2]:02}\n")
+    print(f"Rating zero anaphora continuation:meta:abort {ratio[0]:02}:{ratio[1]:02}:{ratio[2]:02}\n")
 
     def get_rating_non_zero_anaphora():
         _rated = [c["rating"] for c in data if
@@ -172,7 +208,7 @@ with open("notes/data/final_annotated_data.json", "r") as d:
 
     def print_reaction_ratio(stimulus_type: str):
         ratio = get_reaction_ratio(stimulus_type)
-        print(f"Reaction ratio {get_design_mask(stimulus_type)} c:m:a {ratio[0]:02}:{ratio[1]:02}:{ratio[2]:02}")
+        print(f"Reaction ratio {get_design_mask(stimulus_type)} continuation:meta:abort {ratio[0]:02}:{ratio[1]:02}:{ratio[2]:02}")
 
     run_for_all_designs(print_reaction_ratio)
 
@@ -180,6 +216,44 @@ with open("notes/data/final_annotated_data.json", "r") as d:
         ratio = get_reaction_ratio(stimulus_type)
         total = sum(ratio)
         percentages = [(x / total) * 100 for x in ratio]
-        print(f"Percentage ratio {get_design_mask(stimulus_type)} {percentages[0]:.2f}% : {percentages[1]:.2f}% : {percentages[2]:.2f}%")
+        print(f"Reaction percentage ratio {get_design_mask(stimulus_type)} {percentages[0]:.2f}% : {percentages[1]:.2f}% : {percentages[2]:.2f}%")
 
     run_for_all_designs(print_percentage_ratio_reaction)
+
+    print("______________")
+
+    print("Stimulus x Reaction specific ratings")
+    print("______________")
+
+    def stimulus_reaction_specific_rating():
+        print("     | cntn | meta | abrt |")
+        for stimulus_type in ["shallow", "deep", "nonassignable"]:
+            ratings = list()
+
+            for reaction in ["continuation", "meta", "abort"]:
+                convos = [c for c in data if
+                    "rating" in c and c["rating"] and
+                    "stimulus" in c and c["stimulus"] == stimulus_type and
+                    "user_reaction" in c and c["user_reaction"] == reaction]
+                score_sum = sum([(c["rating"] or 0) for c in convos if "rating" in c])
+                len_convos = len(convos)
+                ratings.append([score_sum/len_convos, len_convos])
+
+
+            avg_stimulus_and_reaction = sum([c[0]*c[1] for c in ratings])/sum([c[1] for c in ratings])
+            avg_only_stimulus = get_rating_avg(stimulus_type)
+
+            print(f"{get_design_mask(stimulus_type)} | {ratings[0][0]:.2f} | {ratings[1][0]:.2f} | {ratings[2][0]:.2f} | stimulus x stimulus reaction match {avg_stimulus_and_reaction == avg_only_stimulus}")
+
+    stimulus_reaction_specific_rating()
+
+
+    print("______________")
+    print("IAA")
+    print("______________")
+    print("todo iaa")
+
+    print("______________")
+    print("Significance")
+    print("______________")
+    print("todo siginicance")
