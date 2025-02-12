@@ -1,6 +1,11 @@
 import json
 import pprint
 import matplotlib.pyplot as plt
+from itertools import combinations
+from sklearn.metrics import cohen_kappa_score
+import numpy as np
+import pandas as pd
+import os
 
 def run_for_all_designs(fun):
     fun("shallow")
@@ -32,12 +37,16 @@ with open("notes/data/final_annotated_data.json", "r") as d:
         if "rating" in c and c["rating"] and
         "stimulus" in c and c["stimulus"] in ["shallow", "deep", "nonassignable"]
     ]
-    for rating in _rated:
-        if rating not in ratings:
-            ratings[rating] = 1
-        else:
-            ratings[rating] += 1
-    pprint.pp(ratings)
+    ratings = {i: _rated.count(i) for i in range(1, 6)}
+    print("Ratings between 1 and 5:")
+    for rating, count in sorted(ratings.items()):
+        print(f"Rating {rating}: {count} times")
+
+    no_rating = len([c["rating"] for c in data
+        if "rating" in c and not c["rating"] and
+        "stimulus" in c and c["stimulus"] in ["shallow", "deep", "nonassignable"]
+    ])
+    print(f"No rating: {no_rating} times")
 
     def plot_rating_distribution():
         ratings_list = [rating for rating, count in ratings.items() for _ in range(count)]
@@ -249,11 +258,103 @@ with open("notes/data/final_annotated_data.json", "r") as d:
 
 
     print("______________")
-    print("IAA")
+    print("Comments")
     print("______________")
-    print("todo iaa")
+
+    print("Types of comments:")
+    comments = [c for c in data if "comment_annot" in c and "stimulus addressed in comment" in c["comment_annot"]]
+    print(f"Stimulus mentioned in comments {len(comments)} times")
+
+    for stimulus, mentions in {
+        "shallow": len([c for c in comments if "stimulus" in c and c["stimulus"] == "shallow"]),
+        "deep": len([c for c in comments if "stimulus" in c and c["stimulus"] == "deep"]),
+        "nonassignable": len([c for c in comments if "stimulus" in c and c["stimulus"] == "nonassignable"]),
+    }.items():
+        print(f"{get_design_mask(stimulus)} mentioned {mentions:02} times in comments")
+
+
 
     print("______________")
-    print("Significance")
+    print("Conversation style")
     print("______________")
-    print("todo siginicance")
+
+    def get_conversation_style_convos(conversation_style: str):
+        return [c for c in data if conversation_style in c["type"]]
+
+    relaxed = get_conversation_style_convos('relaxed')
+    inquisitive = get_conversation_style_convos('inquisitive')
+
+    print(f"Relaxed style convos {len(relaxed)}")
+    print(f"Inquisitive style convos {len(inquisitive)}")
+
+    def get_avg_rating(convos):
+        return sum([c["rating"] for c in convos if "rating" in c and c["rating"]])/len(convos)
+
+    print(f"Relaxed style rating {get_avg_rating(relaxed):.2f}")
+    print(f"Inquisitive style rating {get_avg_rating(inquisitive):.2f}")
+
+    print("Relaxed style addressed in comments: 1x positive 1x negative")
+    print("Inquistive style addressed in comments: 1x negative")
+
+    print("______________")
+    print("IAA")
+    print("______________")
+
+
+    def iaa(col: int):
+        # Specify the folder containing the CSV files
+        folder_path = 'notes/data/iaa/iaa_data/'
+
+        # Read all CSV files and extract the annotations from column 2
+        ids = None
+        ratings = []
+        for filename in sorted(os.listdir(folder_path)):
+            if filename.endswith('.csv'):
+                file_path = os.path.join(folder_path, filename)
+                df = pd.read_csv(file_path)
+
+                # Extract IDs from the first column
+                if ids is None:
+                    ids = df.iloc[:, 0].tolist()  # Store the IDs once
+                else:
+                    # Check if IDs are consistent across all files
+                    assert ids == df.iloc[:, 0].tolist(), f"ID mismatch in {filename}"
+
+                # Assuming column 2 is the annotations (index 1 in 0-based Python)
+                annotations = df.iloc[:, col].tolist()
+                ratings.append(annotations)
+                #print(f"Loaded annotations from: {filename}")
+
+        # Check if we have enough raters
+        if len(ratings) < 2:
+            raise ValueError("Need at least 2 raters for Cohen's Kappa")
+        # Calculate Cohen's Kappa for all pairs
+        pairwise_kappas = []
+        disagreements = set()
+        pairs = list(combinations(range(len(ratings)), 2))
+        for i, j in pairs:
+            kappa = cohen_kappa_score(ratings[i], ratings[j])
+            pairwise_kappas.append(kappa)
+            print(f"Cohen's Kappa for Rater {i+1} and Rater {j+1}: {kappa}")
+
+            # Track disagreements for each item
+            for index, (anno_i, anno_j) in enumerate(zip(ratings[i], ratings[j])):
+                if anno_i != anno_j:
+                    disagreements.add(ids[index])
+
+        # Calculate the average pairwise Kappa
+        average_kappa = np.mean(pairwise_kappas)
+        print(f"\nAverage Pairwise Cohen's Kappa: {average_kappa}")
+
+        # Output IDs with disagreements
+        if disagreements:
+            print("\nIDs with disagreements:")
+            print(sorted(disagreements))
+        else:
+            print("\nNo disagreements found.")
+
+    print("IAA stimulus")
+    iaa(1)
+    print()
+    print("IAA metacommunication")
+    iaa(2)

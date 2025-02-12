@@ -1,0 +1,37 @@
+id,stimulus,meta reaction,comment
+146,shallow,FALSE,
+152,other,FALSE,ukončil předčasně
+158,other,FALSE,není anafora
+164,shallow,TRUE,
+170,shallow,FALSE,
+176,other,FALSE,ukončil předčasně
+141,shallow,FALSE,
+147,shallow,FALSE,
+153,other,TRUE,není anafora
+159,other,FALSE,ukončil předčasně
+165,shallow,TRUE,
+177,shallow,FALSE,
+148,nonassignable,TRUE,
+154,nonassignable,FALSE,
+160,nonassignable,FALSE,
+166,nonassignable,TRUE,
+172,nonassignable,FALSE,
+178,nonassignable,TRUE,
+143,nonassignable,TRUE,
+149,nonassignable,TRUE,
+155,nonassignable,FALSE,
+161,nonassignable,TRUE,
+167,nonassignable,TRUE,
+173,nonassignable,FALSE,
+144,other,FALSE,ukončil předčasně
+150,deep,TRUE,
+156,nonassignable,TRUE,
+162,deep,FALSE,
+168,deep,FALSE,
+174,other,FALSE,nic
+145,other,TRUE,bizárek
+151,deep,TRUE,
+157,shallow,FALSE,
+163,other,FALSE,ukončil předčasně
+169,shallow,FALSE,
+175,deep,FALSE,

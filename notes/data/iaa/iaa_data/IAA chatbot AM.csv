@@ -1,0 +1,37 @@
+id,stimulus,meta reaction,comment
+146,shallow,FALSE,"Vhodnější by bylo ""to"" než ""ona""."
+152,other,FALSE,nedošlo na stimulus
+158,other,FALSE,nedošlo na stimulus
+164,shallow,FALSE,
+170,shallow,FALSE,
+176,other,FALSE,nedošlo na stimulus
+141,shallow,FALSE,
+147,shallow,FALSE,
+153,shallow,TRUE,"vkradlo se tam i slovo ""film"", což se nemělo stát"
+159,other,FALSE,
+165,shallow,TRUE,špatný slovosled vyvolal metakomunikaci
+177,shallow,FALSE,
+148,nonassignable,TRUE,
+154,nonassignable,FALSE,
+160,nonassignable,FALSE,
+166,nonassignable,TRUE,
+172,nonassignable,FALSE,účastník shovívavě přechází nepřiřaditelnou anaforu
+178,nonassignable,TRUE,
+143,nonassignable,TRUE,
+149,nonassignable,TRUE,
+155,nonassignable,FALSE,
+161,nonassignable,TRUE,
+167,nonassignable,TRUE,
+173,nonassignable,FALSE,shovívavý účastník přešel nebo snad nezaznamenal anaforu
+144,other,FALSE,na stimulus nedošlo
+150,deep,TRUE,sedmiboj
+156,nonassignable,TRUE,Nepovedlo se
+162,deep,FALSE,"minecraft, pěkně naruená tematická posloupnost"
+168,deep,FALSE,"celkem povedené, hypertéma bylo pořád stejné"
+174,other,FALSE,účastník ihned ukončil
+145,deep,TRUE,podruhé zodpovězená otázka?
+151,other,TRUE,nepovedlo se
+157,shallow,FALSE,"naskytl se jiný referent v předchozí odpovědi, který mapování ukradl"
+163,other,FALSE,nedošlo na stimul
+169,shallow,FALSE,"celé zamotané, koníčky jsou tam moc často včetně předchozí promluvy a bot se nechová vhodně"
+175,deep,FALSE,
