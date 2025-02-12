@@ -10,13 +10,18 @@ Cohen's Kappa for Rater 1 and Rater 3: 0.883745963401507
 Cohen's Kappa for Rater 2 and Rater 3: 0.9224137931034483
 
 Average Pairwise Cohen's Kappa: 0.8970887131612262
-___
+IDs with disagreements:
+[145, 150, 151, 153]
+
 IAA metacommunication
 Cohen's Kappa for Rater 1 and Rater 2: 0.9407894736842105
 Cohen's Kappa for Rater 1 and Rater 3: 0.883495145631068
 Cohen's Kappa for Rater 2 and Rater 3: 0.9423076923076923
 
 Average Pairwise Cohen's Kappa: 0.922197437207657
+
+IDs with disagreements:
+[164, 173]
 
 Number of convos: 375
 ______________
