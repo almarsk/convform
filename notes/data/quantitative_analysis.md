@@ -1,0 +1,124 @@
+Quantiative analysis
+
+_________
+IAA
+_________
+
+IAA stimulus
+Cohen's Kappa for Rater 1 and Rater 2: 0.8851063829787233
+Cohen's Kappa for Rater 1 and Rater 3: 0.883745963401507
+Cohen's Kappa for Rater 2 and Rater 3: 0.9224137931034483
+
+Average Pairwise Cohen's Kappa: 0.8970887131612262
+___
+IAA metacommunication
+Cohen's Kappa for Rater 1 and Rater 2: 0.9407894736842105
+Cohen's Kappa for Rater 1 and Rater 3: 0.883495145631068
+Cohen's Kappa for Rater 2 and Rater 3: 0.9423076923076923
+
+Average Pairwise Cohen's Kappa: 0.922197437207657
+
+Number of convos: 375
+______________
+Rating range
+______________
+Ratings between 1 and 5:
+Rating 1: 22 times
+Rating 2: 62 times
+Rating 3: 138 times
+Rating 4: 37 times
+Rating 5: 6 times
+No rating: 19 times
+______________
+Design rating
+______________
+Ratio stimulus shallow:deep:nonassignable:other 104:64:116:85
+Ratio stimulus rating check shallow:deep:nonassignable:other 102:58:105:71
+Rating shlw 2.7549019607843137
+Rating deep 2.5344827586206895
+Rating nass 2.9523809523809526
+
+Kruskal-Wallis Test p-value: 0.020462703785719412
+Effect Size (Eta Squared): 0.029688178453053583
+Comparison: deep vs nonassignable, p-value: 0.0048713423950883464
+Comparison: deep vs shallow, p-value: 0.1582978409422613
+Comparison: nonassignable vs shallow, p-value: 0.136917898603309
+
+Ratio stimulus null rating shallow:deep:nonassignable 2:6:11
+Rating incl null direct shlw 2.7549019607843137
+Rating incl null direct deep 2.5344827586206895
+Rating incl null direct nass 3.063063063063063
+
+Rating diff nonull vs null direct shlw 0.0
+Rating diff nonull vs null direct deep 0.0
+Rating diff nonull vs null direct nass -0.11068211068211031
+
+Rating incl null anytime shlw 2.798076923076923
+Rating incl null anytime deep 2.765625
+Rating incl null anytime nass 3.146551724137931
+
+Rating diff nonull vs null anytime shlw -0.0431749622926092
+Rating diff nonull vs null anytime deep -0.2311422413793105
+Rating diff nonull vs null anytime nass -0.1941707717569785
+
+Kruskal-Wallis Test p-value: 0.017698134990819445
+Effect Size (Eta Squared): 0.02871385062422946
+Comparison: deep vs nonassignable, p-value: 0.01597013599420015
+Comparison: deep vs shallow, p-value: 0.652654604765214
+Comparison: nonassignable vs shallow, p-value: 0.018874560457834404
+
+______________
+Zero anaphora
+______________
+Number of zero anaphora conversations: 16
+stimulus zero anaphora shallow:deep:nonassignable 08:08:00
+Rating zero anaphora continuation:meta:abort 14:02:00
+
+Rating zero anaphora 2.1875
+Rating non zero anaphora 2.7291666666666665
+______________
+Reaction ratio
+______________
+Reaction ratio shlw continuation:meta:abort 91:08:05
+Reaction ratio deep continuation:meta:abort 34:26:04
+Reaction ratio nass continuation:meta:abort 13:57:46
+
+Reaction percentage ratio shlw 87.50% : 7.69% : 4.81%
+Reaction percentage ratio deep 53.12% : 40.62% : 6.25%
+Reaction percentage ratio nass 11.21% : 49.14% : 39.66%
+
+Chi2 Statistic: 139.0566579414896
+P-value: 4.4935956067223523e-29
+Degrees of Freedom: 4
+Expected Frequencies:
+[[50.53521127 31.09859155 56.36619718]
+ [33.32394366 20.50704225 37.16901408]
+ [20.14084507 12.3943662  22.46478873]]
+
+______________
+Stimulus x Reaction specific ratings
+______________
+     | cntn | meta | abrt |
+shlw | 2.73 | 3.12 | 2.60 | stimulus x stimulus reaction match True
+deep | 2.43 | 2.62 | 2.75 | stimulus x stimulus reaction match True
+nass | 2.45 | 3.04 | 2.98 | stimulus x stimulus reaction match True
+______________
+Comments
+______________
+Types of comments:
+Stimulus mentioned in comments 80 times
+shlw mentioned 00 times in comments
+deep mentioned 11 times in comments
+nass mentioned 69 times in comments
+______________
+Conversation style
+______________
+Relaxed style convos 128
+Inquisitive style convos 183
+Relaxed style rating 2.45
+Inquisitive style rating 2.63
+Relaxed style addressed in comments: 1x positive 1x negative
+Inquistive style addressed in comments: 1x negative
+
+Kruskal-Wallis Test p-value: 0.10266771117843472
+Effect Size (Eta Squared): 0.009445412958117978
