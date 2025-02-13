@@ -95,19 +95,6 @@ If better more seamless conversation could be simulated,
 perhaps stronger effect of the stimulus on rating could be observed.
 The small difference can also be attributed to the fact that participants tend to
 avoid extremes in their grading.
-
-______________
-Zero anaphora
-______________
-Number of zero anaphora conversations: 16
-stimulus zero anaphora shallow:deep:nonassignable 08:08:00
-Rating zero anaphora continuation:meta:abort 14:02:00
-
-Rating zero anaphora 2.1875
-Rating non zero anaphora 2.7291666666666665
-
-Zero anaphora seems has much better scores.
-Anaphorization has to incorporate zero anaphore better in the future.
 ______________
 Reaction ratio
 ______________
@@ -160,3 +147,16 @@ Effect Size (Eta Squared): 0.009445412958117978
 Very small effect.
 To find statistically significant effect on conversation styles
 the conversation needs to be controlled in a more nuanced way by the dialog system.
+
+______________
+Zero anaphora
+______________
+Number of zero anaphora conversations: 16
+stimulus zero anaphora shallow:deep:nonassignable 08:08:00
+Rating zero anaphora continuation:meta:abort 14:02:00
+
+Rating zero anaphora 2.1875
+Rating non zero anaphora 2.7291666666666665
+
+Zero anaphora seems has much better scores.
+Anaphorization has to incorporate zero anaphore better in the future.

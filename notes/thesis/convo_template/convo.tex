@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{setspace}
+
+\geometry{a4paper, margin=1in}
+
+\title{Conversation Analysis}
+
+\newcommand{\utterance}[3]{
+    \textbf{#1} #2 \\
+    \textit{#3}
+}
+\begin{document}
+
+\textbf{Conversation ID: 1}
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \utterance{b:}{Hola, ¿cómo estás?}{Hello, how are you?}
+    \item \utterance{h:}{Estoy bien, gracias. ¿Y tú?}{I'm good, thank you. And you?}
+    \item \utterance{b:}{También estoy bien.}{I'm also good.}
+    \item \utterance{h:}{¿Qué hiciste ayer?}{What did you do yesterday?}
+    \item \utterance{b:}{Fui al cine.}{I went to the cinema.}
+    \item \utterance{h:}{¡Qué divertido!}{How fun!}
+\end{itemize}
+
+\end{document}
