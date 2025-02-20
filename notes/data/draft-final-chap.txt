@@ -165,8 +165,8 @@ Experiment
             ______________
             Relaxed style convos 128
             Inquisitive style convos 183
-            Relaxed style rating 2.45
             Inquisitive style rating 2.63
+            Relaxed style rating 2.45
             Relaxed style addressed in comments: 1x positive 1x negative
             Inquistive style addressed in comments: 1x negative
 
@@ -189,84 +189,91 @@ Experiment
             Rating zero anaphora 2.1875
             Rating non zero anaphora 2.7291666666666665
 
-            Zero anaphora seems has much better scores.
+            Zero anaphora seems to have much better scores.
             Anaphorization has to incorporate zero anaphore better in the future.
             357 here zero anaphore does not work
             347 shouldve dropped
             !! pouze subjektové nuly !!
-    Qualitative
-        - Remaps
-            100, 316, 53, 257 will map if can
-            126, 49, 330, 157, 175, 236 remap
-            259 epic remap
-            36 jaké další knihy ti doporučili ? general third person is accepted
-            276, 275 nonassignable interpreted as third person participant reference
-            243 misunderstood reference
-            limiting context for deep anaphore can lead to anaphore being open to a remap
-        - Indirect anaphora (Pseudoanaphora)
-            hardcoded phrase with intended nonassignable anaphore is sometimes assignable by association
-            106, 271p, 212 pseudoanaphora
-            149 unmapped pseudoanaphora (mediace při rozvodu)
-            spectrum between pseudoanaphora and a newly mentioned entity anaphorized
-        - Inappropriate pragmatics
-            127, 145 repeating a question - topical/pragmatic incoherence
-                limiting context for deep anaphore tends to generate inappropriate pragmatics
 
-        - Sequential coherence
-            123 sequentially interesting
-        - Topical coherence
-            162, 114 stimulus understood but topic shift not accepted
-            96, 168, 192, 203, 240, 245 not moving away from topic
+    Qualitative
+        - pro coherence perception
+            - Remaps
+                100, 316, 53, 257 will map if can
+                126, 49, 330, 157, 175, 236 remap
+                259 epic remap
+                36 jaké další knihy ti doporučili ? general third person is accepted
+                276, 275 nonassignable interpreted as third person participant reference
+                243 misunderstood reference
+                limiting context for deep anaphore can lead to anaphore being open to a remap
+            - Indirect anaphora (Pseudoanaphora)
+                hardcoded phrase with intended nonassignable anaphore is sometimes assignable by association
+                106, 271p, 212, 248, 260 pseudoanaphora
+                149 unmapped pseudoanaphora (mediace při rozvodu)
+                spectrum between pseudoanaphora and a newly mentioned entity anaphorized
+            - Sequential coherence
+                123 sequentially interesting
+
+
+        It is hard to just change the anaphore - always more factors, some stronger in their influence on coherence:
+        - deep anaphore too simplified a notion
             253 perfect
             30 clear mapping due to verb
+            - Inappropriate pragmatics
+                127, 145 repeating a question - topical/pragmatic incoherence
+                    limiting context for deep anaphore tends to generate inappropriate pragmatics
+            162, 114 stimulus understood but topic shift not accepted
 
-            312 vague anaphore, but on topic
+            not complete control over conversation - topic status
+            96, 168, 192, 203, 240, 245 not moving away from topic
             337 anaphore refers to hyperonymum of previous utterance entities
-            142 changed topic upon nonassignable
+            312 vague anaphore, but on topic
+
+            deep anaphora design has multiple scenarios it tends to go in:
+            deep with generation issue
+            deep with acceptance
+            deep within same topic, other within same topic
+
+            deep anaphora acceptance depends on
+            whether the topic shift is annotated, accepted and
+            whether there is enough information to perform mapping
+
+        - nonassignable anaphore too simplified a notion
+            - Returning to entities that havent been topicalized
+                162 graph according to Daneš
+
+                b: Jaký je T1?
+                h: R2 a R3
+                b: Jaký je T2?
+                h: R2a R2b R2c
+                dodělat !!
+
+                entity of q anaphore returned to is not topicalized at any point
+                as opposed to 145 where entity of q anaphore is topicalized
+                ...
+
+                acceptance
+                    142 changed topic upon nonassignable
+                    279 continuing despite nonassignability
+
+                appropriate verb wouldve changed the data
+                on purpose - hardcoded
+                or
+                156 !!
+
+        its not easy changing just the anaphore
+            many factors, mainly lexical environment, namely the verb
+
+        -outside of stimuli
+
+        - Topical coherence
             264p topic incoherence
             190 didnt get to stimulus, not enough topic in conversation?
+
         - Metacommunication
             317 metacommunication
             270 double anaphore -> meta
             274 almost meta
             101 meta but ended shortly after, coherence would not recover
-            241 nonclarifying metacommunication
-
-        - Returning to entities that havent been topicalized
-            162 graph according to Daneš
-
-            b: Jaký je T1?
-            h: R2 a R3
-            b: Jaký je T2?
-            h: R2a R2b R2c
-            dodělat !!
-
-            entity of q anaphore returned to is not topicalized at any point
-            as opposed to 145 where entity of q anaphore is topicalized
-        ...
-
-        - Generation issues
-        word order is sometimes weirdly generated due to anaphorization
-        it is contrastive so not ungrammatical, only pragmatics is off (33)
-
-        deep anaphora design has multiple scenarios it tends to go in:
-            deep with generation issue
-            deep with acceptance
-            deep within same topic, other within same topic
-        deep anaphora acceptance depends on
-            whether the topic shift is annotated, accepted and
-            whether there is enough information to perform mapping
-
-        nonassignable
-            appropriate verb wouldve changed the data
-                on purpose - hardcoded
-            156 !!
-            its not easy changing just the anaphore
-
-        - Chaos
-            323, 319p pure chaos
-            248, 260 between shallow deep and nonassignable
-            279 continuing despite nonassignability
 
 Further steps
     Comparing different anaphora depths
