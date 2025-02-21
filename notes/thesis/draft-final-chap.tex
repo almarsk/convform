@@ -1,0 +1,335 @@
+
+\section{Data collection}
+
+\subsection{Experimental designs}
+
+1
+\subsubsection{Anaphora}
+Shallow
+Deep
+Unassignable
+\subsubsection{Conversation style}
+Inquisitive
+Relaxed
+
+\subsection{Participants}
+Pilot
+LABELS students
+
+2
+\subsection{Annotation}
+
+\subsection{Inter--annotator agreement}
+
+\subsubsection{Stimulus}
+        Cohen's Kappa for Rater 1 and Rater 2: 0.8851063829787233
+        Cohen's Kappa for Rater 1 and Rater 3: 0.883745963401507
+        Cohen's Kappa for Rater 2 and Rater 3: 0.9224137931034483
+
+        Average Pairwise Cohen's Kappa: 0.8970887131612262
+        IDs with disagreements:
+        [145, 150, 151, 153]
+
+\subsubsection{Metacommunication}
+        Cohen's Kappa for Rater 1 and Rater 2: 0.9407894736842105
+        Cohen's Kappa for Rater 1 and Rater 3: 0.883495145631068
+        Cohen's Kappa for Rater 2 and Rater 3: 0.9423076923076923
+
+        Average Pairwise Cohen's Kappa: 0.922197437207657
+
+        IDs with disagreements:
+        [164, 173]
+
+\subsubsection{Conclusion}
+        Annotator agreement is strong enough for both stimulus type and metacommunication reaction.
+
+
+
+
+\section{Quantiative Analysis}
+
+
+1
+\subsection{Expectations}
+rating
+from best to worse: shallow, deep, nonassignable
+abort
+from least to most: shallow, deep, nonassignable
+reactions
+shallow 	– continue
+deep		– meta
+nonassignable 	– abort
+inquisitive will be more negative
+
+1
+\subsection{Result}
+
+rating, reaction, comment
+
+\paragraph{Rating overall}
+Ratings between 1 and 5:
+
+\begin{itemize}
+\item Rating 1: 22 times
+\item Rating 2: 62 times
+\item Rating 3: 138 times
+\item Rating 4: 37 times
+\item Rating 5: 6 times
+\item No rating: 19 times
+\end{itemize}
+Ratio stimulus shallow:deep:nonassignable:other 104:64:116:85
+Ratio stimulus with rating shallow:deep:nonassignable:other 102:58:105:71
+
+2
+\subsubsection{Design rating}
+number rating is very noisy, other things happen in conversation that affect it
+
+\begin{itemize}
+\item Rating shlw 2.7549019607843137
+\item Rating deep 2.5344827586206895
+\item Rating nass 2.9523809523809526
+\end{itemize}
+
+Surprisingly shallow anaphora has worse score than deep anaphora.
+
+\begin{itemize}
+\item Kruskal-Wallis Test p-value: 0.020462703785719412
+\item Effect Size (Eta Squared): 0.029688178453053583
+\item Comparison: deep vs nonassignable, p-value: 0.0048713423950883464
+\item Comparison: deep vs shallow, p-value: 0.1582978409422613
+\item Comparison: nonassignable vs shallow, p-value: 0.136917898603309
+\end{itemize}
+
+Only significant for deep vs nonassignable.
+
+\subsubsection{Design rating with abandonment interpretation}
+
+\paragraph{Abandoned directly after stimulus}
+
+Some conversations do not have a rating (participant clicked off of the experiment webpage)
+These conversations can be interpreted as worse possible reaction - 5.
+
+We can further split these into a situation where the participant clicked off of the experiment
+right after the stimulus - this only happened in case of nonassignable anaphora design.
+
+\begin{itemize}
+\item Ratio stimulus null rating shallow:deep:nonassignable 2:6:11
+\item Rating incl null direct shlw 2.7549019607843137
+\item Rating incl null direct deep 2.5344827586206895
+\item Rating incl null direct nass 3.063063063063063
+\end{itemize}
+
+\begin{itemize}
+\item Rating diff nonull vs null direct shlw 0.0
+\item Rating diff nonull vs null direct deep 0.0
+\item Rating diff nonull vs null direct nass -0.11068211068211031
+\end{itemize}
+
+\paragraph{Abandoned anytime}
+
+Or we can interpret as worse rating if participant clicked off at any time:
+
+\begin{itemize}
+\item Rating incl null anytime shlw 2.798076923076923
+\item Rating incl null anytime deep 2.765625
+\item Rating incl null anytime nass 3.146551724137931
+\end{itemize}
+
+\begin{itemize}
+\item Rating diff nonull vs null anytime shlw -0.0431749622926092
+\item Rating diff nonull vs null anytime deep -0.2311422413793105
+\item Rating diff nonull vs null anytime nass -0.1941707717569785
+\end{itemize}
+
+The difference shows that the shallow anaphora had by far the least people just leaving.
+
+\begin{itemize}
+\item Kruskal-Wallis Test p-value: 0.017698134990819445
+\item Effect Size (Eta Squared): 0.02871385062422946
+\item Comparison: deep vs nonassignable, p-value: 0.01597013599420015
+\item Comparison: deep vs shallow, p-value: 0.652654604765214
+\item Comparison: nonassignable vs shallow, p-value: 0.018874560457834404
+\end{itemize}
+
+Here the results are more significant but still not for deep vs shallow.
+There are many factors in the conversation data and
+stimulus does not seem to have a strong enough effect on the rating.
+If better more seamless conversation could be simulated,
+perhaps stronger effect of the stimulus on rating could be observed.
+The small difference can also be attributed to the fact that participants tend to
+avoid extremes in their grading.
+
+1
+\subsubsection{Reaction to stimulus}
+
+\begin{itemize}
+\item Reaction ratio shlw continuation:meta:abort 91:08:05
+\item Reaction ratio deep continuation:meta:abort 34:26:04
+\item Reaction ratio nass continuation:meta:abort 13:57:46
+\end{itemize}
+
+\begin{itemize}
+\item Reaction percentage ratio shlw 87.50% : 7.69% : 4.81%
+\item Reaction percentage ratio deep 53.12% : 40.62% : 6.25%
+\item Reaction percentage ratio nass 11.21% : 49.14% : 39.66%
+\end{itemize}
+
+\begin{itemize}
+\item Chi2 Statistic: 139.0566579414896
+\item P-value: 4.4935956067223523e-29
+\item Degrees of Freedom: 4
+\item Expected Frequencies:
+\item [[50.53521127 31.09859155 56.36619718]
+\item [33.32394366 20.50704225 37.16901408]
+\item [20.14084507 12.3943662  22.46478873]]
+\end{itemize}
+
+Significant difference.
+
+1
+\subsubsection{Stimulus x Reaction specific ratings}
+
+\begin{itemize}
+\item     | cntn | meta | abrt |
+\item shlw | 2.73 | 3.12 | 2.60 | stimulus x stimulus reaction match True
+\item deep | 2.43 | 2.62 | 2.75 | stimulus x stimulus reaction match True
+\item nass | 2.45 | 3.04 | 2.98 | stimulus x stimulus reaction match True
+\end{itemize}
+
+\subsubsection{Comments}
+
+\begin{itemize}
+\item Types of comments:
+\item Stimulus mentioned in comments 80 times
+\item shlw mentioned 00 times in comments - goes unnoticed
+\item deep mentioned 11 times in comments - sometimes mentioned
+\item nass mentioned 69 times in comments - mentioned in over half of the cases
+\end{itemize}
+
+1
+\subsubsection{Conversation style}
+
+\begin{itemize}
+\item Relaxed style convos 128
+\item Inquisitive style convos 183
+\item Inquisitive style rating 2.63
+\item Relaxed style rating 2.45
+\item Relaxed style addressed in comments: 1x positive 1x negative
+\item Inquistive style addressed in comments: 1x negative
+\end{itemize}
+
+Kruskal-Wallis Test p-value: 0.10266771117843472\
+Effect Size (Eta Squared): 0.009445412958117978
+
+Very small effect.
+To find statistically significant effect on conversation styles
+the conversation needs to be controlled in a more nuanced way by the dialog system.
+
+relaxed style is often reduced to repetition
+67 relaxed style not appreciated
+
+1
+\subsubsection{Zero anaphora}
+
+Number of zero anaphora conversations: 16\
+stimulus zero anaphora shallow:deep:nonassignable 08:08:00\
+Rating zero anaphora continuation:meta:abort 14:02:00
+
+Rating zero anaphora 2.1875\
+Rating non zero anaphora 2.7291666666666665
+
+Zero anaphora seems to have much better scores.
+Anaphorization has to incorporate zero anaphore better in the future.\
+357 here zero anaphore does not work\
+347 shouldve dropped
+!! pouze subjektové nuly !!
+
+\section{Qualitative analysis}
+
+2
+\subsubsection{Pro-coherence perception}
+\paragraph{Remaps}
+    100, 316, 53, 257 will map if can
+    126, 49, 330, 157, 175, 236 remap
+    259 epic remap
+    36 jaké další knihy ti doporučili ? general third person is accepted
+    276, 275 nonassignable interpreted as third person participant reference
+    243 misunderstood reference
+    limiting context for deep anaphore can lead to anaphore being open to a remap
+\paragraph{Indirect anaphora -- Pseudoanaphora}
+    hardcoded phrase with intended nonassignable anaphore is sometimes assignable by association
+    106, 271p, 212, 248, 260 pseudoanaphora
+    149 unmapped pseudoanaphora (mediace při rozvodu)
+    spectrum between pseudoanaphora and a newly mentioned entity anaphorized
+\paragraph{Sequential coherence}
+    123 sequentially interesting
+
+2
+\subsection{Deep anaphore}
+    too simplified a notion
+    remaps
+    253 perfect
+    30 clear mapping due to verb
+\paragraph{Inappropriate pragmatics}
+    127, 145 repeating a question - topical/pragmatic incoherence
+        limiting context for deep anaphore tends to generate inappropriate pragmatics
+    162, 114 stimulus understood but topic shift not accepted
+
+\paragraph{Incomplete control over conversation - topic status}
+    96, 168, 192, 203, 240, 245 not moving away from topic
+    337 anaphore refers to hyperonymum of previous utterance entities
+    312 vague anaphore, but on topic
+
+    deep anaphora design has multiple scenarios it tends to go in:
+    deep with generation issue
+    deep with acceptance
+    deep within same topic, other within same topic
+
+    deep anaphora acceptance depends on
+    whether the topic shift is annotated, accepted and
+    whether there is enough information to perform mapping
+
+1
+\subsection{Nonassignable anaphore}
+mostly fine
+
+\paragraph{Returning to entities that havent been topicalized}
+    162 graph according to Daneš
+
+    b: Jaký je T1?
+    h: R2 a R3
+    b: Jaký je T2?
+    h: R2a R2b R2c
+    dodělat !!
+
+    entity of q anaphore returned to is not topicalized at any point
+    as opposed to 145 where entity of q anaphore is topicalized
+    ...
+
+\paragraph{acceptance}
+    142 changed topic upon nonassignable
+    279 continuing despite nonassignability
+
+1
+\paragraph{Evaluation of shallow, deep, nonassignable categorization}
+deep anaphore (if accepted) tends to be seen as an abrupt shift to previous topic
+nonassignable anaphore (if accepted) tends to be seen as a cataphore
+    cataphore is unimportant in conversation, it is a text phenomena
+    what is important is there is trust (or tolerance)
+		It is hard to just change the anaphore - always more factors, some stronger in their influence on coherence:
+
+1
+\subsection{Outside of stimuli}
+
+\subsubsection{Topical coherence}
+    264p topic incoherence
+    190 didnt get to stimulus, not enough topic in conversation?
+
+\subsubsection{Metacommunication}
+    317 metacommunication
+    270 double anaphore -> meta
+    274 almost meta
+    101 meta but ended shortly after, coherence would not recover
+
+1
+\section{Conclusion}
