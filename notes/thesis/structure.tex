@@ -26,6 +26,8 @@
    % TODO
    % write experiment chapter
    % write conclusion and further steps
+   % add annotations to full data
+   %
    %
    % touch up methodology
    % split data chapter
@@ -34,8 +36,14 @@
 
 
 \maketitle
+\clearpage
+\tableofcontents
+\clearpage
+
+
 
 \chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 
 \par
 Recently, there has been a breakthrough in the way we interact with machines \footcite{sharma2024exploring}.
@@ -1749,9 +1757,9 @@ multiple layers of analysis need to be performed on it.
 The steps of analysis will be following:
 
 \begin{itemize}
-\item{Conversation design stimuli qualitative analysis}
-\item{Participant reaction qualitative analysis}
-\item{Quantitative analysis}
+\item{Conversation design stimuli annotation}
+\item{Participant reaction quantitative analysis}
+\item{General qualitative analysis}
 \end{itemize}
 
 In order to assess the datapoints for quantitative analysis
@@ -1798,7 +1806,7 @@ does not matter too much
 as all conversation should be visited anyways
 in search for unique situations.
 
-Ultimately the main reason for using
+In conclusion the main reason for using
 an experiment environment solution like convform
 can be summed up in two points:
 
@@ -1820,13 +1828,6 @@ proves contrastive in some of the quantifiable parameters
 to a set of conversations containing a different reoccuring pattern
 case could be made this is caused by the observed patterns
 regardless of all the noise naturally present in a conversation text.
-In case of this paper,
-the parameter is mainly:
-
-\begin{itemize}
-\item{participant acceptance score}
-\item{ratio of the participants quitting the conversation at the stimuli}
-\end{itemize}
 
 
 
@@ -1845,7 +1846,8 @@ the parameter is mainly:
 1
 \section{Coherence disruptions in conversation}
 
-\section{Further steps}
+\chapter*{Further steps}
+\addcontentsline{toc}{chapter}{Further Steps}
 
 1
 \subsection{Stimulus generation improvement}

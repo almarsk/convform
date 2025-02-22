@@ -280,7 +280,10 @@ with open("notes/data/final_annotated_data.json", "r") as d:
     print("______________")
 
     def get_conversation_style_convos(conversation_style: str):
-        return [c for c in data if conversation_style in c["type"]]
+        return [c for c in data if
+            conversation_style in c["type"] and
+            "stimulus" in c and c["stimulus"] == "shallow"
+        ]
 
     relaxed = get_conversation_style_convos('relaxed')
     inquisitive = get_conversation_style_convos('inquisitive')

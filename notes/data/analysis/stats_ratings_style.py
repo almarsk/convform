@@ -70,7 +70,9 @@ with open("notes/data/final_annotated_data.json", "r") as d:
     def get_style_ratings(stimulus_type: str):
         return [(c["rating"] or 5) for c in data if
             "rating" in c and c["rating"] and
-            "type" in c and stimulus_type in c["type"]]
+            "type" in c and stimulus_type in c["type"] and
+            "stimulus" in c and c["stimulus"] == "shallow"
+        ]
 
     def do_stats_style(ratings_getter):
         group1 = ratings_getter("inquisitive")  # Group 1's ratings

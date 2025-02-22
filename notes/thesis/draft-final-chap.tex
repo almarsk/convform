@@ -3,63 +3,254 @@
 
 \subsection{Experimental designs}
 
-1
-\subsubsection{Anaphora}
-Shallow
-Deep
-Unassignable
-\subsubsection{Conversation style}
-Inquisitive
-Relaxed
+Data collection took place with the use of six chatbots.
+They each represent a possible combination of a 3x2 design.
+The two design variables are anaphora type and conversation style.
+
+The anaphora types are as discussed above a shallow, deep and unassignable.
+The conversation styles were two. One, inquisitive,
+where the instruction part of the prompt
+would always instruct the LLM to pose a question.
+The other, relaxed, would interleave this question instruction with
+an instruction to comment on the conversation in a nonquestion way.
+The conversation style variable was deployed for purely explorative purposes.
+
+All the chatbots had the same persona instruction except their names.
+The first utterance in the conversation would be the chatbots and
+would be hardcoded to contain greeting and self introduction.
+
+They would be instructed to chat for several turns and then the stimulus would come.
+After the stimulus the chatbot would continue for a couple more turns and then say goodbye.
+The questionnare would then appear to the participant.
+That is unless the participant aborted earlier, in which case the questionnare would appear immediately.
+In some cases participants simply left the user interface leaving no extra information.
+Other then that, participants were asked to grade the conversation on scale 1 to 5
+where 1 was most acceptable and 5 was least acceptable.
+
+Timing of the prompt would differ based on the anaphora type.
+For shallow type the chatbot simply conversates for two turns and thereafter it starts tracking entities.
+At first recognized entity the prompt fires off
+prompting an utterance about the exctracted entity and anaphorizing it.
+With deep anaphora similar thing happens,
+but the chatbot waits several more entity occurences
+before also prompting an utterance about the extracted entity and anaphorizing it.
+Lastly the nonassignable anaphora has the same timing method as the shallow anaphora,
+but the prompt itself is hardcoded to contain an anaphoric reference which is
+very unlikely to be assignable.
+
+In the experiment the participant would be instructed to end the conversation,
+if the chatbots communication wasnt natural.
+The concrete czech word used was "přirozená komunikace".
 
 \subsection{Participants}
-Pilot
-LABELS students
+The data has been collected in two waves.
+The pilot wave generated 50 conversations
+the participants for which were recruited from the networks of the papers author.
+In the attached full data
+the identificators of these conversations have
+the letter p for pilot appended at the end.
+The second wave generated 325 conversations
+the participants for which were recruited from the students of the Charles University.
+They were instructed to take two conversations with a week pause in the middle.
+However since for this experiment explorative in nature contrast and timing were not critical
+they were free to revisit the chatbot however they liked.
+There is no attempt made to indicate unique participants in the conversation as
+this would not bring any observable results.
+If such approach should be taken in the future,
+more control has to be gained over the course of the converstaion
+as is shown below.
+No changes were made to the design for the second wave other then changing the structure of the qustionnare.
+While in the pilot wave was tasked to make a comment on the conversation or
+explain why they aborted it if they did so,
+the second wave was shown the entire conversation
+and was asked to mark and comment on specific chatbot responses they found odd or interesting.
 
 2
 \subsection{Annotation}
 
+All 375 conversations were visited to confirm whether
+the stimulus expected based on the conversation design.
+Other than that the participant reaction was annotated to be either
+continuation, metacommunication or aborting of the conversation.
+These three types of participant reaction to stimulus
+represent the amount of understanding the reference.
+In simple terms, continuation means
+the stimulus went under the participants radar
+or has been accepted.
+Metacommunication, an utterance which somehow addresses the ongoing communication,
+shows the participant not understanding,
+but perhaps attributing the misunderstanding to themselves or
+believing the issue can be resolved.
+Lastly the conversation is aborted when the participant looses trust
+in the ongoing conversation being coherent now or in the future.
+Then the illusion of social interaction falls
+and the conversation the participant is having dissolves into
+typing text into a computer program and getting text in return.
+The immersivness necessary for simulating a conversation is here no longer achieved.
+
 \subsection{Inter--annotator agreement}
 
-\subsubsection{Stimulus}
-        Cohen's Kappa for Rater 1 and Rater 2: 0.8851063829787233
-        Cohen's Kappa for Rater 1 and Rater 3: 0.883745963401507
-        Cohen's Kappa for Rater 2 and Rater 3: 0.9224137931034483
+To make sure that annotating the data is possible,
+inter-annotator agreement has been measured on 37 conversations which gives 10% of the data.
+Three annotators annotated each conversation for anaphora type and
+whether the participant reaction to stimulus is metacommunicative.
+Metacommunication is the only reaction type that needs manual annotation since
+aborting the conversation is
+observable in the transcript and marked in the data automatically
+and any reaction that is not aborting and metacommunication has to be a continuation.
 
-        Average Pairwise Cohen's Kappa: 0.8970887131612262
-        IDs with disagreements:
-        [145, 150, 151, 153]
+\subsubsection{Stimulus}
+
+For anaphora type Cohen's Kappa was calculated for each of the three annotator pairs
+with following results:
+
+\begin{itemize}
+    \item Cohen's Kappa for Annotator 1 and Annotator 2: 0.89
+    \item Cohen's Kappa for Annotator 1 and Annotator 3: 0.88
+    \item Cohen's Kappa for Annotator 2 and Annotator 3: 0.92
+\end{itemize}
+
+Coming to the average Pairwise Cohen's Kappa of 0.90
+the inter-annotator agreement appears to be high enough
+that this annotation categorization to be used and trusted.
+
+Each of the conversations that caused disagreement is interesting in its own right:
+
+
+\textbf{Conversation ID: 145}
+
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item ...
+    \item \utterance{b:}{Jaké dárky plánuješ koupit?}{Which gifts do you intend to buy?}
+    \item \utterance{h:}{ještě nevím, potřebuji pro taťku nějaký dárek a pro mamku}{don't know yet, need for dad a gift and for mom}
+    \item \utterance{b:}{To může být výzva, ale určitě najdeš něco skvělého.}{That can be a challenge, but surely you'll find something great.}
+    \item \utterance{h:}{jo, taky si myslím}{yeah, i also think}
+    \item \utterance{b:}{Jaké koníčky má tvůj táta a mamka?}{Which hobbies does your dad a mom have?}
+    \item \utterance{h:}{nevím, neznám je}{don't know, don't know them}
+    \item \utterance{b:}{To je škoda, můžeš se jich zeptat.}{That is a shame, you can ask them.}
+    \item \utterance{h:}{bydlí moc daleko}{they live too far}
+    \item \utterance{b:}{Bot: To je těžké, ale co si zjistit jejich zájmy?}{That is tough, but how about finding out what their interests are?}
+    \item \utterance{h:}{taky nevím§}{also don't know}
+    \item \utterance{b:}{Možná bys mohl zjistit, co mají rádi.}{maybe you could look into, what they like}
+    \item \utterance{h:}{ok}{ok}
+    \item \utterance{b:}{To je dobrý nápad, jak to uděláš?}{That's a good idea, how will you do it?}
+    \item \utterance{h:}{zeptáím se tety, ta určitě bude vědět}{I'll ask my aunt, she'll surely know}
+    \item \utterance{b:}{Jaké mají oni koníčky?}{Which hobbies do they have?}
+    \item \utterance{h:}{kdo?}{who?}
+    \item ...
+\end{itemize}
+
+This conversation potentially has a deep anaphora in it,
+since the first occurence of the mappable entity \textit{dad and mom} is deep in the conversations history
+at the stimulus time.
+There are however other entites that are mappable
+that are mentioned in the meantime like \textit{aunt}
+or the general group of \textit{close ones} mentioned before the snippet starts.
+This points at the potentially missing category of \textit{ambivalent anaphora}.
+Another issue with this stimulus is also that it askes a question that is already being discussed.
+This can be seen as a both topical and sequentical coherence disruption.
+Why would the same question with the same reference in it be posed?
+That also makes the anaphora that much more vague and leads to a metacommunication \textit{who?}.
+
+\textbf{Conversation ID: 150}
+
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+\item ...
+\item \utterance{h:}{Běhám 400m překážek a dělám sedmiboj}{I run 400m with obstacles and do heptathlon}
+\item \utterance{b:}{To je náročné! Jak dlouho už se tomu věnuješ?}{That's demanding! How long have you been doing this?}
+\item ... 7 turns (14 utterances) ...
+\item \utterance{h:}{Jsem po zánětu v patě, tak snad se to nevrátil, hodně to uvolňuji a cvičím na to}{I had a heel inflammation, hopefully it won't return, I release and excersise it a lot}
+\item \utterance{b:}{Jaké disciplíny tvoří on? Jakou máš mezi nimi nejoblíbenější?}{Which disciplines does it consist of? Which is you favorite among them?}
+\item \utterance{h:}{Kdo?}{Who?}
+\item ...
+\end{itemize}
+
+Here the mappable entity \textit{heptathlon} is so far deep in the conversation that
+the annotator who would not agree with calling a deep anaphora stimulus
+perhaps did not even notice it or insisted that this is just too deep.
+While that is technically against the annotators instruction based on the above description of stimuli
+but it points at the interesting problematic of anaphora depth.
+
+The other two conversations that had an annotation disagreement about them were IDs 151 and 153.
+Both of them have an imperfect generation in them that excludes them from the stimuli containing data.
 
 \subsubsection{Metacommunication}
-        Cohen's Kappa for Rater 1 and Rater 2: 0.9407894736842105
-        Cohen's Kappa for Rater 1 and Rater 3: 0.883495145631068
-        Cohen's Kappa for Rater 2 and Rater 3: 0.9423076923076923
 
-        Average Pairwise Cohen's Kappa: 0.922197437207657
+Inter-annotator agreement regarding the metacommunication has produced following results:
 
-        IDs with disagreements:
-        [164, 173]
+\begin{itemize}
+\item Cohen's Kappa for Annotator 1 and Annotator 2: 0.94
+\item Cohen's Kappa for Annotator 1 and Annotator 3: 0.88
+\item Cohen's Kappa for Annotator 2 and Annotator 3: 0.94
+\end{itemize}
 
-\subsubsection{Conclusion}
-        Annotator agreement is strong enough for both stimulus type and metacommunication reaction.
+With the average Pairwise Cohen's Kappa coming to 0.92,
+it can be considered reliable to annotate metacommunication
+in the collected data.
 
+The two conversations that had disagreement about them in terms of
+presence of metacommunication in the participant reaction to stimulus
+are both interesing in their own right.
 
+\textbf{Conversation ID: 164}
 
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+\item ...
+\item \utterance{b:}{Jakou písničku z ní máš nejraději?}{Which song from here do you like the best?}
+\item \utterance{h:}{z rádia?}{from the radio?}
+\item ...
+\end{itemize}
 
-\section{Quantiative Analysis}
+This reaction can be seen to contain an ellided metacommunicative device like \textit{do you mean}.
+Since it is not present explicitely and the participant reaction is topically anchored in the conversation,
+the case is ambivalent.
 
+\textbf{Conversation ID: 173}
 
-1
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+\item ...
+\item \utterance{b:}{Tak to by mě zajímalo, jak na to pak ona zareagovala.}{Then I wonder, what was her reaction to that.}
+\item \utterance{h:}{Ano, pokazilo}{Yes, it went wrong}
+\item ...
+\end{itemize}
+
+It is unclear where the participant is coming from in their response.
+For this reason, it is also unclear whether the participant reaction is a metacommunication.
+There is a good chance the participant is somehow commenting on the chatbot breaking,
+in which case such utterance would indeed be considered to address the ongoing communication.
+
+\par
+In conclusion the annotator agreement is
+strong enough for both stimulus type and metacommunication reaction and
+quantitative analysis can be performed on the measured metrics.
+
+\section{Quantitative Analysis}
+
 \subsection{Expectations}
-rating
-from best to worse: shallow, deep, nonassignable
-abort
-from least to most: shallow, deep, nonassignable
-reactions
-shallow 	– continue
-deep		– meta
-nonassignable 	– abort
-inquisitive will be more negative
+
+In the performed quantitative analysis,
+following expectations were used as reference to the found results.
+
+For user rating the rating was expected to be ordered like so from best to worse:
+shallow, deep, nonassignable.
+
+As far as aborting the conversation goes,
+The amount of aborted conversations were expected to be ordered
+from least to most als:
+shallow, deep, nonassignable.
+
+The reactions were expected to map onto the stimuli like so:
+
+\begin{tabbing}
+\hspace{4cm} \= \hspace{4cm} \= \kill % set up tab stops
+Shallow \> Continue \\
+Deep \> Meta \\
+Nonassignable \> Abort \\
+\end{tabbing}
+
+As far as conversation style, the inquisitive variant was expected to have a worse score
+since every next question shifts the topic forwards, which should generate a topical progression
+that sooner or later becomes incoherent as Hrbáček demonstrates ().
 
 1
 \subsection{Result}
@@ -231,6 +422,8 @@ relaxed style is often reduced to repetition
 1
 \subsubsection{Zero anaphora}
 
+\footcite{zero}
+
 Number of zero anaphora conversations: 16\
 stimulus zero anaphora shallow:deep:nonassignable 08:08:00\
 Rating zero anaphora continuation:meta:abort 14:02:00
@@ -239,8 +432,8 @@ Rating zero anaphora 2.1875\
 Rating non zero anaphora 2.7291666666666665
 
 Zero anaphora seems to have much better scores.
-Anaphorization has to incorporate zero anaphore better in the future.\
-357 here zero anaphore does not work\
+Anaphorization has to incorporate zero anaphora better in the future.\
+357 here zero anaphora does not work\
 347 shouldve dropped
 !! pouze subjektové nuly !!
 
@@ -255,9 +448,9 @@ Anaphorization has to incorporate zero anaphore better in the future.\
     36 jaké další knihy ti doporučili ? general third person is accepted
     276, 275 nonassignable interpreted as third person participant reference
     243 misunderstood reference
-    limiting context for deep anaphore can lead to anaphore being open to a remap
+    limiting context for deep anaphora can lead to anaphora being open to a remap
 \paragraph{Indirect anaphora -- Pseudoanaphora}
-    hardcoded phrase with intended nonassignable anaphore is sometimes assignable by association
+    hardcoded phrase with intended nonassignable anaphora is sometimes assignable by association
     106, 271p, 212, 248, 260 pseudoanaphora
     149 unmapped pseudoanaphora (mediace při rozvodu)
     spectrum between pseudoanaphora and a newly mentioned entity anaphorized
@@ -265,20 +458,20 @@ Anaphorization has to incorporate zero anaphore better in the future.\
     123 sequentially interesting
 
 2
-\subsection{Deep anaphore}
+\subsection{Deep anaphora}
     too simplified a notion
     remaps
     253 perfect
     30 clear mapping due to verb
 \paragraph{Inappropriate pragmatics}
     127, 145 repeating a question - topical/pragmatic incoherence
-        limiting context for deep anaphore tends to generate inappropriate pragmatics
+        limiting context for deep anaphora tends to generate inappropriate pragmatics
     162, 114 stimulus understood but topic shift not accepted
 
 \paragraph{Incomplete control over conversation - topic status}
     96, 168, 192, 203, 240, 245 not moving away from topic
-    337 anaphore refers to hyperonymum of previous utterance entities
-    312 vague anaphore, but on topic
+    337 anaphora refers to hyperonymum of previous utterance entities
+    312 vague anaphora, but on topic
 
     deep anaphora design has multiple scenarios it tends to go in:
     deep with generation issue
@@ -290,7 +483,7 @@ Anaphorization has to incorporate zero anaphore better in the future.\
     whether there is enough information to perform mapping
 
 1
-\subsection{Nonassignable anaphore}
+\subsection{Nonassignable anaphora}
 mostly fine
 
 \paragraph{Returning to entities that havent been topicalized}
@@ -302,8 +495,8 @@ mostly fine
     h: R2a R2b R2c
     dodělat !!
 
-    entity of q anaphore returned to is not topicalized at any point
-    as opposed to 145 where entity of q anaphore is topicalized
+    entity of q anaphora returned to is not topicalized at any point
+    as opposed to 145 where entity of q anaphora is topicalized
     ...
 
 \paragraph{acceptance}
@@ -312,11 +505,11 @@ mostly fine
 
 1
 \paragraph{Evaluation of shallow, deep, nonassignable categorization}
-deep anaphore (if accepted) tends to be seen as an abrupt shift to previous topic
-nonassignable anaphore (if accepted) tends to be seen as a cataphore
+deep anaphora (if accepted) tends to be seen as an abrupt shift to previous topic
+nonassignable anaphora (if accepted) tends to be seen as a cataphore
     cataphore is unimportant in conversation, it is a text phenomena
     what is important is there is trust (or tolerance)
-		It is hard to just change the anaphore - always more factors, some stronger in their influence on coherence:
+		It is hard to just change the anaphora - always more factors, some stronger in their influence on coherence:
 
 1
 \subsection{Outside of stimuli}
@@ -327,7 +520,7 @@ nonassignable anaphore (if accepted) tends to be seen as a cataphore
 
 \subsubsection{Metacommunication}
     317 metacommunication
-    270 double anaphore -> meta
+    270 double anaphora -> meta
     274 almost meta
     101 meta but ended shortly after, coherence would not recover
 

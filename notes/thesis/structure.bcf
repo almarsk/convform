@@ -2431,6 +2431,7 @@
     <bcf:citekey order="58" intorder="1">gpttoxicity</bcf:citekey>
     <bcf:citekey order="59" intorder="1">robopersona</bcf:citekey>
     <bcf:citekey order="60" intorder="1">hrbacek1994</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">zero</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

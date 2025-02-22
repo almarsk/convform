@@ -1855,6 +1855,56 @@
       \field{pages}{36\bibrangedash 45}
       \range{pages}{10}
     \endentry
+    \entry{zero}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d9125b7654a1ab28a3224e1f04fd09ed}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=266391912737839d7fe43edec9eb8a5a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jingyu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c2dd48959096c7c60bb2bdb85cdec160}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Lijun},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fe298519041d21e32701db9d85e08122}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Zhi},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{a956ac131795e5da3508bd94fb79da25}
+      \strng{fullhash}{56e81eed637201412ea6eaa1abdf30bf}
+      \strng{fullhashraw}{56e81eed637201412ea6eaa1abdf30bf}
+      \strng{bibnamehash}{a956ac131795e5da3508bd94fb79da25}
+      \strng{authorbibnamehash}{a956ac131795e5da3508bd94fb79da25}
+      \strng{authornamehash}{a956ac131795e5da3508bd94fb79da25}
+      \strng{authorfullhash}{56e81eed637201412ea6eaa1abdf30bf}
+      \strng{authorfullhashraw}{56e81eed637201412ea6eaa1abdf30bf}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1664-1078}
+      \field{journaltitle}{Frontiers in Psychology}
+      \field{title}{A Study of Zero Anaphora Resolution in Chinese Discourse: From the Perspective of Psycholinguistics}
+      \field{volume}{12}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.3389/fpsyg.2021.663168
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.663168
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.663168
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

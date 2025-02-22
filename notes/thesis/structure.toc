@@ -1,0 +1,96 @@
+\contentsline {chapter}{Introduction}{3}{}%
+\contentsline {chapter}{\numberline {1}Theoretical foundations}{7}{}%
+\contentsline {section}{\numberline {1.1}Textual dimension of conversation}{7}{}%
+\contentsline {subsubsection}{Text}{7}{}%
+\contentsline {subsubsection}{Coherence}{8}{}%
+\contentsline {subsubsection}{Cohesion}{8}{}%
+\contentsline {subsubsection}{Cataphore and Exophore}{9}{}%
+\contentsline {subsubsection}{Anaphore, Endophore and Coreference}{9}{}%
+\contentsline {subsubsection}{Topic}{10}{}%
+\contentsline {subsubsection}{Association}{11}{}%
+\contentsline {subsubsection}{Entity}{11}{}%
+\contentsline {section}{\numberline {1.2}Interactional dimension of conversation}{11}{}%
+\contentsline {subsubsection}{Adjacency pair}{12}{}%
+\contentsline {subsubsection}{Sequence structure}{12}{}%
+\contentsline {subsubsection}{Topic shading}{12}{}%
+\contentsline {subsubsection}{Dis/preferred answers}{13}{}%
+\contentsline {subsubsection}{Conversational repair}{13}{}%
+\contentsline {section}{\numberline {1.3}Disruptions in conversation coherence}{13}{}%
+\contentsline {subsection}{\numberline {1.3.1}Sources of incoherence in conversation}{14}{}%
+\contentsline {subsubsection}{Topic shifts}{15}{}%
+\contentsline {subsubsection}{Nonassignable anaphore}{15}{}%
+\contentsline {subsection}{\numberline {1.3.2}What do people do about coherence disruptions?}{15}{}%
+\contentsline {chapter}{\numberline {2}Experimental framework}{17}{}%
+\contentsline {section}{\numberline {2.1}What are chatbots?}{17}{}%
+\contentsline {subsubsection}{Turn taking in chatbot interactions}{18}{}%
+\contentsline {section}{\numberline {2.2}Convform}{19}{}%
+\contentsline {subsubsection}{Participant facing chat interface}{19}{}%
+\contentsline {subsubsection}{Conversation design tool}{19}{}%
+\contentsline {subsubsection}{Testing and debugging of various conversation contexts}{19}{}%
+\contentsline {subsubsection}{Accesing the conversation data}{19}{}%
+\contentsline {section}{\numberline {2.3}Conversation design in theory}{20}{}%
+\contentsline {subsection}{\numberline {2.3.1}Rule–based approach}{20}{}%
+\contentsline {subsubsection}{Pros and cons}{20}{}%
+\contentsline {subsection}{\numberline {2.3.2}Statistically driven approach}{21}{}%
+\contentsline {subsubsection}{Large language models}{21}{}%
+\contentsline {subsubsection}{Prompt engineering techniques}{21}{}%
+\contentsline {subsubsection}{Pros and cons}{22}{}%
+\contentsline {section}{\numberline {2.4}Conversation design in practice}{23}{}%
+\contentsline {subsubsection}{State}{23}{}%
+\contentsline {subsubsection}{Intent}{23}{}%
+\contentsline {subsubsection}{Coherence}{24}{}%
+\contentsline {subsubsection}{Conversation style}{24}{}%
+\contentsline {subsubsection}{Prompting}{25}{}%
+\contentsline {subsection}{\numberline {2.4.1}Stimuli}{27}{}%
+\contentsline {subsubsection}{Shallow anaphore}{27}{}%
+\contentsline {subsubsection}{Deep anaphore}{27}{}%
+\contentsline {subsubsection}{nonassignable anaphore}{28}{}%
+\contentsline {subsection}{\numberline {2.4.2}Ending the conversation}{29}{}%
+\contentsline {section}{\numberline {2.5}Data}{29}{}%
+\contentsline {subsection}{\numberline {2.5.1}Data analysis}{30}{}%
+\contentsline {chapter}{\numberline {3}Data collection and analysis}{32}{}%
+\contentsline {section}{\numberline {3.1}Data collection}{32}{}%
+\contentsline {subsection}{\numberline {3.1.1}Experimental designs}{32}{}%
+\contentsline {subsection}{\numberline {3.1.2}Participants}{33}{}%
+\contentsline {subsection}{\numberline {3.1.3}Annotation}{33}{}%
+\contentsline {subsection}{\numberline {3.1.4}Inter--annotator agreement}{33}{}%
+\contentsline {subsubsection}{Stimulus}{34}{}%
+\contentsline {subsubsection}{Metacommunication}{36}{}%
+\contentsline {section}{\numberline {3.2}Quantitative Analysis}{37}{}%
+\contentsline {subsection}{\numberline {3.2.1}Expectations}{37}{}%
+\contentsline {subsection}{\numberline {3.2.2}Result}{37}{}%
+\contentsline {paragraph}{Rating overall}{37}{}%
+\contentsline {subsubsection}{Design rating}{38}{}%
+\contentsline {subsubsection}{Design rating with abandonment interpretation}{38}{}%
+\contentsline {paragraph}{Abandoned directly after stimulus}{38}{}%
+\contentsline {paragraph}{Abandoned anytime}{39}{}%
+\contentsline {subsubsection}{Reaction to stimulus}{39}{}%
+\contentsline {subsubsection}{Stimulus x Reaction specific ratings}{40}{}%
+\contentsline {subsubsection}{Comments}{40}{}%
+\contentsline {subsubsection}{Conversation style}{40}{}%
+\contentsline {subsubsection}{Zero anaphora}{41}{}%
+\contentsline {section}{\numberline {3.3}Qualitative analysis}{41}{}%
+\contentsline {subsubsection}{Pro-coherence perception}{41}{}%
+\contentsline {paragraph}{Remaps}{41}{}%
+\contentsline {paragraph}{Indirect anaphora -- Pseudoanaphora}{41}{}%
+\contentsline {paragraph}{Sequential coherence}{41}{}%
+\contentsline {subsection}{\numberline {3.3.1}Deep anaphora}{41}{}%
+\contentsline {paragraph}{Inappropriate pragmatics}{41}{}%
+\contentsline {paragraph}{Incomplete control over conversation - topic status}{41}{}%
+\contentsline {subsection}{\numberline {3.3.2}Nonassignable anaphora}{42}{}%
+\contentsline {paragraph}{Returning to entities that havent been topicalized}{42}{}%
+\contentsline {paragraph}{acceptance}{42}{}%
+\contentsline {paragraph}{Evaluation of shallow, deep, nonassignable categorization}{42}{}%
+\contentsline {subsection}{\numberline {3.3.3}Outside of stimuli}{42}{}%
+\contentsline {subsubsection}{Topical coherence}{42}{}%
+\contentsline {subsubsection}{Metacommunication}{42}{}%
+\contentsline {section}{\numberline {3.4}Conclusion}{42}{}%
+\contentsline {section}{\numberline {3.5}Coherence disruptions in conversation}{43}{}%
+\contentsline {chapter}{Further Steps}{44}{}%
+\contentsline {subsection}{\numberline {3.5.1}Stimulus generation improvement}{44}{}%
+\contentsline {subsection}{\numberline {3.5.2}Hybrid approach}{44}{}%
+\contentsline {subsection}{\numberline {3.5.3}New opportunities}{45}{}%
+\contentsline {subsubsection}{Comparing different anaphora depths}{45}{}%
+\contentsline {subsection}{\numberline {3.5.4}Associativity in nonassignable anaphora}{45}{}%
+\contentsline {subsection}{\numberline {3.5.5}Prompting unassignable anaphora}{45}{}%
+\contentsline {section}{\numberline {3.6}Conclusion}{45}{}%
