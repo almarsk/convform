@@ -504,8 +504,8 @@ would be hurried.
 
 While annotating, participants comments were collected
 to gain an extra metric on the reflection of the stimuli.
-While the shallow anaphora was not mentioned a single time
-and generally went unnoticed,
+While the shallow anaphora was mentioned once due to a generation issue
+and generally went by unnoticed,
 the deep anaphora got 11 mentions, which makes for
 slightly less than a fifth of conversations with this stimulus.
 Finally the nonassignable anaphora was mentioned 69 times in the participant comments.
@@ -650,24 +650,204 @@ caused by the chatbotwould remain in the conversation.
 
 \section{Qualitative analysis}
 
-2
-\subsubsection{Pro-coherence perception}
-\paragraph{Remaps}
-    100, 316, 53, 257 will map if can
-    126, 49, 330, 157, 175, 236 remap
-    259 epic remap
-    36 jaké další knihy ti doporučili ? general third person is accepted
-    276, 275 nonassignable interpreted as third person participant reference
-    243 misunderstood reference
-    limiting context for deep anaphora can lead to anaphora being open to a remap
-\paragraph{Indirect anaphora -- Pseudoanaphora}
-    hardcoded phrase with intended nonassignable anaphora is sometimes assignable by association
-    106, 271p, 212, 248, 260 pseudoanaphora
-    149 unmapped pseudoanaphora (mediace při rozvodu)
-    spectrum between pseudoanaphora and a newly mentioned entity anaphorized
-\paragraph{Sequential coherence}
-    123 sequentially interesting
+Visiting each conversation during annotation
+gave a detailed insight on the nature of the data,
+success of generating the correct stimuli and
+creating the sought after situations.
+The following observations about
+the experiment design, the various stimuli and conversation coherence in general
+were made.
 
+\subsection{Pro-coherence perception}
+
+Most noticeably the data shows how participants communicate with a cooperativity in mind
+and assume a lot in order to maintain the conversation flow.
+The quality with which the chatbot could generate responses was high enough,
+that the illusion of social interaction would hold up even if minor issues did come up.
+
+\subsubsection{Remaps}
+
+In following conversation, the participant maps an anaphora on a possible candidate
+even though the hardcoded response was meant to be nonassignable:
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 100}
+    \item ...
+    \item \utterance{h:}{mám jednu mourovatou doma}{I have a tabby one at home}
+    \item \utterance{b:}{Jak se jmenuje tvá mourovatá kočka?}{What is the name of your tabby cat?}
+    \item \utterance{h:}{to nevím}{I don't know}
+    \item \utterance{b:}{Jak dlouho už ji máš doma?}{How long have you had it at home?}
+    \item \utterance{h:}{nemám vlastně}{I don't actually}
+    \item \utterance{b:}{Jak ses k ní tedy dostal?}{So how did you get it?}
+    \item \utterance{h:}{ráda peču}{I like to bake}
+    \item \utterance{b:}{Jaké oblíbené dobroty obvykle pečeš?}{Which treats do you usually bake?}
+    \item \utterance{h:}{dorty}{cakes}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to ona potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
+    \item \utterance{h:}{myslíš tu kočku?}{You mean the cat?}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+
+This conversation along with several others is the reason annotation was necessary for this type of stimulus.
+The tolerance on participant side was sometimes very high, even if the anaphora was incongruent
+with the assumed mapping or even if
+some of the reference contained in the hardcoded stimulus does not map perfectly
+like in following conversation:
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 257}
+    \item ...
+    \item \utterance{b:}{Stále je co zlepšovat, přemýšlel jsi o trenérovi?}{There is always room to improve, did you consider a trainer?}
+    \item \utterance{h:}{na dvou hodinách už jsem byl s trenérem}{I already did two lessons with a trainer}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to ona potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
+    \item \utterance{h:}{že musím lépe používat nohy, pohyb vychází z kyčle}{that I have to use my legs better, the movement start in the hip}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+On this regard, a general third person seems to be acceptable,
+though from the annotation point of view is should be nonassignable as can be seen here:
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 36}
+    \item ...
+    \item \utterance{b:}{Co tě nejvíce zaujalo v této knížce?}{What did you find the most interesting in this book?}
+    \item \utterance{h:}{Nádherné fotografie minerálů pod mikroskopem.}{Beautiful photos of minerals under a microscope.}
+    \item \utterance{b:}{Jaké další knihy o minerálech ti doporučili?}{What other books about mineral did they recommend?}
+    \item \utterance{h:}{Většinou mi nikdo nic nedoporučuje, hledám si knihy sám.}{Usually nobody recommends me anything, I look for my books alone.}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+In some cases the nonassignable anaphora stimulus has the potential
+to be interpreted as a third person reference to the participant.
+Such cases seem to have been tolerated by the participants as well
+though in human-human conversation these would probably cause metacommunication.
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 276}
+    \item ...
+    \item \utterance{b:}{Co tě dneska tak unavilo?}{What exhausted you today?}
+    \item \utterance{h:}{konverzace s klučičím pohlavím}{conversations with the male gender}
+    \item \utterance{b:}{To zní náročně, o čem jste si povídali?}{That sounds demanding, what did you talk about?}
+    \item \utterance{h:}{o škole}{about school}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to ona potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
+    \item \utterance{h:}{docela dobře}{pretty well}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+In case of the deep anaphora stimulus, one of the big reasons annotation was necessary
+was also the risk of a remap.
+Generating the deep anaphora response, the LLM is only shown the appropriate section of the conversation.
+This exposes the generated and anaphorized response
+to the risk of another mapping candidate to have been mentioned in the meantime like in the following conversation:
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 259}
+    \item ...
+    \item \utterance{h:}{ano, mám - zaklínač 3, kingdomcome, nebo dota 2}{yes I do - Wither 3, kingdomcome or dota 2}
+    \item \utterance{b:}{Zaklínač 3 má nádherně propracovaný svět a silný příběh.}{Withcer 3 has an elaborate world and a strong story.}
+    \item \utterance{h:}{přesně tak, je to úplně jiný svět než ten náš, takže je to skvělá relaxace.}{exactly, it is a completely different world from ours, so it is a great relaxation.}
+    \item \utterance{b:}{Do které části herního světa Zaklínače 3 se nejraději vracíš?}{To which part of the Witcher 3 world do you like to return the most?}
+    \item \utterance{h:}{Jako které místo se mi tam líbilo? Novigrad je moc hezký}{As in which place there I liked? Novigrad is very pretty.}
+    \item \utterance{b:}{Kterého hrdinu v ní hraješ nejraději?}{Which hero do you play most often in her? (dota 2 is feminine in Czech)}
+    \item \utterance{h:}{No tak tam není moc široký výběr hrdinů, Geralta}{Well there is not a broad selection of heroes, Geralt}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+Since multiple videogames were mentioned,
+the participant interpreted the question to be about the most recetnly mentioned one,
+\textit{Witcher 3} which has also been topicalized by the chatbot.
+The chatbot was prompted to ask about the \textit{dota 2} where also the question makes more sense.
+
+Due to stimulus generation issues, sometimes the reference is misunderstood.
+In following conversation the stimulus reference the the \textit{african continent}
+but the participant answers in a more broad way.
+They even mention this misunderstanding later in a comment.
+This means during the conversation, the anaphora is nonassignable and general enough,
+that the participant continues the conversation even if it entails a topic shift.
+
+\begin{quote}
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+\item \textbf{conversation id: 243}
+\item ...
+\item \utterance{b:}{Dnes jsem se dozvěděla, že existuje více než 7 000 jazyků.}{Today I learned there is over 7000 languages.}
+\item \utterance{h:}{to je hodně zajímavé, už jsem to taky slyšela. Mám pocit, že třetinou z nich se mluví na africkém kontinentu}{that is very interesting, I also heard about this. I think that third of them are spoken on the african continent.}
+\item \utterance{b:}{Máš nějakou oblíbenou zemi nebo jazyk na něm?}{So you have a favorite country or language on him? (continent is masculine in Czech)}
+\item \utterance{h:}{mám docela ráda anglii a angličtinu, co ty?}{I like england and english, what about you?}
+\item ...
+\end{itemize}
+\end{quote}
+
+
+\subsubsection{Pseudoanaphora}
+
+    hardcoded phrase with intended nonassignable anaphora is sometimes assignable by association
+
+    An anaphora which lacks an explicit candidate mapping does not necessarily need to be nonassignable.
+    Such pseudoanaphora () also occurs in the collected data:
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 248}
+    \item ...
+    \item \utterance{h:}{Byla jsem v nemocnici za pacienty}{I went to the hospital to see the patients}
+    \item \utterance{b:}{To muselo být zajímavé. Jaká byla tvoje nejcennější zkušenost?}{That must have been interesting. What was you most valuable experience?}
+    \item \utterance{h:}{Je jich hodne}{There was a lot}
+    \item \utterance{b:}{To zní dobrodružně, co tě tam dneska konkrétně zaujalo?}{That sounds adventurous, what specifially interested you today?}
+    \item \utterance{h:}{Zvetsena slezina}{enlarged spleen}
+    \item \utterance{b:}{Znamenalo to pro něj nějaké specifické komplikace?}{Did it for him entail some complications?}
+    \item \utterance{h:}{No…je to priznak lymfomu}{Well... it is a symptom of lymphoma}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+    Here the chatbot response contains an anaphora which
+    cannot be mapped onto a specific mentioned entity in the previous text
+    but is understandable as there is clearly a person at hand in the situation the participant describes.
+    The participant has then no issues continuing the conversation and
+    moving the topic forward by answering the chatbots question.
+
+    A spectrum could be shown of anaphoric devices
+    that stems from a pseudoanaphora which is clearly related to a mentioned entity
+    though lacks an explicit antecedent and
+    a newly mentioned entity which then has the potential to retrospectively be pronounced a cataphora
+    if it is lexically realized later on in the conversation.
+
+\subsubsection{Sequential coherence}
+
+Without directly provoking it via experiment design,
+some conversations show a pro-coherence perception on the participant side
+in terms of the sequental structure () of the conversation:
+
+    \begin{quote}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+    \item \textbf{conversation id: 123}
+    \item ...
+    \item \utterance{h:}{Boj s rakovinnými buňkami znáš?}{Do you know the fight with cancer cells?}
+    \item \utterance{b:}{Jak se rozsivky konkrétně podílejí na boji s ní?}{How diatoms specifically participate in the fight against it?}
+    \item \utterance{h:}{Ano.}{Yes.}
+    \item ...
+    \end{itemize}
+    \end{quote}
+
+Here the participant answer hints at a misinterpretation of the chatbot response.
+While the chatbot is instructed to ask open-ended questions to keep the conversation going,
+the participant seems to understand the question in the chatbot response
+as a request for confirmation which is also given.
+This is likely because the chatbot question adds new topical content with its question
+which allows for interpreting the question as demonstrating a level of knowledge about the topic
+which the participant inquires about in the first question.
+
+\newpage
 2
 \subsection{Deep anaphora}
     too simplified a notion
@@ -728,12 +908,20 @@ nonassignable anaphora (if accepted) tends to be seen as a cataphore
 \subsubsection{Topical coherence}
     264p topic incoherence
     190 didnt get to stimulus, not enough topic in conversation?
+    149 unmapped zero pseudoanaphora (mediace při rozvodu)
+    " bot: Co si myslíš o mediaci při rozvodu?",
+    " human: je to dobrý insitut",
+    " bot: To může pomoci vyřešit spory bez soudů. Co si myslíš o rolí mediátora?",
+    " human: je to velmi důležitá pozice",
+    " bot: Jaké další způsoby řešení sporů znáš?",
+    " human: jakých sporů",
 
 \subsubsection{Metacommunication}
     317 metacommunication
     270 double anaphora -> meta
     274 almost meta
     101 meta but ended shortly after, coherence would not recover
+
 
 1
 \section{Conclusion}
