@@ -66,8 +66,86 @@ explain why they aborted it if they did so,
 the second wave was shown the entire conversation
 and was asked to mark and comment on specific chatbot responses they found odd or interesting.
 
+\section{Data analysis}
 
-\subsection{Annotation}
+Since the collected data is relatively complex
+multiple layers of analysis need to be performed on it.
+The steps of analysis will be following:
+
+\begin{itemize}
+\item{Conversation design stimuli annotation}
+\item{Participant reaction quantitative analysis}
+\item{General qualitative analysis}
+\end{itemize}
+
+In order to assess the datapoints for quantitative analysis
+each conversation needs to be visited
+to confirm or deny the presence of expected stimuli.
+This preliminary step of qualitative analysis
+provides feedback on whether the conversation design
+that is meant to facilitate the experimental design
+was succesful in doing so.
+Further analysis leading up to a quantitative assessment
+should only be done on conversations
+where convform succesfully exposed the participant to the stimuli.
+It has been observed in collected data
+that sometimes an unintended stimuli
+takes place instead of the intended one.
+Then simply changing the label of the conversation is appropriate.
+It is also necessary to filter the collected data for
+noncooperative participants who make it impossible for convform
+to perform the stimuli in the first place.
+The participant needs to take on a role of a friendly conversator
+if the experiment is to work.
+If they for example attempt to take advantage of the LLMs obedience
+and give it an unrelated task that involves any sort of text generation,
+they need to be pronounced noncooperative.
+
+The qualitative analysis of the participant reaction to stimuli
+is mostly of explorative nature.
+The convform environment lets the user to input any text
+which even under the condition that they are cooperative
+can be unexpected and can derail the conversation.
+While these incidents are typically anecdotal
+and cannot be used to make generalizations
+they needs to be taken into account
+as a possible participant behavior.
+From the perspective of dialog system development
+such cases would be considered to be edge cases
+and dealing with them on the conversation design level
+is typically considered lower priority.
+However the conversation analysis perspective
+will be very interested in all the potential paths that
+a certain conversation situation can go in.
+This is ultimately why any weaknes to the conversation design
+does not matter too much
+as all conversation should be visited anyways
+in search for unique situations.
+
+In conclusion the main reason for using
+an experiment environment solution like convform
+can be summed up in two points:
+
+\begin{itemize}
+\item{Partial control over what happens in the conversation}
+\item{The ability to expose multiple people to a comparable conversational stimuli}
+\end{itemize}
+
+The first point has been described in detail above.
+As far as the second point goes,
+this approach is a step towards
+a quantitative analysis of conversation.
+Though conversation is multifactored
+and various types of situation
+always come with a different set of circumastances
+if a quantitative analysis of a set of conversations
+containing a certain reoccuring pattern
+proves contrastive in some of the quantifiable parameters
+to a set of conversations containing a different reoccuring pattern
+case could be made this is caused by the observed patterns
+regardless of all the noise naturally present in a conversation text.
+
+\section{Annotation}
 
 All 375 conversations were visited to confirm whether
 the stimulus expected based on the conversation design.
@@ -100,7 +178,7 @@ aborting the conversation is
 observable in the transcript and marked in the data automatically
 and any reaction that is not aborting and metacommunication has to be a continuation.
 
-\subsubsection{Stimulus}
+\subsubsection{Stimulus annotation}
 
 For anaphora type Cohen's Kappa was calculated for each of the three annotator pairs
 with following results:
@@ -177,7 +255,7 @@ but it points at the interesting problematic of anaphora depth.
 The other two conversations that had an annotation disagreement about them were IDs 151 and 153.
 Both of them have an imperfect generation in them that excludes them from the stimuli containing data.
 
-\subsubsection{Metacommunication}
+\subsubsection{Metacommunication annotation}
 
 Inter-annotator agreement regarding the metacommunication has produced following results:
 
@@ -230,9 +308,9 @@ In conclusion the annotator agreement is
 strong enough for both stimulus type and metacommunication reaction and
 quantitative analysis can be performed on the measured metrics.
 
-\section{Quantitative Analysis}
+\chapter{Quantitative Analysis}
 
-\subsection{Expectations}
+\section{Expectations}
 
 In the performed quantitative analysis,
 following expectations were used as reference to the found results.
@@ -260,9 +338,9 @@ As far as conversation style, the inquisitive variant was expected to have a wor
 since every next question shifts the topic forwards, which should generate a topical progression
 that sooner or later becomes incoherent as Hrbáček demonstrates ().
 
-\subsection{Result}
+\section{Result}
 
-\subsubsection{Ratings}
+\subsection{Ratings}
 
 The collected ratings have the following distribution:
 
@@ -293,7 +371,7 @@ for them to give a better picture of the stimulus effect,
 a more complex experiment design would need to be deployed
 containing a reference conversation and its rating for each participant.
 
-\subsubsection{Stimulus and reaction}
+\subsection{Stimulus and reaction}
 
 The annotation result is as following:
 
@@ -648,7 +726,7 @@ as dropping in a nonsubject position is not preferred in Czech.
 Regardless, the hard topical shift that disrupts the coherence
 caused by the chatbotwould remain in the conversation.
 
-\section{Qualitative analysis}
+\chapter{Qualitative observation}
 
 Visiting each conversation during annotation
 gave a detailed insight on the nature of the data,
@@ -658,14 +736,14 @@ The following observations about
 the experiment design, the various stimuli and conversation coherence in general
 were made.
 
-\subsection{Pro-coherence perception}
+\section{Pro-coherence perception}
 
 Most noticeably the data shows how participants communicate with a cooperativity in mind
 and assume a lot in order to maintain the conversation flow.
 The quality with which the chatbot could generate responses was high enough,
 that the illusion of social interaction would hold up even if minor issues did come up.
 
-\subsubsection{Remaps}
+\subsection{Remaps}
 
 In following conversation, the participant maps an anaphora on a possible candidate
 even though the hardcoded response was meant to be nonassignable:
@@ -788,7 +866,7 @@ that the participant continues the conversation even if it entails a topic shift
 \end{quote}
 
 
-\subsubsection{Pseudoanaphora}
+\subsection{Pseudoanaphora}
 
     hardcoded phrase with intended nonassignable anaphora is sometimes assignable by association
 
@@ -822,7 +900,7 @@ that the participant continues the conversation even if it entails a topic shift
     a newly mentioned entity which then has the potential to retrospectively be pronounced a cataphora
     if it is lexically realized later on in the conversation.
 
-\subsubsection{Sequential coherence}
+\subsection{Sequential coherence}
 
 Without directly provoking it via experiment design,
 some conversations show a pro-coherence perception on the participant side
@@ -847,14 +925,18 @@ This is likely because the chatbot question adds new topical content with its qu
 which allows for interpreting the question as demonstrating a level of knowledge about the topic
 which the participant inquires about in the first question.
 
-\newpage
-2
-\subsection{Deep anaphora}
+\section{Topical (in)coherence}
 
-    too simplified a notion
-    remaps
-    lexical surroundings - verb
-    perfect
+    %too simplified a notion
+    %remaps
+    %lexical surroundings - verb
+    %perfect
+
+    The deep anaphora stimulus type had the highest error rate.
+    The annotation showed that only 64 conversations of this type were collected.
+    That is approximately half of how many conversations were collected of the shallow and nonassignable anaphora.
+    This relative failure has mainly been caused by the remaps discussed above.
+    In its ideal form it looked something like this:
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -875,7 +957,11 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-    clear mapping due to verb
+    The chatbot question goes back to an entity that has only been mentioned several turns ago
+    and the conversation topic has somewhat drifted apart since then.
+    The participant would in this case be able to map the anaphora with the help of its lexical environment.
+    Especially the verb of the question containing the anaphora makes or breaks the understanding.
+    This is clear in following conversation, where the verb is repeated:
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -894,9 +980,13 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-\subsubsection{Hard shift refusal}
+    This mapping is so obvious due to the repetition that
+    the inappropriate nonzero anaphora does not distract the participant.
 
-    114 stimulus understood but topic shift not accepted
+\subsection{Hard shift refusal}
+
+    Various reactions to the deep anaphora stimulus type were recorded.
+    The data shows sometimes mapping the anaphora does not warrant acceptance of the response.
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -913,14 +1003,22 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
+    In this conversation the stimulus suffers from a generation issue and
+    causes a metacommunicative reaction
+    and later is commented upon:
+
     \begin{quote}
     \utterance{comment:}{Chatbot nepochopil změnu tématu, pravděpodobně reagoval na romantismus, ale já se s ním chtěla bavit o dárcích. Navíc, nedokázal strukturovat otázku.}
     {Chatbot misunderstood the topic shift, probably reacted to romantism, but I want to talk about gifts. Besides he couldn't structure the question.}
     \end{quote}
 
-\subsubsection{Incomplete control over conversation - topic status}
+    Other than the ideal case where deep anaphora supports the conversation coherence by
+    following up on a previously mentioned topic,
+    deep anaphora as it was programmed here would sometimes abruptly shift to an abandoned topic.
 
-    192 not moving away from topic
+\subsection{Incomplete control over conversation - topic status}
+
+    192 not moving away from topic ¨
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 192}
@@ -938,7 +1036,7 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-    96 refusal even though it is understood
+    96 refusal even though it is understood - anaphora refused ¨
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -956,8 +1054,11 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
+    \begin{quote}
+    \utterance{comment:}{nenapsal jaké plemeno}{didn't write which race}
+    \end{quote}
 
-    312 vague anaphora, but on topic
+    312 vague anaphora, but on topic ¨
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -973,20 +1074,12 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-    deep anaphora acceptance depends on
-    whether the topic shift is annotated, accepted and
-    whether there is enough information to perform mapping and
-    whether there is no critical ambivalence
-
-\subsection{Nonassignable anaphora}
-mostly fine, hardcoded stimulus response works most of the time and is easy to annotate
-
-\paragraph{Nontopicalized entities}
+\subsection{Nontopicalized entities}
 
     deep anaphora referring to a nontopicalized entity was nonassigned
     by participant and there was a annotator disagreement
 
-    162 graph according to Daneš
+    162 graph according to Daneš ¨
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -1026,9 +1119,9 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     seems to have to do with the fact that
     T4 is tied to R1b which never stood in the topic position.
 
-\paragraph{acceptance}
+\subsection{Acceptance}
 
-279 continuing despite nonassignability but aborting soon after
+279 continuing despite nonassignability but aborting soon after ¨
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -1043,7 +1136,7 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     \end{itemize}
     \end{quote}
 
-142 changed topic upon nonassignable
+142 changed topic upon nonassignable ¨
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -1060,9 +1153,9 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     \end{itemize}
     \end{quote}
 
-\subsection{Topical coherence}
+\subsection{Nonfactual implication}
 
-    264p topic incoherence commented upon
+    264p topic incoherence commented upon ¨
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 264p}
@@ -1077,9 +1170,9 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     \end{itemize}
     \end{quote}
 
-\subsection{Metacommunication}
+\section{Metacommunication}
 
-    317 metacommunication
+    317 metacommunication ¨
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 317}
@@ -1090,7 +1183,7 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     \end{itemize}
     \end{quote}
 
-    270 double anaphora -> meta
+    270 double anaphora -> meta ¨
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 270}
@@ -1103,7 +1196,7 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     \end{itemize}
     \end{quote}
 
-    101 meta but ended shortly after, coherence would not recover
+    101 meta but ended shortly after, coherence would not recover ¨
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 101}
@@ -1117,7 +1210,7 @@ mostly fine, hardcoded stimulus response works most of the time and is easy to a
     \end{itemize}
     \end{quote}
 
-    149 uncertain whether metacommunication
+    149 uncertain whether metacommunication ¨
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 149}
@@ -1150,3 +1243,7 @@ deep anaphora - chatbot needs to know what they are talking about
 deep anaphora - refusal though understood
     topicalization plays a role
     annotation plays a role
+deep anaphora acceptance depends on
+whether the topic shift is annotated, accepted and
+whether there is enough information to perform mapping and
+whether there is no critical ambivalence

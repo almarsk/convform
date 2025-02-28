@@ -46,52 +46,50 @@
 \contentsline {subsubsection}{Deep anaphore}{27}{}%
 \contentsline {subsubsection}{nonassignable anaphore}{28}{}%
 \contentsline {subsection}{\numberline {2.4.2}Ending the conversation}{29}{}%
-\contentsline {section}{\numberline {2.5}Data}{29}{}%
-\contentsline {subsection}{\numberline {2.5.1}Data analysis}{30}{}%
-\contentsline {chapter}{\numberline {3}Data collection and analysis}{32}{}%
-\contentsline {section}{\numberline {3.1}Data collection}{32}{}%
-\contentsline {subsection}{\numberline {3.1.1}Experimental designs}{32}{}%
-\contentsline {subsection}{\numberline {3.1.2}Participants}{33}{}%
-\contentsline {subsection}{\numberline {3.1.3}Annotation}{33}{}%
-\contentsline {subsection}{\numberline {3.1.4}Inter--annotator agreement}{33}{}%
-\contentsline {subsubsection}{Stimulus}{34}{}%
-\contentsline {subsubsection}{Metacommunication}{36}{}%
-\contentsline {section}{\numberline {3.2}Quantitative Analysis}{37}{}%
-\contentsline {subsection}{\numberline {3.2.1}Expectations}{37}{}%
-\contentsline {subsection}{\numberline {3.2.2}Result}{37}{}%
-\contentsline {subsubsection}{Ratings}{37}{}%
-\contentsline {subsubsection}{Stimulus and reaction}{38}{}%
-\contentsline {subsection}{\numberline {3.2.3}Design rating}{38}{}%
+\contentsline {chapter}{\numberline {3}Data}{30}{}%
+\contentsline {section}{\numberline {3.1}Data collection}{30}{}%
+\contentsline {subsection}{\numberline {3.1.1}Experimental designs}{30}{}%
+\contentsline {subsection}{\numberline {3.1.2}Participants}{31}{}%
+\contentsline {section}{\numberline {3.2}Data analysis}{31}{}%
+\contentsline {section}{\numberline {3.3}Annotation}{32}{}%
+\contentsline {subsection}{\numberline {3.3.1}Inter--annotator agreement}{33}{}%
+\contentsline {subsubsection}{Stimulus annotation}{33}{}%
+\contentsline {subsubsection}{Metacommunication annotation}{35}{}%
+\contentsline {chapter}{\numberline {4}Quantitative Analysis}{37}{}%
+\contentsline {section}{\numberline {4.1}Expectations}{37}{}%
+\contentsline {section}{\numberline {4.2}Result}{37}{}%
+\contentsline {subsection}{\numberline {4.2.1}Ratings}{37}{}%
+\contentsline {subsection}{\numberline {4.2.2}Stimulus and reaction}{38}{}%
+\contentsline {subsection}{\numberline {4.2.3}Design rating}{38}{}%
 \contentsline {subsubsection}{Design rating with abandonment interpretation}{39}{}%
-\contentsline {subsection}{\numberline {3.2.4}Reaction to stimulus}{40}{}%
+\contentsline {subsection}{\numberline {4.2.4}Reaction to stimulus}{40}{}%
 \contentsline {subsubsection}{Stimulus x Reaction specific ratings}{40}{}%
-\contentsline {subsection}{\numberline {3.2.5}Comments}{41}{}%
-\contentsline {subsection}{\numberline {3.2.6}Conversation style}{41}{}%
-\contentsline {subsection}{\numberline {3.2.7}Zero anaphora}{42}{}%
-\contentsline {section}{\numberline {3.3}Qualitative analysis}{44}{}%
-\contentsline {subsection}{\numberline {3.3.1}Pro-coherence perception}{44}{}%
-\contentsline {subsubsection}{Remaps}{44}{}%
-\contentsline {subsubsection}{Pseudoanaphora}{47}{}%
-\contentsline {subsubsection}{Sequential coherence}{48}{}%
-\contentsline {subsection}{\numberline {3.3.2}Deep anaphora}{49}{}%
-\contentsline {subsubsection}{Hard shift refusal}{50}{}%
-\contentsline {subsubsection}{Incomplete control over conversation - topic status}{51}{}%
-\contentsline {subsection}{\numberline {3.3.3}Nonassignable anaphora}{52}{}%
-\contentsline {paragraph}{Nontopicalized entities}{53}{}%
-\contentsline {paragraph}{acceptance}{53}{}%
-\contentsline {subsubsection}{Evaluation of shallow, deep, nonassignable categorization}{54}{}%
-\contentsline {subsection}{\numberline {3.3.4}Topical coherence}{55}{}%
-\contentsline {subsection}{\numberline {3.3.5}Metacommunication}{55}{}%
-\contentsline {section}{\numberline {3.4}Conclusion}{57}{}%
-\contentsline {chapter}{\numberline {4}Final thoughts}{58}{}%
-\contentsline {section}{\numberline {4.1}Coherence disruptions in conversation}{58}{}%
-\contentsline {section}{\numberline {4.2}Further steps}{58}{}%
-\contentsline {subsection}{\numberline {4.2.1}Stimulus generation improvement}{58}{}%
-\contentsline {subsection}{\numberline {4.2.2}Hybrid approach}{58}{}%
-\contentsline {subsection}{\numberline {4.2.3}New opportunities}{59}{}%
-\contentsline {subsubsection}{Comparing different anaphora depths}{59}{}%
-\contentsline {subsection}{\numberline {4.2.4}Associativity in nonassignable anaphora}{59}{}%
-\contentsline {subsection}{\numberline {4.2.5}Prompting unassignable anaphora}{59}{}%
-\contentsline {subsection}{\numberline {4.2.6}More complex experiment design - reference}{59}{}%
-\contentsline {subsection}{\numberline {4.2.7}Types of deep and types of nonassignable}{59}{}%
-\contentsline {section}{\numberline {4.3}Conclusion}{59}{}%
+\contentsline {subsection}{\numberline {4.2.5}Comments}{41}{}%
+\contentsline {subsection}{\numberline {4.2.6}Conversation style}{41}{}%
+\contentsline {subsection}{\numberline {4.2.7}Zero anaphora}{42}{}%
+\contentsline {chapter}{\numberline {5}Qualitative observation}{45}{}%
+\contentsline {section}{\numberline {5.1}Pro-coherence perception}{45}{}%
+\contentsline {subsection}{\numberline {5.1.1}Remaps}{45}{}%
+\contentsline {subsection}{\numberline {5.1.2}Pseudoanaphora}{48}{}%
+\contentsline {subsection}{\numberline {5.1.3}Sequential coherence}{49}{}%
+\contentsline {section}{\numberline {5.2}Topical (in)coherence}{50}{}%
+\contentsline {subsection}{\numberline {5.2.1}Hard shift refusal}{52}{}%
+\contentsline {subsection}{\numberline {5.2.2}Incomplete control over conversation - topic status}{52}{}%
+\contentsline {subsection}{\numberline {5.2.3}Nontopicalized entities}{54}{}%
+\contentsline {subsection}{\numberline {5.2.4}Acceptance}{55}{}%
+\contentsline {subsection}{\numberline {5.2.5}Nonfactual implication}{56}{}%
+\contentsline {section}{\numberline {5.3}Metacommunication}{57}{}%
+\contentsline {section}{\numberline {5.4}Conclusion}{58}{}%
+\contentsline {chapter}{\numberline {6}Final thoughts}{59}{}%
+\contentsline {section}{\numberline {6.1}Evaluation of shallow, deep, nonassignable categorization}{59}{}%
+\contentsline {section}{\numberline {6.2}Coherence disruptions in conversation}{59}{}%
+\contentsline {section}{\numberline {6.3}Further steps}{59}{}%
+\contentsline {subsection}{\numberline {6.3.1}Stimulus generation improvement}{59}{}%
+\contentsline {subsection}{\numberline {6.3.2}Hybrid approach}{59}{}%
+\contentsline {subsection}{\numberline {6.3.3}New opportunities}{60}{}%
+\contentsline {subsubsection}{Comparing different anaphora depths}{60}{}%
+\contentsline {subsubsection}{Associativity in nonassignable anaphora}{60}{}%
+\contentsline {subsubsection}{Prompting unassignable anaphora}{60}{}%
+\contentsline {subsubsection}{More complex experiment design - reference}{60}{}%
+\contentsline {subsubsection}{Types of deep and types of nonassignable}{60}{}%
+\contentsline {section}{\numberline {6.4}Conclusion}{60}{}%

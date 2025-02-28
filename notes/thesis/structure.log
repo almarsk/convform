@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  28 FEB 2025 12:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  28 FEB 2025 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -542,36 +542,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 1482--1488
 
  []
 
-[27] [28] [29] [30] [31]
+[27] [28] [29]
 Chapter 3.
-(./draft-final-chap.tex [32
+(./draft-final-chap.tex [30
 
-] [33] [34] [35] [36] [37] [38] [39] [40] [41]
-[42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
-Overfull \hbox (18.67953pt too wide) in paragraph at lines 1065--1070
-\T1/cmr/m/n/12 deep anaphora (if ac-cepted) tends to be seen as an abrupt shift
- to pre-vi-ous topic nonassignable
- []
-
-[54] [55]) [56] [57]
+] [31] [32] [33] [34] [35] [36]
 Chapter 4.
+[37
 
-Overfull \hbox (55.77861pt too wide) in paragraph at lines 1861--1866
+] [38] [39] [40] [41] [42] [43] [44]
+Chapter 5.
+[45
+
+] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]) [58]
+Chapter 6.
+
+Overfull \hbox (55.77861pt too wide) in paragraph at lines 1779--1784
 \T1/cmr/m/n/12 ing tracked en-ti-ties to one an-other Re-al-time topic an-no-ta
 -tion https://aclanthology.org/2021.findings-
  []
 
-[58
+[59
 
-] [59] [60
+] [60] [61
 
-] [61]
-Overfull \hbox (6.7805pt too wide) in paragraph at lines 1914--1914
+] [62]
+Overfull \hbox (6.7805pt too wide) in paragraph at lines 1828--1828
 \T1/cmr/m/n/12 £eských dat v praºském závis-lost-ním ko-r-pusu)''. PhD the-sis.
  Prague: Uni-verzita Karlova,
  []
 
-[62] [63] (./structure.aux)
+[63] [64] (./structure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -620,10 +621,10 @@ cm/cmmi6.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr8.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb>
-Output written on structure.pdf (64 pages, 416192 bytes).
+Output written on structure.pdf (65 pages, 424801 bytes).
 PDF statistics:
- 1053 PDF objects out of 1200 (max. 8388607)
- 230 compressed objects within 3 object streams
+ 1070 PDF objects out of 1200 (max. 8388607)
+ 232 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
