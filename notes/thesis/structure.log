@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  26 FEB 2025 14:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  28 FEB 2025 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,20 +436,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./structure.toc)
-\tf@toc=\write4
-\openout4 = `structure.toc'.
-
+(./structure.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
  [1
 
 
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 50.
+])
+\tf@toc=\write4
+\openout4 = `structure.toc'.
+
+ [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 50.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
@@ -457,36 +458,36 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
 
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [2
+) [3
 
 
-] [3]
+] [4]
 Overfull \hbox (6.61017pt too wide) in paragraph at lines 165--168
 []\T1/cmr/m/n/12 Some fac-tors that in-flu-ence co-her-ence in con-ver-sa-tiona
 l texts, whether in hu-man^^Uhuman
  []
 
-[4] [5]
+[5] [6]
 Chapter 1.
-[6
+[7
 
-] [7] [8] [9]
+] [8] [9] [10]
 Overfull \hbox (25.37947pt too wide) in paragraph at lines 527--528
 []\T1/cmr/m/n/12 Each par-tic-i-pant's un-der-stand-ing of the shared con-ver-s
 a-tion as it's be-ing co^^Ucreated. 
  []
 
-[10] [11] [12] [13] [14] [15]
+[11] [12] [13] [14] [15] [16]
 Chapter 2.
-[16
+[17
 
-] [17] [18] [19] [20] [21] [22]
+] [18] [19] [20] [21] [22] [23]
 Overfull \hbox (5.87434pt too wide) in paragraph at lines 1296--1305
 \T1/cmr/m/n/12 With sup-port of LLM pow-ered re-sponses con-vform can be used t
 o sim-u-late an open^^Udomain
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 1376--1387
 
  []
@@ -506,7 +507,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1406--1407
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 1429--1435
 
  []
@@ -536,23 +537,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1474--1481
 
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 1482--1488
 
  []
 
-[26] [27] [28] [29] [30]
+[27] [28] [29] [30] [31]
 Chapter 3.
-(./draft-final-chap.tex [31
+(./draft-final-chap.tex [32
 
-] [32] [33] [34] [35] [36] [37] [38] [39] [40]
-[41] [42] [43] [44] [45] [46] [47]
-Overfull \hbox (3.91347pt too wide) in paragraph at lines 894--896
- \T1/cmr/bx/n/12 ac-cep-tance[] \T1/cmr/m/n/12 142 changed topic upon nonassign
-able 279 con-tin-u-ing de-spite nonassignabil-
+] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+[42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
+Overfull \hbox (18.67953pt too wide) in paragraph at lines 1065--1070
+\T1/cmr/m/n/12 deep anaphora (if ac-cepted) tends to be seen as an abrupt shift
+ to pre-vi-ous topic nonassignable
  []
 
-[48]) [49]
+[54] [55]) [56] [57]
 Chapter 4.
 
 Overfull \hbox (55.77861pt too wide) in paragraph at lines 1861--1866
@@ -560,29 +561,21 @@ Overfull \hbox (55.77861pt too wide) in paragraph at lines 1861--1866
 -tion https://aclanthology.org/2021.findings-
  []
 
-[50
+[58
 
-] [51] [52
+] [59] [60
 
-] [53]
+] [61]
 Overfull \hbox (6.7805pt too wide) in paragraph at lines 1914--1914
 \T1/cmr/m/n/12 £eských dat v praºském závis-lost-ním ko-r-pusu)''. PhD the-sis.
  Prague: Uni-verzita Karlova,
  []
 
-[54] [55] (./structure.aux)
+[62] [63] (./structure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'structure.run.xml'.
 \openout1 = `structure.run.xml'.
 
@@ -592,10 +585,10 @@ Package logreq Info: Writing requests to 'structure.run.xml'.
 ### simple group (level 1) entered at line 172 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10176 strings out of 475567
- 199826 string characters out of 5777889
+ 10228 strings out of 475567
+ 200410 string characters out of 5777889
  1939187 words of memory out of 5000000
- 32249 multiletter control sequences out of 15000+600000
+ 32301 multiletter control sequences out of 15000+600000
  575406 words of font info for 68 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  66i,8n,81p,996b,1590s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -607,17 +600,17 @@ arsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.6
 00pk> </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecbx1440.600pk> </Users/almarsk/Library/texlive/2024basic/texmf-var/font
 s/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/almarsk/Library/texlive/2024bas
-ic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/almarsk/Librar
-y/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Use
-rs/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc
+ic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Users/almarsk/Librar
+y/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.600pk> </Use
+rs/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti
 1000.600pk> </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecti1000.600pk> </Users/almarsk/Library/texlive/2024basic/texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/almarsk/Library/texlive/2
-024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/almarsk/
-Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk>
+/jknappen/ec/ecrm1000.600pk> </Users/almarsk/Library/texlive/2024basic/texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </Users/almarsk/Library/texlive/2
+024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/almarsk/
+Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk>
  </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecrm0800.600pk> </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecrm1200.600pk> </Users/almarsk/Library/texlive/2024basic/te
+c/ecrm1200.600pk> </Users/almarsk/Library/texlive/2024basic/texmf-var/fonts/pk/
+ljfour/jknappen/ec/ecbx1200.600pk> </Users/almarsk/Library/texlive/2024basic/te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </Users/almarsk/Library/tex
 live/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/al
 marsk/Library/texlive/2024basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.
@@ -627,10 +620,10 @@ cm/cmmi6.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr8.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb>
-Output written on structure.pdf (56 pages, 404076 bytes).
+Output written on structure.pdf (64 pages, 416192 bytes).
 PDF statistics:
- 1026 PDF objects out of 1200 (max. 8388607)
- 213 compressed objects within 3 object streams
+ 1053 PDF objects out of 1200 (max. 8388607)
+ 230 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
