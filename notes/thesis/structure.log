@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  28 FEB 2025 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.3)  2 MAR 2025 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -554,7 +554,7 @@ Chapter 4.
 Chapter 5.
 [45
 
-] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]) [58]
+] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]) [59]
 Chapter 6.
 
 Overfull \hbox (55.77861pt too wide) in paragraph at lines 1779--1784
@@ -562,17 +562,17 @@ Overfull \hbox (55.77861pt too wide) in paragraph at lines 1779--1784
 -tion https://aclanthology.org/2021.findings-
  []
 
-[59
+[60
 
-] [60] [61
+] [61] [62
 
-] [62]
-Overfull \hbox (6.7805pt too wide) in paragraph at lines 1828--1828
+] [63]
+Overfull \hbox (6.7805pt too wide) in paragraph at lines 1831--1831
 \T1/cmr/m/n/12 £eských dat v praºském závis-lost-ním ko-r-pusu)''. PhD the-sis.
  Prague: Uni-verzita Karlova,
  []
 
-[63] [64] (./structure.aux)
+[64] [65] (./structure.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -586,10 +586,10 @@ Package logreq Info: Writing requests to 'structure.run.xml'.
 ### simple group (level 1) entered at line 172 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10228 strings out of 475567
- 200410 string characters out of 5777889
+ 10229 strings out of 475567
+ 200430 string characters out of 5777889
  1939187 words of memory out of 5000000
- 32301 multiletter control sequences out of 15000+600000
+ 32302 multiletter control sequences out of 15000+600000
  575406 words of font info for 68 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  66i,8n,81p,996b,1590s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -621,10 +621,10 @@ cm/cmmi6.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr8.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb>
-Output written on structure.pdf (65 pages, 424801 bytes).
+Output written on structure.pdf (66 pages, 427781 bytes).
 PDF statistics:
- 1070 PDF objects out of 1200 (max. 8388607)
- 232 compressed objects within 3 object streams
+ 1074 PDF objects out of 1200 (max. 8388607)
+ 234 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

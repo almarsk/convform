@@ -1016,9 +1016,15 @@ which the participant inquires about in the first question.
     following up on a previously mentioned topic,
     deep anaphora as it was programmed here would sometimes abruptly shift to an abandoned topic.
 
-\subsection{Incomplete control over conversation - topic status}
+\subsection{Incomplete control over conversation}
 
-    192 not moving away from topic ¨
+    One other frequent reason conversations that were
+    meant to contain a deep anaphora stimulus would fail
+    was insufficient topical distance from the anaphorized entity.
+    Since convform does not relate tracked entities to each other
+    conversations like following could not be considered to contain a deep anaphora
+    because the anaphorized entity would last occur too recently:
+
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 192}
@@ -1036,50 +1042,12 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-    96 refusal even though it is understood - anaphora refused ¨
-
-    \begin{quote}
-    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
-    \item \textbf{conversation id: 96}
-    \item ...
-    \item \utterance{b:}{Co by tě na tom předmětu víc zaujalo?}{What would interested you the most in that course?}
-    \item \utterance{h:}{kdyby ho učil pes}{If it was given by a dog}
-    \item \utterance{b:}{Jaké bys od psa čekal vyučovací metody?}{Which teaching methods would you expect from a dog?}
-    \item \utterance{h:}{štěkání v morseovce}{barking morse code}
-    \item \utterance{b:}{A co bys dál od psa očekával v hodině?}{And what else would you expect from a dog in the lesson?}
-    \item \utterance{h:}{mazlení. co ty?}{cuddling. what about you?}
-    \item \utterance{b:}{Jakého bys chtěl mít jako učitele?}{Which would you like to have as a teacher?}
-    \item \utterance{h:}{jak to myslíš?}{how do you mean?}
-    \item ...
-    \end{itemize}
-    \end{quote}
-
-    \begin{quote}
-    \utterance{comment:}{nenapsal jaké plemeno}{didn't write which race}
-    \end{quote}
-
-    312 vague anaphora, but on topic ¨
-
-    \begin{quote}
-    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
-    \item \textbf{conversation id: 312}
-    \item ...
-    \item \utterance{h:}{Mám, jmenuje se: She is the man}{I do, it is called: She is the man}
-    \item \utterance{b:}{To je skvělý film! Co tě na něm nejvíc baví?}{That is a great movie! What do you like about it the most?}
-    \item \utterance{h:}{Je to romantická komedie, takže mě baví to, že je to spíše na oddech.}{It is a romcom so I like it more to relax.}
-    \item \utterance{b:}{Jaké typy máš nejraději?}{Which types do you like best?}
-    \item \utterance{h:}{Typy čeho?}{Types of what?}
-    \item \utterance{b:}{Typy filmů nebo seriálů, jaký žánr preferuješ?}{Types of movies or series, which genre do you prefer?}
-    \item ...
-    \end{itemize}
-    \end{quote}
-
 \subsection{Nontopicalized entities}
 
-    deep anaphora referring to a nontopicalized entity was nonassigned
-    by participant and there was a annotator disagreement
-
-    162 graph according to Daneš ¨
+    One of the requirements for an entity
+    to be able to be mapped onto by a deep anaphora
+    might be that it has been topicalized.
+    One such case is found in the data:
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -1095,6 +1063,19 @@ which the participant inquires about in the first question.
     \item \textit{aborted}
     \end{itemize}
     \end{quote}
+
+    The participant aborts the conversation after a question is asked that contains an anaphora
+    which due to its lexical environment can only be mapped to \textit{minecraft} from a previous participant response
+    as it is the only entity that has to do with \textit{building projects}.
+    This entity however has only been in the rhema position and mentioned long ago from the perpsective of topical progression.
+    Other issues contributing to the participant aborting the conversation are lack of the topic shift annotation
+    and lack of closure of the interrupted topic.
+    There has however also been an annotator disagreement on this conversation
+    as one of the annotators considered this conversation to contain a nonassignable anaphora.
+    While that was slightly against the annotator manual,
+    because formally there is indeed a mapping candidate present in the conversation text,
+    this supports the participants decision to stop the conversation.
+    In terms of Daneš () the conversation topic progression is as follows:
 
     \newcommand{\topicannot}[3]{
         \textbf{#1} #2 \\
@@ -1115,13 +1096,61 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-    The participant aborting the conversation
-    seems to have to do with the fact that
-    T4 is tied to R1b which never stood in the topic position.
+    Here T4 is tied to R1b which never stood in the topic position.
+    More conversations of this type  need to be gathered
+    to understand the role of topicalization in conversation coherence.
 
-\subsection{Acceptance}
+\subsection{Unexpected refusal}
 
-279 continuing despite nonassignability but aborting soon after ¨
+Sometimes stimuli that were considered to be mappable and coherent
+cause metacommunicative reactions - the participants misunderstood.
+
+In the following conversation the stimulus was mappable:
+
+\begin{quote}
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+\item \textbf{conversation id: 96}
+\item ...
+\item \utterance{b:}{Co by tě na tom předmětu víc zaujalo?}{What would interested you the most in that course?}
+\item \utterance{h:}{kdyby ho učil pes}{If it was given by a dog}
+\item \utterance{b:}{Jaké bys od psa čekal vyučovací metody?}{Which teaching methods would you expect from a dog?}
+\item \utterance{h:}{štěkání v morseovce}{barking morse code}
+\item \utterance{b:}{A co bys dál od psa očekával v hodině?}{And what else would you expect from a dog in the lesson?}
+\item \utterance{h:}{mazlení. co ty?}{cuddling. what about you?}
+\item \utterance{b:}{Jakého bys chtěl mít jako učitele?}{Which would you like to have as a teacher?}
+\item \utterance{h:}{jak to myslíš?}{how do you mean?}
+\item ...
+\end{itemize}
+\end{quote}
+
+The question itself was however ambivalent in some way as the participant comment suggests:
+
+\begin{quote}
+\utterance{comment:}{nenapsal jaké plemeno}{didn't write which race}
+\end{quote}
+
+In following conversation, zero anaphora referring to the topic at hand
+caused metacommunication:
+
+\begin{quote}
+\begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
+\item \textbf{conversation id: 312}
+\item ...
+\item \utterance{h:}{Mám, jmenuje se: She is the man}{I do, it is called: She is the man}
+\item \utterance{b:}{To je skvělý film! Co tě na něm nejvíc baví?}{That is a great movie! What do you like about it the most?}
+\item \utterance{h:}{Je to romantická komedie, takže mě baví to, že je to spíše na oddech.}{It is a romcom so I like it more to relax.}
+\item \utterance{b:}{Jaké typy máš nejraději?}{Which types do you like best?}
+\item \utterance{h:}{Typy čeho?}{Types of what?}
+\item \utterance{b:}{Typy filmů nebo seriálů, jaký žánr preferuješ?}{Types of movies or series, which genre do you prefer?}
+\item ...
+\end{itemize}
+\end{quote}
+
+Referring to a the current hypertopic via a zero anaphora has the potential to cause a spectrum of reaction.
+
+\subsection{Unexpected acceptance}
+
+Sometimes participants would accept a hardly or not at all assignable anaphora.
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -1136,7 +1165,11 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-142 changed topic upon nonassignable ¨
+This conversation has a gramatically feminine mapping candidate
+and somehow the chatbot remark though hardcoded makes sense to the participant.
+
+In the following conversation the participant seems to want to continue in the conversation
+regardless of the incoherent response from the chatbot and so they simply change the topic:
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -1155,7 +1188,9 @@ which the participant inquires about in the first question.
 
 \subsection{Nonfactual implication}
 
-    264p topic incoherence commented upon ¨
+    The chatbot would sometimes hallucinate () information that has not been said.
+    Here the chatbot implies that the participant mentioned going to work that day:
+
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 264p}
@@ -1166,9 +1201,13 @@ which the participant inquires about in the first question.
     \item \utterance{b:}{Taky se mám dobře, díky za optání.}{I am also well, thanks for asking.}
     \item \utterance{h:}{To je dobře }{That's good.}
     \item \utterance{b:}{Taky ráda něco podnikám po práci, co tě dneska bavilo?}{I also like to do things after work, what did you enjoy today?}
+    \item \utterance{h:}{Já jsem dneska nebyla v práci a navíc mě dnes nic nebavilo…}{I wasn't at work today and besides I enjoyed nothing today...}
     \item ...
     \end{itemize}
     \end{quote}
+
+    Implying things that were not mentioned leads to a special type of metacommunicative reaction
+    which can contain negated repetition of the incorrect statement.
 
 \section{Metacommunication}
 
@@ -1225,7 +1264,6 @@ which the participant inquires about in the first question.
     \end{itemize}
     \end{quote}
 
-
 \section{Conclusion}
 
 annotation of categories works
@@ -1247,3 +1285,4 @@ deep anaphora acceptance depends on
 whether the topic shift is annotated, accepted and
 whether there is enough information to perform mapping and
 whether there is no critical ambivalence
+topicalization?
