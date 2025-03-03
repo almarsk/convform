@@ -1211,7 +1211,12 @@ regardless of the incoherent response from the chatbot and so they simply change
 
 \section{Metacommunication}
 
-    317 metacommunication ¨
+One of the stimulus reaction types is metacommunication.
+This is a response which somehow addresses the course of the interaction itself.
+It is not trivial and was therefore annotated.
+In its simplest form metacommunicative reactions would be
+a question that contains a repetition of the element causing confusion like here:
+
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 317}
@@ -1221,6 +1226,11 @@ regardless of the incoherent response from the chatbot and so they simply change
     \item ...
     \end{itemize}
     \end{quote}
+
+In other cases a more general metacommunicative formulas are deployed which express general confusion.
+This happeden in following case for example since
+there were multiple unmapped anaphoras
+preventing a simple metacommunication.
 
     270 double anaphora -> meta ¨
     \begin{quote}
@@ -1235,7 +1245,9 @@ regardless of the incoherent response from the chatbot and so they simply change
     \end{itemize}
     \end{quote}
 
-    101 meta but ended shortly after, coherence would not recover ¨
+Metacommunication signals a conversation coherence disruption but they give a chance to fix the issue at hand.
+The clarification or correction may not suffice like in the following case:
+
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 101}
@@ -1245,44 +1257,60 @@ regardless of the incoherent response from the chatbot and so they simply change
     \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak ona zareagovala.}{Then I wonder, how she reaction to that.}
     \item \utterance{h:}{Kdo?}{Who}
     \item \utterance{b:}{Omlouvám se, myslel jsem na postavy z jeho knih. Co se ti na Sandersonovi líbilo?}{Sorry, I meant the characters from his books. What did you like about Sanderson?}
-    \item ...
-    \end{itemize}
-    \end{quote}
-
-    149 uncertain whether metacommunication ¨
-    \begin{quote}
-    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
-    \item \textbf{conversation id: 149}
-    \item ...
-    \item \utterance{b:}{Co si myslíš o mediaci při rozvodu?}{What do you think about mediation during divorce?}
-    \item \utterance{h:}{je to dobrý insitut}{it is a good institution}
-    \item \utterance{b:}{To může pomoci vyřešit spory bez soudů. Co si myslíš o rolí mediátora?}{It can help solve conflicts without court. What do you think about the role of the mediator?}
-    \item \utterance{h:}{je to velmi důležitá pozice}{it is a very important role}
-    \item \utterance{b:}{Jaké další způsoby řešení sporů znáš?}{Which other ways of solving conflicts do you know?}
-    \item \utterance{h:}{jakých sporů}{what conflicts}
-    \item ...
+    \item \textit{abort}
     \end{itemize}
     \end{quote}
 
 \section{Conclusion}
 
-annotation of categories works
-categorization itself purposfuly simplified
-edgecases for both anaphora type and metacommunication point us in the right direction
-ratings work just a bit - control over conversation
-conversation style dont work - control over conversation
-stimulus reaction pairs work !!
-    result shows there is further split in deep and nonassignable - realtime topic analysis
-zero anaphora - good
-pro coherence
-remaps - realtime topic analysis
-pseudoanaphora - complex extratextual mapping
-deep anaphora - chatbot needs to know what they are talking about
-deep anaphora - refusal though understood
-    topicalization plays a role
-    annotation plays a role
-deep anaphora acceptance depends on
-whether the topic shift is annotated, accepted and
-whether there is enough information to perform mapping and
-whether there is no critical ambivalence
-topicalization?
+The inter-annotator agreement shows that the anaphora stimulus categories are valid.
+However a deeper look into the data on both quantitative and qualitative levels shows
+that there are further subgroups of coherence disruptions and anaphora types
+which the categorization did not cover.
+This was to a degree intentional.
+Using a simplified model to understand the studied area via describing the models weaknesses
+indeed brought an insight and managed to illuminate further steps.
+
+The general research question has been to confirm that the coherence would be increasingly more disrupted
+with each anaphora type - shallow, deep and nonassignable.
+In most measurable ways this proved to be true.
+This was not a surprising result as rather than answering the question
+the goal of the research has been to gather concrete data supporting this claim
+and confirming the usefulness of the conversation simulation methodology in the process.
+Participant reactions to the different types of stimuli differed greatly,
+the more disruptive sitmuli had more participants abandoning the conversation and
+the participant comments show that while the shallow anaphora stimulus went by practically unnoticed,
+the deep and nonassignable ones had increasingly more participants make a remark on them.
+The only metric that did not quite succeed showing the predicted outcome was global rating of the conversation.
+The results seem to go in the expected direction, but are not always statistically significant and
+in some cases the deep anaphora conversations have a better average score than the shallow anaphora ones.
+This is generally because the rating covers the entire conversation the participants had
+and many other things happen in the conversation other than the stimulus.
+For future research it is necessary to get the general course of the conversation more under control.
+
+On a similar token, the general conversation style variable did not show any significant results.
+Same cause can be attributed to this.
+More control over the chatbot has to be gained
+to program such that might generate better or worse participant ratings.
+
+One aspect where the participant rating give an interesting result is the zero anaphora.
+Conversation containing it have much better average rating that ones where it is explicit.
+The data confirms an already knonw fact that Czech is a prodrop language.
+This must be used in the future to increase the contrast in the observed phenomena
+by decreasing noise from this nonacceptability source.
+
+The data shows a strong pro-coherence perception.
+The participants are often willing to map the anaphora to whichever candidate is at hand
+even if it is only implicit creating a pseudoanaphora.
+
+The deep anaphora stimulus type has been an interesting look into the inner workings of conversation.
+The chatbot meant to ellicit this type of data was relatively unsuccesful.
+Improvements to be made in that regard mainly lie in more thorough real-time topic annotation
+and letting the post stimulus prompt access the intended reference.
+That way the acceptance of the explanation in case of metacommunicative reaction can also be observed.
+
+In general it has been observed that the deep anaphora acceptance depends on several aspects.
+The topic shift needs to be annotated in the discourse,
+there needs to be enough information to perform mapping,
+there needs to be no critical ambivalence to perform mapping and
+an ntity that has not been previously topicalized is less likely to be mapped onto.

@@ -1753,78 +1753,136 @@ that would have to be dealt with.
 
 
 
-
-
-
-
-
 % _____________________
 
 
 \input{draft-final-chap.tex}
 
-
 \chapter{Final thoughts}
 
+\section{Evaluation of anaphora categorization}
 
-\section{Evaluation of shallow, deep, nonassignable categorization}
-\section{Coherence disruptions in conversation}
+    The categorization used in this research has been simplified for exploration.
+    The immediate observation has been that both deep and nonassignable anaphora
+    have two dominant participant reactions.
+    The deep anaphora was had a similar number of acceptance and metacommunicative reaction.
+    This begs a question whether it is possible to program and prompt two different chatbots,
+    that will be capable of sharing these two types of reactions.
+    In other words the question is whether it is possible to simulate an immediately acceptable
+    and a confusing deep anaphora.
+    The same goes for the nonassignable anaphora
+    where the split was on the metacommunication and abroting the conversation.
+    Here the task to split these two types up among two different chatbots is even trickier,
+    because the criteria of not understanding and directly ending the conversation might depend on
+    individual circumstances.
+    That way the textual aspect of the conversation would have a lesser effect.
+
+    That qualitative analysis shows also that
+    at least one disruptive anaphora type has been elided from the categorization.
+    In many cases the participant confusion stemmed from the ambivalence of the anaphora -
+    there has been multiple mapping candidates.
+    There is a hint of a more granular categorization of disruptive anaphora.
+
+    Finally on anaphora and conversation coherence in general,
+    it is not easy to just break the anaphora,
+    something always comes along with it as the various factors at hand in conversation are intertwined.
+    The data certainly showed, that everytime there is a anaphora related coherence disruption in conversation,
+    this impacts the topical structure of the unfolding text of conversation
+    which is where the incoherence ends up being perceived.
+
 \section{Further steps}
 
-\subsection{Stimulus generation improvement}
-    deep anaphora needs improvement in generation
-        after meta in deep, bot is not anymore informed about the referent, improvises
-            would be nice if it would know what its talking about and followed up on it
-\subsection{Hybrid approach} %3
-        Making the chatbot aware of the general course of the conversation
-            ending correctly
-        Relating tracked entities to one another
-        Realtime topic annotation
-            https://aclanthology.org/2021.findings-emnlp.145.pdf
 
-An interesting next step that could be done
-on the contact surface of conversation design and LLM development
-is a hybrid system () that would allow a conversation designer
-to have the dialog system interact with a user
-in the required way including
-passing through a state–machine like process
-while keeping the flexibility of an LLM.
+    \subsection{Experiment design improvement}
 
-For such system one would need to decide the relationship
-between generated and hardcoded system utterances.
-Integrating a hardcoded utterance
-with a potential generated surrounding could be impossible,
-so the final layer of producing an answer would
-always be a prompt.
+        For future research better control over the conversation needs to be gained.
+        That way the amount of noise can be decreased as there would be less sources
+        of confusion or nonacceptability in the conversation text other than the stimulus.
+        Participants could also be exposed to a sequence of conversations with different stimulus each time.
+        That way the stimuli could be ordered a certain way and a rating development metric would be gained.
+        Lastly more granular approach to the participant reaction to stimulus could be taken.
+        At least one type has been ommited or rather fused with the metacommunication reaction type -
+        the late aborting of the conversation.
+        After the stimulus if the participant reacts in a metacommunicative way,
+        the chatbot has a chance to fix the disruption.
+        If it does not succeed in that, the coherence remains disrupted and
+        the social interaction illusion falls due to the stimulus but not directly after the stimulus.
+        For this the chatbot also needs to have access to which entity the anaphora has been referring to.
 
-Prompt consists of multiple components
-as calling an LLM usually includes giving it
-a general instruction called the system prompt
-and whichever dynamically added information
-that is necessary to make the model output
-appropriate information
-like custom context and mainly the end user input.
-A hybrid approach to this would mean
-to allow a conversation designer
-to modify various components in the prompt
-based on context.
-The only way to know anything about
-what is going on in the conversation
-at design time however
-would be analyzing the user input
-and the evolving interaction
-via analysis prompts.
+    \subsection{Stimulus generation improvement}
 
-\subsection{New opportunities}
-\subsubsection{Comparing different anaphora depths}
-\subsubsection{Associativity in nonassignable anaphora}
-\subsubsection{Prompting unassignable anaphora}
-\subsubsection{More complex experiment design - reference}
-\subsubsection{Types of deep and types of nonassignable}
-\subsubsection{Topicalization}
-\subsection{Zero reference to hypertopic}
-\subsection{Nonfactual implication}
+        Some of the challenges met during the course of the research have to do with
+        the stimulus generation.
+        One improvement that has been mentioned above is the chatbot being aware of what it is referring to
+        with its anaphoras.
+        In this version of convform, this information has not been stored anywhere.
+        It should be present in the prompt in case the participant is confused and asking about it.
+        The secondary reaction might show which types of referents will be acceptable or less so.
+
+        The conversation quality needs to improve.
+        The zero anaphora has to be deployed where it is appropriate to decrease the nonacceptability noise.
+        Better topic progression awareness needs to be developed in convform.
+        The chatbot sometimes ignores questions and asks its own which is topically and sequentially inappropriate.
+
+        Lastly the nonassignable anaphora stimulus could be improved to generate stimulus responses via prompt.
+        That would require generating an irrelevant entity and anaphorically referring to it.
+        This challenge could provide more insight on associativity and pseudoanaphora if tackled succesfully.
+
+    \subsection{Hybrid approach}
+
+            All of the aforementioned improvements are hard to achieve with the current state of convform.
+            At the time of this research it functions as a hybrid tree structure where the response is either
+            hardcoded or a prompt.
+            To gain more flexibility, the dialog management needs to be more prompt oriented.
+            However to keep the control, the prompt needs to consist of components that self regulate based on
+            logic and analysis prompts.
+            Essentially with each turn metadata
+            like topical and sequential status of the conversation should be collected.
+            The components should then be allowed to assemble the prompt
+            based on this data while following the conversation designer instruction.
+            This process should allow for creating a dialog system that is aware of what is going on
+            and can conditionally produces prompts and generate responses
+            that are defined by the conversation designer
+            while maintaining the flexibility with which state-of-the-art systems interact.
+
+\section{New opportunities}
+
+With a dialog system of this nature
+intentionally creating the stimuli hinted at in the analysis would become possible:
+
+    \begin{itemize}
+    \item{Understanding the bimodality of deep and nonassignable anaphora}
+    \item{Deep anaphora referring to a (non)topicalized entity}
+    \item{Closer look at zero reference, pseudoanaphora and associativity}
+    \item{Observing participant reactions to nonfactual implications}
+    \item{Comparing different anaphora depths}
+    \item{Topic shift with or without discourse markers}
+    \item{Secondary participant reactions to repair attempts}
+    \end{itemize}
+
 \section{Conclusion}
+
+The methodology used in present research has be experimental on two levels.
+One was to see whether it can be useful for conversation research.
+While there are many improvements to be made on both the experimental framework
+and the stimuli, it has proven to be able to generate data that would be otherwise
+impossible to get.
+This comes at the price of annotation. Every conversation has to be visited to confirm
+whether the required stimulus is actually present.
+With improving conversation design, this might become a smaller issue
+and with a certain degree of precision and a certain scale,
+annotations might become obsolete.
+For now and near future, the conversations will be visited.
+Seeing the interactions with ones own eyes has been the goal of the research regardless,
+so annotating can also be perceived as a reward rather than a price.
+
+The other level was to expose participants to a chatbot that would subvert the course of the conversation.
+This has shown to be succesful to a decent degree although here also it a lot of improvement to be made
+nn both practical and theoretical aspect.
+The result itself has been more or less unsurprising and the experiment served mainly to generate data
+that would support this uncontroversial claim.
+From here, multiple research paths can be taken in both understanding the inner workings of conversation
+and attempting to simulate various situations using the dialog system.
 
 
 \printbibliography

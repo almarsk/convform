@@ -82,18 +82,10 @@
 \contentsline {section}{\numberline {5.3}Metacommunication}{57}{}%
 \contentsline {section}{\numberline {5.4}Conclusion}{59}{}%
 \contentsline {chapter}{\numberline {6}Final thoughts}{60}{}%
-\contentsline {section}{\numberline {6.1}Evaluation of shallow, deep, nonassignable categorization}{60}{}%
-\contentsline {section}{\numberline {6.2}Coherence disruptions in conversation}{60}{}%
-\contentsline {section}{\numberline {6.3}Further steps}{60}{}%
-\contentsline {subsection}{\numberline {6.3.1}Stimulus generation improvement}{60}{}%
-\contentsline {subsection}{\numberline {6.3.2}Hybrid approach}{60}{}%
-\contentsline {subsection}{\numberline {6.3.3}New opportunities}{61}{}%
-\contentsline {subsubsection}{Comparing different anaphora depths}{61}{}%
-\contentsline {subsubsection}{Associativity in nonassignable anaphora}{61}{}%
-\contentsline {subsubsection}{Prompting unassignable anaphora}{61}{}%
-\contentsline {subsubsection}{More complex experiment design - reference}{61}{}%
-\contentsline {subsubsection}{Types of deep and types of nonassignable}{61}{}%
-\contentsline {subsubsection}{Topicalization}{61}{}%
-\contentsline {subsection}{\numberline {6.3.4}Zero reference to hypertopic}{61}{}%
-\contentsline {subsection}{\numberline {6.3.5}Nonfactual implication}{61}{}%
-\contentsline {section}{\numberline {6.4}Conclusion}{61}{}%
+\contentsline {section}{\numberline {6.1}Evaluation of anaphora categorization}{60}{}%
+\contentsline {section}{\numberline {6.2}Further steps}{60}{}%
+\contentsline {subsection}{\numberline {6.2.1}Experiment design improvement}{60}{}%
+\contentsline {subsection}{\numberline {6.2.2}Stimulus generation improvement}{61}{}%
+\contentsline {subsection}{\numberline {6.2.3}Hybrid approach}{61}{}%
+\contentsline {section}{\numberline {6.3}New opportunities}{61}{}%
+\contentsline {section}{\numberline {6.4}Conclusion}{62}{}%
