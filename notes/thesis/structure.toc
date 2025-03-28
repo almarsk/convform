@@ -1,91 +1,38 @@
-\contentsline {chapter}{Introduction}{3}{}%
-\contentsline {chapter}{\numberline {1}Theoretical foundations}{7}{}%
-\contentsline {section}{\numberline {1.1}Textual dimension of conversation}{7}{}%
-\contentsline {subsubsection}{Text}{7}{}%
-\contentsline {subsubsection}{Coherence}{8}{}%
-\contentsline {subsubsection}{Cohesion}{8}{}%
-\contentsline {subsubsection}{Cataphore and Exophore}{9}{}%
-\contentsline {subsubsection}{Anaphore, Endophore and Coreference}{9}{}%
-\contentsline {subsubsection}{Topic}{10}{}%
-\contentsline {subsubsection}{Association}{11}{}%
-\contentsline {subsubsection}{Entity}{11}{}%
-\contentsline {section}{\numberline {1.2}Interactional dimension of conversation}{11}{}%
-\contentsline {subsubsection}{Adjacency pair}{12}{}%
-\contentsline {subsubsection}{Sequence structure}{12}{}%
-\contentsline {subsubsection}{Topic shading}{12}{}%
-\contentsline {subsubsection}{Dis/preferred answers}{13}{}%
-\contentsline {subsubsection}{Conversational repair}{13}{}%
-\contentsline {section}{\numberline {1.3}Disruptions in conversation coherence}{13}{}%
-\contentsline {subsection}{\numberline {1.3.1}Sources of incoherence in conversation}{14}{}%
-\contentsline {subsubsection}{Topic shifts}{15}{}%
-\contentsline {subsubsection}{Nonassignable anaphore}{15}{}%
-\contentsline {subsection}{\numberline {1.3.2}What do people do about coherence disruptions?}{15}{}%
-\contentsline {chapter}{\numberline {2}Experimental framework}{17}{}%
-\contentsline {section}{\numberline {2.1}What are chatbots?}{17}{}%
-\contentsline {subsubsection}{Turn taking in chatbot interactions}{18}{}%
-\contentsline {section}{\numberline {2.2}Convform}{19}{}%
-\contentsline {subsubsection}{Participant facing chat interface}{19}{}%
-\contentsline {subsubsection}{Conversation design tool}{19}{}%
-\contentsline {subsubsection}{Testing and debugging of various conversation contexts}{19}{}%
-\contentsline {subsubsection}{Accesing the conversation data}{19}{}%
-\contentsline {section}{\numberline {2.3}Conversation design in theory}{20}{}%
-\contentsline {subsection}{\numberline {2.3.1}Rule–based approach}{20}{}%
-\contentsline {subsubsection}{Pros and cons}{20}{}%
-\contentsline {subsection}{\numberline {2.3.2}Statistically driven approach}{21}{}%
-\contentsline {subsubsection}{Large language models}{21}{}%
-\contentsline {subsubsection}{Prompt engineering techniques}{21}{}%
-\contentsline {subsubsection}{Pros and cons}{22}{}%
-\contentsline {section}{\numberline {2.4}Conversation design in practice}{23}{}%
-\contentsline {subsubsection}{State}{23}{}%
-\contentsline {subsubsection}{Intent}{23}{}%
-\contentsline {subsubsection}{Coherence}{24}{}%
-\contentsline {subsubsection}{Conversation style}{24}{}%
-\contentsline {subsubsection}{Prompting}{25}{}%
-\contentsline {subsection}{\numberline {2.4.1}Stimuli}{27}{}%
-\contentsline {subsubsection}{Shallow anaphore}{27}{}%
-\contentsline {subsubsection}{Deep anaphore}{27}{}%
-\contentsline {subsubsection}{nonassignable anaphore}{28}{}%
-\contentsline {subsection}{\numberline {2.4.2}Ending the conversation}{29}{}%
-\contentsline {chapter}{\numberline {3}Data}{30}{}%
-\contentsline {section}{\numberline {3.1}Data collection}{30}{}%
-\contentsline {subsection}{\numberline {3.1.1}Experimental designs}{30}{}%
-\contentsline {subsection}{\numberline {3.1.2}Participants}{31}{}%
-\contentsline {section}{\numberline {3.2}Data analysis}{31}{}%
-\contentsline {section}{\numberline {3.3}Annotation}{32}{}%
-\contentsline {subsection}{\numberline {3.3.1}Inter--annotator agreement}{33}{}%
-\contentsline {subsubsection}{Stimulus annotation}{33}{}%
-\contentsline {subsubsection}{Metacommunication annotation}{35}{}%
-\contentsline {chapter}{\numberline {4}Quantitative Analysis}{37}{}%
-\contentsline {section}{\numberline {4.1}Expectations}{37}{}%
-\contentsline {section}{\numberline {4.2}Result}{37}{}%
-\contentsline {subsection}{\numberline {4.2.1}Ratings}{37}{}%
-\contentsline {subsection}{\numberline {4.2.2}Stimulus and reaction}{38}{}%
-\contentsline {subsection}{\numberline {4.2.3}Design rating}{38}{}%
-\contentsline {subsubsection}{Design rating with abandonment interpretation}{39}{}%
-\contentsline {subsection}{\numberline {4.2.4}Reaction to stimulus}{40}{}%
-\contentsline {subsubsection}{Stimulus x Reaction specific ratings}{40}{}%
-\contentsline {subsection}{\numberline {4.2.5}Comments}{41}{}%
-\contentsline {subsection}{\numberline {4.2.6}Conversation style}{41}{}%
-\contentsline {subsection}{\numberline {4.2.7}Zero anaphora}{42}{}%
-\contentsline {chapter}{\numberline {5}Qualitative observation}{45}{}%
-\contentsline {section}{\numberline {5.1}Pro-coherence perception}{45}{}%
-\contentsline {subsection}{\numberline {5.1.1}Remaps}{45}{}%
-\contentsline {subsection}{\numberline {5.1.2}Pseudoanaphora}{48}{}%
-\contentsline {subsection}{\numberline {5.1.3}Sequential coherence}{49}{}%
-\contentsline {section}{\numberline {5.2}Topical (in)coherence}{50}{}%
-\contentsline {subsection}{\numberline {5.2.1}Hard shift refusal}{52}{}%
-\contentsline {subsection}{\numberline {5.2.2}Incomplete control over conversation}{52}{}%
-\contentsline {subsection}{\numberline {5.2.3}Nontopicalized entities}{53}{}%
-\contentsline {subsection}{\numberline {5.2.4}Unexpected refusal}{54}{}%
-\contentsline {subsection}{\numberline {5.2.5}Unexpected acceptance}{56}{}%
-\contentsline {subsection}{\numberline {5.2.6}Nonfactual implication}{57}{}%
-\contentsline {section}{\numberline {5.3}Metacommunication}{57}{}%
-\contentsline {section}{\numberline {5.4}Conclusion}{59}{}%
-\contentsline {chapter}{\numberline {6}Final thoughts}{60}{}%
-\contentsline {section}{\numberline {6.1}Evaluation of anaphora categorization}{60}{}%
-\contentsline {section}{\numberline {6.2}Further steps}{60}{}%
-\contentsline {subsection}{\numberline {6.2.1}Experiment design improvement}{60}{}%
-\contentsline {subsection}{\numberline {6.2.2}Stimulus generation improvement}{61}{}%
-\contentsline {subsection}{\numberline {6.2.3}Hybrid approach}{61}{}%
-\contentsline {section}{\numberline {6.3}New opportunities}{61}{}%
-\contentsline {section}{\numberline {6.4}Conclusion}{62}{}%
+\contentsline {chapter}{\numberline {1}Introduction and Theory}{2}{}%
+\contentsline {chapter}{\numberline {2}Experimental framework}{3}{}%
+\contentsline {section}{\numberline {2.1}What are chatbots?}{3}{}%
+\contentsline {subsubsection}{Turn taking in chatbot interactions}{4}{}%
+\contentsline {section}{\numberline {2.2}Convform}{5}{}%
+\contentsline {subsubsection}{Participant facing chat interface}{5}{}%
+\contentsline {subsubsection}{Conversation design tool}{5}{}%
+\contentsline {subsubsection}{Testing and debugging of various conversation contexts}{5}{}%
+\contentsline {subsubsection}{Accesing the conversation data}{5}{}%
+\contentsline {section}{\numberline {2.3}Conversation design in theory}{6}{}%
+\contentsline {subsection}{\numberline {2.3.1}Rule–based approach}{6}{}%
+\contentsline {subsubsection}{Pros and cons}{6}{}%
+\contentsline {subsection}{\numberline {2.3.2}Statistically driven approach}{7}{}%
+\contentsline {subsubsection}{Large language models}{7}{}%
+\contentsline {subsubsection}{Prompt engineering techniques}{7}{}%
+\contentsline {subsubsection}{Pros and cons}{8}{}%
+\contentsline {section}{\numberline {2.4}Conversation design in practice}{9}{}%
+\contentsline {subsubsection}{State}{9}{}%
+\contentsline {subsubsection}{Intent}{9}{}%
+\contentsline {subsubsection}{Coherence}{9}{}%
+\contentsline {subsubsection}{Conversation style}{10}{}%
+\contentsline {subsubsection}{Prompting}{10}{}%
+\contentsline {paragraph}{Entity recognition}{10}{}%
+\contentsline {paragraph}{Anaphorization}{10}{}%
+\contentsline {subsection}{\numberline {2.4.1}Stimuli}{11}{}%
+\contentsline {subsubsection}{Shallow anaphore}{11}{}%
+\contentsline {subsubsection}{Deep anaphore}{11}{}%
+\contentsline {subsubsection}{Nonassignable anaphore}{12}{}%
+\contentsline {subsection}{\numberline {2.4.2}Ending the conversation}{13}{}%
+\contentsline {chapter}{\numberline {3}Data}{14}{}%
+\contentsline {section}{\numberline {3.1}Data collection}{14}{}%
+\contentsline {subsection}{\numberline {3.1.1}Experimental designs}{14}{}%
+\contentsline {subsection}{\numberline {3.1.2}Participants}{15}{}%
+\contentsline {section}{\numberline {3.2}Data analysis}{15}{}%
+\contentsline {section}{\numberline {3.3}Annotation}{16}{}%
+\contentsline {subsection}{\numberline {3.3.1}Inter--annotator agreement}{17}{}%
+\contentsline {subsubsection}{Stimulus annotation}{17}{}%
+\contentsline {subsubsection}{Metacommunication annotation}{19}{}%

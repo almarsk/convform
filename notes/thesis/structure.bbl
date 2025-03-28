@@ -1335,6 +1335,32 @@
       \verb https://www.bloomberg.com/news/articles/2024-11-13/openai-google-and-anthropic-are-struggling-to-build-more-advanced-ai
       \endverb
     \endentry
+    \entry{stringmatching}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c8d86ee64984e28baa0680503e4155d8}{%
+           family={Moy},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{fullhash}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{fullhashraw}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{bibnamehash}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{authorbibnamehash}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{authornamehash}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{authorfullhash}{c8d86ee64984e28baa0680503e4155d8}
+      \strng{authorfullhashraw}{c8d86ee64984e28baa0680503e4155d8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Functional Programming}
+      \field{month}{01}
+      \field{title}{Knuth–Morris–Pratt illustrated}
+      \field{volume}{34}
+      \field{year}{2024}
+    \endentry
     \entry{Nedoluzhko2010}{thesis}{}{}
       \name{author}{1}{}{%
         {{hash=24eddf09292a50627e64b1953398280a}{%
