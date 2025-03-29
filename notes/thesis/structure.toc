@@ -61,11 +61,11 @@
 \contentsline {section}{\numberline {4.1}Expectations}{36}{}%
 \contentsline {section}{\numberline {4.2}Result}{36}{}%
 \contentsline {subsection}{\numberline {4.2.1}Ratings}{36}{}%
-\contentsline {subsection}{\numberline {4.2.2}Stimulus and reaction}{37}{}%
-\contentsline {subsection}{\numberline {4.2.3}Design rating}{37}{}%
+\contentsline {subsection}{\numberline {4.2.2}Annotation result}{37}{}%
+\contentsline {subsection}{\numberline {4.2.3}Design rating}{38}{}%
 \contentsline {subsubsection}{Design rating with abandonment interpretation}{38}{}%
 \contentsline {subsection}{\numberline {4.2.4}Reaction to stimulus}{39}{}%
-\contentsline {subsubsection}{Stimulus x Reaction specific ratings}{39}{}%
+\contentsline {subsubsection}{Stimulus x Reaction specific ratings}{40}{}%
 \contentsline {subsection}{\numberline {4.2.5}Comments}{40}{}%
 \contentsline {subsection}{\numberline {4.2.6}Conversation style}{40}{}%
 \contentsline {subsection}{\numberline {4.2.7}Zero anaphora}{41}{}%

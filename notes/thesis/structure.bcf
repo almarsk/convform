@@ -2475,7 +2475,8 @@
     <bcf:citekey order="94" intorder="1">pevskova2019slavic</bcf:citekey>
     <bcf:citekey order="95" intorder="1">zero</bcf:citekey>
     <bcf:citekey order="96" intorder="1">assocAnaph</bcf:citekey>
-    <bcf:citekey order="97" intorder="1">danevs1989functional</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">schegloff1996turn</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">danevs1989functional</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

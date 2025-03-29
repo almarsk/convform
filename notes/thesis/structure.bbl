@@ -2540,6 +2540,33 @@
       \field{title}{Sequence Organization in Interaction: A Primer in Conversation Analysis}
       \field{year}{2007}
     \endentry
+    \entry{schegloff1996turn}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bab2d813c18610cf4803ae6ab6a9f6a4}{%
+           family={Schegloff},
+           familyi={S\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{fullhash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{fullhashraw}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{bibnamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorbibnamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authornamehash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorfullhash}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \strng{authorfullhashraw}{bab2d813c18610cf4803ae6ab6a9f6a4}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Interaction and grammar.--Cambridge University Press}
+      \field{title}{Turn organization: one intersection of grammar and interaction/Emanuel A. Schegloff}
+      \field{year}{1996}
+      \field{pages}{52\bibrangedash 133}
+      \range{pages}{82}
+    \endentry
     \entry{sacksRepair}{article}{}{}
       \name{author}{3}{}{%
         {{hash=bab2d813c18610cf4803ae6ab6a9f6a4}{%

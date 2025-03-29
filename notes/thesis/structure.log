@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 MAR 2025 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 MAR 2025 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,20 +402,20 @@ Package biblatex Warning: Load 'inputenc' before biblatex.
 (./structure.aux)
 \openout1 = `structure.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -431,8 +431,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'structure.bbl' found.
  (./structure.bbl)
-Package biblatex Info: Reference section=0 on input line 28.
-Package biblatex Info: Reference segment=0 on input line 28.
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -469,9 +469,9 @@ Package biblatex Info: Reference segment=0 on input line 28.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 38.
+(Font)              <14.4> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 38.
+(Font)              <7> on input line 36.
 
 
 [1
@@ -498,7 +498,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 49.
+(Font)              <5> on input line 47.
 
 
 [3
@@ -508,7 +508,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 per/cm-super-ts1.enc}]
 
 [4]
-Overfull \hbox (6.61017pt too wide) in paragraph at lines 161--164
+Overfull \hbox (6.61017pt too wide) in paragraph at lines 159--162
 []\T1/cmr/m/n/12 Some fac-tors that in-flu-ence co-her-ence in con-ver-sa-tiona
 l texts, whether in hu-man^^Uhuman
  []
@@ -530,7 +530,7 @@ Chapter 1.
 [9]
 
 [10]
-Overfull \hbox (25.37947pt too wide) in paragraph at lines 518--519
+Overfull \hbox (25.37947pt too wide) in paragraph at lines 516--517
 []\T1/cmr/m/n/12 Each par-tic-i-pant's un-der-stand-ing of the shared con-ver-s
 a-tion as it's be-ing co^^Ucreated. 
  []
@@ -562,7 +562,7 @@ Chapter 2.
 [20]
 
 [21]
-Underfull \hbox (badness 1442) in paragraph at lines 1142--1142
+Underfull \hbox (badness 1442) in paragraph at lines 1140--1140
 [][][]\T1/cmr/m/n/10 A. Payan-deh et al. ``How sus-cep-ti-ble are llms to log-i
 -cal fal-la-cies?'' In: \T1/cmr/m/it/10 arXiv preprint
  []
@@ -572,7 +572,7 @@ Underfull \hbox (badness 1442) in paragraph at lines 1142--1142
 [22]
 
 [23]
-Overfull \hbox (5.87434pt too wide) in paragraph at lines 1225--1234
+Overfull \hbox (5.87434pt too wide) in paragraph at lines 1223--1232
 \T1/cmr/m/n/12 With sup-port of LLM pow-ered re-sponses con-vform can be used t
 o sim-u-late an open^^Udomain
  []
@@ -638,7 +638,7 @@ Chapter 5.
 [46]
 
 [47]
-Overfull \hbox (4.32043pt too wide) in paragraph at lines 590--595
+Overfull \hbox (4.32043pt too wide) in paragraph at lines 608--613
 []\T1/cmr/m/n/12 A spec-trum could be shown of anaphoric de-vices that stems fr
 om a as-so-cia-tive anaphora
  []
@@ -662,7 +662,7 @@ om a as-so-cia-tive anaphora
 [55]
 
 [56]
-Overfull \hbox (1.18915pt too wide) in paragraph at lines 941--943
+Overfull \hbox (1.18915pt too wide) in paragraph at lines 960--962
 []\T1/cmr/m/n/12 Metacommunication sig-nals a con-ver-sa-tion co-her-ence dis-r
 up-tion but they give a chance
  []
@@ -688,13 +688,13 @@ Chapter 6.
 ]
 
 [63]
-Overfull \hbox (6.7805pt too wide) in paragraph at lines 2025--2025
+Overfull \hbox (6.7805pt too wide) in paragraph at lines 2023--2023
 \T1/cmr/m/n/12 £eských dat v praºském závis-lost-ním ko-r-pusu)''. PhD the-sis.
  Prague: Uni-verzita Karlova,
  []
 
 
-Overfull \hbox (0.70348pt too wide) in paragraph at lines 2025--2025
+Overfull \hbox (0.70348pt too wide) in paragraph at lines 2023--2023
 \T1/cmr/m/n/12 dress-ing chal-lenges''. In: \T1/cmr/m/it/12 2024 47th MIPRO ICT
  and Elec-tron-ics Con-ven-tion (MIPRO)\T1/cmr/m/n/12 .
  []
@@ -710,52 +710,52 @@ Overfull \hbox (0.70348pt too wide) in paragraph at lines 2025--2025
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'structure.run.xml'.
 \openout1 = `structure.run.xml'.
 
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 168 ({)
+### simple group (level 1) entered at line 166 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10517 strings out of 473190
- 209491 string characters out of 5704335
- 1030231 words of memory out of 5000000
- 33695 multiletter control sequences out of 15000+600000
+ 10522 strings out of 473190
+ 209672 string characters out of 5704335
+ 1030284 words of memory out of 5000000
+ 33700 multiletter control sequences out of 15000+600000
  575408 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,8n,81p,996b,1645s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20250308_1/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/
-texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></o
-pt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/font
-s/type1/public/cm-super/sfbx1200.pfb></opt/homebrew/Cellar/texlive/20250308_1/s
-hare/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/homebrew/Cellar/
-texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></
+/type1/public/cm-super/sfbx1200.pfb></opt/homebrew/Cellar/texlive/20250308_1/sh
+are/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/homebrew/Cellar/t
+exlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></o
+pt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-su
+per/sfbx2488.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/font
+s/type1/public/cm-super/sfcc1000.pfb></opt/homebrew/Cellar/texlive/20250308_1/s
+hare/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></opt/homebrew/Cellar/
+texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></
 opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-s
-uper/sfbx2488.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fon
-ts/type1/public/cm-super/sfcc1000.pfb></opt/homebrew/Cellar/texlive/20250308_1/
-share/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></opt/homebrew/Cellar
-/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><
+uper/sfrm0800.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20250308_1/
+share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/homebrew/Cellar
+/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><
 /opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-
-super/sfrm0800.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20250308_1
-/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></opt/homebrew/Cella
-r/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
+super/sfrm2074.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fo
+nts/type1/public/cm-super/sfti1000.pfb></opt/homebrew/Cellar/texlive/20250308_1
+/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></opt/homebrew/Cella
+r/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm
--super/sfrm2074.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/f
-onts/type1/public/cm-super/sfti1000.pfb></opt/homebrew/Cellar/texlive/20250308_
-1/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></opt/homebrew/Cell
-ar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb
-></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/c
-m-super/sftt1200.pfb>
-Output written on structure.pdf (67 pages, 564889 bytes).
+-super/sftt1200.pfb>
+Output written on structure.pdf (67 pages, 533282 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 307 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

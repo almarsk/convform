@@ -6,9 +6,9 @@
 \section{Expectations}
 
 In the performed quantitative analysis,
-following result were expected to be found.
+following results were expected to be found.
 
-For user rating the rating was expected to be ordered like so from best to worse:
+The user rating was expected to be ordered like so from best to worse:
 shallow, deep, nonassignable.
 
 As far as aborting the conversation goes,
@@ -62,9 +62,9 @@ That may explain the majority of ratings being a 2 or a 3.
 The ratings in the collected data can only be compared against each other and
 for them to give a better picture of the stimulus effect,
 a more complex experiment design would need to be deployed
-containing a reference conversation and its rating for each participant.
+containing an extra "standard" conversation for reference and its rating for each participant.
 
-\subsection{Stimulus and reaction}
+\subsection{Annotation result}
 
 The annotation result is as following:
 
@@ -92,12 +92,32 @@ Other \> 71
 \end{tabbing}
 \end{quote}
 
-There is less conversation with the deep anaphora stimulus.
+There is less conversation with the deep anaphora stimulus than those of other stimuli.
 This is because the deep anaphora stimulus requires the most difficult operation by the dialog system
 and is therefore the most likely to fail.
 The annotation result also confirms its necessity
 given almost a fifth of the conversations were marked as \textit{other} and
 thereby excluded from the stimulus reactions quantitative analysis.
+Conversation designs success in confronting the participant with stimuli is following:
+
+\begin{quote}
+\begin{tabbing}
+\hspace{4cm} \= \hspace{4cm} \=  \hspace{4cm} \= \kill % set up tab stops
+
+        \textbf{anaphora} \> \textbf{sucess} \> \textbf{fail} \\
+
+        {} \> 256 \> 113 \\
+        Shallow \> 85 \> 42 \\
+        Deep \> 63 \> 61 \\
+        Nonassignable \> 108 \> 10 \\
+
+    \end{tabbing}
+    \end{quote}
+
+Overal approximately two thirds of the stimuli went through with success.
+The slight differences in success and absolute numbers of stimuli are given by the fact,
+that some conversation designs ended up producing a stimuli different from the originally intended.
+
 
 \subsection{Design rating}
 
@@ -114,8 +134,8 @@ Nonassignable \> 2.95 \\
 \end{quote}
 
 Opposed to expectations shallow anaphora stimulus type has worse score than deep anaphora.
-P-value from Kruskal-Wallis test being 0.02 is sufficiently low, but
-when values stimulus types are compares post-hoc via Dunn test,
+The p-value from Kruskal-Wallis test being 0.02 is sufficiently low, but
+when values stimulus types are compared post-hoc via Dunn test,
 result come to:
 
 \begin{quote}
@@ -129,7 +149,7 @@ Nonassignable \> Shallow \> 0.136 \\
 \end{quote}
 
 The only sufficiently low p-value is between deep and nonassignable anaphora.
-The results only partially correspond with the expectaions.
+The results only partially correspond with the expectations.
 Number rating is however noisy as other things happen in conversation that affect it.
 The chatbot contributions to the conversation outside of the stimulus
 has to be under control and produce natural responses in order to really be able
@@ -140,7 +160,7 @@ hence the high p-values.
 
 Some conversations do not have a rating because participant clicked off of the experiment webpage.
 Since the participants were instructed to leave the conversation if it is not \textit{natural},
-these conversations can be interpreted as worse possible reaction - 5.
+these conversations can be interpreted as the worse possible reaction - 5.
 
 We can further split these into a situation where
 the participant clicked off of the experiment
@@ -233,7 +253,7 @@ Nonassignable   \> 11.21\% \> 49.14\% \> 39.66\% \\
 \end{tabbing}
 \end{quote}
 
-With the extremely low p-value coming to $P < 10^{-28}$
+With the extremely low p-value coming to p < 0.0001
  there is no doubt
 that the different stimuli have a clear effect on the participant reaction and
 that the results will be replicable.
@@ -269,7 +289,7 @@ more control over the conversation outside of the stimulus needs to be acquired
 to be able to rely on these results.
 To make conclusions about the meta reaction being indicative of
 a less acceptable experience in participant
-would be hurried.
+would be hasty.
 
 \subsection{Comments}
 
@@ -323,7 +343,7 @@ For example in following conversation lack of topical input lead to aborting the
 \item ...
 \item \utterance{b:}{To chápu, co bys chtěl v histologii zlepšit?}{I understand, what would you like to improve about histology}
 \item \utterance{h:}{chtela bych ji nemit proste}{I would just like to not have it}
-\item \utterance{b:}{To chápu, chtěla bys ji prostě nemít."}{I understand, you would just like to not have it.}
+\item \utterance{b:}{To chápu, chtěla bys ji prostě nemít.}{I understand, you would just like to not have it.}
 \item \textit{aborted}
 \end{itemize}
 \end{quote}
@@ -417,7 +437,7 @@ That is reasonable as the response was generated based on the monastery topic fr
 Perhaps if there was an explicit anaphora here, the mapping would have been easier
 as dropping in a nonsubject position is not preferred in Czech.
 Regardless, the hard topical shift that disrupts the coherence
-caused by the chatbotwould remain in the conversation.
+caused by the chatbot would remain in the conversation.
 
 \chapter{Qualitative observation}
 
@@ -431,7 +451,7 @@ were made.
 
 \section{Pro-coherence perception}
 
-Most noticeably the data shows how participants communicate with a cooperativity in mind
+Most noticeably the data shows how participants communicate with cooperativity in mind
 and assume a lot in order to maintain the conversation flow.
 The quality with which the chatbot could generate responses was high enough,
 that the illusion of social interaction would hold up even if minor issues did come up.
@@ -462,7 +482,7 @@ even though the hardcoded response was meant to be nonassignable:
 
 
 This conversation along with several others is the reason annotation was necessary for this type of stimulus.
-The tolerance on participant side was sometimes very high, even if the anaphora was incongruent
+The participant tolerance was sometimes very high, even if the anaphora was incongruent
 with the assumed mapping or even if
 some of the reference contained in the hardcoded stimulus does not map perfectly
 like in following conversation:
@@ -561,8 +581,6 @@ that the participant continues the conversation even if it entails a topic shift
 
 \subsection{Associative anaphora}
 
-    hardcoded phrase with intended nonassignable anaphora is sometimes assignable by association
-
     An anaphora which lacks an explicit candidate mapping does not necessarily need to be nonassignable.
     Such associative anaphora \footcite{assocAnaph} also occurs in the collected data:
 
@@ -597,7 +615,8 @@ that the participant continues the conversation even if it entails a topic shift
 
 Without directly provoking it via experiment design,
 some conversations show a pro-coherence perception on the participant side
-in terms of the sequental structure () of the conversation:
+in terms of the sequental structure \footcite{schegloff1996turn} of the conversation:
+
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -629,7 +648,7 @@ which the participant inquires about in the first question.
     The annotation showed that only 64 conversations of this type were collected.
     That is approximately half of how many conversations were collected of the shallow and nonassignable anaphora.
     This relative failure has mainly been caused by the remaps discussed above.
-    In its ideal form it looked something like this:
+    In its ideal form it looked like this:
 
     \begin{quote}
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
