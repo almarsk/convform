@@ -1,15 +1,15 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'structure.blg'
-[54] biber:340> INFO - === Fri Mar 28, 2025, 11:02:02
-[67] Biber.pm:420> INFO - Reading 'structure.bcf'
-[140] Biber.pm:994> INFO - Found 52 citekeys in bib section 0
-[152] Biber.pm:4463> INFO - Processing section 0
-[160] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[162] bibtex.pm:1713> INFO - LaTeX decoding ...
-[198] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[472] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[472] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[472] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[472] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[511] bbl.pm:676> INFO - Writing 'structure.bbl' with encoding 'UTF-8'
-[529] bbl.pm:779> INFO - Output to structure.bbl
+[52] biber:340> INFO - === Sat Mar 29, 2025, 13:56:46
+[64] Biber.pm:420> INFO - Reading 'structure.bcf'
+[138] Biber.pm:994> INFO - Found 84 citekeys in bib section 0
+[150] Biber.pm:4463> INFO - Processing section 0
+[157] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[160] bibtex.pm:1713> INFO - LaTeX decoding ...
+[212] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[724] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[724] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[724] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[724] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[786] bbl.pm:676> INFO - Writing 'structure.bbl' with encoding 'UTF-8'
+[820] bbl.pm:779> INFO - Output to structure.bbl

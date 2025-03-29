@@ -23,15 +23,14 @@
     \fi%
 }
 
-
-
 \begin{document}
 
    % TODO
    %
-   % touch up methodology
-   % touch up theory with bublitz
-   % touch up rest
+   % touch up data chapters
+   % touch up theory
+   % add data to appendix.json
+   % go through references
 
 
 \maketitle
@@ -39,7 +38,7 @@
 \tableofcontents
 \clearpage
 
-\if false
+
 
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
@@ -61,12 +60,12 @@ all thanks to natural language computer interface.
 \par
 The promise of much practical usage of the current wave of generative AI is ambitious
 and only brings its fruit slowly, perhaps slower, than was expected
-\footcite{bloomberg2024openai1}\footcite{reuters2024openai}.
+\footcite{bloomberg2024openai1, reuters2024openai}.
 There is talk of a "plateau" in development of the technology powering
 the current cutting edge inventions \footcite{ritter2024ai}.
 That besides the current day issues of cutting edge AI like
 high electricity consumption \footcite{ritchie2024ai} and
-unpredictable and broad societal impact \footcite{hagerty2019global}\footcite{baldassarre2023social}
+unpredictable and broad societal impact \footcite{hagerty2019global,baldassarre2023social}
 
 That being said, in context of conversation research,
 this development in technology promises to make things possible that previously were not.
@@ -125,7 +124,7 @@ While chatbots are evaluated for how natural and error free their way of convers
 human–human conversation is rarely flawless as
 errors happen and
 conversational coherence gets temporarily disrupted
-In case of human–human communication, disruptions can however be cured easily \footcite{bublitz1999disturbed}\footcite{DINGEMANSE202430}.
+In case of human–human communication, disruptions can however be cured easily \footcite{bublitz1999disturbed, DINGEMANSE202430}.
 
 \par
 In human–bot communication, disruptions could derail a conversation completely,
@@ -214,7 +213,7 @@ those that have the potential to prevent it from being that.
 The key concepts discussed in this paper are
 two closely related topics:
 
-Coreference realized by anaphore and topic – what the text is about.
+Coreference realized by anaphora and topic – what the text is about.
 
 
 % _____________________
@@ -329,7 +328,7 @@ whether a conversation text is coherent depends on\\ an ongoing negotiation
     relating parts of the text to each other, and
     exophoric references, which point outside the text \footcite[p.~31]{Halliday76cohesion}.
     Endophoric cohesion covers aspects
-    like anaphoric references and cataphoric references \footcite{hajicovasgall2003} \footcite{loaiciga-etal-2022-anaphoric}.
+    like anaphoric references and cataphoric references \footcite{hajicovasgall2003, loaiciga-etal-2022-anaphoric}.
     Exophoric references, however, rely on shared context beyond the text itself,
     requiring readers to use prior knowledge.
     Following concepts can be considered cohesive elements.
@@ -371,12 +370,12 @@ whether a conversation text is coherent depends on\\ an ongoing negotiation
     not the cataphore,
     as it ties back to the previous text, creating bonds across large textual units.
 
-\subsubsection{Anaphore, Endophore and Coreference}
+\subsubsection{Anaphora, Endophore and Coreference}
 \par
-    A common cohesive text element is an anaphore \footcite{Nedoluzhko2010}.
+    A common cohesive text element is an anaphora \footcite{Nedoluzhko2010}.
     It is a reference inside the text pointing back to a previously mentioned entity.
     Often it is realised via personal pronouns.
-    Though there are other ways for anaphore to realise.
+    Though there are other ways for anaphora to realise.
     %–––
     In Czech, anaphoric references often rely on grammatical gender and number,
     making participial endings essential for identifying the referent.
@@ -446,7 +445,7 @@ Topic annotation is by its nature always more text,
     Despite all these complications,
     topic cannot be skipped in conversation research
     as it is deeply intertwined with the concepts mentioned above.
-    Topic progressions across text are realised via anaphore and association
+    Topic progressions across text are realised via anaphora and association
     and tightly interact with coherence.
     An sufficient amount of time has to be spent on a given topic unit,
     enough information has to be said about a given topic
@@ -470,8 +469,8 @@ Topic annotation is by its nature always more text,
 \subsubsection{Entity}
 \par
     An entity is an exophoric referent, descriptions of objects, people, events etc \footcite{entities}.
-    Words or text elements which can be reffered to by an anaphore will be called entities.
-    Since a phrase containing an anaphore typically adds more information about the referent
+    Words or text elements which can be reffered to by an anaphora will be called entities.
+    Since a phrase containing an anaphora typically adds more information about the referent
     the new information must be semantically compatible,
     in other words association has to be possible between the referent and the added information.
     Entity also has to do with topic.
@@ -672,7 +671,7 @@ due to never coming back to a previously mentioned topic.
 \par
 Two kinds of phenomena are at hand when it comes to
 ways in which conversation coherence can be disrupted –
-topic shifts and nonassignable anaphore \footcite{bublitz1999disturbed}.
+topic shifts and nonassignable anaphora \footcite{bublitz1999disturbed}.
 While not unique to conversation
 both take on specific forms in it worth looking at.
 
@@ -699,17 +698,17 @@ both take on specific forms in it worth looking at.
     How do we navigate the flow of conversation and
     what indicates a natural shift versus a disruptive one?
 
-\subsubsection{Nonassignable anaphore}
+\subsubsection{Nonassignable anaphora}
 \par
-    nonassignable anaphore is closely tied to topic progression.
-    Currently established topic or topics help assigning anaphore and
-    determining between an anaphore and an exophore.
+    nonassignable anaphora is closely tied to topic progression.
+    Currently established topic or topics help assigning anaphora and
+    determining between an anaphora and an exophore.
     Even if an anaphoric device is not assignable,
     and the reference is presumably an exophoric one,
     The reason for employing this reference must be
     relevant to an established topic.
     In conversation meaning of demonstratives is to be negotiated.
-    If an anaphores assignability causes confusion,
+    If an anaphoras assignability causes confusion,
     chances are it is caused by one of the following
 
 \begin{itemize}
@@ -760,7 +759,7 @@ other than conversation coherence disruption.
 Inference takes place constantly \footcite{garfinkelstudies}.
 Each of those moments could be hardly considered a coherence disruption.
 There is however always potential for it,
-particularily via unclear or nonassignable anaphore or abrupt unjustified topic shifts.
+particularily via unclear or nonassignable anaphora or abrupt unjustified topic shifts.
 Repair and metacommunication also takes place in a mutually informed and synchonized interaction.
 It is for example deployed when it is revealed
 that the interaction participants intentions or opinions differ.
@@ -776,11 +775,6 @@ troublesome anaforic references and topic progressions.
 % _____________________
 %
 
-\fi
-
-
-\chapter{Introduction and Theory}
-    ..
 \chapter{Experimental framework}
 
 \section{What are chatbots?}
@@ -1051,17 +1045,16 @@ in what is being said next.
 In its simplest form,
 it is possible to just let the answer be generated "end–to–end".
 The user input is sent to a model which generates an answer.
-It has been convincingly shown that this technology has the capability
-of reacting in a flexible way to much of what is being thrown at it ().
-While not perfect ()
-this technology is capable of staying on topic (), mirroring ()
+While not perfect \footcite{tie2024llms}
+this technology is capable of staying on topic \footcite{sreedhar2024canttalkaboutthisaligninglanguagemodels},
+mirroring \footcite{ivey2024real}
 and other things that make for a coherent conversation.
 
 \subsubsection{Large language models}
 
 The main component that is responsible for
 this way of simulating conversation at this level of flexibility
-are so called large language models ().
+are so called large language models \footcite{naveed2023comprehensive}.
 These models, powered by advanced neural networks,
 have revolutionized the field of natural language processing.
 Among the most influential architectures are transformers,
@@ -1079,7 +1072,7 @@ being integrated into tools for writing, education, customer service, and more.
 The rapid advancement of LLM technology
 has outpaced research into optimal interaction strategies.
 Understanding how to engage effectively
-with these systems has been a developing area (),
+with these systems has been a developing area \footcite{sahoo2024systematic},
 which illustrates both their power and their novel nature.
 The foundational idea is:
 an LLM performance improves significantly if it is prompted correctly.
@@ -1087,22 +1080,21 @@ an LLM performance improves significantly if it is prompted correctly.
 Over time, researchers and practitioners have developed techniques for
 crafting effective prompts to optimize outputs.
 The simplest approach is known as "zero–shot" prompting,
-where a user poses a direct question or request without additional context or examples ().
+where a user poses a direct question or request without additional context or examples \footcite{kong2023better} \footcite{li2023practical}.
 However, zero–shot prompting may not always yield the desired depth or accuracy.
 It is common for the model to "misunderstand" the assignment
 and generate tokens so that it will "confuse" itself
-and lead to generated answer in a completely irrelevat direction ().
+and lead to generated answer in a completely irrelevant direction \footcite{hwang2025llms}.
 
-More sophisticated strategies include "few–shot" prompting,
+More sophisticated strategies include "few–shot" prompting \footcite{yao2023more},
 where examples are provided to guide the model's response style or focus.
 This way there is a reference for the structure of the answer
 and there is a protection to the answer leading somewhere it is not meant to.
-Since analogy is a task LLMs are doing really well in ()
-framing the task as an analogy can help improve the output significantly ().
+Framing the task as an analogy can help improve the output \footcite{stevenson2024can, qin2024relevant}.
 
 Another very prevalent way that has proven to
 improve the performance of LLMs is a so called
-chain–of–thought prompting ().
+chain–of–thought prompting \footcite{wei2022chain}.
 It encourages the model to
 articulate its reasoning step–by–step,
 enhancing logical accuracy.
@@ -1118,7 +1110,7 @@ This principle can be further improved by
 chaining several LLM calls and having one
 evaluate the previous one.
 Such strategy has proven to surpass other models
-in available metrics ().
+in available metrics \footcite{wu2024comparative}.
 
 \subsubsection{Pros and cons}
 
@@ -1142,42 +1134,26 @@ it can accept complex instructions as to how to behave
 and these instructions can be tuned in runtime.
 
 Systems of this sort however introduce their own set of problems.
-A big issue with factuality is called hallucinating ().
+A big issue with factuality is called hallucinating \footcite{bruno2023insights, perkovic2024hallucinations}.
 Factuality is a challenge for LLMs overall.
 It is possible to ask questions,
-that do not have a correct answer ().
+that do not have a correct answer \footcite{payandeh2023susceptible}.
 It has been shown, that LLMs have an issue
-knowing that they do not know something ().
+knowing that they do not know something \footcite{yin2023large}.
 Recognizing that is the case requires
 an extra level of reasoning
-that is an object of research as of recently ()[dark matter of ai]
-
-They are also required to be ethically aligned with humans.
-This is an ongoing research field which has been making some
-troublesome observations recently with the most intelligent models available ().
+that is an object of research as of recently \footcite{transformer_circuits_2024}
+They are also required to be ethically aligned with humans which is an ongoing research \footcite{wang2024comprehensive}.
 
 Even if all the programming and training is done to the most benefit of humans,
 information technology is succeptible to be broken by malicious action
-or so called jail breaks ().
+or so called jail breaks \footcite{zhou2024don, wei2023jailbroken}.
 LLMs being trained on vast amount of data,
 they hold knowledge that can be illegal or unethical to spread
 like steps to create explosives for example.
 The typical examples of jail breaks are ways to manipulate
 the LLM to give out this information
 which under regular circumstances it would not give.
-
-With all this in mind,
-how much of a responsibility do we want to allow LLMS to have?
-LLM powered technology is expected to be making decisions
-that will and do affect people on a daily basis.
-Hopefully that will not happen before
-the challenges of alignment and hallucinations
-are solved.
-
-As far as low–stakes open–domain conversation simulation goes,
-LLM powered chatbots are relatively safe
-though there are cases of dangerous or tragic situations
-especially for vulnerable individuals ().
 
 This is why for dialog systems that are supposed to achieve
 anything else on top of the conversation itself,
@@ -1264,7 +1240,7 @@ and it can manifest itself via the specific writing of the hardcoded responses
 that the system is able to give.
 With generated responses, the persona of the chatbot has to be included in the prompt.
 The personality of LLMs and conversation technology more broadly
-is being discussed\footcite{gpttoxicity}\footcite{robopersona}.
+is being discussed\footcite{gpttoxicity, robopersona}.
 The general characteristics of a machine talking to a human are typically
 friendliness and helpfulness.
 For conversation research with convform,
@@ -1310,7 +1286,7 @@ and give the participant the opportunity to bring their own initiative.
 
 In order to track entities that could be referred to
 a few–shot prompt was deployed that would help
-keep track of which entities have been mentioned. () New or Old? Exploring How Pre–Trained Language Models Represent Discourse Entities
+keep track of which entities have been mentioned. \footcite{Loiciga2022NewOO}
 Since GPT4o, the model used in the experiment,
 tended to consider too many things an entity,
 most examples are negative and do not capture an entity.
@@ -1318,12 +1294,12 @@ It also contains some repetition as a result of fine–tuning the best wording.
 
 \paragraph{Anaphorization}
 
-To be able to create conversation designs which contain various types of anaphore,
+To be able to create conversation designs which contain various types of anaphora,
 convform first needs to be able to give a response that
 has an anaphoric reference to an entity from the previous conversation in it.
 
 The GPT-4o model used for this use case
-does not tend to generate sentences with anaphores in them.
+does not tend to generate sentences with anaphoras in them.
 Instead it will rather mirror the entity phrase.
 
 The anaphorization prompt therefore tasks the model
@@ -1332,7 +1308,7 @@ that the mirrored entity is replaced with
 an anaphoric device.
 For this another few–shot prompt was used to modify a just generated response
 found in Appendix under \textit{anaphorization}.
-The approach here is opposite of automated annotation of anaphora in text () Annotating anaphoric phenomena in situated dialogue.
+The approach here is opposite of automated annotation of anaphora in text \footcite{loaiciga-etal-2022-anaphoric}
 Instead we are generating it.
 This prompt has been tuned to catch as many tricky cases as possible.
 
@@ -1347,14 +1323,14 @@ can be then compared.
 This way conversational experimental designs can be created.
 There are three types of stimuli created
 for the purpose of this paper.
-They are shallow anaphore, deep anaphore and nonassignable anaphore.
+They are shallow anaphora, deep anaphora and nonassignable anaphora.
 
-\subsubsection{Shallow anaphore}
+\subsubsection{Shallow anaphora}
 
-A shallow anaphore is a kind of anaphore
+A shallow anaphora is a kind of anaphora
 where the referent of the anaphoric device
 should be relatively easy to map
-as opposed to a deep anaphore.
+as opposed to a deep anaphora.
 The referent will always occur
 in the preceding utterance of the participant.
 This type of stimuli is relatively simple to achieve
@@ -1362,7 +1338,7 @@ in convform
 generating a response
 and using the anaphorization prompt on it afterwards.
 
-Shallow anaphore is common in regular conversation ()
+Shallow or surface anaphora \footcite{hoji2003surface} is common in regular conversation
 and should not pose a problem for participant to understand
 in a conversation with chatbot.
 It should therefore not have an impact
@@ -1382,15 +1358,15 @@ as other more interesting stimuli.
 \end{itemize}
 \end{quote}
 
-\subsubsection{Deep anaphore}
+\subsubsection{Deep anaphora}
 
-A deep anaphore is a situation
+A deep anaphora is a situation
 where the referent of the anaphoric device
 occurs several utterances ago.
 The depth is not measured by number of occurences
 but by number of new entities that occur
-since the referent which the anaphore refers to.
-Measuring depth of anaphore by the number of utterances
+since the referent which the anaphora refers to.
+Measuring depth of anaphora by the number of utterances
 does not capture the dynamic nature
 of topic progression in the text of the conversation.
 The number of utterances does not map
@@ -1413,14 +1389,14 @@ both topic and entity are difficult to define
 and their annotations tend to be recursive.
 A close–enough approach has been adopted in this paper.
 While runtime topic annotation by an LLM
-is not necessary for generating deep anaphore
+is not necessary for generating deep anaphora
 and has therefore not been attempted in this paper,
 entity tracking is made possible by
 entity recognition prompt.
 
 This prompt runs in parallel with the next response generation
 and writes down its results in the conversation status.
-A chatbot that contains the deep anaphore stimuli
+A chatbot that contains the deep anaphora stimuli
 chooses a participant mentioned entity
 relatively early on in the conversation
 (though not at the very beginning)
@@ -1445,7 +1421,7 @@ that from the perspective of the participant
 has been mentioned a while ago.
 
 This approach is relatively imprecise and relies on luck to a certain degree.
-Compared to the shallow anaphore
+Compared to the shallow anaphora
 it is expected to be somewhat more problematic
 and perhaps cause the participant to request clarification.
 
@@ -1458,18 +1434,18 @@ chances are the chatbots question will be on
 a piece of information that has been mentioned in the meantime.
 Whenever that happens the degree of participant acceptance decreases significantly
 due to a topical incoherence rather than
-due to struggling to mapping a deep anaphore.
+due to struggling to mapping a deep anaphora.
 This has been dealt with via providing the chatbot
 with the rest of the conversation in another component of the prompt
 with the instruction to avoid any of the topics mentioned there.
-LLMs are known to handle negative instruction with less success than positive ones ()
+LLMs are known to handle negative instruction with less success than positive ones \footcite{negated_prompts}
 but this measure seems to have mitigated the problem
-as can be seen in the data attached in the annex.
+as can be seen in the data attached in the appendix.
 
-\subsubsection{Nonassignable anaphore}
+\subsubsection{Nonassignable anaphora}
 
 The last type of stimuli used in this paper
-has been called nonassignable anaphore.
+has been called nonassignable anaphora.
 It is a device that the participant will tend to
 interpret as an anaphoric device,
 typically a personal or demonstrative pronoun,
@@ -1482,40 +1458,40 @@ by the greatest amount.
 To make a chatbot contain this stimuli
 entities are tracked to make sure
 there are candidates to be considered
-in case an anaphore occurs.
+in case an anaphora occurs.
 Once there is a sufficient number of
 entities recognized in the conversation
 a hardcoded response is returned instead of an LLM generated one.
 The response contains a pronoun that to make sense of
-participant needs to interpret as an anaphore.
+participant needs to interpret as an anaphora.
 
 Since the response containing the stimuli is hardcoded,
 there is no guarantee
 that is actually is incoherent with the previous conversation
-and that there is no candidate to map the anaphore on to.
+and that there is no candidate to map the anaphora on to.
 Though odds are high enough
 every conversation that is supposed to contain this stimuli
 will have to be manually checked
 to confirm the required stimuli is present.
 This will be the case for all the conversations regardless
 because presence of stimuli is not guaranteed
-for shallow and deep anaphore either.
+for shallow and deep anaphora either.
 
 An approach not explored in this paper is
-achieving a nonassignable anaphore is also possible
+achieving a nonassignable anaphora is also possible
 via generating a response
 using a prompt that instructs an LLM
 to come up with a question containing an unrelated entity
 avoiding all mentioned entities
 and anaphorize it before showing it to the participant.
-Although LLMs tend to perform worse with negative instructions ()
+Although LLMs tend to perform worse with negative instructions \footcite{negated_prompts}
 this could be achieved using a chain of prompts.
-The notion of nonassignable anaphore
+The notion of nonassignable anaphora
 brings into scope the question of
 what makes an anaphora assignable.
-It is the semantic compatibility of the words around the anaphore
-that determine which of the candidates the anaphore is referring back to.
-The generation of the lexical surroundings of the anaphore
+It is the semantic compatibility of the words around the anaphora
+that determine which of the candidates the anaphora is referring back to.
+The generation of the lexical surroundings of the anaphora
 needs to be handled carefully
 when coming up with an LLM based response.
 
@@ -1524,7 +1500,7 @@ when coming up with an LLM based response.
 While recognizing when the conversation is ending
 or especially when it should not end
 people rely on a set of clues
-similarly to knowing when to take turns speaking ().
+similarly to knowing when to take turns speaking \footcite{closing1} \footcite{davidson1975ending} \footcite{coppock2005politeness}.
 In open–domain conversation
 like the one a convform chatbot holds with experiment participants,
 the main challenge is to recognize
@@ -1907,7 +1883,7 @@ In conclusion the annotator agreement is
 strong enough for both stimulus type and metacommunication reaction and
 quantitative analysis can be performed on the measured metrics.
 
-\if false
+
 
 
 
@@ -1981,7 +1957,7 @@ quantitative analysis can be performed on the measured metrics.
 
         Lastly the nonassignable anaphora stimulus could be improved to generate stimulus responses via prompt.
         That would require generating an irrelevant entity and anaphorically referring to it.
-        This challenge could provide more insight on associativity and pseudoanaphora if tackled succesfully.
+        This challenge could provide more insight on associative anaphora if tackled succesfully.
 
     \subsection{Hybrid approach}
 
@@ -2008,7 +1984,7 @@ intentionally creating the stimuli hinted at in the analysis would become possib
     \begin{itemize}
     \item{Understanding the bimodality of deep and nonassignable anaphora}
     \item{Deep anaphora referring to a (non)topicalized entity}
-    \item{Closer look at zero reference, pseudoanaphora and associativity}
+    \item{Closer look at zero reference and associative anaphora}
     \item{Observing participant reactions to nonfactual implications}
     \item{Comparing different anaphora depths}
     \item{Topic shift with or without discourse markers}
@@ -2040,7 +2016,7 @@ From here, multiple research paths can be taken in both understanding the inner 
 and attempting to simulate various situations using the dialog system.
 
 
-\fi
+
 
 
 \printbibliography
