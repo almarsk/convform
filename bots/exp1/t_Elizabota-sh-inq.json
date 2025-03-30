@@ -1,1 +1,143 @@
-{"coda":["outro","ale-fakt-uz"],"description":"shallow anaphore, inquisitive","instructions":[],"intents":[{"adjacent":["ale-fakt-uz"],"context_intents":[],"iterate_states":[],"match_against":[{"prompt":"basic","text":"vyjádří lítost, že už končí konverzace"}],"name":"nechod"},{"adjacent":["dotaz"],"checkpoint":false,"context_intents":[],"initiativity":1,"iterate_states":["povidani-a","povidani-a","povidani-a","povidani-a","povidani-a","povidani-a","povidani-a"],"iteration":1,"match_against":[{"prompt":"entity","text":"zmíní novou entitu"}],"name":"anafora-op"}],"persona":"Elizabota si ráda povídá. Prosí uživatele, aby něco vyprávěl a když uživatel vypráví, tak klade hodně doplňujících otázek. Jeden pozdrav stačí.","states":[{"context_intents":[],"context_states":[],"emphasis":false,"initiativity":0,"intents":{},"iterate_states":[],"iteration":1,"name":"intro","response_type":"responsive","say":[{"prompt":false,"text":"Ahoj, mé jméno je Elizabota"}]},{"context_intents":[],"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"outro","response_type":"responsive","say":[{"prompt":false,"text":"No nic, já musím končit. Tak ahoj."}]},{"context_intents":[],"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":2,"name":"povidani","response_type":"initiative","say":[{"prompt":"basic","text":"si normálně povídá, jak je mu vlastní. Položí vždy jen jednu doplňující otázku."}]},{"context_intents":[],"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"ale-fakt-uz","response_type":"responsive","say":[{"prompt":"basic","text":"se omluví, že už fakt musí."}]},{"context_intents":[],"context_states":[],"emphasis":true,"fallback_states":[],"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"dotaz","response_type":"responsive","say":[{"prompt":"an2fora","text":"se zeptá jednou otázkou na jednu věc ohledně tematického centra předchozí věty"}]},{"context_intents":[],"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":4,"name":"povidani-po","response_type":"initiative","say":[{"prompt":"basic","text":"si normálně povídá, jak je mu vlastní. Položí vždy jen jednu doplňující otázku."}]},{"context_intents":[],"context_states":[],"emphasis":false,"initiativity":-1,"intents":{"anafora-op":[]},"iterate_states":[],"iteration":7,"name":"povidani-a","response_type":"initiative","say":[{"prompt":"basic","text":"si normálně povídá, jak je mu vlastní. Položí vždy jen jednu doplňující otázku."}]}],"track":["intro","povidani","povidani-a","dotaz","povidani-po"]}
+{
+  "coda": ["outro", "ale-fakt-uz"],
+  "description": "shallow anaphora, inquisitive",
+  "instructions": [],
+  "intents": [
+    {
+      "adjacent": ["ale-fakt-uz"],
+      "context_intents": [],
+      "iterate_states": [],
+      "match_against": [
+        { "prompt": "basic", "text": "vyjádří lítost, že už končí konverzace" }
+      ],
+      "name": "nechod"
+    },
+    {
+      "adjacent": ["dotaz"],
+      "checkpoint": false,
+      "context_intents": [],
+      "initiativity": 1,
+      "iterate_states": [
+        "povidani-a",
+        "povidani-a",
+        "povidani-a",
+        "povidani-a",
+        "povidani-a",
+        "povidani-a",
+        "povidani-a"
+      ],
+      "iteration": 1,
+      "match_against": [{ "prompt": "entity", "text": "zmíní novou entitu" }],
+      "name": "anafora-op"
+    }
+  ],
+  "persona": "Elizabota si ráda povídá. Prosí uživatele, aby něco vyprávěl a když uživatel vypráví, tak klade hodně doplňujících otázek. Jeden pozdrav stačí.",
+  "states": [
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": 0,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "intro",
+      "response_type": "responsive",
+      "say": [{ "prompt": false, "text": "Ahoj, mé jméno je Elizabota" }]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "outro",
+      "response_type": "responsive",
+      "say": [{ "prompt": false, "text": "No nic, já musím končit. Tak ahoj." }]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 2,
+      "name": "povidani",
+      "response_type": "initiative",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "si normálně povídá, jak je mu vlastní. Položí vždy jen jednu doplňující otázku."
+        }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "ale-fakt-uz",
+      "response_type": "responsive",
+      "say": [{ "prompt": "basic", "text": "se omluví, že už fakt musí." }]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": true,
+      "fallback_states": [],
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "dotaz",
+      "response_type": "responsive",
+      "say": [
+        {
+          "prompt": "an2fora",
+          "text": "se zeptá jednou otázkou na jednu věc ohledně tematického centra předchozí věty"
+        }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 4,
+      "name": "povidani-po",
+      "response_type": "initiative",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "si normálně povídá, jak je mu vlastní. Položí vždy jen jednu doplňující otázku."
+        }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": { "anafora-op": [] },
+      "iterate_states": [],
+      "iteration": 7,
+      "name": "povidani-a",
+      "response_type": "initiative",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "si normálně povídá, jak je mu vlastní. Položí vždy jen jednu doplňující otázku."
+        }
+      ]
+    }
+  ],
+  "track": ["intro", "povidani", "povidani-a", "dotaz", "povidani-po"]
+}

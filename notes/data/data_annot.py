@@ -33,7 +33,7 @@ with open("export/chatbot anotace - List 1.csv", "r") as a:
                     convo_data["user_reaction"] = line[2] if line[2] else "continuation"
                     convo_data["comment_annot"] = line[3]
                     convo_data["generation_issue"] = True if line[4] == "TRUE" else False
-                    convo_data["zero_anaphore"] = True if line[5] == "TRUE" else False
+                    convo_data["zero_anaphora"] = True if line[5] == "TRUE" else False
                     break
 
 

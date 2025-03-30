@@ -15,7 +15,7 @@ stimulus
 meta
 poznámka
 
-anaphore ne !! anaphora
+anaphora ne !! anaphora
 
 překlad promptů do anglickéhho textu práce
 
@@ -87,7 +87,7 @@ napsat experimentální kapitolu
     sběr dat
     IAA
     analýza
-    zero anaphore
+    zero anaphora
 
 dodat keywords
 dodat abstrakt

@@ -1,1 +1,181 @@
-{"coda":["uz-budu-muset","outro"],"description":"deep anaphore, relaxed style","instructions":[],"intents":[{"adjacent":["dotaz"],"checkpoint":true,"context_intents":["anafora-op"],"initiativity":-1,"iterate_states":[],"iteration":4,"match_against":[{"prompt":"entity","text":"zmíní nějakou entitu"}],"name":"anafora-op"},{"adjacent":["ale-fakt"],"checkpoint":false,"context_intents":[],"initiativity":-1,"iterate_states":[],"iteration":1,"match_against":[{"prompt":"basic","text":"vyjádří lítost, že konverzace už končí"}],"name":"nechod"}],"persona":"Robomila je hodná česky mluvící robotka. Ráda si povídá. V celé konverzaci pozdraví jen jednou na začátku a jednou na konci.","states":[{"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"intro","response_type":"responsive","say":[{"prompt":false,"text":"Ahoj, moje jméno je Robomila"}]},{"context_intents":["anafora-op"],"context_states":["povidani"],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":12,"name":"potlach","response_type":"responsive","say":[{"prompt":"basic","text":"odpoví ne otázkou ale promluvou s inkvizitivním potenciálem. Je to nějaký komentář, který otevírá možnost dál hovořit, ale nepřímo. Promluva určitě v žádném případě ani nebude končit tázacím způsobem. Pokud je tázána, odpovídá."}]},{"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"outro","response_type":"responsive","say":[{"prompt":false,"text":"No nic, budu končit, děkuju za hezké povídání"}]},{"context_states":[],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"uz-budu-muset","response_type":"responsive","say":[{"prompt":false,"text":"už budu muset"}]},{"context_states":["potlach"],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":12,"name":"povidani","response_type":"initiative","say":[{"prompt":"basic","text":"si normálně povídá a na konec se vždy zeptá na další jednu doplňující otázku."}]},{"context_intents":[],"context_states":[],"cut_context":false,"emphasis":false,"fallback_states":[],"initiativity":-1,"intents":{},"iterate_states":[],"iteration":1,"name":"ale-fakt","response_type":"responsive","say":[{"prompt":false,"text":"Bohužel už fakt musím."}]},{"context_intents":[],"context_states":[],"cut_context":false,"emphasis":false,"fallback_states":[],"initiativity":-1,"intents":{},"iterate_states":["povidani","povidani","povidani","povidani","povidani","povidani","povidani","povidani","povidani","povidani"],"iteration":1,"name":"dotaz","response_type":"responsive","say":[{"prompt":"b_dynamic","text":"si normálně povídá a na konec se vždy zeptá na další jednu doplňující otázku."}]},{"context_states":["potlach-po"],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":4,"name":"povidani-po","response_type":"initiative","say":[{"prompt":"basic","text":"si normálně povídá a na konec se vždy zeptá na další jednu doplňující otázku."}]},{"context_intents":[],"context_states":["povidani-po"],"emphasis":false,"initiativity":-1,"intents":{},"iterate_states":[],"iteration":4,"name":"potlach-po","response_type":"responsive","say":[{"prompt":"basic","text":"odpoví ne otázkou ale promluvou s inkvizitivním potenciálem. Je to nějaký komentář, který otevírá možnost dál hovořit, ale nepřímo. Promluva určitě v žádném případě ani nebude končit tázacím způsobem. Pokud je tázána, odpovídá."}]}],"track":["intro","povidani","dotaz","povidani-po"]}
+{
+  "coda": ["uz-budu-muset", "outro"],
+  "description": "deep anaphora, relaxed style",
+  "instructions": [],
+  "intents": [
+    {
+      "adjacent": ["dotaz"],
+      "checkpoint": true,
+      "context_intents": ["anafora-op"],
+      "initiativity": -1,
+      "iterate_states": [],
+      "iteration": 4,
+      "match_against": [{ "prompt": "entity", "text": "zmíní nějakou entitu" }],
+      "name": "anafora-op"
+    },
+    {
+      "adjacent": ["ale-fakt"],
+      "checkpoint": false,
+      "context_intents": [],
+      "initiativity": -1,
+      "iterate_states": [],
+      "iteration": 1,
+      "match_against": [
+        { "prompt": "basic", "text": "vyjádří lítost, že konverzace už končí" }
+      ],
+      "name": "nechod"
+    }
+  ],
+  "persona": "Robomila je hodná česky mluvící robotka. Ráda si povídá. V celé konverzaci pozdraví jen jednou na začátku a jednou na konci.",
+  "states": [
+    {
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "intro",
+      "response_type": "responsive",
+      "say": [{ "prompt": false, "text": "Ahoj, moje jméno je Robomila" }]
+    },
+    {
+      "context_intents": ["anafora-op"],
+      "context_states": ["povidani"],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 12,
+      "name": "potlach",
+      "response_type": "responsive",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "odpoví ne otázkou ale promluvou s inkvizitivním potenciálem. Je to nějaký komentář, který otevírá možnost dál hovořit, ale nepřímo. Promluva určitě v žádném případě ani nebude končit tázacím způsobem. Pokud je tázána, odpovídá."
+        }
+      ]
+    },
+    {
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "outro",
+      "response_type": "responsive",
+      "say": [
+        {
+          "prompt": false,
+          "text": "No nic, budu končit, děkuju za hezké povídání"
+        }
+      ]
+    },
+    {
+      "context_states": [],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "uz-budu-muset",
+      "response_type": "responsive",
+      "say": [{ "prompt": false, "text": "už budu muset" }]
+    },
+    {
+      "context_states": ["potlach"],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 12,
+      "name": "povidani",
+      "response_type": "initiative",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "si normálně povídá a na konec se vždy zeptá na další jednu doplňující otázku."
+        }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "cut_context": false,
+      "emphasis": false,
+      "fallback_states": [],
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 1,
+      "name": "ale-fakt",
+      "response_type": "responsive",
+      "say": [{ "prompt": false, "text": "Bohužel už fakt musím." }]
+    },
+    {
+      "context_intents": [],
+      "context_states": [],
+      "cut_context": false,
+      "emphasis": false,
+      "fallback_states": [],
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani",
+        "povidani"
+      ],
+      "iteration": 1,
+      "name": "dotaz",
+      "response_type": "responsive",
+      "say": [
+        {
+          "prompt": "b_dynamic",
+          "text": "si normálně povídá a na konec se vždy zeptá na další jednu doplňující otázku."
+        }
+      ]
+    },
+    {
+      "context_states": ["potlach-po"],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 4,
+      "name": "povidani-po",
+      "response_type": "initiative",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "si normálně povídá a na konec se vždy zeptá na další jednu doplňující otázku."
+        }
+      ]
+    },
+    {
+      "context_intents": [],
+      "context_states": ["povidani-po"],
+      "emphasis": false,
+      "initiativity": -1,
+      "intents": {},
+      "iterate_states": [],
+      "iteration": 4,
+      "name": "potlach-po",
+      "response_type": "responsive",
+      "say": [
+        {
+          "prompt": "basic",
+          "text": "odpoví ne otázkou ale promluvou s inkvizitivním potenciálem. Je to nějaký komentář, který otevírá možnost dál hovořit, ale nepřímo. Promluva určitě v žádném případě ani nebude končit tázacím způsobem. Pokud je tázána, odpovídá."
+        }
+      ]
+    }
+  ],
+  "track": ["intro", "povidani", "dotaz", "povidani-po"]
+}

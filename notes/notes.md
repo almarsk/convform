@@ -148,7 +148,7 @@ non anaphoricity
 
 pleonastics,
 
-bound anaphore
+bound anaphora
 
 entity lifespan ref 56
 p8 givennes taxonomy

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 MAR 2025 19:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  30 MAR 2025 13:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,7 +638,7 @@ Chapter 5.
 [46]
 
 [47]
-Overfull \hbox (4.32043pt too wide) in paragraph at lines 608--613
+Overfull \hbox (4.32043pt too wide) in paragraph at lines 604--609
 []\T1/cmr/m/n/12 A spec-trum could be shown of anaphoric de-vices that stems fr
 om a as-so-cia-tive anaphora
  []
@@ -662,7 +662,7 @@ om a as-so-cia-tive anaphora
 [55]
 
 [56]
-Overfull \hbox (1.18915pt too wide) in paragraph at lines 960--962
+Overfull \hbox (1.18915pt too wide) in paragraph at lines 955--957
 []\T1/cmr/m/n/12 Metacommunication sig-nals a con-ver-sa-tion co-her-ence dis-r
 up-tion but they give a chance
  []
@@ -710,11 +710,6 @@ Overfull \hbox (0.70348pt too wide) in paragraph at lines 2023--2023
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'structure.run.xml'.
 \openout1 = `structure.run.xml'.
 
@@ -724,10 +719,10 @@ Package logreq Info: Writing requests to 'structure.run.xml'.
 ### simple group (level 1) entered at line 166 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10522 strings out of 473190
- 209672 string characters out of 5704335
- 1030284 words of memory out of 5000000
- 33700 multiletter control sequences out of 15000+600000
+ 10521 strings out of 473190
+ 209652 string characters out of 5704335
+ 1029311 words of memory out of 5000000
+ 33699 multiletter control sequences out of 15000+600000
  575408 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,8n,81p,996b,1645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -752,7 +747,7 @@ nts/type1/public/cm-super/sfti1000.pfb></opt/homebrew/Cellar/texlive/20250308_1
 r/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/cm
 -super/sftt1200.pfb>
-Output written on structure.pdf (67 pages, 533282 bytes).
+Output written on structure.pdf (67 pages, 532844 bytes).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
  202 compressed objects within 3 object streams

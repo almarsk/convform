@@ -159,4 +159,4 @@ Rating zero anaphora 2.1875
 Rating non zero anaphora 2.7291666666666665
 
 Zero anaphora seems has much better scores.
-Anaphorization has to incorporate zero anaphore better in the future.
+Anaphorization has to incorporate zero anaphora better in the future.
