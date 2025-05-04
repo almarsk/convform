@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[czech,english]{babel} % For Czech/English text
+\usepackage[utf8]{inputenc}
+\usepackage{ifthen}
+
+% Define a boolean variable for language choice
+% Set to \newboolean{useenglish} for English
+% or \newboolean{useczech} for Czech
+
+\newboolean{useenglish}
+\setboolean{useenglish}{false} % <-- change to false for Czech version
+
+\begin{document}
+
+\ifthenelse{\boolean{useenglish}}{
+    \selectlanguage{english}
+    \section*{Annotation}
+    This paper explores the use of conversational AI for intentionally disrupting coreference relations in dialogue.
+    The goal is to assess whether such an approach can produce useful data for linguistic research.
+    The chatbot is designed to generate ambiguous anaphora that cannot be easily linked to prior entities.
+    The resulting data is verified through annotation, with sufficient inter-annotator agreement achieved.
+    Findings indicate that success varies with the complexity of the stimuli, suggesting improvements for conversation design.
+}{
+    \selectlanguage{czech}
+    \section*{Anotace}
+    Tato práce se zabývá možností využití konverzační umělé inteligence pro cílené narušování koreferenčních vztahů v textu.
+    Cílem je ověřit, zda lze tímto způsobem generovat vhodná data pro lingvistický výzkum.
+    Chatbot je navržen tak, aby používal nejednoznačné anafory, které nelze snadno přiřadit předchozím entitám.
+    Data jsou následně ověřena anotací, přičemž shoda mezi anotátory byla dostatečná.
+    Výsledky ukazují, že úspěšnost závisí na složitosti podnětů a naznačují možnosti zlepšení návrhu konverzace.
+}
+
+\end{document}

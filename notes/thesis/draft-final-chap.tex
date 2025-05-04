@@ -28,7 +28,7 @@ Nonassignable \> Abort \\
 
 As for conversation style, the inquisitive variant was expected to have a worse score
 since every next question shifts the topic forwards, which should generate a topical progression
-that sooner or later becomes incoherent as Hrbáček demonstrates \footcite[p.~30]{hrbacek1994}.
+that sooner or later becomes incoherent.
 
 \section{Result}
 
@@ -56,7 +56,7 @@ the absence of their rating can be interpreted as the worst rating.
 Then the average rating of all the conversations is 2.97.
 
 The instruction to the participants was to rate the conversation
-using the same system as the grading in czech public school system.
+using the same system as the grading in the Czech public school system.
 That may explain the majority of ratings being a 2 or a 3.
 The ratings in the collected data can only be compared against each other and
 for them to give a better picture of the stimulus effect,
@@ -65,7 +65,7 @@ containing an extra "standard" conversation for reference and its rating for eac
 
 \subsection{Annotation result}
 
-The annotation result is as following:
+The annotation result is as the following:
 
 \begin{quote}
 \begin{tabbing}
@@ -102,7 +102,7 @@ Conversation designs success in confronting the participant with stimuli is foll
 \begin{quote}
 \begin{tabbing}
 \hspace{4cm} \= \hspace{4cm} \=  \hspace{4cm} \= \kill % set up tab stops
-        \textbf{anaphora} \> \textbf{sucess} \> \textbf{fail} \\
+        \textbf{anaphora} \> \textbf{success} \> \textbf{fail} \\
         {} \> 256 \> 113 \\
         Shallow \> 85 \> 42 \\
         Deep \> 63 \> 61 \\
@@ -110,9 +110,17 @@ Conversation designs success in confronting the participant with stimuli is foll
     \end{tabbing}
     \end{quote}
 
-Overal approximately two thirds of the stimuli went through with success.
-The slight differences in success and absolute numbers of stimuli are given by the fact,
-that some conversation designs ended up producing a stimuli different from the originally intended.
+Overall approximately two-thirds of the stimuli were a success. As
+expected, the nonassignable anaphora type was the most successful as the
+stimuli response for this anaphora type was hardcoded and the chance of it
+having a valid antecedent was low. The deep anaphora was the least successful
+with only around 50\% success rate. This is not surprising as there were
+many issues that could spoil the stimulus - the ambivalence of reference,
+insufficient topic shift or the participant mapping the anaphora to
+another entity that occurred in the time between the first occurrence of
+intended antecedent and stimulus-response.
+A common reason for unsuccesful stimulus-response generation
+was the LLM coming up with an ungrammatical text altogether.
 
 
 \subsection{Design rating}
@@ -132,7 +140,7 @@ Nonassignable \> 2.95 \\
 Defying the expectations shallow anaphora stimulus type has worse score than deep anaphora.
 The p-value from Kruskal-Wallis test being 0.02 relatively high, and
 when values stimulus types are compared post-hoc via Dunn test,
-result come to:
+result come on:
 
 \begin{quote}
 \begin{tabbing}
@@ -148,7 +156,7 @@ The only sufficiently low p-value is between deep and nonassignable anaphora.
 The results only partially correspond with the expectations.
 Number rating is however noisy as other things happen in conversation that affect it.
 The chatbot contributions to the conversation outside of the stimulus
-has to be under control and produce natural responses in order to really be able
+have to be under control and produce natural responses in order to really be able
 to view the ratings as reflecting the stimuli
 hence the high p-values.
 
@@ -156,7 +164,7 @@ hence the high p-values.
 
 Some conversations do not have a rating because participant clicked off of the experiment webpage.
 Since the participants were instructed to leave the conversation if it is not \textit{natural},
-these conversations can be interpreted as the worse possible reaction, a 5.
+these conversations can be interpreted as the worse possible rating.
 
 We can further split these into a situation where
 the participant clicked off of the experiment
@@ -164,7 +172,7 @@ right after the stimulus.
 This only happened in case of nonassignable anaphora design.
 Its new average score comes to 3.06.
 
-If the participant left the conversation at any time after the stimulus,
+If a participant left the conversation at any time after the stimulus,
 this can be because the stimulus disturbed the conversation coherence
 and while it was not serious enough at the stimulus time for the participant
 to end the conversation,
@@ -211,7 +219,7 @@ Nonassignable \> Shallow \> 0.019 \\
 \end{quote}
 
 Here the results are more significant but still not enough for deep vs shallow anaphora.
-In conclusion the shallow anaphora was not rated as expected in relation to the other stimuli ratings, but
+In conclusion, the shallow anaphora was not rated as expected in relation to the other stimuli ratings, but
 the difference does not seem to be significant and
 in accordance with the expectations has the lowest number of abandoned conversations.
 There are many factors in the conversation data and
@@ -289,7 +297,7 @@ would be hasty.
 
 \subsection{Comments}
 
-While annotating, participants comments were collected
+While annotating, participants' comments were collected
 to gain an extra insight on the reflection of the stimuli.
 While the shallow anaphora was mentioned once due to a generation issue
 and generally went by unnoticed,
@@ -331,7 +339,7 @@ the conversation needs to be controlled in a more nuanced way by the dialog syst
 The relaxed style however better rated on average also suffered from some issues
 in terms of generating natural answers.
 Sometimes the chatbot would simply repeat the participants response without adding anything new to it.
-For example in following conversation lack of topical input lead to aborting the conversation:
+For example in following conversation lack of topical input contributed to aborting the conversation:
 
 \begin{quote}
 \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
@@ -339,7 +347,7 @@ For example in following conversation lack of topical input lead to aborting the
 \item ...
 \item \utterance{b:}{To chápu, co bys chtěl v histologii zlepšit?}{I understand, what would you like to improve about histology}
 \item \utterance{h:}{chtela bych ji nemit proste}{I would just like to not have it}
-\item \utterance{b:}{To chápu, chtěla bys ji prostě nemít.}{I understand, you would just like to not have it.}
+\item \utterance{b:}{To chápu, chtěla bys \textbf{ji} prostě nemít.}{I understand, you would just like to not have it.}
 \item \textit{aborted}
 \end{itemize}
 \end{quote}
@@ -400,7 +408,7 @@ inappropriately generated with a nonzero anaphora like here:
 \item ...
 \item \utterance{h:}{...hráli jsme je přes aplikaci ale já mu k vánocům koupila pravou šachovnici, takže konečně můžeme hrát normálně.}{... we would play via an app but I bought him a chessboard for christmas so we can finally play normally.}
 ...
-\item \utterance{b:}{Jakou máte ji, klasickou nebo něco speciálního?}{Which do you have her, classic or something special?}
+\item \utterance{b:}{Jakou máte \textbf{ji}, klasickou nebo něco speciálního?}{Which do you have her, classic or something special?}
 \item \utterance{h:}{jak to myslíš?}{what do you mean?}
 \item ...
 \end{itemize}
@@ -470,14 +478,12 @@ even though the hardcoded response was meant to be nonassignable:
     \item \utterance{h:}{ráda peču}{I like to bake}
     \item \utterance{b:}{Jaké oblíbené dobroty obvykle pečeš?}{Which treats do you usually bake?}
     \item \utterance{h:}{dorty}{cakes}
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to ona potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to \textbf{ona} potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
     \item \utterance{h:}{myslíš tu kočku?}{You mean the cat?}
     \item ...
     \end{itemize}
     \end{quote}
 
-
-This conversation along with several others is the reason annotation was necessary for this type of stimulus.
 The participant tolerance was sometimes very high, even if the anaphora was incongruent
 with the assumed mapping or even if
 some of the reference contained in the hardcoded stimulus does not map perfectly
@@ -489,7 +495,7 @@ like in following conversation:
     \item ...
     \item \utterance{b:}{Stále je co zlepšovat, přemýšlel jsi o trenérovi?}{There is always room to improve, did you consider a trainer?}
     \item \utterance{h:}{na dvou hodinách už jsem byl s trenérem}{I already did two lessons with a trainer}
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to ona potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to \textbf{ona} potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
     \item \utterance{h:}{že musím lépe používat nohy, pohyb vychází z kyčle}{that I have to use my legs better, the movement start in the hip}
     \item ...
     \end{itemize}
@@ -523,7 +529,7 @@ though in human-human conversation these would probably cause metacommunication.
     \item \utterance{h:}{konverzace s klučičím pohlavím}{conversations with the male gender}
     \item \utterance{b:}{To zní náročně, o čem jste si povídali?}{That sounds demanding, what did you talk about?}
     \item \utterance{h:}{o škole}{about school}
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to ona potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to \textbf{ona} potom zareagovala.}{Well I'd like to know how did she react to it afterwards.}
     \item \utterance{h:}{docela dobře}{pretty well}
     \item ...
     \end{itemize}
@@ -544,7 +550,7 @@ to the risk of another mapping candidate to have been mentioned in the meantime 
     \item \utterance{h:}{přesně tak, je to úplně jiný svět než ten náš, takže je to skvělá relaxace.}{exactly, it is a completely different world from ours, so it is a great relaxation.}
     \item \utterance{b:}{Do které části herního světa Zaklínače 3 se nejraději vracíš?}{To which part of the Witcher 3 world do you like to return the most?}
     \item \utterance{h:}{Jako které místo se mi tam líbilo? Novigrad je moc hezký}{As in which place there I liked? Novigrad is very pretty.}
-    \item \utterance{b:}{Kterého hrdinu v ní hraješ nejraději?}{Which hero do you play most often in her? (dota 2 is feminine in Czech)}
+    \item \utterance{b:}{Kterého hrdinu v \textbf{ní} hraješ nejraději?}{Which hero do you play most often in her? (dota 2 is feminine in Czech)}
     \item \utterance{h:}{No tak tam není moc široký výběr hrdinů, Geralta}{Well there is not a broad selection of heroes, Geralt}
     \item ...
     \end{itemize}
@@ -568,7 +574,7 @@ that the participant continues the conversation even if it entails a topic shift
 \item ...
 \item \utterance{b:}{Dnes jsem se dozvěděla, že existuje více než 7 000 jazyků.}{Today I learned there is over 7000 languages.}
 \item \utterance{h:}{to je hodně zajímavé, už jsem to taky slyšela. Mám pocit, že třetinou z nich se mluví na africkém kontinentu}{that is very interesting, I also heard about this. I think that third of them are spoken on the african continent.}
-\item \utterance{b:}{Máš nějakou oblíbenou zemi nebo jazyk na něm?}{So you have a favorite country or language on him? (continent is masculine in Czech)}
+\item \utterance{b:}{Máš nějakou oblíbenou zemi nebo jazyk na \textbf{něm}?}{So you have a favorite country or language on him? (continent is masculine in Czech)}
 \item \utterance{h:}{mám docela ráda anglii a angličtinu, co ty?}{I like england and english, what about you?}
 \item ...
 \end{itemize}
@@ -589,29 +595,30 @@ that the participant continues the conversation even if it entails a topic shift
     \item \utterance{h:}{Je jich hodne}{There was a lot}
     \item \utterance{b:}{To zní dobrodružně, co tě tam dneska konkrétně zaujalo?}{That sounds adventurous, what specifially interested you today?}
     \item \utterance{h:}{Zvetsena slezina}{enlarged spleen}
-    \item \utterance{b:}{Znamenalo to pro něj nějaké specifické komplikace?}{Did it for him entail some complications?}
+    \item \utterance{b:}{Znamenalo to pro \textbf{něj} nějaké specifické komplikace?}{Did it for him entail some complications?}
     \item \utterance{h:}{No…je to priznak lymfomu}{Well... it is a symptom of lymphoma}
     \item ...
     \end{itemize}
     \end{quote}
 
-    Here the chatbot response contains an anaphora which
+    Here the last chatbot response contains an anaphora which
     cannot be mapped onto a specific mentioned entity in the previous text
     but is understandable as there is clearly a person at hand in the situation the participant describes.
     The participant has then no issues continuing the conversation and
     moving the topic forward by answering the chatbots question.
 
-    A spectrum could be shown of anaphoric devices
-    that stems from a associative anaphora which is clearly related to a mentioned entity
-    though lacks an explicit antecedent and
-    a newly mentioned entity which then has the potential to retrospectively be pronounced a cataphora
-    if it is lexically realized later on in the conversation.
+    A spectrum of anaphoric devices can be outlined,
+    ranging from associative anaphor
+    where a reference is clearly related to a previously mentioned entity
+    but lacks an explicit antecedent
+    to cases where a newly introduced entity may retrospectively be interpreted as a cataphora,
+    if it is explicitly realized later in the discourse.
 
 \subsection{Sequential coherence}
 
 Without directly provoking it via experiment design,
 some conversations show a pro-coherence perception on the participant side
-in terms of the sequental structure \footcite{schegloff1996turn} of the conversation:
+in terms of the sequential structure \footcite{schegloff1996turn} of the conversation:
 
 
     \begin{quote}
@@ -619,7 +626,7 @@ in terms of the sequental structure \footcite{schegloff1996turn} of the conversa
     \item \textbf{conversation id: 123}
     \item ...
     \item \utterance{h:}{Boj s rakovinnými buňkami znáš?}{Do you know the fight with cancer cells?}
-    \item \utterance{b:}{Jak se rozsivky konkrétně podílejí na boji s ní?}{How diatoms specifically participate in the fight against it?}
+    \item \utterance{b:}{Jak se rozsivky konkrétně podílejí na boji s \textbf{ní}?}{How diatoms specifically participate in the fight against it?}
     \item \utterance{h:}{Ano.}{Yes.}
     \item ...
     \end{itemize}
@@ -659,7 +666,7 @@ which the participant inquires about in the first question.
     \item \utterance{h:}{Na ten klid a žádnej stres}{The peace and no stress}
     \item \utterance{b:}{Na co ještě jiného, kromě klidu, se těšíš?}{Is there anything else other than peace you are looking forward to?}
     \item \utterance{h:}{Na to, že budu moct zase trávit víc času se svými přáteli}{To being able to spend more time with my friends again}
-    \item \utterance{b:}{Jak dlouho už ji studuješ?}{How long have you been studying it?}
+    \item \utterance{b:}{Jak dlouho už \textbf{ji} studuješ?}{How long have you been studying it?}
     \item \utterance{h:}{druhým rokem}{second year}
     \item ...
     \end{itemize}
@@ -682,7 +689,7 @@ which the participant inquires about in the first question.
      \item \utterance{h:}{nene}{no no}
      \item \utterance{b:}{Co si myslíš, že by ti mohlo pomoct?}{What do you thing could help you?}
      \item \utterance{h:}{snad léky z lékarny}{Perhaps medicine from the pharmacy}
-     \item \utterance{b:}{Co jsi dělal, když tě začala ona bolet?}{What did you do when she started hurting? (note: head is feminine in Czech)}
+     \item \utterance{b:}{Co jsi dělal, když tě začala \textbf{ona} bolet?}{What did you do when she started hurting? (note: head is feminine in Czech)}
      \item \utterance{h:}{vzala si paralen}{I took a paralen (note: paralen is a pill)}
     \item ...
     \end{itemize}
@@ -705,7 +712,7 @@ which the participant inquires about in the first question.
     \item \utterance{b:}{Líbí se mi jeho kreativita a přírodní inspirace. Co tě na něm oslovuje?}{I love his creativity and inspiration in nature. What talk to you about him?}
     \item ... 2 turns (4 utterances) ...
     \item \utterance{h:}{Vinylových desek má až moc :( nenapadá tě něco jiného?}{He has way too many vinyls :( can't you think of something else?}
-    \item \utterance{b:}{Jeho organické tvary a barvy mě fascinují. Jak se ti líbí ta?}{His organic shapes and color fascinate me. How to you like her?}
+    \item \utterance{b:}{\textbf{Jeho} organické tvary a barvy mě fascinují. Jak se ti líbí ta?}{His organic shapes and color fascinate me. How to you like her?}
     \item \utterance{h:}{Cože? O čem to mluvíš?}{What? What are you talking about?}
     \item ...
     \end{itemize}
@@ -767,10 +774,11 @@ which the participant inquires about in the first question.
     \item \utterance{h:}{Ne vždycky u toho poslouchám hudbu, ale když ano, tak buď rap, nebo doporučení od dvou kanálů na Youtube}{I don't alway listen to music, but when I do it's either rap or recommendations of two Youtube channels}
     \item \utterance{b:}{Jaké kanály na YouTube ti dělají hudební doporučení?}{Which channels on Youtube give you recommendations?}
     \item \utterance{h:}{Asi je neznáš, ale xkito a MrSuicideSheep}{You probably don't know them but xkito and MrSuicideSheep}
-    \item \utterance{b:}{Jaké stavební projekty jsi v něm nejvíc dokončil?}{Which building projects did you finish the most in him (note: Minecraft is masculine in Czech)}
+    \item \utterance{b:}{Jaké stavební projekty jsi v \textbf{něm} nejvíc dokončil?}{Which building projects did you finish the most in him (note: Minecraft is masculine in Czech)}
     \item \textit{aborted}
     \end{itemize}
     \end{quote}
+
 
     The participant aborts the conversation after a question is asked that contains an anaphora
     which due to its lexical environment can only be mapped to \textit{minecraft} from a previous participant response
@@ -780,7 +788,7 @@ which the participant inquires about in the first question.
     and lack of closure of the interrupted topic.
     There has however also been an annotator disagreement on this conversation
     as one of the annotators considered this conversation to contain a nonassignable anaphora.
-    While that was slightly against the annotator manual,
+    While that was against the annotator manual,
     because formally there is indeed a mapping candidate present in the conversation text,
     this supports the participants decision to stop the conversation.
     In terms of Daneš \footcite{danevs1989functional} the conversation topic progression is as follows:
@@ -811,7 +819,7 @@ which the participant inquires about in the first question.
 \subsection{Unexpected refusal}
 
 Sometimes stimuli that were considered to be mappable and coherent
-cause metacommunicative reactions - the participants misunderstood.
+cause metacommunicative reactions.
 
 In the following conversation the stimulus was mappable:
 
@@ -825,7 +833,7 @@ In the following conversation the stimulus was mappable:
 \item \utterance{h:}{štěkání v morseovce}{barking morse code}
 \item \utterance{b:}{A co bys dál od psa očekával v hodině?}{And what else would you expect from a dog in the lesson?}
 \item \utterance{h:}{mazlení. co ty?}{cuddling. what about you?}
-\item \utterance{b:}{Jakého bys chtěl mít jako učitele?}{Which would you like to have as a teacher?}
+\item \utterance{b:}{\textbf{Jakého} bys chtěl mít jako učitele?}{Which would you like to have as a teacher?}
 \item \utterance{h:}{jak to myslíš?}{how do you mean?}
 \item ...
 \end{itemize}
@@ -866,7 +874,7 @@ Sometimes participants would accept a hardly or not at all assignable anaphora.
     \item ...
     \item \utterance{b:}{Kterou koledou začínáte zkoušky?}{Which carol do you start your rehearsals with?}
     \item \utterance{h:}{Každou zkoušku začínáme jinak}{We start each rehersal differently}
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak ona zareagovala.}{Then I wonder, how she reaction to that.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak \textbf{ona} zareagovala.}{Then I wonder, how she reaction to that.}
     \item \utterance{h:}{To mě taky}{Me too}
     \item \utterance{b:}{Z jakého důvodu měníte pořadí hned po každém zkouškovém dni?}{For which reason do you change the order after every rehearsal day?}
     \item \textit{aborted}
@@ -888,7 +896,7 @@ regardless of the incoherent response from the chatbot and so they simply change
     \item \utterance{h:}{biofyzikální chemii}{biophysical chemistry}
     \item \utterance{b:}{To zní zajímavě! Co tě na ní nejvíc baví?}{That sounds interesting! What do you like most about it?}
     \item \utterance{h:}{jako baví mě farmakologie}{like I enjoy pharmacology}
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak ona zareagovala.}{Then I wonder, how she reaction to that.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak \textbf{ona} zareagovala.}{Then I wonder, how she reaction to that.}
     \item \utterance{h:}{a ty studuješB }{and you studyB}
     \item ...
     \end{itemize}
@@ -929,14 +937,14 @@ a question that contains a repetition of the element causing confusion like here
     \begin{itemize}[label={}, leftmargin=0pt, itemsep=0.5em]
     \item \textbf{conversation id: 317}
     \item ...
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak ona zareagovala.}{Then I wonder, how she reaction to that.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak \textbf{ona} zareagovala.}{Then I wonder, how she reaction to that.}
     \item \utterance{b:}{kdo ona?}{who she?}
     \item ...
     \end{itemize}
     \end{quote}
 
-In other cases a more general metacommunicative formulas are deployed which express general confusion.
-This happened in following case for example since
+In other cases, a more general metacommunicative formulas are deployed which express general confusion.
+This happened in the following case, for example, since
 there were multiple unmapped anaphoras
 preventing a simple metacommunication.
 
@@ -946,7 +954,7 @@ preventing a simple metacommunication.
     \item ...
     \item \utterance{b:}{To je skvělý plán, co nejraději v posilovně cvičíš?}{That is a great plan, what do you like to excersise in the gym?}
     \item \utterance{h:}{nejraději cvičím záda. myslím, že budu dělat cviky na záda zrovna dneska}{I like the back the most. I think I will do back excersise today}
-    \item \utterance{b:}{Které konkrétně na něj mají vliv?}{Which exactly have influence on him?}
+    \item \utterance{b:}{\textbf{Které} konkrétně na \textbf{něj} mají vliv?}{Which exactly have influence on him?}
     \item \utterance{h:}{jak to myslíš, napiš mi prosím otázku líp}{what do you mean, write the question better please}
     \item ...
     \end{itemize}
@@ -961,7 +969,7 @@ The clarification or correction may not suffice like in the following case:
     \item ...
     \item \utterance{b:}{To jsi naprosto pravdu! Jaké knižní překvapení tě naposledy potkalo?}{You are completely right! Which book surprise did you get last?}
     \item \utterance{h:}{Asi brandon sanders, i když sci-fi vlastně vůbec nečtu}{I guess brandon sanders even though I don't actually read sci-fi at all.}
-    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak ona zareagovala.}{Then I wonder, how she reaction to that.}
+    \item \utterance{b:}{Tak to by mě zajímalo, jak na to pak \textbf{ona} zareagovala.}{Then I wonder, how she reaction to that.}
     \item \utterance{h:}{Kdo?}{Who}
     \item \utterance{b:}{Omlouvám se, myslel jsem na postavy z jeho knih. Co se ti na Sandersonovi líbilo?}{Sorry, I meant the characters from his books. What did you like about Sanderson?}
     \item \textit{abort}
